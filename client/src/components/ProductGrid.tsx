@@ -8,7 +8,7 @@ const powderBenefits = ["Mast Cell Stabilization", "Collagen Substrates", "MMP I
 
 export default function ProductGrid() {
   return (
-    <section id="products" className="py-32 md:py-48 bg-[#F6F0E6]">
+    <section id="products" className="py-32 md:py-48 bg-[#F4F2ED]">
       <div className="container mx-auto px-6">
 
         {/* Header: High-End Tracking & Minimalist Depth */}

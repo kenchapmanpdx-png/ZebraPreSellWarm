@@ -36,7 +36,7 @@ export default function ClinicalRationale() {
   ];
 
   return (
-    <section className="py-20 bg-[#F6F0E6] relative overflow-hidden">
+    <section className="py-20 bg-[#DED9D0] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
 
         {/* HEADER */}

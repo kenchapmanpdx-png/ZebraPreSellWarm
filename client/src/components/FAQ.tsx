@@ -40,7 +40,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-[#FBF8F2]">
+    <section id="faq" className="py-16 md:py-24 bg-[#F4F2ED]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

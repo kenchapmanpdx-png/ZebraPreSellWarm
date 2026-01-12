@@ -284,7 +284,7 @@ export default function InteractiveIngredientMap() {
 
   return (
     <section 
-      className="py-4 md:py-10 px-2 sm:px-4 md:px-8 bg-[#EFE6D8]"
+      className="py-4 md:py-10 px-2 sm:px-4 md:px-8 bg-[#DED9D0]"
     >
       <style>{`
         .item-card { transition: all 0.15s ease-in-out; cursor: pointer; }

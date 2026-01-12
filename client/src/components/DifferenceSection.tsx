@@ -47,7 +47,7 @@ export default function DifferenceSection() {
   return (
     <section 
       id="difference" 
-      className="py-12 md:py-20 px-6 bg-[#EFE6D8]"
+      className="py-12 md:py-20 px-6 bg-[#F4F2ED]"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* NEW: Deep Umber Text */}

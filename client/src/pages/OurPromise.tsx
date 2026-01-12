@@ -9,7 +9,7 @@ export default function OurPromise() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FBF8F2]">
+    <div className="min-h-screen bg-[#EBE8E1]">
       <Navigation />
 
       {/* HEADER: RESTORED BLOB ENGINE WITH DEEP CONTRAST */}
@@ -120,7 +120,7 @@ export default function OurPromise() {
       </section>
 
       {/* INTRO: BOLD COMMUNITY TEXT */}
-      <section className="py-20 px-4 bg-[#F6F0E6] border-b border-[#E8DCCA]/50">
+      <section className="py-20 px-4 bg-[#DED9D0] border-b border-[#E8DCCA]/50">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#2c1810] mb-10 leading-snug">
             You've been dismissed by doctors, harmed by "safe" supplements, 
@@ -135,7 +135,7 @@ export default function OurPromise() {
       </section>
 
       {/* PROMISE GRID */}
-      <section className="py-24 px-4 bg-[#FBF8F2]">
+      <section className="py-24 px-4 bg-[#F4F2ED]">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
             <div className="space-y-10">

@@ -1,0 +1,105 @@
+IMPORTANT: COLOR-ONLY UPDATE. DO NOT CHANGE ANY COPY/TEXT, LAYOUT, SPACING, TYPOGRAPHY, COMPONENT STRUCTURE, FEATURES, OR FUNCTIONALITY. DO NOT “IMPROVE” ANYTHING ELSE. MINIMAL DIFF ONLY.
+Allowed changes: (1) background colors of section WRAPPERS only, (2) primary CTA button background colors + hover/active/focus only, (3) header transparency behavior (top transparent, scrolled contrasted). NOTHING ELSE.
+
+MOBILE-FIRST GOAL:
+- Use a neutral “greige” baseline so the hero and body feel unified (avoid beige vs grey mismatch).
+- Create subtle rhythm on mobile with 2–3 neutral background steps (not flat).
+- Use burnt copper for primary CTAs so they stand out on mobile.
+- Use deep muted green sparingly for authority (header-on-scroll + footer only, unless already used elsewhere).
+- Optionally use a very dark warm brown only for tiny divider bands if they already exist (do not add new UI).
+
+========================================================
+1) SET THEME TOKENS (add to :root in global CSS; if already present, keep names and just update values)
+:root {
+  /* Neutral background system (centered on the user-chosen baseline) */
+  --zw-bg-base:   #EBE8E1;  /* baseline + HERO */
+  --zw-bg-light:  #F4F2ED;  /* lighter reset sections */
+  --zw-bg-mid:    #DED9D0;  /* slightly deeper sections to prevent flatness */
+  --zw-bg-deep:   #D4CEC4;  /* rare anchor neutral (use max 1 section if needed) */
+
+  /* Authority + CTA colors */
+  --zw-green-900: #0F2A22;  /* deep muted green */
+  --zw-cta-600:   #A4613A;  /* burnt copper primary CTA */
+  --zw-cta-700:   #8E5433;  /* hover */
+  --zw-cta-800:   #744428;  /* active */
+  --zw-focus-ring: rgba(164, 97, 58, 0.28);
+
+  /* Optional dark brown (DO NOT use widely) */
+  --zw-brown-900: #3A2F26;
+}
+
+========================================================
+2) HEADER BEHAVIOR FIX (MUST BE EXACT)
+Goal: header must be fully transparent at the very top and only gain contrast after scrolling.
+
+- In the Header component, implement isScrolled state:
+  - initial: false
+  - on scroll: isScrolled = window.scrollY > 8
+  - run handler once on mount to initialize
+- Remove any always-on header background/tint/blur/shadow/border classes from the base header.
+- Apply classes conditionally:
+
+TOP (scrollY <= 8):
+  background: transparent
+  blur: none
+  shadow: none
+  border: none/transparent
+
+SCROLLED (scrollY > 8):
+  background: var(--zw-bg-mid) at ~95% opacity (or equivalent)
+  blur: optional only if you already use it (light blur ok)
+  border-bottom: subtle (e.g., black/5)
+  shadow: subtle
+
+Tailwind example (use equivalent if not Tailwind):
+- not scrolled: "bg-transparent backdrop-blur-0 shadow-none border-b border-transparent"
+- scrolled: "bg-[var(--zw-bg-mid)]/95 backdrop-blur-md shadow-sm border-b border-black/5"
+
+Do NOT change header text colors, logo, spacing, nav items, or button styles here besides background.
+
+========================================================
+3) PRIMARY CTA BUTTONS = BURNT COPPER (MOBILE SCAN PRIORITY)
+Update ONLY the PRIMARY conversion CTA buttons (hero CTA + bottom reserve/signup CTA + any other main conversion CTA).
+Do NOT change secondary buttons, links, icon buttons, or card buttons unless they are clearly the main CTA.
+
+Primary CTA button states:
+- default bg: var(--zw-cta-600)
+- hover bg: var(--zw-cta-700)
+- active bg: var(--zw-cta-800)
+- focus-visible ring color: var(--zw-focus-ring) (only if defined)
+Keep all existing radius, padding, font, text color, and shadows EXACTLY the same.
+
+========================================================
+4) SECTION WRAPPER BACKGROUND RHYTHM (COLOR ONLY, MOBILE-FIRST)
+Apply ONLY to each section’s OUTERMOST wrapper/container background. Do not change inner card backgrounds.
+
+Set these backgrounds:
+- PAGE/BODY overall background: var(--zw-bg-base)
+
+- HERO section wrapper: var(--zw-bg-base)  (this is the chosen hero color #EBE8E1)
+
+Then alternate down the page to avoid flatness on mobile:
+- Next section after hero (e.g., “Why ZebraWell”): var(--zw-bg-mid)
+- Next section: var(--zw-bg-light)
+- Next section: var(--zw-bg-mid)
+- “Engineered for Stability” section wrapper: var(--zw-bg-light) (DO NOT change the dark AM/PM cards)
+- Ingredient map / diagram section wrapper: var(--zw-bg-mid)
+- Bottom CTA strip wrapper: var(--zw-bg-mid)
+- FAQ wrapper: var(--zw-bg-light)
+
+If you have one section that still feels visually too flat on mobile, you may use var(--zw-bg-deep) for ONE section only (max 1), preferably a mid-page anchor section—not the hero.
+
+Do NOT add new dividers/blocks. Only recolor existing section wrappers.
+
+========================================================
+5) FOOTER (AUTHORITY COLOR)
+Keep footer as-is if it already looks good.
+If the footer is currently light and you need a stronger end-cap, set footer background to var(--zw-green-900) ONLY (do not recolor footer text/icons unless absolutely required for legibility).
+
+========================================================
+DELIVERABLE CHECKLIST (VERIFY)
+- Header: completely transparent at top; only becomes tinted after scrolling down > 8px.
+- Hero background: exactly #EBE8E1.
+- Body sections: use the neutral rhythm (base/mid/light/mid...), visible on mobile.
+- Primary CTAs: burnt copper with correct hover/active/focus.
+- No other changes. If anything else was modified, revert it.

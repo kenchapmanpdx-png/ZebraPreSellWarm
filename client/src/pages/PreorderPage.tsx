@@ -41,7 +41,7 @@ export default function PreorderPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FBF8F2]">
+    <div className="min-h-screen bg-[#EBE8E1]">
       <Navigation />
       <ZebraPatternOverlay opacity={0.03} />
 
@@ -77,7 +77,7 @@ export default function PreorderPage() {
       </section>
 
       {/* Product Preview */}
-      <section className="py-16 bg-[#F6F0E6]">
+      <section className="py-16 bg-[#DED9D0]">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -147,7 +147,7 @@ export default function PreorderPage() {
       </section>
 
       {/* Symptom Selector Quiz */}
-      <section id="zebrawell-quiz" className="py-12 px-4 md:px-12 bg-[#EFE6D8]">
+      <section id="zebrawell-quiz" className="py-12 px-4 md:px-12 bg-[#F4F2ED]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-green-900 mb-4">What Symptoms Are You Struggling With Most?</h2>
           <p className="text-base md:text-lg text-gray-700 mb-6">Select up to 3 symptoms and see how ZebraWell supports them.</p>
@@ -221,7 +221,7 @@ export default function PreorderPage() {
                 resultBox.classList.remove('hidden');
               }
             }}
-            className="bg-[#0F2A22] hover:bg-[#14372D] active:bg-[#1A4639] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 mt-4 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]"
+            className="bg-[#A4613A] hover:bg-[#8E5433] active:bg-[#744428] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 mt-4 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
           >
             Show My Support Plan
           </button>
@@ -235,7 +235,7 @@ export default function PreorderPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-[#F6F0E6]">
+      <section className="py-16 bg-[#DED9D0]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
@@ -278,7 +278,7 @@ export default function PreorderPage() {
       </section>
 
       {/* Reservation Form */}
-      <section className="py-20 bg-[#FBF8F2]">
+      <section className="py-20 bg-[#F4F2ED]">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8 md:p-12 border border-amber-200">
@@ -310,9 +310,9 @@ export default function PreorderPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)] ${
+                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)] ${
                       email 
-                        ? 'bg-[#0F2A22] border-[#0F2A22] hover:bg-[#14372D] active:bg-[#1A4639]'
+                        ? 'bg-[#A4613A] border-[#A4613A] hover:bg-[#8E5433] active:bg-[#744428]'
                         : 'bg-[#7A8691] border-[#7A8691] opacity-70 cursor-not-allowed'
                     }`}
                   >

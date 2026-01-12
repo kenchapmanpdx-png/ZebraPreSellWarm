@@ -8,7 +8,8 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 8);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -23,7 +24,7 @@ export default function Navigation() {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#FBF8F2]/95 backdrop-blur-md shadow-sm py-3" : "bg-[#FBF8F2] py-5"
+        scrolled ? "bg-[#DED9D0]/95 backdrop-blur-md shadow-sm border-b border-black/5 py-3" : "bg-transparent backdrop-blur-0 shadow-none border-b border-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -61,7 +62,7 @@ export default function Navigation() {
       </div>
 
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#FBF8F2] border-t border-[#BCC2BB]/20 shadow-2xl py-8 flex flex-col items-center gap-6 md:hidden animate-in fade-in slide-in-from-top-4">
+        <div className="absolute top-full left-0 w-full bg-[#DED9D0] border-t border-black/5 shadow-2xl py-8 flex flex-col items-center gap-6 md:hidden animate-in fade-in slide-in-from-top-4">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
