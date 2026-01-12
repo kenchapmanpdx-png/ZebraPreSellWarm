@@ -25,7 +25,7 @@ export default function FAQ() {
     }
   ];
 
-  // JSON-LD Schema for Google SEO
+  // JSON-LD Schema for Google SEO - Preserved exactly
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -40,7 +40,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-[#FDFBF7]">
+    <section id="faq" className="py-16 md:py-24 bg-[#F7F8F7]"> {/* NEW: Mist Gray Background */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

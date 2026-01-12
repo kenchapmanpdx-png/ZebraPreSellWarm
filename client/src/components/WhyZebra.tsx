@@ -1,56 +1,52 @@
-import React from 'react';
+/* client/src/components/WhyZebra.tsx */
+import { Check } from 'lucide-react';
 
-export default function WhyZebra() {
+export default function WhyZebraWell() {
   return (
-    // SECTION: Restored to larger height (py-20) for the spotlight effect
-    <section className="py-20 bg-[#E8DCCA] relative overflow-hidden flex items-center justify-center">
+    <section className="py-20 px-4 bg-[#E2E4E1]"> 
+      <div className="max-w-7xl mx-auto">
 
-      {/* 1. ZEBRA PATTERN (Visible on edges) */}
-      <div 
-        className="absolute inset-0 opacity-[0.08] pointer-events-none mix-blend-multiply"
-        style={{ 
-          backgroundImage: 'url("/zebra-pattern.jpg")', 
-          backgroundSize: '400px' 
-        }}
-      ></div>
-
-      {/* 2. THE SPOTLIGHT (Solid Center Fading Out) */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FDFBF7_0%,#FDFBF7_30%,transparent_85%)] pointer-events-none"></div>
-
-      <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
-
-        {/* PILL BADGE */}
-        <div className="inline-block mb-6 px-5 py-1.5 rounded-full bg-[#0f2e24] text-[#E8DCCA] text-[10px] font-bold uppercase tracking-[0.25em] shadow-lg">
-          Our Mascot
-        </div>
-
-        {/* HEADLINE */}
-        <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#0f2e24] mb-8 drop-shadow-sm">
-          Why <span className="text-[#C8592B] italic">"Zebra"</span>?
-        </h2>
-
-        {/* CONTENT BOX */}
-        <div className="max-w-2xl mx-auto space-y-6">
-          <p className="text-xl md:text-2xl font-medium text-[#2c1810]">
-            The Zebra is the mascot for <strong className="text-[#0f2e24]">rare conditions</strong>.
-          </p>
-
-          <div className="bg-white/60 backdrop-blur-sm border border-[#C8592B]/10 rounded-xl p-8 shadow-xl transform rotate-1">
-            <p className="text-xs text-[#8D6E63] font-bold uppercase tracking-widest mb-3">
-              Medical Schools teach
-            </p>
-            <p className="font-serif text-2xl md:text-4xl text-[#C8592B] italic leading-tight">
-              "When you hear hoofbeats, think horses." but sometimes, its a Zebra.
+        {/* The Physician Claim Callout */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="bg-white/60 backdrop-blur-md border-2 border-[#262321] rounded-3xl p-8 md:p-10 text-center shadow-xl shadow-black/5">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#262321] mb-4">
+              Why <span className="text-[#B36B4D] italic font-normal">ZebraWell</span>?
+            </h2>
+            <p className="text-lg text-[#4A4540] leading-relaxed">
+              We don't just make supplements. We engineer stability for the complex 
+              interplay of <span className="font-bold">Autonomic, Mast Cell, and Connective Tissue</span> health.
             </p>
           </div>
+        </div>
 
-          <div className="h-1 w-24 mx-auto rounded-full bg-[#C8592B]/40 my-8"></div>
-
-          <p className="text-2xl font-serif font-bold text-[#0f2e24]">
-            We are here for the <span className="text-[#C8592B] underline decoration-[#C8592B]/30 underline-offset-4">Zebras</span>.
-          </p>
+        {/* Feature Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FeatureCard 
+            title="Physician Grade" 
+            desc="Sourced and manufactured to the highest clinical standards." 
+          />
+          <FeatureCard 
+            title="Histamine Friendly" 
+            desc="Every ingredient screened for biogenic amines and MCAS triggers." 
+          />
+          <FeatureCard 
+            title="Bioavailable" 
+            desc="Optimized delivery systems for patients with GI motility challenges." 
+          />
         </div>
       </div>
     </section>
+  );
+}
+
+function FeatureCard({ title, desc }: { title: string, desc: string }) {
+  return (
+    <div className="bg-white rounded-2xl p-8 border border-[#BCC2BB] hover:shadow-lg transition-shadow duration-300 group">
+      <div className="w-12 h-12 rounded-full bg-[#9BA69C] flex items-center justify-center text-white mb-6 group-hover:bg-[#B36B4D] transition-colors">
+        <Check size={24} strokeWidth={3} />
+      </div>
+      <h3 className="text-xl font-bold text-[#262321] mb-3">{title}</h3>
+      <p className="text-[#5D5752] leading-relaxed">{desc}</p>
+    </div>
   );
 }

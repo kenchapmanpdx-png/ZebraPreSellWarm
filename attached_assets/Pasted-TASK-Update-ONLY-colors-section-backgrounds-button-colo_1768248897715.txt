@@ -1,0 +1,74 @@
+TASK: Update ONLY colors (section backgrounds + button colors). Do NOT change any text/verbiage, spacing, typography, layout, components, structure, animations, logic, or functionality. Do NOT rename components. Do NOT change icon colors, card borders, shadows, or any existing feature styling unless it is a background fill color or a button fill/hover/focus color. Preserve all existing UI behavior.
+
+GOAL: Make each section background slightly warmer using very neutral light beiges. Keep the page premium and calm. Use deep muted green and muted clay/copper ONLY for buttons (and their hover/focus states). Everything else stays exactly the same.
+
+IMPLEMENTATION RULES:
+1) Only edit CSS variables / theme tokens OR the background-color of section wrappers and the background-color of buttons.
+2) Do not change text colors unless absolutely required for contrast after changing a background (if needed, only adjust text color minimally to preserve readability).
+3) Keep all cards/tiles exactly as-is (their internal backgrounds should not change unless they are the section wrapper background itself).
+4) Do not modify images, gradients, or SVGs except section background fill colors.
+
+COLOR TOKENS (add to global theme, e.g., :root or tailwind config, then use them consistently):
+- --zw-bg-cream-0: #FBF8F2  (main page background; warm off-white)
+- --zw-bg-cream-1: #F6F0E6  (soft neutral beige)
+- --zw-bg-cream-2: #EFE6D8  (slightly deeper beige for alternating sections)
+- --zw-bg-cream-3: #E7DCCB  (rare use: thin bands / emphasis blocks only)
+- --zw-green-900: #0F2A22   (deep muted green primary button)
+- --zw-green-800: #14372D   (hover)
+- --zw-green-700: #1A4639   (active)
+- --zw-clay-600:  #A4613A   (secondary/accent button)
+- --zw-clay-700:  #8E5433   (hover)
+- --zw-clay-800:  #744428   (active)
+- --zw-focus-ring: rgba(15,42,34,0.28)  (focus ring)
+
+BUTTON RULES (ONLY buttons; do not change links unless they are styled as buttons already):
+- Primary buttons: background = --zw-green-900, text stays the same, hover = --zw-green-800, active = --zw-green-700
+- Secondary buttons (if present): background = --zw-clay-600, hover = --zw-clay-700, active = --zw-clay-800
+- Keep border radius, padding, font sizes, and shadows exactly the same.
+- Update focus-visible ring color to --zw-focus-ring (only if currently defined).
+
+SECTION-BY-SECTION BACKGROUND UPDATES:
+(Important: apply ONLY to the outermost wrapper/container background of each section)
+
+1) HEADER / NAV BAR STRIP (top area behind logo + nav)
+- Background: --zw-bg-cream-0
+
+2) HERO SECTION (the top hero block with headline + product photo + email signup)
+- Background: --zw-bg-cream-0
+- If hero currently uses a cool gray gradient, replace ONLY the background fill with --zw-bg-cream-0 (no gradient). Do not change any inner card styling.
+
+3) “WHY ZEBRA?” SECTION (textured or neutral panel area)
+- Background: --zw-bg-cream-1
+- If there is a texture overlay, keep it. Only warm the base background color to --zw-bg-cream-1.
+
+4) FOUNDER STORY SECTION (“Behind every bottle…” with Ava photo)
+- Background: --zw-bg-cream-0 (or --zw-bg-cream-1 if it currently blends; choose whichever is closer to current intent, but stay within the cream palette)
+
+5) “WHY EACH INGREDIENT MATTERS” SECTION (the grid of cards)
+- Background: --zw-bg-cream-1
+
+6) “WHAT MAKES ZEBRAWELL DIFFERENT” SECTION (feature tiles/cards)
+- Background: --zw-bg-cream-2 (slightly deeper to create alternating rhythm)
+
+7) “ENGINEERED FOR STABILITY” SECTION (AM/PM formula cards area)
+- Background: --zw-bg-cream-1
+- Do NOT change the AM/PM cards themselves (they appear dark/green). Only change the section wrapper background.
+
+8) INGREDIENT MAP / NETWORK DIAGRAM SECTION
+- Background: --zw-bg-cream-2
+
+9) RESERVE / SIGNUP CTA STRIP (the bottom call-to-action panel)
+- Background: --zw-bg-cream-1
+
+10) FAQ SECTION
+- Background: --zw-bg-cream-0
+
+11) FOOTER
+- Background: --zw-green-900 (ONLY if footer is already dark) OR keep existing footer color unchanged.
+- If footer is currently dark, do not alter it. If footer is light, set it to --zw-bg-cream-2. (Pick the option that matches current footer intent; do not restyle content.)
+
+DELIVERABLE:
+- Make the minimal code changes necessary.
+- Centralize these colors as theme tokens/variables.
+- Update only section wrapper background colors and button background colors + hover/active/focus states.
+- No other visual or functional changes.

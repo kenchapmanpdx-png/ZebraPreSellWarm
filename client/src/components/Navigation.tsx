@@ -1,5 +1,5 @@
-import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "wouter";
 import ZebraLogo from "./ZebraLogo";
 import { Menu, X } from "lucide-react";
 
@@ -9,115 +9,85 @@ export default function Navigation() {
   const [location] = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // UPDATED: Added "Our Promise" to the navigation list
   const navLinks = [
-    { name: "Our Story", href: "/#story" },
-    { name: "Our Promise", href: "/our-promise" }, // NEW PAGE LINK
-    { name: "Products", href: "/#products" },
+    { name: "Our Promise", href: "/our-promise" },
     { name: "Ingredients", href: "/#ingredients" },
+    { name: "Story", href: "/#story" },
     { name: "FAQ", href: "/#faq" },
   ];
 
-  const handleWaitlistClick = () => {
-    // If we are not on the home page, we need to go there first
-    if (location !== '/') {
-      window.location.href = '/#waitlist-form';
-    } else {
-      const heroForm = document.getElementById('waitlist-form');
-      if (heroForm) {
-        heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  };
-
   return (
     <nav 
-      role="navigation"
-      aria-label="Main Navigation"
-      className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
-        scrolled 
-          ? "py-3 shadow-md bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#C89F87]/20" 
-          : "py-6 bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        // Scrolled state uses Moody Alabaster glass effect
+        scrolled ? "bg-[#F2F0ED]/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 lg:px-6 flex justify-between items-center relative z-10">
+      <div className="container mx-auto px-6 flex justify-between items-center">
 
-        {/* LOGO */}
+        {/* Brand Logo: Locked to Top Left */}
         <Link href="/">
-          <div className="flex items-center gap-4 group cursor-pointer -ml-2 lg:-ml-4" aria-label="ZebraWell Home">
-            <div className="w-20 h-20 bg-[#FDFBF7] rounded-full flex items-center justify-center border-[3px] border-[#C8592B] shadow-lg transition-transform duration-300 group-hover:scale-105">
-              <ZebraLogo className="w-12 h-12 text-[#2c1810] fill-current" />
-            </div>
-
-            <div className="flex flex-col justify-center">
-              <span className="text-3xl font-serif font-bold tracking-tight text-[#2c1810] leading-none">
-                Zebra<span className="text-[#C8592B]">Well</span>
-              </span>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#C8592B] font-bold mt-1 ml-1">
-                Clinical Grade
-              </span>
-            </div>
-          </div>
+          <a className="flex items-center gap-3 group">
+            <ZebraLogo className={`w-9 h-9 transition-colors ${scrolled ? "text-[#262321]" : "text-[#262321]"} fill-current`} />
+            <span className={`text-xl font-serif font-bold tracking-tight text-[#262321]`}>
+              Zebra<span className="text-[#B36B4D]">Well</span>
+            </span>
+          </a>
         </Link>
 
-        {/* DESKTOP LINKS */}
-        <div className="hidden md:flex items-center space-x-10">
+        {/* Desktop Nav Links: Luxe Tracking */}
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href}>
-              <a className="text-base font-bold text-[#2c1810] hover:text-[#C8592B] transition-colors uppercase tracking-widest relative group cursor-pointer">
+              <a className={`text-[10px] font-bold uppercase tracking-[0.4em] transition-colors hover:text-[#B36B4D] ${
+                scrolled ? "text-[#262321]" : "text-[#262321]"
+              }`}>
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C8592B] transition-all group-hover:w-full"></span>
               </a>
             </Link>
           ))}
-
-          {/* CTA BUTTON */}
-          <button 
-            onClick={handleWaitlistClick}
-            className="bg-[#C8592B] text-white px-8 py-3 rounded-full font-bold text-base shadow-xl hover:bg-[#B04A20] transition-all hover:-translate-y-0.5"
-          >
-            Join Waitlist
-          </button>
+          <Link href="/#waitlist">
+            <button className="bg-[#B36B4D] hover:bg-[#A04F3D] text-white px-8 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] transition-all shadow-lg shadow-[#B36B4D]/20 active:scale-95">
+              Join Waitlist
+            </button>
+          </Link>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-[#2c1810]"
+          className="md:hidden text-[#262321]" 
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#FDFBF7] border-t border-[#C89F87]/20 shadow-2xl animate-in slide-in-from-top-2">
-          <div className="flex flex-col p-8 space-y-6 relative z-10 text-center">
-            {navLinks.map((link) => (
-              <Link key={link.name} href={link.href}>
-                <a 
-                  className="text-2xl font-serif font-bold text-[#2c1810] hover:text-[#C8592B]"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </a>
-              </Link>
-            ))}
+        <div className="absolute top-full left-0 w-full bg-[#F2F0ED] border-t border-[#BCC2BB]/20 shadow-2xl py-8 flex flex-col items-center gap-6 md:hidden animate-in fade-in slide-in-from-top-4">
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.href}>
+              <a 
+                className="text-[#262321] text-xs font-bold uppercase tracking-[0.3em] hover:text-[#B36B4D]" 
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            </Link>
+          ))}
+          <Link href="/#waitlist">
             <button 
-              onClick={() => { handleWaitlistClick(); setIsOpen(false); }}
-              className="w-full bg-[#C8592B] text-white py-4 rounded-xl font-bold mt-4 shadow-md text-lg"
+              className="bg-[#B36B4D] text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest w-[80%]"
+              onClick={() => setIsOpen(false)}
             >
               Join Waitlist
             </button>
-          </div>
+          </Link>
         </div>
       )}
     </nav>
