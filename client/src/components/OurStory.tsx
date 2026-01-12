@@ -22,14 +22,12 @@ export default function OurStory() {
             />
           </div>
 
-          {/* Quote card (positioned below photo) */}
-          <div className="absolute -bottom-16 left-8 right-8 md:right-auto md:w-[65%] bg-[#FBFAF7] rounded-2xl p-5 shadow-xl border border-[#E8E2D8] z-20">
-            <p className="text-[#262321] font-serif italic text-base leading-relaxed">
-              “If it’s not good enough for Ava, it’s not good enough for you.
-              <br />
-              And it’s not going in.”
+          {/* Quote card (positioned at lower right) */}
+          <div className="absolute -bottom-8 right-4 md:right-6 w-[50%] md:w-[45%] bg-[#FBFAF7] rounded-xl p-3 shadow-xl border border-[#E8E2D8] z-20">
+            <p className="text-[#262321] font-serif italic text-xs md:text-sm leading-snug">
+              "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
             </p>
-            <div className="w-8 h-[2px] bg-[#B36B4D] mt-4" />
+            <div className="w-5 h-[2px] bg-[#B36B4D] mt-2" />
           </div>
         </div>
 
@@ -52,13 +50,13 @@ export default function OurStory() {
             </p>
 
             <p>
-              ZebraWell wasn’t born in a boardroom. It was born from my relentless pursuit to
+              ZebraWell wasn't born in a boardroom. It was born from my relentless pursuit to
               help her feel better. Not just temporarily, but sustainably and safely.
             </p>
 
             <p className="font-medium text-[#2c1810]">
-              We couldn’t find what she needed. So we created it. A system designed to be
-              effective, tolerable, and honest about what’s inside.
+              We couldn't find what she needed. So we created it. A system designed to be
+              effective, tolerable, and honest about what's inside.
             </p>
           </div>
 
