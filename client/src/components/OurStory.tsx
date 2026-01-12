@@ -15,7 +15,7 @@ export default function OurStory() {
           {/* Image */}
           <div className="relative z-10 overflow-hidden rounded-[2rem] shadow-2xl bg-[#EDEAE3]">
             <img
-              src="/images/ken-and-ava.jpg"
+              src="/images/ken-and-ava.png"
               alt="Ken and Ava"
               className="w-full h-auto object-cover grayscale-[0.15] hover:grayscale-0 transition-all duration-700"
               loading="lazy"
