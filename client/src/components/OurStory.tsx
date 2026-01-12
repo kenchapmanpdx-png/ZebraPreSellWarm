@@ -5,7 +5,7 @@ import { Link } from 'wouter';
 
 export default function OurStory() {
   return (
-    <section className="py-24 px-4 bg-[#F2F0ED]"> {/* NEW: Moody Alabaster Background */}
+    <section className="py-24 px-4 bg-[#FBF8F2]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
 
         {/* Left: The Personal Photo with Slate Blue Trim */}
@@ -40,7 +40,7 @@ export default function OurStory() {
 
           {/* Primary Action: Muted Umber Button */}
           <Link href="/our-story">
-            <button className="inline-flex items-center gap-3 px-8 py-4 bg-[#4A4540] hover:bg-[#3C3835] text-white font-bold rounded-full shadow-lg shadow-black/10 transition-all transform hover:-translate-y-1">
+            <button className="inline-flex items-center gap-3 px-8 py-4 bg-[#0F2A22] hover:bg-[#14372D] active:bg-[#1A4639] text-white font-bold rounded-full shadow-lg shadow-black/10 transition-all transform hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]">
               Read Our Full Story
               <ArrowRight size={20} />
             </button>

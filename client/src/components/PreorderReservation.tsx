@@ -34,10 +34,7 @@ export default function PreorderReservation() {
   // SUCCESS STATE VIEW
   if (isSubmitted) {
     return (
-      <section className="py-8 md:py-16 px-8 mt-4 md:mt-10 border-t border-[#3C3835]/10" style={{
-        background: '#E1E5E8', // NEW: Mist Blue
-        backgroundImage: 'linear-gradient(180deg, #E1E5E8 0%, #F7F8F7 100%)'
-      }}>
+      <section className="py-8 md:py-16 px-8 mt-4 md:mt-10 border-t border-[#3C3835]/10 bg-[#F6F0E6]">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-2xl shadow-xl border-2 border-[#262321] p-8 md:p-12 text-center bg-white">
             <div className="text-6xl mb-4">✅</div>
@@ -53,10 +50,7 @@ export default function PreorderReservation() {
 
   // DEFAULT FORM VIEW
   return (
-    <section className="py-8 md:py-16 px-8 mt-4 md:mt-10 border-t border-[#3C3835]/10" style={{
-      background: '#E1E5E8', // NEW: Mist Blue
-      backgroundImage: 'linear-gradient(180deg, #E1E5E8 0%, #F7F8F7 100%)'
-    }}>
+    <section className="py-8 md:py-16 px-8 mt-4 md:mt-10 border-t border-[#3C3835]/10 bg-[#F6F0E6]">
       <div className="max-w-4xl mx-auto">
         <div className="rounded-2xl shadow-xl border-2 border-[#262321] p-4 md:p-12 text-center bg-white">
           <h2 className="text-3xl font-serif font-bold text-[#B36B4D] mb-3 md:mb-6">📧 Reserve Your Spot – Limited First Run!</h2>
@@ -77,10 +71,10 @@ export default function PreorderReservation() {
               <button
                 type="submit"
                 disabled={isSubmitting || !email}
-                className={`text-white font-bold px-6 py-3 rounded-lg shadow transition-all duration-300 text-sm whitespace-nowrap border-2
+                className={`text-white font-bold px-6 py-3 rounded-lg shadow transition-all duration-300 text-sm whitespace-nowrap border-2 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]
                   ${
                     email 
-                      ? 'bg-[#B36B4D] border-[#B36B4D] hover:bg-[#A04F3D] hover:scale-[1.05]' 
+                      ? 'bg-[#0F2A22] border-[#0F2A22] hover:bg-[#14372D] active:bg-[#1A4639] hover:scale-[1.05]' 
                       : 'bg-[#7A8691] border-[#7A8691] opacity-100 cursor-not-allowed'
                   }`
                 }

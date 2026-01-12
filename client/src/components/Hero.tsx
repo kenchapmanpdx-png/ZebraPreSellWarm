@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-32 md:pt-48 pb-16 px-4 overflow-hidden min-h-screen flex items-center bg-[#E1E5E8]">
+    <section className="relative pt-32 md:pt-48 pb-16 px-4 overflow-hidden min-h-screen flex items-center bg-[#FBF8F2]">
       {/* LUXE MIST ANIMATION: Soft, organic earth-tone drift */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute inset-[-40%] animate-luxe-mist" 
@@ -103,7 +103,7 @@ export default function Hero() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting} 
-                  className="w-full py-6 rounded-2xl bg-[#B36B4D] text-white font-bold uppercase tracking-[0.2em] text-sm shadow-xl hover:bg-[#A04F3D] transition-all active:scale-[0.98]"
+                  className="w-full py-6 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-sm shadow-xl hover:bg-[#14372D] active:bg-[#1A4639] transition-all active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]"
                 >
                   {isSubmitting ? "Joining..." : "Join Waitlist"}
                 </button>

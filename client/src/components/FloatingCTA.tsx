@@ -10,7 +10,7 @@ export default function FloatingCTA() {
     <div id="floating-cta" className="fixed bottom-6 right-6 z-40 fade-in">
       <button 
         onClick={handleClick}
-        className="bg-[#C8592B] hover:bg-[#B04A20] text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center"
+        className="bg-[#0F2A22] hover:bg-[#14372D] active:bg-[#1A4639] text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]"
       >
         Join Waitlist
       </button>

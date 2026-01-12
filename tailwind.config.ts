@@ -65,6 +65,20 @@ export default {
           DEFAULT: "#0f2e24", // Deep Green
         },
         cream: "#FDFBF7", // Background
+        
+        // ZEBRAWELL COLOR TOKENS
+        zw: {
+          'cream-0': '#FBF8F2',
+          'cream-1': '#F6F0E6',
+          'cream-2': '#EFE6D8',
+          'cream-3': '#E7DCCB',
+          'green-900': '#0F2A22',
+          'green-800': '#14372D',
+          'green-700': '#1A4639',
+          'clay-600': '#A4613A',
+          'clay-700': '#8E5433',
+          'clay-800': '#744428',
+        },
       },
     },
   },

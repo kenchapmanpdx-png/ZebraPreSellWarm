@@ -50,6 +50,19 @@
 
   --cream: 40 30% 98%; /* #FDFBF7 */
   --sand: 35 30% 85%; /* #E8DCCA */
+
+  /* ZEBRAWELL COLOR TOKENS */
+  --zw-bg-cream-0: #FBF8F2;  /* main page background; warm off-white */
+  --zw-bg-cream-1: #F6F0E6;  /* soft neutral beige */
+  --zw-bg-cream-2: #EFE6D8;  /* slightly deeper beige for alternating sections */
+  --zw-bg-cream-3: #E7DCCB;  /* rare use: thin bands / emphasis blocks only */
+  --zw-green-900: #0F2A22;   /* deep muted green primary button */
+  --zw-green-800: #14372D;   /* hover */
+  --zw-green-700: #1A4639;   /* active */
+  --zw-clay-600: #A4613A;    /* secondary/accent button */
+  --zw-clay-700: #8E5433;    /* hover */
+  --zw-clay-800: #744428;    /* active */
+  --zw-focus-ring: rgba(15,42,34,0.28);  /* focus ring */
 }
 
 @layer base {
@@ -59,7 +72,7 @@
 
   body {
     /* Set global font to Montserrat, background to Cream, text to Deep Forest */
-    @apply font-sans antialiased bg-[#FDFBF7] text-[#0f2e24];
+    @apply font-sans antialiased bg-[#FBF8F2] text-[#0f2e24];
   }
 
   /* Update Headings to Playfair Display automatically */
@@ -70,13 +83,22 @@
 
 /* PRE-BUILT LUXURY CLASSES */
 @layer components {
-  /* The "Copper Button" - Use this everywhere */
-  .btn-copper {
-    @apply bg-[#C8592B] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#B04A20] hover:-translate-y-0.5 hover:shadow-orange-900/20 border border-white/10;
+  /* PRIMARY BUTTON - Deep Muted Green */
+  .btn-primary {
+    @apply bg-[#0F2A22] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#14372D] active:bg-[#1A4639] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)] border border-white/10;
   }
 
-  /* The "Forest Button" - Secondary actions */
+  /* SECONDARY BUTTON - Clay/Copper */
+  .btn-secondary {
+    @apply bg-[#A4613A] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#8E5433] active:bg-[#744428] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)] border border-white/10;
+  }
+
+  /* Legacy button classes - updated to use new colors */
+  .btn-copper {
+    @apply bg-[#A4613A] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#8E5433] active:bg-[#744428] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)] border border-white/10;
+  }
+
   .btn-forest {
-    @apply bg-[#0f2e24] text-[#FDFBF7] font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#1a4a3a] hover:-translate-y-0.5 border border-[#C8592B]/30;
+    @apply bg-[#0F2A22] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#14372D] active:bg-[#1A4639] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)] border border-white/10;
   }
 }

@@ -47,11 +47,7 @@ export default function DifferenceSection() {
   return (
     <section 
       id="difference" 
-      className="py-12 md:py-20 px-6" 
-      style={{
-        // NEW: Grayish-Blue Mist Background
-        background: 'linear-gradient(180deg, #E1E5E8 0%, #F7F8F7 100%)' 
-      }}
+      className="py-12 md:py-20 px-6 bg-[#EFE6D8]"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* NEW: Deep Umber Text */}

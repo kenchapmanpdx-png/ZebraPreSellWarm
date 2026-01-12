@@ -4,8 +4,7 @@ import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
-    // NEW: Deep Umber background, Alabaster text, and Subtle Graphite border
-    <footer className="bg-[#262321] text-[#F2F0ED] pt-20 pb-10 border-t border-[#3C3835]">
+    <footer className="bg-[#0F2A22] text-[#F2F0ED] pt-20 pb-10 border-t border-[#14372D]">
       <div className="container mx-auto px-6">
 
         {/* Main Footer Content */}

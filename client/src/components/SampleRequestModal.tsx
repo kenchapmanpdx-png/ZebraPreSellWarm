@@ -105,7 +105,7 @@ export default function SampleRequestModal() {
             </button>
             <button 
               type="submit" 
-              className="flex-1 bg-forest hover:bg-forest/90 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center"
+              className="flex-1 bg-[#0F2A22] hover:bg-[#14372D] active:bg-[#1A4639] text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]"
             >
               <i className="fas fa-box mr-2"></i>Request Free Sample
             </button>

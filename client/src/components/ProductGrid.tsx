@@ -8,7 +8,7 @@ const powderBenefits = ["Mast Cell Stabilization", "Collagen Substrates", "MMP I
 
 export default function ProductGrid() {
   return (
-    <section id="products" className="py-32 md:py-48 bg-[#F7F8F7]"> {/* LUXE: Increased Breathing Room */}
+    <section id="products" className="py-32 md:py-48 bg-[#F6F0E6]">
       <div className="container mx-auto px-6">
 
         {/* Header: High-End Tracking & Minimalist Depth */}
@@ -87,7 +87,7 @@ export default function ProductGrid() {
                     ))}
                   </div>
                 </div>
-                <button className="bg-[#262321] text-white px-10 py-4 rounded-xl font-bold tracking-widest text-[11px] uppercase shadow-xl hover:bg-[#B36B4D] transition-all">
+                <button className="bg-[#0F2A22] text-white px-10 py-4 rounded-xl font-bold tracking-widest text-[11px] uppercase shadow-xl hover:bg-[#14372D] active:bg-[#1A4639] transition-all focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)]">
                   View Facts
                 </button>
              </div>

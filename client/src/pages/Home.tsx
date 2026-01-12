@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7]">
+    <div className="min-h-screen bg-[#FBF8F2]">
       <Navigation />
 
       <main>
@@ -52,7 +52,7 @@ export default function Home() {
         <OurStory />
 
         {/* 4. CLINICAL PROOF */}
-        <Suspense fallback={<div className="h-96 bg-[#FDFBF7]" />}>
+        <Suspense fallback={<div className="h-96 bg-[#FBF8F2]" />}>
            <ClinicalRationale />
            <DifferenceSection />
         </Suspense>

@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 
 export default function WhyZebraWell() {
   return (
-    <section className="py-20 px-4 bg-[#E2E4E1]"> 
+    <section className="py-20 px-4 bg-[#F6F0E6]"> 
       <div className="max-w-7xl mx-auto">
 
         {/* The Physician Claim Callout */}
