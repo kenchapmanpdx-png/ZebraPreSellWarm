@@ -41,7 +41,7 @@ export default function OurStory() {
 
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0F2A22] mb-6 leading-tight">
             Behind every bottle is a deeper purpose and her name is{" "}
-            <span className="text-[#B36B4D] italic font-normal">Ava</span>.
+            <span className="text-[#C85A32] italic font-normal text-[110%]">Ava</span>.
           </h2>
 
           <div className="space-y-6 text-lg text-[#4A4540] leading-relaxed mb-10">
