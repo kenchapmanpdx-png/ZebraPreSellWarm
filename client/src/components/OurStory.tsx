@@ -22,8 +22,8 @@ export default function OurStory() {
             />
           </div>
 
-          {/* Quote card (kept over photo) */}
-          <div className="absolute -bottom-10 left-8 right-8 md:right-auto md:w-[70%] bg-[#FBFAF7] rounded-2xl p-6 shadow-xl border border-[#E8E2D8] z-20">
+          {/* Quote card (positioned below photo) */}
+          <div className="absolute -bottom-16 left-8 right-8 md:right-auto md:w-[65%] bg-[#FBFAF7] rounded-2xl p-5 shadow-xl border border-[#E8E2D8] z-20">
             <p className="text-[#262321] font-serif italic text-base leading-relaxed">
               “If it’s not good enough for Ava, it’s not good enough for you.
               <br />
