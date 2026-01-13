@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import heroProductImage from '@assets/zebra-head.png'; // Update if using a specific bottles image
+import heroProductImage from '@assets/image_1768272183723.png';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
