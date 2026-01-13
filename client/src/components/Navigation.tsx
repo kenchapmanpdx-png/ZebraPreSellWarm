@@ -22,13 +22,13 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
-      scrolled ? "bg-[#F5F3EE]/95 backdrop-blur-md py-3 shadow-sm" : "bg-transparent py-6"
+      scrolled ? "bg-[#F2F0EA]/95 backdrop-blur-md py-3 shadow-sm border-b border-black/5" : "bg-transparent py-6"
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 group">
-          {/* Constrained logo size to prevent massive overlapping */}
+          {/* Contained logo size (w-12 h-12) to stop it from overwhelming the header */}
           <div className="w-12 h-12 flex items-center justify-center">
-            <ZebraLogo className="w-full h-full text-[#262321] fill-current" />
+            <ZebraLogo className="w-full h-full text-[#262321] fill-current transform group-hover:scale-110 transition-transform duration-500" />
           </div>
           <span className="text-2xl font-serif font-bold tracking-tight text-[#262321]">
             Zebra<span className="text-[#B36B4D]">Well</span>
@@ -42,6 +42,7 @@ export default function Navigation() {
             </Link>
           ))}
           <Link href="/#waitlist">
+            {/* Restored Original Forest Green Gradient */}
             <button className="bg-gradient-to-r from-[#0F2A22] to-[#1A4639] hover:from-[#14372D] hover:to-[#1F5244] text-white px-8 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] transition-all shadow-lg active:scale-95">
               Join Waitlist
             </button>

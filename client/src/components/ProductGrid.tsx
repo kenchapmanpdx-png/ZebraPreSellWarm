@@ -1,144 +1,122 @@
-import { Moon, Sun, ShieldCheck } from "lucide-react";
-
-// Data constants preserved exactly
-const amBenefits = [
-  "Mitochondrial Energy",
-  "Methylation Support",
-  "Mast Cell Stabilization",
-  "Connective Tissue",
-];
-const pmBenefits = [
-  "Collagen Cross-linking",
-  "Overnight Repair",
-  "Histamine Metabolism",
-  "Relaxation Support",
-];
-const powderBenefits = [
-  "Mast Cell Stabilization",
-  "Collagen Substrates",
-  "MMP Inhibition",
-  "ECM Protection",
-];
+import React from 'react';
+import { Sun, Moon, ShieldCheck, ArrowRight, CheckCircle2, Clock } from 'lucide-react';
 
 export default function ProductGrid() {
+  const products = [
+    {
+      id: "am",
+      tag: "01 / Morning",
+      title: "AM Formula",
+      subtitle: "The Rhythm Pathway",
+      desc: "Wakes up your nervous system gently. It stabilizes heart rate fluctuations and clears brain fog for a steady, focused day.",
+      bgColor: "bg-white",
+      textColor: "text-[#262321]",
+      accentColor: "text-[#A4613A]",
+      icon: <Sun className="w-6 h-6" />,
+      benefits: ["Heart Rate Stability", "Mental Clarity", "Daily Endurance"]
+    },
+    {
+      id: "pm",
+      tag: "02 / Evening",
+      title: "PM Formula",
+      subtitle: "The Repair Pathway",
+      desc: "Gently lowers histamine levels while you sleep. It supports deep tissue repair so you wake up feeling 'light' and refreshed.",
+      bgColor: "bg-white",
+      textColor: "text-[#262321]",
+      accentColor: "text-[#A4613A]",
+      icon: <Moon className="w-6 h-6" />,
+      benefits: ["Histamine Clearing", "Overnight Repair", "Restorative Sleep"]
+    },
+    {
+      id: "foundation",
+      tag: "The Essential Baseline",
+      title: "Daily Foundation",
+      subtitle: "The Integrity Pathway",
+      desc: "The 'missing link' for stability. It stops the 'shredding' of your collagen and repairs the gut barrier so your system can actually hold together.",
+      bgColor: "bg-[#0F2A22]", 
+      textColor: "text-[#EBE8E1]", // FIXED: Now High-Contrast Light Greige
+      accentColor: "text-[#A4613A]",
+      icon: <ShieldCheck className="w-6 h-6" />,
+      benefits: ["Mast Cell Stability", "Connective Tissue Armor", "Gut-Barrier Repair"],
+      isFeatured: true
+    }
+  ];
+
   return (
-    <section id="products" className="py-24 md:py-36 bg-[#F4F2ED]">
-      <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <span className="text-[#B36B4D] font-bold tracking-[0.5em] text-[10px] uppercase mb-5 block ml-[0.5em]">
-            The Collection
-          </span>
-          <h2 className="text-5xl md:text-7xl font-serif font-medium text-[#262321] mb-6 leading-[1.1]">
-            Engineered for{" "}
-            <span className="italic font-light opacity-60">Stability</span>
+    <section id="products" className="py-32 px-6 bg-[#F4F2ED]">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Editorial Header */}
+        <div className="text-center max-w-4xl mx-auto mb-24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#A4613A]/10 rounded-full mb-6">
+            <Clock className="w-4 h-4 text-[#A4613A]" />
+            <span className="text-[#A4613A] font-bold tracking-[0.3em] text-[10px] uppercase">
+              The 24-Hour Stabilization Protocol
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#5A3E2B] mb-8 leading-tight">
+            One System. <br />
+            <span className="text-[#A4613A] italic font-normal">Every Pathway.</span>
           </h2>
-          <div className="w-12 h-[1px] bg-[#B36B4D] mx-auto mb-6" />
-          <p className="text-xl text-[#5D5752] max-w-3xl mx-auto font-light leading-relaxed">
-            Targeted support for the unique physiology of EDS and POTS.
+          <p className="text-xl text-[#4A4540] leading-relaxed max-w-2xl mx-auto font-medium">
+            Complexity requires a synchronized solution. We engineered these three formulas to work in harmony, protecting your system from sunrise to sunset.
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* AM Formula */}
-          <div className="group relative rounded-[2.5rem] p-10 md:p-14 overflow-hidden shadow-[0_26px_55px_-16px_rgba(0,0,0,0.38)] transition-all duration-700 hover:scale-[1.01] bg-gradient-to-b from-[#45545E] to-[#36424A]">
-            {/* Copper edge accent */}
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-[#A4613A]/80" />
-
-            <div className="relative z-10">
-              <div className="flex justify-between items-center mb-10">
-                <span className="border border-[#E6C7B3]/40 text-[#F4EDE6] text-[9px] font-semibold tracking-[0.35em] px-4 py-2 rounded-full uppercase">
-                  Morning
-                </span>
-                <Sun size={22} className="text-[#E6C7B3] opacity-70" />
-              </div>
-
-              <h3 className="text-4xl font-serif text-white mb-4">AM Formula</h3>
-
-              <p className="text-[#EDE6DE] text-lg font-light leading-relaxed mb-8 opacity-85">
-                Strategic mitochondrial support for sustained autonomic clarity.
+        {/* The Trinity Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
+          {products.map((product) => (
+            <div 
+              key={product.id}
+              className={`relative flex flex-col rounded-[3.5rem] p-10 md:p-12 transition-all duration-700 hover:-translate-y-4 group shadow-2xl
+                         ${product.bgColor} ${product.textColor} 
+                         ring-4 ring-[#A4613A] ring-offset-8 ring-offset-[#F4F2ED]`}
+            >
+              <p className={`text-[10px] font-bold uppercase tracking-[0.4em] mb-10 ${product.isFeatured ? 'text-[#A4613A]' : 'opacity-60 text-[#A4613A]'}`}>
+                {product.tag}
               </p>
 
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-                {amBenefits.map((b, i) => (
-                  <span
-                    key={i}
-                    className="text-[10px] tracking-widest uppercase text-white/75 border-b border-white/15 pb-1"
-                  >
-                    {b}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* PM Formula */}
-          <div className="group relative rounded-[2.5rem] p-10 md:p-14 overflow-hidden shadow-[0_26px_55px_-16px_rgba(0,0,0,0.38)] transition-all duration-700 hover:scale-[1.01] bg-gradient-to-b from-[#45545E] to-[#36424A]">
-            {/* Copper edge accent */}
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-[#A4613A]/80" />
-
-            <div className="relative z-10">
-              <div className="flex justify-between items-center mb-10">
-                <span className="border border-white/25 text-white/85 text-[9px] font-medium tracking-[0.32em] px-4 py-2 rounded-full uppercase">
-                  Evening
-                </span>
-                <Moon size={22} className="text-white/60" />
-              </div>
-
-              <h3 className="text-4xl font-serif text-white mb-4">PM Formula</h3>
-
-              <p className="text-[#EDE6DE] text-lg font-light leading-relaxed mb-8 opacity-80">
-                Overnight connective tissue repair and histamine modulation.
-              </p>
-
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-                {pmBenefits.map((b, i) => (
-                  <span
-                    key={i}
-                    className="text-[10px] tracking-widest uppercase text-white/65 border-b border-white/12 pb-1"
-                  >
-                    {b}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Daily Foundation Powder */}
-          <div className="md:col-span-2 group relative bg-[#F4F2ED] rounded-[2.5rem] p-10 md:p-14 shadow-[0_18px_44px_rgba(0,0,0,0.045)] border border-[#BCC2BB]/25 overflow-hidden transition-all duration-700">
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
-              <div className="w-20 h-20 rounded-[1.5rem] bg-[#F4F2ED] border border-[#BCC2BB]/25 flex items-center justify-center text-[#B36B4D] shrink-0">
-                <ShieldCheck size={36} />
-              </div>
-
-              <div className="flex-1 text-center md:text-left">
-                <span className="text-[#B36B4D] font-bold tracking-[0.4em] text-[9px] uppercase mb-4 block">
-                  The Clinical Baseline
-                </span>
-                <h3 className="text-3xl font-serif font-bold text-[#262321] mb-4">
-                  Daily Foundation Powder
-                </h3>
-                <p className="text-[#5D5752] text-lg font-light leading-relaxed mb-7 max-w-2xl">
-                  Precision-dosed nutrients crafted for high-sensitivity systems.
-                </p>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-3">
-                  {powderBenefits.map((b, i) => (
-                    <span
-                      key={i}
-                      className="text-[10px] tracking-widest uppercase text-[#7A8691] border-b border-[#BCC2BB]/25 pb-1"
-                    >
-                      {b}
-                    </span>
-                  ))}
+              <div className="mb-8">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm 
+                                ${product.isFeatured ? 'bg-[#A4613A] text-white' : 'bg-[#F4F2ED] text-[#A4613A]'}`}>
+                  {product.icon}
                 </div>
+                {/* FIXED: Heading color for the Daily Foundation */}
+                <h3 className={`text-4xl font-serif font-bold mb-2 ${product.isFeatured ? 'text-[#EBE8E1]' : 'text-[#262321]'}`}>
+                  {product.title}
+                </h3>
+                <p className={`text-lg font-bold ${product.isFeatured ? 'text-[#BCC2BB]' : 'text-[#A4613A]'}`}>
+                  {product.subtitle}
+                </p>
               </div>
 
-              <button className="bg-[#0F2A22] text-white px-10 py-4 rounded-xl font-bold tracking-widest text-[11px] uppercase shadow-xl hover:bg-[#14372D] active:bg-[#1A4639] transition-all focus-visible:ring-2 focus-visible:ring-[rgba(15,42,34,0.28)] shrink-0">
-                View Facts
+              <p className="text-lg leading-relaxed mb-10 opacity-90 font-medium">
+                {product.desc}
+              </p>
+
+              <ul className="space-y-4 mb-12 flex-grow">
+                {product.benefits.map((benefit, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-semibold tracking-wide">
+                    <CheckCircle2 className={`w-5 h-5 shrink-0 ${product.isFeatured ? 'text-[#A4613A]' : 'text-[#BCC2BB]'}`} />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+
+              <button className={`w-full py-5 rounded-2xl flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-[11px] transition-all duration-500
+                                ${product.isFeatured 
+                                  ? 'bg-[#A4613A] text-white hover:bg-[#EBE8E1] hover:text-[#0F2A22]' 
+                                  : 'bg-[#0F2A22] text-white hover:bg-[#A4613A]'}`}>
+                View Supplement Facts <ArrowRight className="w-4 h-4" />
               </button>
+
+              {product.isFeatured && (
+                <div className="absolute top-10 right-10 opacity-[0.05] pointer-events-none text-white">
+                  <ShieldCheck size={120} />
+                </div>
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
