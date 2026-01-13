@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full bg-white/30 border border-white/40 text-[#262321] text-[10px] font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
             <ShieldCheck size={14} /> Physician Formulated
           </div>
-          <h1 className="text-4xl md:text-[4.5rem] font-serif font-bold leading-[1.05] text-[#262321]" style={{ textShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+          <h1 className="text-4xl md:text-[4.5rem] font-serif font-bold leading-[1.05] text-[#6B4F3A]" style={{ textShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
             Advanced Autonomic, Mast Cell <br className="hidden md:block" /> & Connective Tissue Support
           </h1>
         </div>
