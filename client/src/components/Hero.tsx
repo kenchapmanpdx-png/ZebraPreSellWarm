@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { ShieldCheck } from 'lucide-react';
-import heroProductImage from '@assets/image_1768272045464.png';
+import heroProductImage from '@assets/image_1768272183723.png';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -76,7 +76,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full bg-white/30 border border-white/40 text-[#262321] text-[10px] font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
             <ShieldCheck size={14} /> Physician Formulated
           </div>
-          <h1 className="text-4xl md:text-[4.5rem] font-serif font-bold leading-[1.05] text-[#6B4F3A]" style={{ textShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+          <h1 className="text-4xl md:text-[4.5rem] font-serif font-bold leading-[1.05] text-[#5A3E2B]" style={{ textShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
             Advanced Autonomic, Mast Cell <br className="hidden md:block" /> & Connective Tissue Support
           </h1>
         </div>
@@ -118,7 +118,7 @@ export default function Hero() {
             <img 
               src={heroProductImage}
               alt="ZebraWell Product Line - AM Formula, PM Formula, Daily Powder & Electrolytes" 
-              className="w-full max-w-2xl relative z-10 drop-shadow-[0_30px_50px_rgba(0,0,0,0.2)] transform hover:scale-[1.02] hover:-translate-y-2 transition-all duration-700 ease-out" 
+              className="w-full max-w-2xl relative z-10 rounded-3xl drop-shadow-[0_30px_50px_rgba(0,0,0,0.2)] transform hover:scale-[1.02] hover:-translate-y-2 transition-all duration-700 ease-out" 
             />
           </div>
         </div>
