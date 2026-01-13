@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+// Import AOS for the scroll animations - Ensure this is installed in your project
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import {
@@ -22,15 +26,21 @@ import {
 export default function OurPromise() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Initialize animations with a slightly longer duration for a "Luxury" feel
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-quad',
+    });
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F4F2ED]">
+    <div className="min-h-screen bg-[#F4F2ED] overflow-x-hidden">
       <Navigation />
 
-      {/* THE CONSTITUTION HEADER */}
+      {/* THE CONSTITUTION HEADER: Slow Fade Down */}
       <section className="relative pt-48 pb-32 px-6 bg-[#DED9D0]">
-        <div className="container mx-auto max-w-5xl text-center relative z-10">
+        <div className="container mx-auto max-w-5xl text-center relative z-10" data-aos="fade-down">
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-2 rounded-full bg-white/60 border border-[#A4613A]/20 text-[#0F2A22] text-xs font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
             <ShieldCheck size={16} className="text-[#A4613A]" />
             The Zebra Science Promise
@@ -40,9 +50,9 @@ export default function OurPromise() {
             Our <span className="text-[#A4613A] italic font-normal">Constitution</span>
           </h1>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="px-8 py-10 rounded-[3rem] bg-white/40 border-2 border-white backdrop-blur-xl shadow-2xl">
-              <p className="text-2xl md:text-3xl text-[#262321] font-serif font-bold leading-tight mb-6">
+              <p className="text-2xl md:text-3xl text-[#262321] font-serif font-bold leading-tight mb-6 italic">
                 "We exist because the system failed you."
               </p>
               <p className="text-lg md:text-xl text-[#4A4540] font-medium leading-relaxed">
@@ -53,13 +63,13 @@ export default function OurPromise() {
         </div>
       </section>
 
-      {/* THE NEVER / ALWAYS SPLIT: The "Holy Crap" Manifesto */}
+      {/* THE MANIFESTO GRID: Side-scrolling reveals */}
       <section className="py-32 px-6 bg-[#F4F2ED]">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
-            {/* COLUMN 1: WHAT WE WILL NEVER DO (THE REJECTION) */}
-            <div className="space-y-12">
+            {/* COLUMN 1: Slide in from Left */}
+            <div className="space-y-12" data-aos="fade-right">
               <div className="flex items-center gap-6 mb-12 border-b-2 border-[#A4613A]/20 pb-8">
                 <div className="w-16 h-16 rounded-[1.5rem] bg-[#5A3E2B] flex items-center justify-center text-white shadow-lg">
                   <Ban size={28} />
@@ -70,7 +80,7 @@ export default function OurPromise() {
               </div>
 
               {NEVER_DO.map((item, idx) => (
-                <div key={idx} className="relative pl-12 group">
+                <div key={idx} className="relative pl-12 group" data-aos="fade-up" data-aos-delay={idx * 100}>
                   <span className="absolute left-0 top-0 text-3xl font-serif font-bold text-[#A4613A]/20 group-hover:text-[#A4613A] transition-colors">
                     {idx + 1}
                   </span>
@@ -80,8 +90,8 @@ export default function OurPromise() {
               ))}
             </div>
 
-            {/* COLUMN 2: WHAT WE WILL ALWAYS DO (THE STANDARD) */}
-            <div className="space-y-12">
+            {/* COLUMN 2: Slide in from Right */}
+            <div className="space-y-12" data-aos="fade-left">
               <div className="flex items-center gap-6 mb-12 border-b-2 border-[#0F2A22]/20 pb-8">
                 <div className="w-16 h-16 rounded-[1.5rem] bg-[#0F2A22] flex items-center justify-center text-white shadow-lg">
                   <CheckCircle2 size={28} />
@@ -92,7 +102,7 @@ export default function OurPromise() {
               </div>
 
               {ALWAYS_DO.map((item, idx) => (
-                <div key={idx} className="relative pl-12 group">
+                <div key={idx} className="relative pl-12 group" data-aos="fade-up" data-aos-delay={idx * 100}>
                   <span className="absolute left-0 top-0 text-3xl font-serif font-bold text-[#0F2A22]/20 group-hover:text-[#0F2A22] transition-colors">
                     {idx + 1}
                   </span>
@@ -105,10 +115,10 @@ export default function OurPromise() {
         </div>
       </section>
 
-      {/* ACCOUNTABILITY: THE PROOF OF CONSTITUTION */}
+      {/* ACCOUNTABILITY: Staggered Fade Up */}
       <section className="py-24 px-6 bg-[#DED9D0]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" data-aos="zoom-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#262321] mb-6">Our Accountability</h2>
             <div className="w-24 h-1 bg-[#A4613A] mx-auto"></div>
           </div>
@@ -117,7 +127,12 @@ export default function OurPromise() {
             {ACCOUNTABILITY.map((x, idx) => {
               const Icon = x.icon;
               return (
-                <div key={idx} className="bg-white/60 p-10 rounded-[3rem] border border-white text-center shadow-xl">
+                <div 
+                  key={idx} 
+                  className="bg-white/60 p-10 rounded-[3rem] border border-white text-center shadow-xl hover:-translate-y-2 transition-transform duration-500"
+                  data-aos="fade-up"
+                  data-aos-delay={idx * 150}
+                >
                    <div className="w-14 h-14 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
                       <Icon size={24} className="text-[#A4613A]" />
                    </div>
@@ -130,24 +145,23 @@ export default function OurPromise() {
         </div>
       </section>
 
-      {/* THE BOTTOM LINE: THE PATIENT FILTER */}
-      <section className="py-32 px-6 bg-[#0F2A22]">
+      {/* THE BOTTOM LINE: Dramatic Scale-In */}
+      <section className="py-32 px-6 bg-[#0F2A22] overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center text-[#EBE8E1]">
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-10">The Bottom Line</h2>
-          <p className="text-xl md:text-2xl mb-16 opacity-80 italic font-serif">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-10" data-aos="fade-up">The Bottom Line</h2>
+          <p className="text-xl md:text-2xl mb-16 opacity-80 italic font-serif" data-aos="fade-up" data-aos-delay="200">
             "We're not a wellness brand chasing trends. We're a safe harbor for people whose bodies don't follow the rules."
           </p>
 
-          <div className="bg-[#A4613A] p-12 rounded-[4rem] text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-[#A4613A] p-12 rounded-[4rem] text-white shadow-2xl relative" data-aos="zoom-out-up">
             <div className="relative z-10">
               <p className="text-lg font-bold uppercase tracking-[0.4em] mb-6">The Zebra Filter</p>
               <h3 className="text-3xl md:text-5xl font-serif font-bold mb-8 italic">Does this serve the patient?</h3>
-              <div className="flex flex-col md:flex-row justify-center gap-8 text-lg font-bold">
+              <div className="flex flex-col md:flex-row justify-center gap-12 text-lg font-bold">
                 <span className="flex items-center gap-3"><CheckCircle2 className="text-[#0F2A22]" /> If yes, we do it.</span>
                 <span className="flex items-center gap-3"><Ban className="text-[#0F2A22]" /> If no, we don't.</span>
               </div>
             </div>
-            {/* Ghost Icon background */}
             <ShieldCheck size={200} className="absolute -bottom-10 -right-10 opacity-10 rotate-12" />
           </div>
         </div>
@@ -158,7 +172,7 @@ export default function OurPromise() {
   );
 }
 
-// CONSTITUTION DATA: REWRITTEN FOR MAXIMUM IMPACT
+// DATA ARRAYS REMAIN THE SAME BUT THE COPY IS REFINED FOR MAXIMUM "HOLY CRAP" IMPACT
 const NEVER_DO = [
   {
     title: "Never hide ingredients.",
