@@ -7,27 +7,47 @@ export default function OurStory() {
   return (
     <section className="py-24 px-4 bg-[#F4F2ED]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-        {/* LEFT: PHOTO + OVERLAY CARD */}
-        <div className="w-full md:w-1/2 relative">
-          {/* Slate frame trim */}
-          <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#7A8691] rounded-[2rem] z-0" />
+        {/* LEFT: PHOTO + TRIM + QUOTE */}
+        <div className="w-full md:w-1/2 relative pl-4 pt-4">
+          {/* Padding ensures the trim never gets clipped */}
+          <div className="absolute top-0 left-0 right-4 bottom-4 border-2 border-[#7A8691] rounded-[2rem] z-0" />
 
-          {/* Image */}
-          <div className="relative z-10 overflow-hidden rounded-[2rem] shadow-2xl bg-[#EDEAE3]">
-            <img
-              src="/images/ken-and-ava.png"
-              alt="Ken and Ava"
-              className="w-full h-auto object-cover grayscale-[0.15] hover:grayscale-0 transition-all duration-700"
-              loading="lazy"
-            />
-          </div>
+          {/* Wrapper must allow overflow so the quote can sit mostly OUTSIDE the image */}
+          <div className="relative z-10 overflow-visible">
+            {/* Image stays clipped to rounded corners */}
+            <div className="overflow-hidden rounded-[2rem] shadow-2xl bg-[#EDEAE3]">
+              <img
+                src="/images/ken-and-ava.png"
+                alt="Ken and Ava"
+                className="w-full h-auto object-cover grayscale-[0.15] hover:grayscale-0 transition-all duration-700"
+                loading="lazy"
+              />
+            </div>
 
-          {/* Quote card (positioned at lower right) */}
-          <div className="absolute -bottom-8 right-4 md:right-6 w-[50%] md:w-[45%] bg-[#FBFAF7] rounded-xl p-3 shadow-xl border border-[#E8E2D8] z-20">
-            <p className="text-[#262321] font-serif italic text-xs md:text-sm leading-snug">
-              "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
-            </p>
-            <div className="w-5 h-[2px] bg-[#B36B4D] mt-2" />
+            {/* Quote card: only top ~10% overlaps into the photo */}
+            <div
+              className="
+                absolute
+                right-5 md:right-6
+                top-full
+                -translate-y-[10%]
+                z-20
+                w-[58%] sm:w-[44%] md:w-[40%]
+                max-w-[260px] md:max-w-[280px]
+                bg-[#FBFAF7]
+                rounded-2xl
+                p-3 md:p-4
+                shadow-xl
+                border border-[#E8E2D8]
+              "
+            >
+              <p className="text-[#262321] font-serif italic text-xs md:text-sm leading-snug">
+                If it’s not good enough for Ava, it’s not good enough for you.
+                <br />
+                And it’s not going in.
+              </p>
+              <div className="w-6 h-[2px] bg-[#B36B4D] mt-2" />
+            </div>
           </div>
         </div>
 
@@ -50,13 +70,13 @@ export default function OurStory() {
             </p>
 
             <p>
-              ZebraWell wasn't born in a boardroom. It was born from my relentless pursuit to
+              ZebraWell wasn’t born in a boardroom. It was born from my relentless pursuit to
               help her feel better. Not just temporarily, but sustainably and safely.
             </p>
 
             <p className="font-medium text-[#2c1810]">
-              We couldn't find what she needed. So we created it. A system designed to be
-              effective, tolerable, and honest about what's inside.
+              We couldn’t find what she needed. So we created it. A system designed to be
+              effective, tolerable, and honest about what’s inside.
             </p>
           </div>
 

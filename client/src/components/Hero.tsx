@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { ShieldCheck } from 'lucide-react';
+import heroProductImage from '@assets/image_1768272045464.png';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -112,11 +113,12 @@ export default function Hero() {
           </div>
 
           {/* PRODUCT IMAGE: Product depth and high-end drop shadow */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full lg:w-1/2 flex justify-center relative group">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 rounded-3xl blur-2xl transform translate-y-8 scale-95 opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
             <img 
-              src="/images/zebrawell-bottles-final2.png" 
-              alt="ZebraWell Support" 
-              className="w-full max-w-lg drop-shadow-[0_40px_60px_rgba(0,0,0,0.1)] transform hover:scale-[1.03] transition-transform duration-1000" 
+              src={heroProductImage}
+              alt="ZebraWell Product Line - AM Formula, PM Formula, Daily Powder & Electrolytes" 
+              className="w-full max-w-2xl relative z-10 drop-shadow-[0_30px_50px_rgba(0,0,0,0.2)] transform hover:scale-[1.02] hover:-translate-y-2 transition-all duration-700 ease-out" 
             />
           </div>
         </div>
