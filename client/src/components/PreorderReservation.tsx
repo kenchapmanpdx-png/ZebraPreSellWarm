@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react'; // FIXED: Ensuring FormEvent is correctly imported
+import { useState, FormEvent } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
 export default function PreorderReservation() {
@@ -12,14 +12,24 @@ export default function PreorderReservation() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call for now
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
-      setEmail('');
-      toast({
-        title: "You're on the reservation list!",
-        description: "We'll notify you as soon as ZebraWell is available for order.",
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setEmail('');
+        toast({
+          title: "You're on the reservation list!",
+          description: "We'll notify you as soon as ZebraWell is available for order.",
+        });
+      } else {
+        throw new Error(data.error || 'Failed to subscribe');
+      }
     } catch (error) {
       toast({
         title: "Something went wrong",

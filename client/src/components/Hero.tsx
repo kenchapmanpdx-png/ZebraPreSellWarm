@@ -16,7 +16,6 @@ export default function Hero() {
   const words = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
 
   useEffect(() => {
-    // Slower timing: 4 seconds per word for a calmer, more confident pace
     const interval = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
     }, 4000);
@@ -26,14 +25,34 @@ export default function Hero() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast({ 
-        title: "You're on the list.", 
-        description: "We'll notify you the moment access opens." 
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({ 
+          title: "You're on the list!", 
+          description: "We'll notify you the moment ZebraWell is available." 
+        });
+        setEmail('');
+      } else {
+        throw new Error(data.error || 'Failed to subscribe');
+      }
+    } catch (error) {
+      toast({ 
+        title: "Something went wrong", 
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-      setEmail('');
-    }, 1200);
+    }
   };
 
   return (
@@ -100,8 +119,8 @@ export default function Hero() {
                       initial={{ y: 15, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -15, opacity: 0 }}
-                      transition={{ duration: 0.8, ease: "easeInOut" }} // Smoother, liquid transition
-                      className="absolute left-0 text-[#B36B4D]" // Removed 'italic'
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                      className="absolute left-0 text-[#B36B4D]"
                     >
                       {words[currentWordIndex]}
                     </motion.span>
@@ -125,7 +144,6 @@ export default function Hero() {
                   disabled={isSubmitting}
                   className="w-full py-5 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.3em] text-[10px] shadow-xl hover:bg-[#1A4639] hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  {/* CHANGED CTA COPY */}
                   {isSubmitting ? "Processing..." : "Join the Waitlist"}
                   <ArrowRight size={14} />
                 </button>
