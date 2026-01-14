@@ -1,21 +1,23 @@
 /* client/src/pages/Home.tsx */
 import { useEffect, Suspense, lazy } from 'react';
+import { Link } from "wouter"; // Added for the button link
+import { ArrowRight } from "lucide-react"; // Added for the button icon
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import OurStory from '@/components/OurStory'; // Moved up
+import OurStory from '@/components/OurStory';
 import ProductGrid from '@/components/ProductGrid';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 
 // LAZY LOADED COMPONENTS
-const ClinicalRationale = lazy(() => import('@/components/ClinicalRationale')); 
+const CollagenScienceSection = lazy(() => import('@/components/CollagenScienceSection')); 
 const QualityStandards = lazy(() => import('@/components/QualityStandards')); 
 const Testimonials = lazy(() => import('@/components/Testimonials'));
 const FAQ = lazy(() => import('@/components/FAQ')); 
 
 export default function Home() {
-  // Preserving your existing scroll observer for "fade-in" animations
+  // Scroll observer for fade-in animations
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
@@ -31,33 +33,43 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F2F0EA] selection:bg-[#B36B4D]/20">
+    <div className="min-h-screen bg-[#EBE8E1] selection:bg-[#B36B4D]/20">
       {/* GLOBAL NAVIGATION */}
       <Navigation />
 
       <main>
-        {/* 1. HERO - The Hook */}
+        {/* 1. HERO - Modern, Clean, Holographic */}
         <Hero />
 
-        {/* 2. OUR STORY - Now right below the Hero (contains id="story") */}
+        {/* 2. OUR STORY - Ken & Ava (Heart of the brand) */}
         <OurStory />
 
-        {/* 3. CLINICAL RATIONALE - The Science (contains id="ingredients") */}
-        <Suspense fallback={<div className="h-96 bg-[#EDEAE3]" />}>
-           <ClinicalRationale />
-        </Suspense>
-
-        {/* 4. QUALITY STANDARDS - The Manufacturing Trust */}
-        <Suspense fallback={<div className="h-48 bg-[#F2F0EA]" />}>
+        {/* 3. QUALITY STANDARDS - The "0% Trigger" Badge & Trust */}
+        <Suspense fallback={<div className="h-48 bg-[#EBE8E1]" />}>
            <QualityStandards />
         </Suspense>
 
-        {/* 5. PRODUCT GRID - The Solution */}
+        {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
+        <Suspense fallback={<div className="h-96 bg-[#EBE8E1]" />}>
+           <CollagenScienceSection />
+
+           {/* THE BRIDGE BUTTON: Links to /the-how */}
+           <div className="flex justify-center pb-24 -mt-8 relative z-20">
+              <Link href="/the-how">
+                <button className="group relative px-10 py-5 bg-[#3D3733] text-white rounded-full font-serif font-bold tracking-wider text-sm hover:bg-[#B36B4D] transition-all shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(179,107,77,0.4)] hover:scale-105 flex items-center gap-4">
+                  View Condition-Specific Protocols
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+           </div>
+        </Suspense>
+
+        {/* 5. PRODUCT GRID - The "Clinical Collection" */}
         <div id="products" className="fade-in py-12 md:py-24">
           <ProductGrid />
         </div>
 
-        {/* 6. SOCIAL PROOF & OBJECTIONS (contains id="faq") */}
+        {/* 6. SOCIAL PROOF & OBJECTIONS */}
         <Suspense fallback={<div className="h-40" />}>
            <Testimonials />
            <FAQ /> 

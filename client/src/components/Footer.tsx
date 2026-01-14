@@ -1,74 +1,74 @@
+/* client/src/components/Footer.tsx */
 import { Link } from "wouter";
-import ZebraLogo from "./ZebraLogo";
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Twitter, Instagram, Linkedin, ArrowUp } from "lucide-react";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    // NEW: Deep Umber background, Alabaster text, and Subtle Graphite border
-    <footer className="bg-[#262321] text-[#F2F0ED] pt-20 pb-10 border-t border-[#3C3835]">
-      <div className="container mx-auto px-6">
+    <footer className="bg-[#3D3733] text-[#EBE8E1] py-20 px-6 relative overflow-hidden">
+      {/* Background Texture */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0F2A22] via-[#B36B4D] to-[#0F2A22] opacity-50" />
 
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
 
-          {/* Brand Column */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              {/* Logo color set to Alabaster for visibility */}
-              <ZebraLogo className="w-10 h-10 text-[#F2F0ED] fill-current" />
-              <span className="text-2xl font-serif font-bold text-[#F2F0ED]">
-                Zebra<span className="text-[#B36B4D]">Well</span>
-              </span>
+        {/* Brand Column */}
+        <div className="max-w-sm">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#EBE8E1] rounded-lg flex items-center justify-center text-[#3D3733] font-serif font-bold text-xl">
+              Z
             </div>
-            <p className="text-[#BCB4AD] mb-6 max-w-md leading-relaxed">
-              Clinical-grade support for the POTS, EDS, and MCAS community. 
-              Built by patients, for patients. 100% transparent, 0% fillers.
-            </p>
-            <div className="flex space-x-4">
-              {/* Updated social icons to Slate backgrounds */}
-              <a href="#" className="w-10 h-10 rounded-full bg-[#4A5560] flex items-center justify-center text-[#F2F0ED] hover:bg-[#B36B4D] transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#4A5560] flex items-center justify-center text-[#F2F0ED] hover:bg-[#B36B4D] transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#4A5560] flex items-center justify-center text-[#F2F0ED] hover:bg-[#B36B4D] transition-colors">
-                <Twitter size={20} />
-              </a>
-            </div>
+            <span className="font-serif font-bold text-2xl tracking-tight">
+              Zebra<span className="text-[#B36B4D]">Well</span>
+            </span>
           </div>
-
-          {/* Links Column 1 */}
-          <div>
-            <h4 className="font-bold text-[#7A8691] uppercase tracking-wider mb-6 text-sm">Company</h4>
-            <ul className="space-y-4">
-              <li><Link href="/our-promise" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">Our Promise</Link></li>
-              <li><Link href="/#story" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">Our Story</Link></li>
-              <li><Link href="/#faq" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">FAQ</Link></li>
-              <li><a href="mailto:hello@zebrawell.com" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-
-          {/* Links Column 2 */}
-          <div>
-            <h4 className="font-bold text-[#7A8691] uppercase tracking-wider mb-6 text-sm">Products</h4>
-            <ul className="space-y-4">
-              <li><Link href="/#products" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">Daily Foundation</Link></li>
-              <li><Link href="/#ingredients" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">Ingredients</Link></li>
-              <li><Link href="/#science" className="text-[#F2F0ED] hover:text-[#B36B4D] transition-colors">The Science</Link></li>
-            </ul>
+          <p className="text-[#EBE8E1]/60 text-sm leading-relaxed mb-8">
+            Clinical-grade stability for the hyper-mobile and histamine-sensitive. 
+            Physician formulated. Zero compromise.
+          </p>
+          <div className="flex gap-4">
+            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Twitter size={18} /></a>
+            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Instagram size={18} /></a>
+            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Linkedin size={18} /></a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[#3C3835] flex flex-col md:flex-row justify-between items-center text-sm text-[#7A8691]">
-          <p>© 2025 ZebraWell. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-[#F2F0ED] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#F2F0ED] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#F2F0ED] transition-colors">Disclaimer</a>
+        {/* Links Column */}
+        <div className="grid grid-cols-2 gap-16">
+          <div>
+            <h4 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Explore</h4>
+            <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
+              <li><a href="/#story" className="hover:text-white transition-colors">Our Story</a></li>
+              <li><a href="/#science" className="hover:text-white transition-colors">The Science</a></li>
+              <li><a href="/#quality" className="hover:text-white transition-colors">Quality Standards</a></li>
+              <li><a href="/#products" className="hover:text-white transition-colors">Formulas</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Legal</h4>
+            <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
+              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Shipping & Returns</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact Support</a></li>
+            </ul>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-[10px] text-[#EBE8E1]/40 uppercase tracking-widest">
+          © 2025 ZebraWell. All rights reserved.
+        </p>
+        <button 
+          onClick={scrollToTop} 
+          className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#B36B4D] hover:text-white transition-colors"
+        >
+          Back to Top <ArrowUp size={14} />
+        </button>
       </div>
     </footer>
   );
