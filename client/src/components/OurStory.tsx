@@ -1,98 +1,113 @@
 /* client/src/components/OurStory.tsx */
-
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 
 export default function OurStory() {
-  return (
-    <section className="py-24 px-4 bg-[#F4F2ED]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-        {/* LEFT: PHOTO + TRIM + QUOTE */}
-        <div className="w-full md:w-1/2 relative pl-4 pt-4">
-          {/* Padding ensures the trim never gets clipped */}
-          <div className="absolute top-0 left-0 right-4 bottom-4 border-2 border-[#7A8691] rounded-[2rem] z-0" />
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 30, filter: "blur(10px)" },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      filter: "blur(0px)",
+      transition: { delay: 0.2 + i * 0.15, duration: 0.9, ease: [0.21, 0.45, 0.32, 0.9] }
+    })
+  };
 
-          {/* Wrapper must allow overflow so the quote can sit mostly OUTSIDE the image */}
+  return (
+    <section id="story" className="py-24 px-4 bg-[#F2F0EA] overflow-hidden scroll-mt-24">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
+
+        {/* LEFT: PHOTO + QUOTE CARD ANCHORING */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="w-full md:w-1/2 relative pl-4 pt-4"
+        >
+          {/* Decorative Trim */}
+          <motion.div 
+            initial={{ x: -10, y: -10 }}
+            whileInView={{ x: 0, y: 0 }}
+            transition={{ duration: 2, ease: "easeOut" }}
+            className="absolute top-0 left-0 right-4 bottom-4 border border-[#B36B4D]/30 rounded-[2.5rem] z-0" 
+          />
+
+          {/* Image Container - MUST be overflow-visible for the card to float outside */}
           <div className="relative z-10 overflow-visible">
-            {/* Image stays clipped to rounded corners */}
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl bg-[#EDEAE3]">
-              <img
+            <div className="overflow-hidden rounded-[2.5rem] shadow-2xl bg-[#EDEAE3] border border-white/50">
+              <motion.img
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.8 }}
                 src="/images/ken-and-ava.png"
                 alt="Ken and Ava"
-                className="w-full h-auto object-cover grayscale-[0.15] hover:grayscale-0 transition-all duration-700"
+                className="w-full h-auto object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
                 loading="lazy"
               />
             </div>
 
-            {/* Quote card: only top ~10% overlaps into the photo */}
-            <div
-              className="
-                absolute
-                right-5 md:right-6
-                top-full
-                -translate-y-[10%]
-                z-20
-                w-[58%] sm:w-[44%] md:w-[40%]
-                max-w-[260px] md:max-w-[280px]
-                bg-[#FBFAF7]
-                rounded-2xl
-                p-3 md:p-4
-                shadow-xl
-                border border-[#E8E2D8]
-              "
+            {/* FLOATING QUOTE CARD: Repositioned to barely overlap (5% at top) */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6.75, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
+              className="absolute right-[-30px] md:right-[-50px] bottom-[-115px] md:bottom-[-130px] z-20 w-[70%] max-w-[280px] bg-white border-t border-l border-white/80 rounded-2xl p-5 md:p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
             >
-              <p className="text-[#262321] font-serif italic text-xs md:text-sm leading-snug">
-                If it’s not good enough for Ava, it’s not good enough for you.
-                <br />
-                And it’s not going in.
+              <p className="text-[#3D3733] font-serif italic text-base md:text-lg leading-relaxed">
+                "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
               </p>
-              <div className="w-6 h-[2px] bg-[#B36B4D] mt-2" />
-            </div>
+              <div className="w-12 h-[2px] bg-[#B36B4D] mt-4" />
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* RIGHT: CONTENT */}
+        {/* RIGHT: CONTENT & COLOR RESTORATION */}
         <div className="w-full md:w-1/2 pt-12 md:pt-0">
-          <p className="text-[#7A8691] font-bold uppercase tracking-[0.25em] mb-4">
+          <motion.p 
+            custom={0} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}
+            className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-6 flex items-center gap-3"
+          >
+            <span className="w-8 h-[1px] bg-[#B36B4D]/40" />
             Our Purpose
-          </p>
+          </motion.p>
 
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0F2A22] mb-6 leading-tight">
+          <motion.h2 
+            custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}
+            className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-[#3D3733] mb-8 leading-[1.1]"
+          >
             Behind every bottle is a deeper purpose and her name is{" "}
-            <span className="text-[#C85A32] italic font-normal text-[110%]">Ava</span>.
-          </h2>
+            <span className="text-[#B36B4D] italic font-normal">Ava</span>.
+          </motion.h2>
 
-          <div className="space-y-6 text-lg text-[#4A4540] leading-relaxed mb-10">
-            <p>
-              Ava is my daughter. She lives with scoliosis, hEDS, POTS, and MCAS. Mostly
-              invisible conditions that affect everything from how her body uses nutrients to
-              how she lives with chronic pain, subluxating joints, and extreme fatigue.
-            </p>
-
-            <p>
-              ZebraWell wasn’t born in a boardroom. It was born from my relentless pursuit to
-              help her feel better. Not just temporarily, but sustainably and safely.
-            </p>
-
-            <p className="font-medium text-[#2c1810]">
-              We couldn’t find what she needed. So we created it. A system designed to be
-              effective, tolerable, and honest about what’s inside.
-            </p>
+          <div className="space-y-6 text-lg text-[#5D5752] leading-relaxed mb-12">
+            <motion.p custom={2} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
+              Ava is my daughter. She lives with scoliosis, hEDS, POTS, and MCAS. Mostly invisible conditions that affect everything from how her body uses nutrients to how she lives with chronic pain, subluxating joints, and extreme fatigue.
+            </motion.p>
+            <motion.p custom={3} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
+              ZebraWell wasn't born in a boardroom. It was born from my relentless pursuit to help her feel better. Not just temporarily, but sustainably and safely.
+            </motion.p>
+            <motion.p custom={4} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="font-bold text-[#3D3733]">
+              We couldn't find what she needed. So we created it. A system designed to be effective, tolerable, and honest about what's inside.
+            </motion.p>
           </div>
 
-          {/* CTA */}
-          <Link href="/ingredients">
-            <button className="inline-flex items-center gap-3 px-8 py-4 bg-[#A4613A] hover:bg-[#8E5433] active:bg-[#744428] text-white font-bold rounded-full shadow-lg shadow-black/10 transition-all transform hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]">
-              Explore Our Ingredients
-              <ArrowRight size={20} />
-            </button>
-          </Link>
+          {/* CTA & WELCOME MESSAGE */}
+          <motion.div custom={5} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="flex flex-col gap-10">
+            <Link href="/ingredients">
+              <button className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-[11px] tracking-[0.3em]">
+                Explore Our Ingredients
+                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
+              </button>
+            </Link>
 
-          {/* Subtext */}
-          <div className="flex items-center gap-3 mt-6 text-sm text-[#5D5752]">
-            <span className="text-red-600">❤️</span>
-            <span>If you or someone you love is a Zebra, welcome to the herd.</span>
-          </div>
+            {/* THE MISSING HEART QUOTE - RESTORED */}
+            <div className="flex items-start gap-4 max-w-md border-l-2 border-[#B36B4D]/20 pl-6 py-2">
+              <Heart className="text-[#B36B4D] w-6 h-6 mt-1 flex-shrink-0 fill-[#B36B4D]/10" />
+              <p className="text-[14px] md:text-[16px] font-serif italic text-[#3D3733] leading-relaxed">
+                "If you or someone you love is a zebra, welcome to the herd with a heart."
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

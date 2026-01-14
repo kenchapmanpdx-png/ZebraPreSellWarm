@@ -1,79 +1,131 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Layers, 
+  Microscope, 
+  ShieldAlert, 
+  HeartPulse, 
+  Leaf, 
+  Search, 
+  Sparkles, 
+  RefreshCcw 
+} from 'lucide-react';
 
 export default function DifferenceSection() {
   const features = [
     {
-      icon: "💊",
+      icon: <Layers className="w-5 h-5" />,
       title: "2 Bottles Replace 15",
-      description: "AM & PM system delivers complete, targeted support."
+      description: "Our AM & PM system delivers complete, targeted support without the clutter."
     },
     {
-      icon: "🧠",
+      icon: <Microscope className="w-5 h-5" />,
       title: "Smart Science",
-      description: "Only therapeutic doses of highly bioavailable ingredients."
+      description: "Only therapeutic doses of highly bioavailable, clinically-vetted ingredients."
     },
     {
-      icon: "🚫",
+      icon: <ShieldAlert className="w-5 h-5" />,
       title: "No Junk. Ever.",
-      description: "No fillers. No pixie dust. No nonsense."
+      description: "Strictly zero fillers, binders, or 'pixie dusting.' Pure potency only."
     },
     {
-      icon: "👥",
-      title: "Built for EDS & POTS while being mindful of MCAS",
-      description: "No more piecing together random supplements."
+      icon: <HeartPulse className="w-5 h-5" />,
+      title: "Condition Mindful",
+      description: "Engineered for EDS & POTS while remaining strictly mindful of MCAS triggers."
     },
     {
-      icon: "🍃",
+      icon: <Leaf className="w-5 h-5" />,
       title: "Gentle by Design",
-      description: "Gut-safe, low-histamine formulas for sensitive systems."
+      description: "Gut-safe, low-histamine formulas designed for the most sensitive systems."
     },
     {
-      icon: "🔍",
-      title: "Commitment to Quality",
-      description: "Third-party testing and Certificates of Analysis."
+      icon: <Search className="w-5 h-5" />,
+      title: "Total Transparency",
+      description: "Rigorous third-party testing with accessible Certificates of Analysis."
     },
     {
-      icon: "🌱",
-      title: "Only What Helps",
-      description: "Clean minimalist formulation with bioavailable ingredients."
+      icon: <Sparkles className="w-5 h-5" />,
+      title: "Minimalist Purity",
+      description: "Only what helps. Clean formulations focused on maximum absorption."
     },
     {
-      icon: "🧩",
-      title: "Works as a System",
-      description: "AM and PM formulas work together for 24-hr support."
+      icon: <RefreshCcw className="w-5 h-5" />,
+      title: "Circadian Synergy",
+      description: "AM and PM formulas work as a synchronized system for 24-hour stability."
     },
   ];
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      filter: 'blur(0px)',
+      transition: { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] } 
+    }
+  };
 
   return (
     <section 
       id="difference" 
-      className="py-12 md:py-20 px-6 bg-[#F4F2ED]"
+      className="py-24 md:py-32 px-6 bg-[#F2F0EA]" // Using the warm neutral bridge color
     >
       <div className="max-w-6xl mx-auto text-center">
-        {/* NEW: Deep Umber Text */}
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#262321] mb-2 md:mb-4" data-aos="fade-up">
-          What Makes ZebraWell Different
-        </h2>
-        <p className="text-xl text-[#5D5752] mb-6 md:mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-          We've reimagined supplement design for the unique needs of rare condition warriors.
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
+            The ZebraWell Standard
+          </p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] mb-8 tracking-tight">
+            What Makes Us Different
+          </h2>
+          <div className="w-12 h-[1px] bg-[#B36B4D]/30 mx-auto mb-16" />
+        </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {features.map((feature, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              // NEW: Slate Blue Card Border
-              className="bg-white rounded-xl shadow-md border-2 border-[#7A8691] p-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center" 
-              data-aos="fade-up" 
-              data-aos-delay={100 * (index + 1)}
+              variants={itemVariants}
+              whileHover={{ y: -8, transition: { duration: 0.4 } }}
+              className="group bg-white/60 backdrop-blur-sm border border-white rounded-3xl p-8 text-left shadow-[0_10px_30px_-15px_rgba(90,62,43,0.05)] hover:shadow-[0_30px_60px_-20px_rgba(90,62,43,0.1)] transition-all duration-500"
             >
-              <div className="text-3xl mb-3">{feature.icon}</div>
-              {/* NEW: Muted Copper Title */}
-              <h3 className="text-sm font-serif font-bold mb-2 text-[#B36B4D]">{feature.title}</h3>
-              <p className="text-[#4A4540] text-xs leading-relaxed">{feature.description}</p>
-            </div>
+              <div className="w-10 h-10 rounded-xl bg-[#F2F0EA] flex items-center justify-center text-[#B36B4D] mb-6 group-hover:bg-[#B36B4D] group-hover:text-white transition-colors duration-500 shadow-inner">
+                {feature.icon}
+              </div>
+
+              <h3 className="text-base font-serif font-bold mb-3 text-[#3D3733] leading-snug">
+                {feature.title}
+              </h3>
+
+              <p className="text-[#8A857C] text-sm leading-relaxed font-medium">
+                {feature.description}
+              </p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

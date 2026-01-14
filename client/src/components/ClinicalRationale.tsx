@@ -1,6 +1,9 @@
+/* client/src/components/ClinicalRationale.tsx */
 import React, { useState, Suspense, lazy } from 'react';
-import { ShieldCheck, Zap, Activity, ChevronDown, Microscope, Award, HeartHandshake, Scissors } from 'lucide-react';
+import { ShieldCheck, Zap, Activity, ChevronDown, Scissors, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
+// Lazy load the map to keep the page fast
 const InteractiveIngredientMap = lazy(() => import('./InteractiveIngredientMap'));
 
 export default function ClinicalRationale() {
@@ -8,147 +11,171 @@ export default function ClinicalRationale() {
 
   const pillars = [
     {
+      id: "shredder",
       number: "01",
-      title: "Stop the 'Collagen Shredder'",
-      desc: "If you have EDS, your body produces enzymes (MMPs) that act like a shredder, eating your collagen as fast as you can build it. We don't just give you collagen 'bricks'; we include ingredients designed to turn off the shredder so your tissue stays strong.",
-      icon: <Scissors className="w-5 h-5 text-[#B36B4D]" />
+      title: "Halt the 'Collagen Shredder'",
+      desc: "In hEDS, your body overproduces enzymes (MMPs) that act like a shredder, breaking down collagen faster than you can build it. We don't just add fuel; we unplug the shredder.",
+      icon: <Scissors className="w-8 h-8 text-white" />,
+      color: "bg-rose-500", // Visually signaling 'stopping' the damage
+      gradient: "from-rose-500/20 to-transparent"
     },
     {
+      id: "hydration",
       number: "02",
       title: "Cellular 'Backdoor' Hydration",
-      desc: "Standard salt pills often sit in your stomach causing nausea. We use a biological 'backdoor' (the SGLT1 pathway) to flood your cells with hydration instantly, skipping the gastric distress common with POTS.",
-      icon: <Zap className="w-5 h-5 text-[#BCC2BB]" />
+      desc: "Salt pills often sit in the stomach, causing nausea. We use a glucose-transport mechanism to open a biological 'backdoor,' flooding cells with hydration instantly without the gastric distress.",
+      icon: <Zap className="w-8 h-8 text-white" />,
+      color: "bg-blue-500",
+      gradient: "from-blue-500/20 to-transparent"
     },
     {
+      id: "trigger",
       number: "03",
       title: "The Zero-Trigger Guarantee",
-      desc: "Standard 'health' supplements use fillers like fermented yeast or bovine triggers that cause mast cell flares. We manually screen every speck of our formula to ensure it is 100% free of biogenic amines and hidden histamine triggers.",
-      icon: <ShieldCheck className="w-5 h-5 text-[#0F2A22]" />
+      desc: "Mast cells are finicky. We manually screen every milligram for biogenic amines and hidden histamine. No fermented fillers. No bovine gelatin. Just pure stability.",
+      icon: <ShieldCheck className="w-8 h-8 text-white" />,
+      color: "bg-emerald-500",
+      gradient: "from-emerald-500/20 to-transparent"
     },
     {
+      id: "sync",
       number: "04",
-      title: "Nervous System Synchronization",
-      desc: "You shouldn't have to choose between 'brain fog' and 'jitters.' Our AM/PM system stabilizes your autonomic rhythm, calming adrenaline surges in the morning and clearing histamine 'heaviness' while you sleep.",
-      icon: <Activity className="w-5 h-5 text-[#A4613A]" />
+      title: "Autonomic Synchronization",
+      desc: "You shouldn't have to choose between 'brain fog' and 'jitters.' Our AM/PM system is timed to your circadian rhythm—calming adrenaline in the morning, repairing tissue at night.",
+      icon: <Activity className="w-8 h-8 text-white" />,
+      color: "bg-violet-500",
+      gradient: "from-violet-500/20 to-transparent"
     }
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#DED9D0] fade-in">
-      <div className="max-w-7xl mx-auto">
+    // Updated background to #EBE8E1 (Greige) to match your preference
+    <section id="ingredients" className="py-24 md:py-32 px-4 sm:px-6 bg-[#EBE8E1] scroll-mt-24 overflow-hidden relative">
 
-        {/* Punchier Editorial Header */}
-        <div className="max-w-4xl mb-24">
-          <h2 className="text-4xl md:text-7xl font-serif font-bold text-[#5A3E2B] mb-8 leading-[1.05]">
-            Engineered for <br />
-            <span className="text-[#A4613A] italic font-normal">Biological Stability.</span>
-          </h2>
-          <div className="max-w-xl border-l-4 border-[#A4613A] pl-8">
-            <p className="text-xl md:text-2xl text-[#4A4540] leading-relaxed font-medium italic">
-              "We didn't just build a supplement. We built a system to stop the flare-ups, the fog, and the collagen breakdown that others ignore."
-            </p>
-          </div>
+      {/* Background Ambience */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+        <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-[#B36B4D]/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[10%] right-[-10%] w-[500px] h-[500px] bg-[#0F2A22]/5 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* --- THE HEADLINE: PUNCHY & COHESIVE --- */}
+        <div className="text-center max-w-4xl mx-auto mb-20 md:mb-32">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#3D3733]/10 bg-white/50 backdrop-blur-md"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#B36B4D] animate-pulse" />
+            <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#3D3733]">Clinical Intelligence</span>
+          </motion.div>
+
+          <motion.h2 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "circOut" }}
+            className="text-5xl md:text-8xl font-serif font-bold text-[#3D3733] leading-[0.9] tracking-tight"
+          >
+            One System. <br />
+            <span className="text-[#B36B4D] italic">Every Pathway.</span>
+          </motion.h2>
+
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-8 text-lg md:text-2xl text-[#5D5752] font-medium leading-relaxed max-w-2xl mx-auto"
+          >
+            We didn't just build a supplement. We engineered a biological intervention to interrupt the cycle of instability.
+          </motion.p>
         </div>
 
-        {/* High-Impact Numerical Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24 mb-32">
-          {pillars.map((pillar, index) => (
-            <div key={index} className="relative group">
-              <span className="absolute -top-12 -left-4 text-8xl font-serif font-bold text-[#A4613A]/10 group-hover:text-[#A4613A]/20 transition-colors duration-500">
-                {pillar.number}
-              </span>
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center border border-[#BCC2BB]/50">
+        {/* --- THE 4-PART SYSTEM (Holographic Depth) --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-24">
+          {pillars.map((pillar, i) => (
+            <motion.div
+              key={pillar.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              whileHover={{ y: -5 }}
+              className="relative overflow-hidden group rounded-[2.5rem] bg-white border border-[#3D3733]/5 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_60px_-15px_rgba(90,62,43,0.15)] transition-all duration-500"
+            >
+              {/* Dynamic Gradient Background on Hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${pillar.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700`} />
+
+              <div className="p-8 md:p-12 relative z-10 flex flex-col h-full">
+                <div className="flex justify-between items-start mb-8">
+                  <div className={`w-16 h-16 rounded-2xl ${pillar.color} flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
                     {pillar.icon}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#262321]">
-                    {pillar.title}
-                  </h3>
+                  <span className="text-6xl font-serif font-bold text-[#3D3733]/5 group-hover:text-[#3D3733]/10 transition-colors">
+                    {pillar.number}
+                  </span>
                 </div>
-                <p className="text-[#4A4540] text-lg md:text-xl leading-relaxed max-w-md font-medium">
+
+                <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#3D3733] mb-4 group-hover:text-[#B36B4D] transition-colors">
+                  {pillar.title}
+                </h3>
+
+                <p className="text-[#8A857C] text-base md:text-lg leading-relaxed font-medium">
                   {pillar.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* THE "CLICK HERE" SCIENCE DRAWER */}
-        <div className="mt-20">
+        {/* --- THE INTERACTIVE MAP REVEAL --- */}
+        <motion.div layout className="relative z-20">
           <button 
             onClick={() => setIsMapExpanded(!isMapExpanded)}
-            className={`w-full py-10 flex flex-col md:flex-row items-center justify-between px-10 rounded-[2.5rem] transition-all duration-700 border-2
-                       ${isMapExpanded 
-                         ? 'bg-white border-[#A4613A] shadow-2xl' 
-                         : 'bg-[#BCC2BB]/30 border-[#7A8691]/20 hover:border-[#A4613A] hover:bg-white hover:shadow-xl'}`}
+            className={`w-full relative overflow-hidden group rounded-[3rem] transition-all duration-700 ${isMapExpanded ? 'p-0 shadow-none' : 'p-[2px] shadow-2xl hover:shadow-[0_40px_80px_-20px_rgba(15,42,34,0.3)]'}`}
           >
-            <div className="flex items-center gap-8 text-left mb-6 md:mb-0">
-              <div className={`p-4 rounded-full border-2 border-[#A4613A] transition-all duration-500 ${isMapExpanded ? 'bg-[#A4613A] rotate-180' : 'bg-white shadow-sm'}`}>
-                <ChevronDown className={`w-8 h-8 transition-colors ${isMapExpanded ? 'text-white' : 'text-[#A4613A]'}`} />
-              </div>
+            {/* Animate the border gradient */}
+            {!isMapExpanded && (
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0F2A22] via-[#B36B4D] to-[#0F2A22] animate-shimmer" />
+            )}
 
-              <div>
-                <span className="block text-2xl md:text-4xl font-serif font-bold text-[#262321]">
-                  Click here to see the science for yourself.
-                </span>
-                <span className="text-[#A4613A] text-sm uppercase tracking-[0.4em] font-bold mt-2 block">
-                  Explore our Clinical Ingredient-to-Benefit Map
-                </span>
-              </div>
-            </div>
-
-            <div className={`hidden md:flex p-4 rounded-full border-2 border-[#A4613A] transition-all duration-500 ${isMapExpanded ? 'bg-[#A4613A] rotate-180' : 'bg-white shadow-sm'}`}>
-              <ChevronDown className={`w-8 h-8 transition-colors ${isMapExpanded ? 'text-white' : 'text-[#A4613A]'}`} />
+            <div className={`relative bg-[#0F2A22] rounded-[3rem] px-8 py-12 md:py-16 md:px-20 text-center transition-all duration-500 ${isMapExpanded ? 'bg-transparent' : 'bg-[#0F2A22]'}`}>
+              {!isMapExpanded ? (
+                <div className="flex flex-col items-center gap-6">
+                  <Sparkles className="w-10 h-10 text-[#B36B4D] animate-pulse" />
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight">
+                    Explore the Clinical Logic
+                  </h3>
+                  <p className="text-[#EDEAE3]/80 text-sm md:text-lg max-w-xl mx-auto">
+                    Click to reveal the ingredient-to-benefit map. See exactly how we target mitochondrial health, mast cell stability, and collagen protection.
+                  </p>
+                  <div className="mt-4 px-8 py-3 bg-white/10 rounded-full text-white text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-md group-hover:bg-white group-hover:text-[#0F2A22] transition-all">
+                    Open Intelligence Map
+                  </div>
+                </div>
+              ) : (
+                // This is the container for the map once expanded
+                <div className="bg-white rounded-[3rem] border border-[#3D3733]/10 shadow-2xl overflow-hidden p-8 md:p-12">
+                   <div className="flex justify-between items-center mb-10">
+                      <h3 className="text-2xl font-serif font-bold text-[#3D3733]">Clinical Formulation Map</h3>
+                      <div 
+                        onClick={(e) => { e.stopPropagation(); setIsMapExpanded(false); }}
+                        className="cursor-pointer px-6 py-2 bg-[#F2F0EA] hover:bg-[#E5E0D6] rounded-full text-[10px] font-bold uppercase tracking-widest text-[#3D3733] transition-colors"
+                      >
+                        Close Map
+                      </div>
+                   </div>
+                   <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading Data...</div>}>
+                      <InteractiveIngredientMap />
+                   </Suspense>
+                </div>
+              )}
             </div>
           </button>
-
-          {isMapExpanded && (
-            <div className="py-12 animate-in fade-in zoom-in-95 duration-700">
-              <div className="bg-white rounded-[4rem] p-4 md:p-16 shadow-2xl border-4 border-[#EBE8E1]">
-                <Suspense fallback={
-                  <div className="h-96 flex flex-col items-center justify-center font-serif italic text-2xl text-[#4A4540] gap-4 text-center">
-                    <div className="w-12 h-12 border-4 border-[#A4613A] border-t-transparent rounded-full animate-spin"></div>
-                    Accessing Clinical Rationale...
-                  </div>
-                }>
-                   <InteractiveIngredientMap />
-                </Suspense>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* TRUST CARDS */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/70 backdrop-blur-md p-10 rounded-[2.5rem] border border-white text-center hover:shadow-2xl transition-all duration-500 group">
-                <div className="w-16 h-16 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#A4613A] transition-colors shadow-lg">
-                    <Microscope className="text-white w-8 h-8" />
-                </div>
-                <p className="text-[#A4613A] font-bold uppercase tracking-widest text-xs mb-2">Purity</p>
-                <p className="text-[#262321] font-serif font-bold text-2xl mb-2">Third-Party Tested</p>
-                <p className="text-[#5D5752] text-sm leading-relaxed">Every batch verified for potency and zero contaminants.</p>
-            </div>
-
-            <div className="bg-white/70 backdrop-blur-md p-10 rounded-[2.5rem] border border-white text-center hover:shadow-2xl transition-all duration-500 group">
-                <div className="w-16 h-16 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#A4613A] transition-colors shadow-lg">
-                    <Award className="text-white w-8 h-8" />
-                </div>
-                <p className="text-[#A4613A] font-bold uppercase tracking-widest text-xs mb-2">Expertise</p>
-                <p className="text-[#262321] font-serif font-bold text-2xl mb-2">Physician Formulated</p>
-                <p className="text-[#5D5752] text-sm leading-relaxed">Built on clinical research specifically for POTS & EDS.</p>
-            </div>
-
-            <div className="bg-white/70 backdrop-blur-md p-10 rounded-[2.5rem] border border-white text-center hover:shadow-2xl transition-all duration-500 group">
-                <div className="w-16 h-16 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#A4613A] transition-colors shadow-lg">
-                    <HeartHandshake className="text-white w-8 h-8" />
-                </div>
-                <p className="text-[#A4613A] font-bold uppercase tracking-widest text-xs mb-2">Safety</p>
-                <p className="text-[#262321] font-serif font-bold text-2xl mb-2">Trigger-Free Guarantee</p>
-                <p className="text-[#5D5752] text-sm leading-relaxed">Screened for biogenic amines and all mast cell triggers.</p>
-            </div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

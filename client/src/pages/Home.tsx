@@ -1,19 +1,21 @@
+/* client/src/pages/Home.tsx */
 import { useEffect, Suspense, lazy } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import OurStory from '@/components/OurStory';
+import OurStory from '@/components/OurStory'; // Moved up
 import ProductGrid from '@/components/ProductGrid';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 
-// LAZY LOAD THE MERGED POWERHOUSE
+// LAZY LOADED COMPONENTS
 const ClinicalRationale = lazy(() => import('@/components/ClinicalRationale')); 
+const QualityStandards = lazy(() => import('@/components/QualityStandards')); 
 const Testimonials = lazy(() => import('@/components/Testimonials'));
 const FAQ = lazy(() => import('@/components/FAQ')); 
 
 export default function Home() {
-  // Maintaining your existing scroll observer
+  // Preserving your existing scroll observer for "fade-in" animations
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
@@ -29,33 +31,40 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#EBE8E1]"> {/* Base Greige Background */}
+    <div className="min-h-screen bg-[#F2F0EA] selection:bg-[#B36B4D]/20">
+      {/* GLOBAL NAVIGATION */}
       <Navigation />
 
       <main>
-        {/* 1. HERO */}
+        {/* 1. HERO - The Hook */}
         <Hero />
 
-        {/* 2. STORY */}
+        {/* 2. OUR STORY - Now right below the Hero (contains id="story") */}
         <OurStory />
 
-        {/* 3. CLINICAL LOGIC (Replaces WhyZebra, DifferenceSection, and Map) */}
-        <Suspense fallback={<div className="h-96 bg-[#DED9D0]" />}>
+        {/* 3. CLINICAL RATIONALE - The Science (contains id="ingredients") */}
+        <Suspense fallback={<div className="h-96 bg-[#EDEAE3]" />}>
            <ClinicalRationale />
         </Suspense>
 
-        {/* 4. PRODUCTS */}
-        <div id="products" className="fade-in">
+        {/* 4. QUALITY STANDARDS - The Manufacturing Trust */}
+        <Suspense fallback={<div className="h-48 bg-[#F2F0EA]" />}>
+           <QualityStandards />
+        </Suspense>
+
+        {/* 5. PRODUCT GRID - The Solution */}
+        <div id="products" className="fade-in py-12 md:py-24">
           <ProductGrid />
         </div>
 
-        {/* 5. CLOSING INFO */}
-        <Suspense fallback={<div className="h-20" />}>
+        {/* 6. SOCIAL PROOF & OBJECTIONS (contains id="faq") */}
+        <Suspense fallback={<div className="h-40" />}>
            <Testimonials />
            <FAQ /> 
         </Suspense>
       </main>
 
+      {/* GLOBAL FOOTER & UTILITIES */}
       <Footer />
       <FloatingCTA />
       <SampleRequestModal />

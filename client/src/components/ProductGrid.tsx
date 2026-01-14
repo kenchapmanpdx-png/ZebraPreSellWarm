@@ -1,124 +1,143 @@
-import React from 'react';
-import { Sun, Moon, ShieldCheck, ArrowRight, CheckCircle2, Clock } from 'lucide-react';
+/* client/src/components/ProductGrid.tsx */
+import { motion } from "framer-motion";
+import { Star, Check, ArrowRight, FlaskConical, Sun, Moon, ShieldAlert } from "lucide-react";
+import { Link } from "wouter";
 
 export default function ProductGrid() {
   const products = [
     {
-      id: "am",
-      tag: "01 / Morning",
-      title: "AM Formula",
-      subtitle: "The Rhythm Pathway",
-      desc: "Wakes up your nervous system gently. It stabilizes heart rate fluctuations and clears brain fog for a steady, focused day.",
-      bgColor: "bg-white",
-      textColor: "text-[#262321]",
-      accentColor: "text-[#A4613A]",
-      icon: <Sun className="w-6 h-6" />,
-      benefits: ["Heart Rate Stability", "Mental Clarity", "Daily Endurance"]
+      id: "morning",
+      tag: "AM FORMULA",
+      title: "Autonomic Rise",
+      subtitle: "Hemodynamic Stability & Energy",
+      price: "Waitlist Only",
+      description: "Stop the morning adrenaline dump. A clinical blend of electrolytes, B-Vitamins, and adaptogens to stabilize heart rate and clear brain fog before your feet hit the floor.",
+      icon: <Sun className="w-6 h-6 text-[#B36B4D]" />,
+      ingredients: ["1000mg Sodium", "Licorice Root", "Bio-Active B Complex"],
+      gradient: "from-orange-100/50 to-white/50"
     },
     {
-      id: "pm",
-      tag: "02 / Evening",
-      title: "PM Formula",
-      subtitle: "The Repair Pathway",
-      desc: "Gently lowers histamine levels while you sleep. It supports deep tissue repair so you wake up feeling 'light' and refreshed.",
-      bgColor: "bg-white",
-      textColor: "text-[#262321]",
-      accentColor: "text-[#A4613A]",
-      icon: <Moon className="w-6 h-6" />,
-      benefits: ["Histamine Clearing", "Overnight Repair", "Restorative Sleep"]
+      id: "evening",
+      tag: "PM FORMULA",
+      title: "Histamine Guard",
+      subtitle: "Mast Cell Calm & Repair",
+      price: "Waitlist Only",
+      description: "Clear the day's inflammatory load. Designed to stabilize mast cells while you sleep, preventing the '3 AM wake-up' and supporting deep connective tissue repair.",
+      icon: <Moon className="w-6 h-6 text-indigo-600" />,
+      ingredients: ["Quercetin Phytosome", "Luteolin", "DAO Enzyme"],
+      gradient: "from-indigo-100/50 to-white/50"
     },
     {
-      id: "foundation",
-      tag: "The Essential Baseline",
-      title: "Daily Foundation",
-      subtitle: "The Integrity Pathway",
-      desc: "The 'missing link' for stability. It stops the 'shredding' of your collagen and repairs the gut barrier so your system can actually hold together.",
-      bgColor: "bg-[#0F2A22]", 
-      textColor: "text-[#EBE8E1]", // FIXED: Now High-Contrast Light Greige
-      accentColor: "text-[#A4613A]",
-      icon: <ShieldCheck className="w-6 h-6" />,
-      benefits: ["Mast Cell Stability", "Connective Tissue Armor", "Gut-Barrier Repair"],
-      isFeatured: true
+      id: "rescue",
+      tag: "ACUTE RESCUE",
+      title: "Flare Defense",
+      subtitle: "Rapid Reaction Support",
+      price: "Waitlist Only",
+      description: "For when the bucket overflows. A rapid-dissolve powder designed to halt a flare-up in its tracks by flooding the system with stabilizers and hydration.",
+      icon: <ShieldAlert className="w-6 h-6 text-rose-600" />,
+      ingredients: ["Pure L-Theanine", "Magnesium Glycinate", "Potassium"],
+      gradient: "from-rose-100/50 to-white/50"
     }
   ];
 
   return (
-    <section id="products" className="py-32 px-6 bg-[#F4F2ED]">
-      <div className="max-w-7xl mx-auto">
+    <section id="waitlist" className="py-24 px-6 bg-[#F2F0EA] relative overflow-hidden">
 
-        {/* Editorial Header */}
-        <div className="text-center max-w-4xl mx-auto mb-24">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#A4613A]/10 rounded-full mb-6">
-            <Clock className="w-4 h-4 text-[#A4613A]" />
-            <span className="text-[#A4613A] font-bold tracking-[0.3em] text-[10px] uppercase">
-              The 24-Hour Stabilization Protocol
-            </span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#5A3E2B] mb-8 leading-tight">
-            One System. <br />
-            <span className="text-[#A4613A] italic font-normal">Every Pathway.</span>
-          </h2>
-          <p className="text-xl text-[#4A4540] leading-relaxed max-w-2xl mx-auto font-medium">
-            Complexity requires a synchronized solution. We engineered these three formulas to work in harmony, protecting your system from sunrise to sunset.
-          </p>
-        </div>
+      {/* Editorial Header */}
+      <div className="max-w-7xl mx-auto mb-20 text-center relative z-10">
+        <motion.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-4"
+        >
+          The Clinical Collection
+        </motion.p>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733]"
+        >
+          Targeted Biological <span className="text-[#B36B4D] italic">Intervention.</span>
+        </motion.h2>
+      </div>
 
-        {/* The Trinity Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
-          {products.map((product) => (
-            <div 
-              key={product.id}
-              className={`relative flex flex-col rounded-[3.5rem] p-10 md:p-12 transition-all duration-700 hover:-translate-y-4 group shadow-2xl
-                         ${product.bgColor} ${product.textColor} 
-                         ring-4 ring-[#A4613A] ring-offset-8 ring-offset-[#F4F2ED]`}
-            >
-              <p className={`text-[10px] font-bold uppercase tracking-[0.4em] mb-10 ${product.isFeatured ? 'text-[#A4613A]' : 'opacity-60 text-[#A4613A]'}`}>
-                {product.tag}
-              </p>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+        {products.map((product, i) => (
+          <motion.div
+            key={product.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.15, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="group relative flex flex-col h-full"
+          >
+            {/* The Card Container - Glassmorphism & Depth */}
+            <div className={`h-full rounded-[2.5rem] bg-gradient-to-b ${product.gradient} backdrop-blur-xl border border-white shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden flex flex-col p-2`}>
 
-              <div className="mb-8">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm 
-                                ${product.isFeatured ? 'bg-[#A4613A] text-white' : 'bg-[#F4F2ED] text-[#A4613A]'}`}>
+              {/* Product Visual Area */}
+              <div className="relative h-64 w-full bg-white/40 rounded-[2rem] flex items-center justify-center overflow-hidden group-hover:scale-[0.98] transition-transform duration-500">
+                <div className="absolute inset-0 bg-[#F2F0EA]/30" />
+                {/* Placeholder for Bottle Image */}
+                <FlaskConical size={64} className="text-[#3D3733]/20 relative z-10 group-hover:text-[#B36B4D] transition-colors duration-500" />
+
+                {/* Floating Tag */}
+                <div className="absolute top-6 left-6 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
                   {product.icon}
+                  <span className="text-[10px] font-black uppercase tracking-widest text-[#3D3733]">{product.tag}</span>
                 </div>
-                {/* FIXED: Heading color for the Daily Foundation */}
-                <h3 className={`text-4xl font-serif font-bold mb-2 ${product.isFeatured ? 'text-[#EBE8E1]' : 'text-[#262321]'}`}>
-                  {product.title}
-                </h3>
-                <p className={`text-lg font-bold ${product.isFeatured ? 'text-[#BCC2BB]' : 'text-[#A4613A]'}`}>
-                  {product.subtitle}
-                </p>
               </div>
 
-              <p className="text-lg leading-relaxed mb-10 opacity-90 font-medium">
-                {product.desc}
-              </p>
-
-              <ul className="space-y-4 mb-12 flex-grow">
-                {product.benefits.map((benefit, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm font-semibold tracking-wide">
-                    <CheckCircle2 className={`w-5 h-5 shrink-0 ${product.isFeatured ? 'text-[#A4613A]' : 'text-[#BCC2BB]'}`} />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-
-              <button className={`w-full py-5 rounded-2xl flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-[11px] transition-all duration-500
-                                ${product.isFeatured 
-                                  ? 'bg-[#A4613A] text-white hover:bg-[#EBE8E1] hover:text-[#0F2A22]' 
-                                  : 'bg-[#0F2A22] text-white hover:bg-[#A4613A]'}`}>
-                View Supplement Facts <ArrowRight className="w-4 h-4" />
-              </button>
-
-              {product.isFeatured && (
-                <div className="absolute top-10 right-10 opacity-[0.05] pointer-events-none text-white">
-                  <ShieldCheck size={120} />
+              {/* Product Details */}
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-serif font-bold text-[#3D3733] leading-tight group-hover:text-[#B36B4D] transition-colors">
+                      {product.title}
+                    </h3>
+                    <p className="text-[10px] font-bold text-[#8A857C] uppercase tracking-widest mt-1">
+                      {product.subtitle}
+                    </p>
+                  </div>
                 </div>
-              )}
+
+                <p className="text-[#5D5752] text-sm leading-relaxed mb-8 font-medium">
+                  {product.description}
+                </p>
+
+                {/* Ingredient Highlights */}
+                <div className="mt-auto mb-8 space-y-3">
+                  <p className="text-[9px] font-black text-[#B36B4D]/60 uppercase tracking-[0.2em]">Key Actives</p>
+                  {product.ingredients.map((ing) => (
+                    <div key={ing} className="flex items-center gap-3 text-xs text-[#3D3733] font-bold">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#B36B4D]" />
+                      {ing}
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Button */}
+                <Link href="/#waitlist">
+                  <button className="w-full py-4 rounded-xl bg-[#3D3733] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#0F2A22] transition-colors shadow-lg flex items-center justify-center gap-3">
+                    Reserve {product.title}
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
+              </div>
             </div>
-          ))}
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Trust Footer for the Grid */}
+      <div className="max-w-2xl mx-auto text-center mt-20">
+        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#B36B4D]/20 shadow-sm">
+          <Star className="w-4 h-4 text-[#B36B4D] fill-current" />
+          <span className="text-xs font-bold text-[#5D5752]">
+            "Finally, a system that respects my sensitivity." — <span className="text-[#3D3733]">Verified Zebra</span>
+          </span>
         </div>
       </div>
+
     </section>
   );
 }

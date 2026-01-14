@@ -1,7 +1,8 @@
+/* client/src/components/Hero.tsx */
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles } from 'lucide-react';
 // Ensure the image path matches your project structure
 import heroProductImage from '@assets/image_1768272183723.png';
 
@@ -10,39 +11,25 @@ export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
-  // The "Unseen" word cycle that validates the patient's experience
+  // The "Unseen" word cycle
   const words = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
 
   useEffect(() => {
-    // Initialize Scroll Animations
-    AOS.init({
-      duration: 1200,
-      once: true,
-      easing: 'ease-out-quart',
-    });
-
-    // Word Cycling Logic
+    // Slower timing: 4 seconds per word for a calmer, more confident pace
     const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setCurrentWordIndex((prev) => (prev + 1) % words.length);
-        setIsVisible(true);
-      }, 800);
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [words.length]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Mimicking a high-end secure submission
     setTimeout(() => {
       toast({ 
-        title: "Waitlist Confirmed", 
-        description: "You've been added to our clinical release list." 
+        title: "You're on the list.", 
+        description: "We'll notify you the moment access opens." 
       });
       setIsSubmitting(false);
       setEmail('');
@@ -50,89 +37,170 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-32 md:pt-40 lg:pt-48 pb-20 px-4 flex items-center min-h-screen overflow-hidden bg-[#F2F0EA]">
+    <section className="relative pt-32 md:pt-48 pb-20 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
 
-      {/* LUXURY BACKGROUND ORBS: Drifting Copper and Chocolate hues */}
+      {/* LUXURY BACKGROUND AMBIENCE */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div 
-          className="absolute w-[800px] h-[800px] rounded-full opacity-10 blur-[120px] top-[-10%] right-[-5%]" 
-          style={{ background: 'radial-gradient(circle, #B36B4D 0%, transparent 70%)' }}
-        />
-        <div 
-          className="absolute w-[600px] h-[600px] rounded-full opacity-10 blur-[100px] bottom-[-10%] left-[-5%]" 
-          style={{ background: 'radial-gradient(circle, #8C4A2E 0%, transparent 70%)' }}
-        />
+        <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-[#B36B4D]/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-[#0F2A22]/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
 
-        {/* EDITORIAL HEADER: Reveals from above */}
-        <div className="text-center mb-16 lg:mb-20" data-aos="fade-down">
-          <div className="inline-flex items-center gap-3 mb-6 px-5 py-2 rounded-full bg-white/60 border border-white/80 shadow-sm backdrop-blur-sm">
+        {/* --- EDITORIAL HEADER --- */}
+        <div className="text-center mb-16 lg:mb-24">
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center gap-3 mb-8 px-5 py-2 rounded-full bg-white/40 border border-white/60 shadow-sm backdrop-blur-md"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] animate-pulse" />
-            <span className="text-[10px] font-bold text-[#5A3E2B] uppercase tracking-[0.3em]">
+            <span className="text-[10px] font-black text-[#3D3733] uppercase tracking-[0.3em]">
               Formulated for Complex Conditions
             </span>
-          </div>
+          </motion.div>
 
-          <h1 
-            className="font-serif font-bold tracking-tight text-[#5A3E2B]" 
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 4.8rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "circOut" }}
+            className="font-serif font-bold tracking-tight text-[#3D3733]" 
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
           >
-            <span className="block mb-1">Advanced Autonomic, Mast Cell</span>
-            <span className="block text-[#A4613A] italic font-normal">& Connective Tissue Support</span>
-          </h1>
+            <span className="block mb-2">Advanced Autonomic, Mast Cell</span>
+            <span className="block text-[#B36B4D] italic font-normal">& Connective Tissue Support</span>
+          </motion.h1>
         </div>
 
-        {/* THE TRINITY GRID: Opt-in Card and Product Image match height */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16 max-w-6xl mx-auto">
+        {/* --- THE HOLOGRAPHIC TRINITY GRID --- */}
+        <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 max-w-6xl mx-auto mb-24">
 
-          {/* OPT-IN CARD: Slides in from the left */}
-          <div className="w-full lg:w-[40%] flex" data-aos="fade-right" data-aos-delay="400">
-            <div className="relative bg-white border border-[#EBE8E1] rounded-[3.5rem] p-10 lg:p-14 shadow-[0_30px_80px_-15px_rgba(90,62,43,0.1)] flex flex-col justify-center w-full">
-              <p className="text-[10px] font-black text-[#A4613A] uppercase tracking-[0.5em] mb-4">We see you.</p>
+          {/* LEFT: OPT-IN CARD (Glassmorphism) */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="w-full lg:w-[45%] flex"
+          >
+            <div className="relative w-full bg-white/60 backdrop-blur-xl border border-white/50 rounded-[3rem] p-10 lg:p-14 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] flex flex-col justify-center overflow-hidden group">
+              {/* Subtle shimmers */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B36B4D]/30 to-transparent opacity-50" />
 
-              <h2 className="font-serif font-bold text-[#3D3733] mb-8 leading-tight" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)' }}>
+              <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.5em] mb-6 flex items-center gap-2">
+                <Sparkles className="w-3 h-3" /> We see you
+              </p>
+
+              <h2 className="font-serif font-bold text-[#3D3733] mb-8 leading-tight text-4xl lg:text-5xl">
                 Wellness for the <br />
-                <span className={`inline-block text-[#B36B4D] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                  {words[currentWordIndex]}
+                <span className="relative inline-block min-w-[200px] h-[1.2em]">
+                  <AnimatePresence mode="wait">
+                    <motion.span 
+                      key={words[currentWordIndex]}
+                      initial={{ y: 15, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -15, opacity: 0 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }} // Smoother, liquid transition
+                      className="absolute left-0 text-[#B36B4D]" // Removed 'italic'
+                    >
+                      {words[currentWordIndex]}
+                    </motion.span>
+                  </AnimatePresence>
                 </span>
               </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  value={email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  required
-                  className="w-full py-4 bg-transparent border-b border-[#D4CFC6] text-[#3D3733] text-lg focus:outline-none focus:border-[#B36B4D] transition-all placeholder:text-[#9A958C]/50" 
-                />
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                <div className="relative">
+                  <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    required
+                    className="w-full py-5 px-6 bg-white/50 border border-[#3D3733]/10 rounded-2xl text-[#3D3733] text-lg focus:outline-none focus:border-[#B36B4D] focus:bg-white transition-all placeholder:text-[#8A857C]/50" 
+                  />
+                </div>
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full py-6 rounded-2xl bg-[#A4613A] text-white font-bold uppercase tracking-[0.3em] text-[10px] shadow-2xl hover:bg-[#0F2A22] transition-all duration-500"
+                  className="w-full py-5 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.3em] text-[10px] shadow-xl hover:bg-[#1A4639] hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  {isSubmitting ? "Processing..." : "Join Clinical Waitlist"}
+                  {/* CHANGED CTA COPY */}
+                  {isSubmitting ? "Processing..." : "Join the Waitlist"}
+                  <ArrowRight size={14} />
                 </button>
               </form>
             </div>
-          </div>
+          </motion.div>
 
-          {/* PRODUCT IMAGE: Slides in from the right */}
-          <div className="w-full lg:w-[60%] flex" data-aos="fade-left" data-aos-delay="600">
-            <div className="relative z-10 p-[1.5px] bg-white rounded-[3.5rem] border-2 border-[#A4613A]/10 shadow-2xl overflow-hidden group w-full flex items-center justify-center">
-              <img 
-                 src={heroProductImage} 
-                 alt="ZebraWell Clinical Trinity" 
-                 className="w-full h-full object-cover transform hover:scale-[1.03] transition-transform duration-1000 ease-out rounded-[3.5rem]" 
-              />
-              {/* Subtle copper light overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 to-transparent opacity-30 pointer-events-none" />
+          {/* RIGHT: PRODUCT IMAGE (Glass Frame) */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="w-full lg:w-[55%] flex"
+          >
+            <div className="relative z-10 w-full rounded-[3rem] p-3 bg-white/40 backdrop-blur-sm border border-white/40 shadow-2xl">
+              <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden bg-[#F2F0EA]">
+                <img 
+                   src={heroProductImage} 
+                   alt="ZebraWell Clinical Trinity" 
+                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s] ease-out" 
+                />
+                {/* Cinematic Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 via-transparent to-transparent pointer-events-none" />
+              </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
+
+        {/* --- THE COLORED TRUST BAR (Glassmorphism Edition) --- */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="py-8 px-10 bg-white/30 backdrop-blur-md rounded-3xl border border-white/40 shadow-sm mx-auto max-w-5xl"
+        >
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-10">
+            <p className="text-[9px] font-black text-[#8A857C] uppercase tracking-[0.4em] w-full md:w-auto text-center md:text-left">
+              Manufacturing Standards:
+            </p>
+
+            {/* FDA Registered - Blue Icon */}
+            <div className="flex items-center gap-4 group cursor-default">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Factory className="w-5 h-5 text-blue-600" />
+              </div>
+              <div className="text-left">
+                <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">FDA Registered</span>
+                <span className="block text-[8px] font-bold text-[#8A857C] uppercase tracking-tighter mt-1">Facility</span>
+              </div>
+            </div>
+
+            {/* NSF GMP - Royal Blue Icon */}
+            <div className="flex items-center gap-4 group cursor-default">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheck className="w-5 h-5 text-blue-800" />
+              </div>
+              <div className="text-left">
+                <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">NSF GMP</span>
+                <span className="block text-[8px] font-bold text-[#8A857C] uppercase tracking-tighter mt-1">Certified</span>
+              </div>
+            </div>
+
+            {/* Lab Tested - Copper Icon */}
+            <div className="flex items-center gap-4 group cursor-default">
+              <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Microscope className="w-5 h-5 text-[#B36B4D]" />
+              </div>
+              <div className="text-left">
+                <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">Third-Party</span>
+                <span className="block text-[8px] font-bold text-[#8A857C] uppercase tracking-tighter mt-1">Lab Tested</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
