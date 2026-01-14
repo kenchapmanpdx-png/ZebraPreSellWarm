@@ -4,7 +4,8 @@ import { storage } from "./storage";
 import { 
   insertPreorderReservationSchema,
   insertContactSubmissionSchema,
-  insertSampleRequestSchema
+  insertSampleRequestSchema,
+  insertWaitlistSubmissionSchema
 } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 
@@ -81,6 +82,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // API route for waitlist submissions
+  app.post('/api/waitlist', async (req, res) => {
+    try {
+      const validationResult = insertWaitlistSubmissionSchema.safeParse(req.body);
+      
+      if (!validationResult.success) {
+        const validationError = fromZodError(validationResult.error);
+        return res.status(400).json({ 
+          message: "Validation failed", 
+          errors: validationError.details 
+        });
+      }
+
+      const submission = await storage.createWaitlistSubmission(validationResult.data);
+      return res.status(201).json({ 
+        message: "Successfully joined the waitlist!",
+        data: submission
+      });
+    } catch (error) {
+      console.error('Error creating waitlist submission:', error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   // Get all submissions (for admin/debugging purposes)
   app.get('/api/admin/preorders', async (req, res) => {
     try {
@@ -108,6 +133,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.json({ data: requests });
     } catch (error) {
       console.error('Error fetching sample requests:', error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.get('/api/admin/waitlist', async (req, res) => {
+    try {
+      const submissions = await storage.getWaitlistSubmissions();
+      return res.json({ data: submissions });
+    } catch (error) {
+      console.error('Error fetching waitlist submissions:', error);
       return res.status(500).json({ message: "Internal server error" });
     }
   });

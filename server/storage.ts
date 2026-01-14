@@ -4,7 +4,9 @@ import {
   type ContactSubmission,
   type InsertContactSubmission,
   type SampleRequest,
-  type InsertSampleRequest
+  type InsertSampleRequest,
+  type WaitlistSubmission,
+  type InsertWaitlistSubmission
 } from "@shared/schema";
 
 export interface IStorage {
@@ -22,23 +24,31 @@ export interface IStorage {
   createSampleRequest(request: InsertSampleRequest): Promise<SampleRequest>;
   getSampleRequests(): Promise<SampleRequest[]>;
   getSampleRequest(id: number): Promise<SampleRequest | undefined>;
+  
+  // Waitlist
+  createWaitlistSubmission(submission: InsertWaitlistSubmission): Promise<WaitlistSubmission>;
+  getWaitlistSubmissions(): Promise<WaitlistSubmission[]>;
 }
 
 export class MemStorage implements IStorage {
   private preorderReservations: Map<number, PreorderReservation>;
   private contactSubmissions: Map<number, ContactSubmission>;
   private sampleRequests: Map<number, SampleRequest>;
+  private waitlistSubmissions: Map<number, WaitlistSubmission>;
   private currentPreorderReservationId: number;
   private currentContactSubmissionId: number;
   private currentSampleRequestId: number;
+  private currentWaitlistSubmissionId: number;
 
   constructor() {
     this.preorderReservations = new Map();
     this.contactSubmissions = new Map();
     this.sampleRequests = new Map();
+    this.waitlistSubmissions = new Map();
     this.currentPreorderReservationId = 1;
     this.currentContactSubmissionId = 1;
     this.currentSampleRequestId = 1;
+    this.currentWaitlistSubmissionId = 1;
   }
 
   // Preorder reservations
@@ -104,6 +114,22 @@ export class MemStorage implements IStorage {
 
   async getSampleRequest(id: number): Promise<SampleRequest | undefined> {
     return this.sampleRequests.get(id);
+  }
+
+  // Waitlist
+  async createWaitlistSubmission(insertSubmission: InsertWaitlistSubmission): Promise<WaitlistSubmission> {
+    const id = this.currentWaitlistSubmissionId++;
+    const submission: WaitlistSubmission = { 
+      ...insertSubmission, 
+      id,
+      createdAt: new Date()
+    };
+    this.waitlistSubmissions.set(id, submission);
+    return submission;
+  }
+
+  async getWaitlistSubmissions(): Promise<WaitlistSubmission[]> {
+    return Array.from(this.waitlistSubmissions.values());
   }
 }
 
