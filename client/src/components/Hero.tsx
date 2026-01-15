@@ -4,7 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles } from 'lucide-react';
 // Ensure the image path matches your project structure
-import heroProductImage from '@assets/image_1768272183723.png';
+import heroProductImage from '@assets/ChatGPT_Image_Jan_14,_2026,_01_05_39_PM_1768460138850.png';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
