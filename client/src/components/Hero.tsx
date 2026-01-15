@@ -108,9 +108,9 @@ export default function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="w-full lg:w-[45%] flex"
+            className="w-full lg:w-[35%] flex"
           >
-            <div className="relative w-full bg-white/60 backdrop-blur-xl border border-white/50 rounded-[3rem] p-10 lg:p-14 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] flex flex-col justify-center overflow-hidden group">
+            <div className="relative w-full bg-white/60 backdrop-blur-xl border border-white/50 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] flex flex-col justify-center overflow-hidden group">
               {/* Subtle shimmers */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B36B4D]/30 to-transparent opacity-50" />
 
@@ -118,7 +118,7 @@ export default function Hero() {
                 <Sparkles className="w-3 h-3" /> We see you
               </p>
 
-              <h2 className="font-serif font-bold text-[#3D3733] mb-8 leading-tight text-4xl lg:text-5xl">
+              <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
                 Wellness for the <br />
                 <span className="relative inline-block min-w-[200px] h-[1.2em]">
                   <AnimatePresence mode="wait">
@@ -173,14 +173,14 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="w-full lg:w-[55%] flex"
+            className="w-full lg:w-[65%] flex"
           >
-            <div className="relative z-10 w-full rounded-[3rem] p-3 bg-white/40 backdrop-blur-sm border border-white/40 shadow-2xl">
-              <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden bg-[#F2F0EA]">
+            <div className="relative z-10 w-full rounded-[2.5rem] p-3 bg-white/40 backdrop-blur-sm border border-white/40 shadow-2xl">
+              <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
                 <img 
                    src={heroProductImage} 
                    alt="ZebraWell Clinical Trinity" 
-                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s] ease-out" 
+                   className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[2s] ease-out" 
                 />
                 {/* Cinematic Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 via-transparent to-transparent pointer-events-none" />
