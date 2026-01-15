@@ -104,7 +104,7 @@ export default function OurStory() {
             <div className="flex items-start gap-4 max-w-md border-l-2 border-[#B36B4D]/20 pl-6 py-2">
               <Heart className="text-[#B36B4D] w-6 h-6 mt-1 flex-shrink-0 fill-[#B36B4D]/10" />
               <p className="text-[14px] md:text-[16px] font-serif italic text-[#3D3733] leading-relaxed">
-                "If you or someone you love is a zebra, welcome to the herd with a heart."
+                "If you or someone you love is a zebra, welcome to the herd."
               </p>
             </div>
           </motion.div>

@@ -55,6 +55,14 @@ export default function Hero() {
     }
   };
 
+  // Button gradient styles
+  const buttonBaseStyle: React.CSSProperties = {
+    backgroundImage: 'linear-gradient(to right, #0F2A22 0%, #2D6B52 50%, #0F2A22 100%)',
+    backgroundSize: '200% auto',
+    backgroundPosition: 'left center',
+    transition: 'all 0.65s ease',
+  };
+
   return (
     <section className="relative pt-32 md:pt-48 pb-20 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
 
@@ -142,7 +150,16 @@ export default function Hero() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full py-5 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.3em] text-[10px] shadow-xl hover:bg-[#1A4639] hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2"
+                  style={buttonBaseStyle}
+                  className="w-full py-5 rounded-2xl text-white font-bold uppercase tracking-[0.3em] text-[10px] shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  onMouseEnter={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.backgroundPosition = 'right center';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundPosition = 'left center';
+                  }}
                 >
                   {isSubmitting ? "Processing..." : "Join the Waitlist"}
                   <ArrowRight size={14} />
