@@ -36,17 +36,17 @@ export default function Hero() {
       const data = await response.json();
 
       if (response.ok) {
-        toast({ 
-          title: "You're on the list!", 
-          description: "We'll notify you the moment ZebraWell is available." 
+        toast({
+          title: "You're on the list!",
+          description: "We'll notify you the moment ZebraWell is available."
         });
         setEmail('');
       } else {
         throw new Error(data.error || 'Failed to subscribe');
       }
     } catch (error) {
-      toast({ 
-        title: "Something went wrong", 
+      toast({
+        title: "Something went wrong",
         description: "Please try again or contact us directly.",
         variant: "destructive"
       });
@@ -64,7 +64,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-32 md:pt-48 pb-20 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
+    <section className="relative pt-24 md:pt-32 pb-16 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
 
       {/* LUXURY BACKGROUND AMBIENCE */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -76,7 +76,7 @@ export default function Hero() {
 
         {/* --- EDITORIAL HEADER --- */}
         <div className="text-center mb-16 lg:mb-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -88,11 +88,11 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "circOut" }}
-            className="font-serif font-bold tracking-tight text-[#3D3733]" 
+            className="font-serif font-bold tracking-tight text-[#3D3733]"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
           >
             <span className="block mb-2">Advanced Autonomic, Mast Cell</span>
@@ -104,7 +104,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 max-w-6xl mx-auto mb-24">
 
           {/* LEFT: OPT-IN CARD (Glassmorphism) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -114,15 +114,15 @@ export default function Hero() {
               {/* Subtle shimmers */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B36B4D]/30 to-transparent opacity-50" />
 
-              <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.5em] mb-6 flex items-center gap-2">
-                <Sparkles className="w-3 h-3" /> We see you
+              <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
+                <Sparkles className="w-4 h-4" /> We see you
               </p>
 
               <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
                 Wellness for the <br />
                 <span className="relative inline-block min-w-[200px] h-[1.2em]">
                   <AnimatePresence mode="wait">
-                    <motion.span 
+                    <motion.span
                       key={words[currentWordIndex]}
                       initial={{ y: 15, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
@@ -138,20 +138,20 @@ export default function Hero() {
 
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="relative">
-                  <input 
-                    type="email" 
-                    placeholder="Email Address" 
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full py-5 px-6 bg-white/50 border border-[#3D3733]/10 rounded-2xl text-[#3D3733] text-lg focus:outline-none focus:border-[#B36B4D] focus:bg-white transition-all placeholder:text-[#8A857C]/50" 
+                    className="w-full py-5 px-6 bg-white/50 border border-[#3D3733]/10 rounded-2xl text-[#3D3733] text-lg focus:outline-none focus:border-[#B36B4D] focus:bg-white transition-all placeholder:text-[#8A857C]/50"
                   />
                 </div>
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={isSubmitting}
                   style={buttonBaseStyle}
-                  className="w-full py-5 rounded-2xl text-white font-bold uppercase tracking-[0.3em] text-[10px] shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-5 rounded-2xl text-white font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   onMouseEnter={(e) => {
                     if (!isSubmitting) {
                       e.currentTarget.style.backgroundPosition = 'right center';
@@ -162,14 +162,14 @@ export default function Hero() {
                   }}
                 >
                   {isSubmitting ? "Processing..." : "Join the Waitlist"}
-                  <ArrowRight size={14} />
+                  <ArrowRight size={18} />
                 </button>
               </form>
             </div>
           </motion.div>
 
           {/* RIGHT: PRODUCT IMAGE (Glass Frame) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -177,10 +177,10 @@ export default function Hero() {
           >
             <div className="relative z-10 w-full rounded-[2.5rem] p-3 bg-white/40 backdrop-blur-sm border border-white/40 shadow-2xl">
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
-                <img 
-                   src={heroProductImage} 
-                   alt="ZebraWell Clinical Trinity" 
-                   className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[2s] ease-out" 
+                <img
+                  src={heroProductImage}
+                  alt="ZebraWell Clinical Trinity"
+                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[2s] ease-out"
                 />
                 {/* Cinematic Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 via-transparent to-transparent pointer-events-none" />
@@ -191,7 +191,7 @@ export default function Hero() {
         </div>
 
         {/* --- THE COLORED TRUST BAR (Glassmorphism Edition) --- */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}

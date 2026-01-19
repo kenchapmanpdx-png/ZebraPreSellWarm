@@ -11,10 +11,10 @@ import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 
 // LAZY LOADED COMPONENTS
-const CollagenScienceSection = lazy(() => import('@/components/CollagenScienceSection')); 
-const QualityStandards = lazy(() => import('@/components/QualityStandards')); 
+const CollagenScienceSection = lazy(() => import('@/components/CollagenScienceSection'));
+const QualityStandards = lazy(() => import('@/components/QualityStandards'));
 const Testimonials = lazy(() => import('@/components/Testimonials'));
-const FAQ = lazy(() => import('@/components/FAQ')); 
+const FAQ = lazy(() => import('@/components/FAQ'));
 
 export default function Home() {
   // Scroll observer for fade-in animations
@@ -46,33 +46,33 @@ export default function Home() {
 
         {/* 3. QUALITY STANDARDS - The "0% Trigger" Badge & Trust */}
         <Suspense fallback={<div className="h-48 bg-[#EBE8E1]" />}>
-           <QualityStandards />
+          <QualityStandards />
         </Suspense>
 
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
         <Suspense fallback={<div className="h-96 bg-[#EBE8E1]" />}>
-           <CollagenScienceSection />
+          <CollagenScienceSection />
 
-           {/* THE BRIDGE BUTTON: Links to /the-how */}
-           <div className="flex justify-center pb-24 -mt-8 relative z-20">
-              <Link href="/the-how">
-                <button className="group relative px-10 py-5 bg-[#3D3733] text-white rounded-full font-serif font-bold tracking-wider text-sm hover:bg-[#B36B4D] transition-all shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(179,107,77,0.4)] hover:scale-105 flex items-center gap-4">
-                  View Condition-Specific Protocols
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
-           </div>
+          {/* THE BRIDGE BUTTON: Links to /the-how */}
+          <div className="flex justify-center pb-24 -mt-8 relative z-20">
+            <Link href="/the-how">
+              <button className="group relative px-10 py-5 bg-[#0F2A22] text-white rounded-full font-serif font-bold tracking-wider text-sm hover:bg-[#B36B4D] transition-all shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(179,107,77,0.4)] hover:scale-105 flex items-center gap-4">
+                View Condition-Specific Protocols
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </div>
         </Suspense>
 
         {/* 5. PRODUCT GRID - The "Clinical Collection" */}
-        <div id="products" className="fade-in py-12 md:py-24">
+        <div id="products" className="fade-in py-8 md:py-16">
           <ProductGrid />
         </div>
 
         {/* 6. SOCIAL PROOF & OBJECTIONS */}
         <Suspense fallback={<div className="h-40" />}>
-           <Testimonials />
-           <FAQ /> 
+          <Testimonials />
+          <FAQ />
         </Suspense>
       </main>
 

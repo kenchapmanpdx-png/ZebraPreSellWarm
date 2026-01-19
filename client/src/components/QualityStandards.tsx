@@ -28,7 +28,7 @@ export default function QualityStandards() {
   ];
 
   return (
-    <section id="quality" className="py-20 md:py-28 bg-[#F2F0EA] scroll-mt-24">
+    <section id="quality" className="py-16 md:py-20 bg-[#F2F0EA] scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Editorial Header */}
@@ -43,7 +43,7 @@ export default function QualityStandards() {
               <span className="text-[10px] font-bold text-[#B36B4D] uppercase tracking-[0.4em]">Manufacturing Integrity</span>
             </motion.div>
 
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] leading-tight"
@@ -54,14 +54,14 @@ export default function QualityStandards() {
           </div>
 
           {/* COLORFUL BADGE: Replaces the wasted space bar */}
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             className="bg-white border-2 border-[#0F2A22]/10 p-8 rounded-[2.5rem] shadow-2xl flex items-center gap-6"
           >
             <div className="flex flex-col items-center">
-               <span className="text-[#B36B4D] font-serif font-bold text-5xl italic leading-none">0%</span>
-               <span className="text-[#0F2A22] font-black uppercase tracking-widest text-[8px] mt-2 text-center">Trigger<br/>Guarantee</span>
+              <span className="text-[#B36B4D] font-serif font-bold text-5xl italic leading-none">0%</span>
+              <span className="text-[#0F2A22] font-black uppercase tracking-widest text-[8px] mt-2 text-center">Trigger<br />Guarantee</span>
             </div>
             <div className="w-[1px] h-12 bg-[#0F2A22]/10" />
             <p className="text-[11px] font-medium text-[#5D5752] leading-relaxed max-w-[180px]">

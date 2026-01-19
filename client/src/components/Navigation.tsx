@@ -27,11 +27,10 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#EBE8E1]/80 backdrop-blur-xl border-b border-white/20 py-4"
-          : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? "bg-[#EBE8E1]/80 backdrop-blur-xl border-b border-white/20 py-4"
+        : "bg-transparent py-6"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
@@ -62,7 +61,7 @@ export default function Navigation() {
         {/* ACTION BUTTONS */}
         <div className="hidden md:flex items-center gap-6">
           <Link href="/#waitlist">
-            <button className="px-6 py-2.5 bg-[#3D3733] hover:bg-[#0F2A22] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full transition-all hover:scale-105 shadow-lg">
+            <button className="px-6 py-2.5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full transition-all hover:scale-105 shadow-lg">
               Join Waitlist
             </button>
           </Link>
@@ -88,7 +87,7 @@ export default function Navigation() {
           >
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
-                <a 
+                <a
                   onClick={() => setIsOpen(false)}
                   className="text-sm font-bold uppercase tracking-[0.2em] text-[#3D3733]"
                 >
@@ -98,7 +97,7 @@ export default function Navigation() {
             ))}
             <Link href="/#waitlist">
               <a onClick={() => setIsOpen(false)}>
-                <button className="w-full py-4 bg-[#3D3733] text-white font-bold uppercase tracking-[0.2em] rounded-xl">
+                <button className="w-full py-4 bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] rounded-xl active:bg-[#B36B4D]">
                   Join Waitlist
                 </button>
               </a>

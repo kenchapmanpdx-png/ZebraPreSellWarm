@@ -15,11 +15,11 @@ export default function OurStory() {
   };
 
   return (
-    <section id="story" className="py-24 px-4 bg-[#F2F0EA] overflow-hidden scroll-mt-24">
+    <section id="story" className="py-16 px-4 bg-[#F2F0EA] overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
 
         {/* LEFT: PHOTO + QUOTE CARD ANCHORING */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -27,11 +27,11 @@ export default function OurStory() {
           className="w-full md:w-1/2 relative pl-4 pt-4"
         >
           {/* Decorative Trim */}
-          <motion.div 
+          <motion.div
             initial={{ x: -10, y: -10 }}
             whileInView={{ x: 0, y: 0 }}
             transition={{ duration: 2, ease: "easeOut" }}
-            className="absolute top-0 left-0 right-4 bottom-4 border border-[#B36B4D]/30 rounded-[2.5rem] z-0" 
+            className="absolute top-0 left-0 right-4 bottom-4 border border-[#B36B4D]/30 rounded-[2.5rem] z-0"
           />
 
           {/* Image Container - MUST be overflow-visible for the card to float outside */}
@@ -63,7 +63,7 @@ export default function OurStory() {
 
         {/* RIGHT: CONTENT & COLOR RESTORATION */}
         <div className="w-full md:w-1/2 pt-12 md:pt-0">
-          <motion.p 
+          <motion.p
             custom={0} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}
             className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-6 flex items-center gap-3"
           >
@@ -71,7 +71,7 @@ export default function OurStory() {
             Our Purpose
           </motion.p>
 
-          <motion.h2 
+          <motion.h2
             custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}
             className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-[#3D3733] mb-8 leading-[1.1]"
           >
@@ -94,7 +94,7 @@ export default function OurStory() {
           {/* CTA & WELCOME MESSAGE */}
           <motion.div custom={5} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="flex flex-col gap-10">
             <Link href="/ingredients">
-              <button className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-[11px] tracking-[0.3em]">
+              <button className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-xs tracking-widest">
                 Explore Our Ingredients
                 <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
               </button>

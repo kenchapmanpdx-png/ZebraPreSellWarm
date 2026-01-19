@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 // Import AOS for the scroll animations - Ensure this is installed in your project
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -39,7 +39,7 @@ export default function OurPromise() {
       <Navigation />
 
       {/* THE CONSTITUTION HEADER: Slow Fade Down */}
-      <section className="relative pt-48 pb-32 px-6 bg-[#DED9D0]">
+      <section className="relative pt-32 pb-20 px-6 bg-[#DED9D0]">
         <div className="container mx-auto max-w-5xl text-center relative z-10" data-aos="fade-down">
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-2 rounded-full bg-white/60 border border-[#A4613A]/20 text-[#0F2A22] text-xs font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
             <ShieldCheck size={16} className="text-[#A4613A]" />
@@ -127,17 +127,17 @@ export default function OurPromise() {
             {ACCOUNTABILITY.map((x, idx) => {
               const Icon = x.icon;
               return (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="bg-white/60 p-10 rounded-[3rem] border border-white text-center shadow-xl hover:-translate-y-2 transition-transform duration-500"
                   data-aos="fade-up"
                   data-aos-delay={idx * 150}
                 >
-                   <div className="w-14 h-14 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
-                      <Icon size={24} className="text-[#A4613A]" />
-                   </div>
-                   <h4 className="text-xl font-serif font-bold text-[#262321] mb-4">{x.title}</h4>
-                   <p className="text-[#4A4540] text-sm leading-relaxed">{x.desc}</p>
+                  <div className="w-14 h-14 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
+                    <Icon size={24} className="text-[#A4613A]" />
+                  </div>
+                  <h4 className="text-xl font-serif font-bold text-[#262321] mb-4">{x.title}</h4>
+                  <p className="text-[#4A4540] text-sm leading-relaxed">{x.desc}</p>
                 </div>
               )
             })}

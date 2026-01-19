@@ -45,14 +45,14 @@ export default function ProductGrid() {
 
       {/* Editorial Header */}
       <div className="max-w-7xl mx-auto mb-20 text-center relative z-10">
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-4"
         >
           The Clinical Collection
         </motion.p>
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733]"
@@ -117,7 +117,7 @@ export default function ProductGrid() {
 
                 {/* CTA Button */}
                 <Link href="/#waitlist">
-                  <button className="w-full py-4 rounded-xl bg-[#3D3733] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#0F2A22] transition-colors shadow-lg flex items-center justify-center gap-3">
+                  <button className="w-full py-4 rounded-xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#B36B4D] transition-colors shadow-lg flex items-center justify-center gap-3">
                     Reserve {product.title}
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </button>

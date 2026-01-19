@@ -62,7 +62,7 @@ export default function PreorderPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Clinical-grade supplements designed specifically for EDS, POTS, and MCAS. 
+              Clinical-grade supplements designed specifically for EDS, POTS, and MCAS.
               Join our reservation list to be notified when we launch.
             </p>
 
@@ -103,7 +103,7 @@ export default function PreorderPage() {
                     </div>
                   </div>
                   <p className="text-lg text-gray-700 mb-6">
-                    Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night. 
+                    Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night.
                     That's it—no more 12-bottle stacks.
                   </p>
                 </div>
@@ -189,13 +189,13 @@ export default function PreorderPage() {
           </div>
 
           {/* Submit Button */}
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={() => {
               const selected = Array.from(document.querySelectorAll('input[name="symptoms"]:checked')).map(el => (el as HTMLInputElement).value);
               const resultList = document.getElementById('resultList');
               const resultBox = document.getElementById('quizResults');
-              
+
               if (resultList && resultBox) {
                 resultList.innerHTML = '';
                 if (selected.length === 0) {
@@ -221,7 +221,7 @@ export default function PreorderPage() {
                 resultBox.classList.remove('hidden');
               }
             }}
-            className="bg-[#A4613A] hover:bg-[#8E5433] active:bg-[#744428] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 mt-4 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
+            className="bg-[#0F2A22] hover:bg-[#B36B4D] active:bg-[#8E5433] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 mt-4 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
           >
             Show My Support Plan
           </button>
@@ -288,7 +288,7 @@ export default function PreorderPage() {
                   Reserve Your Spot – Limited First Run!
                 </h2>
                 <p className="text-lg text-gray-700">
-                  Be the first to know when ZebraWell is available for order. 
+                  Be the first to know when ZebraWell is available for order.
                   No spam, just the important updates.
                 </p>
               </div>
@@ -310,11 +310,10 @@ export default function PreorderPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)] ${
-                      email 
-                        ? 'bg-[#A4613A] border-[#A4613A] hover:bg-[#8E5433] active:bg-[#744428]'
+                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)] ${email
+                        ? 'bg-[#0F2A22] border-[#0F2A22] hover:bg-[#B36B4D] active:bg-[#744428]'
                         : 'bg-[#7A8691] border-[#7A8691] opacity-70 cursor-not-allowed'
-                    }`}
+                      }`}
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">

@@ -1,20 +1,20 @@
 /* client/src/components/CollagenScienceSection.tsx */
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Shield, 
-  Hammer, 
-  Link as LinkIcon, 
-  Zap, 
-  FlaskConical, 
-  Factory, 
-  ChevronDown, 
-  ChevronUp, 
-  RefreshCcw, 
-  Dna, 
-  Battery, 
-  Brain, 
-  Heart, 
+import {
+  Shield,
+  Hammer,
+  Link as LinkIcon,
+  Zap,
+  FlaskConical,
+  Factory,
+  ChevronDown,
+  ChevronUp,
+  RefreshCcw,
+  Dna,
+  Battery,
+  Brain,
+  Heart,
   Pill,
   AlertTriangle,
   CheckCircle2,
@@ -284,12 +284,12 @@ export default function CollagenScienceSection() {
   ];
 
   return (
-    <section id="science" className="py-24 px-4 sm:px-6 bg-[#EBE8E1] scroll-mt-24">
+    <section id="science" className="py-16 px-4 sm:px-6 bg-[#EBE8E1] scroll-mt-24">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -299,7 +299,7 @@ export default function CollagenScienceSection() {
             <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#3D3733]">The Full Picture</span>
           </motion.div>
 
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -314,7 +314,7 @@ export default function CollagenScienceSection() {
         </div>
 
         {/* The Vicious Cycle Highlight - Compact & Technical */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
