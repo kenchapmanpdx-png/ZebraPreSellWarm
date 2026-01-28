@@ -436,29 +436,49 @@ export default function CollagenScienceSection() {
           </div>
         </div>
 
-        {/* Header - Moved below Vicious Cycle */}
-        <div className="text-center mb-16 mt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#3D3733]/10 bg-white/50 backdrop-blur-md"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#B36B4D] animate-pulse" />
-            <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#3D3733]">The Full Picture</span>
-          </motion.div>
+        {/* THE BRIDGE - Visual Connector */}
+        <div className="relative w-full flex flex-col items-center justify-center -mt-8 pb-12 z-20">
 
-          <motion.h2
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-6 leading-tight"
-          >
+          {/* 1. Vertical Line Dropping Down */}
+          <div className="h-24 w-0.5 bg-gradient-to-b from-transparent via-[#D4A373] to-[#D4A373]"></div>
+
+          {/* 2. The "Interrupter" Badge */}
+          <div className="bg-white border border-[#D4A373]/30 px-6 py-2 rounded-full shadow-sm text-[#8B5E4B] font-serif italic text-lg z-10 -mt-4">
+            Intervention is possible
+          </div>
+
+          {/* 3. Continuation Line */}
+          <div className="h-12 w-0.5 bg-[#D4A373]"></div>
+
+          {/* 4. Arrow pointing to next section */}
+          <div className="text-[#D4A373]">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="animate-bounce"
+            >
+              <path d="M7 13l5 5 5-5" />
+              <path d="M7 7l5 5 5-5" />
+            </svg>
+          </div>
+        </div>
+
+        {/* NEXT SECTION START: "14 Pathways" */}
+        <div className="text-center max-w-4xl mx-auto px-4 mt-6 mb-16">
+          <span className="text-[#D4A373] font-bold tracking-widest uppercase text-[10px] mb-2 block">
+            The ZebraWell Solution
+          </span>
+          <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-6 leading-tight">
             14 Pathways. <span className="text-[#B36B4D] italic">One System.</span>
-          </motion.h2>
-
-          <p className="text-[#5D5752] max-w-2xl mx-auto text-lg font-medium">
-            Connective tissue disorders aren't just one broken part. They are a cascade of 14 interconnected biological failures. We address them all.
+          </h2>
+          <p className="text-[#5D5752] text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+            We don't just patch one symptom. We flood the body with support across every major biological pathway involved in the collagen-mast cell loop.
           </p>
         </div>
 
