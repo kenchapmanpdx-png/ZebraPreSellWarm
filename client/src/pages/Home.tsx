@@ -4,6 +4,7 @@ import { Link } from "wouter"; // Added for the button link
 import { ArrowRight } from "lucide-react"; // Added for the button icon
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import WhyZebraMascot from '@/components/WhyZebraMascot';
 import OurStory from '@/components/OurStory';
 import ProductGrid from '@/components/ProductGrid';
 import Footer from '@/components/Footer';
@@ -38,8 +39,13 @@ export default function Home() {
       <Navigation />
 
       <main>
-        {/* 1. HERO - Modern, Clean, Holographic */}
+        {/* ... (Hero) */}
         <Hero />
+
+        {/* 1.5. WHY ZEBRA - Brand Mascot Block */}
+        <div className="px-6 py-12 bg-[#EBE8E1] relative z-20 -mt-12 md:-mt-20 mb-8">
+          <WhyZebraMascot />
+        </div>
 
         {/* 2. OUR STORY - Ken & Ava (Heart of the brand) */}
         <OurStory />

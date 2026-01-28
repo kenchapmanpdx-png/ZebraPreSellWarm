@@ -66,11 +66,7 @@ export default function Hero() {
   return (
     <section className="relative pt-24 md:pt-32 pb-16 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
 
-      {/* LUXURY BACKGROUND AMBIENCE */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-[#B36B4D]/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-[#0F2A22]/5 rounded-full blur-[100px]" />
-      </div>
+
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
 

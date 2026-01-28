@@ -18,7 +18,8 @@ import {
   Pill,
   AlertTriangle,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  RefreshCw
 } from 'lucide-react';
 
 export default function CollagenScienceSection() {
@@ -287,8 +288,156 @@ export default function CollagenScienceSection() {
     <section id="science" className="py-16 px-4 sm:px-6 bg-[#EBE8E1] scroll-mt-24">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        <div className="text-center mb-16">
+        {/* Re-Integrated Vicious Cycle - Final X-Layout Strategy */}
+        <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-[#B36B4D]/20 mb-20 relative overflow-hidden">
+          {/* Ambient background glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#B36B4D]/5 rounded-full blur-[100px] -mr-48 -mt-48" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2D6B52]/5 rounded-full blur-[100px] -ml-48 -mb-48" />
+
+          <div className="relative z-10 max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex p-3 bg-[#B36B4D]/10 rounded-2xl mb-6">
+                <RefreshCw className="w-8 h-8 text-[#B36B4D] animate-spin-slow" />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#3D3733] mb-4">The "Vicious Cycle" of hEDS & MCAS</h3>
+              <p className="text-[#8A857C] text-lg font-medium max-w-xl mx-auto">Understanding this biological feedback loop is key to breaking the cascade of destruction.</p>
+            </div>
+
+            {/* DESKTOP LAYOUT - THE "X" CONFIGURATION */}
+            <div className="relative w-full max-w-[500px] mx-auto aspect-square hidden md:block">
+
+              {/* Dotted Connection Circle (SVG) */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 rotate-45 opacity-20">
+                <circle cx="50%" cy="50%" r="35%" fill="none" stroke="#B36B4D" strokeWidth="2" strokeDasharray="8 8" />
+              </svg>
+
+              {[
+                {
+                  id: 1,
+                  number: "1",
+                  title: "Collagen Breaks Down",
+                  desc: "Weak connective tissue degrades due to genetic/stress factors.",
+                  theme: "brown",
+                  pos: "top-0 left-0"
+                },
+                {
+                  id: 2,
+                  number: "2",
+                  title: "Fragments Trigger Inflammation",
+                  desc: "Biological debris activates aggressive immune responses.",
+                  theme: "green",
+                  pos: "top-0 right-0"
+                },
+                {
+                  id: 3,
+                  number: "3",
+                  title: "Mast Cells Activate",
+                  desc: "Hyper-sensitive cells release histamine & toxic chemicals.",
+                  theme: "brown",
+                  pos: "bottom-0 right-0"
+                },
+                {
+                  id: 4,
+                  number: "4",
+                  title: "Enzymes Attack Collagen",
+                  desc: "Destructive enzymes shred remaining tissue, repeating the cycle.",
+                  theme: "green",
+                  pos: "bottom-0 left-0"
+                }
+              ].map((step) => {
+                const styles = step.theme === 'brown'
+                  ? { badge: 'bg-[#B47F65] text-white', text: 'text-[#8B5E4B]' }
+                  : { badge: 'bg-[#2E5C55] text-white', text: 'text-[#1F443E]' };
+
+                return (
+                  <div key={step.id} className={`absolute w-48 h-48 flex items-center justify-center ${step.pos}`}>
+                    <div className="relative w-full h-full rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex flex-col items-center justify-center text-center p-6 z-10 border border-gray-50 overflow-visible transition-transform hover:scale-105 duration-300">
+                      {/* Number Badge floating at top */}
+                      <div className={`absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow-md ${styles.badge}`}>
+                        {step.number}
+                      </div>
+
+                      <h4 className={`font-serif font-bold text-sm leading-tight mb-2 ${styles.text}`}>
+                        {step.title}
+                      </h4>
+                      <p className="text-[11px] text-[#5D5752] leading-snug font-semibold">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* CENTER ICON */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center z-20 border border-gray-100">
+                <RefreshCw className="w-8 h-8 text-[#B36B4D]/30 animate-spin-slow" />
+              </div>
+            </div>
+
+            {/* MOBILE LAYOUT - VERTICAL STACK */}
+            <div className="flex flex-col gap-6 w-full max-w-sm mx-auto md:hidden">
+              {[
+                {
+                  id: 1,
+                  number: "1",
+                  title: "Collagen Breaks Down",
+                  desc: "Weak connective tissue degrades due to genetic/stress factors.",
+                  theme: "brown"
+                },
+                {
+                  id: 2,
+                  number: "2",
+                  title: "Fragments Trigger Inflammation",
+                  desc: "Biological debris activates aggressive immune responses.",
+                  theme: "green"
+                },
+                {
+                  id: 3,
+                  number: "3",
+                  title: "Mast Cells Activate",
+                  desc: "Hyper-sensitive cells release histamine & toxic chemicals.",
+                  theme: "brown"
+                },
+                {
+                  id: 4,
+                  number: "4",
+                  title: "Enzymes Attack Collagen",
+                  desc: "Destructive enzymes shred remaining tissue, repeating the cycle.",
+                  theme: "green"
+                }
+              ].map((step) => {
+                const styles = step.theme === 'brown'
+                  ? { badge: 'bg-[#B47F65] text-white', text: 'text-[#8B5E4B]' }
+                  : { badge: 'bg-[#2E5C55] text-white', text: 'text-[#1F443E]' };
+
+                return (
+                  <div key={step.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center flex flex-col items-center relative transition-transform hover:scale-102 duration-300">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mb-3 shadow-sm ${styles.badge}`}>
+                      {step.number}
+                    </div>
+                    <h3 className={`font-serif font-bold text-lg mb-2 ${styles.text}`}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-[#5D5752] leading-relaxed font-semibold">
+                      {step.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Cycle indicator text */}
+            <div className="flex justify-center mt-12 md:mt-20">
+              <div className="flex items-center gap-3 px-8 py-3 rounded-full bg-[#B36B4D]/10 text-[#B36B4D] border border-[#B36B4D]/10">
+                <RefreshCw className="w-5 h-5 animate-spin-slow" />
+                <span className="text-sm font-black uppercase tracking-[0.2em]">The cycle repeats indefinitely</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Header - Moved below Vicious Cycle */}
+        <div className="text-center mb-16 mt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -312,54 +461,6 @@ export default function CollagenScienceSection() {
             Connective tissue disorders aren't just one broken part. They are a cascade of 14 interconnected biological failures. We address them all.
           </p>
         </div>
-
-        {/* The Vicious Cycle Highlight - Compact & Technical */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-[2rem] p-8 md:p-10 shadow-lg border border-[#B36B4D]/20 mb-16 relative overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#B36B4D]/5 rounded-full blur-[80px]" />
-
-          <div className="relative z-10">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-red-100 rounded-xl">
-                <RefreshCcw className="w-6 h-6 text-red-600" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-serif font-bold text-[#3D3733]">The "Vicious Cycle" of hEDS & MCAS</h3>
-                <p className="text-sm text-[#8A857C]">Understanding this loop is key to breaking it.</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center items-center">
-              <div className="p-4 rounded-xl bg-red-50 border border-red-100">
-                <span className="block text-[10px] font-bold text-red-400 uppercase mb-1">Step 1</span>
-                <span className="font-bold text-[#3D3733] text-sm">Collagen Breakdown</span>
-              </div>
-              <div className="hidden md:block text-red-300">→</div>
-              <div className="p-4 rounded-xl bg-orange-50 border border-orange-100">
-                <span className="block text-[10px] font-bold text-orange-400 uppercase mb-1">Step 2</span>
-                <span className="font-bold text-[#3D3733] text-sm">Inflammatory Fragments</span>
-              </div>
-              <div className="hidden md:block text-orange-300">→</div>
-              <div className="p-4 rounded-xl bg-rose-50 border border-rose-100">
-                <span className="block text-[10px] font-bold text-rose-400 uppercase mb-1">Step 3</span>
-                <span className="font-bold text-[#3D3733] text-sm">Mast Cell Activation</span>
-              </div>
-              <div className="hidden md:block text-rose-300">→</div>
-              <div className="p-4 rounded-xl bg-red-50 border border-red-100">
-                <span className="block text-[10px] font-bold text-red-400 uppercase mb-1">Step 4</span>
-                <span className="font-bold text-[#3D3733] text-sm">More Enzymes Released</span>
-              </div>
-            </div>
-
-            <p className="mt-8 text-center text-[#5D5752] text-sm font-medium">
-              We interrupt this feedback loop at <span className="text-[#B36B4D] font-bold">multiple points</span> to stop the damage.
-            </p>
-          </div>
-        </motion.div>
 
         {/* 2-Column Grid for the 14 Pathways */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
