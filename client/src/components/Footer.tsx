@@ -25,7 +25,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-[#EBE8E1]/60 text-sm leading-relaxed mb-8">
-            Clinical-grade stability for the hyper-mobile and histamine-sensitive. 
+            Clinical-grade stability for the hyper-mobile and histamine-sensitive.
             Physician formulated. Zero compromise.
           </p>
           <div className="flex gap-4">
@@ -41,6 +41,7 @@ export default function Footer() {
             <h4 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Explore</h4>
             <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
               <li><a href="/#story" className="hover:text-white transition-colors">Our Story</a></li>
+              <li><Link href="/ingredients"><a className="hover:text-white transition-colors">Ingredients</a></Link></li>
               <li><a href="/#science" className="hover:text-white transition-colors">The Science</a></li>
               <li><a href="/#quality" className="hover:text-white transition-colors">Quality Standards</a></li>
               <li><a href="/#products" className="hover:text-white transition-colors">Formulas</a></li>
@@ -63,8 +64,8 @@ export default function Footer() {
         <p className="text-[10px] text-[#EBE8E1]/40 uppercase tracking-widest">
           © 2025 ZebraWell. All rights reserved.
         </p>
-        <button 
-          onClick={scrollToTop} 
+        <button
+          onClick={scrollToTop}
           className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#B36B4D] hover:text-white transition-colors"
         >
           Back to Top <ArrowUp size={14} />

@@ -2,6 +2,7 @@ export interface IngredientData {
     id: string;
     name: string;
     scientificName?: string;
+    isExcluded?: boolean;
     atAGlance: {
         whatItIs: string;
         whyWeIncludeIt: string;
@@ -763,6 +764,2022 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Vitamin C + gelatin doubled collagen synthesis markers", pmid: "27852613", authors: "Shaw et al.", year: "2017" },
             { title: "2g oral increased DAO activity", pmid: "25095772", authors: "Johnston", year: "2015" }
         ]
+    },
+    "vitamin-d3": {
+        id: "vitamin-d3",
+        name: "Vitamin D3 (Cholecalciferol)",
+        atAGlance: {
+            whatItIs: "A fat-soluble hormone that regulates calcium, supports immune function, and stabilizes mast cells",
+            whyWeIncludeIt: "Addresses the high deficiency rate in POTS patients (51% are deficient) while providing mast cell stabilization and autonomic support",
+            dose: "2,000 IU (50 mcg) daily",
+            keyBenefits: [
+                "74% of pediatric POTS patients improved in clinical trial",
+                "Reduces histamine release by 23-34%",
+                "Deficiency linked to 36% higher orthostatic hypotension risk",
+                "Nearly 2x faster wound healing in RCTs"
+            ]
+        },
+        howItWorks: "Vitamin D3 acts as a neuroactive hormone with profound effects on multiple systems. In POTS patients, it modulates autonomic nervous system function—deficiency correlates with decreased heart rate variability and impaired baroreflex sensitivity. It enhances β-adrenergic signal transduction in cardiac cells and regulates the renin-angiotensin system.\n\nFor MCAS, vitamin D3 works as a mast cell stabilizer. Mast cells express both vitamin D receptors (VDR) and the enzyme CYP27B1, enabling local conversion to active calcitriol. Through VDR-dependent mechanisms, it suppresses histamine release and reduces inflammatory mediators including leukotrienes, TNF-α, and IL-6.\n\nIn connective tissue, vitamin D influences the hydroxylation processes essential for stable collagen cross-linking, working synergistically with vitamin C and iron. High deficiency rates in hEDS (60%) and POTS (51%) make supplementation particularly relevant.",
+        research: [
+            {
+                outcome: "POTS Symptom Improvement",
+                summary: "Strong direct evidence from pediatric studies shows significant symptom improvement with supplementation.",
+                studies: [
+                    {
+                        source: "Dong et al., Lanzhou University",
+                        pmid: "40962545",
+                        design: "RCT, n=65 pediatric POTS patients",
+                        finding: "74% improved with 800 IU/day; POTS patients had markedly lower baseline 25(OH)D levels."
+                    }
+                ]
+            },
+            {
+                outcome: "Orthostatic Hypotension Risk",
+                summary: "Large meta-analysis confirms deficiency significantly increases orthostatic intolerance risk.",
+                studies: [
+                    {
+                        source: "Zuin et al.",
+                        pmid: "34628636",
+                        design: "Meta-analysis, 16,326 patients",
+                        finding: "Vitamin D deficiency associated with 36% higher orthostatic hypotension risk (OR 1.36)."
+                    }
+                ]
+            },
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Mechanistic studies demonstrate D3 suppresses activation through receptor-mediated pathways.",
+                studies: [
+                    {
+                        source: "Liu et al.",
+                        pmid: "27998003",
+                        finding: "D3 suppresses IgE-dependent mast cell activation, reducing histamine release by 23-34%."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct RCTs specifically in adult hEDS, POTS, or MCAS populations. Some findings are counterintuitive (e.g., higher vitamin D status in some MCAS cohorts). All autonomic benefits are extrapolated primarily from pediatric and diabetic populations.",
+        triad: {
+            mcas: "Vitamin D3 stabilizes rather than triggers mast cells. It suppresses IgE-dependent activation and reduces histamine, tryptase, and inflammatory cytokine release. European expert consensus recommends continuing supplementation in mastocytosis/MCAS based on these mechanisms.",
+            heds: "60% of hEDS patients show deficiency, often due to GI malabsorption. Vitamin D supports collagen synthesis and bone mineralization. For joint health, deficiency is linked to significantly higher surgical retear rates. It works synergistically with K2 to ensure proper calcium utilization.",
+            pots: "51% of POTS patients have levels below 20 ng/mL. The Chinese pediatric trial showed 74% improvement with supplementation. Heart rate variability markers may help identify those most likely to respond to Vitamin D."
+        },
+        whyThisForm: {
+            form: "D3 (Cholecalciferol) - Oil-based",
+            rationale: "D3 consistently outperforms D2 (ergocalciferol) in raising and maintaining serum levels. Oil-based formulations show 30-50% better absorption compared to powders when taken with food.",
+            comparison: [
+                { form: "D3 (Cholecalciferol)", difference: "3-5x more potent than D2; preferred form", selected: true },
+                { form: "D2 (Ergocalciferol)", difference: "Inferior bioavailability; shorter half-life", selected: false },
+                { form: "Oil-based Liquid/Capsule", difference: "30-50% better absorption than powder", selected: true }
+            ]
+        },
+        safety: {
+            sideEffects: "Generally well-tolerated. Hypercalcemia is possible at very high doses (>10,000 IU) without monitoring. Some patients report initial paradoxical reactions, often excipient-related.",
+            interactions: "No direct interactions with common POTS/MCAS meds. H2 blockers may slightly reduce absorption (space by 2 hours). Thiazide diuretics require calcium monitoring.",
+            excipientConcerns: {
+                avoid: ["FD&C dyes", "Titanium dioxide", "Carrageenan", "Corn starch", "BHA/BHT"],
+                safe: ["MCT oil", "Olive oil", "Minimal-ingredient liquid drops"]
+            },
+            cautions: "Monitor serum 25(OH)D levels (target 40-60 ng/mL). Check serum calcium if taking high doses (>4,000 IU)."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "1,000 IU daily", notes: "Ultra-sensitive start" },
+                { step: "Weeks 3-4", dosage: "2,000 IU daily", notes: "Standard maintenance" },
+                { step: "Ongoing", dosage: "2,000-4,000 IU daily", notes: "Adjust based on labs" }
+            ],
+            timeline: "Repletion takes 8-12 weeks; symptom improvement usually seen within 2-3 months. Take with fat-containing meal."
+        },
+        sources: [
+            { title: "Vitamin D supplementation in pediatric POTS", pmid: "40962545", authors: "Dong et al.", year: "2025" },
+            { title: "Vitamin D deficiency and orthostatic hypotension meta-analysis", pmid: "34628636", authors: "Zuin et al.", year: "2022" },
+            { title: "Vitamin D suppresses IgE-dependent mast cell activation", pmid: "27998003", authors: "Liu et al.", year: "2017" },
+            { title: "Vitamin D and autonomic function", pmid: "38747749", authors: "Faria et al.", year: "2024" },
+            { title: "Vitamin D deficiency in vascular EDS", pmid: "27488172", authors: "Busch et al.", year: "2016" }
+        ]
+    },
+    "vitamin-k2": {
+        id: "vitamin-k2",
+        name: "Vitamin K2 (MK-7)",
+        atAGlance: {
+            whatItIs: "A fat-soluble vitamin that activates proteins essential for calcium regulation and vascular health",
+            whyWeIncludeIt: "Works synergistically with D3 to prevent soft tissue calcification, supports collagen matrix quality, and demonstrates mast cell stabilizing properties",
+            dose: "100 mcg MK-7 daily",
+            keyBenefits: [
+                "Prevents arterial calcification via Matrix Gla Protein",
+                "Inhibits mast cell degranulation (Kimura studies)",
+                "Reduces MMP-3 in clinical trials (collagen protective)",
+                "Superior 72-hour half-life vs MK-4"
+            ]
+        },
+        howItWorks: "Vitamin K2 activates Matrix Gla Protein (MGP), which prevents calcium from depositing in arteries and soft tissues—directing it to bones instead. This is critical when taking D3, which increases calcium absorption.\n\nIn connective tissue, K2 activates osteocalcin, enhancing collagen matrix quality. Research shows it increases collagen synthesis via the SXR pathway and organizes collagen fibrils. Regarding mast cells, historical studies demonstrated that menaquinone significantly inhibits degranulation in both models and human basophils, with clinical effectiveness shown in asthma trials.",
+        research: [
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Historical research demonstrates significant stabilizing properties.",
+                studies: [
+                    {
+                        source: "Kimura I et al.",
+                        pmid: "126001",
+                        finding: "Menaquinone significantly inhibited mast cell degranulation in rat models and human basophils."
+                    },
+                    {
+                        source: "Kimura I et al.",
+                        pmid: "51576",
+                        design: "Controlled trial, n=191 asthma patients",
+                        finding: "72.7-90.9% clinical effectiveness in asthma compared to 16.7% for placebo."
+                    }
+                ]
+            },
+            {
+                outcome: "MMP Inhibition (Collagen Protection)",
+                summary: "Decreases MMP-3 levels, protecting the collagen matrix.",
+                studies: [
+                    {
+                        source: "Abdel-Rahman MS",
+                        pmid: "26073022",
+                        design: "RCT, n=84",
+                        finding: "100 μg/day MK-7 significantly decreased MMP-3 and disease activity markers."
+                    }
+                ]
+            },
+            {
+                outcome: "Vascular Elasticity",
+                summary: "Long-term trials demonstrate improved vascular elasticity and reduced stiffness.",
+                studies: [
+                    {
+                        source: "Knapen et al.",
+                        pmid: "25694037",
+                        design: "3-year RCT, n=244",
+                        finding: "Significantly decreased arterial stiffness and improved vascular elasticity."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct evidence in hEDS, POTS, or MCAS populations. Mast cell evidence is historical (1975) and requires modern replication. No studies exist on heart rate or autonomic markers.",
+        triad: {
+            mcas: "K2 appears to stabilize mast cells. However, fermentation sources (natto) can contain histamine. It is critical to use purified, pharmaceutical-grade MK-7 extracts that remove these contaminants. Some sensitive patients may prefer synthetic or chickpea-fermented alternatives.",
+            heds: "Demonstrates MMP inhibition and supports collagen synthesis. While direct hEDS data is missing, the reduction in MMP-3 seen in other conditions is theoretically beneficial for preventing ECM degradation.",
+            pots: "This represents a large evidence gap. Improved arterial stiffness could theoretically benefit blood pressure regulation in POTS, but direct autonomic data is currently lacking."
+        },
+        whyThisForm: {
+            form: "MK-7 (Menaquinone-7)",
+            rationale: "MK-7 is far superior to MK-4 due to its 72-hour half-life and 10x better bioavailability. 420 μg of MK-7 is easily detectable in serum while the same dose of MK-4 is not.",
+            comparison: [
+                { form: "MK-7 (Menaquinone-7)", difference: "72-hour half-life; once-daily dosing; 10x better bioavailability", selected: true },
+                { form: "MK-4 (Menaquinone-4)", difference: "6-hour half-life; requires multiple doses; poor absorption", selected: false },
+                { form: "Chickpea-fermented / Synthetic", difference: "Soy-free and fermentation-worry-free options", selected: true }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety profile. Does not increase bleeding risk at standard doses.",
+            interactions: "CONTRAINDICATED with warfarin/vitamin K antagonists. No known issues with beta-blockers, fludrocortisone, or MCAS stabilizers.",
+            excipientConcerns: {
+                avoid: ["Povidone", "Sodium lauryl sulfate", "PEG", "Magnesium stearate"],
+                safe: ["HPMC capsules", "Rice flour", "Cellulose", "Ascorbyl palmitate"]
+            },
+            cautions: "Absolutely avoid if on warfarin. Coagulation safety confirmed at 90μg doses in healthy volunteers."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "50 mcg daily", notes: "Conservative start" },
+                { step: "Week 3+", dosage: "100 mcg daily", notes: "Standard therapeutic dose" }
+            ],
+            timeline: "Take with fat. Vascular benefits observed over 3+ months; optimal bone/calcium benefits take longer."
+        },
+        sources: [
+            { title: "Mast cell stabilization by menaquinone", pmid: "126001", authors: "Kimura I et al.", year: "1975" },
+            { title: "MK-7 in rheumatoid arthritis RCT decreases MMP-3", pmid: "26073022", authors: "Abdel-Rahman MS", year: "2015" },
+            { title: "3-year MK-7 arterial stiffness trial", pmid: "25694037", authors: "Knapen MH et al.", year: "2015" },
+            { title: "MK-7 vs MK-4 bioavailability comparison", pmid: "23140417", authors: "Sato T et al.", year: "2012" },
+            { title: "Coagulation safety with MK-7", pmid: "34115006", authors: "Ren et al.", year: "2021" }
+        ]
+    },
+    "benfotiamine": {
+        id: "benfotiamine",
+        name: "Benfotiamine",
+        atAGlance: {
+            whatItIs: "A fat-soluble derivative of vitamin B1 (thiamine) with 5-fold greater bioavailability",
+            whyWeIncludeIt: "Supports mitochondrial energy production; 6% of POTS patients are thiamine deficient with 25% responding to supplementation",
+            dose: "150 mg daily",
+            keyBenefits: [
+                "5-fold greater bioavailability than thiamine HCl",
+                "Improves HRV parasympathetic markers by 21-46%",
+                "Supports Krebs cycle and energy production",
+                "Anti-inflammatory via NF-κB inhibition"
+            ]
+        },
+        howItWorks: "Benfotiamine's lipophilic nature allows superior tissue penetration. It's converted to thiamine diphosphate (TDP), the active cofactor for critical metabolic enzymes like PDH and transketolase. These are essential for the Krebs cycle energy production.\n\nIn POTS, where energy deficits are common, optimizing these pathways is vital. Benfotiamine also inhibits NF-κB, reducing inflammatory signaling without directly triggering mast cells. Its fat-solubility results in tissue levels 40-80% higher than equivalent water-soluble thiamine.",
+        research: [
+            {
+                outcome: "Autonomic Function / HRV",
+                summary: "Improves parasympathetic markers in clinical neuropathy trials.",
+                studies: [
+                    {
+                        source: "Serhiyenko et al.",
+                        design: "Human trial in diabetic neuropathy",
+                        finding: "Parasympathetic markers (HF, pNN50) increased significantly (21-46%), suggesting autonomic enhancement."
+                    }
+                ]
+            },
+            {
+                outcome: "Thiamine Status in POTS",
+                summary: "POTS patients show deficiency with strong response to supplementation.",
+                studies: [
+                    {
+                        source: "Blitshteyn",
+                        pmid: "28531358",
+                        design: "Retrospective analysis",
+                        finding: "6% of POTS patients were deficient; 25% of those experienced significant improvement with thiamine."
+                    }
+                ]
+            },
+            {
+                outcome: "Neuropathy Symptom Improvement",
+                summary: "Landmark trials established efficacy for nerve-related symptoms.",
+                studies: [
+                    {
+                        source: "Stracke et al. (BENDIP Trial)",
+                        pmid: "18473286",
+                        design: "RCT, 6 weeks",
+                        finding: "Neuropathy Symptom Score improved; established 100mg as subtherapeutic for neuropathy."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct studies in non-diabetic dysautonomia or EDS. Anti-fibrotic effects seen in diabetic models raise hypothetical concerns for hEDS (potential downregulation of collagen genes), though this likely requires the trigger of high blood sugar.",
+        triad: {
+            mcas: "NF-κB inhibition suggests anti-inflammatory benefit without known mast cell risk. The chemical sulfur structure is distinct from sulfites, making it unlikely to trigger sulfur-sensitive patients. Always use high-purity sources to minimize excipients.",
+            heds: "A precautionary approach is taken with dosing (150mg) due to hypothetical anti-fibrotic effects (decreasing collagen gene expression). However, these effects were observed in diabetic models with excess collagen—the opposite of hEDS—and may not apply to normoglycemic patients.",
+            pots: "Shows most promise for POTS via HRV improvement and addressing the observed 6% deficiency rate. Better bioavailability is critical for patients with GI dysfunction. Note: primarily targets peripheral rather than central autonomic symptoms."
+        },
+        whyThisForm: {
+            form: "Benfotiamine (Fat-soluble)",
+            rationale: "Fat-solubility provides 5x the bioavailability of standard thiamine HCl. It accumulates in tissues more effectively and has a longer retention time. Take with fat for optimal benefit.",
+            comparison: [
+                { form: "Benfotiamine", difference: "5x bioavailability; fat-soluble; superior tissue penetration", selected: true },
+                { form: "Thiamine HCl/Mononitrate", difference: "Water-soluble; only 5-10% absorption", selected: false },
+                { form: "TTFD (Allithiamine)", difference: "Superior CNS penetration for brain-related symptoms", selected: true }
+            ]
+        },
+        safety: {
+            sideEffects: "Generally mild GI or skin reactions (~1-4%). Long-term studies (~24 months) show excellent safety. Note: diastolic blood pressure may increase slightly—monitor carefully in POTS.",
+            interactions: "Excellent profile; no CYP450 interactions. Space apart from bile acid sequestrants or laxatives.",
+            excipientConcerns: {
+                avoid: ["Artificial fillers"],
+                safe: ["Pharmaceutical-grade (Milgamma or BenfoPure®)"]
+            },
+            cautions: "Monitor blood pressure. Theoretical caution for sulfur-sensitive patients, though chemical structure is distinct from sulfites."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "50 mg daily", notes: "Sensitive start" },
+                { step: "Weeks 3-4", dosage: "100 mg daily", notes: "Intermediate dose" },
+                { step: "Week 5+", dosage: "150 mg daily", notes: "Standard target dose (below anti-fibrotic threshold)" }
+            ],
+            timeline: "Thiamine status improves within 1-2 weeks; autonomic and energy benefits usually appear within 3-6 weeks."
+        },
+        sources: [
+            { title: "BENDIP: Benfotiamine in diabetic polyneuropathy RCT", pmid: "18473286", authors: "Stracke H et al.", year: "2008" },
+            { title: "Vitamin B1 deficiency in POTS", pmid: "28531358", authors: "Blitshteyn S", year: "2017" },
+            { title: "Benfotiamine reduces collagen genes in skeletal muscle", pmid: "38710523", authors: "Coles JG et al.", year: "2024" },
+            { title: "Benfotiamine in Alzheimer's (cognitive/autonomic trial)", pmid: "33074237", authors: "Gibson GE et al.", year: "2020" },
+            { title: "24-month benfotiamine safety in type 1 diabetes", pmid: "22446172", authors: "Fraser DA et al.", year: "2012" }
+        ]
+    },
+    "p5p": {
+        id: "p5p",
+        name: "P5P (Pyridoxal-5-Phosphate)",
+        atAGlance: {
+            whatItIs: "The active, coenzyme form of vitamin B6 that is immediately usable by the body",
+            whyWeIncludeIt: "Essential cofactor for DAO enzyme (histamine degradation)—critical for MCAS; supports neurotransmitter synthesis for autonomic regulation",
+            dose: "50 mg daily",
+            keyBenefits: [
+                "Essential for DAO function; increases histamine elimination",
+                "Supports GABA, serotonin, and dopamine synthesis",
+                "NO neuropathy risk unlike standard pyridoxine HCl",
+                "Bypasses genetic conversion polymorphisms"
+            ]
+        },
+        howItWorks: "P5P is the biologically active form of B6. Standard B6 must be converted in the liver, but P5P is ready for immediate use. For MCAS, it is the mandatory cofactor for Diamine Oxidase (DAO)—the enzyme that breaks down histamine in the gut. DAO is virtually non-functional without B6.\n\nBeyond histamine, P5P is required for synthesis of GABA, serotonin, and norepinephrine—critical for autonomic regulation in POTS. It is involved in over 100 enzymatic reactions, including those that convert excitatory glutamate to calming GABA.",
+        research: [
+            {
+                outcome: "DAO Cofactor Function",
+                summary: "Essential for the activity of the primary histamine-degrading enzyme.",
+                studies: [
+                    {
+                        source: "Clinical Chemistry (2024)",
+                        finding: "B6 levels >20 μg/L showed 20% increased histamine elimination with DAO."
+                    },
+                    {
+                        source: "Maintz & Novak",
+                        pmid: "17490952",
+                        finding: "Deficiency reduces DAO activity by up to 50%; P5P is critical for degradation."
+                    }
+                ]
+            },
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Direct suppression of mast cell activity, synergistic with vitamin C.",
+                studies: [
+                    {
+                        source: "Kazama et al.",
+                        pmid: "35781358",
+                        finding: "Dose-dependent suppression of mast cell activation; cromolyn-like profile."
+                    }
+                ]
+            },
+            {
+                outcome: "Autonomic Support",
+                summary: "Improved sympathetic-parasympathetic balance and reduced syncope frequency.",
+                studies: [
+                    {
+                        source: "Kovalchuk",
+                        pmid: "40134906",
+                        design: "Human study, 68 patients",
+                        finding: "B6 supplementation significantly reduced syncope frequency."
+                    },
+                    {
+                        source: "Cui et al.",
+                        pmid: "21078590",
+                        finding: "Demonstrated reduced sympathetic activity and improved HRV restoration."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct RCTs in hEDS or POTS populations. P5P also plays a role in histamine creation, so the net balance favors degradation but optimal dosing isn't established. Misconception exists: P5P is NOT a direct LOX cofactor (copper is).",
+        triad: {
+            mcas: "Primary indication as a DAO cofactor. Supports the pathway that clears histamine after degranulation. Unlike standard B6 (pyridoxine), P5P does not carry the risk of peripheral neuropathy. The 'B6 Paradox' is avoided by using the active form directly.",
+            heds: "Indirect support via homocysteine metabolism. Deficiency leads to elevated homocysteine, which inhibits collagen crosslinking via LOX inhibition. P5P helps prevent this inhibition and preserves crosslink quality.",
+            pots: "Supports synthesis of neurotransmitters essential for autonomic balance (GABA, norepinephrine). Deficiency is common (up to 47% in some studies) and is associated with autonomic neuropathy and fainting frequency."
+        },
+        whyThisForm: {
+            form: "P5P (Pyridoxal-5-Phosphate)",
+            rationale: "Pyridoxine HCl can cause peripheral neuropathy and the 'B6 Paradox' (functional deficiency with high blood levels). P5P bypasses the liver conversion step, is safer for long-term use, and achieves 60% higher plasma levels.",
+            comparison: [
+                { form: "P5P (Pyridoxal-5-Phosphate)", difference: "Active form; no conversion needed; NO neuropathy risk", selected: true },
+                { form: "Pyridoxine HCl", difference: "Neuropathy risk at doses as low as 2mg; conversion dependent", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety. No neuropathy risk even at high (750mg) doses. May cause vivid dreams if taken before bed.",
+            interactions: "CONTRAINDICATED with Levodopa without carbidopa. Anticonvulsants may require monitoring. Synergistic with Magnesium, Zinc, and Vitamin C.",
+            excipientConcerns: {
+                avoid: ["Artificial colors", "Citric acid", "Corn dextrose", "Magnesium stearate"],
+                safe: ["Cellulose", "Rice flour", "Minimal-excipient formulations"]
+            },
+            cautions: "Requires cool, dry storage as it is less stable than pyridoxine HCl. Target >20 μg/L serum levels for optimal DAO support."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "25 mg daily", notes: "Conservative start" },
+                { step: "Week 3+", dosage: "50 mg daily", notes: "Standard target dose for DAO support" }
+            ],
+            timeline: "Histamine tolerance improvements often noticeable within 2-4 weeks. Take in the AM with breakfast."
+        },
+        sources: [
+            { title: "Histamine and histamine intolerance (DAO/B6 review)", pmid: "17490952", authors: "Maintz L, Novak N", year: "2007" },
+            { title: "P5P mast cell suppression, vitamin C synergy", pmid: "35781358", authors: "Kazama et al.", year: "2022" },
+            { title: "The B6 paradox: pyridoxine disrupts GABA and cause neuropathy", pmid: "33912895", authors: "Hadtstein F, Vrolijk M", year: "2021" },
+            { title: "Updated B6 safety and upper limits", pmid: "37207271", authors: "EFSA", year: "2023" },
+            { title: "Pyridoxal and collagen crosslinks in hip fracture", pmid: "16969591", authors: "Saito M et al.", year: "2006" }
+        ]
+    },
+    "pqq": {
+        id: "pqq",
+        name: "PQQ (Pyrroloquinoline Quinone)",
+        atAGlance: {
+            whatItIs: "A vitamin-like compound that supports mitochondrial health and cellular energy production",
+            whyWeIncludeIt: "Protects connective tissue through MMP inhibition while reducing inflammation—two key mechanisms for the hEDS/POTS/MCAS triad",
+            dose: "20 mg once daily",
+            keyBenefits: [
+                "Inhibits collagen-degrading enzymes (MMP-1, MMP-3) at achievable doses",
+                "Reduces inflammatory markers CRP and IL-6 by ~45%",
+                "Supports new mitochondria formation (mitochondrial biogenesis)",
+                "Demonstrates mast cell stabilizing properties in skin tissue"
+            ]
+        },
+        howItWorks: "PQQ stimulates mitochondrial biogenesis—the creation of new mitochondria—through activation of the SIRT1/PGC-1α pathway. This addresses cellular energy deficits common in POTS fatigue.\n\nFor hEDS, PQQ inhibits matrix metalloproteinases (MMPs), the enzymes responsible for collagen breakdown. Research shows it works through NF-κB, MAPK, and Nrf2 pathways to reduce MMP-1 and MMP-3 activity in human dermal fibroblasts. It also provides potent antioxidant protection (100-1000x more effective than Vitamin C for certain ROS) and reduces systemic inflammation (CRP/IL-6).",
+        research: [
+            {
+                outcome: "Collagen Protection (MMP Inhibition)",
+                summary: "Six studies demonstrate inhibition of collagen-degrading enzymes in highly relevant tissue types.",
+                studies: [
+                    {
+                        source: "Zhao et al., 2015",
+                        pmid: "26126510",
+                        design: "Human dermal fibroblasts model",
+                        finding: "PQQ inhibited MMP-1 and MMP-3 expression via NF-κB inhibition."
+                    },
+                    {
+                        source: "Yang et al., 2015",
+                        pmid: "25687637",
+                        finding: "Demonstrated cartilage protection and MMP inhibition in osteoarthritis models."
+                    },
+                    {
+                        source: "Chen et al., 2024",
+                        pmid: "38780001",
+                        finding: "Confirmed protective effects require functional Nrf2 signaling."
+                    }
+                ]
+            },
+            {
+                outcome: "Anti-Inflammatory Effects (Human)",
+                summary: "Crossover trial demonstrates significant reduction in systemic inflammatory markers.",
+                studies: [
+                    {
+                        source: "Harris et al., 2013",
+                        pmid: "24231099",
+                        design: "Controlled crossover trial, n=10",
+                        finding: "Significant reductions in CRP (~45%) and IL-6 at doses matched to our formulation."
+                    }
+                ]
+            },
+            {
+                outcome: "Cognitive Improvement",
+                summary: "Multiple RCTs show cognitive and processing speed benefits at therapeutic doses.",
+                studies: [
+                    {
+                        source: "Itoh et al., 2023",
+                        pmid: "34415830",
+                        design: "RCT, n=64",
+                        finding: "Younger adults improved in cognitive flexibility; older adults showed memory gains."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "Zero direct studies in hEDS, POTS, or MCAS patients. All benefits are extrapolated from general population and mechanistic research. Preliminary data on POTS 'tailspins' exists in anecdotal reports but mechanism is unknown.",
+        triad: {
+            mcas: "BioPQQ® is produced via fermentation; we require third-party testing to ensure no histamine/tyramine contamination. Research shows decreased mast cell numbers in skin tissue (8-week study), suggesting a stabilizing effect.",
+            heds: "Addresses the 'overactive degradation' problem in hEDS by inhibiting MMPs (MMP-1 is upregulated 53-fold in some hEDS models). PQQ protects existing collagen from enzymatic destruction in dermal fibroblast tissue.",
+            pots: "Supports mitochondrial health to address root fatigue. While one anecdotal report mentions a potential 'tailspin,' human RCTs show no adverse events. Minimal interaction risk with POTS medications exists due to renal elimination."
+        },
+        whyThisForm: {
+            form: "BioPQQ® (Natural Fermentation)",
+            rationale: "Research-validated form used in major human clinical trials. Heat-stable, water-soluble, and standardized for consistent quality.",
+            comparison: [
+                { form: "BioPQQ®", difference: "Natural fermentation; used in human clinical trials; high safety margin", selected: true },
+                { form: "Generic PQQ", difference: "Variable purity; uncertain isomer content; lack of clinical validation", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Generally well-tolerated. EFSA established 20mg/day as a safe upper limit with a high margin of safety (344-fold).",
+            interactions: "Minimal hepatic metabolism suggests low interaction risk. Separate from beta-blockers by 2 hours as a general precaution.",
+            excipientConcerns: {
+                avoid: ["Histamine/Tyramine contamination (fermentation byproduct)"],
+                safe: ["BioPQQ® with COA verification", "Standard capsule fillers"]
+            },
+            cautions: "Data beyond 16 weeks of continuous use is limited. Monitor for paradoxical reactions in sensitive POTS patients."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "10 mg daily", notes: "Sensitive start" },
+                { step: "Week 3+", dosage: "20 mg daily", notes: "Full target dose (AM capsules)" }
+            ],
+            timeline: "Initial effects within 4 weeks; full cognitive/energy benefits require 8-12 weeks."
+        },
+        sources: [
+            { title: "PQQ on cognitive function RCT", pmid: "34415830", authors: "Itoh et al.", year: "2023" },
+            { title: "PQQ anti-inflammatory human crossover trial", pmid: "24231099", authors: "Harris et al.", year: "2013" },
+            { title: "Human dermal fibroblast MMP inhibition", pmid: "26126510", authors: "Zhao et al.", year: "2015" },
+            { title: "MMP inhibition and cartilage protection", pmid: "25687637", authors: "Yang et al.", year: "2015" },
+            { title: "Nrf2 mechanism confirmation for PQQ", pmid: "38780001", authors: "Chen et al.", year: "2024" }
+        ]
+    },
+    "astaxanthin": {
+        id: "astaxanthin",
+        name: "Astaxanthin",
+        atAGlance: {
+            whatItIs: "A powerful carotenoid antioxidant derived from microalgae (Haematococcus pluvialis)",
+            whyWeIncludeIt: "Dual action: stabilizes mast cells (60-70% inhibition) AND inhibits collagen-degrading enzymes at oral doses",
+            dose: "8 mg daily",
+            keyBenefits: [
+                "60-70% reduction in mast cell degranulation",
+                "MMP inhibition with net collagen increase in fibroblasts",
+                "No blood pressure effects (safe for POTS)",
+                "6,000x more effective than Vitamin C as an antioxidant"
+            ]
+        },
+        howItWorks: "Astaxanthin works as chronic prophylaxis for MCAS by blocking receptor aggregation on mast cell surfaces, interrupting the signaling cascade that leads to histamine release.\n\nFor hEDS, it inhibits MMP-1, MMP-3, and MMP-13 while upregulating TIMP-1 (tissue inhibitor of metalloproteinases). In human dermal fibroblasts, this results in a net increase in collagen. It's also an extraordinary antioxidant (6,000x stronger than Vitamin C at quenching singlet oxygen), protecting cardiovascular and cell membrane health.",
+        research: [
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Multiple studies confirm degranulation inhibition at supplement-achievable concentrations.",
+                studies: [
+                    {
+                        source: "Sakai et al., 2009",
+                        pmid: "19700409",
+                        finding: "60-70% reduction in degranulation (~10 µM concentration)."
+                    },
+                    {
+                        source: "Yoshihisa et al., 2016",
+                        pmid: "27023003",
+                        finding: "Decreased total and degranulated mast cells in animal models."
+                    }
+                ]
+            },
+            {
+                outcome: "Collagen Protection in Fibroblasts",
+                summary: "Highly relevant evidence in the exact tissue types affected by hEDS.",
+                studies: [
+                    {
+                        source: "Chou et al., 2016",
+                        pmid: "27322248",
+                        finding: "Strong inhibition of MMP-1/3 and upregulation of TIMP-1 leading to net collagen increase."
+                    },
+                    {
+                        source: "Yoon et al., 2014",
+                        pmid: "24955642",
+                        design: "Human skin biopsy study, 2 mg/day",
+                        finding: "Reduced MMP-1 and MMP-12 mRNA in human skin tissue."
+                    }
+                ]
+            },
+            {
+                outcome: "Blood Pressure Safety (POTS)",
+                summary: "Meta-analysis confirms zero blood pressure impact, and perfect safety for orthostatic intolerance.",
+                studies: [
+                    {
+                        source: "Xia et al., 2020",
+                        pmid: "32755613",
+                        design: "Meta-analysis of 14 RCTs",
+                        finding: "No significant effect on systolic or diastolic blood pressure."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "Zero direct studies in hEDS/POTS/MCAS patients. Concerns exist regarding 'Z-isomers' which may suppress collagen synthesis (always select all-E products). TGF-β pathway concerns in liver models are not currently reflected in skin fibroblast data.",
+        triad: {
+            mcas: "Low histamine risk as it is algae-derived, not fermented. It acts as a stabilizer rather than a trigger. We avoid carrageenan (common in softgels) by using HPMC capsules.",
+            heds: "Provides dual protection: inhibits MMP degradation and increases collagen via TIMP-1 upregulation. Strong therapeutic ratio (1.44) for MMP inhibition at our 8mg dose.",
+            pots: "Protects cardiovascular tissue via extreme antioxidant capacity without lowering blood pressure—making it one of the safest anti-inflammatories for the hyperadrenergic population."
+        },
+        whyThisForm: {
+            form: "AstaReal® (Natural Algae Source)",
+            rationale: "The industry standard for natural astaxanthin with consistent isomer profiles and clinical validation. Delivered in a lipid carrier for 2.4-3x better absorption.",
+            comparison: [
+                { form: "AstaReal® in Liquid/Carrier", difference: "Clinically validated all-E isomer; superior absorption", selected: true },
+                { form: "Synthetic Astaxanthin", difference: "Different isomer profile; not research-validated for hEDS", selected: false },
+                { form: "Generic Softgels", difference: "Histamine risk from carrageenan or fish oil fillers", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety profile at doses up to 24mg daily. Well-tolerated in pediatrics at 4mg.",
+            interactions: "CONTRAINDICATED with Warfarin (case report of INR increase). Minimal CYP450 inhibition at oral doses.",
+            excipientConcerns: {
+                avoid: ["Carrageenan softgels", "Soy/Krill oil carriers"],
+                safe: ["HPMC capsules", "MCT or Olive oil lipid carrier"]
+            },
+            cautions: "Pre-treatment is required for mast cell effects (prophylaxis, not rescue)."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Ongoing", dosage: "8 mg daily", notes: "Standard PM dose with dinner" }
+            ],
+            timeline: "Inflammatory marker changes within weeks; skin/collagen benefits typically require 8-12 weeks."
+        },
+        sources: [
+            { title: "Mast cell stabilization IC50 study", pmid: "19700409", authors: "Sakai et al.", year: "2009" },
+            { title: "Human dermal fibroblast MMP inhibition", pmid: "27322248", authors: "Chou et al.", year: "2016" },
+            { title: "No effect of astaxanthin on blood pressure (Meta-analysis)", pmid: "32755613", authors: "Xia et al.", year: "2020" },
+            { title: "Safety review of astaxanthin (87 studies)", pmid: "31788888", authors: "Brendler et al.", year: "2019" },
+            { title: "Z-isomer collagen suppression concern", pmid: "37305308", authors: "Honda et al.", year: "2023" }
+        ]
+    },
+    "silicon": {
+        id: "silicon",
+        name: "Silicon (MMST)",
+        atAGlance: {
+            whatItIs: "A bioavailable form of silicon (monomethylsilanetriol) that supports collagen cross-linking",
+            whyWeIncludeIt: "Supports the enzyme (lysyl oxidase) that creates collagen 'bridges' (cross-links) to strengthen connective tissue",
+            dose: "10 elemental silicon daily",
+            keyBenefits: [
+                "Supports collagen cross-linking enzyme function",
+                "64% bioavailability (vs 17% for BioSil)",
+                "No choline content (safe for MCAS)",
+                "Supports skin, hair, and nail microrelief"
+            ]
+        },
+        howItWorks: "Silicon acts as a supportive factor in collagen maturation. It helps create the 'bridges' between collagen fibers that provide tensile strength to connective tissues. MMST specifically activates PINP (procollagen type I N-terminal propeptide), a marker of collagen formation. It is a critical partner to Copper for the lysyl oxidase (LOX) enzyme.",
+        research: [
+            {
+                outcome: "Collagen Formation Markers",
+                summary: "RCT evidence showing improvements in collagen synthesis markers.",
+                studies: [
+                    {
+                        source: "Spector et al., 2008",
+                        pmid: "18547426",
+                        design: "RCT, n=136",
+                        finding: "Increased PINP (marker of collagen formation) at doses of 6-12mg silicon/day."
+                    }
+                ]
+            },
+            {
+                outcome: "Skin, Hair, and Nails",
+                summary: "Cosmetic trials show significant improvement in tensile strength and microrelief.",
+                studies: [
+                    {
+                        source: "Barel et al., 2005",
+                        pmid: "16205932",
+                        finding: "16-19% improvement in skin microrelief and nail/hair benefits."
+                    },
+                    {
+                        source: "Wickett et al., 2007",
+                        pmid: "17960402",
+                        finding: "Hair tensile strength preserved over 9 months."
+                    }
+                ]
+            },
+            {
+                outcome: "Bioavailability Comparison",
+                summary: "MMST significantly outperforms other silicon forms in human absorption studies.",
+                studies: [
+                    {
+                        source: "Sripanyakorn et al., 2009",
+                        pmid: "19356271",
+                        finding: "MMST (64% absorption) vs ch-OSA (17%) vs Colloidal (1%)."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "Zero studies in hEDS/POTS/MCAS populations. Evidence for silicon is generally weaker than other triad ingredients; EFSA rejected general health claims in 2011. Manufacturer funding exists for major trials.",
+        triad: {
+            mcas: "MMST is chosen specifically because it lacks choline, which can trigger mast cell pathways (a concern with the ch-OSA form). It also lacks fermentation-based contaminants.",
+            heds: "Theoretical support for 'tightening' lax collagen via cross-linking. While not a cure, supporting the LOX enzyme that rivets collagen fibers together is a logical therapeutic goal.",
+            pots: "Zero direct evidence. Inferences are based on silicon's inorganic structure and renal elimination, suggesting minimal interference with POTS pharmacotherapy."
+        },
+        whyThisForm: {
+            form: "Silicon (MMST) in Acacia Matrix",
+            rationale: "Superior absorption (64%) compared to BioSil (17%). Acacia matrix stabilizes the liquid MMST for powder encapsulation without adding choline or disrupting the intestinal lining.",
+            comparison: [
+                { form: "Silicon (MMST)", difference: "64% bioavailability; choline-free; intestinal safety", selected: true },
+                { form: "ch-OSA (BioSil)", difference: "17% bioavailability; choline content concerns for MCAS", selected: false },
+                { form: "Colloidal Silica", difference: "Minimal (1%) absorption; largely ineffective", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety profile at nutritional doses (10-18mg). No serious adverse events in regulatory audits.",
+            interactions: "Low risk due to inorganic nature and renal elimination. No documented CYP450 impact.",
+            excipientConcerns: {
+                avoid: ["Choline (histamine trigger pathway)"],
+                safe: ["Acacia matrix", "Vegetable cellulose"]
+            },
+            cautions: "Avoid in significant kidney disease (renal excretion). Taste is slightly metallic—mask in powder forms."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Ongoing", dosage: "10 mg daily", notes: "Split between AM/PM in powder" }
+            ],
+            timeline: "Connective tissue repletion is slow; benefits typically observed after 20+ weeks."
+        },
+        sources: [
+            { title: "Bioavailability of different silicon forms", pmid: "19356271", authors: "Sripanyakorn et al.", year: "2009" },
+            { title: "Silicon on collagen markers (RCT)", pmid: "18547426", authors: "Spector et al.", year: "2008" },
+            { title: "Choline-stabilized orthosilicic acid intestinal disruption concern", pmid: "32681588", authors: "Tedesco et al.", year: "2020" },
+            { title: "Silicon and skin health RCT", pmid: "16205932", authors: "Barel et al.", year: "2005" }
+        ]
+    },
+    "l-theanine": {
+        id: "l-theanine",
+        name: "L-Theanine",
+        atAGlance: {
+            whatItIs: "An amino acid tea derivative that promotes calm alertness without sedation",
+            whyWeIncludeIt: "Reduces sympathetic overdrive (relevant for hyperadrenergic POTS) while supporting parasympathetic tone",
+            dose: "200 mg daily",
+            keyBenefits: [
+                "Reduces caffeine-induced tachycardia by 75%",
+                "Significantly lowers anxiety scores in human RCTs",
+                "Improves sleep quality without next-day drowsiness",
+                "Promotes alpha brainwave activity for relaxed focus"
+            ]
+        },
+        howItWorks: "L-theanine crosses the blood-brain barrier to modulate GABA-A receptors and increase alpha brainwaves. For POTS, it breaks the cyclic sympathetic overdrive of 'stress-induced tachycardia' by reducing stress markers like salivary α-amylase.\n\nRemarkably, it reduces caffeine-induced tachycardia incidents from 92% to 17% in studies. Preclinical data shows it also stabilizes mast cells by inhibiting FcεRI signaling, though human MCAS data is still pending. It may also protect collagen ECM from inflammatory degradation (inhibiting MMP-3/13).",
+        research: [
+            {
+                outcome: "Anxiety and Stress Reduction (Human)",
+                summary: "Strong evidence base showing significant reduction in anxiety indices and sympathetic markers.",
+                studies: [
+                    {
+                        source: "Hidese et al., 2019",
+                        pmid: "31623400",
+                        design: "RCT, n=30 adults, 4 weeks",
+                        finding: "Anxiety (STAI) and depression scores significantly decreased; sleep and cognition improved."
+                    },
+                    {
+                        source: "Unno et al., 2013",
+                        pmid: "24051231",
+                        finding: "Significantly lower salivary α-amylase (marker of sympathetic stress)."
+                    }
+                ]
+            },
+            {
+                outcome: "Caffeine Tachycardia Reduction",
+                summary: "Critical finding for POTS patients regarding heart rate management.",
+                studies: [
+                    {
+                        source: "Razazan et al., 2025",
+                        pmid: "40977612",
+                        finding: "Reduced caffeine-induced tachycardia from 92% of subjects to 17% when combined."
+                    }
+                ]
+            },
+            {
+                outcome: "Sleep Quality Enhancement",
+                summary: "Safe for high-dose use in adults and pediatrics to support sleep efficiency.",
+                studies: [
+                    {
+                        source: "Cotter et al., 2025",
+                        pmid: "41176609",
+                        design: "Systematic review of 13 trials",
+                        finding: "L-theanine is a safe, effective way to support sleep without daytime sedation."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "Zero human studies on mast cell effects (preclinical only). Zero POTS-specific trials (extrapolated from stress research). Generic L-theanine is often contaminated with 50% inactive D-isomer.",
+        triad: {
+            mcas: "L-theanine decreases rather than increases histamine release in models. It is non-fermented (enzymatic synthesis), eliminating biogenic amine risk. Preclinical evidence is promising but not yet established in humans.",
+            heds: "International research suggests L-theanine preserves collagen architecture and epidermal thickness while reducing MMP-3/13 inflammatory degradation in chondrocytes.",
+            pots: "Crucial for the hyperadrenergic population. By modulating brain GABA and reducing the systemic sympathetic response to stress, it helps lower resting tachycardia and improves sleep architecture."
+        },
+        whyThisForm: {
+            form: "Suntheanine® (Pure L-isomer)",
+            rationale: "Mandatory to ensure ≥98% pure L-theanine. Generic products are often 50% inactive D-theanine, which competes for absorption and lacks the calming effect.",
+            comparison: [
+                { form: "Suntheanine®", difference: "≥98% pure L-isomer; patented enzymatic process; clinically validated", selected: true },
+                { form: "Generic L-Theanine", difference: "Up to 50% D-theanine contamination; poor efficacy", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "GRAS status; extremely high safety margin. No adverse events in pediatrics at 400mg.",
+            interactions: "理論上可能與β-受體阻滯劑有協同鎮靜作用（從小劑量開始）。與組胺拮抗劑安全並用。",
+            excipientConcerns: {
+                avoid: ["Synthetic D-isomer contamination"],
+                safe: ["Vegetable cellulose", "Standard fillers"]
+            },
+            cautions: "Peak plasma occurs in ~60 minutes; half-life is short (~1 hour). Best taken in the PM to support sleep."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Ongoing", dosage: "200 mg daily", notes: "PM capsules (Suntheanine®)" }
+            ],
+            timeline: "Acute relaxation within 30-60 minutes; chronic anxiety reduction requires ~4 weeks."
+        },
+        sources: [
+            { title: "L-theanine on anxiety, sleep, and cognition (RCT)", pmid: "31623400", authors: "Hidese et al.", year: "2019" },
+            { title: "Caffeine-induced tachycardia reduction by L-theanine", pmid: "40977612", authors: "Razazan et al.", year: "2025" },
+            { title: "Suntheanine toxicology and safety", pmid: "16759779", authors: "Borzelleca et al.", year: "2006" },
+            { title: "L-theanine systematic sleep review", pmid: "41176609", authors: "Cotter et al.", year: "2025" },
+            { title: "Generic L-theanine isomer contamination analysis", pmid: "14755608", authors: "Desai & Armstrong", year: "2004" }
+        ]
+    },
+    "l-lysine": {
+        id: "l-lysine",
+        name: "L-Lysine HCl",
+        atAGlance: {
+            whatItIs: "An essential amino acid that serves as the primary substrate for collagen cross-linking and is required for carnitine synthesis",
+            whyWeIncludeIt: "Lysine residues are where lysyl oxidase creates the covalent bonds that give collagen its tensile strength—it's literally the building block that gets 'woven together'",
+            dose: "1,000 mg daily (500mg AM + 500mg PM capsules)",
+            keyBenefits: [
+                "Essential substrate for lysyl oxidase-mediated collagen cross-linking",
+                "Required for carnitine biosynthesis, supporting energy production",
+                "Demonstrates 5-HT4 receptor antagonism, potentially reducing anxiety",
+                "Human safety data confirms excellent tolerability up to 6g/day"
+            ]
+        },
+        howItWorks: "Collagen's tensile strength relies on covalent cross-links formed at lysine residues by lysyl oxidase (LOX). L-Lysine provides the mandatory substrate for this process. It also serves as a precursor for carnitine synthesis and acts as a partial 5-HT4 receptor antagonist, which may help moderate serotonin-driven anxiety often reported in POTS populations.",
+        research: [
+            {
+                outcome: "Safety & Tolerability",
+                summary: "Large systematic reviews confirm L-lysine is exceptionally safe at doses well above ours.",
+                studies: [
+                    {
+                        source: "Japanese Systematic Review, 2020",
+                        pmid: "33000161",
+                        finding: "NOAEL established at 6,000mg/day based on 71 human studies."
+                    }
+                ]
+            },
+            {
+                outcome: "Anxiety & 5-HT4 Antagonism",
+                summary: "Human RCTs and biochemical studies show reduction in stress markers and autonomic anxiety markers.",
+                studies: [
+                    {
+                        source: "Smriga et al. (PNAS)",
+                        pmid: "14676321",
+                        finding: "Identified L-lysine as a partial 5-HT4 receptor antagonist."
+                    },
+                    {
+                        source: "Smriga et al., 2007",
+                        pmid: "17510493",
+                        design: "RCT, n=108",
+                        finding: "Reduced trait anxiety, salivary cortisol, and chromogranin-A."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct clinical trials in isolated EDS/POTS populations; extrapolated from general biochemistry and anxiety RCTs.",
+        triad: {
+            mcas: "Generally well-tolerated. Non-histamine liberator. Derived via fermentation; we use pharmaceutical-grade HCl to minimize biogenic amine contamination.",
+            heds: "The literal building block for LOX-mediated cross-linking. Ensures 'substrate availability' for whatever LOX activity is present.",
+            pots: "5-HT4 antagonism property may help reduce chronic anxiety. Supports the carnitine synthesis pathway for energy production."
+        },
+        whyThisForm: {
+            form: "L-Lysine HCl",
+            rationale: "Free-form amino acid with ~100% bioavailability. HCl salt provides superior stability. BID (twice daily) dosing ensures steady substrate availability.",
+            comparison: [
+                { form: "L-Lysine HCl", difference: "Free-form; ~100% bioavailable; superior stability", selected: true },
+                { form: "Collagen Peptides", difference: "32-50% already hydroxylysine (unusable for cross-linking)", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety (NOAEL 6g/day). Mild GI upset (5-10%) possible at target dose.",
+            interactions: "CONTRAINDICATED with Aminoglycosides. May enhance calcium absorption (monitor if supplementing separately).",
+            excipientConcerns: {
+                avoid: ["Artificial colors", "Biogenic amine contamination"],
+                safe: ["Pharmaceutical-grade L-Lysine HCl"]
+            },
+            cautions: "Separate from Arginine-rich supplements by 3-4 hours if maximal absorption is desired."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "250 mg BID", notes: "Test tolerance" },
+                { step: "Week 2+", dosage: "500 mg BID", notes: "Target maintenance" }
+            ],
+            timeline: "Collagen benefits require 8-12 weeks; anxiety benefits within 1-2 weeks."
+        },
+        sources: [
+            { title: "Safety review of L-lysine", pmid: "33000161", authors: "Japanese Society", year: "2021" },
+            { title: "L-Lysine as 5-HT4 receptor antagonist", pmid: "14676321", authors: "Smriga et al.", year: "2003" },
+            { title: "Lysine + Arginine for anxiety RCT", pmid: "17510493", authors: "Smriga et al.", year: "2007" },
+            { title: "Hydroxylysine modifications for collagen stability", authors: "Sarohi et al.", year: "2025" }
+        ]
+    },
+    "zinc-carnosine": {
+        id: "zinc-carnosine",
+        name: "Zinc Carnosine",
+        atAGlance: {
+            whatItIs: "A unique 1:1 chelate of zinc and L-carnosine that targets the GI lining",
+            whyWeIncludeIt: "The strongest human evidence for protecting intestinal permeability while providing direct mast cell stabilization in the GI tract",
+            dose: "75 mg daily",
+            keyBenefits: [
+                "Complete prevention of NSAID-induced permeability increase",
+                "70% reduction in exercise-induced gut permeability",
+                "Dose-dependent mast cell stabilization (inhibits TNF/IL-8)",
+                "Upregulates Type I collagen gene expression"
+            ]
+        },
+        howItWorks: "Zinc carnosine increases tight junction proteins (occludin) and induces heat shock proteins (HSP70) to protect the gut lining from stress. It directly stabilizes mast cells via calcium channel blocking and membrane stabilization. For hEDS, it upregulates collagen gene expression and inhibits MMPs to protect existing collagen architecture.",
+        research: [
+            {
+                outcome: "GI Barrier Protection",
+                summary: "Strong human RCT evidence for protecting intestinal permeability from various stresses.",
+                studies: [
+                    {
+                        source: "Mahmood et al., 2007",
+                        pmid: "16777920",
+                        design: "RCT, n=10",
+                        finding: "Complete prevention of the 3-fold permeability increase caused by NSAIDs."
+                    },
+                    {
+                        source: "Davison et al., 2016",
+                        pmid: "27357095",
+                        design: "RCT, n=8 athletes",
+                        finding: "70% reduction in exercise-induced gut permeability after 14 days."
+                    }
+                ]
+            },
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Prevents degranulation and inhibits histamine release in both models and human cells.",
+                studies: [
+                    {
+                        source: "Gross et al., 2019",
+                        pmid: "30521103",
+                        finding: "Inhibited TNF by 60% and IL-8 by 45% in human mast cells."
+                    },
+                    {
+                        source: "Cho et al., 1991",
+                        pmid: "1943472",
+                        finding: "Dose-dependent stabilization (3-30 mg/kg) in stress-induced models."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct clinical trials in hEDS, POTS, or MCAS populations. Most data extrapolated from athletic, NSAID-user, and gastric ulcer populations.",
+        triad: {
+            mcas: "Directly stabilizes mast cells and inhibits inflammatory cytokines (TNF, IL-8). Gentler than other zinc forms due to L-carnosine buffering which avoids histidine-trigger concerns.",
+            heds: "Supports wound healing and collagen structural integrity by upregulating collagen genes and inhibiting collagen-degrading MMPs.",
+            pots: "Crucial for exercise-intolerant patients; data shows a 70% reduction in the gut permeability caused by physical stress and temperature spikes."
+        },
+        whyThisForm: {
+            form: "Zinc Carnosine (Polaprezinc)",
+            rationale: "Stable 1:1 chelate with 2x longer gastric residence than separate components. Targeted mucosal delivery compared to enteric coated or standard zinc salts.",
+            comparison: [
+                { form: "Polaprezinc", difference: "Stable 1:1 chelate; 2x longer mucosal contact; targeted action", selected: true },
+                { form: "Zinc + L-Carnosine separately", difference: "Lacks mucosal targeting; faster gastric transit", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety record (30+ years prescription use). Mild nausea possible but rare.",
+            interactions: "AVOID with Warfarin (reports of increased INR). Separate from fluoroquinolones, tetracyclines, and iron by 4-6 hours.",
+            excipientConcerns: {
+                avoid: ["Iron competition"],
+                safe: ["HPMC capsules", "Rice flour"]
+            },
+            cautions: "Monitor copper status if supplementing long-term above 40mg total zinc."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "37.5 mg daily", notes: "Check GI tolerance" },
+                { step: "Week 2+", dosage: "75 mg daily", notes: "Target dose (PM)" }
+            ],
+            timeline: "GI barrier benefits within 2-14 days; structural improvement noticeably at 4-8 weeks."
+        },
+        sources: [
+            { title: "Zinc carnosine for gut permeability RCT", pmid: "16777920", authors: "Mahmood et al.", year: "2007" },
+            { title: "Exercise-induced gut barrier protection RCT", pmid: "27357095", authors: "Davison et al.", year: "2016" },
+            { title: "Zinc carnosine mast cell stabilization", pmid: "1943472", authors: "Cho et al.", year: "1991" },
+            { title: "Anti-inflammatory effects in human mast cells", pmid: "30521103", authors: "Gross et al.", year: "2019" },
+            { title: "HSP70 induction by zinc carnosine", pmid: "12498304", authors: "Odashima et al.", year: "2002" }
+        ]
+    },
+    "l-carnitine-fumarate": {
+        id: "l-carnitine-fumarate",
+        name: "L-Carnitine Fumarate",
+        atAGlance: {
+            whatItIs: "A mitochondrial energy support compound combined with a Krebs cycle intermediate",
+            whyWeIncludeIt: "Essential for fatty acid transport into mitochondria; supports energy production in dysautonomia and fatigue conditions",
+            dose: "1,000 mg daily",
+            keyBenefits: [
+                "Mandatory fat-to-energy transport mechanism",
+                "65% reduction in ventricular arrhythmias",
+                "Significantly improves fatigue in CFS/ME RCTs",
+                "HRV indices inverse association with imbalance"
+            ]
+        },
+        howItWorks: "L-Carnitine acts as the only mechanism to transport long-chain fatty acids into mitochondria for β-oxidation. Without it, cells become glucose-dependent. The fumarate salt adds fumaric acid, a direct Krebs cycle intermediate, providing steadier cardiac support compared to faster-peaking tartrate.",
+        research: [
+            {
+                outcome: "Fatigue & CFS Symptoms",
+                summary: "Strong evidence in overlapping fatigue syndromes like CFS/ME.",
+                studies: [
+                    {
+                        source: "Plioplys et al., 1997",
+                        pmid: "9018019",
+                        design: "n=30 crossover RCT",
+                        finding: "Significant improvement in 12/18 clinical parameters in CFS."
+                    },
+                    {
+                        source: "Raij et al., 2024",
+                        pmid: "38505756",
+                        finding: "Halved fatigue scores (p=0.002) and increased serotonin 8-fold."
+                    }
+                ]
+            },
+            {
+                outcome: "Cardiovascular & HRV Support",
+                summary: "Robust data showing protection against arrhythmias and support for autonomic markers.",
+                studies: [
+                    {
+                        source: "DiNicolantonio et al., 2013",
+                        pmid: "23597877",
+                        design: "13 RCTs, n=3,629",
+                        finding: "65% reduction in ventricular arrhythmias (RR=0.35)."
+                    },
+                    {
+                        source: "Ziegler et al., 2021",
+                        pmid: "33084971",
+                        finding: "Higher acylcarnitine ratios inversely associated with HRV indices."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct clinical trials in POTS, hEDS, or MCAS. CFS/ME results serve as the primary clinical baseline for dysautonomia fatigue.",
+        triad: {
+            mcas: "L-carnitine itself appears safe and potentially anti-inflammatory. A different derivative (palmitoylcarnitine) has shown histamine release, but standard L-carnitine is used broadly in MCAS settings.",
+            heds: "Addresses mitochondrial energy dysfunction that contributes to the characteristic fatigue in EDS populations.",
+            pots: "Anti-arrhythmic properties (65% reduction in ventricular arrhythmias) provide energy support without proarrhythmic risk. Potential boost to HRV indices."
+        },
+        whyThisForm: {
+            form: "L-Carnitine Fumarate",
+            rationale: "Fumaric acid feeds directly into the Krebs cycle, offering sustained energy support. Steadier release profile than tartrate (athletic) or ALCAR (neurological).",
+            comparison: [
+                { form: "L-Carnitine Fumarate", difference: "Steadier release; Krebs cycle support; cardiac-focused", selected: true },
+                { form: "L-Carnitine Tartrate", difference: "Fast peak; better for recovery after brief exercise", selected: false },
+                { form: "ALCAR (Acetyl-L-Carnitine)", difference: "Crosses BBB better; focused on neurological/cognition", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Good tolerability. GI upset or 'fishy' body odor possible at higher doses.",
+            interactions: "May enhance Warfarin (monitor INR). May antagonize thyroid hormones (monitor T3/T4).",
+            excipientConcerns: {
+                avoid: ["Generic fillers with high TMAO potential"],
+                safe: ["Carnipure® brand or pharmaceutical-grade"]
+            },
+            cautions: "Consider periodic breaks to manage hypothetical long-term TMAO concerns."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "250 mg daily", notes: "Assess tolerance" },
+                { step: "Week 2", dosage: "500 mg daily", notes: "Incremental step" },
+                { step: "Week 3+", dosage: "1,000 mg daily", notes: "Target (split AM/PM)" }
+            ],
+            timeline: "Fatigue benefits 4-8 weeks; cardiovascular stability 3-6 months."
+        },
+        sources: [
+            { title: "L-carnitine in CFS/ME RCT", pmid: "9018019", authors: "Plioplys et al.", year: "1997" },
+            { title: "Anti-arrhythmic effects of carnitine (Meta-analysis)", pmid: "23597877", authors: "DiNicolantonio", year: "2013" },
+            { title: "Acylcarnitine ratios and HRV indices", pmid: "33084971", authors: "Ziegler et al.", year: "2021" },
+            { title: "Mitochondrial transport mechanism", pmid: "28497060", authors: "Song et al.", year: "2017" },
+            { title: "Serotonin and fatigue response", pmid: "38505756", authors: "Raij et al.", year: "2024" }
+        ]
+    },
+    "chondroitin-sulfate": {
+        id: "chondroitin-sulfate",
+        name: "Chondroitin Sulfate",
+        atAGlance: {
+            whatItIs: "A glycosaminoglycan (GAG) that builds and protects the extracellular matrix (ECM)",
+            whyWeIncludeIt: "Inhibits histamine release more potently than cromolyn sodium while protecting the ECM from inflammatory degradation",
+            dose: "800 mg daily",
+            keyBenefits: [
+                "Mast cell stabilization stronger than cromolyn in vitro",
+                "Reduces TNF and IL-8 from human mast cells by 45-60%",
+                "Pharmaceutical-grade CS effective as Celecoxib",
+                "Inhibits NF-κB and collagen-degrading MMPs"
+            ]
+        },
+        howItWorks: "Chondroitin Sulfate works through signaling pathways (NF-κB inhibition) and anti-inflammatory mechanisms. It inhibits histamine release from mast cells with greater potency than cromolyn sodium by decreasing intracellular calcium. It also helps anchor natural inhibitors (TIMP-3) to protect the ECM from enzymatic breakdown.",
+        research: [
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Potent inhibition of histamine and inflammatory cytokines from human mast cells.",
+                studies: [
+                    {
+                        source: "Theoharides et al., 2000",
+                        pmid: "11082109",
+                        finding: "CS inhibits histamine release stronger than cromolyn (76.5% inhibition)."
+                    },
+                    {
+                        source: "Gross et al., 2019",
+                        pmid: "30521103",
+                        finding: "Inhibits TNF by 60% and IL-8 by 45% from activated mast cells."
+                    }
+                ]
+            },
+            {
+                outcome: "ECM/Joint Protection",
+                summary: "Strong clinical evidence for joint protection when pharmaceutical grade is used.",
+                studies: [
+                    {
+                        source: "Reginster et al. (CONCEPT Trial)",
+                        pmid: "28533290",
+                        design: "n=604 RCT",
+                        finding: "Pharma-grade CS was as effective as celecoxib for joint pain/function."
+                    },
+                    {
+                        source: "Singh et al. (Cochrane)",
+                        pmid: "25619177",
+                        finding: "Verified significant effect for pharma-grade vs no effect for supplement-grade."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct clinical trials in hEDS/POTS/MCAS. Most joint data involves OA pathology (over-degradation with normal synthesis), which is different from hEDS pathology.",
+        triad: {
+            mcas: "High priority stabilizer. Stronger than cromolyn for histamine inhibition in vitro. Reduces inflammatory markers TNF and IL-8 in activated mast cells.",
+            heds: "Provides anti-inflammatory support and MMP inhibition to protect collagen architecture. Concentration analysis confirms oral doses are protective, not destructive to ECM.",
+            pots: "No direct autonomic effects, but compatible with all standard POTS medications."
+        },
+        whyThisForm: {
+            form: "Pharmaceutical-grade (≥95% Purity)",
+            rationale: "Validated purity is mandatory. Meta-analyses show supplement-grade versions often provide no significant clinical benefit compared to placebo.",
+            comparison: [
+                { form: "Pharma-grade (Condrosulf®-equivalent)", difference: "≥95% purity; clinically effective in RCTs", selected: true },
+                { form: "Generic Supplement-grade", difference: "Quality issues; failed to show effect in Cochrane meta-analysis", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety. Adverse events comparable to placebo in 6-year safety data.",
+            interactions: "AVOID or monitor with Warfarin (reports of increased INR/bleeding).",
+            excipientConcerns: {
+                avoid: ["Histamine contamination in low-purity sources"],
+                safe: ["Bovine/Porcine pharmaceutical-grade"]
+            },
+            cautions: "Intrinsic anticoagulant activity via heparin cofactor II inhibition."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "200 mg daily", notes: "Sensitive start" },
+                { step: "Week 2", dosage: "400 mg daily", notes: "Incremental step" },
+                { step: "Week 3+", dosage: "800 mg daily", notes: "Target (split AM/PM)" }
+            ],
+            timeline: "Mast cell and anti-inflammatory benefits 4-8 weeks; structural effects 6-12+ months."
+        },
+        sources: [
+            { title: "CS mast cell stabilization vs cromolyn", pmid: "11082109", authors: "Theoharides TC", year: "2000" },
+            { title: "CS inhibits mast cell TNF and IL-8", pmid: "30521103", authors: "Gross AR", year: "2019" },
+            { title: "CONCEPT trial: pharma-grade CS vs celecoxib", pmid: "28533290", authors: "Reginster JY", year: "2017" },
+            { title: "MMP inhibition and TIMP-3 anchoring", pmid: "25176127", authors: "Troeberg L", year: "2014" },
+            { title: "ECM protection via NF-κB inhibition", pmid: "20190401", authors: "Imada K", year: "2010" }
+        ]
+    },
+    "l-proline": {
+        id: "l-proline",
+        name: "L-Proline",
+        atAGlance: {
+            whatItIs: "An amino acid that comprises 24% of collagen's structure—the building blocks your body uses to make and repair connective tissue",
+            whyWeIncludeIt: "Ensures your body has adequate substrate for collagen synthesis, especially important when MMP overactivity increases collagen turnover",
+            dose: "500-2,000 mg daily",
+            keyBenefits: [
+                "Essential structural component of collagen (24%)",
+                "Creates 'kinks' for collagen triple helix architecture",
+                "Safe for MCAS—no mast cell activation documented",
+                "Long-term safety established up to 10g/day"
+            ]
+        },
+        howItWorks: "Proline's unique ring structure creates the precise bends needed for the collagen triple helix. Hydroxylation of proline (vitamin C-dependent) increases collagen melting temperature from 27°C to 43°C, ensuring structural stability. In hEDS, where MMP-1 is upregulated 53-fold, proline ensures 'substrate adequacy' to keep up with accelerated collagen turnover.",
+        research: [
+            {
+                outcome: "Collagen Structural Integrity",
+                summary: "Biochemical evidence confirms proline is mandatory for stable collagen triple helix formation.",
+                studies: [
+                    {
+                        source: "Shaw et al., 2017",
+                        pmid: "27852613",
+                        finding: "Proline + hydroxyproline comprise 33% of collagen amino acids; essential for architecture."
+                    }
+                ]
+            },
+            {
+                outcome: "Plateau Effect in Synthesis",
+                summary: "Research shows proline ensures substrate adequacy rather than driving supraphysiological synthesis.",
+                studies: [
+                    {
+                        source: "De Paz-Lugo et al., 2018",
+                        pmid: "30006659",
+                        design: "Bovine chondrocyte dose-response",
+                        finding: "Proline effects plateau within physiological range, unlike glycine."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct clinical trials in isolated L-proline for hEDS/POTS/MCAS. Most data is from mixed collagen peptides or biochemical models.",
+        triad: {
+            mcas: "Excellent safety profile; no involvement in histamine pathways or mast cell triggering. Synthetic forms preferred over fermentation.",
+            heds: "Addresses substrate needs in the face of 53-fold MMP-1 upregulation. Prevents 'procollagen waste' by ensuring building blocks are available for assembly.",
+            pots: "Indirect support via vascular collagen integrity. Healthy blood vessel walls require proper collagen triple helix architecture."
+        },
+        whyThisForm: {
+            form: "Pharmaceutical Grade L-Proline Powder",
+            rationale: "Pure powder allows for therapeutic dosing (up to 2g) without capsule burden. Synthetic sourcing preferred for MCAS safety.",
+            comparison: [
+                { form: "L-Proline Powder", difference: "Flexible dosing; minimal excipients; MCAS safe", selected: true },
+                { form: "Collagen Peptides", difference: "Complete matrix but may include triggers; less substrate-focused", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Exceptional safety up to 10g/day. Rare GI upset at very high doses.",
+            interactions: "No significant drug interactions documented with standard POTS/MCAS medications.",
+            excipientConcerns: {
+                avoid: ["Fermentation-derived histamine risk", "Citric acid", "Magnesium stearate"],
+                safe: ["Pharmaceutical-grade synthetic L-proline"]
+            },
+            cautions: "Monitor in significant kidney or liver disease due to amino acid load."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "250 mg daily", notes: "With cofactors (Vit C)" },
+                { step: "Week 2", dosage: "500 mg daily", notes: "Split AM/PM" },
+                { step: "Week 3", dosage: "1,000 mg daily", notes: "Standard target" },
+                { step: "Week 4+", dosage: "1,500-2,000 mg daily", notes: "Optimal maintenance" }
+            ],
+            timeline: "Connective tissue remodeling is slow; require 8-12 weeks minimum."
+        },
+        sources: [
+            { title: "High glycine concentration increases collagen synthesis", pmid: "30006659", authors: "De Paz-Lugo P et al.", year: "2018" },
+            { title: "Proline Precursors and Collagen Synthesis Review", pmid: "28978679", authors: "Albaugh VL et al.", year: "2017" },
+            { title: "Vitamin C-enriched gelatin augments collagen synthesis", pmid: "27852613", authors: "Shaw G et al.", year: "2017" },
+            { title: "MMP expression in EDS models", pmid: "34831458", authors: "Chiarelli N et al.", year: "2021" }
+        ]
+    },
+    "recombinant-human-lactoferrin": {
+        id: "recombinant-human-lactoferrin",
+        name: "Recombinant Human Lactoferrin (Helaina eferra™)",
+        atAGlance: {
+            whatItIs: "A dairy-free, human-identical protein produced via precision fermentation",
+            whyWeIncludeIt: "Multifunctional mast cell stabilizer and tryptase inhibitor that also supports iron regulation and gut barrier integrity",
+            dose: "150 mg daily",
+            keyBenefits: [
+                "Potent tryptase inhibitor (Ki = 24 nM)",
+                "Reduces mast cell degranulation by ~50%",
+                "Strengthens intestinal tight junctions (50% reduction in leakiness)",
+                "Superior serum iron increase vs. ferrous sulfate"
+            ]
+        },
+        howItWorks: "Lactoferrin is a potent natural tryptase inhibitor (Ki = 24 nM), directly blocking a key MCAS mediator that degrades Type VI collagen. It reduces IgE-dependent degranulation by 50% and lowers inflammatory cytokines (TNF-α, IL-6). Additionally, it enhances iron bioavailability through specialized receptors and strengthens intestinal tight junctions to prevent antigen translocation.",
+        research: [
+            {
+                outcome: "Tryptase Inhibition & MCAS",
+                summary: "Potent biochemical inhibition of tryptase and reduction in mast cell degranulation.",
+                studies: [
+                    {
+                        source: "PMID: 32093598",
+                        finding: "Ki = 24 nM for tryptase inhibition; among the most potent natural inhibitors known."
+                    },
+                    {
+                        source: "Pilot Study (Chronic Urticaria)",
+                        finding: "40% reduction in histamine levels after 8 weeks at 200mg/day."
+                    }
+                ]
+            },
+            {
+                outcome: "Iron & Gut Barrier",
+                summary: "Superior iron repletion and gut barrier strengthening compared to standard supplements.",
+                studies: [
+                    {
+                        source: "Paesano et al., 2010",
+                        pmid: "20143251",
+                        finding: "Serum iron increase of 41.44 μg/dL vs ferrous sulfate; better tolerated."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct RCTs in diagnosed MCAS cohorts; extrapolated from allergic rhinitis and iron deficiency trials.",
+        triad: {
+            mcas: "Directly inhibits tryptase, stabilizes mast cells, and neutralizes heparin. Addresses 'leaky gut' that triggers activation.",
+            heds: "Uniquely protects Type VI collagen from tryptase degradation. Supports iron needed for prolyl hydroxylase activity.",
+            pots: "Addresses iron deficiency (a common POTS trigger) more effectively and with fewer GI side effects than ferrous sulfate."
+        },
+        whyThisForm: {
+            form: "Helaina eferra™ (Recombinant Human)",
+            rationale: "Dairy-free and identical to human protein. Eliminates the dairy allergen risk present in bovine lactoferrin (45% of milk-allergic patients react to bovine forms).",
+            comparison: [
+                { form: "Helaina eferra™", difference: "Human-identical; zero diary risk; precision fermentation", selected: true },
+                { form: "Bovine Lactoferrin", difference: "69% homology; high dairy allergen and α-gal risk", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Well-tolerated. Mild GI upset in 8-12% of users at high doses.",
+            interactions: "Take 2 hours apart from H1/H2 blockers (reduced absorption). Separate from PPIs and thyroid medication.",
+            excipientConcerns: {
+                avoid: ["Lactose", "Corn fillers", "Magnesium stearate"],
+                safe: ["Helaina eferra™ (dairy-free)"]
+            },
+            cautions: "Monitor in hemochromatosis or iron overload conditions."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "50 mg daily", notes: "Between meals" },
+                { step: "Week 2", dosage: "100 mg daily", notes: "Morning" },
+                { step: "Week 3+", dosage: "150 mg daily", notes: "Target dose" }
+            ],
+            timeline: "Immune effects 2-4 weeks; iron repletion 8-12 weeks."
+        },
+        sources: [
+            { title: "Lactoferrin tryptase inhibition (Ki = 24 nM)", pmid: "32093598", year: "2020" },
+            { title: "Tryptase degrades Type VI collagen", pmid: "8466500", authors: "Kielty et al.", year: "1993" },
+            { title: "Lactoferrin efficacy versus ferrous sulfate", pmid: "20143251", authors: "Paesano R et al.", year: "2010" }
+        ]
+    },
+    "l-citrulline": {
+        id: "l-citrulline",
+        name: "L-Citrulline",
+        isExcluded: true,
+        atAGlance: {
+            whatItIs: "An amino acid that converts to nitric oxide in the body",
+            whyWeIncludeIt: "EXCLUDED: Increases collagen-degrading enzymes (MMPs) and worsens POTS blood pressure crashes",
+            dose: "0 mg (Excluded)",
+            keyBenefits: [
+                "Increases MMP-1 (collagen breakdown) by 153%",
+                "Increases MMP-2 by 243%",
+                "Lowers standing blood pressure (POTS risk)",
+                "High fermentation contamination risk (MCAS)"
+            ]
+        },
+        howItWorks: "L-Citrulline was excluded because it powerfully activates the nitric oxide pathway that increases matrix metalloproteinases (MMPs)—the enzymes responsible for collagen degradation. In human dermal fibroblasts, this results in a 153-243% increase in collagen-breaking activity. For POTS, it lowers blood pressure, particularly while standing, which worsens orthostatic intolerance.",
+        research: [
+            {
+                outcome: "Connective Tissue Harm",
+                summary: "Direct research showing L-citrulline accelerates collagen breakdown in human cells.",
+                studies: [
+                    {
+                        source: "Choe et al., 2003",
+                        pmid: "12858222",
+                        finding: "NIT pathway activation increases MMP-1 by 153% and MMP-2 by 243% in human fibroblasts."
+                    }
+                ]
+            },
+            {
+                outcome: "POTS/Blood Pressure Risks",
+                summary: "Meta-analysis confirms blood pressure lowering effects that are dangerous for POTS.",
+                studies: [
+                    {
+                        source: "Barkhidarian et al., 2019",
+                        pmid: "30788274",
+                        finding: "Significant reduction in resting systolic BP, worsening orthostatic symptoms."
+                    }
+                ]
+            }
+        ],
+        triad: {
+            mcas: "95% of L-citrulline is fermentation-derived, carrying unacceptable histamine and tyramine contamination risk.",
+            heds: "Directly contra-indicated. Accelerates collagen turnover and degradation via MMP upregulation.",
+            pots: "Dangerous for orthostatic intolerance; reduces standing blood pressure and antagonizes POTS medications like midodrine."
+        },
+        whyThisForm: {
+            form: "None",
+            rationale: "Excluded from Zebrawell formulation due to safety profile mismatch with the hEDS/POTS/MCAS triad."
+        },
+        safety: {
+            sideEffects: "Blood pressure crashes, orthostatic intolerance, and accelerated collagen thinning.",
+            interactions: "Antagonizes Midodrine and Fludrocortisone. Enhances other blood pressure lowering drugs.",
+            excipientConcerns: {
+                avoid: ["All forms"],
+                safe: ["None"]
+            }
+        },
+        sources: [
+            { title: "Nitric oxide induces MMP expression in fibroblasts", pmid: "12858222", authors: "Choe et al.", year: "2003" },
+            { title: "Meta-analysis of L-citrulline on blood pressure", pmid: "30788274", year: "2019" }
+        ]
+    },
+    "pantothenic-acid": {
+        id: "pantothenic-acid",
+        name: "Pantothenic Acid (Vitamin B5)",
+        atAGlance: {
+            whatItIs: "An essential B vitamin that forms the core of Coenzyme A—the molecule required for over 70 enzymatic reactions in your body",
+            whyWeIncludeIt: "Supports adrenal function and stress response, both commonly compromised in POTS; CoA is essential for cellular energy production",
+            dose: "5 mg daily (PM capsules)",
+            keyBenefits: [
+                "CoA synthesis enables Krebs cycle function for ATP production",
+                "Supports adrenal hormone synthesis and HPA axis function",
+                "Stimulates fibroblast proliferation and wound healing",
+                "Enhances cortisol production and stress response capacity"
+            ]
+        },
+        howItWorks: "Pantothenic acid converts to Coenzyme A (CoA), which participates in over 70 enzymatic pathways including the Krebs cycle and steroid hormone synthesis. For POTS, it supports the adrenal glands in producing cortisol to regulate blood pressure and heart rate. For hEDS, it stimulates fibroblast proliferation and collagen synthesis to support wound healing.",
+        research: [
+            {
+                outcome: "Adrenal Support & Energy",
+                summary: "B5 enhances adrenal function and HPA axis response through CoA synthesis.",
+                studies: [
+                    {
+                        source: "Pan et al., 2018",
+                        finding: "Demonstrated enhanced adrenal steroid secretion and HPA axis function."
+                    }
+                ]
+            },
+            {
+                outcome: "Connective Tissue Healing",
+                summary: "Stimulates structural cells and metabolism to improve tissue repair.",
+                studies: [
+                    {
+                        source: "Kobayashi et al., 2011",
+                        finding: "Demonstrated accelerated wound healing and fibroblast proliferation with B5."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct trials in hEDS, POTS, or MCAS. Findings are extrapolated from general metabolic and wound healing research.",
+        triad: {
+            mcas: "Supports energy production and reduces inflammatory stress. Conservative (5mg) dose used to minimize potential histamine release risk seen in sensitive patients.",
+            heds: "Indirectly supports collagen synthesis and fibroblast activity. May improve the delayed wound healing common in connective tissue disorders.",
+            pots: "Supports HPA axis and adrenal function to help regulate stress hormones and blood pressure. Participates in acetylcholine synthesis for vagal tone support."
+        },
+        whyThisForm: {
+            form: "Calcium Pantothenate",
+            rationale: "The most stable form with ~50% bioavailability. Better tolerated and carries lower MCAS reaction risk than Pantethine.",
+            comparison: [
+                { form: "Calcium Pantothenate", difference: "Stable; high tolerability; lower MCAS risk", selected: true },
+                { form: "Pantethine", difference: "Superior cardiovascular effects but higher cost and MCAS risk", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Generally well-tolerated. High-dose energy surge may occur; taken with dinner to avoid insomnia.",
+            interactions: "Separate from antibiotics and high-dose biotin. Enhances stress response synergistically with Vitamin C and Zinc.",
+            excipientConcerns: {
+                avoid: ["Artificial dyes", "Povidone", "Titanium dioxide"],
+                safe: ["HPMC capsules", "Rice flour"]
+            },
+            cautions: "Monitor for paradoxical anxiety or 'wired' feeling in sensitive patients."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "2.5 mg daily", notes: "Sensitive start" },
+                { step: "Week 3+", dosage: "5 mg daily", notes: "Target (PM with dinner)" }
+            ],
+            timeline: "Energy and stress response benefits typically emerge within 4-6 weeks."
+        },
+        sources: [
+            { title: "Pantothenic acid and adrenal function", authors: "Pan et al.", year: "2018" },
+            { title: "Pantothenic acid and wound healing", authors: "Kobayashi et al.", year: "2011" },
+            { title: "Safety data for pantothenic acid", authors: "Yang et al.", year: "2014" }
+        ]
+    },
+    "biotin": {
+        id: "biotin",
+        name: "Biotin (Vitamin B7)",
+        atAGlance: {
+            whatItIs: "An essential B vitamin that serves as a cofactor for energy-producing enzymes",
+            whyWeIncludeIt: "Supports mitochondrial ATP production—addressing the profound fatigue common in the triad",
+            dose: "300 mcg daily (PM capsules)",
+            keyBenefits: [
+                "Essential cofactor for 5 carboxylases involved in ATP production",
+                "Supports mitochondrial function and energy metabolism",
+                "Enhances effectiveness of mast cell stabilizers",
+                "100% oral bioavailability even at pharmacological doses"
+            ]
+        },
+        howItWorks: "Biotin powers five carboxylase enzymes that generate ATP (cellular fuel). Deficiency leads to rapid mitochondrial dysfunction. We use a physiological 300 mcg dose to support metabolism while avoiding the laboratory interference (TSH, Troponin) that occurs at pharmacological (5-10mg) doses.",
+        research: [
+            {
+                outcome: "Mitochondrial Function",
+                summary: "Essential role in cellular energy pathways; deficiency causes severe ATP depletion.",
+                studies: [
+                    {
+                        source: "Madsen et al., 2015",
+                        finding: "Biotin deficiency causes severe mitochondrial dysfunction and energy failure."
+                    }
+                ]
+            },
+            {
+                outcome: "Safety & Bioavailability",
+                summary: "Excellent oral absorption profile and high safety margin.",
+                studies: [
+                    {
+                        source: "Pharmacokinetic Review",
+                        finding: "D-biotin demonstrates 100% oral bioavailability."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct trials in hEDS/POTS/MCAS. Findings extrapolated from basic carboxylase biochemistry and general mitochondrial research.",
+        triad: {
+            mcas: "Generally MCAS-safe; does not trigger histamine. May enhance quercetin effectiveness. Clean excipient sourcing is required for sensitive patients.",
+            heds: "Provides ATP needed for the energy-intensive process of collagen synthesis and fibroblast maintenance.",
+            pots: "Supports nervous system function through neurotransmitter synthesis. Helps mitigate autonomic dysfunction and inflammatory markers."
+        },
+        whyThisForm: {
+            form: "D-Biotin (Natural Form)",
+            rationale: "100% bioavailability compared to synthetic forms. D-biotin is the natural, bioactive form required as an enzyme cofactor.",
+            comparison: [
+                { form: "D-Biotin", difference: "Natural form; 100% bioavailability; preferred bioactivity", selected: true },
+                { form: "Synthetic Biotin", difference: "May have lower overall bioactivity", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Generally well-tolerated. May cause insomnia if taken late (PM dinner timing used).",
+            interactions: "CRITICAL: Interferes with Troponin and TSH lab tests—discontinue 72 hours before testing. Anticonvulsants increase biotin requirements.",
+            excipientConcerns: {
+                avoid: ["Artificial dyes", "Povidone", "Polyethylene glycol"],
+                safe: ["Vegetable capsules", "Rice flour"]
+            },
+            cautions: "Always alert healthcare providers of biotin use before blood work."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "150 mcg daily", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "300 mcg daily", notes: "Standard target" }
+            ],
+            timeline: "Metabolic energy benefits noticeably improve within 2-4 weeks."
+        },
+        sources: [
+            { title: "Biotin and mitochondrial mechanism", pmid: "25697524", authors: "Madsen et al.", year: "2015" },
+            { title: "Biotin laboratory test interference warning", authors: "FDA Safety Communication", year: "2019" },
+            { title: "Nutrient considerations in MCAS/hEDS", authors: "Kohn et al.", year: "2020" }
+        ]
+    },
+    "boron": {
+        id: "boron",
+        name: "Boron",
+        atAGlance: {
+            whatItIs: "A trace mineral that supports bone metabolism, hormone function, and collagen synthesis",
+            whyWeIncludeIt: "Enhances Vitamin D and Magnesium utilization while providing potent systemic anti-inflammatory effects",
+            dose: "2 mg daily (PM capsules)",
+            keyBenefits: [
+                "Reduces TNF-α (30%) and IL-6 (44%) in human studies",
+                "Supports bone mineral density and joint health",
+                "Enhances collagen synthesis via direct enzyme activation",
+                "85-90% absorption rate with high safety margin"
+            ]
+        },
+        howItWorks: "Boron activates enzymes involved in collagen synthesis and improves the utilization of Calcium, Magnesium, and Vitamin D. Crucially, it demonstrates potent anti-inflammatory properties, reducing CRP, TNF-α, and IL-6. This addresses chronic systemic inflammation and helps stabilize the inflammatory environment that triggers mast cells.",
+        research: [
+            {
+                outcome: "Anti-Inflammatory Effects",
+                summary: "Significant reduction in major inflammatory markers relevant to all three conditions.",
+                studies: [
+                    {
+                        source: "Human Intervention Study, 2011",
+                        finding: "10mg/day for one week: TNF-α ↓30%, IL-6 ↓44%, and hs-CRP ↓50%."
+                    }
+                ]
+            },
+            {
+                outcome: "Bone & Joint Health",
+                summary: "Enhances mineral density and supports connective tissue integrity.",
+                studies: [
+                    {
+                        source: "Comprehensive Safety Review",
+                        finding: "Consistent joint benefits across 594 subjects without accumulation risk."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No conditions-specific trials for hEDS/POTS/MCAS. Extrapolated from general bone health and inflammation research.",
+        triad: {
+            mcas: "Anti-inflammatory effects (TNF-α reduction) help stabilize the mast cell environment. No documented histamine release from boron.",
+            heds: "Supports mineral utilization (Mg, Vit D) and may directly influence collagen structure via enzyme activation. High relevance for osteoporosis risk.",
+            pots: "Provides systemic inflammatory reduction which can mitigate autonomic symptom flares and overall nutritional status."
+        },
+        whyThisForm: {
+            form: "Boron Glycinate",
+            rationale: "Most bioavailable chelated form (85-90%). Glycine chelate adds a secondary calming effect and avoids the MCAS trigger risk of citrate forms.",
+            comparison: [
+                { form: "Boron Glycinate", difference: "Superior bioavailability; calming glycine; MCAS safe", selected: true },
+                { form: "Boron Citrate", difference: "Citrate is a common MCAS trigger for sensitive patients", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Excellent safety profile. Minimal adverse effects at nutritional doses.",
+            interactions: "No significant interactions with common POTS/MCAS medications. High-dose zinc may theoretically compete.",
+            excipientConcerns: {
+                avoid: ["Citrate forms", "Artificial dyes", "Titanium dioxide"],
+                safe: ["HPMC capsules", "Rice flour"]
+            },
+            cautions: "2mg dose is well below the 10mg upper limit established by regulatory bodies."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1+", dosage: "2 mg daily", notes: "Full dose (PM)" }
+            ],
+            timeline: "Anti-inflammatory effects in 2-4 weeks; bone benefits take 8-12 weeks."
+        },
+        sources: [
+            { title: "Boron supplementation and inflammatory markers", year: "2011" },
+            { title: "Evidence-based supplements for EDS", year: "2014" },
+            { title: "Boron long-term safety and efficacy", year: "2020" }
+        ]
+    },
+    "molybdenum": {
+        id: "molybdenum",
+        name: "Molybdenum",
+        atAGlance: {
+            whatItIs: "An essential trace mineral required for enzymes that detoxify sulfites and aldehydes",
+            whyWeIncludeIt: "Supports sulfite metabolism—addressing a root trigger for mast cell degranulation in 60% of MCAS patients",
+            dose: "150 mcg daily (PM capsules)",
+            keyBenefits: [
+                "Essential cofactor for Sulfite Oxidase (sulfite → sulfate)",
+                "Reduces chemical sensitivity in MCAS patients",
+                "Indirectly stabilizes mast cells by reducing sulfite burden",
+                "Supports aldehyde detoxification (alcohol/aldehyde processing)"
+            ]
+        },
+        howItWorks: "Molybdenum is the mandatory cofactor for Sulfite Oxidase. Sulfite accumulation directly triggers mast cell degranulation. By converting toxic sulfites to harmless sulfates, molybdenum addresses a root cause of chemical sensitivity. 60% of MCAS patients exhibit intolerance linked to sulfite oxidase dysfunction.",
+        research: [
+            {
+                outcome: "Sulfite & Chemical Sensitivity",
+                summary: "Addressing the high prevalence of sulfite-related intolerance in the MCAS population.",
+                studies: [
+                    {
+                        source: "Kohn et al., 2020",
+                        pmid: "31845133",
+                        finding: "60% of MCAS patients exhibit chemical intolerance linked to sulfite oxidase dysfunction."
+                    }
+                ]
+            },
+            {
+                outcome: "Detoxification Pathways",
+                summary: "Cofactor status for critical enzymes (Sulfite Oxidase, Aldehyde Oxidase).",
+                studies: [
+                    {
+                        source: "Environmental Toxicology Reviews",
+                        finding: "Essential for processing environmental toxins and industrial metabolites."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct trials in isolated hEDS/POTS populations. Use is primarily based on enzyme biochemistry and MCAS clinical observation.",
+        triad: {
+            mcas: "Primary indication. Stabilizes mast cells indirectly by clearing sulfite burden. Addresses reactions to wine, dried fruits, and environmental chemicals.",
+            heds: "Sulfite accumulation can damage collagen cross-links; molybdenum helps preserve tissue integrity through detoxification.",
+            pots: "Reduces total body load of inflammatory triggers, helping to prevent tachycardia flares and chemical-induced crashes."
+        },
+        whyThisForm: {
+            form: "Molybdenum Glycinate (Chelate)",
+            rationale: "90-95% absorption compared to 57% for sodium forms. TRAACS chelated forms are best tolerated and avoid ammonia-sensitivity risks.",
+            comparison: [
+                { form: "Molybdenum Glycinate", difference: "90-95% absorption; best tolerability; ammonia-free", selected: true },
+                { form: "Sodium Molybdate", difference: "Common alternative; lower (57-88%) absorption rate", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Low risk. Initial detox surge ('sulfite die-off') possible. Stabilizes mast cells.",
+            interactions: "Separate from Iron, Zinc, and Copper by 2-4 hours; can reduce copper absorption long-term. Enhances acetaminophen metabolism.",
+            excipientConcerns: {
+                avoid: ["Yeast-derived forms", "Titanium dioxide", "Magnesium stearate"],
+                safe: ["HPMC capsules", "L-leucine", "Rice flour"]
+            },
+            cautions: "Monitor copper status with high-dose, long-term use."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "75 mcg (EOD)", notes: "Every other day for sensitive start" },
+                { step: "Week 2", dosage: "75 mcg daily", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "150 mcg daily", notes: "Full target dose (PM)" }
+            ],
+            timeline: "Chemical sensitivity improvements typically seen within 2-4 weeks."
+        },
+        sources: [
+            { title: "Molybdenum and environmental detoxification", authors: "Miller et al.", year: "2022" },
+            { title: "Molybdenum cofactor deficiency review", pmid: "38234320", authors: "Schwahn et al.", year: "2024" },
+            { title: "MCAS, chemical sensitivity, and nutrition", pmid: "31845133", authors: "Kohn et al.", year: "2020" }
+        ]
+    },
+    "copper-bisglycinate": {
+        id: "copper-bisglycinate",
+        name: "Copper Bisglycinate",
+        atAGlance: {
+            whatItIs: "An essential trace mineral in a highly bioavailable chelated form that serves as the critical cofactor for the enzyme that cross-links collagen fibers",
+            whyWeIncludeIt: "Required for lysyl oxidase (LOX), the enzyme responsible for creating the covalent bonds that give collagen its tensile strength",
+            dose: "2mg elemental copper daily (AM capsules only)",
+            keyBenefits: [
+                "62% increase in collagen cross-link ratio in human RCT",
+                "Stabilizes mast cells and inhibits histamine release",
+                "Critical cofactor for DAO (histamine degradation enzyme)",
+                "Essential for norepinephrine synthesis and orthostatic tolerance"
+            ]
+        },
+        howItWorks: "Copper is the primary power source for Lysyl Oxidase (LOX), which weaves together collagen threads into strong tissue. It also stabilizers mast cells (copper deficiency increases mast cell population by 53%) and serves as a cofactor for Diamine Oxidase (DAO), which breaks down histamine. For POTS, it is essential for the conversion of dopamine to norepinephrine, crucial for vascular tone.",
+        research: [
+            {
+                outcome: "Collagen Cross-Linking",
+                summary: "Human RCT evidence demonstrating dramatic improvement in collagen quality markers.",
+                studies: [
+                    {
+                        source: "DiSilvestro et al., 2010",
+                        pmid: "20569928",
+                        finding: "2mg/day produced a 62% increase in the ratio of collagen cross-links to total collagen."
+                    }
+                ]
+            },
+            {
+                outcome: "Mast Cell Stabilization",
+                summary: "Research shows copper inhibits rather than activates mast cells.",
+                studies: [
+                    {
+                        source: "Sharma & Jande, 1989",
+                        pmid: "2476088",
+                        finding: "Dose-dependent inhibition of mast cell histamine release."
+                    },
+                    {
+                        source: "Schuschke et al., 1994",
+                        pmid: "7528379",
+                        finding: "Copper deficiency increases mast cell population by 53%."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct clinical trials in EDS/POTS cohorts; the 2025 KLK15 discovery suggests LOX mislocalization may be a factor in EDS regardless of copper levels.",
+        triad: {
+            mcas: "Stabilizes mast cells and supports DAO. The bisglycinate form avoids GI irritation. Deficiency is linked to increased mast cell reactivity.",
+            heds: "The single most evidence-supported intervention for collagen cross-linking optimization (62% improvement at 2mg).",
+            pots: "Essential for norepinephrine synthesis (dopamine β-hydroxylase), which is required to maintain vascular tone and blood pressure."
+        },
+        whyThisForm: {
+            form: "Copper Bisglycinate",
+            rationale: "Uses amino acid transporters (PEPT1) rather than mineral transporters, achieving 40-50% bioavailability vs 10% for sulfate forms. Gentler on the stomach.",
+            comparison: [
+                { form: "Copper Bisglycinate", difference: "40-50% bioavailability; PEPT1 transport; superior GI tolerance", selected: true },
+                { form: "Copper Sulfate", difference: "10-15% bioavailability; common GI irritation", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Well-tolerated at 2mg. dose is 5x below upper tolerable limit. no documented tachycardia risk.",
+            interactions: "MUST be separated from Zinc by 12+ hours to prevent competition. Contraindicated with penicillamine.",
+            excipientConcerns: {
+                avoid: ["Copper Citrate (MCAS trigger)", "Corn-derived fillers"],
+                safe: ["Rice flour", "HPMC capsules"]
+            },
+            cautions: "Separate from high-dose Vitamin C (Fenton reaction concern). Wilson's disease is absolute contraindication."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "0.5-1 mg daily", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "2 mg daily", notes: "Target maintenance (AM)" }
+            ],
+            timeline: "Collagen cross-linking benefits require 8 weeks minimum."
+        },
+        sources: [
+            { title: "Copper supplementation effects on cardiovascular health", pmid: "20569928", authors: "DiSilvestro et al.", year: "2010" },
+            { title: "Copper in the assessment of nutrient status", pmid: "23651769", authors: "Olivares et al.", year: "2013" },
+            { title: "Histamine release from mast cells - effects of copper", pmid: "2476088", authors: "Sharma & Jande", year: "1989" },
+            { title: "Copper deficiency increases mast cell numbers", pmid: "7528379", authors: "Schuschke et al.", year: "1994" }
+        ]
+    },
+    "manganese-bisglycinate": {
+        id: "manganese-bisglycinate",
+        name: "Manganese Bisglycinate",
+        atAGlance: {
+            whatItIs: "An essential trace mineral that serves as the cofactor for enzymes in connective tissue synthesis and mitochondrial protection",
+            whyWeIncludeIt: "Required for SOD2 (mitochondrial antioxidant), glycosyltransferases (GAG synthesis), and prolidase (collagen recycling)",
+            dose: "4mg elemental manganese daily (AM capsules)",
+            keyBenefits: [
+                "Essential cofactor for MnSOD (SOD2) mitochondrial protection",
+                "Prevents upregulation of collagen-degrading enzymes (MMPs)",
+                "Required for building glycosaminoglycans (GAGs) like Hyaluronic Acid",
+                "Blocks calcium influx into mast cells to inhibit degranulation"
+            ]
+        },
+        howItWorks: "Manganese powers SOD2, the primary antioxidant protecting mitochondria (cellular powerhouses). Deficiency has been shown to upregulate MMP-1, MMP-9, and MMP-13—the exact enzymes overactive in hEDS. It also competes with calcium at mast cell influx channels, inhibiting the release of histamine.",
+        research: [
+            {
+                outcome: "Connective Tissue Protection",
+                summary: "Deficiency creates a catabolic state by increasing collagen-degrading enzymes.",
+                studies: [
+                    {
+                        source: "Dong et al., 2021",
+                        pmid: "34546491",
+                        finding: "Manganese deficiency upregulates MMP-1, MMP-9, and MMP-13."
+                    }
+                ]
+            },
+            {
+                outcome: "Mitochondrial & Mast Cell Support",
+                summary: "Enhances cellular protection and stabilizes mast cell membranes.",
+                studies: [
+                    {
+                        source: "Davis & Greger, 1992",
+                        pmid: "1550052",
+                        finding: "Sustained supplementation at 15mg/90 days meaningfully increased SOD2 activity."
+                    },
+                    {
+                        source: "Hide & Beaven, 1991",
+                        pmid: "1869551",
+                        finding: "Mn²⁺ blocks calcium influx by competition, inhibiting degranulation."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct trials in EDS/POTS cohorts. The 'MMP paradox' requires selenium co-supplementation (included) to be safe.",
+        triad: {
+            mcas: "Blocks calcium influx needed for degranulation. Enhanced SOD2 activity reduces oxidative triggers. The bisglycinate form is clean-label.",
+            heds: "Deficiency upregulates the exact MMPs that thin collagen in hEDS patients. Supports GAG synthesis (Chondroitin, Hyaluronic Acid).",
+            pots: "Supports mitochondrial health in ME/CFS/POTS populations where 100% of patients show measurable dysfunction."
+        },
+        whyThisForm: {
+            form: "Manganese Bisglycinate",
+            rationale: "Chelated delivery through amino acid transporters. EFSA confirms bisglycinate offers better GI tolerance than inorganic salts.",
+            comparison: [
+                { form: "Manganese Bisglycinate", difference: "Chelated; amino acid transport; superior GI tolerance", selected: true },
+                { form: "Manganese Sulfate", difference: "Standard reference form; higher rates of GI upset", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Well-tolerated at 4mg (dose is below IOM upper limit of 11mg). Neurotoxicity risk is only for chronic high-dose inhalation.",
+            interactions: "No clinically relevant interactions with medications. Separate from tetracyclines by 2+ hours.",
+            excipientConcerns: {
+                avoid: ["Citric acid", "Soy-based fillers"],
+                safe: ["Rice flour", "HPMC capsules"]
+            },
+            cautions: "Iron status affects absorption (low ferritin increases manganese uptake)."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "1-2 mg daily", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "4 mg daily", notes: "Target maintenance (AM)" }
+            ],
+            timeline: "SOD2 activity enhancement requires ~3 months for full cellular effect."
+        },
+        sources: [
+            { title: "Changes of manganese-dependent superoxide dismutase", pmid: "1550052", authors: "Davis & Greger", year: "1992" },
+            { title: "Manganese deficiency increases MMP expression", pmid: "34546491", authors: "Dong et al.", year: "2021" },
+            { title: "Mn²⁺ blocks calcium influx in mast cells", pmid: "1869551", authors: "Hide & Beaven", year: "1991" }
+        ]
+    },
+    "selenium": {
+        id: "selenium",
+        name: "Selenium (Selenomethionine)",
+        atAGlance: {
+            whatItIs: "An essential trace mineral in its most bioavailable organic form",
+            whyWeIncludeIt: "Critical cofactor for Glutathione Peroxidase (cellular antioxidant) and thyroid hormone conversion",
+            dose: "100 mcg daily (AM capsules)",
+            keyBenefits: [
+                "Essential for Glutathione Peroxidase cellular defense",
+                "Reduces thyroid antibodies by 30-40% in autoimmunity",
+                "Prevents H₂O₂ accumulation that could amplify MMP activity",
+                "Reduces IgE-mediated mediator release from mast cells"
+            ]
+        },
+        howItWorks: "Selenium is the mandatory cofactor for Selenoproteins, primarily Glutathione Peroxidase (GPx). GPx neutralizes the oxidative stress that triggers mast cell degranulation. For hEDS, it protects fibroblasts and collagen synthesis (deficiency is associated with damaged connective tissue). For POTS, it supports the deiodinase enzymes needed for T4 to T3 thyroid conversion.",
+        research: [
+            {
+                outcome: "Thyroid & Immune Support",
+                summary: "Significant reduction in autoantibodies for patients with concurrent thyroid issues.",
+                studies: [
+                    {
+                        source: "Meta-analysis of RCTs",
+                        finding: "200μg daily reduces TPO antibodies by 30-40% at 3-6 months."
+                    }
+                ]
+            },
+            {
+                outcome: "Connective Tissue Protection",
+                summary: "Evidence associating deficiency with impaired connective tissue synthesis.",
+                studies: [
+                    {
+                        source: "Patient Observational Studies",
+                        finding: "93.3% of patients with related connective tissue disorders show selenium deficiency."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No direct trials specifically in hEDS populations; findings extrapolated from related connective tissue models and autoimmune thyroid research.",
+        triad: {
+            mcas: "Reduces oxidative stress-driven mast cell reactivity. Selenomethionine is preferred to avoid yeast/fermentation sensitivities.",
+            heds: "Essential to prevent damaged fibroblasts and cartilage degeneration seen in deficiency models. Synergistic with Manganese.",
+            pots: "Critical for the 16-20% of POTS patients with concurrent thyroid autoimmunity. Supports autonomic function via thyroid hormone optimization."
+        },
+        whyThisForm: {
+            form: "L-Selenomethionine",
+            rationale: "Organic form with 90-95% bioavailability (vs 50% for selenite). Pure form avoids the yeast sensitivity risk present in selenium-enriched yeast.",
+            comparison: [
+                { form: "Selenomethionine", difference: "90-95% bioavailable; organic; MCAS-safe", selected: true },
+                { form: "Sodium Selenite", difference: "50-85% bioavailable; inorganic; lower retention", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Well-tolerated at 100mcg (upper tolerable limit is 400mcg). Excessive dose can cause garlic-like breath or metallic taste.",
+            interactions: "Separate from Levothyroxine by 4+ hours. May enhance warfarin anticoagulant effects.",
+            excipientConcerns: {
+                avoid: ["Sulfites", "Artificial dyes", "Corn-derived fillers"],
+                safe: ["Selenomethionine pure form"]
+            },
+            cautions: "Narrow therapeutic window; target 70-120 ng/mL plasma levels for long-term use."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "50 mcg daily", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "100 mcg daily", notes: "Target maintenance (AM)" }
+            ],
+            timeline: "Selenium status optimization takes 3-6 months based on clinical data."
+        },
+        sources: [
+            { title: "Selenium and human health", pmid: "22381456", authors: "Rayman MP", year: "2012" },
+            { title: "Redox-sensitive transcription and mast cell mediatiors", year: "2015" },
+            { title: "Antioxidant capacity in related connective tissue disorders", year: "2018" }
+        ]
+    },
+    "methylfolate": {
+        id: "methylfolate",
+        name: "Methylfolate (5-MTHF)",
+        atAGlance: {
+            whatItIs: "The bioactive form of folate that bypasses MTHFR genetic blocks and regulates collagen-destroying enzymes",
+            whyWeIncludeIt: "Addresses the 85% MTHFR polymorphism prevalence in hEDS patients; essential for ECM protection and neurotransmitter synthesis",
+            dose: "800 mcg daily (AM capsules)",
+            keyBenefits: [
+                "85% of hEDS patients carry MTHFR variants in landmark study",
+                "Regulates MMP-2 activity to protect collagen from degradation",
+                "Critical for BH4 and norepinephrine synthesis for POTS",
+                "Supports HNMT for intracellular histamine clearance"
+            ]
+        },
+        howItWorks: "Methylfolate bypasses the MTHFR enzyme block to provide active folate. It directly regulates MMP-2 promoter methylation to prevent its hyperactivity (which otherwise leads to decorin cleavage and collagen weakness). It is also a mandatory cofactor for BH4 synthesis (essential for norepinephrine) and supports HNMT function to clear intracellular histamine.",
+        research: [
+            {
+                outcome: "hEDS-Specific Genetic Association",
+                summary: "Landmark study demonstrating exceptionally high prevalence of MTHFR variants in the hEDS population.",
+                studies: [
+                    {
+                        source: "Courseault J, et al. (2024)",
+                        pmid: "38523329",
+                        finding: "85% of hEDS patients carry MTHFR polymorphisms (double the general population prevalence)."
+                    }
+                ]
+            },
+            {
+                outcome: "Folate-Hypermobility Mechanism",
+                summary: "Proposed medical model linking folate deficiency to ECM disorganization via MMP-2 derepression.",
+                studies: [
+                    {
+                        source: "Courseault J, et al. (2023)",
+                        pmid: "37095957",
+                        finding: "Low 5-MTHF levels correlate with MMP-2 hyperactivity and increased decorin cleavage in ligaments."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "While the genetic association is Grade A, clinical RCTs testing symptom reversal with methylfolate in hEDS are still pending.",
+        triad: {
+            mcas: "Supports HNMT function, which clears 50-80% of intracellular histamine. Low overmethylation risk at 800mcg dose.",
+            heds: "Addresses a nearly universal genetic bottleneck in hEDS. Protects collagen by 'silencing' destructive MMP-2 enzymes.",
+            pots: "Produces BH4, the cofactor for norepinephrine synthesis. Essential for maintaining vascular tone and heart rate control."
+        },
+        whyThisForm: {
+            form: "Quatrefolic® (Glucosamine Salt)",
+            rationale: "The most stable and bioavailable form of (6S)-5-MTHF. Bypasses metabolic blocks for 100% bioactivity. Superior stability to earlier calcium salts.",
+            comparison: [
+                { form: "Quatrefolic®", difference: "Glucosamine salt; superior stability; ~50% first-pass absorption", selected: true },
+                { form: "Folic Acid", difference: "Inactive synthetic form; requires MTHFR conversion (ineffective for 85% of hEDS)", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Generally well-tolerated. Anxiety, irritability, or insomnia possible in sensitive overmethylators.",
+            interactions: "Antagonized by Methotrexate. May mask B12 deficiency (always paired with B12 in ZebraWell).",
+            excipientConcerns: {
+                avoid: ["Artificial colors", "Corn-derived fillers"],
+                safe: ["HPMC capsules", "Rice flour"]
+            },
+            cautions: "Always ensure B12 status is optimized alongside folate to prevent neurological masking."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Weeks 1-2", dosage: "200 mcg daily", notes: "Assess methylation sensitivity" },
+                { step: "Weeks 3-4", dosage: "400 mcg daily", notes: "Standard titration" },
+                { step: "Week 5+", dosage: "800 mcg daily", notes: "Target maintenance" }
+            ],
+            timeline: "Neurotransmitter benefits within 2-4 weeks; ECM/collagen protection is a long-term mechanism."
+        },
+        sources: [
+            { title: "MTHFR Polymorphisms in Patients With hEDS", pmid: "38523329", authors: "Courseault J", year: "2024" },
+            { title: "Folate-dependent hypermobility syndrome: A proposed mechanism", pmid: "37095957", authors: "Courseault J", year: "2023" },
+            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins", pmid: "34764114", authors: "Mittal N", year: "2021" }
+        ]
+    },
+    "vitamin-b12": {
+        id: "vitamin-b12",
+        name: "Methylcobalamin (Vitamin B12)",
+        atAGlance: {
+            whatItIs: "The bioactive form of Vitamin B12 that directly supports the autonomic nervous system and histamine clearance",
+            whyWeIncludeIt: "47% of POTS patients are B12 deficient; essential for baroreflex sensitivity and intracellular histamine degradation",
+            dose: "1,000 mcg daily (AM capsules)",
+            keyBenefits: [
+                "Addresses 47% B12 deficiency rate in POTS populations",
+                "Crucial for sympathetic baroreceptor function and catecholamine release",
+                "Mandatory cofactor for HNMT-mediated histamine metabolism",
+                "Bioactive methyl-donor (bypasses conversion steps)"
+            ]
+        },
+        howItWorks: "Methylcobalamin is the primary bioactive cofactor for the methylation cycle. In POTS, it is critical for maintaining baroreceptor sensitivity and proper catecholamine release. In MCAS, it supports the production of SAMe, which is required for HNMT—the enzyme responsible for clearing 50-80% of intracellular histamine. It also protects connective tissue by reducing inflammatory homocysteine.",
+        research: [
+            {
+                outcome: "POTS-Specific Deficiency",
+                summary: "Clinical evidence demonstrating significantly higher rates of B12 deficiency specifically in POTS patients.",
+                studies: [
+                    {
+                        source: "Öner T, et al. (2014)",
+                        pmid: "24366986",
+                        finding: "47.2% of POTS patients were B12 deficient vs. 18% of controls."
+                    }
+                ]
+            },
+            {
+                outcome: "Autonomic Neuropathy Recovery",
+                summary: "Research linking B12 status to orthostatic tolerance and catecholamine regulation.",
+                studies: [
+                    {
+                        source: "Mathur N, et al. (2021)",
+                        pmid: "34782356",
+                        finding: "Marked improvement in hyperadrenergic POTS with high-dose methylated B-vitamins."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "While deficiency prevalence is clear, larger dual-blind RCTs for autonomic outcomes are needed.",
+        triad: {
+            mcas: "Stabilizes mast cells indirectly via HNMT (histamine clearance). Methylcobalamin is bioactive but can be 'stimulatory' for some.",
+            heds: "Required for enzymes that hydroxylate collagen chains. Protects tissue from homocysteine-mediated oxidative damage.",
+            pots: "Critical for baroreceptor sensitivity. Addresses the massive 47% deficiency prevalence in this population."
+        },
+        whyThisForm: {
+            form: "Methylcobalamin",
+            rationale: "Bioactive form with significantly better tissue retention than cyanocobalamin. Directly supports methylation without requiring enzymatic conversion.",
+            comparison: [
+                { form: "Methylcobalamin", difference: "Bioactive; 3x better tissue retention; supports HNMT/SAMe", selected: true },
+                { form: "Cyanocobalamin", difference: "Inactive synthetic form; contains cyanide; requires conversion", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Exceptionally safe. High doses are non-toxic. Paradoxical anxiety or trembling possible in sensitive overmethylators.",
+            interactions: "Absorption impaired by Metformin, H2 blockers, and PPIs. Safe with all standard triad medications.",
+            excipientConcerns: {
+                avoid: ["Artificial cherry/berry flavors", "Mannitol", "Sorbitol"],
+                safe: ["HPMC capsules", "Rice flour"]
+            },
+            cautions: "If methylcobalamin is too stimulatory, consider hydroxocobalamin as a gentler alternative."
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1-2", dosage: "250-500 mcg daily", notes: "Assess tolerance for sensitive patients" },
+                { step: "Week 3+", dosage: "1,000 mcg daily", notes: "Target maintenance" }
+            ],
+            timeline: "Energy and neurological benefits often appear within 2-4 weeks."
+        },
+        sources: [
+            { title: "POTS and vitamin B12 deficiency in adolescents", pmid: "24366986", authors: "Öner T", year: "2014" },
+            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins", pmid: "34782356", authors: "Mathur N", year: "2021" },
+            { title: "Efficacy and safety of ultrahigh-dose methylcobalamin", pmid: "35532908", authors: "Oki R", year: "2022" }
+        ]
     }
 };
 
@@ -772,7 +2789,7 @@ export const ingredientList = [
     "PQQ (Pyrroloquinoline Quinone)", "Chlorogenic Acid", "L-Theanine", "Zinc Carnosine", "Astaxanthin",
     "Silicon (MMST)", "Benfotiamine", "Niacinamide", "P5P (Pyridoxal-5-Phosphate)", "R5P (Riboflavin-5-Phosphate)",
     "Methylfolate", "Vitamin B12 (Methylcobalamin)", "Vitamin D3", "Vitamin K2 (MK-7)", "Copper Bisglycinate",
-    "Manganese Bisglycinate", "L-Lysine", "Selenium", "Pantothenic Acid", "Biotin", "Boron", "Molybdenum"
+    "Manganese Bisglycinate", "L-Lysine", "Chondroitin Sulfate", "Recombinant Human Lactoferrin", "L-Citrulline", "Selenium", "Pantothenic Acid", "Biotin", "Boron", "Molybdenum"
 ];
 
 const slugify = (text: string) => {
