@@ -28,7 +28,7 @@ export default function Ingredients() {
             <main className="pt-32 pb-20 px-6">
                 <div className="max-w-7xl mx-auto">
                     {/* Header Section */}
-                    <div className="mb-16">
+                    <div className="mb-10">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -72,18 +72,18 @@ export default function Ingredients() {
                                     transition={{ delay: index * 0.05 }}
                                 >
                                     <Link href={`/ingredients/${id}`}>
-                                        <div className="group h-full p-8 bg-white/40 backdrop-blur-sm border border-white/40 rounded-[2rem] hover:bg-white hover:border-[#B36B4D]/30 transition-all duration-500 cursor-pointer shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col">
-                                            <div className="mb-4">
+                                        <div className="group h-full p-5 bg-white/40 backdrop-blur-sm border border-white/40 rounded-2xl hover:bg-white hover:border-[#B36B4D]/30 transition-all duration-500 cursor-pointer shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col">
+                                            <div className="mb-3">
                                                 <span className="text-[10px] uppercase tracking-[0.2em] text-[#B36B4D] font-bold">
                                                     Ingredient {index + 1}
                                                 </span>
-                                                <h3 className="font-serif font-bold text-2xl text-[#3D3733] mt-2 group-hover:text-[#B36B4D] transition-colors leading-tight">
+                                                <h3 className="font-serif font-bold text-xl text-[#3D3733] mt-1 group-hover:text-[#B36B4D] transition-colors leading-tight">
                                                     {name}
                                                 </h3>
                                             </div>
 
                                             {data?.atAGlance?.whatItIs && (
-                                                <p className="text-sm text-[#5D5752] line-clamp-2 mb-6 flex-grow">
+                                                <p className="text-sm text-[#5D5752] line-clamp-1 mb-4 flex-grow">
                                                     {data.atAGlance.whatItIs}
                                                 </p>
                                             )}
