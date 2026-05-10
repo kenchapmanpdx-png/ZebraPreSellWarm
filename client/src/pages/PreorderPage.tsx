@@ -50,7 +50,7 @@ export default function PreorderPage() {
       <ZebraPatternOverlay opacity={0.03} />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
+      <section id="main-content" className="relative pt-24 pb-16 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-amber-100 text-amber-800 border-amber-200 px-4 py-2 text-sm font-medium">

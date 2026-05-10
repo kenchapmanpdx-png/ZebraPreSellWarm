@@ -11,7 +11,7 @@ export default function TheHow() {
       {/* 1. Global Nav */}
       <Navigation />
 
-      <main className="pt-24">
+      <main id="main-content" className="pt-24">
         {/* 2. The Deep Dive Science Component */}
         <ConditionScienceTabs />
       </main>

@@ -1,6 +1,6 @@
 export default function ProductBottles() {
   return (
-    <svg 
+    <svg aria-hidden="true" 
       width="320" 
       height="320" 
       viewBox="0 0 320 320" 

@@ -307,7 +307,7 @@ export default function CollagenScienceSection() {
             <div className="relative w-full max-w-[500px] mx-auto aspect-square hidden md:block">
 
               {/* Dotted Connection Circle (SVG) */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 rotate-45 opacity-20">
+              <svg aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none z-0 rotate-45 opacity-20">
                 <circle cx="50%" cy="50%" r="35%" fill="none" stroke="#B36B4D" strokeWidth="2" strokeDasharray="8 8" />
               </svg>
 
@@ -452,7 +452,7 @@ export default function CollagenScienceSection() {
 
           {/* 4. Arrow pointing to next section */}
           <div className="text-[#D4A373]">
-            <svg
+            <svg aria-hidden="true"
               width="24"
               height="24"
               viewBox="0 0 24 24"

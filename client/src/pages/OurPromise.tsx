@@ -37,7 +37,7 @@ export default function OurPromise() {
       <Navigation />
 
       {/* THE CONSTITUTION HEADER: Slow Fade Down */}
-      <section className="relative pt-32 pb-20 px-6 bg-[#DED9D0]">
+      <section id="main-content" className="relative pt-32 pb-20 px-6 bg-[#DED9D0]">
         <div className="container mx-auto max-w-5xl text-center relative z-10" data-aos="fade-down">
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-2 rounded-full bg-white/60 border border-[#A4613A]/20 text-[#0F2A22] text-xs font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
             <ShieldCheck size={16} className="text-[#A4613A]" aria-hidden="true" />

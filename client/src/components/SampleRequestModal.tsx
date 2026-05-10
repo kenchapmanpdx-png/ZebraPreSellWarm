@@ -34,16 +34,17 @@ export default function SampleRequestModal() {
           <button 
             id="close-modal"
             onClick={hideModal}
+            aria-label="Close sample request modal"
             className="text-neutral-dark/60 hover:text-neutral-dark"
           >
-            <i className="fas fa-times text-xl"></i>
+            <i className="fas fa-times text-xl" aria-hidden="true"></i>
           </button>
         </div>
         
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="modal-name" className="flex items-center text-sm font-semibold mb-2">
-              <i className="fas fa-user text-forest mr-2"></i>
+              <i className="fas fa-user text-forest mr-2" aria-hidden="true"></i>
               Full Name
             </label>
             <input 
@@ -58,7 +59,7 @@ export default function SampleRequestModal() {
           
           <div className="mb-4">
             <label htmlFor="modal-email" className="flex items-center text-sm font-semibold mb-2">
-              <i className="fas fa-envelope text-forest mr-2"></i>
+              <i className="fas fa-envelope text-forest mr-2" aria-hidden="true"></i>
               Email Address
             </label>
             <input 
@@ -73,7 +74,7 @@ export default function SampleRequestModal() {
           
           <div className="mb-6">
             <label htmlFor="modal-reason" className="flex items-center text-sm font-semibold mb-2">
-              <i className="fas fa-clipboard-list text-forest mr-2"></i>
+              <i className="fas fa-clipboard-list text-forest mr-2" aria-hidden="true"></i>
               Your Interest
             </label>
             <select 
@@ -107,7 +108,7 @@ export default function SampleRequestModal() {
               type="submit" 
               className="flex-1 bg-[#A4613A] hover:bg-[#8E5433] active:bg-[#744428] text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
             >
-              <i className="fas fa-box mr-2"></i>Request Free Sample
+              <i className="fas fa-box mr-2" aria-hidden="true"></i>Request Free Sample
             </button>
           </div>
         </form>

@@ -35,9 +35,9 @@ export default function IngredientPage() {
     return (
         <div className="min-h-screen bg-[#EBE8E1] selection:bg-[#B36B4D]/20">
             <Navigation />
-            <div className="pt-24">
+            <main id="main-content" className="pt-24">
                 <IngredientDetail data={ingredient} />
-            </div>
+            </main>
 
             {/* Related Ingredients — cross-linking for SEO + UX */}
             <section className="py-16 px-6 bg-[#F2F0EA] border-t border-[#3D3733]/10">
@@ -50,21 +50,24 @@ export default function IngredientPage() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {related.map((r) => (
-                            <Link key={r.slug} href={`/ingredients/${r.slug}`}>
-                                <a className="block p-5 bg-white/60 hover:bg-white border border-[#3D3733]/10 hover:border-[#B36B4D]/40 rounded-2xl transition-colors">
-                                    <h3 className="font-bold text-[#0F2A22] text-base mb-1">{r.name}</h3>
-                                    <span className="text-xs text-[#B36B4D] font-medium tracking-wide">
-                                        Read details →
-                                    </span>
-                                </a>
+                            <Link
+                                key={r.slug}
+                                href={`/ingredients/${r.slug}`}
+                                className="block p-5 bg-white/60 hover:bg-white border border-[#3D3733]/10 hover:border-[#B36B4D]/40 rounded-2xl transition-colors"
+                            >
+                                <h3 className="font-bold text-[#0F2A22] text-base mb-1">{r.name}</h3>
+                                <span className="text-xs text-[#B36B4D] font-medium tracking-wide">
+                                    Read details →
+                                </span>
                             </Link>
                         ))}
                     </div>
                     <div className="mt-10 text-center">
-                        <Link href="/ingredients">
-                            <a className="inline-block px-6 py-3 bg-[#0F2A22] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#B36B4D] transition-colors">
-                                Browse all 35 ingredients
-                            </a>
+                        <Link
+                            href="/ingredients"
+                            className="inline-block px-6 py-3 bg-[#0F2A22] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#B36B4D] transition-colors"
+                        >
+                            Browse all 35 ingredients
                         </Link>
                     </div>
                 </div>

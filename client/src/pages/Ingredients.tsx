@@ -25,7 +25,7 @@ export default function Ingredients() {
         <div className="min-h-screen bg-[#EBE8E1] selection:bg-[#B36B4D]/20">
             <Navigation />
 
-            <main className="pt-32 pb-20 px-6">
+            <main id="main-content" className="pt-32 pb-20 px-6">
                 <div className="max-w-7xl mx-auto">
                     {/* Header Section */}
                     <div className="mb-10">
@@ -71,8 +71,11 @@ export default function Ingredients() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.05 }}
                                 >
-                                    <Link href={`/ingredients/${id}`}>
-                                        <div className="group h-full p-5 bg-white/40 backdrop-blur-sm border border-white/40 rounded-2xl hover:bg-white hover:border-[#B36B4D]/30 transition-all duration-500 cursor-pointer shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col">
+                                    <Link
+                                        href={`/ingredients/${id}`}
+                                        className="group h-full p-5 bg-white/40 backdrop-blur-sm border border-white/40 rounded-2xl hover:bg-white hover:border-[#B36B4D]/30 transition-all duration-500 cursor-pointer shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col"
+                                    >
+                                        <div className="contents">
                                             <div className="mb-3">
                                                 <span className="text-[10px] uppercase tracking-[0.2em] text-[#B36B4D] font-bold">
                                                     Ingredient {index + 1}

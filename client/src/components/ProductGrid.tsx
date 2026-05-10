@@ -116,11 +116,12 @@ export default function ProductGrid() {
                 </div>
 
                 {/* CTA Button */}
-                <Link href="/#waitlist">
-                  <button className="w-full py-4 rounded-xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#B36B4D] transition-colors shadow-lg flex items-center justify-center gap-3">
-                    Reserve {product.title}
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                  </button>
+                <Link
+                  href="/#waitlist"
+                  className="w-full py-4 rounded-xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#B36B4D] transition-colors shadow-lg flex items-center justify-center gap-3"
+                >
+                  Reserve {product.title}
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
               </div>
             </div>

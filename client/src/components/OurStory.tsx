@@ -93,11 +93,12 @@ export default function OurStory() {
 
           {/* CTA & WELCOME MESSAGE */}
           <motion.div custom={5} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="flex flex-col gap-10">
-            <Link href="/ingredients">
-              <button className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-xs tracking-widest">
-                Explore Our Ingredients
-                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
-              </button>
+            <Link
+              href="/ingredients"
+              className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-xs tracking-widest"
+            >
+              Explore Our Ingredients
+              <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
             </Link>
 
             {/* THE MISSING HEART QUOTE - RESTORED */}
