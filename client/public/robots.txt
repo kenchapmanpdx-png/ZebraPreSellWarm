@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://zebra-pre-sell-warm.vercel.app/sitemap.xml
+Sitemap: https://wellnessforzebras.com/sitemap.xml
