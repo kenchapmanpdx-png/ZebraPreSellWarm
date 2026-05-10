@@ -17,9 +17,7 @@ import {
   Scale,
   ShieldAlert,
   Beaker,
-  AlertTriangle,
   Microscope,
-  Stethoscope,
   Scissors
 } from "lucide-react";
 
@@ -56,7 +54,7 @@ export default function OurPromise() {
                 "We exist because the system failed you."
               </p>
               <p className="text-lg md:text-xl text-[#4A4540] font-medium leading-relaxed">
-                ZebraWell wasn't born in a boardroom. It was built by a caregiver who watched someone they love struggle—and promised to do better. You've been dismissed, harmed, and ignored. This is our formal commitment to doing it right.
+                ZebraWell wasn't born in a boardroom. It was built by a caregiver who watched someone they love struggle, and promised to do better. This is our formal commitment to doing it right.
               </p>
             </div>
           </div>
@@ -247,15 +245,5 @@ const ACCOUNTABILITY = [
     icon: FileSearch,
     title: "Decision Logs",
     desc: "Public logs documenting exactly why we included or excluded every ingredient in the formula."
-  },
-  {
-    icon: AlertTriangle,
-    title: "Public Acknowledgment",
-    desc: "We own our mistakes. If we get it wrong, we tell you immediately and show you what we've changed."
-  },
-  {
-    icon: Stethoscope,
-    title: "Physician Formulated",
-    desc: "Formulations engineered by clinical experts who specialize in complex autonomic and connective tissue health."
   }
 ];

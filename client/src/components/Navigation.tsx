@@ -20,10 +20,10 @@ export default function Navigation() {
 
   const navLinks = [
     { name: "Our Story", href: "/#story" }, // Stays on Home
-    { name: "Ingredients", href: "/ingredients" }, // NEW: Full list
-    { name: "The How", href: "/the-how" },  // NEW: Points to your dedicated page
-    { name: "Quality", href: "/#quality" }, // Stays on Home
-    { name: "Formulas", href: "/#products" }, // Stays on Home
+    // { name: "Ingredients", href: "/ingredients" }, // hidden until launch
+    { name: "The How", href: "/the-how" },  // Points to your dedicated page
+    // { name: "Quality", href: "/#quality" }, // hidden - anchor goes nowhere useful pre-launch
+    // { name: "Formulas", href: "/#products" }, // hidden - anchor goes nowhere useful pre-launch
     { name: "Our Promise", href: "/our-promise" },
     { name: "Reserve", href: "/preorder" },
   ];
