@@ -19,13 +19,13 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: "Our Story", href: "/#story" }, // Stays on Home
+    { name: "Our Purpose", href: "/#story" }, // Anchors to the "Our Purpose" section in OurStory component
     // { name: "Ingredients", href: "/ingredients" }, // hidden until launch
     { name: "The How", href: "/the-how" },  // Points to your dedicated page
     // { name: "Quality", href: "/#quality" }, // hidden - anchor goes nowhere useful pre-launch
     // { name: "Formulas", href: "/#products" }, // hidden - anchor goes nowhere useful pre-launch
     { name: "Our Promise", href: "/our-promise" },
-    { name: "Reserve", href: "/preorder" },
+    // { name: "Reserve", href: "/preorder" }, // hidden - preorder funnel needs build-out before launch
   ];
 
   return (
