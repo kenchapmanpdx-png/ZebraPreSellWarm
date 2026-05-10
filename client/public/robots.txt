@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://wellnessforzebras.com/sitemap.xml
+Sitemap: https://www.wellnessforzebras.com/sitemap.xml
