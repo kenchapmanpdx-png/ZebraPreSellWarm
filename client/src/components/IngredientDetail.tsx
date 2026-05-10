@@ -25,7 +25,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             <Card className="bg-secondary/20 border-border shadow-md overflow-hidden ring-1 ring-black/[0.03]">
                 <CardHeader className="bg-secondary/30 border-b border-border/50 py-4">
                     <CardTitle className="text-xl font-serif flex items-center gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-accent" />
+                        <CheckCircle2 className="w-5 h-5 text-accent" aria-hidden="true" />
                         At a Glance
                     </CardTitle>
                 </CardHeader>
@@ -47,7 +47,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         <div className="flex flex-wrap gap-2">
                             {data.atAGlance.keyBenefits.map((benefit, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm bg-white/60 px-3 py-1.5 rounded-full border border-border/50 shadow-sm">
-                                    <CheckCircle2 className="w-3.5 h-3.5 text-accent/70" />
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-accent/70" aria-hidden="true" />
                                     {benefit}
                                 </div>
                             ))}
@@ -60,7 +60,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             <section className="space-y-8">
                 <div className="flex items-center gap-3">
                     <div className="p-2 bg-accent/10 rounded-lg">
-                        <Beaker className="w-6 h-6 text-accent" />
+                        <Beaker className="w-6 h-6 text-accent" aria-hidden="true" />
                     </div>
                     <h2 className="text-3xl font-serif">How It Works</h2>
                 </div>
@@ -75,7 +75,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             <section className="space-y-8 bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-border/50">
                 <div className="flex items-center gap-3">
                     <div className="p-2 bg-primary/5 rounded-lg">
-                        <Microscope className="w-6 h-6 text-primary" />
+                        <Microscope className="w-6 h-6 text-primary" aria-hidden="true" />
                     </div>
                     <h2 className="text-3xl font-serif">What the Research Shows</h2>
                 </div>
@@ -111,7 +111,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
 
                 {data.evidenceGaps && (
                     <div className="mt-8 p-6 bg-secondary/10 rounded-2xl border border-secondary/20 flex gap-4">
-                        <AlertCircle className="w-6 h-6 text-secondary-foreground/60 shrink-0 mt-1" />
+                        <AlertCircle className="w-6 h-6 text-secondary-foreground/60 shrink-0 mt-1" aria-hidden="true" />
                         <div className="space-y-2">
                             <h4 className="font-bold text-sm uppercase tracking-widest text-secondary-foreground/70">Evidence Gaps</h4>
                             <p className="text-sm text-secondary-foreground/80 leading-relaxed italic">{data.evidenceGaps}</p>
@@ -163,7 +163,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                             <div className="grid gap-3">
                                 {data.whyThisForm.comparison.map((comp, i) => (
                                     <div key={i} className={`p-4 rounded-xl flex items-start gap-4 transition-colors ${comp.selected ? 'bg-white/10 border border-white/20' : 'opacity-40 grayscale'}`}>
-                                        {comp.selected ? <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" /> : <XCircle className="w-5 h-5 opacity-40 shrink-0 mt-0.5" />}
+                                        {comp.selected ? <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" aria-hidden="true" /> : <XCircle className="w-5 h-5 opacity-40 shrink-0 mt-0.5" aria-hidden="true" />}
                                         <div>
                                             <p className="font-bold text-sm">{comp.form}</p>
                                             <p className="text-xs opacity-70">{comp.difference}</p>
@@ -180,7 +180,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             <section className="space-y-10">
                 <div className="flex items-center gap-3">
                     <div className="p-2 bg-green-500/10 rounded-lg">
-                        <ShieldCheck className="w-6 h-6 text-green-600" />
+                        <ShieldCheck className="w-6 h-6 text-green-600" aria-hidden="true" />
                     </div>
                     <h2 className="text-3xl font-serif">Safety & Interactions</h2>
                 </div>
@@ -202,7 +202,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.avoid.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-red-900/80">
-                                    <XCircle className="w-4 h-4 text-red-400" />
+                                    <XCircle className="w-4 h-4 text-red-400" aria-hidden="true" />
                                     {item}
                                 </li>
                             ))}
@@ -213,7 +213,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.safe.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-green-900/80">
-                                    <CheckCircle2 className="w-4 h-4 text-green-400" />
+                                    <CheckCircle2 className="w-4 h-4 text-green-400" aria-hidden="true" />
                                     {item}
                                 </li>
                             ))}
@@ -223,7 +223,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
 
                 {data.safety.cautions && (
                     <div className="p-8 bg-accent/5 rounded-[2rem] border border-accent/20 flex gap-6 italic">
-                        <AlertCircle className="w-8 h-8 text-accent shrink-0" />
+                        <AlertCircle className="w-8 h-8 text-accent shrink-0" aria-hidden="true" />
                         <p className="text-lg text-primary/80 leading-relaxed">{data.safety.cautions}</p>
                     </div>
                 )}

@@ -40,7 +40,7 @@ export default function OurPromise() {
       <section className="relative pt-32 pb-20 px-6 bg-[#DED9D0]">
         <div className="container mx-auto max-w-5xl text-center relative z-10" data-aos="fade-down">
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-2 rounded-full bg-white/60 border border-[#A4613A]/20 text-[#0F2A22] text-xs font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
-            <ShieldCheck size={16} className="text-[#A4613A]" />
+            <ShieldCheck size={16} className="text-[#A4613A]" aria-hidden="true" />
             The Zebra Science Promise
           </div>
 
@@ -70,7 +70,7 @@ export default function OurPromise() {
             <div className="space-y-12" data-aos="fade-right">
               <div className="flex items-center gap-6 mb-12 border-b-2 border-[#A4613A]/20 pb-8">
                 <div className="w-16 h-16 rounded-[1.5rem] bg-[#5A3E2B] flex items-center justify-center text-white shadow-lg">
-                  <Ban size={28} />
+                  <Ban size={28} aria-hidden="true" />
                 </div>
                 <h3 className="text-4xl font-serif font-bold text-[#262321]">
                   What We <span className="text-[#A4613A] italic underline decoration-[#A4613A]/30">Never</span> Do
@@ -92,7 +92,7 @@ export default function OurPromise() {
             <div className="space-y-12" data-aos="fade-left">
               <div className="flex items-center gap-6 mb-12 border-b-2 border-[#0F2A22]/20 pb-8">
                 <div className="w-16 h-16 rounded-[1.5rem] bg-[#0F2A22] flex items-center justify-center text-white shadow-lg">
-                  <CheckCircle2 size={28} />
+                  <CheckCircle2 size={28} aria-hidden="true" />
                 </div>
                 <h3 className="text-4xl font-serif font-bold text-[#262321]">
                   What We <span className="text-[#0F2A22] italic underline decoration-[#0F2A22]/30">Always</span> Do
@@ -156,11 +156,11 @@ export default function OurPromise() {
               <p className="text-lg font-bold uppercase tracking-[0.4em] mb-6">The Zebra Filter</p>
               <h3 className="text-3xl md:text-5xl font-serif font-bold mb-8 italic">Does this serve the patient?</h3>
               <div className="flex flex-col md:flex-row justify-center gap-12 text-lg font-bold">
-                <span className="flex items-center gap-3"><CheckCircle2 className="text-[#0F2A22]" /> If yes, we do it.</span>
-                <span className="flex items-center gap-3"><Ban className="text-[#0F2A22]" /> If no, we don't.</span>
+                <span className="flex items-center gap-3"><CheckCircle2 className="text-[#0F2A22]" aria-hidden="true" /> If yes, we do it.</span>
+                <span className="flex items-center gap-3"><Ban className="text-[#0F2A22]" aria-hidden="true" /> If no, we don't.</span>
               </div>
             </div>
-            <ShieldCheck size={200} className="absolute -bottom-10 -right-10 opacity-10 rotate-12" />
+            <ShieldCheck size={200} className="absolute -bottom-10 -right-10 opacity-10 rotate-12" aria-hidden="true" />
           </div>
         </div>
       </section>

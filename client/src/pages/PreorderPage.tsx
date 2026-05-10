@@ -54,7 +54,7 @@ export default function PreorderPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-amber-100 text-amber-800 border-amber-200 px-4 py-2 text-sm font-medium">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2" aria-hidden="true" />
               Coming Soon
             </Badge>
 
@@ -132,15 +132,15 @@ export default function PreorderPage() {
 
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
                     <span>Clinical-grade ingredients</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
                     <span>Formulated for rare conditions</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
                     <span>30-day supply per bottle</span>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function PreorderPage() {
               <Card className="border-amber-200 bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <Heart className="w-5 h-5 text-red-500 mr-2" />
+                    <Heart className="w-5 h-5 text-red-500 mr-2" aria-hidden="true" />
                     <Badge variant="secondary" className="bg-amber-100 text-amber-800">
                       EDS + MCAS patient
                     </Badge>
@@ -265,7 +265,7 @@ export default function PreorderPage() {
               <Card className="border-amber-200 bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <Heart className="w-5 h-5 text-red-500 mr-2" />
+                    <Heart className="w-5 h-5 text-red-500 mr-2" aria-hidden="true" />
                     <Badge variant="secondary" className="bg-green-100 text-green-800">
                       POTS community member
                     </Badge>
@@ -287,7 +287,7 @@ export default function PreorderPage() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8 md:p-12 border border-amber-200">
               <div className="mb-8">
-                <Clock className="w-12 h-12 text-amber-600 mx-auto mb-4" />
+                <Clock className="w-12 h-12 text-amber-600 mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-3xl md:text-4xl font-bold text-terra mb-4">
                   Reserve Your Spot – Limited First Run!
                 </h2>
@@ -300,7 +300,7 @@ export default function PreorderPage() {
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true" />
                     <Input
                       type="email"
                       placeholder="Enter your email address"
@@ -331,7 +331,7 @@ export default function PreorderPage() {
                 </form>
               ) : (
                 <div className="text-center">
-                  <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
+                  <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" aria-hidden="true" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     You're all set!
                   </h3>

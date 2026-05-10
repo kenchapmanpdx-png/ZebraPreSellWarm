@@ -143,7 +143,7 @@ export default function Showcase() {
           <div className="flex items-center gap-3">
             <Link href="/">
               <a className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#5D5752] hover:text-[#B36B4D]">
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4" aria-hidden="true" />
                 Back to site
               </a>
             </Link>
@@ -245,12 +245,12 @@ export default function Showcase() {
                 >
                   {visible[e.id] ? (
                     <>
-                      <EyeOff className="w-4 h-4" />
+                      <EyeOff className="w-4 h-4" aria-hidden="true" />
                       Hide
                     </>
                   ) : (
                     <>
-                      <Eye className="w-4 h-4" />
+                      <Eye className="w-4 h-4" aria-hidden="true" />
                       Show
                     </>
                   )}
@@ -307,7 +307,7 @@ export default function Showcase() {
             href="https://github.com/kenchapmanpdx-png/ZebraPreSellWarm"
             className="inline-flex items-center gap-1.5 mt-4 text-xs text-[#B36B4D] hover:underline"
           >
-            View repo <ExternalLink className="w-3 h-3" />
+            View repo <ExternalLink className="w-3 h-3" aria-hidden="true" />
           </a>
         </section>
       </main>

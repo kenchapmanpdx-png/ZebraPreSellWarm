@@ -64,7 +64,7 @@ export default function Home() {
             <Link href="/the-how">
               <button className="group relative px-10 py-5 bg-[#0F2A22] text-white rounded-full font-serif font-bold tracking-wider text-sm hover:bg-[#B36B4D] transition-all shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(179,107,77,0.4)] hover:scale-105 flex items-center gap-4">
                 View Condition-Specific Protocols
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </button>
             </Link>
           </div>

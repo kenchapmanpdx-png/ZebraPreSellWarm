@@ -96,13 +96,13 @@ export default function OurStory() {
             <Link href="/ingredients">
               <button className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-xs tracking-widest">
                 Explore Our Ingredients
-                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
               </button>
             </Link>
 
             {/* THE MISSING HEART QUOTE - RESTORED */}
             <div className="flex items-start gap-4 max-w-md border-l-2 border-[#B36B4D]/20 pl-6 py-2">
-              <Heart className="text-red-600 w-6 h-6 mt-1 flex-shrink-0 fill-red-600" />
+              <Heart className="text-red-600 w-6 h-6 mt-1 flex-shrink-0 fill-red-600" aria-hidden="true" />
               <p className="text-[14px] md:text-[16px] font-serif italic text-[#3D3733] leading-relaxed">
                 "If you or someone you love is a Zebra, welcome to the herd."
               </p>

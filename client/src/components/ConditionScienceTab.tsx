@@ -321,7 +321,7 @@ export default function ConditionScienceTabs() {
                     <span className={`text-[10px] font-black ${pathway.color} uppercase tracking-widest bg-white border border-black/5 px-2 py-1 rounded-md shadow-sm`}>{pathway.subtitle}</span>
                     {!expandedSection && <p className="text-[#8A857C] text-sm mt-4 line-clamp-2 font-medium">{pathway.summary}</p>}
                   </div>
-                  <div className="mt-2"><ChevronDown className={`transition-transform duration-300 ${expandedSection === pathway.id ? 'rotate-180' : ''}`} /></div>
+                  <div className="mt-2"><ChevronDown className={`transition-transform duration-300 ${expandedSection === pathway.id ? 'rotate-180' : ''}`} aria-hidden="true" /></div>
                 </button>
 
                 <AnimatePresence>
@@ -330,14 +330,14 @@ export default function ConditionScienceTabs() {
                       <div className="px-8 pb-10 pt-2 border-t border-gray-50">
                         <div className="grid grid-cols-1 gap-6 mb-8">
                             <div className="bg-rose-50/50 p-6 rounded-2xl border border-rose-100 flex gap-4">
-                                <AlertTriangle className="text-rose-600 flex-shrink-0" />
+                                <AlertTriangle className="text-rose-600 flex-shrink-0" aria-hidden="true" />
                                 <div>
                                   <p className="text-[10px] font-black text-rose-600 uppercase mb-1">Biological Problem</p>
                                   <p className="text-sm text-[#5D5752] font-medium leading-relaxed">{pathway.problem}</p>
                                 </div>
                             </div>
                             <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 flex gap-4">
-                                <CheckCircle2 className="text-emerald-600 flex-shrink-0" />
+                                <CheckCircle2 className="text-emerald-600 flex-shrink-0" aria-hidden="true" />
                                 <div>
                                   <p className="text-[10px] font-black text-emerald-600 uppercase mb-1">Our Strategy</p>
                                   <p className="text-sm text-[#5D5752] font-medium leading-relaxed">{pathway.solution}</p>
@@ -356,7 +356,7 @@ export default function ConditionScienceTabs() {
                                 ))}
                             </div>
                             <div className="mt-8 pt-6 border-t border-black/5 flex gap-4">
-                                <Sparkles className="text-[#B36B4D] flex-shrink-0" />
+                                <Sparkles className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" />
                                 <p className="text-sm text-[#3D3733] italic font-medium leading-relaxed">"{pathway.keyInsight}"</p>
                             </div>
                         </div>
@@ -369,7 +369,7 @@ export default function ConditionScienceTabs() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-20 text-center"><div className="inline-flex items-center gap-4 px-8 py-4 bg-[#3D3733] text-white rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D]" /><span className="text-xs font-black tracking-widest uppercase">28 CLINICAL ACTIVES • 20 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
+        <div className="mt-20 text-center"><div className="inline-flex items-center gap-4 px-8 py-4 bg-[#3D3733] text-white rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D]" aria-hidden="true" /><span className="text-xs font-black tracking-widest uppercase">28 CLINICAL ACTIVES • 20 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
       </div>
     </section>
   );

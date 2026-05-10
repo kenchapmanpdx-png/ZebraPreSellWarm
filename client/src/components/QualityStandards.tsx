@@ -7,21 +7,21 @@ export default function QualityStandards() {
     {
       title: "FDA-Registered Facility",
       desc: "ZebraWell is manufactured in a facility fully registered with the FDA, subject to regular, rigorous clinical inspections.",
-      icon: <Factory className="w-6 h-6 text-blue-600" />,
+      icon: <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"
     },
     {
       title: "NSF GMP Certified",
       desc: "Our partner maintains NSF GMP certification, ensuring every step follows the highest global standards for purity and safety.",
-      icon: <ShieldCheck className="w-6 h-6 text-blue-800" />,
+      icon: <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"
     },
     {
       title: "Third-Party Lab Tested",
       desc: "Every batch is verified by independent labs to ensure that what’s on the label is exactly what is in the bottle.",
-      icon: <Microscope className="w-6 h-6 text-[#B36B4D]" />,
+      icon: <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       bgColor: "bg-orange-50",
       borderColor: "border-orange-100"
     }

@@ -297,7 +297,7 @@ export default function CollagenScienceSection() {
           <div className="relative z-10 max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex p-3 bg-[#B36B4D]/10 rounded-2xl mb-6">
-                <RefreshCw className="w-8 h-8 text-[#B36B4D] animate-spin-slow" />
+                <RefreshCw className="w-8 h-8 text-[#B36B4D] animate-spin-slow" aria-hidden="true" />
               </div>
               <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#3D3733] mb-4">The "Vicious Cycle" of hEDS & MCAS</h3>
               <p className="text-[#8A857C] text-lg font-medium max-w-xl mx-auto">Understanding this biological feedback loop is key to breaking the cascade of destruction.</p>
@@ -370,7 +370,7 @@ export default function CollagenScienceSection() {
 
               {/* CENTER ICON */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center z-20 border border-gray-100">
-                <RefreshCw className="w-8 h-8 text-[#B36B4D]/30 animate-spin-slow" />
+                <RefreshCw className="w-8 h-8 text-[#B36B4D]/30 animate-spin-slow" aria-hidden="true" />
               </div>
             </div>
 
@@ -429,7 +429,7 @@ export default function CollagenScienceSection() {
             {/* Cycle indicator text */}
             <div className="flex justify-center mt-12 md:mt-20">
               <div className="flex items-center gap-3 px-8 py-3 rounded-full bg-[#B36B4D]/10 text-[#B36B4D] border border-[#B36B4D]/10">
-                <RefreshCw className="w-5 h-5 animate-spin-slow" />
+                <RefreshCw className="w-5 h-5 animate-spin-slow" aria-hidden="true" />
                 <span className="text-sm font-black uppercase tracking-[0.2em]">The cycle repeats indefinitely</span>
               </div>
             </div>
@@ -512,9 +512,9 @@ export default function CollagenScienceSection() {
                       </span>
                     </div>
                     {expandedSection === pathway.id ? (
-                      <ChevronUp className="w-5 h-5 text-gray-400" />
+                      <ChevronUp className="w-5 h-5 text-gray-400" aria-hidden="true" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-gray-400" />
+                      <ChevronDown className="w-5 h-5 text-gray-400" aria-hidden="true" />
                     )}
                   </div>
 
@@ -540,13 +540,13 @@ export default function CollagenScienceSection() {
                       <div className="bg-[#F8F7F4] rounded-xl p-4 mb-4 text-sm space-y-3">
                         <div>
                           <span className="text-[10px] font-black text-rose-500 uppercase tracking-widest flex items-center gap-2">
-                            <AlertCircle size={12} /> The Problem
+                            <AlertCircle size={12} aria-hidden="true" /> The Problem
                           </span>
                           <p className="text-[#5D5752] mt-1 text-xs leading-relaxed">{pathway.problem}</p>
                         </div>
                         <div>
                           <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest flex items-center gap-2">
-                            <CheckCircle2 size={12} /> Our Solution
+                            <CheckCircle2 size={12} aria-hidden="true" /> Our Solution
                           </span>
                           <p className="text-[#5D5752] mt-1 text-xs leading-relaxed">{pathway.solution}</p>
                         </div>
@@ -587,7 +587,7 @@ export default function CollagenScienceSection() {
         {/* Footer Summary */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#3D3733] text-white rounded-full shadow-xl hover:scale-105 transition-transform cursor-default">
-            <Zap className="w-4 h-4 text-[#B36B4D]" />
+            <Zap className="w-4 h-4 text-[#B36B4D]" aria-hidden="true" />
             <span className="text-xs font-bold tracking-widest uppercase">28 Ingredients • 14 Pathways • 1 System</span>
           </div>
         </div>

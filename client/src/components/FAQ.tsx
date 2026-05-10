@@ -109,7 +109,7 @@ export default function FAQ() {
           <div className="inline-flex flex-col md:flex-row items-center gap-8 p-8 bg-white/70 backdrop-blur-md rounded-[3rem] border border-white shadow-xl">
             <div className="flex items-center gap-5">
               <div className="w-12 h-12 rounded-full bg-[#3D3733] flex items-center justify-center text-white shadow-lg">
-                <Activity size={22} />
+                <Activity size={22} aria-hidden="true" />
               </div>
               <div className="text-left">
                 <p className="text-[#3D3733] font-bold text-sm">Have a specific medical question?</p>

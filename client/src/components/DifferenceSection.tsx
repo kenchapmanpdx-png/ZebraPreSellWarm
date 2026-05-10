@@ -14,42 +14,42 @@ import {
 export default function DifferenceSection() {
   const features = [
     {
-      icon: <Layers className="w-5 h-5" />,
+      icon: <Layers className="w-5 h-5" aria-hidden="true" />,
       title: "2 Bottles Replace 15",
       description: "Our AM & PM system delivers complete, targeted support without the clutter."
     },
     {
-      icon: <Microscope className="w-5 h-5" />,
+      icon: <Microscope className="w-5 h-5" aria-hidden="true" />,
       title: "Smart Science",
       description: "Only therapeutic doses of highly bioavailable, clinically-vetted ingredients."
     },
     {
-      icon: <ShieldAlert className="w-5 h-5" />,
+      icon: <ShieldAlert className="w-5 h-5" aria-hidden="true" />,
       title: "No Junk. Ever.",
       description: "Strictly zero fillers, binders, or 'pixie dusting.' Pure potency only."
     },
     {
-      icon: <HeartPulse className="w-5 h-5" />,
+      icon: <HeartPulse className="w-5 h-5" aria-hidden="true" />,
       title: "Condition Mindful",
       description: "Engineered for EDS & POTS while remaining strictly mindful of MCAS triggers."
     },
     {
-      icon: <Leaf className="w-5 h-5" />,
+      icon: <Leaf className="w-5 h-5" aria-hidden="true" />,
       title: "Gentle by Design",
       description: "Gut-safe, low-histamine formulas designed for the most sensitive systems."
     },
     {
-      icon: <Search className="w-5 h-5" />,
+      icon: <Search className="w-5 h-5" aria-hidden="true" />,
       title: "Total Transparency",
       description: "Rigorous third-party testing with accessible Certificates of Analysis."
     },
     {
-      icon: <Sparkles className="w-5 h-5" />,
+      icon: <Sparkles className="w-5 h-5" aria-hidden="true" />,
       title: "Minimalist Purity",
       description: "Only what helps. Clean formulations focused on maximum absorption."
     },
     {
-      icon: <RefreshCcw className="w-5 h-5" />,
+      icon: <RefreshCcw className="w-5 h-5" aria-hidden="true" />,
       title: "Circadian Synergy",
       description: "AM and PM formulas work as a synchronized system for 24-hour stability."
     },

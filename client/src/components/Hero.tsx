@@ -111,7 +111,7 @@ export default function Hero() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B36B4D]/30 to-transparent opacity-50" />
 
               <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
-                <Sparkles className="w-4 h-4" /> We see you
+                <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
               </p>
 
               <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
@@ -134,9 +134,13 @@ export default function Hero() {
 
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="relative">
+                  <label htmlFor="hero-waitlist-email" className="sr-only">Email address for waitlist signup</label>
                   <input
+                    id="hero-waitlist-email"
                     type="email"
                     placeholder="Email Address"
+                    aria-label="Email address for waitlist signup"
+                    autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -158,7 +162,7 @@ export default function Hero() {
                   }}
                 >
                   {isSubmitting ? "Processing..." : "Join the Waitlist"}
-                  <ArrowRight size={18} />
+                  <ArrowRight size={18} aria-hidden="true" />
                 </button>
               </form>
             </div>
@@ -206,7 +210,7 @@ export default function Hero() {
             {/* FDA Registered - Blue Icon */}
             <div className="flex items-center gap-4 group cursor-default">
               <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Factory className="w-5 h-5 text-blue-600" />
+                <Factory className="w-5 h-5 text-blue-600" aria-hidden="true" />
               </div>
               <div className="text-left">
                 <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">FDA Registered</span>
@@ -217,7 +221,7 @@ export default function Hero() {
             {/* NSF GMP - Royal Blue Icon */}
             <div className="flex items-center gap-4 group cursor-default">
               <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <ShieldCheck className="w-5 h-5 text-blue-800" />
+                <ShieldCheck className="w-5 h-5 text-blue-800" aria-hidden="true" />
               </div>
               <div className="text-left">
                 <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">NSF GMP</span>
@@ -228,7 +232,7 @@ export default function Hero() {
             {/* Lab Tested - Copper Icon */}
             <div className="flex items-center gap-4 group cursor-default">
               <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Microscope className="w-5 h-5 text-[#B36B4D]" />
+                <Microscope className="w-5 h-5 text-[#B36B4D]" aria-hidden="true" />
               </div>
               <div className="text-left">
                 <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">Third-Party</span>

@@ -43,7 +43,7 @@ function FeatureCard({ title, desc }: { title: string, desc: string }) {
   return (
     <div className="bg-white rounded-2xl p-8 border border-[#BCC2BB] hover:shadow-lg transition-shadow duration-300 group">
       <div className="w-12 h-12 rounded-full bg-[#9BA69C] flex items-center justify-center text-white mb-6 group-hover:bg-[#B36B4D] transition-colors">
-        <Check size={24} strokeWidth={3} />
+        <Check size={24} strokeWidth={3} aria-hidden="true" />
       </div>
       <h3 className="text-xl font-bold text-[#262321] mb-3">{title}</h3>
       <p className="text-[#5D5752] leading-relaxed">{desc}</p>

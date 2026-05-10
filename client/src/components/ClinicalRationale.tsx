@@ -15,7 +15,7 @@ export default function ClinicalRationale() {
       number: "01",
       title: "Halt the 'Collagen Shredder'",
       desc: "In hEDS, your body overproduces enzymes (MMPs) that act like a shredder, breaking down collagen faster than you can build it. We don't just add fuel; we unplug the shredder.",
-      icon: <Scissors className="w-8 h-8 text-white" />,
+      icon: <Scissors className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-rose-500", // Visually signaling 'stopping' the damage
       gradient: "from-rose-500/20 to-transparent"
     },
@@ -24,7 +24,7 @@ export default function ClinicalRationale() {
       number: "02",
       title: "Cellular 'Backdoor' Hydration",
       desc: "Salt pills often sit in the stomach, causing nausea. We use a glucose-transport mechanism to open a biological 'backdoor,' flooding cells with hydration instantly without the gastric distress.",
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-blue-500",
       gradient: "from-blue-500/20 to-transparent"
     },
@@ -33,7 +33,7 @@ export default function ClinicalRationale() {
       number: "03",
       title: "The Zero-Trigger Guarantee",
       desc: "Mast cells are finicky. We manually screen every milligram for biogenic amines and hidden histamine. No fermented fillers. No bovine gelatin. Just pure stability.",
-      icon: <ShieldCheck className="w-8 h-8 text-white" />,
+      icon: <ShieldCheck className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-emerald-500",
       gradient: "from-emerald-500/20 to-transparent"
     },
@@ -42,7 +42,7 @@ export default function ClinicalRationale() {
       number: "04",
       title: "Autonomic Synchronization",
       desc: "You shouldn't have to choose between 'brain fog' and 'jitters.' Our AM/PM system is timed to your circadian rhythm—calming adrenaline in the morning, repairing tissue at night.",
-      icon: <Activity className="w-8 h-8 text-white" />,
+      icon: <Activity className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-violet-500",
       gradient: "from-violet-500/20 to-transparent"
     }
@@ -145,7 +145,7 @@ export default function ClinicalRationale() {
             <div className={`relative bg-[#0F2A22] rounded-[3rem] px-8 py-12 md:py-16 md:px-20 text-center transition-all duration-500 ${isMapExpanded ? 'bg-transparent' : 'bg-[#0F2A22]'}`}>
               {!isMapExpanded ? (
                 <div className="flex flex-col items-center gap-6">
-                  <Sparkles className="w-10 h-10 text-[#B36B4D] animate-pulse" />
+                  <Sparkles className="w-10 h-10 text-[#B36B4D] animate-pulse" aria-hidden="true" />
                   <h3 className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight">
                     Explore the Clinical Logic
                   </h3>

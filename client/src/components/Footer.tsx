@@ -29,16 +29,16 @@ export default function Footer() {
             Research-driven. Zero compromise.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Twitter size={18} /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Instagram size={18} /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Linkedin size={18} /></a>
+            <a href="#" aria-label="ZebraWell on Twitter" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Twitter size={18} aria-hidden="true" /></a>
+            <a href="#" aria-label="ZebraWell on Instagram" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Instagram size={18} aria-hidden="true" /></a>
+            <a href="#" aria-label="ZebraWell on LinkedIn" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Linkedin size={18} aria-hidden="true" /></a>
           </div>
         </div>
 
         {/* Links Column */}
         <div className="grid grid-cols-2 gap-16">
           <div>
-            <h4 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Explore</h4>
+            <h3 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Explore</h3>
             <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
               <li><a href="/#story" className="hover:text-white transition-colors">Our Story</a></li>
               <li><Link href="/ingredients"><a className="hover:text-white transition-colors">Ingredients</a></Link></li>
@@ -48,7 +48,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Legal</h4>
+            <h3 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Legal</h3>
             <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
@@ -68,7 +68,7 @@ export default function Footer() {
           onClick={scrollToTop}
           className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#B36B4D] hover:text-white transition-colors"
         >
-          Back to Top <ArrowUp size={14} />
+          Back to Top <ArrowUp size={14} aria-hidden="true" />
         </button>
       </div>
     </footer>

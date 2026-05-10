@@ -48,7 +48,7 @@ export default function Ingredients() {
 
                         {/* Search Bar */}
                         <div className="relative max-w-md group">
-                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5D5752] group-focus-within:text-[#B36B4D] transition-colors" size={20} />
+                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5D5752] group-focus-within:text-[#B36B4D] transition-colors" size={20} aria-hidden="true" />
                             <input
                                 type="text"
                                 placeholder="Search ingredients..."

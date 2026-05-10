@@ -12,7 +12,7 @@ export default function ProductGrid() {
       subtitle: "Hemodynamic Stability & Energy",
       price: "Waitlist Only",
       description: "Stop the morning adrenaline dump. A clinical blend of electrolytes, B-Vitamins, and adaptogens to stabilize heart rate and clear brain fog before your feet hit the floor.",
-      icon: <Sun className="w-6 h-6 text-[#B36B4D]" />,
+      icon: <Sun className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       ingredients: ["1000mg Sodium", "Licorice Root", "Bio-Active B Complex"],
       gradient: "from-orange-100/50 to-white/50"
     },
@@ -23,7 +23,7 @@ export default function ProductGrid() {
       subtitle: "Mast Cell Calm & Repair",
       price: "Waitlist Only",
       description: "Clear the day's inflammatory load. Designed to stabilize mast cells while you sleep, preventing the '3 AM wake-up' and supporting deep connective tissue repair.",
-      icon: <Moon className="w-6 h-6 text-indigo-600" />,
+      icon: <Moon className="w-6 h-6 text-indigo-600" aria-hidden="true" />,
       ingredients: ["Quercetin Phytosome", "Luteolin", "DAO Enzyme"],
       gradient: "from-indigo-100/50 to-white/50"
     },
@@ -34,7 +34,7 @@ export default function ProductGrid() {
       subtitle: "Rapid Reaction Support",
       price: "Waitlist Only",
       description: "For when the bucket overflows. A rapid-dissolve powder designed to halt a flare-up in its tracks by flooding the system with stabilizers and hydration.",
-      icon: <ShieldAlert className="w-6 h-6 text-rose-600" />,
+      icon: <ShieldAlert className="w-6 h-6 text-rose-600" aria-hidden="true" />,
       ingredients: ["Pure L-Theanine", "Magnesium Glycinate", "Potassium"],
       gradient: "from-rose-100/50 to-white/50"
     }
@@ -78,7 +78,7 @@ export default function ProductGrid() {
               <div className="relative h-64 w-full bg-white/40 rounded-[2rem] flex items-center justify-center overflow-hidden group-hover:scale-[0.98] transition-transform duration-500">
                 <div className="absolute inset-0 bg-[#F2F0EA]/30" />
                 {/* Placeholder for Bottle Image */}
-                <FlaskConical size={64} className="text-[#3D3733]/20 relative z-10 group-hover:text-[#B36B4D] transition-colors duration-500" />
+                <FlaskConical size={64} className="text-[#3D3733]/20 relative z-10 group-hover:text-[#B36B4D] transition-colors duration-500" aria-hidden="true" />
 
                 {/* Floating Tag */}
                 <div className="absolute top-6 left-6 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
@@ -119,7 +119,7 @@ export default function ProductGrid() {
                 <Link href="/#waitlist">
                   <button className="w-full py-4 rounded-xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#B36B4D] transition-colors shadow-lg flex items-center justify-center gap-3">
                     Reserve {product.title}
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                   </button>
                 </Link>
               </div>
@@ -131,7 +131,7 @@ export default function ProductGrid() {
       {/* Trust Footer for the Grid */}
       <div className="max-w-2xl mx-auto text-center mt-20">
         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#B36B4D]/20 shadow-sm">
-          <Star className="w-4 h-4 text-[#B36B4D] fill-current" />
+          <Star className="w-4 h-4 text-[#B36B4D] fill-current" aria-hidden="true" />
           <span className="text-xs font-bold text-[#5D5752]">
             "Finally, a system that respects my sensitivity." — <span className="text-[#3D3733]">Verified Zebra</span>
           </span>
