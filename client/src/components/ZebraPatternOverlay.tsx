@@ -1,4 +1,4 @@
-import zebraPattern from '../assets/zebra-pattern-new.png';
+import zebraPattern from '../assets/zebra-pattern-new.webp';
 
 interface ZebraPatternOverlayProps {
   opacity?: number;

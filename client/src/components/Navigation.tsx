@@ -24,6 +24,8 @@ export default function Navigation() {
     { name: "The How", href: "/the-how" },  // NEW: Points to your dedicated page
     { name: "Quality", href: "/#quality" }, // Stays on Home
     { name: "Formulas", href: "/#products" }, // Stays on Home
+    { name: "Our Promise", href: "/our-promise" },
+    { name: "Reserve", href: "/preorder" },
   ];
 
   return (

@@ -22,8 +22,12 @@ export default function PreorderPage() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call for now
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      if (!response.ok) throw new Error('Request failed');
       setIsSubmitted(true);
       toast({
         title: "You're on the list!",

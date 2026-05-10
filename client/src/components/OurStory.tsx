@@ -40,7 +40,7 @@ export default function OurStory() {
               <motion.img
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.8 }}
-                src="/images/ken-and-ava.png"
+                src="/images/ken-and-ava.webp"
                 alt="Ken and Ava"
                 className="w-full h-auto object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
                 loading="lazy"

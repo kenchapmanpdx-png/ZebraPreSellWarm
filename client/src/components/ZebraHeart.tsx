@@ -1,5 +1,5 @@
 import React from 'react';
-import zebraPatternImg from '../assets/zebra-pattern.png';
+import zebraPatternImg from '../assets/zebra-pattern.webp';
 
 export default function ZebraHeart({ className = '', size = 20 }: { className?: string, size?: number }) {
   return (

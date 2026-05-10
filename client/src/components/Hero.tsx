@@ -4,7 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles } from 'lucide-react';
 // Ensure the image path matches your project structure
-import heroProductImage from '@assets/ChatGPT_Image_Jan_14,_2026,_01_05_39_PM_1768460138850.png';
+import heroProductImage from '@assets/hero-product.webp';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -175,8 +175,13 @@ export default function Hero() {
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
                 <img
                   src={heroProductImage}
-                  alt="ZebraWell Clinical Trinity"
-                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[2s] ease-out"
+                  alt="ZebraWell AM and PM clinical-grade supplement formulas — physician-formulated for EDS, POTS, and MCAS"
+                  width={1536}
+                  height={1024}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[time:2000ms] ease-out"
                 />
                 {/* Cinematic Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 via-transparent to-transparent pointer-events-none" />

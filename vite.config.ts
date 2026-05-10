@@ -27,5 +27,32 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "wouter"],
+          "radix-ui": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-popover",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-select",
+            "@radix-ui/react-toast",
+            "@radix-ui/react-checkbox",
+            "@radix-ui/react-radio-group",
+            "@radix-ui/react-switch",
+            "@radix-ui/react-label",
+            "@radix-ui/react-slot",
+          ],
+          "framer": ["framer-motion"],
+          "icons": ["lucide-react", "react-icons"],
+          "forms": ["react-hook-form", "@hookform/resolvers", "zod", "zod-validation-error"],
+          "query": ["@tanstack/react-query"],
+        },
+      },
+    },
   },
 });

@@ -17,7 +17,7 @@ export default function FloatingCTA() {
       <button 
         onClick={handleClick}
         style={buttonStyle}
-        className="text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-[650ms] transform hover:-translate-y-1 flex items-center focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
+        className="text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-700 transform hover:-translate-y-1 flex items-center focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
         onMouseEnter={(e) => e.currentTarget.style.backgroundPosition = 'right center'}
         onMouseLeave={(e) => e.currentTarget.style.backgroundPosition = 'left center'}
       >
