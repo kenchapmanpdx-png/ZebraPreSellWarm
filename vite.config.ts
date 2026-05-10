@@ -2,11 +2,31 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { vitePrerenderPlugin } from "vite-prerender-plugin";
+import ingredientList from "./scripts/ingredient-routes.json";
+
+// All routes prerendered at build time.
+// Root + section pages + 35 ingredient detail pages = 40 routes.
+// (Note: /showcase is intentionally NOT in this list — internal review page,
+//  no need to prerender; SPA fallback will serve it via index.html.)
+const PRERENDER_ROUTES = [
+  "/",
+  "/the-how",
+  "/ingredients",
+  "/our-promise",
+  "/preorder",
+  ...ingredientList.map((i: { slug: string }) => `/ingredients/${i.slug}`),
+];
 
 export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
+    vitePrerenderPlugin({
+      renderTarget: "#root",
+      prerenderScript: path.resolve(import.meta.dirname, "client/src/prerender.tsx"),
+      additionalPrerenderRoutes: PRERENDER_ROUTES,
+    }),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
