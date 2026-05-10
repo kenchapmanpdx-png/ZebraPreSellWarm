@@ -56,15 +56,34 @@ function metaForRoute(url: string): RouteMeta {
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
   if (ingMatch) {
     const slug = ingMatch[1];
-    const item = (ingredientData as Record<string, { name: string; atAGlance?: { whatItIs?: string } }>)[slug];
+    const item = (ingredientData as Record<string, {
+      name: string;
+      atAGlance?: { whatItIs?: string; whyWeIncludeIt?: string; keyBenefits?: string[] };
+    }>)[slug];
     const listed = ingredientList.find((i: { slug: string; name: string }) => i.slug === slug);
-    const name = item?.name || listed?.name || slug;
-    const desc =
-      item?.atAGlance?.whatItIs ||
-      `${name} — clinical evidence, dose rationale, and how it fits the hEDS/POTS/MCAS protocol in ZebraWell's formulas.`;
+    const rawName = item?.name || listed?.name || slug;
+    // Strip trademark/brand parenthetical for cleaner titles
+    const name = rawName.split(" (")[0];
+
+    // Build 120-160 char description from available fields.
+    const ag = item?.atAGlance;
+    const parts: string[] = [];
+    if (ag?.whatItIs) parts.push(ag.whatItIs);
+    if (ag?.whyWeIncludeIt) parts.push(ag.whyWeIncludeIt);
+    if (ag?.keyBenefits && ag.keyBenefits.length) parts.push(ag.keyBenefits.slice(0, 3).join(". "));
+    let desc = parts.join(" ").trim();
+    if (desc.length < 80) {
+      desc = `${name}: evidence-based dose rationale and mechanism for ZebraWell's hEDS, POTS, and MCAS protocol. ${desc}`.trim();
+    }
+    if (desc.length > 160) {
+      const cut = desc.slice(0, 160);
+      const lastDot = cut.lastIndexOf(". ");
+      desc = lastDot > 100 ? cut.slice(0, lastDot + 1) : cut.slice(0, 157) + "...";
+    }
+
     return {
-      title: `${name} | ZebraWell Ingredient Reference`,
-      description: desc.slice(0, 160),
+      title: `${name} | ZebraWell`,
+      description: desc,
     };
   }
 
