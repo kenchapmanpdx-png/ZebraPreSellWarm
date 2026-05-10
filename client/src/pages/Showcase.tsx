@@ -79,7 +79,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/DifferenceSection.tsx",
     lines: 131,
     blurb:
-      "Eight-tile feature grid: '2 Bottles Replace 15', 'Physician Formulated', plus six others. Marketing differentiation block.",
+      "Eight-tile feature grid: '2 Bottles Replace 15', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Gentle by Design', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
     context:
       "Per the June 15 changelog, the 'Why Choose ZebraWell' section was removed and its benefits moved into 'What Makes ZebraWell Different.' This component may be the orphaned predecessor — verify against the live homepage before reintroducing.",
     Component: DifferenceSection,

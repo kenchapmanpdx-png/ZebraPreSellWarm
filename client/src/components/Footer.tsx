@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <p className="text-[#EBE8E1]/60 text-sm leading-relaxed mb-8">
             Clinical-grade stability for the hyper-mobile and histamine-sensitive.
-            Physician formulated. Zero compromise.
+            Research-driven. Zero compromise.
           </p>
           <div className="flex gap-4">
             <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#B36B4D] transition-colors"><Twitter size={18} /></a>
