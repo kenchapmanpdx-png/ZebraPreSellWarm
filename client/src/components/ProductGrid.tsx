@@ -1,42 +1,47 @@
-/* client/src/components/ProductGrid.tsx */
+/* client/src/components/ProductGrid.tsx
+ *
+ * Three-SKU lineup for v7.8: AM Capsules, PM Capsules, Daily Powder.
+ * Replaced the older Autonomic Rise / Histamine Guard / Flare Defense
+ * naming (and the bogus "Acute Rescue" 3rd SKU) with the actual formula.
+ */
 import { motion } from "framer-motion";
-import { Star, Check, ArrowRight, FlaskConical, Sun, Moon, ShieldAlert } from "lucide-react";
+import { Star, ArrowRight, FlaskConical, Sun, Moon, Droplets } from "lucide-react";
 import { Link } from "wouter";
 
 export default function ProductGrid() {
   const products = [
     {
-      id: "morning",
-      tag: "AM FORMULA",
-      title: "Autonomic Rise",
-      subtitle: "Hemodynamic Stability & Energy",
+      id: "am",
+      tag: "AM CAPSULES",
+      title: "AM Capsules",
+      subtitle: "Morning Foundation",
       price: "Waitlist Only",
-      description: "Stop the morning adrenaline dump. A clinical blend of electrolytes, B-Vitamins, and adaptogens to stabilize heart rate and clear brain fog before your feet hit the floor.",
+      description: "The morning foundation. Methylated B-vitamins, vitamin D3 paired with K2 (MK-7), and the trace minerals that drive collagen cross-linking and histamine clearance. Built to support steady energy and autonomic balance through your day.",
       icon: <Sun className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
-      ingredients: ["1000mg Sodium", "Licorice Root", "Bio-Active B Complex"],
+      ingredients: ["Methyl B12 + Methylfolate", "Vitamin D3 + K2 (MK-7)", "Copper, Manganese, Selenium"],
       gradient: "from-orange-100/50 to-white/50"
     },
     {
-      id: "evening",
-      tag: "PM FORMULA",
-      title: "Histamine Guard",
-      subtitle: "Mast Cell Calm & Repair",
+      id: "pm",
+      tag: "PM CAPSULES",
+      title: "PM Capsules",
+      subtitle: "Evening Reset",
       price: "Waitlist Only",
-      description: "Clear the day's inflammatory load. Designed to stabilize mast cells while you sleep, preventing the '3 AM wake-up' and supporting deep connective tissue repair.",
+      description: "Evening reset. Zinc carnosine to protect your gut lining, the trace minerals (Boron, Molybdenum) and B-vitamin precursors that work overnight, plus the PM split of mast cell stabilizers so the inflammatory load doesn't follow you to sleep.",
       icon: <Moon className="w-6 h-6 text-indigo-600" aria-hidden="true" />,
-      ingredients: ["Quercetin Phytosome", "Luteolin", "DAO Enzyme"],
+      ingredients: ["Zinc Carnosine (GI lining)", "Boron + Molybdenum", "Pantothenic Acid + Biotin"],
       gradient: "from-indigo-100/50 to-white/50"
     },
     {
-      id: "rescue",
-      tag: "ACUTE RESCUE",
-      title: "Flare Defense",
-      subtitle: "Rapid Reaction Support",
+      id: "powder",
+      tag: "DAILY POWDER",
+      title: "Daily Powder",
+      subtitle: "ECM Protection & Mast Cell Calm",
       price: "Waitlist Only",
-      description: "For when the bucket overflows. A rapid-dissolve powder designed to halt a flare-up in its tracks by flooding the system with stabilizers and hydration.",
-      icon: <ShieldAlert className="w-6 h-6 text-rose-600" aria-hidden="true" />,
-      ingredients: ["Pure L-Theanine", "Magnesium Glycinate", "Potassium"],
-      gradient: "from-rose-100/50 to-white/50"
+      description: "The bulk actives in a dissolvable form. Quercefit® quercetin phytosome, ultramicronized PEA, micronized luteolin, magnesium bisglycinate at therapeutic dose, sodium-buffered vitamin C, and taurine. Mixed into water; built to deliver the ingredients that need gram-scale dosing.",
+      icon: <Droplets className="w-6 h-6 text-emerald-700" aria-hidden="true" />,
+      ingredients: ["Quercetin Phytosome (Quercefit®)", "Magnesium Bisglycinate (2,400 mg)", "Ultramicronized PEA + Luteolin"],
+      gradient: "from-emerald-100/50 to-white/50"
     }
   ];
 
@@ -71,23 +76,18 @@ export default function ProductGrid() {
             viewport={{ once: true }}
             className="group relative flex flex-col h-full"
           >
-            {/* The Card Container - Glassmorphism & Depth */}
             <div className={`h-full rounded-[2.5rem] bg-gradient-to-b ${product.gradient} backdrop-blur-xl border border-white shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden flex flex-col p-2`}>
 
-              {/* Product Visual Area */}
               <div className="relative h-64 w-full bg-white/40 rounded-[2rem] flex items-center justify-center overflow-hidden group-hover:scale-[0.98] transition-transform duration-500">
                 <div className="absolute inset-0 bg-[#F2F0EA]/30" />
-                {/* Placeholder for Bottle Image */}
                 <FlaskConical size={64} className="text-[#3D3733]/20 relative z-10 group-hover:text-[#B36B4D] transition-colors duration-500" aria-hidden="true" />
 
-                {/* Floating Tag */}
                 <div className="absolute top-6 left-6 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
                   {product.icon}
                   <span className="text-[10px] font-black uppercase tracking-widest text-[#3D3733]">{product.tag}</span>
                 </div>
               </div>
 
-              {/* Product Details */}
               <div className="p-8 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -104,7 +104,6 @@ export default function ProductGrid() {
                   {product.description}
                 </p>
 
-                {/* Ingredient Highlights */}
                 <div className="mt-auto mb-8 space-y-3">
                   <p className="text-[9px] font-black text-[#B36B4D]/60 uppercase tracking-[0.2em]">Key Actives</p>
                   {product.ingredients.map((ing) => (
@@ -115,7 +114,6 @@ export default function ProductGrid() {
                   ))}
                 </div>
 
-                {/* CTA Button */}
                 <Link
                   href="/#waitlist"
                   className="w-full py-4 rounded-xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#B36B4D] transition-colors shadow-lg flex items-center justify-center gap-3"
@@ -129,7 +127,6 @@ export default function ProductGrid() {
         ))}
       </div>
 
-      {/* Trust Footer for the Grid */}
       <div className="max-w-2xl mx-auto text-center mt-20">
         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#B36B4D]/20 shadow-sm">
           <Star className="w-4 h-4 text-[#B36B4D] fill-current" aria-hidden="true" />
