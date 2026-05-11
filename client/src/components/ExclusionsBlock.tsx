@@ -31,7 +31,7 @@ export default function ExclusionsBlock() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8">
           <span className="inline-block text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#B36B4D] mb-3">
-            What we refuse to use
+            Excipients we refuse to use
           </span>
           <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#0F2A22] leading-tight">
             Nine triggers we built around
@@ -57,7 +57,7 @@ export default function ExclusionsBlock() {
         </ul>
 
         <p className="text-center text-sm md:text-base text-[#3D3733]/80 italic max-w-2xl mx-auto leading-relaxed mb-5">
-          Every ingredient in the formula had to survive one question: would a zebra react to this?
+          Every excipient and every active in the formula had to survive one question: would a zebra react to this?
         </p>
 
         <div className="text-center">
