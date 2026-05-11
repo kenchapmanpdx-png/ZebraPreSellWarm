@@ -51,10 +51,10 @@ export default function OurPromise() {
           <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="px-8 py-10 rounded-[3rem] bg-white/40 border-2 border-white backdrop-blur-xl shadow-2xl">
               <p className="text-2xl md:text-3xl text-[#262321] font-serif font-bold leading-tight mb-6 italic">
-                "We exist because the system failed you."
+                "Designed for the conditions standard supplements weren't built to support."
               </p>
               <p className="text-lg md:text-xl text-[#4A4540] font-medium leading-relaxed">
-                ZebraWell wasn't born in a boardroom. It was built by a caregiver who watched someone they love struggle, and promised to do better. This is our formal commitment to doing it right.
+                ZebraWell exists because the EDS, POTS, and MCAS triad needs a formulation built around its constraints from the start - not a generic multivitamin retrofitted with a few flagship ingredients. This is our formal commitment to how we do that work.
               </p>
             </div>
           </div>
@@ -163,11 +163,16 @@ export default function OurPromise() {
         </div>
       </section>
 
-      {/* THE BOTTOM LINE: Dramatic Scale-In */}
-      <section className="py-32 px-6 bg-[#0F2A22] overflow-hidden">
-        <div className="container mx-auto max-w-4xl text-center text-[#EBE8E1]">
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-10" data-aos="fade-up">The Bottom Line</h2>
-          <p className="text-xl md:text-2xl mb-16 opacity-80 italic font-serif" data-aos="fade-up" data-aos-delay="200">
+      {/* THE BOTTOM LINE: high-contrast headline on dark green */}
+      <section className="py-24 md:py-32 px-6 bg-[#0F2A22] overflow-hidden">
+        <div className="container mx-auto max-w-4xl text-center">
+          <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#D4A373] mb-5">
+            The Bottom Line
+          </span>
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-10 text-white">
+            What it comes down to.
+          </h2>
+          <p className="text-xl md:text-2xl mb-16 italic font-serif text-[#EBE8E1]/90 max-w-3xl mx-auto">
             "We're not a wellness brand chasing trends. We're a safe harbor for people whose bodies don't follow the rules."
           </p>
 
