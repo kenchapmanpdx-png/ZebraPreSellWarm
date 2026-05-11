@@ -1,5 +1,5 @@
 /* client/src/pages/Home.tsx */
-import { useEffect, Suspense, lazy } from 'react';
+import { useEffect } from 'react';
 import { Link } from "wouter"; // Added for the button link
 import { ArrowRight } from "lucide-react"; // Added for the button icon
 import Navigation from '@/components/Navigation';
@@ -12,11 +12,15 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 
-// LAZY LOADED COMPONENTS
-const CollagenScienceSection = lazy(() => import('@/components/CollagenScienceSection'));
-const QualityStandards = lazy(() => import('@/components/QualityStandards'));
-const Testimonials = lazy(() => import('@/components/Testimonials'));
-const FAQ = lazy(() => import('@/components/FAQ'));
+// Direct imports — these were lazy-loaded but the prerender engine ships
+// the Suspense fallback (empty div) for them, so 8 FAQs, the Collagen
+// Shredder science framing, Quality Standards, and Testimonials were
+// invisible to Google/Ahrefs/AudioEye. Loading directly ensures they
+// appear in the prerendered HTML.
+import CollagenScienceSection from '@/components/CollagenScienceSection';
+import QualityStandards from '@/components/QualityStandards';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
 
 export default function Home() {
   // Scroll observer for fade-in animations
@@ -57,25 +61,21 @@ export default function Home() {
         <ExclusionsBlock />
 
         {/* 3. QUALITY STANDARDS - The "0% Trigger" Badge & Trust */}
-        <Suspense fallback={<div className="h-48 bg-[#EBE8E1]" />}>
-          <QualityStandards />
-        </Suspense>
+        <QualityStandards />
 
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
-        <Suspense fallback={<div className="h-96 bg-[#EBE8E1]" />}>
-          <CollagenScienceSection />
+        <CollagenScienceSection />
 
-          {/* THE BRIDGE BUTTON: Links to /the-how */}
-          <div className="flex justify-center pb-24 -mt-8 relative z-20">
-            <Link
-              href="/the-how"
-              className="group relative px-10 py-5 bg-[#0F2A22] text-white rounded-full font-serif font-bold tracking-wider text-sm hover:bg-[#B36B4D] transition-all shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(179,107,77,0.4)] hover:scale-105 flex items-center gap-4"
-            >
-              View Condition-Specific Protocols
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </Link>
-          </div>
-        </Suspense>
+        {/* THE BRIDGE BUTTON: Links to /the-how */}
+        <div className="flex justify-center pb-24 -mt-8 relative z-20">
+          <Link
+            href="/the-how"
+            className="group relative px-10 py-5 bg-[#0F2A22] text-white rounded-full font-serif font-bold tracking-wider text-sm hover:bg-[#B36B4D] transition-all shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(179,107,77,0.4)] hover:scale-105 flex items-center gap-4"
+          >
+            View Condition-Specific Protocols
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+          </Link>
+        </div>
 
         {/* 5. PRODUCT GRID - The "Clinical Collection" */}
         <div id="products" className="fade-in py-8 md:py-16">
@@ -83,10 +83,8 @@ export default function Home() {
         </div>
 
         {/* 6. SOCIAL PROOF & OBJECTIONS */}
-        <Suspense fallback={<div className="h-40" />}>
-          <Testimonials />
-          <FAQ />
-        </Suspense>
+        <Testimonials />
+        <FAQ />
       </main>
 
       {/* GLOBAL FOOTER & UTILITIES */}
