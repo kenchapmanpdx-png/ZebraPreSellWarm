@@ -102,7 +102,7 @@ export default function OurPromise() {
                   <span className="absolute left-0 top-0 text-3xl font-serif font-bold text-[#A4613A]/20 group-hover:text-[#A4613A] transition-colors">
                     {idx + 1}
                   </span>
-                  <h4 className="text-2xl font-serif font-bold text-[#5A3E2B] mb-3">{item.title}</h4>
+                  <h3 className="text-2xl font-serif font-bold text-[#5A3E2B] mb-3">{item.title}</h3>
                   <p className="text-[#4A4540] text-lg leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -124,7 +124,7 @@ export default function OurPromise() {
                   <span className="absolute left-0 top-0 text-3xl font-serif font-bold text-[#0F2A22]/20 group-hover:text-[#0F2A22] transition-colors">
                     {idx + 1}
                   </span>
-                  <h4 className="text-2xl font-serif font-bold text-[#5A3E2B] mb-3">{item.title}</h4>
+                  <h3 className="text-2xl font-serif font-bold text-[#5A3E2B] mb-3">{item.title}</h3>
                   <p className="text-[#4A4540] text-lg leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -152,9 +152,9 @@ export default function OurPromise() {
                   data-aos-delay={idx * 150}
                 >
                   <div className="w-14 h-14 bg-[#0F2A22] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
-                    <Icon size={24} className="text-[#A4613A]" />
+                    <Icon size={24} className="text-[#A4613A]" aria-hidden="true" />
                   </div>
-                  <h4 className="text-xl font-serif font-bold text-[#262321] mb-4">{x.title}</h4>
+                  <h3 className="text-xl font-serif font-bold text-[#262321] mb-4">{x.title}</h3>
                   <p className="text-[#4A4540] text-sm leading-relaxed">{x.desc}</p>
                 </div>
               )

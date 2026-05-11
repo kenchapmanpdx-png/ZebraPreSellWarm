@@ -11,6 +11,27 @@ export function setCors(res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
 
+
+/**
+ * Honeypot bot check.
+ *
+ * Frontend forms include a hidden input named `website` (or whatever the
+ * convention is below). Real users leave it empty. Bots that auto-fill all
+ * inputs by name fill it in. If the body has a non-empty honeypot, we accept
+ * the request (return 200 to keep the bot happy) but skip ALL downstream
+ * processing — no Resend write, no DB write, no log line.
+ *
+ * Returns true if the request looks human and should proceed.
+ */
+export function checkHoneypot(body: unknown): boolean {
+  if (!body || typeof body !== "object") return true;
+  const b = body as Record<string, unknown>;
+  // Honeypot fields — keep multiple names so bots have nothing to filter on
+  const trap = b.website || b.url || b.company_url || b.fax;
+  if (typeof trap === "string" && trap.trim().length > 0) return false;
+  return true;
+}
+
 export function methodGuard(req: VercelRequest, res: VercelResponse, allowed: string[]) {
   setCors(res);
   if (req.method === "OPTIONS") {

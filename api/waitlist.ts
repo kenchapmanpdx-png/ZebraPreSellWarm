@@ -11,13 +11,18 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
 import { insertWaitlistSubmissionSchema, waitlistSubmissions } from "./_lib/schemas.js";
 import { getDb } from "./_lib/db.js";
-import { methodGuard, validate, logSubmission } from "./_lib/respond.js";
+import { methodGuard, validate, logSubmission, checkHoneypot } from "./_lib/respond.js";
 
 const RESEND_KEY = process.env.RESEND_API_KEY;
 const SEGMENT_ID = process.env.RESEND_WAITLIST_SEGMENT_ID; // optional — for tagging
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!methodGuard(req, res, ["POST"])) return;
+
+  // Silent honeypot drop — bots filled the trap field; respond OK with no side effects
+  if (!checkHoneypot(req.body)) {
+    return res.status(200).json({ message: "OK" });
+  }
 
   const v = validate(insertWaitlistSubmissionSchema, req.body);
   if (!v.ok) return res.status(v.status).json(v.payload);

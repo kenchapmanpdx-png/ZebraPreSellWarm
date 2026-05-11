@@ -14,6 +14,10 @@ import Ingredients from "./pages/Ingredients";
 import IngredientPage from "./pages/IngredientPage";
 import PreorderPage from "./pages/PreorderPage";
 import OurPromise from "./pages/OurPromise";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Shipping from "./pages/Shipping";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/not-found";
 
 const Showcase = lazy(() => import("./pages/Showcase"));
@@ -44,6 +48,10 @@ function Router() {
       <Route path="/ingredients/:id" component={IngredientPage} />
       <Route path="/preorder" component={PreorderPage} />
       <Route path="/our-promise" component={OurPromise} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/shipping" component={Shipping} />
+      <Route path="/contact" component={Contact} />
       <Route path="/showcase">
         <Suspense fallback={<div className="min-h-screen bg-[#EBE8E1]" />}>
           <Showcase />

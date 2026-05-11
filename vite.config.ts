@@ -15,6 +15,10 @@ const PRERENDER_ROUTES = [
   "/ingredients",
   "/our-promise",
   "/preorder",
+  "/privacy",
+  "/terms",
+  "/shipping",
+  "/contact",
   ...ingredientList.map((i: { slug: string }) => `/ingredients/${i.slug}`),
 ];
 

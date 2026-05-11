@@ -1849,7 +1849,7 @@ export const ingredients: Record<string, IngredientData> = {
             ]
         },
         safety: {
-            sideEffects: "Low risk. Initial detox surge ('sulfite die-off') possible. Stabilizes mast cells.",
+            sideEffects: "Low risk. Some users report mild GI changes during the first 1–2 weeks as sulfite-processing pathways recalibrate. Stabilizes mast cells.",
             interactions: "Separate from Iron, Zinc, and Copper by 2-4 hours; can reduce copper absorption long-term. Enhances acetaminophen metabolism.",
             excipientConcerns: {
                 avoid: ["Yeast-derived forms", "Titanium dioxide", "Magnesium stearate"],

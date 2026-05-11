@@ -33,26 +33,26 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             {/* At a Glance */}
             <Card className="bg-secondary/20 border-border shadow-md overflow-hidden ring-1 ring-black/[0.03]">
                 <CardHeader className="bg-secondary/30 border-b border-border/50 py-4">
-                    <CardTitle className="text-xl font-serif flex items-center gap-2">
+                    <h2 className="text-xl font-serif flex items-center gap-2 m-0">
                         <CheckCircle2 className="w-5 h-5 text-accent" aria-hidden="true" />
                         At a Glance
-                    </CardTitle>
+                    </h2>
                 </CardHeader>
                 <CardContent className="p-8 grid gap-8 md:grid-cols-2">
                     <div className="space-y-3">
-                        <h4 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">What It Is</h4>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">What It Is</h3>
                         <p className="text-lg leading-snug">{data.atAGlance.whatItIs}</p>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Why We Include It</h4>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Why We Include It</h3>
                         <p className="text-lg leading-snug">{data.atAGlance.whyWeIncludeIt}</p>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Daily Dose</h4>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Daily Dose</h3>
                         <p className="text-xl font-serif font-medium text-primary">{data.atAGlance.dose}</p>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Key Benefits</h4>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Key Benefits</h3>
                         <div className="flex flex-wrap gap-2">
                             {data.atAGlance.keyBenefits.map((benefit, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm bg-white/60 px-3 py-1.5 rounded-full border border-border/50 shadow-sm">
@@ -122,7 +122,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     <div className="mt-8 p-6 bg-secondary/10 rounded-2xl border border-secondary/20 flex gap-4">
                         <AlertCircle className="w-6 h-6 text-secondary-foreground/60 shrink-0 mt-1" aria-hidden="true" />
                         <div className="space-y-2">
-                            <h4 className="font-bold text-sm uppercase tracking-widest text-secondary-foreground/70">Evidence Gaps</h4>
+                            <h3 className="font-bold text-sm uppercase tracking-widest text-secondary-foreground/70">Evidence Gaps</h3>
                             <p className="text-sm text-secondary-foreground/80 leading-relaxed italic">{data.evidenceGaps}</p>
                         </div>
                     </div>
@@ -168,7 +168,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
 
                     {data.whyThisForm.comparison && (
                         <div className="pt-8 grid gap-4">
-                            <h4 className="font-bold text-xs uppercase tracking-[0.2em] opacity-60">Form Comparison</h4>
+                            <h3 className="font-bold text-xs uppercase tracking-[0.2em] opacity-60">Form Comparison</h3>
                             <div className="grid gap-3">
                                 {data.whyThisForm.comparison.map((comp, i) => (
                                     <div key={i} className={`p-4 rounded-xl flex items-start gap-4 transition-colors ${comp.selected ? 'bg-white/10 border border-white/20' : 'opacity-40 grayscale'}`}>
@@ -207,7 +207,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
 
                 <div className="grid gap-8 md:grid-cols-2">
                     <div className="p-8 bg-red-50/50 rounded-3xl border border-red-100 space-y-4">
-                        <h4 className="font-bold text-xs uppercase tracking-widest text-red-800/70">Excipients to Avoid</h4>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-red-800/70">Excipients to Avoid</h3>
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.avoid.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-red-900/80">
@@ -218,7 +218,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         </ul>
                     </div>
                     <div className="p-8 bg-green-50/50 rounded-3xl border border-green-100 space-y-4">
-                        <h4 className="font-bold text-xs uppercase tracking-widest text-green-800/70">Safe Excipients</h4>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-green-800/70">Safe Excipients</h3>
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.safe.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-green-900/80">

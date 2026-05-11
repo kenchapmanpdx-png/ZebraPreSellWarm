@@ -27,10 +27,11 @@ export default function Hero() {
     setIsSubmitting(true);
 
     try {
+      const hp = (document.getElementById('hero-website-hp') as HTMLInputElement | null)?.value || '';
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({ email: email.trim(), website: hp }),
       });
 
       const data = await response.json();
@@ -133,6 +134,11 @@ export default function Hero() {
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                {/* Honeypot: hidden field bots fill, real users don't. Tab-blocked + invisible. */}
+                <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
+                  <label htmlFor="hero-website-hp">Website (leave blank)</label>
+                  <input id="hero-website-hp" type="text" name="website" tabIndex={-1} autoComplete="off" />
+                </div>
                 <div className="relative">
                   <label htmlFor="hero-waitlist-email" className="sr-only">Email address for waitlist signup</label>
                   <input

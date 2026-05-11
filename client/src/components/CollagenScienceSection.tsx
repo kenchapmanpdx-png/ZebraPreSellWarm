@@ -500,7 +500,7 @@ export default function CollagenScienceSection() {
                 className="w-full p-6 flex items-start gap-4 text-left transition-colors relative z-10"
               >
                 <div className={`w-12 h-12 rounded-lg ${pathway.bg} flex items-center justify-center flex-shrink-0 mt-1`}>
-                  <pathway.icon className={`w-6 h-6 ${pathway.color}`} />
+                  <pathway.icon className={`w-6 h-6 ${pathway.color}`} aria-hidden="true" />
                 </div>
 
                 <div className="flex-grow">

@@ -40,10 +40,11 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
 
     setIsSubmitting(true);
     try {
+      const hp = (document.getElementById("modal-website-hp") as HTMLInputElement | null)?.value || "";
       const response = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({ email: email.trim(), website: hp }),
       });
       if (!response.ok) throw new Error("Request failed");
       setIsSubmitted(true);
@@ -90,6 +91,10 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
             </DialogHeader>
 
             <form onSubmit={handleSubmit} className="space-y-4 mt-2">
+              <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
+                <label htmlFor="modal-website-hp">Website (leave blank)</label>
+                <input id="modal-website-hp" type="text" name="website" tabIndex={-1} autoComplete="off" />
+              </div>
               <div>
                 <label htmlFor="waitlist-modal-email" className="sr-only">
                   Email address

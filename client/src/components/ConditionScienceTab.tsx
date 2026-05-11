@@ -271,7 +271,7 @@ export default function ConditionScienceTabs() {
                   onClick={() => { setActiveCondition(key); setExpandedSection(null); }}
                   className={`relative px-8 py-4 rounded-xl font-bold transition-all duration-300 flex items-center gap-3 ${isActive ? `${cond.bg} ${cond.color} shadow-md` : 'text-[#8A857C] hover:text-[#5D5752] hover:bg-white/30'}`}
                 >
-                  <cond.icon size={18} />
+                  <cond.icon size={18} aria-hidden="true" />
                   <span className="hidden sm:inline tracking-wide">{cond.fullName}</span>
                   <span className="sm:hidden">{cond.name}</span>
                 </button>
@@ -286,7 +286,7 @@ export default function ConditionScienceTabs() {
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
             <div className="flex flex-col md:flex-row md:items-center gap-12 relative z-10">
               <div className="w-24 h-24 rounded-[2rem] bg-white shadow-sm flex items-center justify-center flex-shrink-0">
-                <currentCondition.icon className={`w-12 h-12 ${currentCondition.color}`} />
+                <currentCondition.icon className={`w-12 h-12 ${currentCondition.color}`} aria-hidden="true" />
               </div>
               <div className="flex-grow">
                 <h3 className="font-serif text-4xl font-bold text-[#3D3733] mb-2">{currentCondition.fullName}</h3>
@@ -314,7 +314,7 @@ export default function ConditionScienceTabs() {
               <motion.div key={pathway.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-white rounded-[2rem] border border-[#3D3733]/5 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
                 <button onClick={() => toggleSection(pathway.id)} className="w-full p-8 flex items-start gap-6 text-left group">
                   <div className={`w-14 h-14 rounded-2xl ${pathway.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                    <pathway.icon className={`w-7 h-7 ${pathway.color}`} />
+                    <pathway.icon className={`w-7 h-7 ${pathway.color}`} aria-hidden="true" />
                   </div>
                   <div className="flex-grow">
                     <h3 className="font-bold text-[#3D3733] text-xl leading-tight mb-2">{pathway.title}</h3>

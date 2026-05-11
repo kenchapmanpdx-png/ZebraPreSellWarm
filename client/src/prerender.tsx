@@ -47,6 +47,26 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
     description:
       "Join the reservation list to be notified when ZebraWell's clinical-grade AM/PM formulas open for preorder.",
   },
+  "/privacy": {
+    title: "Privacy Policy | ZebraWell",
+    description:
+      "How ZebraWell collects, uses, and protects your information. Email-only data collection, no third-party sharing, full delete-on-request.",
+  },
+  "/terms": {
+    title: "Terms of Service | ZebraWell",
+    description:
+      "Terms governing your use of wellnessforzebras.com. Medical disclaimer, waitlist terms, intellectual property, and liability.",
+  },
+  "/shipping": {
+    title: "Shipping & Returns | ZebraWell",
+    description:
+      "Pre-launch shipping policy and what to expect when ZebraWell becomes available. 30-day satisfaction guarantee planned at launch.",
+  },
+  "/contact": {
+    title: "Contact Support | ZebraWell",
+    description:
+      "Reach the ZebraWell team. Product questions, formulation feedback, partnerships, press. We respond within two business days.",
+  },
 };
 
 function metaForRoute(url: string): RouteMeta {

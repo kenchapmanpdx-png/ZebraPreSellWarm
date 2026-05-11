@@ -22,10 +22,11 @@ export default function PreorderPage() {
     setIsSubmitting(true);
 
     try {
+      const hp = (document.getElementById('preorder-website-hp') as HTMLInputElement | null)?.value || '';
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({ email: email.trim(), website: hp }),
       });
       if (!response.ok) throw new Error('Request failed');
       setIsSubmitted(true);

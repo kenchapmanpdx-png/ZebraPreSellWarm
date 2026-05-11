@@ -22,13 +22,18 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
 import { insertPreorderReservationSchema, preorderReservations } from "./_lib/schemas.js";
 import { getDb } from "./_lib/db.js";
-import { methodGuard, validate, logSubmission } from "./_lib/respond.js";
+import { methodGuard, validate, logSubmission, checkHoneypot } from "./_lib/respond.js";
 
 const RESEND_KEY = process.env.RESEND_API_KEY;
 const SEGMENT_ID = process.env.RESEND_PREORDER_SEGMENT_ID; // optional
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!methodGuard(req, res, ["POST"])) return;
+
+  // Silent honeypot drop — bots filled the trap field; respond OK with no side effects
+  if (!checkHoneypot(req.body)) {
+    return res.status(200).json({ message: "OK" });
+  }
 
   const v = validate(insertPreorderReservationSchema, req.body);
   if (!v.ok) return res.status(v.status).json(v.payload);
@@ -50,14 +55,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (RESEND_KEY) {
     const resend = new Resend(RESEND_KEY);
 
-    const createPayload: Parameters<typeof resend.contacts.create>[0] = {
+    // Build payload; cast through `as const` so TS picks the CreateContactOptions
+    // overload (segments-based) instead of LegacyCreateContactOptions (audienceId).
+    const createPayload = {
       email: data.email,
       firstName: data.firstName,
       lastName: data.lastName,
       unsubscribed: false,
       properties: props,
       ...(SEGMENT_ID ? { segments: [{ id: SEGMENT_ID }] } : {}),
-    };
+    } as const;
 
     try {
       await resend.contacts.create(createPayload);
