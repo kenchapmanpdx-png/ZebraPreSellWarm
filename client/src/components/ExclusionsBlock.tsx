@@ -36,7 +36,7 @@ export default function ExclusionsBlock() {
           </h2>
         </div>
 
-        <div className="max-w-2xl mx-auto mb-10 md:mb-12">
+        <div className="max-w-4xl mx-auto mb-10 md:mb-12">
           <p className="text-base md:text-lg text-[#3D3733] leading-relaxed">
             If you've reacted to a supplement and walked away convinced an active ingredient wasn't for you, there's a good chance you were <em>right</em> about the reaction and <em>wrong</em> about the cause. Excipients are the inactive ingredients packed around the active - fillers, binders, coatings, flow agents. They're chosen for manufacturing convenience, not for your gut.
           </p>

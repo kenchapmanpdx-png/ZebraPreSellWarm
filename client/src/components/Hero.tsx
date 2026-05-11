@@ -16,7 +16,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 4000);
+    }, 3400);
     return () => clearInterval(interval);
   }, [words.length]);
 
@@ -64,7 +64,6 @@ export default function Hero() {
   const benefits = [
     "Founder pricing locked in for first batch",
     "First access when bottles ship",
-    "No spam, ever - one email at launch",
   ];
 
   return (
@@ -117,10 +116,6 @@ export default function Hero() {
                   Pre-launch waitlist open
                 </span>
               </div>
-
-              <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
-                <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
-              </p>
 
               <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
                 Wellness for the <br />

@@ -9,6 +9,8 @@ import {
   Factory,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
   RefreshCcw,
   Dna,
   Battery,
@@ -348,10 +350,24 @@ export default function CollagenScienceSection() {
               </div>
 
               {/* DESKTOP LAYOUT - THE "X" CONFIGURATION */}
-              <div className="relative w-full max-w-[500px] mx-auto aspect-square hidden md:block">
+              <div className="relative w-full max-w-[600px] mx-auto aspect-square hidden md:block">
                 <svg aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none z-0 rotate-45 opacity-20">
                   <circle cx="50%" cy="50%" r="35%" fill="none" stroke="#B36B4D" strokeWidth="2" strokeDasharray="8 8" />
                 </svg>
+
+                {/* Directional arrows showing the rotation 1 -> 2 -> 3 -> 4 -> 1 */}
+                <div className="absolute top-[14%] left-1/2 -translate-x-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
+                  <ChevronRight className="w-7 h-7" strokeWidth={2.5} />
+                </div>
+                <div className="absolute right-[14%] top-1/2 -translate-y-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
+                  <ChevronDown className="w-7 h-7" strokeWidth={2.5} />
+                </div>
+                <div className="absolute bottom-[14%] left-1/2 -translate-x-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
+                  <ChevronLeft className="w-7 h-7" strokeWidth={2.5} />
+                </div>
+                <div className="absolute left-[14%] top-1/2 -translate-y-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
+                  <ChevronUp className="w-7 h-7" strokeWidth={2.5} />
+                </div>
 
                 {[
                   { id: 1, number: "1", title: "Collagen Breaks Down", desc: "Weak connective tissue degrades due to genetic/stress factors.", theme: "brown", pos: "top-0 left-0" },
@@ -364,20 +380,20 @@ export default function CollagenScienceSection() {
                     : { badge: 'bg-[#2E5C55] text-white', text: 'text-[#1F443E]' };
 
                   return (
-                    <div key={step.id} className={`absolute w-48 h-48 flex items-center justify-center ${step.pos}`}>
+                    <div key={step.id} className={`absolute w-60 h-60 flex items-center justify-center ${step.pos}`}>
                       <div className="relative w-full h-full rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex flex-col items-center justify-center text-center p-6 z-10 border border-gray-50 overflow-visible transition-transform hover:scale-105 duration-300">
-                        <div className={`absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow-md ${styles.badge}`}>
+                        <div className={`absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-base font-bold shadow-md ${styles.badge}`}>
                           {step.number}
                         </div>
-                        <h4 className={`font-serif font-bold text-sm leading-tight mb-2 ${styles.text}`}>{step.title}</h4>
-                        <p className="text-[11px] text-[#5D5752] leading-snug font-semibold">{step.desc}</p>
+                        <h4 className={`font-serif font-bold text-base leading-tight mb-2 ${styles.text}`}>{step.title}</h4>
+                        <p className="text-[13px] text-[#5D5752] leading-snug font-semibold">{step.desc}</p>
                       </div>
                     </div>
                   );
                 })}
 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center z-20 border border-gray-100">
-                  <RefreshCw className="w-8 h-8 text-[#B36B4D]/30 animate-spin-slow" aria-hidden="true" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center z-20 border border-gray-100">
+                  <RefreshCw className="w-10 h-10 text-[#B36B4D]/30 animate-spin-slow" aria-hidden="true" />
                 </div>
               </div>
 
