@@ -210,7 +210,7 @@ export default function Hero() {
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[time:2000ms] ease-out"
+                  className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[2000ms] ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 via-transparent to-transparent pointer-events-none" />
               </div>

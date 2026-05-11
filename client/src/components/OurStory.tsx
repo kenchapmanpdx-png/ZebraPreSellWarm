@@ -103,7 +103,7 @@ export default function OurStory() {
 
             {/* THE MISSING HEART QUOTE - RESTORED */}
             <div className="flex items-start gap-4 max-w-md border-l-2 border-[#B36B4D]/20 pl-6 py-2">
-              <Heart className="text-red-600 w-6 h-6 mt-1 flex-shrink-0 fill-red-600" aria-hidden="true" />
+              <Heart className="text-[#B36B4D] w-6 h-6 mt-1 flex-shrink-0 fill-[#B36B4D]" aria-hidden="true" />
               <p className="text-[14px] md:text-[16px] font-serif italic text-[#3D3733] leading-relaxed">
                 "If you or someone you love is a Zebra, welcome to the herd."
               </p>

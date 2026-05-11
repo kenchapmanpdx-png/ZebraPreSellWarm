@@ -12,8 +12,8 @@ export default function QualityStandards() {
       borderColor: "border-blue-100"
     },
     {
-      title: "NSF GMP Certified",
-      desc: "Our partner maintains NSF GMP certification, ensuring every step follows the highest global standards for purity and safety.",
+      title: "GMP-Certified Manufacturing",
+      desc: "Our partner runs a GMP-certified facility, ensuring every step follows the global standards for supplement purity and safety.",
       icon: <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"
@@ -61,11 +61,11 @@ export default function QualityStandards() {
           >
             <div className="flex flex-col items-center">
               <span className="text-[#B36B4D] font-serif font-bold text-4xl italic leading-none">0%</span>
-              <span className="text-[#0F2A22] font-black uppercase tracking-widest text-[7px] mt-1 text-center">Trigger<br />Guarantee</span>
+              <span className="text-[#0F2A22] font-black uppercase tracking-widest text-[7px] mt-1 text-center">Trigger<br />Excipients</span>
             </div>
             <div className="w-[1px] h-10 bg-[#0F2A22]/10" />
             <p className="text-[10px] font-medium text-[#5D5752] leading-relaxed max-w-[150px]">
-              Specifically designed to prevent cross-contamination and flares.
+              Designed around the excipients sensitive systems react to.
             </p>
           </motion.div>
         </div>

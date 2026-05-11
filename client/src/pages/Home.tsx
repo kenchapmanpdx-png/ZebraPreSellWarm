@@ -23,6 +23,24 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 
 export default function Home() {
+  // Focus the hero email input when navigating with #hero-waitlist-email hash
+  // (e.g., 'Reserve the Full System' CTA on the ProductGrid)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const focusHeroEmail = () => {
+      if (window.location.hash === '#hero-waitlist-email') {
+        const el = document.getElementById('hero-waitlist-email') as HTMLInputElement | null;
+        if (el) {
+          el.focus({ preventScroll: false });
+        }
+      }
+    };
+    // Run on mount and on subsequent hash changes
+    focusHeroEmail();
+    window.addEventListener('hashchange', focusHeroEmail);
+    return () => window.removeEventListener('hashchange', focusHeroEmail);
+  }, []);
+
   // Scroll observer for fade-in animations
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {

@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { vitePrerenderPlugin } from "vite-prerender-plugin";
 import ingredientList from "./scripts/ingredient-routes.json";
 
@@ -25,20 +24,11 @@ const PRERENDER_ROUTES = [
 export default defineConfig({
   plugins: [
     react(),
-    runtimeErrorOverlay(),
     vitePrerenderPlugin({
       renderTarget: "#root",
       prerenderScript: path.resolve(import.meta.dirname, "client/src/prerender.tsx"),
       additionalPrerenderRoutes: PRERENDER_ROUTES,
     }),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
-          ),
-        ]
-      : []),
   ],
   resolve: {
     alias: {

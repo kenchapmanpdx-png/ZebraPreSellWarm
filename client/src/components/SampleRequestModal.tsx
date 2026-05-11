@@ -16,7 +16,6 @@ export default function SampleRequestModal() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // This would be connected to backend in a real implementation
-    console.log("Sample request submission:", { name, email, reason });
     // Reset form fields
     setName('');
     setEmail('');
