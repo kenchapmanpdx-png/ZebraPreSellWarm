@@ -2,7 +2,8 @@
  *
  * Prerender entry. Called at build time by vite-prerender-plugin for each
  * route in the queue. Returns rendered HTML + per-page head metadata so each
- * static file has its own title, canonical, description, and OG tags.
+ * static file has its own title, canonical, description, OG tags, and
+ * JSON-LD structured data.
  *
  * Not loaded at runtime - only imported during build.
  */
@@ -13,8 +14,15 @@ import App from "./App";
 
 import ingredientList from "../../scripts/ingredient-routes.json";
 import { ingredients as ingredientData } from "./data/ingredients";
+import type { IngredientData } from "./data/ingredients";
 
 const BASE = "https://www.wellnessforzebras.com";
+const BRAND_NAME = "ZebraWell";
+const LOGO = `${BASE}/zebra-logo.svg`;
+const HERO_IMAGE = `${BASE}/images/zebrawell-bottles-final2.jpg`;
+// Site-wide last-reviewed date for educational content. Bump when you do a
+// pass through ingredients.ts content. Used for MedicalWebPage.lastReviewed.
+const LAST_REVIEWED = "2026-05-11";
 
 type RouteMeta = {
   title: string;
@@ -118,6 +126,157 @@ function metaForRoute(url: string): RouteMeta {
   };
 }
 
+// JSON-LD must escape "<" to "<" so a stray "</script>" in a string can
+// never break out of the script tag. Standard practice for inline JSON-LD.
+function safeJsonLd(obj: unknown): string {
+  return JSON.stringify(obj).replace(/</g, "\\u003c");
+}
+
+type HeadElement = {
+  type: string;
+  props: Record<string, string>;
+};
+
+function jsonLdElement(obj: unknown): HeadElement {
+  return {
+    type: "script",
+    props: {
+      type: "application/ld+json",
+      children: safeJsonLd(obj),
+    },
+  };
+}
+
+function breadcrumbList(url: string, title: string): Record<string, unknown> {
+  const items: Array<Record<string, unknown>> = [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${BASE}/` },
+  ];
+
+  const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
+  if (url === "/ingredients") {
+    items.push({ "@type": "ListItem", position: 2, name: "Ingredients" });
+  } else if (ingMatch) {
+    items.push({
+      "@type": "ListItem",
+      position: 2,
+      name: "Ingredients",
+      item: `${BASE}/ingredients`,
+    });
+    items.push({ "@type": "ListItem", position: 3, name: title });
+  } else if (url !== "/") {
+    items.push({ "@type": "ListItem", position: 2, name: title });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items,
+  };
+}
+
+function medicalWebPageForIngredient(
+  slug: string,
+  name: string,
+  ing: IngredientData,
+  description: string,
+): Record<string, unknown> {
+  const url = `${BASE}/ingredients/${slug}`;
+  const cleanName = name.split(" (")[0];
+
+  // Citation list from sources (cap at 12 to keep schema lean).
+  const citations = (ing.sources || []).slice(0, 12).map((s) => {
+    const cit: Record<string, unknown> = {
+      "@type": "ScholarlyArticle",
+      name: s.title,
+    };
+    if (s.pmid) {
+      cit.identifier = `PMID:${s.pmid}`;
+      cit.url = s.link || `https://pubmed.ncbi.nlm.nih.gov/${s.pmid}/`;
+    } else if (s.link) {
+      cit.url = s.link;
+    }
+    if (s.authors) cit.author = s.authors;
+    if (s.year) cit.datePublished = s.year;
+    return cit;
+  });
+
+  const about: Record<string, unknown> = {
+    "@type": "DietarySupplement",
+    name: cleanName,
+  };
+  if (ing.scientificName) about.alternateName = ing.scientificName;
+  if (ing.atAGlance?.dose) about.recommendedIntake = ing.atAGlance.dose;
+  if (ing.atAGlance?.whatItIs) about.description = ing.atAGlance.whatItIs;
+  const safetyParts = [
+    ing.safety?.cautions,
+    ing.safety?.sideEffects,
+    ing.safety?.interactions ? `Interactions: ${ing.safety.interactions}` : "",
+  ].filter(Boolean);
+  if (safetyParts.length) about.safetyConsideration = safetyParts.join(" ");
+  about.targetPopulation = "Adults 18+ with hypermobile Ehlers-Danlos Syndrome, POTS, or Mast Cell Activation Syndrome";
+  about.legalStatus = {
+    "@type": "DrugLegalStatus",
+    name: "Dietary supplement, US DSHEA",
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@type": ["MedicalWebPage", "Article"],
+    "@id": url,
+    url,
+    name: `${cleanName}: Evidence, Mechanism, Dose, and Safety`,
+    headline: `${cleanName}: Evidence, Mechanism, Dose, and Safety for hEDS, POTS, and MCAS`,
+    description,
+    inLanguage: "en-US",
+    audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    about,
+    isPartOf: { "@id": `${BASE}/#website` },
+    publisher: {
+      "@type": "Organization",
+      name: BRAND_NAME,
+      url: `${BASE}/`,
+      logo: { "@type": "ImageObject", url: LOGO },
+    },
+    lastReviewed: LAST_REVIEWED,
+    dateModified: LAST_REVIEWED,
+    image: HERO_IMAGE,
+    ...(citations.length ? { citation: citations } : {}),
+  };
+}
+
+function faqPageForIngredient(ing: IngredientData): Record<string, unknown> | null {
+  if (!ing.faq || ing.faq.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ing.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+function schemaElementsForRoute(url: string, title: string): HeadElement[] {
+  const out: HeadElement[] = [];
+  // Breadcrumbs on every page.
+  out.push(jsonLdElement(breadcrumbList(url, title.replace(" | ZebraWell", ""))));
+
+  const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
+  if (ingMatch) {
+    const slug = ingMatch[1];
+    const ing = (ingredientData as Record<string, IngredientData>)[slug];
+    if (ing) {
+      const description = metaForRoute(url).description;
+      out.push(jsonLdElement(medicalWebPageForIngredient(slug, ing.name, ing, description)));
+      const faq = faqPageForIngredient(ing);
+      if (faq) out.push(jsonLdElement(faq));
+    }
+  }
+
+  return out;
+}
+
 export async function prerender(data: { url: string }) {
   const url = data.url;
   const meta = metaForRoute(url);
@@ -139,11 +298,12 @@ export async function prerender(data: { url: string }) {
     html = "";
   }
 
-  // Build head elements. Per-page canonical, title, description, OG, Twitter.
+  // Build head elements. Per-page canonical, title, description, OG, Twitter,
+  // and structured data.
   const canonical = `${BASE}${url === "/" ? "/" : url}`;
   const isShowcase = url === "/showcase";
 
-  const elements = new Set<{ type: string; props: Record<string, string> }>();
+  const elements = new Set<HeadElement>();
   elements.add({ type: "link", props: { rel: "canonical", href: canonical } });
   elements.add({ type: "meta", props: { name: "description", content: meta.description } });
   elements.add({ type: "meta", props: { property: "og:title", content: meta.title } });
@@ -154,6 +314,13 @@ export async function prerender(data: { url: string }) {
   elements.add({ type: "meta", props: { name: "twitter:description", content: meta.description } });
   if (isShowcase) {
     elements.add({ type: "meta", props: { name: "robots", content: "noindex, nofollow" } });
+  } else {
+    // Per-route JSON-LD: BreadcrumbList (all pages) and MedicalWebPage +
+    // FAQPage (ingredient pages). Site-wide Organization + Product schema
+    // stays in client/index.html and ships on every page automatically.
+    for (const el of schemaElementsForRoute(url, meta.title)) {
+      elements.add(el);
+    }
   }
 
   return {
