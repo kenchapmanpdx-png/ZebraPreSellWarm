@@ -62,8 +62,8 @@ export interface IngredientData {
 }
 
 export const ingredients: Record<string, IngredientData> = {
-    "pea": {
-        id: "pea",
+    "palmitoylethanolamide": {
+        id: "palmitoylethanolamide",
         name: "Palmitoylethanolamide (PEA)",
         atAGlance: {
             whatItIs: "A naturally occurring fatty acid compound your body makes to calm inflammation and stabilize mast cells",
@@ -250,97 +250,9 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Beneficial Effects of Co-Ultramicronized Palmitoylethanolamide/Luteolin in a Mouse Model of Autism", pmid: "27611916", authors: "Bertolino B et al.", year: "2017" }
         ]
     },
-    "emiq": {
-        id: "emiq",
-        name: "EMIQ (Enzymatically Modified Isoquercitrin)",
-        atAGlance: {
-            whatItIs: "A water-soluble, bioavailability-enhanced form of quercetin that provides 17× better absorption than standard quercetin",
-            whyWeIncludeIt: "EMIQ delivers quercetin's mast cell stabilizing benefits at achievable doses, without the drug interaction concerns of standard quercetin",
-            dose: "300 mg daily (150 mg AM + 150 mg PM)",
-            keyBenefits: [
-                "17× higher bioavailability than standard quercetin",
-                "More effective than cromolyn sodium at inhibiting mast cell activation",
-                "Human clinical trials show efficacy for allergic symptoms",
-                "FDA-GRAS status; 30-year safety history"
-            ]
-        },
-        howItWorks: "EMIQ is essentially a \"delivery system\" for quercetin—one of the most studied mast cell stabilizers. Standard quercetin has a major problem: almost none of it gets absorbed. EMIQ solves this through enzymatic modification that makes quercetin water-soluble.\n\nWhen you take EMIQ, your intestines rapidly convert it to quercetin, which then works through multiple pathways to calm mast cells. First, quercetin blocks calcium signaling inside mast cells—the trigger for degranulation. Second, it inhibits NF-κB, preventing inflammatory gene expression. Third, it directly prevents histamine release. Fourth, it suppresses pro-inflammatory cytokines like IL-4, IL-6, IL-8, and TNF-α.",
-        research: [
-            {
-                outcome: "Bioavailability Enhancement",
-                summary: "EMIQ achieves dramatically higher blood levels than standard quercetin, making therapeutic effects achievable.",
-                studies: [
-                    {
-                        source: "Owczarek-Januszkiewicz A et al., \"EMIQ: Production, Metabolism, Bioavailability\"",
-                        pmid: "36499113",
-                        design: "Comprehensive review of EMIQ pharmacokinetics",
-                        finding: "EMIQ provides 17× greater bioavailability than standard quercetin; peak absorption at 1.5-2 hours"
-                    }
-                ]
-            },
-            {
-                outcome: "Allergic Symptom Relief",
-                summary: "Human clinical trials demonstrate EMIQ efficacy for allergic conditions related to mast cell activation.",
-                studies: [
-                    {
-                        source: "Kawai M et al., \"EMIQ pollinosis RCT\"",
-                        pmid: "19295240",
-                        design: "Randomized controlled trial, 20 patients, 8 weeks",
-                        finding: "Significantly lower ocular allergy scores; nasal symptoms showed trending improvement"
-                    },
-                    {
-                        source: "Hirano T et al., \"Preventive effects of EMIQ on cedar pollinosis\"",
-                        pmid: "19454839",
-                        design: "RCT, 24 patients, 8 weeks",
-                        finding: "Significantly lower ocular symptom-plus-medication scores when started before pollen season"
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No direct evidence exists in hEDS, POTS, or MCAS populations—all findings are extrapolated from allergy, healthy volunteer, and in vitro studies. Human clinical trials used doses of 42-200 mg; the commonly marketed 500 mg dose lacks clinical trial support. One theoretical concern: quercetin inhibits lysyl oxidase in fibrosis models, which could theoretically impair collagen crosslinking. The 300 mg dose provides therapeutic benefit while minimizing this concern.",
-        triad: {
-            mcas: "EMIQ delivers quercetin—one of the most effective natural mast cell stabilizers—at concentrations that matter. Quercetin inhibits not just histamine but also tryptase, IL-6, IL-8, and TNF-α release from mast cells. EMIQ provides 17× better bioavailability and is NOT fermentation-derived, so there's no histamine contamination risk.",
-            heds: "EMIQ provides indirect benefit through MCAS management, but one theoretical concern exists: quercetin inhibits lysyl oxidase in fibrosis models. However, this effect was demonstrated in fibrosis (excess collagen)—the opposite of hEDS. The concentration required likely exceeds what EMIQ achieves orally. We use a moderate 300 mg dose to balance benefits against this theoretical concern.",
-            pots: "Quercetin reduces histamine-mediated autonomic dysfunction and stabilizes mast cells near autonomic nerve terminals. One RCT showed EMIQ improved endothelial function, which could benefit cardiovascular symptoms. However, patients on ivabradine should be aware of a theoretical CYP3A4 interaction."
-        },
-        whyThisForm: {
-            form: "EMIQ (Enzymatically Modified Isoquercitrin)",
-            rationale: "The entire rationale for EMIQ is bioavailability. Standard quercetin and rutin have such poor absorption that therapeutic effects are nearly impossible to achieve. EMIQ is water-soluble and achieves 17x better absorption.",
-            comparison: [
-                { form: "Standard quercetin", difference: "Only ~2% bioavailability; requires 2,000+ mg for any effect", selected: false },
-                { form: "Standard rutin", difference: "Only 0.8% bioavailability; requires colonic bacteria to convert", selected: false },
-                { form: "EMIQ", difference: "17× better than quercetin; water-soluble; rapid absorption in 15-30 minutes", selected: true },
-                { form: "Quercetin Phytosome", difference: "20× better than quercetin; lipid-based; comparable to EMIQ", selected: true }
-            ]
-        },
-        safety: {
-            sideEffects: "EMIQ demonstrates excellent tolerability in human trials up to 4 months. No serious adverse events reported in any clinical trial (doses 42-200 mg). It has been an approved food additive in Japan since 1996 with 30 years of safe use.",
-            interactions: "Ivabradine: Theoretical moderate concern due to CYP3A4 inhibition; space 2+ hours apart. Beta-blockers/Most meds: Minimal concern. Anticoagulants: Monitor INR if combining.",
-            excipientConcerns: {
-                avoid: ["Citric acid (mold-derived)", "Corn derivatives", "Titanium dioxide"],
-                safe: ["EMIQ (not fermentation-derived)", "Plant-derived Sophora japonica source"]
-            },
-            cautions: "If taking ivabradine, consult healthcare provider. Patients on anticoagulants should monitor INR. Avoid in pregnancy/lactation. Allow 4-8 weeks for full benefit."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "100 mg once daily", notes: "With meal" },
-                { step: "Week 2", dosage: "150 mg once daily", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "150 mg twice daily", notes: "Target maintenance dose (300 mg/day)" }
-            ],
-            timeline: "Clinical trials showed allergic symptom improvement within 4-8 weeks. The 11-15 hour half-life supports once or twice daily dosing."
-        },
-        sources: [
-            { title: "EMIQ: Production, Metabolism, Bioavailability, Toxicity, Pharmacology, and Related Molecular Mechanisms", pmid: "36499113", authors: "Owczarek-Januszkiewicz A et al.", year: "2022" },
-            { title: "Quercetin is more effective than cromolyn at blocking human mast cell cytokine release", pmid: "22470478", authors: "Weng Z et al.", year: "2012" },
-            { title: "Effect of EMIQ on symptoms of Japanese cedar pollinosis", pmid: "19295240", authors: "Kawai M et al.", year: "2009" },
-            { title: "Effects of EMIQ supplementation on muscle damage and recovery", pmid: "31500646", authors: "Omi N et al.", year: "2019" },
-            { title: "Acute effects of quercetin-3-O-glucoside on endothelial function", pmid: "31870463", authors: "Bondonno NP et al.", year: "2019" }
-        ]
-    },
-    "magnesium-glycinate": {
-        id: "magnesium-glycinate",
-        name: "Magnesium Glycinate",
+"magnesium-bisglycinate": {
+        id: "magnesium-bisglycinate",
+        name: "Magnesium Bisglycinate",
         atAGlance: {
             whatItIs: "A highly absorbable, gentle form of magnesium bound to the amino acid glycine",
             whyWeIncludeIt: "Magnesium is a foundational mineral for mast cell stability, autonomic function, and as a cofactor for histamine degradation (DAO enzyme)",
@@ -438,12 +350,12 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Bioavailability of magnesium diglycinate vs magnesium oxide", pmid: "7815675", authors: "Schuette SA et al.", year: "1994" }
         ]
     },
-    "pycnogenol": {
-        id: "pycnogenol",
-        name: "PYCNOGENOL® (French Maritime Pine Bark Extract)",
+    "pine-bark-extract": {
+        id: "pine-bark-extract",
+        name: "Pine Bark Extract",
         atAGlance: {
             whatItIs: "A standardized extract from French maritime pine bark containing powerful oligomeric proanthocyanidins (OPCs).",
-            whyWeIncludeIt: "Pycnogenol is one of the few natural compounds that achieves clinically meaningful MMP inhibition, essential for connective tissue protection in hEDS, while also providing venous support for POTS and mast cell stabilization for MCAS.",
+            whyWeIncludeIt: "pine bark extract is one of the few natural compounds that achieves clinically meaningful MMP inhibition, essential for connective tissue protection in hEDS, while also providing venous support for POTS and mast cell stabilization for MCAS.",
             dose: "200 mg daily (100 mg AM + 100 mg PM)",
             keyBenefits: [
                 "Strong MMP inhibition (MMP-8/9) at oral doses",
@@ -452,11 +364,11 @@ export const ingredients: Record<string, IngredientData> = {
                 "Increases Type I collagen gene expression"
             ]
         },
-        howItWorks: "Pycnogenol works through a unique metabolite called M1 that your body produces after absorption.\n\nFor connective tissue (hEDS): Pycnogenol is one of the few natural compounds that achieves clinically meaningful MMP inhibition at oral doses. The M1 metabolite reaches plasma concentrations that match the requirements for inhibiting MMP-9, an enzyme that breaks down collagen. Studies show significant reduction in MMP-8 and upregulation of protective proteins like TIMP-4.\n\nFor mast cells (MCAS): Pycnogenol stabilizes mast cells through histamine and tryptase inhibition comparable to prescription stabilizers like cromolyn sodium. It also blocks allergic responses, reducing the release of inflammatory cytokines.\n\nFor blood pooling (POTS): Pycnogenol provides significant venous-toning effects. It has been shown to be more effective than compression stockings alone in reducing edema related to venous insufficiency, directly addressing the peripheral blood pooling common in POTS.",
+        howItWorks: "pine bark extract works through a unique metabolite called M1 that your body produces after absorption.\n\nFor connective tissue (hEDS): pine bark extract is one of the few natural compounds that achieves clinically meaningful MMP inhibition at oral doses. The M1 metabolite reaches plasma concentrations that match the requirements for inhibiting MMP-9, an enzyme that breaks down collagen. Studies show significant reduction in MMP-8 and upregulation of protective proteins like TIMP-4.\n\nFor mast cells (MCAS): pine bark extract stabilizes mast cells through histamine and tryptase inhibition comparable to prescription stabilizers like cromolyn sodium. It also blocks allergic responses, reducing the release of inflammatory cytokines.\n\nFor blood pooling (POTS): pine bark extract provides significant venous-toning effects. It has been shown to be more effective than compression stockings alone in reducing edema related to venous insufficiency, directly addressing the peripheral blood pooling common in POTS.",
         research: [
             {
                 outcome: "MMP Inhibition (Connective Tissue Protection)",
-                summary: "Pycnogenol's metabolites effectively inhibit the enzymes responsible for collagen breakdown.",
+                summary: "pine bark extract's metabolites effectively inhibit the enzymes responsible for collagen breakdown.",
                 studies: [
                     { source: "Bayer J et al., \"100 mg BID × 3 months → significant MMP-8 reduction\"", pmid: "40362854", design: "2025 German RCT (n=91)", finding: "Significant MMP-8 reduction (p=0.0261) after 3 months of supplementation." },
                     { source: "Grimm T et al., \"200 mg/day × 5 days → 25% reduction in MMP-9 release\"", pmid: "16441890", design: "Human pilot study (n=7)", finding: "Significant reduction in MMP-9 release from neutrophils (p<0.01)." },
@@ -465,14 +377,14 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Collagen Support",
-                summary: "Pycnogenol enhances the body's natural production of Type I collagen.",
+                summary: "pine bark extract enhances the body's natural production of Type I collagen.",
                 studies: [
                     { source: "Marini A et al., \"75 mg/day × 12 weeks → Increased COL1A1/COL1A2\"", pmid: "22270036", design: "Human RCT (n=20)", finding: "Increased COL1A1 gene expression by 29% and COL1A2 by 41% along with hyaluronic acid synthesis." }
                 ]
             },
             {
                 outcome: "Venous Support (POTS/Blood Pooling)",
-                summary: "Pycnogenol outperforms compression stockings in reducing fluid accumulation and improving circulation.",
+                summary: "pine bark extract outperforms compression stockings in reducing fluid accumulation and improving circulation.",
                 studies: [
                     { source: "Arcangeli P et al., \"300 mg/day × 2 months → 60% edema resolution\"", pmid: "11081989", design: "Human RCT (n=40)", finding: "60% of patients achieved complete edema disappearance compared to placebo." },
                     { source: "Cesarone MR et al., \"More effective than compression stockings\"", pmid: "20579863", design: "Comparative study (n=142)", finding: "Clinical efficacy in reducing edema significantly higher than compression stockings alone." }
@@ -482,32 +394,32 @@ export const ingredients: Record<string, IngredientData> = {
                 outcome: "Mast Cell Stabilization",
                 summary: "Inhibits the release of histamine at levels comparable to prescription options.",
                 studies: [
-                    { source: "Sharma SC et al., \"Histamine release inhibition comparable to cromolyn\"", pmid: "12557250", finding: "Pycnogenol demonstrates histamine inhibition profile similar to cromolyn sodium in mast cell models." }
+                    { source: "Sharma SC et al., \"Histamine release inhibition comparable to cromolyn\"", pmid: "12557250", finding: "pine bark extract demonstrates histamine inhibition profile similar to cromolyn sodium in mast cell models." }
                 ]
             }
         ],
         evidenceGaps: "No direct clinical trials exist specifically in hEDS, POTS, or MCAS populations. The mechanistic evidence is strength, but findings are extrapolated from periodontal, skin, and chronic venous insufficiency studies. Clinical validation in these specific triple-triad populations is still needed.",
         triad: {
-            mcas: "Pycnogenol is a potent mast cell stabilizer that inhibits histamine and tryptase. Research suggests it is comparable to cromolyn sodium in its ability to prevent degranulation. Importantly, it is not fermentation-derived, which eliminates histamine/tyramine contamination risks common with other plant extracts.",
+            mcas: "pine bark extract is a potent mast cell stabilizer that inhibits histamine and tryptase. Research suggests it is comparable to cromolyn sodium in its ability to prevent degranulation. Importantly, it is not fermentation-derived, which eliminates histamine/tyramine contamination risks common with other plant extracts.",
             heds: "Addresses the 'broken bucket' of hEDS by inhibiting MMPs (enzymes that break down collagen) and upregulating Type I collagen genes. It is one of the few supplements with human pharmacokinetic data proving that it reaches tissue concentrations high enough to actually stop these destructive enzymes.",
             pots: "Addresses the peripheral blood pooling mechanism of POTS by strengthening venous tone. Clinical data shows it and its metabolites reduce edema and fluid leakage more effectively than professional compression stockings in some populations.",
         },
         whyThisForm: {
-            form: "Pycnogenol® (Standardized Horphag Extract)",
-            rationale: "Generic 'pine bark extract' lacks the standardization and human pharmacokinetic data of the brand-name Pycnogenol®. All clinical trials showing MMP inhibition and collagen support used this specific standardization (65-75% procyanidins). BID dosing is required because its primary active metabolite (M1) peaks at 6-10 hours; two doses ensure steady-state tissue levels.",
+            form: "generic pine bark extract (Standardized Horphag Extract)",
+            rationale: "Generic 'pine bark extract' lacks the standardization and human pharmacokinetic data of the brand-name generic pine bark extract. All clinical trials showing MMP inhibition and collagen support used this specific standardization (65-75% procyanidins). BID dosing is required because its primary active metabolite (M1) peaks at 6-10 hours; two doses ensure steady-state tissue levels.",
             comparison: [
                 { form: "Generic Pine Bark Extract", difference: "Lacks pharmacokinetic validation; inconsistent procyanidin levels", selected: false },
-                { form: "Pycnogenol® Horphag", difference: "Standardized to 65–75% procyanidins; validated M1 metabolite levels", selected: true }
+                { form: "generic pine bark extract Horphag", difference: "Standardized to 65–75% procyanidins; validated M1 metabolite levels", selected: true }
             ]
         },
         safety: {
-            sideEffects: "Pycnogenol shows excellent safety across nearly 7,000 trial participants. The overall adverse event rate is only 2.4%. Most common effects are mild GI discomfort, prevented by taking with food. Transient headache or dizziness can occurs in rare cases.",
+            sideEffects: "pine bark extract shows excellent safety across nearly 7,000 trial participants. The overall adverse event rate is only 2.4%. Most common effects are mild GI discomfort, prevented by taking with food. Transient headache or dizziness can occurs in rare cases.",
             interactions: "Beta-blockers: Additive blood pressure lowering (~2–3 mmHg). Anticoagulants: Theoretical antiplatelet effects; monitor if on warfarin. Fludrocortisone/Midodrine: Opposing blood pressure effects are theoretically possible.",
             excipientConcerns: {
                 avoid: ["Unknown fermentation residues", "Artificial fillers"],
                 safe: ["Water/ethanol extract (non-fermented)", "Microcrystalline cellulose"]
             },
-            cautions: "Stop 2 weeks before surgery due to antiplatelet effects. Avoid in first-trimester pregnancy. Autoimmune patients should use caution as Pycnogenol may stimulate certain immune pathways. Monitor for orthostatic symptoms if your baseline BP is very low (<100 mmHg)."
+            cautions: "Stop 2 weeks before surgery due to antiplatelet effects. Avoid in first-trimester pregnancy. Autoimmune patients should use caution as pine bark extract may stimulate certain immune pathways. Monitor for orthostatic symptoms if your baseline BP is very low (<100 mmHg)."
         },
         howToStart: {
             protocol: [
@@ -520,8 +432,8 @@ export const ingredients: Record<string, IngredientData> = {
         },
         sources: [
             { title: "MMP-8 reduction at 100 mg BID in human RCT", pmid: "40362854", authors: "Bayer J", year: "2025" },
-            { title: "Human plasma inhibits MMP-9 after oral dosing of Pycnogenol", pmid: "16441890", authors: "Grimm T", year: "2006" },
-            { title: "Pycnogenol metabolite M1 inhibits MMP-9", pmid: "14990359", authors: "Grimm T", year: "2004" },
+            { title: "Human plasma inhibits MMP-9 after oral dosing of pine bark extract", pmid: "16441890", authors: "Grimm T", year: "2006" },
+            { title: "pine bark extract metabolite M1 inhibits MMP-9", pmid: "14990359", authors: "Grimm T", year: "2004" },
             { title: "Increased COL1A1/COL1A2 gene expression in human skin", pmid: "22270036", authors: "Marini A", year: "2012" },
             { title: "Mast cell histamine inhibition comparable to cromolyn", pmid: "12557250", authors: "Sharma SC", year: "2003" },
             { title: "60% complete edema resolution in CVI trial", pmid: "11081989", authors: "Arcangeli P", year: "2000" }
@@ -1144,108 +1056,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Pyridoxal and collagen crosslinks in hip fracture", pmid: "16969591", authors: "Saito M et al.", year: "2006" }
         ]
     },
-    "pqq": {
-        id: "pqq",
-        name: "PQQ (Pyrroloquinoline Quinone)",
-        atAGlance: {
-            whatItIs: "A vitamin-like compound that supports mitochondrial health and cellular energy production",
-            whyWeIncludeIt: "Protects connective tissue through MMP inhibition while reducing inflammation—two key mechanisms for the hEDS/POTS/MCAS triad",
-            dose: "20 mg once daily",
-            keyBenefits: [
-                "Inhibits collagen-degrading enzymes (MMP-1, MMP-3) at achievable doses",
-                "Reduces inflammatory markers CRP and IL-6 by ~45%",
-                "Supports new mitochondria formation (mitochondrial biogenesis)",
-                "Demonstrates mast cell stabilizing properties in skin tissue"
-            ]
-        },
-        howItWorks: "PQQ stimulates mitochondrial biogenesis—the creation of new mitochondria—through activation of the SIRT1/PGC-1α pathway. This addresses cellular energy deficits common in POTS fatigue.\n\nFor hEDS, PQQ inhibits matrix metalloproteinases (MMPs), the enzymes responsible for collagen breakdown. Research shows it works through NF-κB, MAPK, and Nrf2 pathways to reduce MMP-1 and MMP-3 activity in human dermal fibroblasts. It also provides potent antioxidant protection (100-1000x more effective than Vitamin C for certain ROS) and reduces systemic inflammation (CRP/IL-6).",
-        research: [
-            {
-                outcome: "Collagen Protection (MMP Inhibition)",
-                summary: "Six studies demonstrate inhibition of collagen-degrading enzymes in highly relevant tissue types.",
-                studies: [
-                    {
-                        source: "Zhao et al., 2015",
-                        pmid: "26126510",
-                        design: "Human dermal fibroblasts model",
-                        finding: "PQQ inhibited MMP-1 and MMP-3 expression via NF-κB inhibition."
-                    },
-                    {
-                        source: "Yang et al., 2015",
-                        pmid: "25687637",
-                        finding: "Demonstrated cartilage protection and MMP inhibition in osteoarthritis models."
-                    },
-                    {
-                        source: "Chen et al., 2024",
-                        pmid: "38780001",
-                        finding: "Confirmed protective effects require functional Nrf2 signaling."
-                    }
-                ]
-            },
-            {
-                outcome: "Anti-Inflammatory Effects (Human)",
-                summary: "Crossover trial demonstrates significant reduction in systemic inflammatory markers.",
-                studies: [
-                    {
-                        source: "Harris et al., 2013",
-                        pmid: "24231099",
-                        design: "Controlled crossover trial, n=10",
-                        finding: "Significant reductions in CRP (~45%) and IL-6 at doses matched to our formulation."
-                    }
-                ]
-            },
-            {
-                outcome: "Cognitive Improvement",
-                summary: "Multiple RCTs show cognitive and processing speed benefits at therapeutic doses.",
-                studies: [
-                    {
-                        source: "Itoh et al., 2023",
-                        pmid: "34415830",
-                        design: "RCT, n=64",
-                        finding: "Younger adults improved in cognitive flexibility; older adults showed memory gains."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "Zero direct studies in hEDS, POTS, or MCAS patients. All benefits are extrapolated from general population and mechanistic research. Preliminary data on POTS 'tailspins' exists in anecdotal reports but mechanism is unknown.",
-        triad: {
-            mcas: "BioPQQ® is produced via fermentation; we require third-party testing to ensure no histamine/tyramine contamination. Research shows decreased mast cell numbers in skin tissue (8-week study), suggesting a stabilizing effect.",
-            heds: "Addresses the 'overactive degradation' problem in hEDS by inhibiting MMPs (MMP-1 is upregulated 53-fold in some hEDS models). PQQ protects existing collagen from enzymatic destruction in dermal fibroblast tissue.",
-            pots: "Supports mitochondrial health to address root fatigue. While one anecdotal report mentions a potential 'tailspin,' human RCTs show no adverse events. Minimal interaction risk with POTS medications exists due to renal elimination."
-        },
-        whyThisForm: {
-            form: "BioPQQ® (Natural Fermentation)",
-            rationale: "Research-validated form used in major human clinical trials. Heat-stable, water-soluble, and standardized for consistent quality.",
-            comparison: [
-                { form: "BioPQQ®", difference: "Natural fermentation; used in human clinical trials; high safety margin", selected: true },
-                { form: "Generic PQQ", difference: "Variable purity; uncertain isomer content; lack of clinical validation", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Generally well-tolerated. EFSA established 20mg/day as a safe upper limit with a high margin of safety (344-fold).",
-            interactions: "Minimal hepatic metabolism suggests low interaction risk. Separate from beta-blockers by 2 hours as a general precaution.",
-            excipientConcerns: {
-                avoid: ["Histamine/Tyramine contamination (fermentation byproduct)"],
-                safe: ["BioPQQ® with COA verification", "Standard capsule fillers"]
-            },
-            cautions: "Data beyond 16 weeks of continuous use is limited. Monitor for paradoxical reactions in sensitive POTS patients."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Weeks 1-2", dosage: "10 mg daily", notes: "Sensitive start" },
-                { step: "Week 3+", dosage: "20 mg daily", notes: "Full target dose (AM capsules)" }
-            ],
-            timeline: "Initial effects within 4 weeks; full cognitive/energy benefits require 8-12 weeks."
-        },
-        sources: [
-            { title: "PQQ on cognitive function RCT", pmid: "34415830", authors: "Itoh et al.", year: "2023" },
-            { title: "PQQ anti-inflammatory human crossover trial", pmid: "24231099", authors: "Harris et al.", year: "2013" },
-            { title: "Human dermal fibroblast MMP inhibition", pmid: "26126510", authors: "Zhao et al.", year: "2015" },
-            { title: "MMP inhibition and cartilage protection", pmid: "25687637", authors: "Yang et al.", year: "2015" },
-            { title: "Nrf2 mechanism confirmation for PQQ", pmid: "38780001", authors: "Chen et al.", year: "2024" }
-        ]
-    },
-    "astaxanthin": {
+"astaxanthin": {
         id: "astaxanthin",
         name: "Astaxanthin",
         atAGlance: {
@@ -1345,100 +1156,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Z-isomer collagen suppression concern", pmid: "37305308", authors: "Honda et al.", year: "2023" }
         ]
     },
-    "silicon": {
-        id: "silicon",
-        name: "Silicon (MMST)",
-        atAGlance: {
-            whatItIs: "A bioavailable form of silicon (monomethylsilanetriol) that supports collagen cross-linking",
-            whyWeIncludeIt: "Supports the enzyme (lysyl oxidase) that creates collagen 'bridges' (cross-links) to strengthen connective tissue",
-            dose: "10 elemental silicon daily",
-            keyBenefits: [
-                "Supports collagen cross-linking enzyme function",
-                "64% bioavailability (vs 17% for BioSil)",
-                "No choline content (safe for MCAS)",
-                "Supports skin, hair, and nail microrelief"
-            ]
-        },
-        howItWorks: "Silicon acts as a supportive factor in collagen maturation. It helps create the 'bridges' between collagen fibers that provide tensile strength to connective tissues. MMST specifically activates PINP (procollagen type I N-terminal propeptide), a marker of collagen formation. It is a critical partner to Copper for the lysyl oxidase (LOX) enzyme.",
-        research: [
-            {
-                outcome: "Collagen Formation Markers",
-                summary: "RCT evidence showing improvements in collagen synthesis markers.",
-                studies: [
-                    {
-                        source: "Spector et al., 2008",
-                        pmid: "18547426",
-                        design: "RCT, n=136",
-                        finding: "Increased PINP (marker of collagen formation) at doses of 6-12mg silicon/day."
-                    }
-                ]
-            },
-            {
-                outcome: "Skin, Hair, and Nails",
-                summary: "Cosmetic trials show significant improvement in tensile strength and microrelief.",
-                studies: [
-                    {
-                        source: "Barel et al., 2005",
-                        pmid: "16205932",
-                        finding: "16-19% improvement in skin microrelief and nail/hair benefits."
-                    },
-                    {
-                        source: "Wickett et al., 2007",
-                        pmid: "17960402",
-                        finding: "Hair tensile strength preserved over 9 months."
-                    }
-                ]
-            },
-            {
-                outcome: "Bioavailability Comparison",
-                summary: "MMST significantly outperforms other silicon forms in human absorption studies.",
-                studies: [
-                    {
-                        source: "Sripanyakorn et al., 2009",
-                        pmid: "19356271",
-                        finding: "MMST (64% absorption) vs ch-OSA (17%) vs Colloidal (1%)."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "Zero studies in hEDS/POTS/MCAS populations. Evidence for silicon is generally weaker than other triad ingredients; EFSA rejected general health claims in 2011. Manufacturer funding exists for major trials.",
-        triad: {
-            mcas: "MMST is chosen specifically because it lacks choline, which can trigger mast cell pathways (a concern with the ch-OSA form). It also lacks fermentation-based contaminants.",
-            heds: "Theoretical support for 'tightening' lax collagen via cross-linking. While not a cure, supporting the LOX enzyme that rivets collagen fibers together is a logical therapeutic goal.",
-            pots: "Zero direct evidence. Inferences are based on silicon's inorganic structure and renal elimination, suggesting minimal interference with POTS pharmacotherapy."
-        },
-        whyThisForm: {
-            form: "Silicon (MMST) in Acacia Matrix",
-            rationale: "Superior absorption (64%) compared to BioSil (17%). Acacia matrix stabilizes the liquid MMST for powder encapsulation without adding choline or disrupting the intestinal lining.",
-            comparison: [
-                { form: "Silicon (MMST)", difference: "64% bioavailability; choline-free; intestinal safety", selected: true },
-                { form: "ch-OSA (BioSil)", difference: "17% bioavailability; choline content concerns for MCAS", selected: false },
-                { form: "Colloidal Silica", difference: "Minimal (1%) absorption; largely ineffective", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Excellent safety profile at nutritional doses (10-18mg). No serious adverse events in regulatory audits.",
-            interactions: "Low risk due to inorganic nature and renal elimination. No documented CYP450 impact.",
-            excipientConcerns: {
-                avoid: ["Choline (histamine trigger pathway)"],
-                safe: ["Acacia matrix", "Vegetable cellulose"]
-            },
-            cautions: "Avoid in significant kidney disease (renal excretion). Taste is slightly metallic—mask in powder forms."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Ongoing", dosage: "10 mg daily", notes: "Split between AM/PM in powder" }
-            ],
-            timeline: "Connective tissue repletion is slow; benefits typically observed after 20+ weeks."
-        },
-        sources: [
-            { title: "Bioavailability of different silicon forms", pmid: "19356271", authors: "Sripanyakorn et al.", year: "2009" },
-            { title: "Silicon on collagen markers (RCT)", pmid: "18547426", authors: "Spector et al.", year: "2008" },
-            { title: "Choline-stabilized orthosilicic acid intestinal disruption concern", pmid: "32681588", authors: "Tedesco et al.", year: "2020" },
-            { title: "Silicon and skin health RCT", pmid: "16205932", authors: "Barel et al.", year: "2005" }
-        ]
-    },
-    "l-theanine": {
+"l-theanine": {
         id: "l-theanine",
         name: "L-Theanine",
         atAGlance: {
@@ -1532,89 +1250,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Generic L-theanine isomer contamination analysis", pmid: "14755608", authors: "Desai & Armstrong", year: "2004" }
         ]
     },
-    "l-lysine": {
-        id: "l-lysine",
-        name: "L-Lysine HCl",
-        atAGlance: {
-            whatItIs: "An essential amino acid that serves as the primary substrate for collagen cross-linking and is required for carnitine synthesis",
-            whyWeIncludeIt: "Lysine residues are where lysyl oxidase creates the covalent bonds that give collagen its tensile strength—it's literally the building block that gets 'woven together'",
-            dose: "1,000 mg daily (500mg AM + 500mg PM capsules)",
-            keyBenefits: [
-                "Essential substrate for lysyl oxidase-mediated collagen cross-linking",
-                "Required for carnitine biosynthesis, supporting energy production",
-                "Demonstrates 5-HT4 receptor antagonism, potentially reducing anxiety",
-                "Human safety data confirms excellent tolerability up to 6g/day"
-            ]
-        },
-        howItWorks: "Collagen's tensile strength relies on covalent cross-links formed at lysine residues by lysyl oxidase (LOX). L-Lysine provides the mandatory substrate for this process. It also serves as a precursor for carnitine synthesis and acts as a partial 5-HT4 receptor antagonist, which may help moderate serotonin-driven anxiety often reported in POTS populations.",
-        research: [
-            {
-                outcome: "Safety & Tolerability",
-                summary: "Large systematic reviews confirm L-lysine is exceptionally safe at doses well above ours.",
-                studies: [
-                    {
-                        source: "Japanese Systematic Review, 2020",
-                        pmid: "33000161",
-                        finding: "NOAEL established at 6,000mg/day based on 71 human studies."
-                    }
-                ]
-            },
-            {
-                outcome: "Anxiety & 5-HT4 Antagonism",
-                summary: "Human RCTs and biochemical studies show reduction in stress markers and autonomic anxiety markers.",
-                studies: [
-                    {
-                        source: "Smriga et al. (PNAS)",
-                        pmid: "14676321",
-                        finding: "Identified L-lysine as a partial 5-HT4 receptor antagonist."
-                    },
-                    {
-                        source: "Smriga et al., 2007",
-                        pmid: "17510493",
-                        design: "RCT, n=108",
-                        finding: "Reduced trait anxiety, salivary cortisol, and chromogranin-A."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No direct clinical trials in isolated EDS/POTS populations; extrapolated from general biochemistry and anxiety RCTs.",
-        triad: {
-            mcas: "Generally well-tolerated. Non-histamine liberator. Derived via fermentation; we use pharmaceutical-grade HCl to minimize biogenic amine contamination.",
-            heds: "The literal building block for LOX-mediated cross-linking. Ensures 'substrate availability' for whatever LOX activity is present.",
-            pots: "5-HT4 antagonism property may help reduce chronic anxiety. Supports the carnitine synthesis pathway for energy production."
-        },
-        whyThisForm: {
-            form: "L-Lysine HCl",
-            rationale: "Free-form amino acid with ~100% bioavailability. HCl salt provides superior stability. BID (twice daily) dosing ensures steady substrate availability.",
-            comparison: [
-                { form: "L-Lysine HCl", difference: "Free-form; ~100% bioavailable; superior stability", selected: true },
-                { form: "Collagen Peptides", difference: "32-50% already hydroxylysine (unusable for cross-linking)", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Excellent safety (NOAEL 6g/day). Mild GI upset (5-10%) possible at target dose.",
-            interactions: "CONTRAINDICATED with Aminoglycosides. May enhance calcium absorption (monitor if supplementing separately).",
-            excipientConcerns: {
-                avoid: ["Artificial colors", "Biogenic amine contamination"],
-                safe: ["Pharmaceutical-grade L-Lysine HCl"]
-            },
-            cautions: "Separate from Arginine-rich supplements by 3-4 hours if maximal absorption is desired."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "250 mg BID", notes: "Test tolerance" },
-                { step: "Week 2+", dosage: "500 mg BID", notes: "Target maintenance" }
-            ],
-            timeline: "Collagen benefits require 8-12 weeks; anxiety benefits within 1-2 weeks."
-        },
-        sources: [
-            { title: "Safety review of L-lysine", pmid: "33000161", authors: "Japanese Society", year: "2021" },
-            { title: "L-Lysine as 5-HT4 receptor antagonist", pmid: "14676321", authors: "Smriga et al.", year: "2003" },
-            { title: "Lysine + Arginine for anxiety RCT", pmid: "17510493", authors: "Smriga et al.", year: "2007" },
-            { title: "Hydroxylysine modifications for collagen stability", authors: "Sarohi et al.", year: "2025" }
-        ]
-    },
-    "zinc-carnosine": {
+"zinc-carnosine": {
         id: "zinc-carnosine",
         name: "Zinc Carnosine",
         atAGlance: {
@@ -1703,407 +1339,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "HSP70 induction by zinc carnosine", pmid: "12498304", authors: "Odashima et al.", year: "2002" }
         ]
     },
-    "l-carnitine-fumarate": {
-        id: "l-carnitine-fumarate",
-        name: "L-Carnitine Fumarate",
-        atAGlance: {
-            whatItIs: "A mitochondrial energy support compound combined with a Krebs cycle intermediate",
-            whyWeIncludeIt: "Essential for fatty acid transport into mitochondria; supports energy production in dysautonomia and fatigue conditions",
-            dose: "1,000 mg daily",
-            keyBenefits: [
-                "Mandatory fat-to-energy transport mechanism",
-                "65% reduction in ventricular arrhythmias",
-                "Significantly improves fatigue in CFS/ME RCTs",
-                "HRV indices inverse association with imbalance"
-            ]
-        },
-        howItWorks: "L-Carnitine acts as the only mechanism to transport long-chain fatty acids into mitochondria for β-oxidation. Without it, cells become glucose-dependent. The fumarate salt adds fumaric acid, a direct Krebs cycle intermediate, providing steadier cardiac support compared to faster-peaking tartrate.",
-        research: [
-            {
-                outcome: "Fatigue & CFS Symptoms",
-                summary: "Strong evidence in overlapping fatigue syndromes like CFS/ME.",
-                studies: [
-                    {
-                        source: "Plioplys et al., 1997",
-                        pmid: "9018019",
-                        design: "n=30 crossover RCT",
-                        finding: "Significant improvement in 12/18 clinical parameters in CFS."
-                    },
-                    {
-                        source: "Raij et al., 2024",
-                        pmid: "38505756",
-                        finding: "Halved fatigue scores (p=0.002) and increased serotonin 8-fold."
-                    }
-                ]
-            },
-            {
-                outcome: "Cardiovascular & HRV Support",
-                summary: "Robust data showing protection against arrhythmias and support for autonomic markers.",
-                studies: [
-                    {
-                        source: "DiNicolantonio et al., 2013",
-                        pmid: "23597877",
-                        design: "13 RCTs, n=3,629",
-                        finding: "65% reduction in ventricular arrhythmias (RR=0.35)."
-                    },
-                    {
-                        source: "Ziegler et al., 2021",
-                        pmid: "33084971",
-                        finding: "Higher acylcarnitine ratios inversely associated with HRV indices."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No direct clinical trials in POTS, hEDS, or MCAS. CFS/ME results serve as the primary clinical baseline for dysautonomia fatigue.",
-        triad: {
-            mcas: "L-carnitine itself appears safe and potentially anti-inflammatory. A different derivative (palmitoylcarnitine) has shown histamine release, but standard L-carnitine is used broadly in MCAS settings.",
-            heds: "Addresses mitochondrial energy dysfunction that contributes to the characteristic fatigue in EDS populations.",
-            pots: "Anti-arrhythmic properties (65% reduction in ventricular arrhythmias) provide energy support without proarrhythmic risk. Potential boost to HRV indices."
-        },
-        whyThisForm: {
-            form: "L-Carnitine Fumarate",
-            rationale: "Fumaric acid feeds directly into the Krebs cycle, offering sustained energy support. Steadier release profile than tartrate (athletic) or ALCAR (neurological).",
-            comparison: [
-                { form: "L-Carnitine Fumarate", difference: "Steadier release; Krebs cycle support; cardiac-focused", selected: true },
-                { form: "L-Carnitine Tartrate", difference: "Fast peak; better for recovery after brief exercise", selected: false },
-                { form: "ALCAR (Acetyl-L-Carnitine)", difference: "Crosses BBB better; focused on neurological/cognition", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Good tolerability. GI upset or 'fishy' body odor possible at higher doses.",
-            interactions: "May enhance Warfarin (monitor INR). May antagonize thyroid hormones (monitor T3/T4).",
-            excipientConcerns: {
-                avoid: ["Generic fillers with high TMAO potential"],
-                safe: ["Carnipure® brand or pharmaceutical-grade"]
-            },
-            cautions: "Consider periodic breaks to manage hypothetical long-term TMAO concerns."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "250 mg daily", notes: "Assess tolerance" },
-                { step: "Week 2", dosage: "500 mg daily", notes: "Incremental step" },
-                { step: "Week 3+", dosage: "1,000 mg daily", notes: "Target (split AM/PM)" }
-            ],
-            timeline: "Fatigue benefits 4-8 weeks; cardiovascular stability 3-6 months."
-        },
-        sources: [
-            { title: "L-carnitine in CFS/ME RCT", pmid: "9018019", authors: "Plioplys et al.", year: "1997" },
-            { title: "Anti-arrhythmic effects of carnitine (Meta-analysis)", pmid: "23597877", authors: "DiNicolantonio", year: "2013" },
-            { title: "Acylcarnitine ratios and HRV indices", pmid: "33084971", authors: "Ziegler et al.", year: "2021" },
-            { title: "Mitochondrial transport mechanism", pmid: "28497060", authors: "Song et al.", year: "2017" },
-            { title: "Serotonin and fatigue response", pmid: "38505756", authors: "Raij et al.", year: "2024" }
-        ]
-    },
-    "chondroitin-sulfate": {
-        id: "chondroitin-sulfate",
-        name: "Chondroitin Sulfate",
-        atAGlance: {
-            whatItIs: "A glycosaminoglycan (GAG) that builds and protects the extracellular matrix (ECM)",
-            whyWeIncludeIt: "Inhibits histamine release more potently than cromolyn sodium while protecting the ECM from inflammatory degradation",
-            dose: "800 mg daily",
-            keyBenefits: [
-                "Mast cell stabilization stronger than cromolyn in vitro",
-                "Reduces TNF and IL-8 from human mast cells by 45-60%",
-                "Pharmaceutical-grade CS effective as Celecoxib",
-                "Inhibits NF-κB and collagen-degrading MMPs"
-            ]
-        },
-        howItWorks: "Chondroitin Sulfate works through signaling pathways (NF-κB inhibition) and anti-inflammatory mechanisms. It inhibits histamine release from mast cells with greater potency than cromolyn sodium by decreasing intracellular calcium. It also helps anchor natural inhibitors (TIMP-3) to protect the ECM from enzymatic breakdown.",
-        research: [
-            {
-                outcome: "Mast Cell Stabilization",
-                summary: "Potent inhibition of histamine and inflammatory cytokines from human mast cells.",
-                studies: [
-                    {
-                        source: "Theoharides et al., 2000",
-                        pmid: "11082109",
-                        finding: "CS inhibits histamine release stronger than cromolyn (76.5% inhibition)."
-                    },
-                    {
-                        source: "Gross et al., 2019",
-                        pmid: "30521103",
-                        finding: "Inhibits TNF by 60% and IL-8 by 45% from activated mast cells."
-                    }
-                ]
-            },
-            {
-                outcome: "ECM/Joint Protection",
-                summary: "Strong clinical evidence for joint protection when pharmaceutical grade is used.",
-                studies: [
-                    {
-                        source: "Reginster et al. (CONCEPT Trial)",
-                        pmid: "28533290",
-                        design: "n=604 RCT",
-                        finding: "Pharma-grade CS was as effective as celecoxib for joint pain/function."
-                    },
-                    {
-                        source: "Singh et al. (Cochrane)",
-                        pmid: "25619177",
-                        finding: "Verified significant effect for pharma-grade vs no effect for supplement-grade."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No direct clinical trials in hEDS/POTS/MCAS. Most joint data involves OA pathology (over-degradation with normal synthesis), which is different from hEDS pathology.",
-        triad: {
-            mcas: "High priority stabilizer. Stronger than cromolyn for histamine inhibition in vitro. Reduces inflammatory markers TNF and IL-8 in activated mast cells.",
-            heds: "Provides anti-inflammatory support and MMP inhibition to protect collagen architecture. Concentration analysis confirms oral doses are protective, not destructive to ECM.",
-            pots: "No direct autonomic effects, but compatible with all standard POTS medications."
-        },
-        whyThisForm: {
-            form: "Pharmaceutical-grade (≥95% Purity)",
-            rationale: "Validated purity is mandatory. Meta-analyses show supplement-grade versions often provide no significant clinical benefit compared to placebo.",
-            comparison: [
-                { form: "Pharma-grade (Condrosulf®-equivalent)", difference: "≥95% purity; clinically effective in RCTs", selected: true },
-                { form: "Generic Supplement-grade", difference: "Quality issues; failed to show effect in Cochrane meta-analysis", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Excellent safety. Adverse events comparable to placebo in 6-year safety data.",
-            interactions: "AVOID or monitor with Warfarin (reports of increased INR/bleeding).",
-            excipientConcerns: {
-                avoid: ["Histamine contamination in low-purity sources"],
-                safe: ["Bovine/Porcine pharmaceutical-grade"]
-            },
-            cautions: "Intrinsic anticoagulant activity via heparin cofactor II inhibition."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "200 mg daily", notes: "Sensitive start" },
-                { step: "Week 2", dosage: "400 mg daily", notes: "Incremental step" },
-                { step: "Week 3+", dosage: "800 mg daily", notes: "Target (split AM/PM)" }
-            ],
-            timeline: "Mast cell and anti-inflammatory benefits 4-8 weeks; structural effects 6-12+ months."
-        },
-        sources: [
-            { title: "CS mast cell stabilization vs cromolyn", pmid: "11082109", authors: "Theoharides TC", year: "2000" },
-            { title: "CS inhibits mast cell TNF and IL-8", pmid: "30521103", authors: "Gross AR", year: "2019" },
-            { title: "CONCEPT trial: pharma-grade CS vs celecoxib", pmid: "28533290", authors: "Reginster JY", year: "2017" },
-            { title: "MMP inhibition and TIMP-3 anchoring", pmid: "25176127", authors: "Troeberg L", year: "2014" },
-            { title: "ECM protection via NF-κB inhibition", pmid: "20190401", authors: "Imada K", year: "2010" }
-        ]
-    },
-    "l-proline": {
-        id: "l-proline",
-        name: "L-Proline",
-        atAGlance: {
-            whatItIs: "An amino acid that comprises 24% of collagen's structure—the building blocks your body uses to make and repair connective tissue",
-            whyWeIncludeIt: "Ensures your body has adequate substrate for collagen synthesis, especially important when MMP overactivity increases collagen turnover",
-            dose: "500-2,000 mg daily",
-            keyBenefits: [
-                "Essential structural component of collagen (24%)",
-                "Creates 'kinks' for collagen triple helix architecture",
-                "Safe for MCAS—no mast cell activation documented",
-                "Long-term safety established up to 10g/day"
-            ]
-        },
-        howItWorks: "Proline's unique ring structure creates the precise bends needed for the collagen triple helix. Hydroxylation of proline (vitamin C-dependent) increases collagen melting temperature from 27°C to 43°C, ensuring structural stability. In hEDS, where MMP-1 is upregulated 53-fold, proline ensures 'substrate adequacy' to keep up with accelerated collagen turnover.",
-        research: [
-            {
-                outcome: "Collagen Structural Integrity",
-                summary: "Biochemical evidence confirms proline is mandatory for stable collagen triple helix formation.",
-                studies: [
-                    {
-                        source: "Shaw et al., 2017",
-                        pmid: "27852613",
-                        finding: "Proline + hydroxyproline comprise 33% of collagen amino acids; essential for architecture."
-                    }
-                ]
-            },
-            {
-                outcome: "Plateau Effect in Synthesis",
-                summary: "Research shows proline ensures substrate adequacy rather than driving supraphysiological synthesis.",
-                studies: [
-                    {
-                        source: "De Paz-Lugo et al., 2018",
-                        pmid: "30006659",
-                        design: "Bovine chondrocyte dose-response",
-                        finding: "Proline effects plateau within physiological range, unlike glycine."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No direct clinical trials in isolated L-proline for hEDS/POTS/MCAS. Most data is from mixed collagen peptides or biochemical models.",
-        triad: {
-            mcas: "Excellent safety profile; no involvement in histamine pathways or mast cell triggering. Synthetic forms preferred over fermentation.",
-            heds: "Addresses substrate needs in the face of 53-fold MMP-1 upregulation. Prevents 'procollagen waste' by ensuring building blocks are available for assembly.",
-            pots: "Indirect support via vascular collagen integrity. Healthy blood vessel walls require proper collagen triple helix architecture."
-        },
-        whyThisForm: {
-            form: "Pharmaceutical Grade L-Proline Powder",
-            rationale: "Pure powder allows for therapeutic dosing (up to 2g) without capsule burden. Synthetic sourcing preferred for MCAS safety.",
-            comparison: [
-                { form: "L-Proline Powder", difference: "Flexible dosing; minimal excipients; MCAS safe", selected: true },
-                { form: "Collagen Peptides", difference: "Complete matrix but may include triggers; less substrate-focused", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Exceptional safety up to 10g/day. Rare GI upset at very high doses.",
-            interactions: "No significant drug interactions documented with standard POTS/MCAS medications.",
-            excipientConcerns: {
-                avoid: ["Fermentation-derived histamine risk", "Citric acid", "Magnesium stearate"],
-                safe: ["Pharmaceutical-grade synthetic L-proline"]
-            },
-            cautions: "Monitor in significant kidney or liver disease due to amino acid load."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "250 mg daily", notes: "With cofactors (Vit C)" },
-                { step: "Week 2", dosage: "500 mg daily", notes: "Split AM/PM" },
-                { step: "Week 3", dosage: "1,000 mg daily", notes: "Standard target" },
-                { step: "Week 4+", dosage: "1,500-2,000 mg daily", notes: "Optimal maintenance" }
-            ],
-            timeline: "Connective tissue remodeling is slow; require 8-12 weeks minimum."
-        },
-        sources: [
-            { title: "High glycine concentration increases collagen synthesis", pmid: "30006659", authors: "De Paz-Lugo P et al.", year: "2018" },
-            { title: "Proline Precursors and Collagen Synthesis Review", pmid: "28978679", authors: "Albaugh VL et al.", year: "2017" },
-            { title: "Vitamin C-enriched gelatin augments collagen synthesis", pmid: "27852613", authors: "Shaw G et al.", year: "2017" },
-            { title: "MMP expression in EDS models", pmid: "34831458", authors: "Chiarelli N et al.", year: "2021" }
-        ]
-    },
-    "recombinant-human-lactoferrin": {
-        id: "recombinant-human-lactoferrin",
-        name: "Recombinant Human Lactoferrin (Helaina eferra™)",
-        atAGlance: {
-            whatItIs: "A dairy-free, human-identical protein produced via precision fermentation",
-            whyWeIncludeIt: "Multifunctional mast cell stabilizer and tryptase inhibitor that also supports iron regulation and gut barrier integrity",
-            dose: "150 mg daily",
-            keyBenefits: [
-                "Potent tryptase inhibitor (Ki = 24 nM)",
-                "Reduces mast cell degranulation by ~50%",
-                "Strengthens intestinal tight junctions (50% reduction in leakiness)",
-                "Superior serum iron increase vs. ferrous sulfate"
-            ]
-        },
-        howItWorks: "Lactoferrin is a potent natural tryptase inhibitor (Ki = 24 nM), directly blocking a key MCAS mediator that degrades Type VI collagen. It reduces IgE-dependent degranulation by 50% and lowers inflammatory cytokines (TNF-α, IL-6). Additionally, it enhances iron bioavailability through specialized receptors and strengthens intestinal tight junctions to prevent antigen translocation.",
-        research: [
-            {
-                outcome: "Tryptase Inhibition & MCAS",
-                summary: "Potent biochemical inhibition of tryptase and reduction in mast cell degranulation.",
-                studies: [
-                    {
-                        source: "PMID: 32093598",
-                        finding: "Ki = 24 nM for tryptase inhibition; among the most potent natural inhibitors known."
-                    },
-                    {
-                        source: "Pilot Study (Chronic Urticaria)",
-                        finding: "40% reduction in histamine levels after 8 weeks at 200mg/day."
-                    }
-                ]
-            },
-            {
-                outcome: "Iron & Gut Barrier",
-                summary: "Superior iron repletion and gut barrier strengthening compared to standard supplements.",
-                studies: [
-                    {
-                        source: "Paesano et al., 2010",
-                        pmid: "20143251",
-                        finding: "Serum iron increase of 41.44 μg/dL vs ferrous sulfate; better tolerated."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No direct RCTs in diagnosed MCAS cohorts; extrapolated from allergic rhinitis and iron deficiency trials.",
-        triad: {
-            mcas: "Directly inhibits tryptase, stabilizes mast cells, and neutralizes heparin. Addresses 'leaky gut' that triggers activation.",
-            heds: "Uniquely protects Type VI collagen from tryptase degradation. Supports iron needed for prolyl hydroxylase activity.",
-            pots: "Addresses iron deficiency (a common POTS trigger) more effectively and with fewer GI side effects than ferrous sulfate."
-        },
-        whyThisForm: {
-            form: "Helaina eferra™ (Recombinant Human)",
-            rationale: "Dairy-free and identical to human protein. Eliminates the dairy allergen risk present in bovine lactoferrin (45% of milk-allergic patients react to bovine forms).",
-            comparison: [
-                { form: "Helaina eferra™", difference: "Human-identical; zero diary risk; precision fermentation", selected: true },
-                { form: "Bovine Lactoferrin", difference: "69% homology; high dairy allergen and α-gal risk", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Well-tolerated. Mild GI upset in 8-12% of users at high doses.",
-            interactions: "Take 2 hours apart from H1/H2 blockers (reduced absorption). Separate from PPIs and thyroid medication.",
-            excipientConcerns: {
-                avoid: ["Lactose", "Corn fillers", "Magnesium stearate"],
-                safe: ["Helaina eferra™ (dairy-free)"]
-            },
-            cautions: "Monitor in hemochromatosis or iron overload conditions."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "50 mg daily", notes: "Between meals" },
-                { step: "Week 2", dosage: "100 mg daily", notes: "Morning" },
-                { step: "Week 3+", dosage: "150 mg daily", notes: "Target dose" }
-            ],
-            timeline: "Immune effects 2-4 weeks; iron repletion 8-12 weeks."
-        },
-        sources: [
-            { title: "Lactoferrin tryptase inhibition (Ki = 24 nM)", pmid: "32093598", year: "2020" },
-            { title: "Tryptase degrades Type VI collagen", pmid: "8466500", authors: "Kielty et al.", year: "1993" },
-            { title: "Lactoferrin efficacy versus ferrous sulfate", pmid: "20143251", authors: "Paesano R et al.", year: "2010" }
-        ]
-    },
-    "l-citrulline": {
-        id: "l-citrulline",
-        name: "L-Citrulline",
-        isExcluded: true,
-        atAGlance: {
-            whatItIs: "An amino acid that converts to nitric oxide in the body",
-            whyWeIncludeIt: "EXCLUDED: Increases collagen-degrading enzymes (MMPs) and worsens POTS blood pressure crashes",
-            dose: "0 mg (Excluded)",
-            keyBenefits: [
-                "Increases MMP-1 (collagen breakdown) by 153%",
-                "Increases MMP-2 by 243%",
-                "Lowers standing blood pressure (POTS risk)",
-                "High fermentation contamination risk (MCAS)"
-            ]
-        },
-        howItWorks: "L-Citrulline was excluded because it powerfully activates the nitric oxide pathway that increases matrix metalloproteinases (MMPs)—the enzymes responsible for collagen degradation. In human dermal fibroblasts, this results in a 153-243% increase in collagen-breaking activity. For POTS, it lowers blood pressure, particularly while standing, which worsens orthostatic intolerance.",
-        research: [
-            {
-                outcome: "Connective Tissue Harm",
-                summary: "Direct research showing L-citrulline accelerates collagen breakdown in human cells.",
-                studies: [
-                    {
-                        source: "Choe et al., 2003",
-                        pmid: "12858222",
-                        finding: "NIT pathway activation increases MMP-1 by 153% and MMP-2 by 243% in human fibroblasts."
-                    }
-                ]
-            },
-            {
-                outcome: "POTS/Blood Pressure Risks",
-                summary: "Meta-analysis confirms blood pressure lowering effects that are dangerous for POTS.",
-                studies: [
-                    {
-                        source: "Barkhidarian et al., 2019",
-                        pmid: "30788274",
-                        finding: "Significant reduction in resting systolic BP, worsening orthostatic symptoms."
-                    }
-                ]
-            }
-        ],
-        triad: {
-            mcas: "95% of L-citrulline is fermentation-derived, carrying unacceptable histamine and tyramine contamination risk.",
-            heds: "Directly contra-indicated. Accelerates collagen turnover and degradation via MMP upregulation.",
-            pots: "Dangerous for orthostatic intolerance; reduces standing blood pressure and antagonizes POTS medications like midodrine."
-        },
-        whyThisForm: {
-            form: "None",
-            rationale: "Excluded from Zebrawell formulation due to safety profile mismatch with the hEDS/POTS/MCAS triad."
-        },
-        safety: {
-            sideEffects: "Blood pressure crashes, orthostatic intolerance, and accelerated collagen thinning.",
-            interactions: "Antagonizes Midodrine and Fludrocortisone. Enhances other blood pressure lowering drugs.",
-            excipientConcerns: {
-                avoid: ["All forms"],
-                safe: ["None"]
-            }
-        },
-        sources: [
-            { title: "Nitric oxide induces MMP expression in fibroblasts", pmid: "12858222", authors: "Choe et al.", year: "2003" },
-            { title: "Meta-analysis of L-citrulline on blood pressure", pmid: "30788274", year: "2019" }
-        ]
-    },
-    "pantothenic-acid": {
+"pantothenic-acid": {
         id: "pantothenic-acid",
         name: "Pantothenic Acid (Vitamin B5)",
         atAGlance: {
@@ -2784,12 +2020,14 @@ export const ingredients: Record<string, IngredientData> = {
 };
 
 export const ingredientList = [
-    "Palmitoylethanolamide (PEA)", "Luteolin", "EMIQ (Enzymatically Modified Isoquercitrin)", "Magnesium Glycinate", "Taurine",
-    "Vitamin C (Sodium Ascorbate)", "L-Carnitine Fumarate", "L-Proline", "Nicotinamide Riboside (NR)", "Pycnogenol",
-    "PQQ (Pyrroloquinoline Quinone)", "Chlorogenic Acid", "L-Theanine", "Zinc Carnosine", "Astaxanthin",
-    "Silicon (MMST)", "Benfotiamine", "Niacinamide", "P5P (Pyridoxal-5-Phosphate)", "R5P (Riboflavin-5-Phosphate)",
-    "Methylfolate", "Vitamin B12 (Methylcobalamin)", "Vitamin D3", "Vitamin K2 (MK-7)", "Copper Bisglycinate",
-    "Manganese Bisglycinate", "L-Lysine", "Chondroitin Sulfate", "Recombinant Human Lactoferrin", "L-Citrulline", "Selenium", "Pantothenic Acid", "Biotin", "Boron", "Molybdenum"
+    // v7.8 canonical ingredient list (29 unique across AM, PM, Powder)
+    "Palmitoylethanolamide (PEA)", "Luteolin", "Magnesium Bisglycinate", "Taurine",
+    "Vitamin C (Sodium Ascorbate)", "Nicotinamide Riboside (NR)", "Pine Bark Extract", "Grape Seed Extract",
+    "Quercetin Phytosome (Quercefit®)", "Chlorogenic Acid", "L-Theanine", "Zinc Carnosine", "Astaxanthin",
+    "Benfotiamine", "Niacinamide", "P5P (Pyridoxal-5-Phosphate)", "R5P (Riboflavin-5-Phosphate)",
+    "Methylfolate", "Vitamin B12 (Methylcobalamin)", "Vitamin D3", "Vitamin K2 (MK-7)",
+    "Copper Bisglycinate", "Manganese Bisglycinate", "Chromium", "Selenium", "Pantothenic Acid",
+    "Biotin", "Boron", "Molybdenum"
 ];
 
 const slugify = (text: string) => {

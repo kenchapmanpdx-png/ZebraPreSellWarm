@@ -1,142 +1,118 @@
 [
   {
     "slug": "palmitoylethanolamide",
-    "name": "Palmitoylethanolamide (PEA)"
+    "display_name": "Palmitoylethanolamide (PEA)"
   },
   {
     "slug": "luteolin",
-    "name": "Luteolin"
+    "display_name": "Luteolin"
   },
   {
-    "slug": "emiq",
-    "name": "EMIQ (Enzymatically Modified Isoquercitrin)"
-  },
-  {
-    "slug": "magnesium-glycinate",
-    "name": "Magnesium Glycinate"
+    "slug": "magnesium-bisglycinate",
+    "display_name": "Magnesium Bisglycinate"
   },
   {
     "slug": "taurine",
-    "name": "Taurine"
+    "display_name": "Taurine"
   },
   {
     "slug": "vitamin-c",
-    "name": "Vitamin C (Sodium Ascorbate)"
-  },
-  {
-    "slug": "l-carnitine-fumarate",
-    "name": "L-Carnitine Fumarate"
-  },
-  {
-    "slug": "l-proline",
-    "name": "L-Proline"
+    "display_name": "Vitamin C (Sodium Ascorbate)"
   },
   {
     "slug": "nicotinamide-riboside",
-    "name": "Nicotinamide Riboside (NR)"
+    "display_name": "Nicotinamide Riboside (NR)"
   },
   {
-    "slug": "pycnogenol",
-    "name": "Pycnogenol"
+    "slug": "pine-bark-extract",
+    "display_name": "Pine Bark Extract"
   },
   {
-    "slug": "pqq",
-    "name": "PQQ (Pyrroloquinoline Quinone)"
+    "slug": "grape-seed-extract",
+    "display_name": "Grape Seed Extract"
+  },
+  {
+    "slug": "quercetin-phytosome",
+    "display_name": "Quercetin Phytosome (Quercefit\u00ae)"
   },
   {
     "slug": "chlorogenic-acid",
-    "name": "Chlorogenic Acid"
+    "display_name": "Chlorogenic Acid"
   },
   {
     "slug": "l-theanine",
-    "name": "L-Theanine"
+    "display_name": "L-Theanine"
   },
   {
     "slug": "zinc-carnosine",
-    "name": "Zinc Carnosine"
+    "display_name": "Zinc Carnosine"
   },
   {
     "slug": "astaxanthin",
-    "name": "Astaxanthin"
-  },
-  {
-    "slug": "silicon",
-    "name": "Silicon (MMST)"
+    "display_name": "Astaxanthin"
   },
   {
     "slug": "benfotiamine",
-    "name": "Benfotiamine"
+    "display_name": "Benfotiamine"
   },
   {
     "slug": "niacinamide",
-    "name": "Niacinamide"
+    "display_name": "Niacinamide"
   },
   {
     "slug": "p5p",
-    "name": "P5P (Pyridoxal-5-Phosphate)"
+    "display_name": "P5P (Pyridoxal-5-Phosphate)"
   },
   {
     "slug": "r5p",
-    "name": "R5P (Riboflavin-5-Phosphate)"
+    "display_name": "R5P (Riboflavin-5-Phosphate)"
   },
   {
     "slug": "methylfolate",
-    "name": "Methylfolate"
+    "display_name": "Methylfolate"
   },
   {
     "slug": "vitamin-b12",
-    "name": "Vitamin B12 (Methylcobalamin)"
+    "display_name": "Vitamin B12 (Methylcobalamin)"
   },
   {
     "slug": "vitamin-d3",
-    "name": "Vitamin D3"
+    "display_name": "Vitamin D3"
   },
   {
     "slug": "vitamin-k2",
-    "name": "Vitamin K2 (MK-7)"
+    "display_name": "Vitamin K2 (MK-7)"
   },
   {
     "slug": "copper-bisglycinate",
-    "name": "Copper Bisglycinate"
+    "display_name": "Copper Bisglycinate"
   },
   {
     "slug": "manganese-bisglycinate",
-    "name": "Manganese Bisglycinate"
+    "display_name": "Manganese Bisglycinate"
   },
   {
-    "slug": "l-lysine",
-    "name": "L-Lysine"
-  },
-  {
-    "slug": "chondroitin-sulfate",
-    "name": "Chondroitin Sulfate"
-  },
-  {
-    "slug": "recombinant-human-lactoferrin",
-    "name": "Recombinant Human Lactoferrin"
-  },
-  {
-    "slug": "l-citrulline",
-    "name": "L-Citrulline"
+    "slug": "chromium",
+    "display_name": "Chromium"
   },
   {
     "slug": "selenium",
-    "name": "Selenium"
+    "display_name": "Selenium"
   },
   {
     "slug": "pantothenic-acid",
-    "name": "Pantothenic Acid"
+    "display_name": "Pantothenic Acid"
   },
   {
     "slug": "biotin",
-    "name": "Biotin"
+    "display_name": "Biotin"
   },
   {
     "slug": "boron",
-    "name": "Boron"
+    "display_name": "Boron"
   },
   {
     "slug": "molybdenum",
-    "name": "Molybdenum"
+    "display_name": "Molybdenum"
   }
 ]

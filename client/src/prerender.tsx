@@ -60,8 +60,8 @@ function metaForRoute(url: string): RouteMeta {
       name: string;
       atAGlance?: { whatItIs?: string; whyWeIncludeIt?: string; keyBenefits?: string[] };
     }>)[slug];
-    const listed = ingredientList.find((i: { slug: string; name: string }) => i.slug === slug);
-    const rawName = item?.name || listed?.name || slug;
+    const listed = ingredientList.find((i: { slug: string; display_name: string }) => i.slug === slug);
+    const rawName = item?.name || listed?.display_name || slug;
     // Strip trademark/brand parenthetical for cleaner titles
     const name = rawName.split(" (")[0];
 
