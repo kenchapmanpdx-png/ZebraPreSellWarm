@@ -73,7 +73,7 @@ export default function FAQ() {
   };
 
   // Open the first two by default to front-load info and break the "wall of identical rows" feel
-  const defaultOpen = ["item-0", "item-1"];
+  const defaultOpen: string[] = [];
 
   return (
     <section id="faq" className="py-24 md:py-40 bg-[#F2F0EA] scroll-mt-24">

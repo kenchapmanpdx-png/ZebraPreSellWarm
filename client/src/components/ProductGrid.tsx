@@ -1,8 +1,9 @@
 /* client/src/components/ProductGrid.tsx
  *
  * Three-SKU lineup for v7.8: AM Capsules, PM Capsules, Daily Powder.
- * Replaced the older Autonomic Rise / Histamine Guard / Flare Defense
- * naming (and the bogus "Acute Rescue" 3rd SKU) with the actual formula.
+ * Cards describe what each part of the system DOES for the patient (not
+ * specific ingredients - those live on the deep-dive pages). The full
+ * system is one product; CTAs reflect that.
  */
 import { motion } from "framer-motion";
 import { Star, ArrowRight, FlaskConical, Sun, Moon, Droplets } from "lucide-react";
@@ -15,10 +16,13 @@ export default function ProductGrid() {
       tag: "AM CAPSULES",
       title: "AM Capsules",
       subtitle: "Morning Foundation",
-      price: "Waitlist Only",
-      description: "The morning foundation. Methylated B-vitamins, vitamin D3 paired with K2 (MK-7), and the trace minerals that drive collagen cross-linking and histamine clearance. Built to support steady energy and autonomic balance through your day.",
+      description: "Set the day up to be stable. The morning capsules carry the methylation, energy, and cross-linking nutrients your body needs at the front of the day - the work that gets the autonomic system, mitochondria, and connective tissue rebuilding pathways online.",
       icon: <Sun className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
-      ingredients: ["Methyl B12 + Methylfolate", "Vitamin D3 + K2 (MK-7)", "Copper, Manganese, Selenium"],
+      benefits: [
+        "Steadier energy, less morning crash",
+        "Methylation support for hard-to-clear histamine",
+        "Cofactors for collagen cross-linking",
+      ],
       gradient: "from-orange-100/50 to-white/50"
     },
     {
@@ -26,10 +30,13 @@ export default function ProductGrid() {
       tag: "PM CAPSULES",
       title: "PM Capsules",
       subtitle: "Evening Reset",
-      price: "Waitlist Only",
-      description: "Evening reset. Zinc carnosine to protect your gut lining, the trace minerals (Boron, Molybdenum) and B-vitamin precursors that work overnight, plus the PM split of mast cell stabilizers so the inflammatory load doesn't follow you to sleep.",
+      description: "Help the body actually recover overnight. The evening capsules protect the gut lining, support tissue repair, and reduce the inflammatory load left over from the day so it doesn't follow you into sleep.",
       icon: <Moon className="w-6 h-6 text-indigo-600" aria-hidden="true" />,
-      ingredients: ["Zinc Carnosine (GI lining)", "Boron + Molybdenum", "Pantothenic Acid + Biotin"],
+      benefits: [
+        "Calmer histamine load before bed",
+        "Gut lining protection while you sleep",
+        "Overnight connective-tissue recovery",
+      ],
       gradient: "from-indigo-100/50 to-white/50"
     },
     {
@@ -37,10 +44,13 @@ export default function ProductGrid() {
       tag: "DAILY POWDER",
       title: "Daily Powder",
       subtitle: "ECM Protection & Mast Cell Calm",
-      price: "Waitlist Only",
-      description: "The bulk actives in a dissolvable form. Quercefit® quercetin phytosome, ultramicronized PEA, micronized luteolin, magnesium bisglycinate at therapeutic dose, sodium-buffered vitamin C, and taurine. Mixed into water; built to deliver the ingredients that need gram-scale dosing.",
+      description: "Carry the actives that need real dose to work. The powder is where the heavy lifters live - the gram-scale ingredients that protect existing collagen, calm mast cells across multiple pathways, and replenish what gets used up. Mixed into water; titratable from a sprinkle.",
       icon: <Droplets className="w-6 h-6 text-emerald-700" aria-hidden="true" />,
-      ingredients: ["Quercetin Phytosome (Quercefit®)", "Magnesium Bisglycinate (2,400 mg)", "Ultramicronized PEA + Luteolin"],
+      benefits: [
+        "Protects existing collagen from MMP-driven breakdown",
+        "Multi-pathway mast cell stabilization",
+        "Titratable from a sprinkle for sensitive starts",
+      ],
       gradient: "from-emerald-100/50 to-white/50"
     }
   ];
@@ -60,10 +70,17 @@ export default function ProductGrid() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733]"
+          className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-4"
         >
           Targeted Biological <span className="text-[#B36B4D] italic">Intervention.</span>
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-[#5D5752] text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed"
+        >
+          Three components, one system. AM capsules, PM capsules, and the Daily Powder all work together - not sold separately.
+        </motion.p>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
@@ -89,45 +106,49 @@ export default function ProductGrid() {
               </div>
 
               <div className="p-8 flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-serif font-bold text-[#3D3733] leading-tight group-hover:text-[#B36B4D] transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-[10px] font-bold text-[#8A857C] uppercase tracking-widest mt-1">
-                      {product.subtitle}
-                    </p>
-                  </div>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-serif font-bold text-[#3D3733] leading-tight group-hover:text-[#B36B4D] transition-colors">
+                    {product.title}
+                  </h3>
+                  <p className="text-[10px] font-bold text-[#8A857C] uppercase tracking-widest mt-1">
+                    {product.subtitle}
+                  </p>
                 </div>
 
-                <p className="text-[#5D5752] text-sm leading-relaxed mb-8 font-medium">
+                <p className="text-[#5D5752] text-sm leading-relaxed mb-6 font-medium">
                   {product.description}
                 </p>
 
-                <div className="mt-auto mb-8 space-y-3">
-                  <p className="text-[9px] font-black text-[#B36B4D]/60 uppercase tracking-[0.2em]">Key Actives</p>
-                  {product.ingredients.map((ing) => (
-                    <div key={ing} className="flex items-center gap-3 text-xs text-[#3D3733] font-bold">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#B36B4D]" />
-                      {ing}
+                <div className="mt-auto space-y-3 pt-4 border-t border-[#3D3733]/10">
+                  <p className="text-[9px] font-black text-[#B36B4D]/60 uppercase tracking-[0.2em]">What it does</p>
+                  {product.benefits.map((b) => (
+                    <div key={b} className="flex items-start gap-3 text-xs text-[#3D3733] font-medium leading-snug">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] flex-shrink-0 mt-1.5" />
+                      <span>{b}</span>
                     </div>
                   ))}
                 </div>
-
-                <Link
-                  href="/#waitlist"
-                  className="w-full py-4 rounded-xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-[10px] group-hover:bg-[#B36B4D] transition-colors shadow-lg flex items-center justify-center gap-3"
-                >
-                  Reserve {product.title}
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                </Link>
               </div>
             </div>
           </motion.div>
         ))}
       </div>
 
-      <div className="max-w-2xl mx-auto text-center mt-20">
+      {/* Single unified CTA for the full system */}
+      <div className="max-w-7xl mx-auto mt-16 text-center relative z-10">
+        <Link
+          href="/#hero-waitlist-email"
+          className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#B36B4D] transition-all shadow-xl hover:scale-[1.02]"
+        >
+          Reserve the Full System
+          <ArrowRight size={18} aria-hidden="true" />
+        </Link>
+        <p className="mt-4 text-xs text-[#8A857C] font-medium">
+          One waitlist for all three components. No partial reservations.
+        </p>
+      </div>
+
+      <div className="max-w-2xl mx-auto text-center mt-16">
         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#B36B4D]/20 shadow-sm">
           <Star className="w-4 h-4 text-[#B36B4D] fill-current" aria-hidden="true" />
           <span className="text-xs font-bold text-[#5D5752]">
