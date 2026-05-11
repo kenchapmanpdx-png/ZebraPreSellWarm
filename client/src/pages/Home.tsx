@@ -52,16 +52,15 @@ export default function Home() {
           <WhyZebraMascot />
         </div>
 
-        {/* 2. OUR STORY - Ken & Ava (Heart of the brand) */}
+        {/* 2. QUALITY STANDARDS - Moved above the Ava story so manufacturing
+                  credibility lands before the emotional appeal. */}
+        <QualityStandards />
+
+        {/* 3. OUR STORY - Ken & Ava (Heart of the brand) */}
         <OurStory />
 
-        {/* 2.5. EXCLUSIONS - what's NOT in the formula. Bridging principle
-                  between motivation (Ava story) and execution (product grid).
-                  Lands brand differentiation in seconds for MCAS-conscious scrollers. */}
+        {/* 3.5. EXCLUSIONS - what's NOT in the formula. */}
         <ExclusionsBlock />
-
-        {/* 3. QUALITY STANDARDS - The "0% Trigger" Badge & Trust */}
-        <QualityStandards />
 
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
         <CollagenScienceSection />

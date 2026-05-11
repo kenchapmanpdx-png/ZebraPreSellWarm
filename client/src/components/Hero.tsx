@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
 
 export default function Hero() {
@@ -219,53 +219,6 @@ export default function Hero() {
 
         </div>
 
-        {/* --- TRUST BAR --- */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="py-7 px-8 md:px-12 bg-white/50 backdrop-blur-md rounded-3xl border border-white/60 shadow-md mx-auto max-w-5xl"
-        >
-          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] text-center mb-5">
-            Manufacturing Standards
-          </p>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
-
-            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-start">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />
-              </div>
-              <div className="text-left">
-                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">FDA Registered</span>
-                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Facility</span>
-              </div>
-            </div>
-
-            <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
-
-            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />
-              </div>
-              <div className="text-left">
-                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">NSF GMP</span>
-                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Certified</span>
-              </div>
-            </div>
-
-            <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
-
-            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-end">
-              <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />
-              </div>
-              <div className="text-left">
-                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">Third-Party</span>
-                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Lab Tested</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
