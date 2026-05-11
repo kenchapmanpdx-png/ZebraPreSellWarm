@@ -19,14 +19,14 @@ export function setCors(res: VercelResponse) {
  * convention is below). Real users leave it empty. Bots that auto-fill all
  * inputs by name fill it in. If the body has a non-empty honeypot, we accept
  * the request (return 200 to keep the bot happy) but skip ALL downstream
- * processing — no Resend write, no DB write, no log line.
+ * processing - no Resend write, no DB write, no log line.
  *
  * Returns true if the request looks human and should proceed.
  */
 export function checkHoneypot(body: unknown): boolean {
   if (!body || typeof body !== "object") return true;
   const b = body as Record<string, unknown>;
-  // Honeypot fields — keep multiple names so bots have nothing to filter on
+  // Honeypot fields - keep multiple names so bots have nothing to filter on
   const trap = b.website || b.url || b.company_url || b.fax;
   if (typeof trap === "string" && trap.trim().length > 0) return false;
   return true;

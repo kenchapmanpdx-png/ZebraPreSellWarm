@@ -86,7 +86,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
               </DialogTitle>
               <DialogDescription className="text-[#3D3733]/80 leading-relaxed">
                 Be the first to know when ZebraWell opens for reservations.
-                Research-driven AM/PM formulas built for the EDS, POTS, and MCAS triad — no spam, no filler emails.
+                Research-driven AM/PM formulas built for the EDS, POTS, and MCAS triad - no spam, no filler emails.
               </DialogDescription>
             </DialogHeader>
 

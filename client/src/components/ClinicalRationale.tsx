@@ -41,7 +41,7 @@ export default function ClinicalRationale() {
       id: "sync",
       number: "04",
       title: "Autonomic Synchronization",
-      desc: "You shouldn't have to choose between 'brain fog' and 'jitters.' Our AM/PM system is timed to your circadian rhythm—calming adrenaline in the morning, repairing tissue at night.",
+      desc: "You shouldn't have to choose between 'brain fog' and 'jitters.' Our AM/PM system is timed to your circadian rhythm-calming adrenaline in the morning, repairing tissue at night.",
       icon: <Activity className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-violet-500",
       gradient: "from-violet-500/20 to-transparent"

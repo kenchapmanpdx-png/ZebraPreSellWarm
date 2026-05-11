@@ -20,7 +20,7 @@ export default function FAQ() {
     },
     {
       question: "Why do you use 'branded' ingredients for some things?",
-      answer: "Branded ingredients aren't just for show—they are about absorption. With some generic forms, your body may only absorb 5% of the dose, meaning 95% is wasted. We use branded versions that ensure you absorb nearly all of the ingredient. This higher quality allows us to use smaller, more effective doses, which keeps your daily capsule count down while providing much higher consistency and safety."
+      answer: "Branded ingredients aren't just for show-they are about absorption. With some generic forms, your body may only absorb 5% of the dose, meaning 95% is wasted. We use branded versions that ensure you absorb nearly all of the ingredient. This higher quality allows us to use smaller, more effective doses, which keeps your daily capsule count down while providing much higher consistency and safety."
     },
     {
       question: "How do I know these ingredients actually do anything?",

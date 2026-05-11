@@ -8,7 +8,7 @@ export interface IngredientInfo {
   sourcing?: string; // "Generic OK", "Preferred: Albion TRAACS", "Mandatory: Quercefit® (Indena)"
 }
 
-// v7.8 AM CAPSULES (15 ingredients) — Size 0 HPMC clear, 3 caps/serving, 90ct bottle
+// v7.8 AM CAPSULES (15 ingredients) - Size 0 HPMC clear, 3 caps/serving, 90ct bottle
 export const amFormulaIngredients: IngredientInfo[] = [
   { name: "Nicotinamide Riboside", dosage: "250 mg", description: "NR Chloride ≥99% purity; NAD+ precursor for cellular energy and mast cell stabilization", sourcing: "Generic OK" },
   { name: "Pine Bark Extract", dosage: "130 mg", description: "65–75% OPCs (HPLC); multi-species pine. Supports MMP inhibition and collagen protection", sourcing: "Generic OK" },
@@ -27,7 +27,7 @@ export const amFormulaIngredients: IngredientInfo[] = [
   { name: "Vitamin B12 (Methylcobalamin)", dosage: "1000 mcg", description: "Active methylated form supporting methylation pathways and neurological function", sourcing: "Generic OK" }
 ];
 
-// v7.8 PM CAPSULES (11 ingredients) — Size 0 HPMC white (TiO₂-free, CaCO₃ opacifier), 3 caps/serving, 90ct bottle
+// v7.8 PM CAPSULES (11 ingredients) - Size 0 HPMC white (TiO₂-free, CaCO₃ opacifier), 3 caps/serving, 90ct bottle
 export const pmFormulaIngredients: IngredientInfo[] = [
   { name: "Nicotinamide Riboside", dosage: "250 mg", description: "Evening dose maintains stable NAD+ elevation due to short 2.7-hour half-life", sourcing: "Generic OK" },
   { name: "Pine Bark Extract", dosage: "70 mg", description: "Evening dose provides sustained MMP inhibition", sourcing: "Generic OK" },
@@ -42,7 +42,7 @@ export const pmFormulaIngredients: IngredientInfo[] = [
   { name: "Biotin (B7)", dosage: "300 mcg", description: "Carboxylase cofactor supporting energy metabolism", sourcing: "Generic OK" }
 ];
 
-// v7.8 DAILY POWDER (7 ingredients) — HDPE tub with scoop, 30 servings split AM+PM
+// v7.8 DAILY POWDER (7 ingredients) - HDPE tub with scoop, 30 servings split AM+PM
 export const powderIngredients: IngredientInfo[] = [
   { name: "Magnesium Bisglycinate", dosage: "2400 mg (300 mg elem)", description: "MCAS-safe chelated form; supports muscle relaxation, DAO cofactor function, and autonomic stability", sourcing: "Preferred: Albion TRAACS" },
   { name: "Vitamin C (Sodium Ascorbate)", dosage: "1686 mg (delivers 1500 mg vitamin C)", description: "Essential collagen synthesis cofactor; non-acidic form; provides sodium beneficial for POTS", sourcing: "Generic OK" },
@@ -53,7 +53,7 @@ export const powderIngredients: IngredientInfo[] = [
   { name: "Luteolin (Micronized)", dosage: "140 mg", description: "≤25µm particle size; plant flavonoid with potent mast cell stabilization", sourcing: "Generic OK" }
 ];
 
-// Global excipient rules — v7.8
+// Global excipient rules - v7.8
 export const formulationStandards = {
   capsuleShell: "HPMC (vegan)",
   amCapsule: "Clear",

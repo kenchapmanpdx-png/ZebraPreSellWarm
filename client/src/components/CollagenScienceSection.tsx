@@ -41,10 +41,10 @@ export default function CollagenScienceSection() {
       gradient: "from-blue-500/10 to-transparent",
       summary: "Your body has enzymes (MMPs) that act like a shredder. We inhibit them.",
       problem: "Research shows hEDS patients can have up to 53x higher levels of MMP-1. It's like trying to fill a bathtub with the drain open.",
-      solution: "We include natural compounds that inhibit these enzymes at multiple points—not just one.",
+      solution: "We include natural compounds that inhibit these enzymes at multiple points-not just one.",
       mechanisms: [
         { name: "MMP-1", role: "Cuts the main collagen fibers", ingredients: ["Pycnogenol", "Astaxanthin", "Taurine"] },
-        { name: "MMP-3", role: "The 'master switch'—activates other MMPs", ingredients: ["PEA", "Luteolin", "PQQ"] },
+        { name: "MMP-3", role: "The 'master switch'-activates other MMPs", ingredients: ["PEA", "Luteolin", "PQQ"] },
         { name: "MMP-9", role: "Released by mast cells during flares", ingredients: ["Chlorogenic Acid", "Pycnogenol"] }
       ],
       keyInsight: "Pycnogenol is the only natural compound with human clinical trial evidence showing >50% reduction in MMP gene expression."
@@ -65,7 +65,7 @@ export default function CollagenScienceSection() {
         { name: "TIMP-1", role: "Blocks MMP-1, MMP-3, and MMP-9", ingredients: ["Luteolin", "Astaxanthin", "PEA"] },
         { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Curcumin (Phytosome)"] }
       ],
-      keyInsight: "The goal isn't just blocking enzymes—it's restoring the biological MMP/TIMP balance."
+      keyInsight: "The goal isn't just blocking enzymes-it's restoring the biological MMP/TIMP balance."
     },
     {
       id: 'transcription',
@@ -96,7 +96,7 @@ export default function CollagenScienceSection() {
       gradient: "from-red-500/10 to-transparent",
       summary: "Collagen fragments trigger mast cells, which release more enzymes. We stop this cycle.",
       problem: "ECM degradation → matrikine release → mast cell activation → more ECM degradation.",
-      solution: "We interrupt this loop at multiple points—blocking signals and stabilizing mast cells.",
+      solution: "We interrupt this loop at multiple points-blocking signals and stabilizing mast cells.",
       mechanisms: [
         { name: "TLR4 Blockade", role: "Matrikines activate mast cells here", ingredients: ["Quercetin", "Luteolin"] },
         { name: "Tryptase Inhibition", role: "Mast cell enzyme that activates MMPs", ingredients: ["Lactoferrin (150mg)"] }

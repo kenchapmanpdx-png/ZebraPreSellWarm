@@ -31,7 +31,7 @@ yarn-error.log*
 # Replit / local working files
 .cache/
 
-# Heavy legacy attachments — keep only files actively referenced from code.
+# Heavy legacy attachments - keep only files actively referenced from code.
 # Build remains green because Vite only bundles imported modules.
 attached_assets/*
 !attached_assets/hero-product.webp

@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* FTC SUPPLEMENT DISCLOSURE — required for dietary supplements */}
+        {/* FTC SUPPLEMENT DISCLOSURE - required for dietary supplements */}
         <div className="border-t border-white/10 pt-8 mb-8">
           <p className="text-[10px] text-[#EBE8E1]/60 leading-relaxed max-w-4xl">
             <strong className="text-[#EBE8E1]/80">Important:</strong> These statements have not been evaluated by the Food and Drug Administration.

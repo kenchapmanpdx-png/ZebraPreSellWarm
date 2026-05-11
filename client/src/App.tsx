@@ -23,10 +23,10 @@ import NotFound from "./pages/not-found";
 const Showcase = lazy(() => import("./pages/Showcase"));
 
 /**
- * ScrollToTop — fires on every route change to bring the user to the top
+ * ScrollToTop - fires on every route change to bring the user to the top
  * of the new page. Without this, wouter's client-side navigation preserves
  * the previous scroll position, which is jarring when jumping between pages.
- * Hash anchors (e.g., /#story) are preserved — only path changes trigger
+ * Hash anchors (e.g., /#story) are preserved - only path changes trigger
  * the scroll.
  */
 function ScrollToTop() {

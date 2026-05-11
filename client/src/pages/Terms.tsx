@@ -29,7 +29,7 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Intellectual property</h2>
-              <p>All content on this site — text, formulation rationale, ingredient research summaries, brand assets — is owned by ZebraWell unless otherwise credited. You may not copy, redistribute, or use our content for commercial purposes without written permission.</p>
+              <p>All content on this site - text, formulation rationale, ingredient research summaries, brand assets - is owned by ZebraWell unless otherwise credited. You may not copy, redistribute, or use our content for commercial purposes without written permission.</p>
             </section>
 
             <section>

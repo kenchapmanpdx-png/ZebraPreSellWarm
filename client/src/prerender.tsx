@@ -4,7 +4,7 @@
  * route in the queue. Returns rendered HTML + per-page head metadata so each
  * static file has its own title, canonical, description, and OG tags.
  *
- * Not loaded at runtime — only imported during build.
+ * Not loaded at runtime - only imported during build.
  */
 import { renderToString } from "react-dom/server";
 import { Router } from "wouter";
@@ -28,9 +28,9 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
       "Advanced autonomic, mast cell, and connective tissue support. Research-driven supplements for the Zebra community. Zero fillers. 100% transparent.",
   },
   "/the-how": {
-    title: "The How — Condition Science | ZebraWell",
+    title: "The How - Condition Science | ZebraWell",
     description:
-      "How ZebraWell's AM/PM formulas address the specific biology of POTS, EDS, and MCAS — autonomic stability, mast cell modulation, and ECM preservation.",
+      "How ZebraWell's AM/PM formulas address the specific biology of POTS, EDS, and MCAS - autonomic stability, mast cell modulation, and ECM preservation.",
   },
   "/ingredients": {
     title: "All Ingredients | ZebraWell",
@@ -38,12 +38,12 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
       "Every ingredient in ZebraWell's AM and PM formulas. Doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol.",
   },
   "/our-promise": {
-    title: "Our Promise — Constitution | ZebraWell",
+    title: "Our Promise - Constitution | ZebraWell",
     description:
       "ZebraWell's formal commitment: transparent ingredients, decision logs, third-party testing, and accountability for the Zebra community.",
   },
   "/preorder": {
-    title: "Reserve — Coming Soon | ZebraWell",
+    title: "Reserve - Coming Soon | ZebraWell",
     description:
       "Join the reservation list to be notified when ZebraWell's clinical-grade AM/PM formulas open for preorder.",
   },
@@ -87,7 +87,7 @@ function metaForRoute(url: string): RouteMeta {
     const name = rawName.split(" (")[0];
 
     // Build 120-160 char description from available fields. Patient summary
-    // is preferred when present — it's plain-language and matches how people
+    // is preferred when present - it's plain-language and matches how people
     // actually search.
     const ag = item?.atAGlance;
     const parts: string[] = [];
@@ -111,7 +111,7 @@ function metaForRoute(url: string): RouteMeta {
     };
   }
 
-  // Fallback (e.g., /showcase or unknown routes — handled but noindex)
+  // Fallback (e.g., /showcase or unknown routes - handled but noindex)
   return {
     title: "ZebraWell",
     description: "Research-driven supplements for EDS, POTS, and MCAS.",

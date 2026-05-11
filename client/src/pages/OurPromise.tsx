@@ -61,12 +61,12 @@ export default function OurPromise() {
         </div>
       </section>
 
-      {/* Patient-language intro — what the promise concretely means */}
+      {/* Patient-language intro - what the promise concretely means */}
       <section className="py-20 md:py-28 px-6 bg-[#EBE8E1]">
         <div className="container mx-auto max-w-3xl">
           <div className="space-y-6 text-lg md:text-xl text-[#3D3733] leading-relaxed">
             <p>
-              Our promise is short and specific. <strong>Every claim on this site is anchored to peer-reviewed human research</strong> — PMID, author, study title, dose, population. If we can't cite it, we don't claim it. Every excipient is disclosed and chosen for MCAS safety: HPMC capsules (no gelatin, no carrageenan), CaCO<sub>3</sub> opacifier on PM caps (no titanium dioxide), rice hull and L-leucine flow agents (no magnesium stearate). No FD&amp;C dyes, no citric acid, no fermented ingredients, no corn or soy derivatives. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
+              Our promise is short and specific. <strong>Every claim on this site is anchored to peer-reviewed human research</strong> - PMID, author, study title, dose, population. If we can't cite it, we don't claim it. Every excipient is disclosed and chosen for MCAS safety: HPMC capsules (no gelatin, no carrageenan), CaCO<sub>3</sub> opacifier on PM caps (no titanium dioxide), rice hull and L-leucine flow agents (no magnesium stearate). No FD&amp;C dyes, no citric acid, no fermented ingredients, no corn or soy derivatives. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
             </p>
             <p>
               <strong>We don't claim to treat, cure, or prevent anything.</strong> We do claim to give you ingredients with documented mechanisms in research, at doses supported by clinical evidence, in a formulation engineered for the sensitivities of the EDS/POTS/MCAS triad.
@@ -74,7 +74,7 @@ export default function OurPromise() {
             <div className="border-l-4 border-[#A4613A] pl-6 py-3 bg-white/50 rounded-r-2xl mt-8">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#5A3E2B] mb-3">Why we built this</h2>
               <p className="text-base md:text-lg text-[#4A4540]">
-                We're zebras ourselves, and the existing supplement market wasn't serving us — generic "multivitamins" load up on the wrong forms and the wrong excipients, while specialty MCAS brands lack the ECM-protective and methylation coverage that hEDS and POTS need. So we built what we'd want to take ourselves.
+                We're zebras ourselves, and the existing supplement market wasn't serving us - generic "multivitamins" load up on the wrong forms and the wrong excipients, while specialty MCAS brands lack the ECM-protective and methylation coverage that hEDS and POTS need. So we built what we'd want to take ourselves.
               </p>
             </div>
           </div>

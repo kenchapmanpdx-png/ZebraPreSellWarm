@@ -18,7 +18,7 @@ export default function Privacy() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">How we use it</h2>
-              <p>We use your email solely to notify you about ZebraWell — product availability, formulation updates, and shipping news. We never sell, rent, or share your information with third parties for marketing purposes.</p>
+              <p>We use your email solely to notify you about ZebraWell - product availability, formulation updates, and shipping news. We never sell, rent, or share your information with third parties for marketing purposes.</p>
               <p className="mt-3">Form submissions are stored with Resend (our email service provider) and may be analyzed in aggregate to understand audience needs. Names, phone numbers, and condition selections are visible only to ZebraWell staff for product planning.</p>
             </section>
 
@@ -40,7 +40,7 @@ export default function Privacy() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Security</h2>
-              <p>The site is served over HTTPS. Form submissions are transmitted to Resend over an encrypted connection. We do not store payment information on this site (pre-launch — no e-commerce yet). When commerce launches, we will use Stripe or a similar PCI-compliant processor; payment details never touch our servers.</p>
+              <p>The site is served over HTTPS. Form submissions are transmitted to Resend over an encrypted connection. We do not store payment information on this site (pre-launch - no e-commerce yet). When commerce launches, we will use Stripe or a similar PCI-compliant processor; payment details never touch our servers.</p>
             </section>
 
             <section>

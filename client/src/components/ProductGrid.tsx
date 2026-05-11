@@ -134,7 +134,7 @@ export default function ProductGrid() {
         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#B36B4D]/20 shadow-sm">
           <Star className="w-4 h-4 text-[#B36B4D] fill-current" aria-hidden="true" />
           <span className="text-xs font-bold text-[#5D5752]">
-            "Finally, a system that respects my sensitivity." — <span className="text-[#3D3733]">Verified Zebra</span>
+            "Finally, a system that respects my sensitivity." - <span className="text-[#3D3733]">Verified Zebra</span>
           </span>
         </div>
       </div>

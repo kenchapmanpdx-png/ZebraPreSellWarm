@@ -89,7 +89,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* DESKTOP CTA — opens waitlist modal */}
+          {/* DESKTOP CTA - opens waitlist modal */}
           <div className="hidden md:flex items-center gap-6">
             <button
               type="button"

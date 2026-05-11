@@ -1,7 +1,7 @@
 /* client/src/pages/Showcase.tsx
  *
- * Internal preview page. Renders the six "dead" components — files that exist
- * in client/src/components/ but aren't imported by any production page — so
+ * Internal preview page. Renders the six "dead" components - files that exist
+ * in client/src/components/ but aren't imported by any production page - so
  * we can see what they actually look like and do before deciding to wire them
  * back in or delete them.
  *
@@ -35,7 +35,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/ClinicalRationale.tsx",
     lines: 181,
     blurb:
-      "Three-pillar science narrative — 'Halt the Collagen Shredder' / 'Cellular Backdoor Hydration' / 'Restore Stability.' Aligns with the MMP-degradation framing in your research protocol.",
+      "Three-pillar science narrative - 'Halt the Collagen Shredder' / 'Cellular Backdoor Hydration' / 'Restore Stability.' Aligns with the MMP-degradation framing in your research protocol.",
     context:
       "Per the June 23 changelog, this lived between OurStory and ProductGrid on the homepage. It also lazy-loads InteractiveIngredientMap below it.",
     Component: ClinicalRationale,
@@ -57,7 +57,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/PreorderReservation.tsx",
     lines: 109,
     blurb:
-      "Full reservation form — captures email + firstName + lastName + conditions + currentSupplements + hearAboutUs. Matches the preorderReservations schema in shared/schema.ts exactly.",
+      "Full reservation form - captures email + firstName + lastName + conditions + currentSupplements + hearAboutUs. Matches the preorderReservations schema in shared/schema.ts exactly.",
     context:
       "The current /preorder page only collects an email. This component is the high-fidelity form your DB schema was designed around. POSTs to /api/preorder (now wired).",
     Component: PreorderReservation,
@@ -70,7 +70,7 @@ const ENTRIES: ShowcaseEntry[] = [
     blurb:
       "Five-line wrapper that renders <PreorderReservation/>. Likely a section-name placeholder used during a homepage layout experiment.",
     context:
-      "Probably safe to delete — it adds no value over importing PreorderReservation directly.",
+      "Probably safe to delete - it adds no value over importing PreorderReservation directly.",
     Component: WhatYouGet,
   },
   {
@@ -81,7 +81,7 @@ const ENTRIES: ShowcaseEntry[] = [
     blurb:
       "Eight-tile feature grid: '2 Bottles Replace 15', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Gentle by Design', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
     context:
-      "Per the June 15 changelog, the 'Why Choose ZebraWell' section was removed and its benefits moved into 'What Makes ZebraWell Different.' This component may be the orphaned predecessor — verify against the live homepage before reintroducing.",
+      "Per the June 15 changelog, the 'Why Choose ZebraWell' section was removed and its benefits moved into 'What Makes ZebraWell Different.' This component may be the orphaned predecessor - verify against the live homepage before reintroducing.",
     Component: DifferenceSection,
   },
   {
@@ -115,7 +115,7 @@ export default function Showcase() {
     meta.name = "robots";
     meta.content = "noindex, nofollow";
     document.head.appendChild(meta);
-    document.title = "ZebraWell — Component Showcase (internal)";
+    document.title = "ZebraWell - Component Showcase (internal)";
     return () => {
       document.head.removeChild(meta);
     };

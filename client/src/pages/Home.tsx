@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 
-// Direct imports — these were lazy-loaded but the prerender engine ships
+// Direct imports - these were lazy-loaded but the prerender engine ships
 // the Suspense fallback (empty div) for them, so 8 FAQs, the Collagen
 // Shredder science framing, Quality Standards, and Testimonials were
 // invisible to Google/Ahrefs/AudioEye. Loading directly ensures they
@@ -55,7 +55,7 @@ export default function Home() {
         {/* 2. OUR STORY - Ken & Ava (Heart of the brand) */}
         <OurStory />
 
-        {/* 2.5. EXCLUSIONS — what's NOT in the formula. Bridging principle
+        {/* 2.5. EXCLUSIONS - what's NOT in the formula. Bridging principle
                   between motivation (Ava story) and execution (product grid).
                   Lands brand differentiation in seconds for MCAS-conscious scrollers. */}
         <ExclusionsBlock />

@@ -1,13 +1,13 @@
-/* api/preorder.ts — Vercel serverless function
+/* api/preorder.ts - Vercel serverless function
  *
  * The richer counterpart to /api/waitlist. Captures the full reservation
  * form: email + firstName + lastName + phone + conditions[] + current
  * supplements + hear-about-us.
  *
  * Three-layer email capture with graceful degradation:
- *   1. Resend Contacts API (with rich properties) — primary list of record
- *   2. Drizzle/Neon DB — backup (full schema)
- *   3. stdout log — last-resort recovery
+ *   1. Resend Contacts API (with rich properties) - primary list of record
+ *   2. Drizzle/Neon DB - backup (full schema)
+ *   3. stdout log - last-resort recovery
  *
  * Resend properties used: phone, conditions, current_supplements,
  *   hear_about_us, source='preorder_form'. If a property isn't defined
@@ -30,7 +30,7 @@ const SEGMENT_ID = process.env.RESEND_PREORDER_SEGMENT_ID; // optional
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!methodGuard(req, res, ["POST"])) return;
 
-  // Silent honeypot drop — bots filled the trap field; respond OK with no side effects
+  // Silent honeypot drop - bots filled the trap field; respond OK with no side effects
   if (!checkHoneypot(req.body)) {
     return res.status(200).json({ message: "OK" });
   }
@@ -41,7 +41,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   logSubmission("preorder", data);
 
-  // Build Resend properties payload — only fields that are present.
+  // Build Resend properties payload - only fields that are present.
   const props: Record<string, string | number | null> = {
     source: "preorder_form",
   };
@@ -50,7 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (data.currentSupplements) props.current_supplements = data.currentSupplements;
   if (data.hearAboutUs) props.hear_about_us = data.hearAboutUs;
 
-  // Layer 1: Resend — create or update
+  // Layer 1: Resend - create or update
   let resendOk = false;
   if (RESEND_KEY) {
     const resend = new Resend(RESEND_KEY);
@@ -86,7 +86,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           console.error("[preorder] resend update error:", uErr);
         }
       } else if (msg.includes("property") || msg.includes("properties")) {
-        // Properties not defined on the audience yet — retry without them so the email is still captured.
+        // Properties not defined on the audience yet - retry without them so the email is still captured.
         try {
           await resend.contacts.create({
             email: data.email,

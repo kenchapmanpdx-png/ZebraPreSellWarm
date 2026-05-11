@@ -1,9 +1,9 @@
-/* api/waitlist.ts — Vercel serverless function
+/* api/waitlist.ts - Vercel serverless function
  *
  * Three-layer email capture (degrades gracefully if any layer is missing):
- *   1. Resend Contacts API (if RESEND_API_KEY is set) — primary list of record
- *   2. Drizzle/Neon DB (if DATABASE_URL is set) — local copy / backup
- *   3. stdout log (always) — last-resort recovery from Vercel function logs
+ *   1. Resend Contacts API (if RESEND_API_KEY is set) - primary list of record
+ *   2. Drizzle/Neon DB (if DATABASE_URL is set) - local copy / backup
+ *   3. stdout log (always) - last-resort recovery from Vercel function logs
  *
  * Returns 201 if Resend or DB write succeeded, 202 if only logged.
  */
@@ -14,12 +14,12 @@ import { getDb } from "./_lib/db.js";
 import { methodGuard, validate, logSubmission, checkHoneypot } from "./_lib/respond.js";
 
 const RESEND_KEY = process.env.RESEND_API_KEY;
-const SEGMENT_ID = process.env.RESEND_WAITLIST_SEGMENT_ID; // optional — for tagging
+const SEGMENT_ID = process.env.RESEND_WAITLIST_SEGMENT_ID; // optional - for tagging
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!methodGuard(req, res, ["POST"])) return;
 
-  // Silent honeypot drop — bots filled the trap field; respond OK with no side effects
+  // Silent honeypot drop - bots filled the trap field; respond OK with no side effects
   if (!checkHoneypot(req.body)) {
     return res.status(200).json({ message: "OK" });
   }
@@ -42,7 +42,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       resendOk = true;
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
-      // Already-exists is fine — don't treat as failure
+      // Already-exists is fine - don't treat as failure
       if (msg.toLowerCase().includes("already exists") || msg.toLowerCase().includes("duplicate")) {
         resendOk = true;
       } else {

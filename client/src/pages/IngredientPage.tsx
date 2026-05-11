@@ -17,7 +17,7 @@ export default function IngredientPage() {
         return <NotFound />;
     }
 
-    // Deterministic "related ingredients" — next 4 in the canonical list
+    // Deterministic "related ingredients" - next 4 in the canonical list
     // (wraps around). Stable across SSR + client hydration.
     const allSlugs = ingredientList.map((n: string) => ({
         slug: slugify(n),
@@ -39,7 +39,7 @@ export default function IngredientPage() {
                 <IngredientDetail data={ingredient} />
             </main>
 
-            {/* Related Ingredients — cross-linking for SEO + UX */}
+            {/* Related Ingredients - cross-linking for SEO + UX */}
             <section className="py-16 px-6 bg-[#F2F0EA] border-t border-[#3D3733]/10">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#262321] mb-2">

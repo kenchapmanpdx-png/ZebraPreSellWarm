@@ -6,7 +6,7 @@
 |---|---|---|
 | `DATABASE_URL` | Neon Postgres connection string for persisting submissions | Yes for production capture |
 
-If `DATABASE_URL` is unset, serverless functions log submissions to stdout and return 202. The frontend still shows success — useful for staging or pre-DB launch, but no list is captured.
+If `DATABASE_URL` is unset, serverless functions log submissions to stdout and return 202. The frontend still shows success - useful for staging or pre-DB launch, but no list is captured.
 
 ## First-time Vercel Setup
 

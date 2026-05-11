@@ -21,7 +21,7 @@ export default function Contact() {
               <h2 className="text-2xl font-serif font-bold text-[#0F2A22]">Email us</h2>
             </div>
             <p className="text-[#3D3733] leading-relaxed mb-6">
-              For product questions, formulation feedback, partnership inquiries, press, or anything else — drop us a line.
+              For product questions, formulation feedback, partnership inquiries, press, or anything else - drop us a line.
               We aim to respond within two business days.
             </p>
             <a
@@ -37,7 +37,7 @@ export default function Contact() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Your question or topic.</li>
               <li>If it's about a specific ingredient, the name of that ingredient.</li>
-              <li>If it's about an interaction with a medication you take, name the medication (we won't share this — see the privacy policy).</li>
+              <li>If it's about an interaction with a medication you take, name the medication (we won't share this - see the privacy policy).</li>
               <li>If you'd prefer not to use email, mention how you'd like us to reach you instead.</li>
             </ul>
           </section>

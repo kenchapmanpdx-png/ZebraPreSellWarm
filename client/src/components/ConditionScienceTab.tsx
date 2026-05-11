@@ -142,7 +142,7 @@ export default function ConditionScienceTabs() {
         { name: "Glycine", role: "Makes up 33% of every collagen molecule", ingredients: ["Therapeutic Glycine"] },
         { name: "Hydroxylation", role: "Vitamin C stabilizes the helix structure", ingredients: ["Sodium Ascorbate"] }
       ],
-      keyInsight: " Without Vitamin C, the helix falls apart—this is why scurvy causes tissue collapse."
+      keyInsight: " Without Vitamin C, the helix falls apart-this is why scurvy causes tissue collapse."
     },
     {
       id: 'crosslinking',
@@ -159,7 +159,7 @@ export default function ConditionScienceTabs() {
         { name: "Copper", role: "The essential LOX cofactor for bonding", ingredients: ["Copper Bisglycinate"] },
         { name: "Methylation", role: "Protects LOX from homocysteine damage", ingredients: ["Methylfolate", "P5P"] }
       ],
-      keyInsight: "B-vitamin deficiency creates a 'double hit'—direct enzyme inhibition and genetic silencing."
+      keyInsight: "B-vitamin deficiency creates a 'double hit'-direct enzyme inhibition and genetic silencing."
     }
   ];
 
@@ -179,7 +179,7 @@ export default function ConditionScienceTabs() {
         { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium"] },
         { name: "Cardiac Rhythm", role: "Heart rate regulation and flexibility", ingredients: ["Taurine", "CoQ10"] }
       ],
-      keyInsight: "Taurine shows ~3.6 bpm heart rate reduction in human studies—meaningful for baseline tachycardia."
+      keyInsight: "Taurine shows ~3.6 bpm heart rate reduction in human studies-meaningful for baseline tachycardia."
     },
     {
       id: 'mitochondrial-etc',
@@ -196,7 +196,7 @@ export default function ConditionScienceTabs() {
         { name: "Complex I", role: "The first step of electron transport", ingredients: ["Benfotiamine", "R5P"] },
         { name: "Biogenesis", role: "Creating NEW mitochondria (PGC-1α)", ingredients: ["PQQ"] }
       ],
-      keyInsight: "We use Ubiquinol (reduced CoQ10)—it is 8x more bioavailable than standard forms."
+      keyInsight: "We use Ubiquinol (reduced CoQ10)-it is 8x more bioavailable than standard forms."
     }
   ];
 
@@ -216,7 +216,7 @@ export default function ConditionScienceTabs() {
         { name: "PPARα", role: "Nuclear switch to suppress mediator release", ingredients: ["PEA (Micronized)"] },
         { name: "ORAI Channel", role: "Block the calcium influx that triggers flares", ingredients: ["Quercetin Phytosome"] }
       ],
-      keyInsight: "Quercetin inhibits up to 87% of histamine release—but only in bioavailable Phytosome or EMIQ forms."
+      keyInsight: "Quercetin inhibits up to 87% of histamine release-but only in bioavailable Phytosome or EMIQ forms."
     },
     {
       id: 'histamine-clearance',
@@ -233,7 +233,7 @@ export default function ConditionScienceTabs() {
         { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper", "P5P", "Vitamin C"] },
         { name: "Methylation", role: "SAMe production for HNMT function", ingredients: ["Methylfolate", "B12"] }
       ],
-      keyInsight: "Copper is a DAO cofactor—the same mineral required for collagen cross-linking. One mineral, two massive jobs."
+      keyInsight: "Copper is a DAO cofactor-the same mineral required for collagen cross-linking. One mineral, two massive jobs."
     }
   ];
 

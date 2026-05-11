@@ -1,4 +1,4 @@
-/* api/request-sample.ts — Vercel serverless function */
+/* api/request-sample.ts - Vercel serverless function */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { insertSampleRequestSchema, sampleRequests } from "./_lib/schemas.js";
 import { getDb } from "./_lib/db.js";
@@ -7,7 +7,7 @@ import { methodGuard, validate, logSubmission, checkHoneypot } from "./_lib/resp
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!methodGuard(req, res, ["POST"])) return;
 
-  // Silent honeypot drop — bots filled the trap field; respond OK with no side effects
+  // Silent honeypot drop - bots filled the trap field; respond OK with no side effects
   if (!checkHoneypot(req.body)) {
     return res.status(200).json({ message: "OK" });
   }

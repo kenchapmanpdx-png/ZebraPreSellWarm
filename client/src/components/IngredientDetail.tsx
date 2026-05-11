@@ -21,7 +21,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 )}
             </div>
 
-            {/* Patient Summary — plain language opener (renders only when content is drafted) */}
+            {/* Patient Summary - plain language opener (renders only when content is drafted) */}
             {data.patientSummary && (
                 <section className="bg-white/60 border-l-4 border-accent/60 rounded-r-2xl p-8 md:p-10 shadow-sm">
                     <p className="text-lg md:text-xl leading-relaxed text-primary/90 font-serif">
@@ -256,7 +256,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                     <TableRow key={i} className="border-border/30 hover:bg-secondary/5">
                                         <TableCell className="py-6 px-8 font-bold text-primary">{step.step}</TableCell>
                                         <TableCell className="py-6 px-8 font-serif text-lg">{step.dosage}</TableCell>
-                                        <TableCell className="py-6 px-8 text-muted-foreground text-sm leading-relaxed">{step.notes || "—"}</TableCell>
+                                        <TableCell className="py-6 px-8 text-muted-foreground text-sm leading-relaxed">{step.notes || "-"}</TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
@@ -307,7 +307,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </Accordion>
             </section>
 
-            {/* Patient FAQ — common questions in plain language */}
+            {/* Patient FAQ - common questions in plain language */}
             {data.faq && data.faq.length > 0 && (
                 <section className="space-y-6">
                     <h2 className="text-3xl font-serif text-primary">Common Questions</h2>
@@ -326,7 +326,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </section>
             )}
 
-            {/* Plain-language triad — patient voice rewrite of the clinical triad block */}
+            {/* Plain-language triad - patient voice rewrite of the clinical triad block */}
             {data.triadPlain && (
                 <section className="grid gap-6 md:grid-cols-3">
                     <div className="bg-white/60 border border-border/50 rounded-2xl p-6">
@@ -344,7 +344,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </section>
             )}
 
-            {/* Why this form — patient-language version (when present, supplements the clinical whyThisForm) */}
+            {/* Why this form - patient-language version (when present, supplements the clinical whyThisForm) */}
             {data.whyThisFormPatient && (
                 <section className="bg-white/50 border border-border/50 rounded-2xl p-8 md:p-10">
                     <h2 className="text-2xl font-serif text-primary mb-4">Why This Form</h2>

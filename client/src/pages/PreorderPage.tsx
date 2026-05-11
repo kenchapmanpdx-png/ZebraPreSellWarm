@@ -81,13 +81,13 @@ export default function PreorderPage() {
         </div>
       </section>
 
-      {/* First-batch pitch — patient-language reservation incentive */}
+      {/* First-batch pitch - patient-language reservation incentive */}
       <section className="py-16 px-6 bg-[#EBE8E1] border-y border-[#3D3733]/10">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white/60 backdrop-blur-sm border border-[#B36B4D]/30 rounded-3xl p-8 md:p-10 shadow-lg">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#0F2A22] mb-5">Why reserve now</h2>
             <p className="text-lg leading-relaxed text-[#3D3733] mb-4">
-              The first batch is limited, and once we close the list, the next public opening is months away — that's the manufacturing lead time on the next run. Here's why that matters: <strong>we set aside bottles from the first batch specifically for your refills.</strong> When you finish a bottle, your next one is already reserved — no gap while we manufacture the next run.
+              The first batch is limited, and once we close the list, the next public opening is months away - that's the manufacturing lead time on the next run. Here's why that matters: <strong>we set aside bottles from the first batch specifically for your refills.</strong> When you finish a bottle, your next one is already reserved - no gap while we manufacture the next run.
             </p>
             <p className="text-lg leading-relaxed text-[#3D3733]">
               New customers in later rounds don't get that guarantee. First-batch buyers do.
@@ -127,7 +127,7 @@ export default function PreorderPage() {
                   </div>
                   <p className="text-lg text-gray-700 mb-6">
                     Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night.
-                    That's it—no more 12-bottle stacks.
+                    That's it-no more 12-bottle stacks.
                   </p>
                 </div>
 
@@ -277,7 +277,7 @@ export default function PreorderPage() {
                   <blockquote className="text-lg text-gray-700 mb-4 italic">
                     "It's the only thing I've taken that hasn't flared me up. Total game-changer."
                   </blockquote>
-                  <cite className="text-sm font-medium text-gray-600">— Emily</cite>
+                  <cite className="text-sm font-medium text-gray-600">- Emily</cite>
                 </CardContent>
               </Card>
 
@@ -292,7 +292,7 @@ export default function PreorderPage() {
                   <blockquote className="text-lg text-gray-700 mb-4 italic">
                     "This is the only supplement I've tried that didn't make me feel worse. It's part of my daily survival kit now."
                   </blockquote>
-                  <cite className="text-sm font-medium text-gray-600">— Sarah</cite>
+                  <cite className="text-sm font-medium text-gray-600">- Sarah</cite>
                 </CardContent>
               </Card>
             </div>
