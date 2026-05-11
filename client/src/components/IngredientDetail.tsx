@@ -11,6 +11,36 @@ interface IngredientDetailProps {
 }
 
 export default function IngredientDetail({ data }: IngredientDetailProps) {
+    // Build a unified, numbered reference list. Start with sources[] (the
+    // canonical bibliography we ship), then add any PMIDs from
+    // research[].studies that aren't already in sources. Map PMID -> ref
+    // number so study cards can show [n] inline matching the same numbering.
+    type RefEntry = {
+        n: number;
+        title: string;
+        authors?: string;
+        year?: string;
+        pmid?: string;
+        link?: string;
+    };
+    const refList: RefEntry[] = [];
+    const pmidIndex = new Map<string, number>();
+    for (const src of data.sources || []) {
+        const n = refList.length + 1;
+        refList.push({ n, title: src.title, authors: src.authors, year: src.year, pmid: src.pmid, link: src.link });
+        if (src.pmid) pmidIndex.set(src.pmid, n);
+    }
+    for (const block of data.research || []) {
+        for (const study of block.studies || []) {
+            if (!study.pmid) continue;
+            if (pmidIndex.has(study.pmid)) continue;
+            const n = refList.length + 1;
+            refList.push({ n, title: study.source, pmid: study.pmid });
+            pmidIndex.set(study.pmid, n);
+        }
+    }
+    const refNumberForPmid = (pmid?: string) => (pmid ? pmidIndex.get(pmid) : undefined);
+
     return (
         <div className="max-w-4xl mx-auto px-4 py-12 space-y-16">
             {/* Header */}
@@ -99,13 +129,24 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                             <AccordionTrigger className="text-left text-xl font-serif hover:no-underline py-6">
                                 {item.outcome}
                             </AccordionTrigger>
-                            <AccordionContent className="space-y-6 pb-8">
+                            <AccordionContent forceMount className="space-y-6 pb-8">
                                 <p className="text-lg font-medium text-primary/80 border-l-2 border-accent pl-4">{item.summary}</p>
                                 <div className="grid gap-6">
                                     {item.studies.map((study, sIdx) => (
                                         <div key={sIdx} className="bg-white p-6 rounded-xl border border-border/40 shadow-sm space-y-3">
                                             <div className="flex justify-between items-start gap-4">
-                                                <cite className="font-serif text-lg not-italic text-primary">{study.source}</cite>
+                                                <cite className="font-serif text-lg not-italic text-primary">
+                                                    {refNumberForPmid(study.pmid) !== undefined && (
+                                                        <a
+                                                            href={`#ref-${refNumberForPmid(study.pmid)}`}
+                                                            className="text-accent font-bold mr-2 no-underline hover:underline"
+                                                            aria-label={`Jump to reference ${refNumberForPmid(study.pmid)}`}
+                                                        >
+                                                            [{refNumberForPmid(study.pmid)}]
+                                                        </a>
+                                                    )}
+                                                    {study.source}
+                                                </cite>
                                                 {study.pmid && (
                                                     <Badge variant="outline" className="text-[10px] uppercase tracking-tighter shrink-0">PMID: {study.pmid}</Badge>
                                                 )}
@@ -274,38 +315,47 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </section>
             )}
 
-            {/* Sources */}
-            <section className="pt-16 border-t border-border/50">
+            {/* References (numbered, unified across sources + research studies) */}
+            <section id="references" className="pt-16 border-t border-border/50">
                 <Accordion type="single" collapsible>
-                    <AccordionItem value="sources" className="border-none">
+                    <AccordionItem value="references" className="border-none">
                         <AccordionTrigger className="text-muted-foreground hover:no-underline flex justify-center py-4 bg-secondary/20 rounded-xl">
-                            View Evidence Sources ({data.sources.length})
+                            References ({refList.length})
                         </AccordionTrigger>
-                        <AccordionContent>
-                            <ul className="space-y-6 pt-10 px-4 md:px-12">
-                                {data.sources.map((source, i) => (
-                                    <li key={i} className="text-sm border-l-2 border-border/50 pl-6 py-1">
+                        <AccordionContent forceMount>
+                            <ol className="space-y-6 pt-10 px-4 md:px-12 list-none">
+                                {refList.map((ref) => (
+                                    <li
+                                        key={ref.n}
+                                        id={`ref-${ref.n}`}
+                                        className="text-sm border-l-2 border-border/50 pl-6 py-1 scroll-mt-24"
+                                    >
                                         <div className="flex flex-col gap-1">
                                             <div className="flex justify-between items-start gap-4">
-                                                <span className="font-serif text-lg leading-snug">{source.title}</span>
-                                                {source.pmid && (
+                                                <span className="font-serif text-lg leading-snug">
+                                                    <span className="text-accent font-bold mr-2">[{ref.n}]</span>
+                                                    {ref.title}
+                                                </span>
+                                                {ref.pmid && (
                                                     <a
-                                                        href={`https://pubmed.ncbi.nlm.nih.gov/${source.pmid}`}
+                                                        href={`https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="text-[10px] bg-primary/5 px-2 py-0.5 rounded border hover:bg-primary/10 transition-colors uppercase tracking-widest shrink-0"
                                                     >
-                                                        PMID: {source.pmid}
+                                                        PMID: {ref.pmid}
                                                     </a>
                                                 )}
                                             </div>
-                                            <p className="text-muted-foreground/80 italic">
-                                                {source.authors} {source.year && `(${source.year})`}
-                                            </p>
+                                            {(ref.authors || ref.year) && (
+                                                <p className="text-muted-foreground/80 italic">
+                                                    {ref.authors} {ref.year && `(${ref.year})`}
+                                                </p>
+                                            )}
                                         </div>
                                     </li>
                                 ))}
-                            </ul>
+                            </ol>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
@@ -321,7 +371,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                 <AccordionTrigger className="text-left font-semibold py-5 hover:no-underline">
                                     {item.q}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-base leading-relaxed text-foreground/80 pb-5">
+                                <AccordionContent forceMount className="text-base leading-relaxed text-foreground/80 pb-5">
                                     {item.a}
                                 </AccordionContent>
                             </AccordionItem>

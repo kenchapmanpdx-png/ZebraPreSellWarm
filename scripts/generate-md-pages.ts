@@ -148,6 +148,27 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
     }
   }
 
+  // Build a unified numbered ref list (matches the IngredientDetail render):
+  // start with sources[], then add any PMIDs from research[].studies[]
+  // not already in sources.
+  type RefEntry = { n: number; title: string; authors?: string; year?: string; pmid?: string; link?: string };
+  const refList: RefEntry[] = [];
+  const pmidIndex = new Map<string, number>();
+  for (const src of ing.sources || []) {
+    const n = refList.length + 1;
+    refList.push({ n, title: src.title, authors: src.authors, year: src.year, pmid: src.pmid, link: src.link });
+    if (src.pmid) pmidIndex.set(src.pmid, n);
+  }
+  for (const block of ing.research || []) {
+    for (const study of block.studies || []) {
+      if (!study.pmid || pmidIndex.has(study.pmid)) continue;
+      const n = refList.length + 1;
+      refList.push({ n, title: study.source, pmid: study.pmid });
+      pmidIndex.set(study.pmid, n);
+    }
+  }
+  const refFor = (pmid?: string) => (pmid ? pmidIndex.get(pmid) : undefined);
+
   if (ing.research?.length) {
     out.push("## Evidence summary");
     out.push("");
@@ -157,9 +178,11 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
       out.push(block.summary);
       out.push("");
       for (const s of block.studies) {
-        const pmid = s.pmid ? ` PMID: ${s.pmid}` : "";
+        const refN = refFor(s.pmid);
+        const ref = refN !== undefined ? `[${refN}] ` : "";
+        const pmid = s.pmid ? ` PMID: ${s.pmid}.` : "";
         const design = s.design ? ` Design: ${s.design}.` : "";
-        out.push(`- **${s.source}.**${design} Finding: ${s.finding}.${pmid}`);
+        out.push(`- ${ref}**${s.source}.**${design} Finding: ${s.finding}.${pmid}`);
       }
       out.push("");
     }
@@ -208,20 +231,18 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
     }
   }
 
-  if (ing.sources?.length) {
+  if (refList.length) {
     out.push("## References");
     out.push("");
-    let n = 1;
-    for (const s of ing.sources) {
+    for (const r of refList) {
       const bits: string[] = [];
-      if (s.authors) bits.push(s.authors);
-      if (s.year) bits.push(`(${s.year})`);
-      if (s.title) bits.push(s.title);
-      let line = `${n}. ${bits.join(". ")}`;
-      if (s.pmid) line += `. PMID: ${s.pmid}. https://pubmed.ncbi.nlm.nih.gov/${s.pmid}/`;
-      else if (s.link) line += `. ${s.link}`;
+      if (r.authors) bits.push(r.authors);
+      if (r.year) bits.push(`(${r.year})`);
+      if (r.title) bits.push(r.title);
+      let line = `[${r.n}] ${bits.join(". ")}`;
+      if (r.pmid) line += `. PMID: ${r.pmid}. https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/`;
+      else if (r.link) line += `. ${r.link}`;
       out.push(line);
-      n++;
     }
     out.push("");
   }
