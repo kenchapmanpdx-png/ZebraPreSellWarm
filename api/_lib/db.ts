@@ -4,7 +4,7 @@
  */
 import { neon, neonConfig } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
-import * as schema from "./schemas";
+import * as schema from "./schemas.js";
 
 neonConfig.fetchConnectionCache = true;
 

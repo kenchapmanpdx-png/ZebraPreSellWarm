@@ -9,9 +9,9 @@
  */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
-import { insertWaitlistSubmissionSchema, waitlistSubmissions } from "./_lib/schemas";
-import { getDb } from "./_lib/db";
-import { methodGuard, validate, logSubmission } from "./_lib/respond";
+import { insertWaitlistSubmissionSchema, waitlistSubmissions } from "./_lib/schemas.js";
+import { getDb } from "./_lib/db.js";
+import { methodGuard, validate, logSubmission } from "./_lib/respond.js";
 
 const RESEND_KEY = process.env.RESEND_API_KEY;
 const SEGMENT_ID = process.env.RESEND_WAITLIST_SEGMENT_ID; // optional — for tagging

@@ -1,8 +1,8 @@
 /* api/contact.ts — Vercel serverless function */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { insertContactSubmissionSchema, contactSubmissions } from "./_lib/schemas";
-import { getDb } from "./_lib/db";
-import { methodGuard, validate, logSubmission } from "./_lib/respond";
+import { insertContactSubmissionSchema, contactSubmissions } from "./_lib/schemas.js";
+import { getDb } from "./_lib/db.js";
+import { methodGuard, validate, logSubmission } from "./_lib/respond.js";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!methodGuard(req, res, ["POST"])) return;
