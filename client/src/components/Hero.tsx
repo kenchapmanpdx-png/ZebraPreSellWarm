@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles } from 'lucide-react';
-// Ensure the image path matches your project structure
+import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
 
 export default function Hero() {
@@ -12,7 +11,6 @@ export default function Hero() {
   const { toast } = useToast();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
-  // The "Unseen" word cycle
   const words = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
 
   useEffect(() => {
@@ -56,13 +54,18 @@ export default function Hero() {
     }
   };
 
-  // Button gradient styles
   const buttonBaseStyle: React.CSSProperties = {
     backgroundImage: 'linear-gradient(to right, #0F2A22 0%, #2D6B52 50%, #0F2A22 100%)',
     backgroundSize: '200% auto',
     backgroundPosition: 'left center',
     transition: 'all 0.65s ease',
   };
+
+  const benefits = [
+    "Founder pricing locked in for first batch",
+    "First access when bottles ship",
+    "No spam, ever - one email at launch",
+  ];
 
   return (
     <section className="relative pt-24 md:pt-32 pb-16 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
@@ -107,7 +110,15 @@ export default function Hero() {
             <div className="relative w-full bg-white/60 backdrop-blur-xl border border-white/50 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] flex flex-col justify-center overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B36B4D]/30 to-transparent opacity-50" />
 
-              <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
+              {/* Microbadge: scarcity / urgency */}
+              <div className="inline-flex items-center gap-2 self-start mb-5 px-3 py-1 rounded-full bg-[#B36B4D]/10 border border-[#B36B4D]/20">
+                <Clock className="w-3 h-3 text-[#B36B4D]" aria-hidden="true" />
+                <span className="text-[9px] font-black text-[#B36B4D] uppercase tracking-[0.25em]">
+                  Pre-launch waitlist open
+                </span>
+              </div>
+
+              <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
               </p>
 
@@ -129,8 +140,8 @@ export default function Hero() {
                 </span>
               </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                {/* Honeypot: hidden field bots fill, real users don't. Tab-blocked + invisible. */}
+              <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
+                {/* Honeypot */}
                 <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
                   <label htmlFor="hero-website-hp">Website (leave blank)</label>
                   <input id="hero-website-hp" type="text" name="website" tabIndex={-1} autoComplete="off" />
@@ -167,10 +178,27 @@ export default function Hero() {
                   <ArrowRight size={18} aria-hidden="true" />
                 </button>
               </form>
+
+              {/* Benefit lines below the button */}
+              <ul className="mt-7 space-y-2.5 pt-5 border-t border-[#3D3733]/8">
+                {benefits.map((b) => (
+                  <li key={b} className="flex items-start gap-2.5">
+                    <span
+                      className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#B36B4D]/15 flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    >
+                      <Check className="w-3 h-3 text-[#B36B4D]" strokeWidth={3} />
+                    </span>
+                    <span className="text-sm text-[#3D3733] font-medium leading-snug">
+                      {b}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
 
-          {/* RIGHT: PRODUCT IMAGE (Glass Frame) */}
+          {/* RIGHT: PRODUCT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -196,7 +224,7 @@ export default function Hero() {
 
         </div>
 
-        {/* --- TRUST BAR (Amplified: bolder labels, larger icons, dividers) --- */}
+        {/* --- TRUST BAR --- */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -208,7 +236,6 @@ export default function Hero() {
           </p>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
 
-            {/* FDA Registered */}
             <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-start">
               <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
                 <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />
@@ -221,7 +248,6 @@ export default function Hero() {
 
             <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
 
-            {/* NSF GMP */}
             <div className="flex items-center gap-4 group cursor-default flex-1 justify-center">
               <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
                 <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />
@@ -234,7 +260,6 @@ export default function Hero() {
 
             <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
 
-            {/* Third-Party Lab Tested */}
             <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-end">
               <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
                 <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />

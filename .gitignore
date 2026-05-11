@@ -36,16 +36,3 @@ yarn-error.log*
 attached_assets/*
 !attached_assets/hero-product.webp
 !attached_assets/hero-product-sm.webp
-
-# Local-only Claude/Cowork session artifacts (not for GitHub)
-AUDIT_*.md
-CHANGES_*.md
-CONTENT_HANDOFF*
-CONTENT_HOMEPAGE_*
-FORMULA_v*.json
-HOMEPAGE_STORY_AUDIT.md
-PUSH.bat
-PUSH.ps1
-replit.md
-zebra-changes.bundle
-.git-broken-backup/

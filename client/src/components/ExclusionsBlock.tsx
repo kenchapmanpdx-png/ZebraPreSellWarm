@@ -3,13 +3,13 @@
  * Homepage callout for the v7.8 prohibited-excipient list.
  *
  * Design intent (revised 2026-05-10):
- *   - Make exclusions feel DELIBERATE at scroll speed (not "got crossed off
- *     by mistake"). Bigger pills, bolder X marker, explicit "Refused" framing.
- *   - Pill text reads as a designed "do-not-use" list, not a tag cloud.
- *   - Descriptions deferred to /our-promise.
+ *   - Universal "no" symbol (Ban) instead of strikethrough + X, so the
+ *     refused-list semantics read at a glance.
+ *   - No line-through on text; the icon carries the prohibition meaning.
+ *   - Pill text stays clean and readable.
  */
 import { Link } from "wouter";
-import { X, ArrowRight } from "lucide-react";
+import { Ban, ArrowRight } from "lucide-react";
 
 const EXCLUDED = [
   "Citric acid",
@@ -45,20 +45,19 @@ export default function ExclusionsBlock() {
           </p>
         </div>
 
-        {/* Refused list - larger, bolder, with stronger X markers */}
+        {/* Refused list - universal "no" symbol carries the prohibition meaning */}
         <ul className="flex flex-wrap justify-center gap-3 md:gap-3.5 mb-10">
           {EXCLUDED.map((item) => (
             <li
               key={item}
-              className="group inline-flex items-center gap-2.5 px-5 py-3 bg-white border border-[#B36B4D]/15 rounded-full shadow-sm hover:shadow-md hover:border-[#B36B4D]/30 transition-all"
+              className="inline-flex items-center gap-3 px-5 py-3 bg-white border border-[#B36B4D]/15 rounded-full shadow-sm hover:shadow-md hover:border-[#B36B4D]/30 transition-all"
             >
-              <span
-                className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#B36B4D]/10 flex-shrink-0"
-                aria-hidden="true"
-              >
-                <X className="w-4 h-4 text-[#B36B4D]" strokeWidth={3} />
-              </span>
-              <span className="font-bold text-base md:text-lg text-[#0F2A22] line-through decoration-2 decoration-[#B36B4D]/70">
+              <Ban
+                className="w-6 h-6 text-[#DC2626] flex-shrink-0"
+                strokeWidth={2.5}
+                aria-label="Excluded"
+              />
+              <span className="font-bold text-base md:text-lg text-[#0F2A22]">
                 {item}
               </span>
             </li>
