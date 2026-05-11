@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "palmitoylethanolamide",
+    "display_name": "Palmitoylethanolamide (PEA)"
+  },
+  {
+    "slug": "luteolin",
+    "display_name": "Luteolin"
+  },
+  {
+    "slug": "emiq",
+    "display_name": "EMIQ (Enzymatically Modified Isoquercitrin)"
+  },
+  {
+    "slug": "magnesium-glycinate",
+    "display_name": "Magnesium Glycinate"
+  },
+  {
+    "slug": "taurine",
+    "display_name": "Taurine"
+  },
+  {
+    "slug": "vitamin-c",
+    "display_name": "Vitamin C (Sodium Ascorbate)"
+  },
+  {
+    "slug": "l-carnitine-fumarate",
+    "display_name": "L-Carnitine Fumarate"
+  },
+  {
+    "slug": "l-proline",
+    "display_name": "L-Proline"
+  },
+  {
+    "slug": "nicotinamide-riboside",
+    "display_name": "Nicotinamide Riboside (NR)"
+  },
+  {
+    "slug": "pycnogenol",
+    "display_name": "Pycnogenol"
+  },
+  {
+    "slug": "pqq",
+    "display_name": "PQQ (Pyrroloquinoline Quinone)"
+  },
+  {
+    "slug": "chlorogenic-acid",
+    "display_name": "Chlorogenic Acid"
+  },
+  {
+    "slug": "l-theanine",
+    "display_name": "L-Theanine"
+  },
+  {
+    "slug": "zinc-carnosine",
+    "display_name": "Zinc Carnosine"
+  },
+  {
+    "slug": "astaxanthin",
+    "display_name": "Astaxanthin"
+  },
+  {
+    "slug": "silicon",
+    "display_name": "Silicon (MMST)"
+  },
+  {
+    "slug": "benfotiamine",
+    "display_name": "Benfotiamine"
+  },
+  {
+    "slug": "niacinamide",
+    "display_name": "Niacinamide"
+  },
+  {
+    "slug": "p5p",
+    "display_name": "P5P (Pyridoxal-5-Phosphate)"
+  },
+  {
+    "slug": "r5p",
+    "display_name": "R5P (Riboflavin-5-Phosphate)"
+  },
+  {
+    "slug": "methylfolate",
+    "display_name": "Methylfolate"
+  },
+  {
+    "slug": "vitamin-b12",
+    "display_name": "Vitamin B12 (Methylcobalamin)"
+  },
+  {
+    "slug": "vitamin-d3",
+    "display_name": "Vitamin D3"
+  },
+  {
+    "slug": "vitamin-k2",
+    "display_name": "Vitamin K2 (MK-7)"
+  },
+  {
+    "slug": "copper-bisglycinate",
+    "display_name": "Copper Bisglycinate"
+  },
+  {
+    "slug": "manganese-bisglycinate",
+    "display_name": "Manganese Bisglycinate"
+  },
+  {
+    "slug": "l-lysine",
+    "display_name": "L-Lysine"
+  },
+  {
+    "slug": "chondroitin-sulfate",
+    "display_name": "Chondroitin Sulfate"
+  },
+  {
+    "slug": "recombinant-human-lactoferrin",
+    "display_name": "Recombinant Human Lactoferrin"
+  },
+  {
+    "slug": "l-citrulline",
+    "display_name": "L-Citrulline"
+  },
+  {
+    "slug": "selenium",
+    "display_name": "Selenium"
+  },
+  {
+    "slug": "pantothenic-acid",
+    "display_name": "Pantothenic Acid"
+  },
+  {
+    "slug": "biotin",
+    "display_name": "Biotin"
+  },
+  {
+    "slug": "boron",
+    "display_name": "Boron"
+  },
+  {
+    "slug": "molybdenum",
+    "display_name": "Molybdenum"
+  }
+]

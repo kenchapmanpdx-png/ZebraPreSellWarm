@@ -66,9 +66,6 @@ export default function Hero() {
 
   return (
     <section className="relative pt-24 md:pt-32 pb-16 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
-
-
-
       <div className="max-w-7xl mx-auto relative z-10 w-full">
 
         {/* --- EDITORIAL HEADER --- */}
@@ -108,7 +105,6 @@ export default function Hero() {
             className="w-full lg:w-[35%] flex"
           >
             <div className="relative w-full bg-white/60 backdrop-blur-xl border border-white/50 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] flex flex-col justify-center overflow-hidden group">
-              {/* Subtle shimmers */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B36B4D]/30 to-transparent opacity-50" />
 
               <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
@@ -193,7 +189,6 @@ export default function Hero() {
                   decoding="async"
                   className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-[time:2000ms] ease-out"
                 />
-                {/* Cinematic Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#B36B4D]/10 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
@@ -201,48 +196,52 @@ export default function Hero() {
 
         </div>
 
-        {/* --- THE COLORED TRUST BAR (Glassmorphism Edition) --- */}
+        {/* --- TRUST BAR (Amplified: bolder labels, larger icons, dividers) --- */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="py-8 px-10 bg-white/30 backdrop-blur-md rounded-3xl border border-white/40 shadow-sm mx-auto max-w-5xl"
+          className="py-7 px-8 md:px-12 bg-white/50 backdrop-blur-md rounded-3xl border border-white/60 shadow-md mx-auto max-w-5xl"
         >
-          <div className="flex flex-wrap justify-center md:justify-between items-center gap-10">
-            <p className="text-[9px] font-black text-[#8A857C] uppercase tracking-[0.4em] w-full md:w-auto text-center md:text-left">
-              Manufacturing Standards:
-            </p>
+          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] text-center mb-5">
+            Manufacturing Standards
+          </p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
 
-            {/* FDA Registered - Blue Icon */}
-            <div className="flex items-center gap-4 group cursor-default">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Factory className="w-5 h-5 text-blue-600" aria-hidden="true" />
+            {/* FDA Registered */}
+            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-start">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />
               </div>
               <div className="text-left">
-                <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">FDA Registered</span>
-                <span className="block text-[8px] font-bold text-[#8A857C] uppercase tracking-tighter mt-1">Facility</span>
+                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">FDA Registered</span>
+                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Facility</span>
               </div>
             </div>
 
-            {/* NSF GMP - Royal Blue Icon */}
-            <div className="flex items-center gap-4 group cursor-default">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <ShieldCheck className="w-5 h-5 text-blue-800" aria-hidden="true" />
+            <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
+
+            {/* NSF GMP */}
+            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />
               </div>
               <div className="text-left">
-                <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">NSF GMP</span>
-                <span className="block text-[8px] font-bold text-[#8A857C] uppercase tracking-tighter mt-1">Certified</span>
+                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">NSF GMP</span>
+                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Certified</span>
               </div>
             </div>
 
-            {/* Lab Tested - Copper Icon */}
-            <div className="flex items-center gap-4 group cursor-default">
-              <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                <Microscope className="w-5 h-5 text-[#B36B4D]" aria-hidden="true" />
+            <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
+
+            {/* Third-Party Lab Tested */}
+            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-end">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />
               </div>
               <div className="text-left">
-                <span className="block text-[10px] font-black text-[#3D3733] uppercase tracking-widest leading-none">Third-Party</span>
-                <span className="block text-[8px] font-bold text-[#8A857C] uppercase tracking-tighter mt-1">Lab Tested</span>
+                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">Third-Party</span>
+                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Lab Tested</span>
               </div>
             </div>
           </div>
