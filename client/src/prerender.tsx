@@ -58,6 +58,7 @@ function metaForRoute(url: string): RouteMeta {
     const slug = ingMatch[1];
     const item = (ingredientData as Record<string, {
       name: string;
+      patientSummary?: string;
       atAGlance?: { whatItIs?: string; whyWeIncludeIt?: string; keyBenefits?: string[] };
     }>)[slug];
     const listed = ingredientList.find((i: { slug: string; display_name: string }) => i.slug === slug);
@@ -65,9 +66,12 @@ function metaForRoute(url: string): RouteMeta {
     // Strip trademark/brand parenthetical for cleaner titles
     const name = rawName.split(" (")[0];
 
-    // Build 120-160 char description from available fields.
+    // Build 120-160 char description from available fields. Patient summary
+    // is preferred when present — it's plain-language and matches how people
+    // actually search.
     const ag = item?.atAGlance;
     const parts: string[] = [];
+    if (item?.patientSummary) parts.push(item.patientSummary);
     if (ag?.whatItIs) parts.push(ag.whatItIs);
     if (ag?.whyWeIncludeIt) parts.push(ag.whyWeIncludeIt);
     if (ag?.keyBenefits && ag.keyBenefits.length) parts.push(ag.keyBenefits.slice(0, 3).join(". "));
