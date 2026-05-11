@@ -229,14 +229,20 @@ function medicalWebPageForIngredient(
     description,
     inLanguage: "en-US",
     audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    mainContentOfPage: [
+      "What it is",
+      "Mechanism",
+      "Condition-specific notes (MCAS, hEDS, POTS)",
+      "Form selection rationale",
+      "Dose protocol",
+      "Evidence summary",
+      "Safety and interactions",
+      "Frequently asked questions",
+      "References",
+    ],
     about,
-    isPartOf: { "@id": `${BASE}/#website` },
-    publisher: {
-      "@type": "Organization",
-      name: BRAND_NAME,
-      url: `${BASE}/`,
-      logo: { "@type": "ImageObject", url: LOGO },
-    },
+    isPartOf: { "@id": `${BASE}/#organization` },
+    publisher: { "@id": `${BASE}/#organization` },
     lastReviewed: LAST_REVIEWED,
     dateModified: LAST_REVIEWED,
     image: HERO_IMAGE,
@@ -257,6 +263,30 @@ function faqPageForIngredient(ing: IngredientData): Record<string, unknown> | nu
   };
 }
 
+function howToForIngredient(
+  slug: string,
+  name: string,
+  ing: IngredientData,
+): Record<string, unknown> | null {
+  const protocol = ing.howToStart?.protocol;
+  if (!protocol || protocol.length === 0) return null;
+  const cleanName = name.split(" (")[0];
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to start ${cleanName} for hEDS, POTS, or MCAS`,
+    description: `Stepwise titration protocol for introducing ${cleanName} in a mast-cell-sensitive population, drawn from the ZebraWell ingredient page.`,
+    url: `${BASE}/ingredients/${slug}#how-to-start`,
+    totalTime: ing.howToStart?.timeline || undefined,
+    step: protocol.map((p, idx) => ({
+      "@type": "HowToStep",
+      position: idx + 1,
+      name: p.step,
+      text: `${p.dosage}. ${p.notes}`.trim(),
+    })),
+  };
+}
+
 function schemaElementsForRoute(url: string, title: string): HeadElement[] {
   const out: HeadElement[] = [];
   // Breadcrumbs on every page.
@@ -271,6 +301,8 @@ function schemaElementsForRoute(url: string, title: string): HeadElement[] {
       out.push(jsonLdElement(medicalWebPageForIngredient(slug, ing.name, ing, description)));
       const faq = faqPageForIngredient(ing);
       if (faq) out.push(jsonLdElement(faq));
+      const howTo = howToForIngredient(slug, ing.name, ing);
+      if (howTo) out.push(jsonLdElement(howTo));
     }
   }
 

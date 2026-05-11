@@ -34,25 +34,62 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://www.wellnessforzebras.com/#organization",
       "name": "ZebraWell",
+      "alternateName": "Wellness for Zebras",
       "url": "https://www.wellnessforzebras.com/",
-      "logo": "https://www.wellnessforzebras.com/zebra-logo.svg",
-      "description": "Clinical-grade wellness supplements for rare conditions including EDS, POTS, and MCAS.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.wellnessforzebras.com/zebra-logo.svg"
+      },
+      "description": "US-based supplement brand formulating clinical-grade AM and PM stacks for the EDS, POTS, and MCAS (Zebra) community. Mechanism, dose, and primary-literature citations on every ingredient page.",
+      "knowsAbout": [
+        "hypermobile Ehlers-Danlos Syndrome",
+        "Postural Orthostatic Tachycardia Syndrome",
+        "Mast Cell Activation Syndrome",
+        "dietary supplements",
+        "extracellular matrix preservation",
+        "matrix metalloproteinase inhibition",
+        "histamine degradation",
+        "autonomic nervous system support"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "email": "ken@wellnessforzebras.com",
+          "contactType": "customer service",
+          "availableLanguage": ["English"]
+        }
+      ],
       "sameAs": []
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "ZebraWell AM &amp; PM Clinical Trinity",
-      "description": "Research-driven AM and PM supplement formulas providing autonomic, mast cell, and connective tissue support for EDS, POTS, and MCAS.",
+      "@type": ["Product", "DietarySupplement"],
+      "@id": "https://www.wellnessforzebras.com/#product-clinical-trinity",
+      "name": "ZebraWell AM and PM Clinical Trinity",
+      "description": "Research-driven AM and PM supplement formulas providing autonomic, mast cell, and connective tissue support for adults with hypermobile Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS), and Mast Cell Activation Syndrome (MCAS).",
       "brand": { "@type": "Brand", "name": "ZebraWell" },
+      "manufacturer": { "@id": "https://www.wellnessforzebras.com/#organization" },
       "image": "https://www.wellnessforzebras.com/images/zebrawell-bottles-final2.jpg",
+      "targetPopulation": "Adults 18+ with hypermobile Ehlers-Danlos Syndrome, POTS, or Mast Cell Activation Syndrome",
+      "legalStatus": {
+        "@type": "DrugLegalStatus",
+        "name": "Dietary supplement, US DSHEA"
+      },
+      "safetyConsideration": "Consult a qualified healthcare provider before starting, especially if pregnant, breastfeeding, or taking prescription medications. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.",
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/PreOrder",
-        "url": "https://www.wellnessforzebras.com/preorder"
+        "url": "https://www.wellnessforzebras.com/preorder",
+        "priceCurrency": "USD",
+        "seller": { "@id": "https://www.wellnessforzebras.com/#organization" }
       }
     }
     </script>
