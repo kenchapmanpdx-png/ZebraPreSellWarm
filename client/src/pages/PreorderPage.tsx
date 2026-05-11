@@ -80,6 +80,24 @@ export default function PreorderPage() {
         </div>
       </section>
 
+      {/* First-batch pitch — patient-language reservation incentive */}
+      <section className="py-16 px-6 bg-[#EBE8E1] border-y border-[#3D3733]/10">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white/60 backdrop-blur-sm border border-[#B36B4D]/30 rounded-3xl p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#0F2A22] mb-5">Why reserve now</h2>
+            <p className="text-lg leading-relaxed text-[#3D3733] mb-4">
+              The first batch is limited, and once we close the list, the next public opening is months away — that's the manufacturing lead time on the next run. Here's why that matters: <strong>we set aside bottles from the first batch specifically for your refills.</strong> When you finish a bottle, your next one is already reserved — no gap while we manufacture the next run.
+            </p>
+            <p className="text-lg leading-relaxed text-[#3D3733]">
+              New customers in later rounds don't get that guarantee. First-batch buyers do.
+            </p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#B36B4D] font-bold mt-6">
+              Built by zebras, for zebras.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Product Preview */}
       <section className="py-16 bg-[#DED9D0]">
         <div className="container mx-auto px-6">
