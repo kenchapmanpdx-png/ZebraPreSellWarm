@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import WhyZebraMascot from '@/components/WhyZebraMascot';
 import OurStory from '@/components/OurStory';
 import ProductGrid from '@/components/ProductGrid';
+import ExclusionsBlock from '@/components/ExclusionsBlock';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
@@ -49,6 +50,11 @@ export default function Home() {
 
         {/* 2. OUR STORY - Ken & Ava (Heart of the brand) */}
         <OurStory />
+
+        {/* 2.5. EXCLUSIONS — what's NOT in the formula. Bridging principle
+                  between motivation (Ava story) and execution (product grid).
+                  Lands brand differentiation in seconds for MCAS-conscious scrollers. */}
+        <ExclusionsBlock />
 
         {/* 3. QUALITY STANDARDS - The "0% Trigger" Badge & Trust */}
         <Suspense fallback={<div className="h-48 bg-[#EBE8E1]" />}>
