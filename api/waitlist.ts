@@ -9,7 +9,7 @@
  */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
-import { insertWaitlistSubmissionSchema, waitlistSubmissions } from "../shared/schema";
+import { insertWaitlistSubmissionSchema, waitlistSubmissions } from "./_lib/schemas";
 import { getDb } from "./_lib/db";
 import { methodGuard, validate, logSubmission } from "./_lib/respond";
 

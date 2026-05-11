@@ -1,6 +1,6 @@
 /* api/contact.ts — Vercel serverless function */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { insertContactSubmissionSchema, contactSubmissions } from "../shared/schema";
+import { insertContactSubmissionSchema, contactSubmissions } from "./_lib/schemas";
 import { getDb } from "./_lib/db";
 import { methodGuard, validate, logSubmission } from "./_lib/respond";
 

@@ -1,6 +1,6 @@
 /* api/request-sample.ts — Vercel serverless function */
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { insertSampleRequestSchema, sampleRequests } from "../shared/schema";
+import { insertSampleRequestSchema, sampleRequests } from "./_lib/schemas";
 import { getDb } from "./_lib/db";
 import { methodGuard, validate, logSubmission } from "./_lib/respond";
 
