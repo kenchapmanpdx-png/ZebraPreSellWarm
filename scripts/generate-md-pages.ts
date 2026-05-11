@@ -54,6 +54,7 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   out.push("");
   out.push(`**Page:** ${url}`);
   out.push(`**Brand:** ZebraWell`);
+  out.push(`**Author:** Ken Chapman, Founder of ZebraWell`);
   out.push(`**Last reviewed:** ${LAST_REVIEWED}`);
   if (ing.scientificName) out.push(`**Scientific name:** ${ing.scientificName}`);
   if (ing.atAGlance?.dose) out.push(`**Daily dose:** ${ing.atAGlance.dose}`);
@@ -263,6 +264,7 @@ function corePagesMarkdown(): Array<{ path: string; content: string }> {
 
 **Page:** ${BASE}/the-how
 **Brand:** ZebraWell
+**Author:** Ken Chapman, Founder of ZebraWell
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## Core thesis
@@ -294,6 +296,7 @@ ${FDA_DISCLAIMER}
 
 **Page:** ${BASE}/our-promise
 **Brand:** ZebraWell
+**Author:** Ken Chapman, Founder of ZebraWell
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## Commitments
@@ -318,6 +321,7 @@ ${FDA_DISCLAIMER}
 
 **Page:** ${BASE}/preorder
 **Brand:** ZebraWell
+**Author:** Ken Chapman, Founder of ZebraWell
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## Product
@@ -342,6 +346,7 @@ ${FDA_DISCLAIMER}
 **Page:** ${BASE}/contact
 **Email:** ken@wellnessforzebras.com
 **Brand:** ZebraWell
+**Author:** Ken Chapman, Founder of ZebraWell
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## How to reach us

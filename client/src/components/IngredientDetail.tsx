@@ -19,6 +19,10 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 {data.scientificName && (
                     <p className="text-2xl text-muted-foreground italic font-light">{data.scientificName}</p>
                 )}
+                <p className="text-sm text-muted-foreground/80 leading-relaxed">
+                    Written by <span className="font-medium">Ken Chapman</span>, Founder of ZebraWell.{" "}
+                    <span className="whitespace-nowrap">Last reviewed <time dateTime="2026-05-11">May 11, 2026</time>.</span>
+                </p>
             </div>
 
             {/* Patient Summary - plain language opener (renders only when content is drafted) */}

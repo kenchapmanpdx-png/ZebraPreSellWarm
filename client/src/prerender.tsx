@@ -23,6 +23,16 @@ const HERO_IMAGE = `${BASE}/images/zebrawell-bottles-final2.jpg`;
 // Site-wide last-reviewed date for educational content. Bump when you do a
 // pass through ingredients.ts content. Used for MedicalWebPage.lastReviewed.
 const LAST_REVIEWED = "2026-05-11";
+// Named author on every educational page. YMYL E-E-A-T pattern:
+// AI assistants weight content with named credentialed humans much higher
+// than anonymous content. reviewedBy is intentionally absent until a
+// licensed clinician signs on - do not fabricate a reviewer.
+const AUTHOR = {
+  "@type": "Person",
+  name: "Ken Chapman",
+  jobTitle: "Founder, ZebraWell",
+  worksFor: { "@id": "https://www.wellnessforzebras.com/#organization" },
+};
 
 type RouteMeta = {
   title: string;
@@ -242,6 +252,7 @@ function medicalWebPageForIngredient(
     ],
     about,
     isPartOf: { "@id": `${BASE}/#organization` },
+    author: AUTHOR,
     publisher: { "@id": `${BASE}/#organization` },
     lastReviewed: LAST_REVIEWED,
     dateModified: LAST_REVIEWED,
