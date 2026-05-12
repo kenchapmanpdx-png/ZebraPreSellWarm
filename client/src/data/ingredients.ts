@@ -198,12 +198,12 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         triadPlain: {
             mcas: "Luteolin sits near the top of the list for natural mast cell stabilizers, and the mechanism evidence is unusually deep. It blocks calcium from rushing into mast cells (the trigger that makes them release their inflammatory cargo), it inhibits NF-κB (the master switch for inflammation), and it does this across more pathways than cromolyn - including the cytokines that drive systemic MCAS symptoms. There's also good safety data from decades of use in related conditions like allergic rhinitis and post-COVID smell loss, where small trials have shown real benefit. For anyone evaluating mast cell options, luteolin is one of the most well-supported choices on the table.",
-            heds: "Luteolin protects connective tissue from the inside. Mast cells release proteases (chymase and tryptase) that turn on the MMPs - the enzymes that break down collagen faster than your body can rebuild it. By calming mast cells, luteolin keeps that destruction cascade from getting started. For the many hEDS patients who also live with MCAS, this is one of the highest-leverage indirect routes to ECM protection. Less mast cell activity means less collagen degradation means better-protected tissue over time. It's why luteolin earned its spot in the formulation.",
+            heds: "Luteolin protects connective tissue from the inside. Mast cells release proteases (chymase and tryptase) that turn on the MMPs - the enzymes that break down collagen faster than your body can rebuild it. By calming mast cells, luteolin keeps that destruction cascade from getting started. For the many hEDS patients who also live with MCAS, this is one of the most efficient indirect routes to ECM protection. Less mast cell activity means less collagen degradation means better-protected tissue over time. It's why luteolin earned its spot in the formulation.",
             pots: "Luteolin works upstream of POTS - on the inflammation and mast cell activity that fuel symptoms, particularly in post-viral and post-COVID cases. It crosses the blood-brain barrier well enough to reach the neuroinflammation layer that's increasingly recognized as a POTS driver. A small but compelling RCT in post-COVID smell loss patients showed about 40% improvement on luteolin. Many people in the POTS community also have MCAS in the mix, and luteolin's one of the strongest natural options for both at once. It addresses the layers underneath POTS that standard medications don't reach."
         },
         bluf: "Luteolin is a plant flavonoid (celery, parsley, artichokes) that stabilizes mast cells more potently than prescription cromolyn sodium in lab studies and crosses the blood-brain barrier to address neuroinflammation. The EDS UK GP Toolkit lists it as an option to consider for MCAS management in hEDS patients. ZebraWell uses 140 mg daily of a micronized form in the Daily Powder.",
         atAGlance: {
-            whatItIs: "A plant flavonoid found in celery, parsley, and artichokes that provides powerful mast cell stabilization",
+            whatItIs: "A plant flavonoid (celery, parsley, artichokes) that stabilizes mast cells more potently than prescription cromolyn sodium in head-to-head lab studies",
             whyWeIncludeIt: "Luteolin is MORE POTENT than prescription cromolyn sodium at stabilizing mast cells, with excellent safety and minimal drug interactions",
             dose: "140 mg daily in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
             keyBenefits: [
@@ -255,7 +255,7 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. Evidence for superior mast cell stabilization comes from in vitro studies comparing luteolin to cromolyn. However, the Ehlers-Danlos Society specifically recommends luteolin for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.",
         triad: {
             mcas: "Luteolin represents one of the most effective natural mast cell stabilizers available. Research demonstrates it inhibits not just histamine, but also tryptase, IL-6, IL-8, TNF-α, and other mediators-providing broader coverage than cromolyn which primarily targets histamine. Importantly, luteolin works prophylactically (preventively). The Ehlers-Danlos Society GP Toolkit specifically recommends luteolin for MCAS management.",
-            heds: "Luteolin provides indirect benefit to hEDS patients through its powerful anti-inflammatory effects and MCAS management (14-47% of hEDS patients have comorbid MCAS). However, luteolin does NOT achieve sufficient plasma concentrations to inhibit MMPs-don't expect direct collagen-protective effects. Its value for hEDS is through mast cell stabilization and inflammation reduction, not ECM protection.",
+            heds: "Luteolin provides indirect benefit to hEDS patients through anti-inflammatory effects and MCAS management (14-47% of hEDS patients have comorbid MCAS). However, luteolin does NOT achieve sufficient plasma concentrations to inhibit MMPs-don't expect direct collagen-protective effects. Its value for hEDS is through mast cell stabilization and inflammation reduction, not ECM protection.",
             pots: "Luteolin's ability to cross the blood-brain barrier makes it uniquely valuable for POTS patients experiencing brain fog, cognitive dysfunction, and neurological symptoms. It reduces microglial activation and central neuroinflammation. Additionally, it stabilizes mast cells around autonomic nerve fibers and may support vagal tone by reducing inflammatory interference with the autonomic nervous system."
         },
         whyThisForm: {
@@ -425,7 +425,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         bluf: "Pine bark extract delivers concentrated oligomeric proanthocyanidins (OPCs), one of the few natural compounds that achieves clinically meaningful MMP inhibition for connective tissue protection in hEDS. It also provides venous support for POTS and mast cell stabilization for MCAS. ZebraWell uses 200 mg daily standardized to 65-75% OPCs by HPLC, dosed 130 mg AM and 70 mg PM.",
         atAGlance: {
-            whatItIs: "A standardized extract from French maritime pine bark containing powerful oligomeric proanthocyanidins (OPCs).",
+            whatItIs: "A standardized extract from pine bark (Pinus pinaster, P. massoniana, P. sylvestris) delivering concentrated oligomeric proanthocyanidins (OPCs).",
             whyWeIncludeIt: "pine bark extract is one of the few natural compounds that achieves clinically meaningful MMP inhibition, essential for connective tissue protection in hEDS, while also providing venous support for POTS and mast cell stabilization for MCAS.",
             dose: "200 mg daily (130 mg AM + 70 mg PM) (per v7.8 RFQ)",
             keyBenefits: [
@@ -471,7 +471,7 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         evidenceGaps: "No direct clinical trials exist specifically in hEDS, POTS, or MCAS populations. The mechanistic evidence is strength, but findings are extrapolated from periodontal, skin, and chronic venous insufficiency studies. Clinical validation in these specific triple-triad populations is still needed.",
         triad: {
-            mcas: "pine bark extract is a potent mast cell stabilizer that inhibits histamine and tryptase. Research suggests it is comparable to cromolyn sodium in its ability to prevent degranulation. Importantly, it is not fermentation-derived, which eliminates histamine/tyramine contamination risks common with other plant extracts.",
+            mcas: "pine bark extract is a potent mast cell stabilizer that inhibits histamine and tryptase. Research suggests it is comparable to cromolyn sodium in its ability to inhibit degranulation. Importantly, it is not fermentation-derived, which eliminates histamine/tyramine contamination risks common with other plant extracts.",
             heds: "Addresses the 'broken bucket' of hEDS by inhibiting MMPs (enzymes that break down collagen) and upregulating Type I collagen genes. It is one of the few supplements with human pharmacokinetic data proving that it reaches tissue concentrations high enough to actually stop these destructive enzymes.",
             pots: "Addresses the peripheral blood pooling mechanism of POTS by strengthening venous tone. Clinical data shows it and its metabolites reduce edema and fluid leakage more effectively than professional compression stockings in some populations.",
         },
@@ -664,7 +664,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Synthetic Taurine Powder",
-            rationale: "Taurine is chemically synthesized (not fermentation-derived), eliminating histamine contamination risk. We chose the powder form because the therapeutic dose (1,500 mg) would require multiple large capsules, which is burdensome. Taurine is nearly tasteless and dissolves easily. The 1,500 mg dose is specific: doses below 1g fail to achieve the cardiovascular benefits documented in recent meta-analyses.",
+            rationale: "Taurine is chemically synthesized (not fermentation-derived), eliminating histamine contamination risk. We chose the powder form because the therapeutic dose (1,500 mg) would require multiple large capsules to deliver, which is burdensome for a population with frequent gastroparesis and slow gastric transit. Taurine is nearly tasteless and dissolves easily. The 1,500 mg dose is specific: doses below 1g fail to achieve the cardiovascular benefits documented in recent meta-analyses.",
             comparison: [
                 { form: "Fermentation-derived Taurine", difference: "Risk of histamine/tyramine contamination (high MCAS risk)", selected: false },
                 { form: "Synthetic Taurine", difference: "Chemically pure; safe for high-sensitivity MCAS", selected: true }
@@ -913,16 +913,16 @@ export const ingredients: Record<string, IngredientData> = {
         bluf: "Vitamin K2 in the MK-7 form activates the proteins that route calcium into bone rather than soft tissue and vasculature, and supports collagen matrix quality relevant to hEDS. It works synergistically with D3 to reduce the soft tissue calcification risk that long-term D3 supplementation can otherwise drive. ZebraWell uses 100 mcg MK-7 daily.",
         atAGlance: {
             whatItIs: "A fat-soluble vitamin that activates proteins essential for calcium regulation and vascular health",
-            whyWeIncludeIt: "Works synergistically with D3 to prevent soft tissue calcification, supports collagen matrix quality, and demonstrates mast cell stabilizing properties",
+            whyWeIncludeIt: "Works synergistically with D3 to reduce the risk of soft tissue calcification, supports collagen matrix quality, and demonstrates mast cell stabilizing properties in lab models",
             dose: "100 mcg MK-7 daily",
             keyBenefits: [
-                "Prevents arterial calcification via Matrix Gla Protein",
+                "Reduces arterial calcification risk via Matrix Gla Protein activation",
                 "Inhibits mast cell degranulation (Kimura studies)",
                 "Reduces MMP-3 in clinical trials (collagen protective)",
                 "Superior 72-hour half-life vs MK-4"
             ]
         },
-        howItWorks: "Vitamin K2 activates Matrix Gla Protein (MGP), which prevents calcium from depositing in arteries and soft tissues-directing it to bones instead. This is critical when taking D3, which increases calcium absorption.\n\nIn connective tissue, K2 activates osteocalcin, enhancing collagen matrix quality. Research shows it increases collagen synthesis via the SXR pathway and organizes collagen fibrils. Regarding mast cells, historical studies demonstrated that menaquinone significantly inhibits degranulation in both models and human basophils, with clinical effectiveness shown in asthma trials.",
+        howItWorks: "Vitamin K2 activates Matrix Gla Protein (MGP), which binds calcium in the bloodstream and limits its deposition in arteries and soft tissues, directing it toward bone instead. This is critical when taking D3, which increases calcium absorption.\n\nIn connective tissue, K2 activates osteocalcin, enhancing collagen matrix quality. Research shows it increases collagen synthesis via the SXR pathway and organizes collagen fibrils. Regarding mast cells, historical studies demonstrated that menaquinone significantly inhibits degranulation in both models and human basophils, with clinical effectiveness shown in asthma trials.",
         research: [
             {
                 outcome: "Mast Cell Stabilization",
@@ -1187,7 +1187,7 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "No direct RCTs in hEDS or POTS populations. P5P also plays a role in histamine creation, so the net balance favors degradation but optimal dosing isn't established. Misconception exists: P5P is NOT a direct LOX cofactor (copper is).",
         triad: {
             mcas: "Primary indication as a DAO cofactor. Supports the pathway that clears histamine after degranulation. Unlike standard B6 (pyridoxine), P5P does not carry the risk of peripheral neuropathy. The 'B6 Paradox' is avoided by using the active form directly.",
-            heds: "Indirect support via homocysteine metabolism. Deficiency leads to elevated homocysteine, which inhibits collagen crosslinking via LOX inhibition. P5P helps prevent this inhibition and preserves crosslink quality.",
+            heds: "Indirect support via homocysteine metabolism. Deficiency leads to elevated homocysteine, which inhibits collagen crosslinking via LOX inhibition. P5P helps counteract this inhibition and supports crosslink quality.",
             pots: "Supports synthesis of neurotransmitters essential for autonomic balance (GABA, norepinephrine). Deficiency is common (up to 47% in some studies) and is associated with autonomic neuropathy and fainting frequency."
         },
         whyThisForm: {
@@ -1240,7 +1240,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         bluf: "Astaxanthin is a carotenoid antioxidant from microalgae (Haematococcus pluvialis) with the highest lipid-phase antioxidant capacity in the category. It stabilizes mast cells (60-70% inhibition in lab studies) and inhibits collagen-degrading enzymes in human dermal fibroblasts at orally achievable doses, relevant for MCAS and hEDS. ZebraWell uses 4 mg daily in the PM capsule, with dinner fat for absorption.",
         atAGlance: {
-            whatItIs: "A powerful carotenoid antioxidant derived from microalgae (Haematococcus pluvialis)",
+            whatItIs: "A lipid-phase carotenoid antioxidant from microalgae (Haematococcus pluvialis)",
             whyWeIncludeIt: "Dual action: stabilizes mast cells (60-70% inhibition) AND inhibits collagen-degrading enzymes at oral doses",
             dose: "4 mg daily in the PM capsule, taken with dinner fat for absorption (per v7.8 RFQ)",
             keyBenefits: [
@@ -1414,11 +1414,11 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Crucial for the hyperadrenergic population. By modulating brain GABA and reducing the systemic sympathetic response to stress, it helps lower resting tachycardia and improves sleep architecture."
         },
         whyThisForm: {
-            form: "Suntheanine® (Pure L-isomer)",
+            form: "Generic L-theanine (≥98% L-isomer purity, COA-verified)",
             rationale: "Mandatory to ensure ≥98% pure L-theanine. Generic products are often 50% inactive D-theanine, which competes for absorption and lacks the calming effect.",
             comparison: [
-                { form: "Suntheanine®", difference: "≥98% pure L-isomer; patented enzymatic process; clinically validated", selected: true },
-                { form: "Generic L-Theanine", difference: "Up to 50% D-theanine contamination; poor efficacy", selected: false }
+                { form: "Generic L-theanine (≥98% L-isomer, COA-verified)", difference: "v7.8 generic-OK spec: ≥98% L-isomer purity verified analytically, BD ≥0.35 g/mL", selected: true },
+                { form: "Unverified generic L-theanine (no COA)", difference: "Risk of up to 50% D-isomer contamination, reducing efficacy", selected: false }
             ]
         },
         safety: {
@@ -1432,7 +1432,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         howToStart: {
             protocol: [
-                { step: "Ongoing", dosage: "200 mg daily", notes: "PM capsules (Suntheanine®)" }
+                { step: "Ongoing", dosage: "200 mg daily", notes: "In the PM capsule" }
             ],
             timeline: "Acute relaxation within 30-60 minutes; chronic anxiety reduction requires ~4 weeks."
         },
@@ -1494,7 +1494,7 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Mast Cell Stabilization",
-                summary: "Prevents degranulation and inhibits histamine release in both models and human cells.",
+                summary: "Inhibits mast cell degranulation and reduces histamine release in both in vitro and human-cell models.",
                 studies: [
                     {
                         source: "Gross et al., 2019",
@@ -1859,7 +1859,7 @@ export const ingredients: Record<string, IngredientData> = {
         triad: {
             mcas: "Primary indication. Stabilizes mast cells indirectly by clearing sulfite burden. Addresses reactions to wine, dried fruits, and environmental chemicals.",
             heds: "Sulfite accumulation can damage collagen cross-links; molybdenum helps preserve tissue integrity through detoxification.",
-            pots: "Reduces total body load of inflammatory triggers, helping to prevent tachycardia flares and chemical-induced crashes."
+            pots: "Reduces total body load of inflammatory triggers, helping to reduce the frequency of tachycardia flares and chemical-induced crashes."
         },
         whyThisForm: {
             form: "Molybdenum Glycinate (Chelate)",
@@ -2008,7 +2008,7 @@ export const ingredients: Record<string, IngredientData> = {
             dose: "4mg elemental manganese daily (AM capsules)",
             keyBenefits: [
                 "Essential cofactor for MnSOD (SOD2) mitochondrial protection",
-                "Prevents upregulation of collagen-degrading enzymes (MMPs)",
+                "Limits upregulation of collagen-degrading enzymes (MMPs)",
                 "Required for building glycosaminoglycans (GAGs) like Hyaluronic Acid",
                 "Blocks calcium influx into mast cells to inhibit degranulation"
             ]
@@ -2102,7 +2102,7 @@ export const ingredients: Record<string, IngredientData> = {
             keyBenefits: [
                 "Essential for Glutathione Peroxidase cellular defense",
                 "Reduces thyroid antibodies by 30-40% in autoimmunity",
-                "Prevents H₂O₂ accumulation that could amplify MMP activity",
+                "Limits H₂O₂ accumulation that could amplify MMP activity",
                 "Reduces IgE-mediated mediator release from mast cells"
             ]
         },
@@ -2132,7 +2132,7 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "No direct trials specifically in hEDS populations; findings extrapolated from related connective tissue models and autoimmune thyroid research.",
         triad: {
             mcas: "Reduces oxidative stress-driven mast cell reactivity. Selenomethionine is preferred to avoid yeast/fermentation sensitivities.",
-            heds: "Essential to prevent damaged fibroblasts and cartilage degeneration seen in deficiency models. Synergistic with Manganese.",
+            heds: "Essential for limiting the damaged fibroblasts and cartilage degeneration seen in deficiency models. Synergistic with Manganese.",
             pots: "Critical for the 16-20% of POTS patients with concurrent thyroid autoimmunity. Supports autonomic function via thyroid hormone optimization."
         },
         whyThisForm: {
@@ -2192,7 +2192,7 @@ export const ingredients: Record<string, IngredientData> = {
                 "Supports HNMT for intracellular histamine clearance"
             ]
         },
-        howItWorks: "Methylfolate bypasses the MTHFR enzyme block to provide active folate. It directly regulates MMP-2 promoter methylation to prevent its hyperactivity (which otherwise leads to decorin cleavage and collagen weakness). It is also a mandatory cofactor for BH4 synthesis (essential for norepinephrine) and supports HNMT function to clear intracellular histamine.",
+        howItWorks: "Methylfolate bypasses the MTHFR enzyme block to provide active folate. It directly regulates MMP-2 promoter methylation to limit its hyperactivity (which otherwise leads to decorin cleavage and collagen weakness). It is also a mandatory cofactor for BH4 synthesis (essential for norepinephrine) and supports HNMT function to clear intracellular histamine.",
         research: [
             {
                 outcome: "hEDS-Specific Genetic Association",
