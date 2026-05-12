@@ -173,15 +173,6 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     ))}
                 </Accordion>
 
-                {data.evidenceGaps && (
-                    <div className="mt-8 p-6 bg-secondary/10 rounded-2xl border border-secondary/20 flex gap-4">
-                        <AlertCircle className="w-6 h-6 text-secondary-foreground/60 shrink-0 mt-1" aria-hidden="true" />
-                        <div className="space-y-2">
-                            <h3 className="font-bold text-sm uppercase tracking-widest text-secondary-foreground/70">Evidence Gaps</h3>
-                            <p className="text-sm text-secondary-foreground/80 leading-relaxed italic">{data.evidenceGaps}</p>
-                        </div>
-                    </div>
-                )}
             </section>
 
             {/* For the Triad Specifically */}
@@ -322,6 +313,19 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                             <p className="font-serif italic text-lg text-primary/80">"{data.howToStart.timeline}"</p>
                         </div>
                     )}
+                </section>
+            )}
+
+            {/* State of the Evidence (formerly Evidence Gaps). Demoted from
+                inside the Research section to here so the buying-decision flow
+                isn't broken by a warning-shaped block mid-page. Neutral styling
+                signals scientific honesty without alarm. */}
+            {data.evidenceGaps && (
+                <section className="pt-8">
+                    <div className="p-6 md:p-8 bg-white/40 border border-border/40 rounded-2xl">
+                        <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground mb-3">State of the Evidence</h3>
+                        <p className="text-sm md:text-base text-foreground/75 leading-relaxed">{data.evidenceGaps}</p>
+                    </div>
                 </section>
             )}
 
