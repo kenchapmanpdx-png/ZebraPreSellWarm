@@ -41,14 +41,14 @@ export default function CollagenScienceSection() {
       border: "border-blue-200",
       gradient: "from-blue-500/10 to-transparent",
       summary: "Your body has enzymes (MMPs) that act like a shredder. We inhibit them.",
-      problem: "Research shows hEDS patients can have up to 53x higher levels of MMP-1. It's like trying to fill a bathtub with the drain open.",
-      solution: "We include natural compounds that inhibit these enzymes at multiple points-not just one.",
+      problem: "Research shows hEDS patients can have substantially higher levels of MMP-1. It's like trying to fill a bathtub with the drain open.",
+      solution: "We include natural compounds that inhibit these enzymes at multiple points, not just one.",
       mechanisms: [
-        { name: "MMP-1", role: "Cuts the main collagen fibers", ingredients: ["Pycnogenol", "Astaxanthin", "Taurine"] },
-        { name: "MMP-3", role: "The 'master switch'-activates other MMPs", ingredients: ["PEA", "Luteolin", "PQQ"] },
-        { name: "MMP-9", role: "Released by mast cells during flares", ingredients: ["Chlorogenic Acid", "Pycnogenol"] }
+        { name: "MMP-1", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract", "Astaxanthin"] },
+        { name: "MMP-3", role: "The 'master switch' that activates other MMPs", ingredients: ["PEA", "Luteolin"] },
+        { name: "MMP-9", role: "Released by mast cells during flares", ingredients: ["Chlorogenic Acid", "Pine Bark Extract", "Grape Seed Extract"] }
       ],
-      keyInsight: "Pycnogenol is the only natural compound with human clinical trial evidence showing >50% reduction in MMP gene expression."
+      keyInsight: "The gut-derived metabolite M1/DHPV (shared between pine bark and grape seed) inhibits MMP-9 at orally achievable concentrations."
     },
     {
       id: 'timps',
@@ -64,9 +64,9 @@ export default function CollagenScienceSection() {
       solution: "We include compounds that upregulate your body's own TIMP production.",
       mechanisms: [
         { name: "TIMP-1", role: "Blocks MMP-1, MMP-3, and MMP-9", ingredients: ["Luteolin", "Astaxanthin", "PEA"] },
-        { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Curcumin (Phytosome)"] }
+        { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Quercetin Phytosome", "Astaxanthin"] }
       ],
-      keyInsight: "The goal isn't just blocking enzymes-it's restoring the biological MMP/TIMP balance."
+      keyInsight: "The goal isn't just blocking enzymes, it's restoring the biological MMP/TIMP balance."
     },
     {
       id: 'transcription',
@@ -81,10 +81,10 @@ export default function CollagenScienceSection() {
       problem: "Chronic inflammation keeps these genetic switches stuck 'on,' constantly producing collagen-destroying enzymes.",
       solution: "We target the upstream signaling pathways that control MMP production at the genetic level.",
       mechanisms: [
-        { name: "NF-kB Pathway", role: "Master inflammatory switch", ingredients: ["PEA", "Pycnogenol", "Luteolin"] },
-        { name: "AP-1 Pathway", role: "Stress-response transcription factor", ingredients: ["Pycnogenol", "Astaxanthin"] }
+        { name: "NF-kB Pathway", role: "Master inflammatory switch", ingredients: ["PEA", "Pine Bark Extract", "Luteolin"] },
+        { name: "AP-1 Pathway", role: "Stress-response transcription factor", ingredients: ["Pine Bark Extract", "Astaxanthin"] }
       ],
-      keyInsight: "Pycnogenol provides genetic-level suppression, preventing the enzymes from being created in the first place."
+      keyInsight: "Pine bark and grape seed procyanidins provide transcriptional-level suppression, reducing MMP expression at the gene level."
     },
     {
       id: 'vicious-cycle',
@@ -99,8 +99,8 @@ export default function CollagenScienceSection() {
       problem: "ECM degradation triggers matrikine release; matrikines activate mast cells; mast cells drive more ECM degradation.",
       solution: "We interrupt this loop at multiple points-blocking signals and stabilizing mast cells.",
       mechanisms: [
-        { name: "TLR4 Blockade", role: "Matrikines activate mast cells here", ingredients: ["Quercetin", "Luteolin"] },
-        { name: "Tryptase Inhibition", role: "Mast cell enzyme that activates MMPs", ingredients: ["Lactoferrin (150mg)"] }
+        { name: "TLR4 Blockade", role: "Matrikines activate mast cells here", ingredients: ["Quercetin Phytosome", "Luteolin"] },
+        { name: "Mast Cell Stabilization", role: "Reduce mediator release that drives MMP secretion", ingredients: ["PEA", "Astaxanthin"] }
       ],
       keyInsight: "This feedback loop explains why hEDS patients so often develop MCAS."
     },
@@ -130,12 +130,12 @@ export default function CollagenScienceSection() {
       bg: "bg-emerald-50",
       border: "border-emerald-200",
       gradient: "from-emerald-500/10 to-transparent",
-      summary: "We provide therapeutic doses of Glycine, Proline, and Lysine to weave new fibers.",
-      problem: "Most people have a functional glycine deficit. Without building blocks, production suffers.",
-      solution: "Therapeutic doses of precursors plus essential cofactors.",
+      summary: "We provide the cofactors collagen needs to assemble correctly, even when amino acids are intact.",
+      problem: "Collagen synthesis depends on Vitamin C and copper as cofactors; both can run marginal in chronic illness.",
+      solution: "Buffered Sodium Ascorbate for hydroxylation plus Copper Bisglycinate for cross-linking.",
       mechanisms: [
-        { name: "Glycine", role: "33% of the collagen molecule", ingredients: ["Glycine (Therapeutic)"] },
-        { name: "Hydroxylation", role: "Vitamin C stabilizes the helix", ingredients: ["Sodium Ascorbate"] }
+        { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix", ingredients: ["Vitamin C (Sodium Ascorbate)"] },
+        { name: "Cross-linking", role: "Copper-dependent LOX bonds fibers together", ingredients: ["Copper Bisglycinate"] }
       ],
       keyInsight: "Without vitamin C, collagen cannot form a stable triple helix."
     },
@@ -166,14 +166,14 @@ export default function CollagenScienceSection() {
       bg: "bg-violet-50",
       border: "border-violet-200",
       gradient: "from-violet-500/10 to-transparent",
-      summary: "Fibroblasts are the cells that build collagen. We feed their mitochondria to keep them working.",
-      problem: "hEDS fibroblasts often show signs of cellular fatigue.",
-      solution: "Support fibroblast energy production and provide antioxidant defense.",
+      summary: "Fibroblasts are the cells that build collagen. We support their mitochondrial energy and antioxidant defense.",
+      problem: "hEDS fibroblasts often show signs of cellular fatigue and oxidative stress.",
+      solution: "Support fibroblast energy production through NAD+ and B-vitamin cofactors, plus antioxidant defense.",
       mechanisms: [
-        { name: "Mitochondrial ATP", role: "Fuel for synthesis", ingredients: ["CoQ10", "PQQ", "NR"] },
-        { name: "Gene Expression", role: "Turning on collagen genes", ingredients: ["Centella Asiatica"] }
+        { name: "NAD+ / Mitochondrial Fuel", role: "Fuels ATP synthesis", ingredients: ["Nicotinamide Riboside", "Benfotiamine", "R5P"] },
+        { name: "Antioxidant Defense", role: "Protects fibroblasts from oxidative stress", ingredients: ["Astaxanthin", "Vitamin C", "Manganese Bisglycinate"] }
       ],
-      keyInsight: "NR is dosed twice daily due to its short half-life."
+      keyInsight: "NR is taken twice daily because of its short plasma half-life."
     },
     {
       id: 'mitochondria',
@@ -189,9 +189,9 @@ export default function CollagenScienceSection() {
       solution: "Support each complex of the electron transport chain for maximum ATP.",
       mechanisms: [
         { name: "Complex I", role: "First step of ETC", ingredients: ["Benfotiamine", "R5P"] },
-        { name: "NAD+ Regen", role: "Fuel for the system", ingredients: ["Nicotinamide Riboside"] }
+        { name: "NAD+ Regeneration", role: "Fuel for the system", ingredients: ["Nicotinamide Riboside", "Niacinamide"] }
       ],
-      keyInsight: "PQQ stimulates the creation of NEW mitochondria (biogenesis)."
+      keyInsight: "Benfotiamine is the fat-soluble form of B1 with roughly 5x the bioavailability of plain thiamine."
     },
     {
       id: 'mast-cells',
@@ -209,7 +209,7 @@ export default function CollagenScienceSection() {
         { name: "PPAR-alpha Activation", role: "Suppresses mediator release", ingredients: ["PEA (Micronized)"] },
         { name: "Membrane Stability", role: "Prevents degranulation", ingredients: ["Luteolin"] }
       ],
-      keyInsight: "EMIQ offers 17x better absorption than regular quercetin."
+      keyInsight: "Quercetin Phytosome (Quercefit®) reaches plasma concentrations roughly 20x higher than plain quercetin."
     },
     {
       id: 'histamine',

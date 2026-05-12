@@ -61,12 +61,12 @@ export default function ConditionScienceTabs() {
       name: "hEDS",
       fullName: "Hypermobile Ehlers-Danlos Syndrome",
       tagline: "Collagen Protection & Repair",
-      description: "Addressing up to 53x higher levels of collagen-degrading enzymes found in hEDS patients.",
+      description: "Addressing the elevated collagen-degrading enzyme activity (MMPs) documented in hEDS patients.",
       color: "text-emerald-800",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
       icon: LinkIcon,
-      stats: { pathways: 8, ingredients: 20 }
+      stats: { pathways: 4, ingredients: 16 }
     },
     pots: {
       name: "POTS", 
@@ -77,7 +77,7 @@ export default function ConditionScienceTabs() {
       bg: "bg-blue-50", 
       border: "border-blue-200",
       icon: Heart,
-      stats: { pathways: 6, ingredients: 16 }
+      stats: { pathways: 3, ingredients: 14 }
     },
     mcas: {
       name: "MCAS",
@@ -88,7 +88,7 @@ export default function ConditionScienceTabs() {
       bg: "bg-rose-50",
       border: "border-rose-200", 
       icon: FlaskConical,
-      stats: { pathways: 6, ingredients: 18 }
+      stats: { pathways: 3, ingredients: 18 }
     }
   };
 
@@ -101,14 +101,14 @@ export default function ConditionScienceTabs() {
       color: "text-emerald-700",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
-      summary: "In hEDS, enzymes called MMPs can be up to 53x normal, shredding collagen faster than you can build it.",
-      problem: "MMP-1, 3, 8, and 9 are actively cutting your collagen fibers. It's like trying to fill a bathtub with the drain wide open.",
-      solution: "We include compounds like Pycnogenol® that inhibit these enzymes at the genetic level.",
+      summary: "In hEDS, the MMP enzymes are elevated and shred collagen faster than the body can build it.",
+      problem: "MMP-1, 3, 8, and 9 are actively cutting collagen fibers. It's like trying to fill a bathtub with the drain wide open.",
+      solution: "We layer multiple MMP-inhibitory compounds across pine bark extract, grape seed extract, and quercetin phytosome plus mast-cell-stabilizing co-actives.",
       mechanisms: [
-        { name: "MMP-1 (Collagenase)", role: "Cuts main fibers; 53x elevated in hEDS", ingredients: ["Pycnogenol", "Astaxanthin", "PQQ"] },
+        { name: "MMP-1 (Collagenase)", role: "Cuts main fibers; elevated in hEDS", ingredients: ["Pine Bark Extract", "Grape Seed Extract", "Astaxanthin"] },
         { name: "MMP-3 (Stromelysin)", role: "The 'master switch' activating other MMPs", ingredients: ["PEA", "Luteolin"] }
       ],
-      keyInsight: "Pycnogenol's metabolites achieve 37x cellular accumulation, overcoming the absorption limits of most polyphenols."
+      keyInsight: "The gut-derived M1/DHPV metabolite shared between pine bark and grape seed inhibits MMP-9 at orally achievable concentrations."
     },
     {
       id: 'timps',
@@ -123,7 +123,7 @@ export default function ConditionScienceTabs() {
       solution: "Compounds that signal your cells to produce more Tissue Inhibitors of Metalloproteinases (TIMPs).",
       mechanisms: [
         { name: "TIMP-1", role: "Blocks MMP-1, 3, and 9", ingredients: ["Luteolin", "Astaxanthin", "PEA"] },
-        { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Curcumin Phytosome"] }
+        { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Quercetin Phytosome", "Astaxanthin"] }
       ],
       keyInsight: "Healing requires both reducing the 'shredder' and increasing the 'bodyguards'."
     },
@@ -135,14 +135,14 @@ export default function ConditionScienceTabs() {
       color: "text-green-700",
       bg: "bg-green-50",
       border: "border-green-200",
-      summary: "Providing the repeating 'Gly-X-Y' pattern building blocks your body is missing.",
-      problem: "Most patients have a 10g/day functional glycine deficit, leading to fragile tissue assembly.",
-      solution: "Therapeutic precursors plus buffered Sodium Ascorbate for triple-helix stability.",
+      summary: "Supporting the cofactors required to assemble new collagen properly.",
+      problem: "Collagen synthesis depends on Vitamin C for triple-helix stability and copper for cross-linking; both can run marginal in chronic illness.",
+      solution: "Buffered Sodium Ascorbate for triple-helix hydroxylation plus copper bisglycinate for LOX cross-linking.",
       mechanisms: [
-        { name: "Glycine", role: "Makes up 33% of every collagen molecule", ingredients: ["Therapeutic Glycine"] },
-        { name: "Hydroxylation", role: "Vitamin C stabilizes the helix structure", ingredients: ["Sodium Ascorbate"] }
+        { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix structure", ingredients: ["Vitamin C (Sodium Ascorbate)"] },
+        { name: "Cross-linking", role: "Copper-dependent LOX bonds fibers together", ingredients: ["Copper Bisglycinate"] }
       ],
-      keyInsight: " Without Vitamin C, the helix falls apart-this is why scurvy causes tissue collapse."
+      keyInsight: "Without Vitamin C the helix cannot stabilize; this is why scurvy causes tissue collapse."
     },
     {
       id: 'crosslinking',
@@ -174,12 +174,12 @@ export default function ConditionScienceTabs() {
       border: "border-blue-200",
       summary: "Stabilizing the nervous system to stop heart rate spikes during position changes.",
       problem: "Sympathetic overdrive (fight-or-flight) stuck 'ON' while parasympathetic signals are too weak.",
-      solution: "Inhibitory neurotransmitter support using Suntheanine® and Taurine.",
+      solution: "Inhibitory neurotransmitter support using L-Theanine, Taurine, and Magnesium Bisglycinate.",
       mechanisms: [
-        { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium"] },
-        { name: "Cardiac Rhythm", role: "Heart rate regulation and flexibility", ingredients: ["Taurine", "CoQ10"] }
+        { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium Bisglycinate"] },
+        { name: "Cardiac Rhythm", role: "Heart rate regulation and flexibility", ingredients: ["Taurine"] }
       ],
-      keyInsight: "Taurine shows ~3.6 bpm heart rate reduction in human studies-meaningful for baseline tachycardia."
+      keyInsight: "Taurine shows roughly 3.6 bpm heart rate reduction in human studies, meaningful for baseline tachycardia."
     },
     {
       id: 'mitochondrial-etc',
@@ -189,14 +189,14 @@ export default function ConditionScienceTabs() {
       color: "text-orange-700",
       bg: "bg-orange-50",
       border: "border-orange-200",
-      summary: "Fueling the energy transport chain to power the cells that regulate your heart.",
+      summary: "Fueling the electron transport chain to power the cells that regulate the heart.",
       problem: "Mitochondrial dysfunction is a hallmark of dysautonomia; without ATP, nothing works.",
-      solution: "Supporting every complex of the transport chain plus BiPQQ® for new biogenesis.",
+      solution: "Supporting the electron transport chain at multiple points: Benfotiamine and R5P at Complex I, NR for NAD+ regeneration, plus Taurine for cardiac rhythm support.",
       mechanisms: [
         { name: "Complex I", role: "The first step of electron transport", ingredients: ["Benfotiamine", "R5P"] },
-        { name: "Biogenesis", role: "Creating NEW mitochondria (PGC-1α)", ingredients: ["PQQ"] }
+        { name: "NAD+ Cycling", role: "Sirtuin pathway + mitochondrial fuel", ingredients: ["Nicotinamide Riboside", "Niacinamide"] }
       ],
-      keyInsight: "We use Ubiquinol (reduced CoQ10)-it is 8x more bioavailable than standard forms."
+      keyInsight: "Benfotiamine is the fat-soluble form of B1 with roughly 5x the bioavailability of plain thiamine."
     }
   ];
 
@@ -216,7 +216,7 @@ export default function ConditionScienceTabs() {
         { name: "PPARα", role: "Nuclear switch to suppress mediator release", ingredients: ["PEA (Micronized)"] },
         { name: "ORAI Channel", role: "Block the calcium influx that triggers flares", ingredients: ["Quercetin Phytosome"] }
       ],
-      keyInsight: "Quercetin inhibits up to 87% of histamine release-but only in bioavailable Phytosome or EMIQ forms."
+      keyInsight: "Quercetin Phytosome (Quercefit®) solves quercetin's bioavailability problem; only the phospholipid-carrier form reaches relevant plasma concentrations."
     },
     {
       id: 'histamine-clearance',
@@ -256,7 +256,7 @@ export default function ConditionScienceTabs() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-4">The Clinical Logic</p>
           <h2 className="font-serif text-5xl md:text-7xl font-bold text-[#3D3733] mb-8 leading-tight">THE HOW.</h2>
-          <p className="text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">One integrated formula. 28 clinical actives. Targeting the root pathways of the EDS/POTS/MCAS triad.</p>
+          <p className="text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">One integrated 3-SKU system. 29 clinical actives across AM capsules, PM capsules, and the Daily Powder. Targeting the root pathways of the EDS/POTS/MCAS triad.</p>
         </motion.div>
 
         {/* TABS - Holographic Style */}
@@ -369,7 +369,7 @@ export default function ConditionScienceTabs() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-20 text-center"><div className="inline-flex items-center gap-4 px-8 py-4 bg-[#3D3733] text-white rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D]" aria-hidden="true" /><span className="text-xs font-black tracking-widest uppercase">28 CLINICAL ACTIVES • 20 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
+        <div className="mt-20 text-center"><div className="inline-flex items-center gap-4 px-8 py-4 bg-[#3D3733] text-white rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D]" aria-hidden="true" /><span className="text-xs font-black tracking-widest uppercase">29 CLINICAL ACTIVES • 10 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
       </div>
     </section>
   );

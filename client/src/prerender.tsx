@@ -48,12 +48,12 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/the-how": {
     title: "The How - Condition Science | ZebraWell",
     description:
-      "How ZebraWell's AM/PM formulas address the specific biology of POTS, EDS, and MCAS - autonomic stability, mast cell modulation, and ECM preservation.",
+      "How ZebraWell's 3-component system (AM caps, PM caps, Daily Powder) addresses the specific biology of POTS, EDS, and MCAS - autonomic stability, mast cell modulation, and ECM preservation.",
   },
   "/ingredients": {
     title: "All Ingredients | ZebraWell",
     description:
-      "Every ingredient in ZebraWell's AM and PM formulas. Doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol.",
+      "Every ingredient across ZebraWell's AM capsules, PM capsules, and Daily Powder. Doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol.",
   },
   "/our-promise": {
     title: "Our Promise - Constitution | ZebraWell",
@@ -63,7 +63,7 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/preorder": {
     title: "Reserve - Coming Soon | ZebraWell",
     description:
-      "Join the reservation list to be notified when ZebraWell's clinical-grade AM/PM formulas open for preorder.",
+      "Join the reservation list to be notified when ZebraWell's 3-component system (AM caps, PM caps, Daily Powder) opens for preorder.",
   },
   "/privacy": {
     title: "Privacy Policy | ZebraWell",

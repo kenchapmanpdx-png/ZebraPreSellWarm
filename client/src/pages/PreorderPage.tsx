@@ -67,8 +67,8 @@ export default function PreorderPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Clinical-grade supplements designed specifically for EDS, POTS, and MCAS.
-              Join our reservation list to be notified when we launch.
+              A 3-component system - AM capsules, PM capsules, and a Daily Powder - designed for the EDS/POTS/MCAS triad.
+              Join the reservation list to be notified when ZebraWell opens for order.
             </p>
 
             <div className="flex items-center justify-center gap-4 mb-12">
@@ -225,14 +225,14 @@ export default function PreorderPage() {
                   resultList.innerHTML = '<li>Please select at least one symptom.</li>';
                 } else {
                   const data: Record<string, string[]> = {
-                    "Fatigue": ["CoQ10 (AM)", "ALCAR (AM/PM)", "Magnesium Malate (AM/PM)"],
-                    "Brain Fog": ["Alpha-GPC (AM/PM)", "B12 (AM)", "Taurine (AM/PM)"],
-                    "Dizziness": ["Taurine (AM/PM)", "Magnesium (AM/PM)", "Thiamine (AM)"],
-                    "Poor Circulation": ["Vitamin K2 (AM)", "Copper (PM)", "Zinc (AM/PM)"],
-                    "Joint Pain": ["PEA (AM/PM)", "Silicon (AM)", "Hyaluronic Acid (PM)"],
-                    "Gut Issues": ["Zinc Carnosine (PM)", "PEA (AM/PM)", "Magnesium (PM)"],
-                    "Anxiety": ["L-Theanine (PM)", "Taurine (PM)", "Magnesium (PM)"],
-                    "Inflammation": ["R-Lipoic Acid (PM)", "NAC (AM)", "PEA (AM/PM)"]
+                    "Fatigue": ["Nicotinamide Riboside (AM)", "Benfotiamine (AM)", "Taurine (Powder)"],
+                    "Brain Fog": ["Methylcobalamin B12 (AM)", "Methylfolate (AM)", "L-Theanine (AM)"],
+                    "Dizziness": ["Taurine (Powder)", "Magnesium Bisglycinate (Powder)", "Vitamin C - Sodium Ascorbate (Powder)"],
+                    "Poor Circulation": ["Vitamin K2 MK-7 (PM)", "Copper Bisglycinate (PM)", "Pine Bark Extract (AM)"],
+                    "Joint Pain": ["PEA (AM)", "Grape Seed Extract (AM/PM)", "Astaxanthin (AM)"],
+                    "Gut Issues": ["Zinc Carnosine (AM/PM)", "PEA (AM)", "Magnesium Bisglycinate (Powder)"],
+                    "Anxiety": ["L-Theanine (AM)", "Taurine (Powder)", "Magnesium Bisglycinate (Powder)"],
+                    "Inflammation": ["Luteolin (AM)", "Quercetin Phytosome (Powder)", "PEA (AM)"]
                   };
 
                   selected.forEach(symptom => {
@@ -275,7 +275,7 @@ export default function PreorderPage() {
                     </Badge>
                   </div>
                   <blockquote className="text-lg text-gray-700 mb-4 italic">
-                    "It's the only thing I've taken that hasn't flared me up. Total game-changer."
+                    "It's the only thing I've taken that hasn't flared me up. Finally."
                   </blockquote>
                   <cite className="text-sm font-medium text-gray-600">- Emily</cite>
                 </CardContent>

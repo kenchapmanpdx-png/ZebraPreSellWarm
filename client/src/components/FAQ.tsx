@@ -32,8 +32,8 @@ export default function FAQ() {
     },
     {
       icon: Award,
-      question: "Why do you use 'branded' ingredients for some things?",
-      answer: "Branded ingredients aren't just for show-they are about absorption. With some generic forms, your body may only absorb 5% of the dose, meaning 95% is wasted. We use branded versions that ensure you absorb nearly all of the ingredient. This higher quality allows us to use smaller, more effective doses, which keeps your daily capsule count down while providing much higher consistency and safety."
+      question: "Do you use branded ingredients or generic forms?",
+      answer: "Mostly generic. Most of the formula uses generic forms with strict COA verification, because for most ingredients the right form and dose matter more than the brand name. We do use one branded ingredient: Quercefit (quercetin phytosome), because plain quercetin has terrible absorption (around 1-2%) and the phytosome form is one of the few patented delivery systems with the human data to back it up. Everywhere else, we specify the chemical form (e.g., magnesium bisglycinate, methylcobalamin B12, sodium ascorbate) and source from manufacturers that publish full Certificates of Analysis."
     },
     {
       icon: Microscope,
@@ -52,8 +52,8 @@ export default function FAQ() {
     },
     {
       icon: Sun,
-      question: "Why is it split into a Morning and Evening system?",
-      answer: "Your body needs different support at 8 AM than it does at 8 PM. In the morning, we focus on heart rate stability and brain fog; at night, we focus on histamine clearing and tissue repair. Splitting the dose also makes it much easier for your stomach to process the nutrients if you have slow digestion or gastroparesis."
+      question: "Why is it split into a Morning, Evening, and Daily Powder system?",
+      answer: "Your body needs different support at 8 AM than it does at 8 PM. The AM capsules focus on heart rate stability, methylation, and energy; the PM capsules focus on histamine clearing and tissue repair overnight. The Daily Powder carries the gram-scale ingredients that need real dose to work (ECM-protective polyphenols and mast cell calm) and is titratable from a sprinkle, which matters if your system is reactive or if you have slow digestion or gastroparesis."
     },
     {
       icon: ShieldOff,
