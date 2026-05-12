@@ -476,11 +476,12 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Addresses the peripheral blood pooling mechanism of POTS by strengthening venous tone. Clinical data shows it and its metabolites reduce edema and fluid leakage more effectively than professional compression stockings in some populations.",
         },
         whyThisForm: {
-            form: "generic pine bark extract (Standardized Horphag Extract)",
-            rationale: "Generic 'pine bark extract' lacks the standardization and human pharmacokinetic data of the brand-name generic pine bark extract. All clinical trials showing MMP inhibition and collagen support used this specific standardization (65-75% procyanidins). BID dosing is required because its primary active metabolite (M1) peaks at 6-10 hours; two doses ensure steady-state tissue levels.",
+            form: "Generic pine bark extract standardized to 65-75% procyanidins by HPLC (COA-verified)",
+            rationale: "Pine bark activity depends on procyanidin content and the gut-microbiome-derived M1 metabolite that comes from those procyanidins. Unstandardized pine bark extracts vary dramatically in procyanidin levels and pharmacokinetic behavior. v7.8 spec is generic pine bark from multi-species sourcing (Pinus pinaster, P. massoniana, P. sylvestris) standardized to 65-75% procyanidins by HPLC, the analytical method that quantifies the active compounds specifically. Split AM/PM dosing keeps M1 levels steady because the metabolite peaks at 6-10 hours post-dose.",
             comparison: [
-                { form: "Generic Pine Bark Extract", difference: "Lacks pharmacokinetic validation; inconsistent procyanidin levels", selected: false },
-                { form: "generic pine bark extract Horphag", difference: "Standardized to 65-75% procyanidins; validated M1 metabolite levels", selected: true }
+                { form: "Unstandardized generic pine bark extract", difference: "Lacks procyanidin standardization and pharmacokinetic validation; inconsistent active content", selected: false },
+                { form: "Generic pine bark, 65-75% procyanidins by HPLC, COA-verified", difference: "v7.8 spec; analytical method matches the standardization used in the clinical trials", selected: true },
+                { form: "Branded Pycnogenol", difference: "Single-species French maritime pine; well-studied but premium-priced; v7.8 reclassified as generic-OK", selected: false }
             ]
         },
         safety: {
