@@ -55,7 +55,17 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </p>
             </div>
 
-            {/* Patient Summary - plain language opener (renders only when content is drafted) */}
+            {/* BLUF answer capsule (40-60 words). Primary AI citation surface
+                per master GEO doc §5 - leads every ingredient page. */}
+            {data.bluf && (
+                <section className="bg-[#0F2A22]/[0.04] border border-[#0F2A22]/15 rounded-2xl p-6 md:p-8 shadow-sm">
+                    <p className="text-base md:text-lg leading-relaxed text-primary font-medium">
+                        {data.bluf}
+                    </p>
+                </section>
+            )}
+
+            {/* Patient Summary - longer plain-language layer (renders only when content is drafted) */}
             {data.patientSummary && (
                 <section className="bg-white/60 border-l-4 border-accent/60 rounded-r-2xl p-8 md:p-10 shadow-sm">
                     <p className="text-lg md:text-xl leading-relaxed text-primary/90 font-serif">

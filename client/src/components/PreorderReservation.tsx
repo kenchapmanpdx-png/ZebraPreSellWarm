@@ -63,7 +63,7 @@ export default function PreorderReservation() {
     <section className="py-8 md:py-16 px-8 mt-4 md:mt-10 border-t border-[#3C3835]/10 bg-[#DED9D0]">
       <div className="max-w-4xl mx-auto">
         <div className="rounded-2xl shadow-xl border-2 border-[#262321] p-4 md:p-12 text-center bg-white">
-          <h2 className="text-3xl font-serif font-bold text-[#B36B4D] mb-3 md:mb-6">📧 Reserve Your Spot – Limited First Run!</h2>
+          <h2 className="text-3xl font-serif font-bold text-[#B36B4D] mb-3 md:mb-6">📧 Reserve Your Spot - Limited First Run!</h2>
           <p className="text-xl text-[#262321] leading-relaxed max-w-2xl mx-auto mb-4 md:mb-8">
             Be the first to know when ZebraWell is available for order.
           </p>

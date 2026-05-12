@@ -46,7 +46,11 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   // BLUF answer capsule (40-60 word target per §5 of master GEO doc).
   out.push(`# ${name}`);
   out.push("");
-  if (ing.patientSummary) {
+  // Lead with the BLUF answer capsule when present (master GEO doc §5).
+  // patientSummary is the longer plain-language layer, included below.
+  if (ing.bluf) {
+    out.push(`> ${ing.bluf}`);
+  } else if (ing.patientSummary) {
     out.push(`> ${ing.patientSummary}`);
   } else if (ing.atAGlance?.whyWeIncludeIt) {
     out.push(`> ${ing.atAGlance.whatItIs}. ${ing.atAGlance.whyWeIncludeIt}.`);
@@ -81,6 +85,16 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
     out.push("## Why we include it");
     out.push("");
     out.push(ing.atAGlance.whyWeIncludeIt);
+    out.push("");
+  }
+
+  // If a BLUF was the lead and a longer patientSummary exists, surface
+  // the patientSummary as a second-paragraph "Plain-language summary"
+  // section so the .md retains the deeper content.
+  if (ing.bluf && ing.patientSummary) {
+    out.push("## Plain-language summary");
+    out.push("");
+    out.push(ing.patientSummary);
     out.push("");
   }
 

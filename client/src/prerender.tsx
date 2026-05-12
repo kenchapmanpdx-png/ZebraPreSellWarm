@@ -96,6 +96,7 @@ function metaForRoute(url: string): RouteMeta {
     const slug = ingMatch[1];
     const item = (ingredientData as Record<string, {
       name: string;
+      bluf?: string;
       patientSummary?: string;
       atAGlance?: { whatItIs?: string; whyWeIncludeIt?: string; keyBenefits?: string[] };
     }>)[slug];
@@ -107,9 +108,13 @@ function metaForRoute(url: string): RouteMeta {
     // Build 120-160 char description from available fields. Patient summary
     // is preferred when present - it's plain-language and matches how people
     // actually search.
+    // Prefer the BLUF answer capsule when present - it's the curated 40-60 word
+    // summary that was reviewed against v7.8 RFQ for accuracy.
     const ag = item?.atAGlance;
     const parts: string[] = [];
-    if (item?.patientSummary) parts.push(item.patientSummary);
+    const itemAny = item as { bluf?: string; patientSummary?: string } | undefined;
+    if (itemAny?.bluf) parts.push(itemAny.bluf);
+    if (itemAny?.patientSummary && !itemAny.bluf) parts.push(itemAny.patientSummary);
     if (ag?.whatItIs) parts.push(ag.whatItIs);
     if (ag?.whyWeIncludeIt) parts.push(ag.whyWeIncludeIt);
     if (ag?.keyBenefits && ag.keyBenefits.length) parts.push(ag.keyBenefits.slice(0, 3).join(". "));
