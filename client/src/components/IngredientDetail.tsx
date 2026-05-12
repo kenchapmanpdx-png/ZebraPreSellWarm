@@ -49,9 +49,8 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 {data.scientificName && (
                     <p className="text-2xl text-muted-foreground italic font-light">{data.scientificName}</p>
                 )}
-                <p className="text-sm text-muted-foreground/80 leading-relaxed">
-                    Written by <span className="font-medium">Ken Chapman</span>, Founder of ZebraWell.{" "}
-                    <span className="whitespace-nowrap">Last reviewed <time dateTime="2026-05-11">May 11, 2026</time>.</span>
+                <p className="text-sm text-muted-foreground/70 leading-relaxed">
+                    Last reviewed <time dateTime="2026-05-11">May 11, 2026</time>
                 </p>
             </div>
 
@@ -422,6 +421,15 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </section>
             )}
 
+            {/* Author byline (relocated from top, master GEO doc §17 YMYL).
+                The JSON-LD `author` field on MedicalWebPage carries the same
+                attribution for AI crawlers; this visible line backs it. */}
+            <section className="pt-8 border-t border-border/40 text-sm text-muted-foreground/80">
+                <p>
+                    Written by <span className="font-medium text-foreground/85">Ken Chapman</span>, Founder of ZebraWell.
+                    Reviewed and last updated <time dateTime="2026-05-11">May 11, 2026</time>.
+                </p>
+            </section>
         </div>
     );
 }
