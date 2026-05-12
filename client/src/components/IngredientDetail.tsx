@@ -64,14 +64,12 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </section>
             )}
 
-            {/* Patient Summary - longer plain-language layer (renders only when content is drafted) */}
-            {data.patientSummary && (
-                <section className="bg-white/60 border-l-4 border-accent/60 rounded-r-2xl p-8 md:p-10 shadow-sm">
-                    <p className="text-lg md:text-xl leading-relaxed text-primary/90 font-serif">
-                        {data.patientSummary}
-                    </p>
-                </section>
-            )}
+            {/* patientSummary intentionally not rendered on the page once a
+                BLUF capsule is present. The BLUF covers the same job in 40-60
+                words; rendering both was creating a redundant pair of opening
+                cards. patientSummary still flows to the /<slug>.md companion
+                as a Plain-language summary section so AI assistants and the
+                LLM-citation surface keep the longer prose. */}
 
             {/* At a Glance */}
             <Card className="bg-secondary/20 border-border shadow-md overflow-hidden ring-1 ring-black/[0.03]">
@@ -182,9 +180,9 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </div>
                 <div className="grid gap-8 md:grid-cols-3">
                     {[
-                        { title: "MCAS", content: data.triad.mcas },
-                        { title: "hEDS", content: data.triad.heds },
-                        { title: "POTS", content: data.triad.pots }
+                        { title: "MCAS", content: data.triadPlain?.mcas || data.triad.mcas },
+                        { title: "hEDS", content: data.triadPlain?.heds || data.triad.heds },
+                        { title: "POTS", content: data.triadPlain?.pots || data.triad.pots }
                     ].map((item, idx) => (
                         <div key={idx} className="group relative p-8 bg-white rounded-3xl shadow-lg border border-border/30 transition-all hover:-translate-y-1">
                             <div className="absolute top-0 right-8 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
@@ -208,7 +206,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     </div>
 
                     <p className="text-xl leading-relaxed opacity-90 font-serif">
-                        {data.whyThisForm.rationale}
+                        {data.whyThisFormPatient || data.whyThisForm.rationale}
                     </p>
 
                     {data.whyThisForm.comparison && (
@@ -390,34 +388,6 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                             </AccordionItem>
                         ))}
                     </Accordion>
-                </section>
-            )}
-
-            {/* Plain-language triad - patient voice rewrite of the clinical triad block */}
-            {data.triadPlain && (
-                <section className="grid gap-6 md:grid-cols-3">
-                    <div className="bg-white/60 border border-border/50 rounded-2xl p-6">
-                        <h3 className="font-bold text-sm uppercase tracking-[0.2em] text-accent mb-3">For MCAS</h3>
-                        <p className="text-base leading-relaxed">{data.triadPlain.mcas}</p>
-                    </div>
-                    <div className="bg-white/60 border border-border/50 rounded-2xl p-6">
-                        <h3 className="font-bold text-sm uppercase tracking-[0.2em] text-accent mb-3">For hEDS</h3>
-                        <p className="text-base leading-relaxed">{data.triadPlain.heds}</p>
-                    </div>
-                    <div className="bg-white/60 border border-border/50 rounded-2xl p-6">
-                        <h3 className="font-bold text-sm uppercase tracking-[0.2em] text-accent mb-3">For POTS</h3>
-                        <p className="text-base leading-relaxed">{data.triadPlain.pots}</p>
-                    </div>
-                </section>
-            )}
-
-            {/* Why this form - patient-language version (when present, supplements the clinical whyThisForm) */}
-            {data.whyThisFormPatient && (
-                <section className="bg-white/50 border border-border/50 rounded-2xl p-8 md:p-10">
-                    <h2 className="text-2xl font-serif text-primary mb-4">Why This Form</h2>
-                    <p className="text-base md:text-lg leading-relaxed text-foreground/85">
-                        {data.whyThisFormPatient}
-                    </p>
                 </section>
             )}
 
