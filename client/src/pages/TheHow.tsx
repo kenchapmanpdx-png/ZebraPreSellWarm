@@ -1,6 +1,7 @@
 /* client/src/pages/TheHow.tsx */
 import Navigation from "@/components/Navigation";
 import ConditionScienceTabs from "@/components/ConditionScienceTab";
+import IngredientByCondition from "@/components/IngredientByCondition";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import SampleRequestModal from "@/components/SampleRequestModal";
@@ -36,6 +37,9 @@ export default function TheHow() {
             </div>
           </div>
         </section>
+
+        {/* Interactive condition-filter explorer (new) */}
+        <IngredientByCondition />
 
         {/* Deep-dive science tabs (existing clinical content) */}
         <ConditionScienceTabs />
