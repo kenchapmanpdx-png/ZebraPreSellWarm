@@ -80,14 +80,11 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     </h2>
                 </CardHeader>
                 <CardContent className="p-8 grid gap-8 md:grid-cols-2">
-                    <div className="space-y-3">
-                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">What It Is</h3>
-                        <p className="text-lg leading-snug">{data.atAGlance.whatItIs}</p>
-                    </div>
-                    <div className="space-y-3">
-                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Why We Include It</h3>
-                        <p className="text-lg leading-snug">{data.atAGlance.whyWeIncludeIt}</p>
-                    </div>
+                    {/* atAGlance.whatItIs and atAGlance.whyWeIncludeIt
+                        intentionally not rendered here. The BLUF above states
+                        both. Those fields stay in ingredients.ts for the
+                        prerender meta description fallback and the .md
+                        companion's Quick reference block. */}
                     <div className="space-y-3">
                         <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Daily Dose</h3>
                         <p className="text-xl font-serif font-medium text-primary">{data.atAGlance.dose}</p>
