@@ -1578,22 +1578,38 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Pantothenic acid converts to Coenzyme A (CoA), which participates in over 70 enzymatic pathways including the Krebs cycle, fatty-acid metabolism, and acetylcholine synthesis. For POTS, the most defensible mechanism is the acetylcholine pathway: acetylcholine is the parasympathetic neurotransmitter responsible for vagal tone and slowing of the heart, and CoA is required to make it. For hEDS, B5 supports fibroblast proliferation and collagen synthesis, contributing to wound healing capacity.",
         research: [
             {
-                outcome: "Adrenal Support & Energy",
-                summary: "B5 enhances adrenal function and HPA axis response through CoA synthesis.",
+                outcome: "Fibroblast Proliferation and Tissue Repair",
+                summary: "Pantothenate has direct effects on fibroblast proliferation and ECM remodeling that are relevant to the connective tissue layer of the triad. Effects are documented in animal supplementation studies and human dermal fibroblast culture.",
                 studies: [
                     {
-                        source: "Pan et al., 2018",
-                        finding: "Demonstrated enhanced adrenal steroid secretion and HPA axis function."
+                        source: "Aprahamian M et al., \"Effects of supplemental pantothenic acid on wound healing: experimental study in rabbit\"",
+                        pmid: "3976557",
+                        design: "Controlled animal study, oral pantothenate supplementation 20 mg/kg/day for 3 weeks",
+                        finding: "Pantothenate supplementation significantly increased aponeurosis strength after surgery and increased fibroblast content during the proliferation phase of healing"
+                    },
+                    {
+                        source: "Wiederholt T et al., \"Calcium pantothenate modulates gene expression in proliferating human dermal fibroblasts\"",
+                        pmid: "19397697",
+                        design: "In vitro, human dermal fibroblasts, 20 ug/mL calcium pantothenate",
+                        finding: "Strong stimulatory effect on dermal fibroblast proliferation; modulates IL-6, IL-8, HMOX-1 and Id1 expression; enhanced suppression of free radical formation"
+                    },
+                    {
+                        source: "Ebner F et al., \"Topical use of dexpanthenol in skin disorders\"",
+                        pmid: "12113650",
+                        design: "Review of placebo-controlled clinical trials and mechanistic data",
+                        finding: "Dexpanthenol activates fibroblast proliferation, accelerates re-epithelization, improves stratum corneum hydration; anti-inflammatory in UV-erythema model"
                     }
                 ]
             },
             {
-                outcome: "Connective Tissue Healing",
-                summary: "Stimulates structural cells and metabolism to improve tissue repair.",
+                outcome: "Coenzyme A and Lipid Metabolism",
+                summary: "Pantothenic acid is the precursor to coenzyme A (CoA), required for fatty acid metabolism, the TCA cycle, and steroid synthesis. Human RCT evidence in dyslipidemia confirms CoA-mediated effects on triglyceride and lipoprotein handling.",
                 studies: [
                     {
-                        source: "Kobayashi et al., 2011",
-                        finding: "Demonstrated accelerated wound healing and fibroblast proliferation with B5."
+                        source: "Chen YQ et al., \"Efficacy and tolerability of coenzyme A vs pantethine for the treatment of patients with hyperlipidemia\"",
+                        pmid: "26350816",
+                        design: "Randomized, double-blind, multicenter trial, 216 patients with moderate dyslipidemia",
+                        finding: "Coenzyme A 400 U/day reduced triglycerides 33.3% at 8 weeks; significantly more effective than pantethine 600 U/day; no adverse-event difference"
                     }
                 ]
             }
@@ -1629,9 +1645,10 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Energy and stress response benefits typically emerge within 4-6 weeks."
         },
         sources: [
-            { title: "Pantothenic acid and adrenal function", authors: "Pan et al.", year: "2018" },
-            { title: "Pantothenic acid and wound healing", authors: "Kobayashi et al.", year: "2011" },
-            { title: "Safety data for pantothenic acid", authors: "Yang et al.", year: "2014" }
+            { title: "Effects of supplemental pantothenic acid on wound healing: experimental study in rabbit", pmid: "3976557", authors: "Aprahamian M et al.", year: "1985" },
+            { title: "Calcium pantothenate modulates gene expression in proliferating human dermal fibroblasts", pmid: "19397697", authors: "Wiederholt T et al.", year: "2009" },
+            { title: "Topical use of dexpanthenol in skin disorders", pmid: "12113650", authors: "Ebner F et al.", year: "2002" },
+            { title: "Efficacy and tolerability of coenzyme A vs pantethine for the treatment of patients with hyperlipidemia: a randomized, double-blind, multicenter study", pmid: "26350816", authors: "Chen YQ et al.", year: "2015" }
         ]
     },
     "biotin": {
@@ -1664,22 +1681,38 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Biotin powers five carboxylase enzymes that generate ATP (cellular fuel). Deficiency leads to rapid mitochondrial dysfunction. We use a physiological 300 mcg dose to support metabolism while avoiding the laboratory interference (TSH, Troponin) that occurs at pharmacological (5-10mg) doses.",
         research: [
             {
-                outcome: "Mitochondrial Function",
-                summary: "Essential role in cellular energy pathways; deficiency causes severe ATP depletion.",
+                outcome: "Mitochondrial Function and Energy Metabolism",
+                summary: "Biotin is the cofactor for five carboxylases central to TCA-cycle anaplerosis, fatty-acid synthesis, and amino-acid metabolism. Biotin deficiency causes documented mitochondrial structural and functional impairment with TCA flux disruption, ETC dysfunction, and ATP depletion.",
                 studies: [
                     {
-                        source: "Madsen et al., 2015",
-                        finding: "Biotin deficiency causes severe mitochondrial dysfunction and energy failure."
+                        source: "Lohr KM et al., \"Biotin rescues mitochondrial dysfunction and neurotoxicity in a tauopathy model\"",
+                        pmid: "33318181",
+                        design: "Genome-scale forward genetic screen + biotin supplementation in tauopathy models (Drosophila, human neurons, mouse)",
+                        finding: "Tau-induced biotin deficiency disrupts carboxylase and mitochondrial function; biotin supplementation rescues mitochondrial pathology and neurodegeneration"
+                    },
+                    {
+                        source: "Ochoa-Ruiz E et al., \"Biotin deprivation impairs mitochondrial structure and function and has implications for inherited metabolic disorders\"",
+                        pmid: "26343941",
+                        design: "Rat + cell culture biotin deprivation, mechanistic study of TCA flux, electron transport chain, ATP, mitophagy",
+                        finding: "Biotin deprivation reduces TCA cycle flow via deficient pyruvate carboxylase, decreases ETC and complex IV activity, causes mitochondrial damage and biogenesis defects"
                     }
                 ]
             },
             {
-                outcome: "Safety & Bioavailability",
-                summary: "Excellent oral absorption profile and high safety margin.",
+                outcome: "Laboratory Test Interference Safety",
+                summary: "High-dose biotin supplementation can interfere with streptavidin-biotin-based immunoassays used for thyroid hormones, troponin, vitamin D, and other tests. Identified as an underrecognized patient safety risk; FDA has issued a safety communication.",
                 studies: [
                     {
-                        source: "Pharmacokinetic Review",
-                        finding: "D-biotin demonstrates 100% oral bioavailability."
+                        source: "Gifford JL et al., \"Biotin interference: Underrecognized patient safety risk in laboratory testing\"",
+                        pmid: "29760259",
+                        design: "Clinical review and case series",
+                        finding: "Biotin supplementation causes false-positive and false-negative results in streptavidin-biotin immunoassays; recommend disclosing biotin use to lab and clinical teams"
+                    },
+                    {
+                        source: "Johnson L, Li D, \"Strategies to Investigate Biotin Interference in Light of the FDA Safety Communication\"",
+                        pmid: "31639768",
+                        design: "Laboratory medicine commentary on FDA biotin safety communication",
+                        finding: "Strategies for clinical and laboratory teams to mitigate biotin interference in patient testing"
                     }
                 ]
             }
@@ -1715,9 +1748,10 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Metabolic energy benefits noticeably improve within 2-4 weeks."
         },
         sources: [
-            { title: "Biotin and mitochondrial mechanism", pmid: "25697524", authors: "Madsen et al.", year: "2015" },
-            { title: "Biotin laboratory test interference warning", authors: "FDA Safety Communication", year: "2019" },
-            { title: "Nutrient considerations in MCAS/hEDS", authors: "Kohn et al.", year: "2020" }
+            { title: "Biotin rescues mitochondrial dysfunction and neurotoxicity in a tauopathy model", pmid: "33318181", authors: "Lohr KM et al.", year: "2020" },
+            { title: "Biotin deprivation impairs mitochondrial structure and function and has implications for inherited metabolic disorders", pmid: "26343941", authors: "Ochoa-Ruiz E et al.", year: "2015" },
+            { title: "Biotin interference: Underrecognized patient safety risk in laboratory testing", pmid: "29760259", authors: "Gifford JL et al.", year: "2018" },
+            { title: "Strategies to Investigate Biotin Interference in Light of the FDA Safety Communication", pmid: "31639768", authors: "Johnson L, Li D", year: "2019" }
         ]
     },
     "boron": {
@@ -1750,22 +1784,44 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Boron activates enzymes involved in collagen synthesis and improves the utilization of Calcium, Magnesium, and Vitamin D. Crucially, it demonstrates potent anti-inflammatory properties, reducing CRP, TNF-α, and IL-6. This addresses chronic systemic inflammation and helps stabilize the inflammatory environment that triggers mast cells.",
         research: [
             {
-                outcome: "Anti-Inflammatory Effects",
-                summary: "Significant reduction in major inflammatory markers relevant to all three conditions.",
+                outcome: "Anti-Inflammatory and Antioxidant Effects",
+                summary: "Boron supplementation reduces inflammatory biomarkers including hs-CRP and TNF-alpha, and raises antioxidant enzyme activity (SOD, catalase, glutathione peroxidase) at supplement doses of 1-3 mg/day.",
                 studies: [
                     {
-                        source: "Human Intervention Study, 2011",
-                        finding: "10mg/day for one week: TNF-α ↓30%, IL-6 ↓44%, and hs-CRP ↓50%."
+                        source: "Pizzorno L, \"Nothing Boring About Boron\"",
+                        pmid: "26770156",
+                        design: "Comprehensive integrative-medicine review of boron supplementation evidence",
+                        finding: "Boron supplementation at 3 mg/day reduces hs-CRP and TNF-alpha; raises SOD, catalase and glutathione peroxidase activity; supports bone, wound healing, magnesium absorption, vitamin D handling; no adverse effects at supplement doses (UL 20 mg/day for adults)"
                     }
                 ]
             },
             {
-                outcome: "Bone & Joint Health",
-                summary: "Enhances mineral density and supports connective tissue integrity.",
+                outcome: "Connective Tissue and Cellular Mechanisms",
+                summary: "Boric acid at physiologically achievable concentrations (10 uM, the US mean intake level) activates the eIF2alpha/ATF4 and ATF6 endoplasmic-reticulum stress pathways. ATF4 and BiP/GRP78 are key regulators of osteogenesis, bone remodeling, and ECM quality control.",
                 studies: [
                     {
-                        source: "Comprehensive Safety Review",
-                        finding: "Consistent joint benefits across 594 subjects without accumulation risk."
+                        source: "Kobylewski SE et al., \"Activation of the EIF2alpha/ATF4 and ATF6 Pathways by Boric Acid at the Concentration Reported in Men at the US Mean Boron Intake\"",
+                        pmid: "27587023",
+                        design: "In vitro mechanistic study, DU-145 cells, 10 uM boric acid (physiological)",
+                        finding: "Boric acid activates eIF2alpha at 30 min, ATF4 at 1 h, ATF6 at 30 min; upregulates GRP78/BiP, calreticulin, EDEM (ECM quality control); does not induce CHOP-mediated apoptosis"
+                    }
+                ]
+            },
+            {
+                outcome: "Mineral Synergy (Magnesium, Calcium, Vitamin D)",
+                summary: "Boron enhances absorption and retention of calcium and magnesium, and beneficially influences vitamin D handling. Particularly relevant in the EDS population, where magnesium support is one of the foundational layers of the triad stack.",
+                studies: [
+                    {
+                        source: "Sheng MH et al., \"Dietary boron supplementation enhances the effects of estrogen on bone mineral balance in ovariectomized rats\"",
+                        pmid: "11508330",
+                        design: "Controlled animal study, boron + estradiol combination, bone mineral balance measurement",
+                        finding: "Combined boron + estradiol markedly improved apparent absorption of calcium, phosphorus, and magnesium; increased retention of calcium and magnesium; supports boron-mineral synergy"
+                    },
+                    {
+                        source: "Yazici Z et al., \"Effect of boron supplementation on plasma element distribution in ovariectomized rats subjected to acute swimming exercise\"",
+                        pmid: "21692406",
+                        design: "Controlled animal study, boron supplementation + exercise stress",
+                        finding: "Boron supplementation produced significant modifications in plasma trace mineral distribution; supports the systemic role of boron in mineral homeostasis under physiological stress"
                     }
                 ]
             }
@@ -1800,9 +1856,10 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Anti-inflammatory effects in 2-4 weeks; bone benefits take 8-12 weeks."
         },
         sources: [
-            { title: "Boron supplementation and inflammatory markers", year: "2011" },
-            { title: "Evidence-based supplements for EDS", year: "2014" },
-            { title: "Boron long-term safety and efficacy", year: "2020" }
+            { title: "Nothing Boring About Boron", pmid: "26770156", authors: "Pizzorno L", year: "2015" },
+            { title: "Activation of the EIF2alpha/ATF4 and ATF6 Pathways in DU-145 Cells by Boric Acid at the Concentration Reported in Men at the US Mean Boron Intake", pmid: "27587023", authors: "Kobylewski SE et al.", year: "2016" },
+            { title: "Dietary boron supplementation enhances the effects of estrogen on bone mineral balance in ovariectomized rats", pmid: "11508330", authors: "Sheng MH et al.", year: "2001" },
+            { title: "Effect of boron supplementation on plasma element distribution in ovariectomized rats subjected to acute swimming exercise", pmid: "21692406", authors: "Yazici Z et al.", year: "2011" }
         ]
     },
     "molybdenum": {
@@ -1835,23 +1892,38 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Molybdenum is the mandatory cofactor for Sulfite Oxidase. Sulfite accumulation is a recognized trigger for mast cell degranulation in MCAS, and converting sulfite to sulfate is what removes that trigger. Molybdenum is also the cofactor for Aldehyde Oxidase, which clears acetaldehyde (the metabolite that drives most wine and alcohol reactions in sensitive patients). Two distinct MCAS-relevant detox pathways from one trace mineral.",
         research: [
             {
-                outcome: "Sulfite & Chemical Sensitivity",
-                summary: "Addressing the high prevalence of sulfite-related intolerance in the MCAS population.",
+                outcome: "Sulfite Oxidase Cofactor Function",
+                summary: "Molybdenum is required for the molybdenum cofactor (Moco) that activates sulfite oxidase (SUOX), the mitochondrial enzyme that converts toxic sulfite to sulfate. Loss of SUOX function produces severe neurological disease; partial Moco availability is a plausible factor in sulfite sensitivity reported by some MCAS patients.",
                 studies: [
                     {
-                        source: "Kohn et al., 2020",
-                        pmid: "31845133",
-                        finding: "60% of MCAS patients exhibit chemical intolerance linked to sulfite oxidase dysfunction."
+                        source: "Claerhout H et al., \"Isolated sulfite oxidase deficiency\"",
+                        pmid: "28980090",
+                        design: "Literature review of 47 isolated sulfite oxidase deficiency patients",
+                        finding: "Loss of SUOX function (homozygous mutations) produces severe pharmacoresistant seizures, neurological impairment, and sulfite/S-sulfocysteine accumulation; establishes Moco-SUOX axis as critical to sulfite handling"
+                    },
+                    {
+                        source: "Kaczmarek AT et al., \"A defect in molybdenum cofactor binding causes an attenuated form of sulfite oxidase deficiency\"",
+                        pmid: "34741542",
+                        design: "Mechanistic biochemistry + clinical genetics, novel SUOX variant",
+                        finding: "Moco insertion into SUOX is the rate-limiting step in enzyme maturation; defects in Moco binding produce attenuated SUOX deficiency phenotypes"
+                    },
+                    {
+                        source: "Schwahn BC et al., \"Molybdenum cofactor deficiency review\"",
+                        pmid: "38234320",
+                        design: "Clinical review of MoCD",
+                        finding: "Comprehensive review of molybdenum cofactor biosynthesis and its role in SUOX, xanthine oxidase, and aldehyde oxidase function"
                     }
                 ]
             },
             {
-                outcome: "Detoxification Pathways",
-                summary: "Cofactor status for critical enzymes (Sulfite Oxidase, Aldehyde Oxidase).",
+                outcome: "Chemical Intolerance and the MCAS Connection",
+                summary: "Chemical intolerance, in which patients report symptoms to low-dose environmental chemicals, is over-represented in MCAS. Molybdenum is the cofactor for the three xenobiotic-handling oxidases (sulfite oxidase, aldehyde oxidase, xanthine oxidase).",
                 studies: [
                     {
-                        source: "Environmental Toxicology Reviews",
-                        finding: "Essential for processing environmental toxins and industrial metabolites."
+                        source: "Kohn JR et al., \"MCAS, chemical sensitivity, and nutrition\"",
+                        pmid: "31845133",
+                        design: "Clinical review, prevalence and mechanism analysis",
+                        finding: "MCAS patients show high rates of multiple chemical sensitivity; nutrient cofactors for xenobiotic metabolism (including molybdenum) are relevant supportive options"
                     }
                 ]
             }
@@ -1888,9 +1960,10 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Chemical sensitivity improvements typically seen within 2-4 weeks."
         },
         sources: [
-            { title: "Molybdenum and environmental detoxification", authors: "Miller et al.", year: "2022" },
-            { title: "Molybdenum cofactor deficiency review", pmid: "38234320", authors: "Schwahn et al.", year: "2024" },
-            { title: "MCAS, chemical sensitivity, and nutrition", pmid: "31845133", authors: "Kohn et al.", year: "2020" }
+            { title: "Isolated sulfite oxidase deficiency", pmid: "28980090", authors: "Claerhout H et al.", year: "2017" },
+            { title: "A defect in molybdenum cofactor binding causes an attenuated form of sulfite oxidase deficiency", pmid: "34741542", authors: "Kaczmarek AT et al.", year: "2021" },
+            { title: "Molybdenum cofactor deficiency review", pmid: "38234320", authors: "Schwahn BC et al.", year: "2024" },
+            { title: "MCAS, chemical sensitivity, and nutrition", pmid: "31845133", authors: "Kohn JR et al.", year: "2020" }
         ]
     },
     "copper-bisglycinate": {
@@ -1998,7 +2071,7 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "Are there interactions with other minerals?", a: "Manganese competes with iron and calcium at intestinal transporters, so very high doses of those minerals can reduce manganese absorption. At our 4 mg dose, this isn't typically a problem - most people's diet provides plenty of headroom. Take the AM capsule away from high-iron meals if you want maximum absorption, but it's not critical. Manganese has no documented direct interactions with the standard POTS, MCAS, or hEDS medication stacks. Clean trace mineral profile." }
         ],
         triadPlain: {
-            mcas: "Manganese's MCAS relevance is mostly indirect through two pathways. First, direct: manganese competes with calcium at the L-type calcium channels mast cells use for degranulation. A 1991 study (Hide & Beaven) showed Mn²⁺ blocks calcium influx, inhibiting mast cell activation. Second, indirect: MnSOD (mitochondrial superoxide dismutase) requires manganese as its cofactor. Mast cells are highly oxidative-stress-sensitive - chronic oxidative stress amplifies degranulation. Manganese-driven MnSOD activity reduces that background. Manganese porphyrin treatment reduced histamine content in mast cells (Tagen 2009). The combination is favorable for MCAS at nutritional doses; no evidence supports manganese as a trigger.",
+            mcas: "Manganese's MCAS relevance is mostly indirect through two pathways. First, direct: manganese competes with calcium at the L-type calcium channels mast cells use for degranulation. A 1991 study (Hide & Beaven) showed Mn2+ blocks calcium influx, inhibiting mast cell activation. Second, indirect: MnSOD (mitochondrial superoxide dismutase) requires manganese as its cofactor. Mast cells are highly oxidative-stress-sensitive - chronic oxidative stress amplifies degranulation. Manganese-driven MnSOD activity reduces that background. Manganese porphyrin treatment reduced histamine content in mast cells (Tagen 2009). The combination is favorable for MCAS at nutritional doses; no evidence supports manganese as a trigger.",
             heds: "For hEDS, manganese matters because it's a required cofactor for multiple collagen-synthesis and modification enzymes. Prolidase recycles proline from collagen breakdown - without adequate manganese, proline isn't efficiently returned to the pool for new collagen synthesis. Glycosyltransferases require manganese to attach the sugar groups that stabilize collagen structure. Critically, manganese deficiency upregulates MMP-1, MMP-9, and MMP-13 - exactly the matrix-degrading enzymes elevated in hEDS (Dong 2021). Inadequate manganese essentially turns up the volume on the degradation pathway hEDS already runs hot. Adequate manganese keeps that volume down.",
             pots: "For POTS, manganese works through the mitochondrial energy axis. MnSOD is the primary antioxidant defense inside mitochondria, and 100% of ME/CFS patients in clinical audits have measurable mitochondrial dysfunction - and ME/CFS is often comorbid with POTS. Supporting MnSOD activity supports mitochondrial resilience, which supports the cellular energy production that autonomic function depends on. There's no direct POTS clinical evidence for manganese - the case is mechanistic, working through the chronic fatigue and mitochondrial layer that runs alongside POTS in most patients. Foundational trace mineral support rather than a primary autonomic intervention."
         },
@@ -2037,9 +2110,28 @@ export const ingredients: Record<string, IngredientData> = {
                         finding: "Sustained supplementation at 15mg/90 days meaningfully increased SOD2 activity."
                     },
                     {
-                        source: "Hide & Beaven, 1991",
+                        source: "Hide M, Beaven MA, \"Suppression of IgE-mediated mast cell activation by Mn2+\"",
                         pmid: "1869551",
-                        finding: "Mn²⁺ blocks calcium influx by competition, inhibiting degranulation."
+                        design: "In vitro mast cell study",
+                        finding: "Mn2+ blocks calcium influx by competition, inhibiting IgE-mediated degranulation"
+                    }
+                ]
+            },
+            {
+                outcome: "Essential Cofactor Role and Dosing Context",
+                summary: "Manganese is the cofactor for arginase, glutamine synthetase, pyruvate carboxylase, and Mn-SOD. These metalloproteins underpin antioxidant defense (Mn-SOD), urea-cycle handling (arginase), glutamine metabolism (GS), and TCA-cycle anaplerosis (pyruvate carboxylase). Daily dietary intake is the primary determinant of status; the 2 mg supplement dose sits well below the UL (11 mg/day).",
+                studies: [
+                    {
+                        source: "Chen P, Bornhorst J, Aschner M, \"Manganese metabolism in humans\"",
+                        pmid: "29293455",
+                        design: "Comprehensive metabolic review",
+                        finding: "Manganese is essential for development, digestion, reproduction, antioxidant defense, energy production, and immune response via cofactor function for arginase, GS, pyruvate carboxylase, and Mn-SOD; deficiency is rare but supplementation is appropriate at the 2 mg dose range"
+                    },
+                    {
+                        source: "Martins AC et al., \"Manganese in the Diet: Bioaccessibility, Adequate Intake, and Neurotoxicological Effects\"",
+                        pmid: "32298096",
+                        design: "Authoritative dietary intake review",
+                        finding: "Reviews Mn occurrence in food, bioaccessibility, and adequate-intake levels by age; establishes safe-dose framework for supplementation up to the UL"
                     }
                 ]
             }
@@ -2075,9 +2167,11 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "SOD2 activity enhancement requires ~3 months for full cellular effect."
         },
         sources: [
-            { title: "Changes of manganese-dependent superoxide dismutase", pmid: "1550052", authors: "Davis & Greger", year: "1992" },
+            { title: "Changes of manganese-dependent superoxide dismutase activities and expression with sustained manganese supplementation", pmid: "1550052", authors: "Davis CD, Greger JL", year: "1992" },
             { title: "Manganese deficiency increases MMP expression", pmid: "34546491", authors: "Dong et al.", year: "2021" },
-            { title: "Mn²⁺ blocks calcium influx in mast cells", pmid: "1869551", authors: "Hide & Beaven", year: "1991" }
+            { title: "Suppression of IgE-mediated mast cell activation by Mn2+", pmid: "1869551", authors: "Hide M, Beaven MA", year: "1991" },
+            { title: "Manganese metabolism in humans", pmid: "29293455", authors: "Chen P, Bornhorst J, Aschner M", year: "2018" },
+            { title: "Manganese in the Diet: Bioaccessibility, Adequate Intake, and Neurotoxicological Effects", pmid: "32298096", authors: "Martins AC et al.", year: "2020" }
         ]
     },
     "selenium": {
@@ -2110,22 +2204,38 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Selenium is the mandatory cofactor for Selenoproteins, primarily Glutathione Peroxidase (GPx). GPx neutralizes the oxidative stress that triggers mast cell degranulation. For hEDS, it protects fibroblasts and collagen synthesis (deficiency is associated with damaged connective tissue). For POTS, it supports the deiodinase enzymes needed for T4 to T3 thyroid conversion.",
         research: [
             {
-                outcome: "Thyroid & Immune Support",
-                summary: "Significant reduction in autoantibodies for patients with concurrent thyroid issues.",
+                outcome: "Thyroid Autoantibody Reduction",
+                summary: "Selenium supplementation (200 mcg/day selenomethionine) reduces thyroid peroxidase autoantibodies (TPOAb) in patients with autoimmune thyroiditis. Relevant for the triad because thyroid autoimmunity is over-represented in hEDS, POTS, and MCAS populations.",
                 studies: [
                     {
-                        source: "Meta-analysis of RCTs",
-                        finding: "200μg daily reduces TPO antibodies by 30-40% at 3-6 months."
+                        source: "Wichman J et al., \"Selenium Supplementation Significantly Reduces Thyroid Autoantibody Levels in Patients with Chronic Autoimmune Thyroiditis: A Systematic Review and Meta-Analysis\"",
+                        pmid: "27702392",
+                        design: "Systematic review + meta-analysis of 16 controlled trials in autoimmune thyroiditis",
+                        finding: "Selenium reduced TPOAb at 3 months (WMD -271 in LT4-treated; -512 in untreated), sustained through 12 months in LT4-treated populations"
+                    },
+                    {
+                        source: "van Zuuren EJ et al., \"Selenium supplementation for Hashimoto thyroiditis\"",
+                        pmid: "23744563",
+                        design: "Cochrane systematic review, 4 RCTs, 463 participants",
+                        finding: "Selenomethionine 200 mcg/day produced significant TPO antibody reduction vs placebo; subjective wellbeing improvement reported; serious adverse events not increased"
                     }
                 ]
             },
             {
-                outcome: "Connective Tissue Protection",
-                summary: "Evidence associating deficiency with impaired connective tissue synthesis.",
+                outcome: "Antioxidant and Extracellular Oxidant Defense",
+                summary: "Selenium is the catalytic cofactor for glutathione peroxidases and selenoprotein P, the major extracellular antioxidant defense in plasma. Important for redox balance in chronic inflammatory states common to the triad.",
                 studies: [
                     {
-                        source: "Patient Observational Studies",
-                        finding: "93.3% of patients with related connective tissue disorders show selenium deficiency."
+                        source: "Rayman MP, \"Selenium and human health\"",
+                        pmid: "22381456",
+                        design: "Authoritative narrative review (Lancet)",
+                        finding: "Comprehensive review of selenium status, selenoproteins (GPx family, SelP), and human health outcomes; baseline dietary intake and supplementation"
+                    },
+                    {
+                        source: "Moschos MP, \"Selenoprotein P\"",
+                        pmid: "11215510",
+                        design: "Mechanistic review",
+                        finding: "Selenoprotein P accounts for at least 40% of total plasma selenium; protects against peroxynitrite-mediated oxidation; functions as extracellular oxidant defense"
                     }
                 ]
             }
@@ -2162,8 +2272,9 @@ export const ingredients: Record<string, IngredientData> = {
         },
         sources: [
             { title: "Selenium and human health", pmid: "22381456", authors: "Rayman MP", year: "2012" },
-            { title: "Redox-sensitive transcription and mast cell mediatiors", year: "2015" },
-            { title: "Antioxidant capacity in related connective tissue disorders", year: "2018" }
+            { title: "Selenium Supplementation Significantly Reduces Thyroid Autoantibody Levels in Patients with Chronic Autoimmune Thyroiditis: A Systematic Review and Meta-Analysis", pmid: "27702392", authors: "Wichman J et al.", year: "2016" },
+            { title: "Selenium supplementation for Hashimoto thyroiditis", pmid: "23744563", authors: "van Zuuren EJ et al.", year: "2013" },
+            { title: "Selenoprotein P", pmid: "11215510", authors: "Moschos MP", year: "2000" }
         ]
     },
     "methylfolate": {
@@ -2197,23 +2308,49 @@ export const ingredients: Record<string, IngredientData> = {
         research: [
             {
                 outcome: "hEDS-Specific Genetic Association",
-                summary: "Landmark study demonstrating exceptionally high prevalence of MTHFR variants in the hEDS population.",
+                summary: "Landmark study demonstrating exceptionally high prevalence of MTHFR variants in the hEDS population. Establishes the rationale for using the active form (L-methylfolate) rather than folic acid in this population.",
                 studies: [
                     {
-                        source: "Courseault J, et al. (2024)",
+                        source: "Courseault J et al., \"MTHFR Polymorphisms in Patients With hEDS\"",
                         pmid: "38523329",
-                        finding: "85% of hEDS patients carry MTHFR polymorphisms (double the general population prevalence)."
+                        design: "Single-center prevalence study, Tulane EDS clinic",
+                        finding: "85% of hEDS patients carry MTHFR polymorphisms (double general population prevalence)"
+                    },
+                    {
+                        source: "Courseault J et al., \"Folate-dependent hypermobility syndrome: A proposed mechanism\"",
+                        pmid: "37095957",
+                        design: "Mechanism + clinical case proposal",
+                        finding: "Low 5-MTHF levels correlate with MMP-2 hyperactivity and increased decorin cleavage in ligaments"
                     }
                 ]
             },
             {
-                outcome: "Folate-Hypermobility Mechanism",
-                summary: "Proposed medical model linking folate deficiency to ECM disorganization via MMP-2 derepression.",
+                outcome: "L-Methylfolate Bioavailability vs Folic Acid",
+                summary: "L-5-methyltetrahydrofolate (L-5-MTHF) is the only folate species normally circulating in plasma. Pharmacokinetic comparisons show L-5-MTHF is at least as bioavailable as folic acid, and avoids the unmetabolized-folic-acid concerns that affect supplementation strategies in MTHFR-variant populations.",
                 studies: [
                     {
-                        source: "Courseault J, et al. (2023)",
-                        pmid: "37095957",
-                        finding: "Low 5-MTHF levels correlate with MMP-2 hyperactivity and increased decorin cleavage in ligaments."
+                        source: "Pietrzik K et al., \"Folic acid and L-5-methyltetrahydrofolate: comparison of clinical pharmacokinetics and pharmacodynamics\"",
+                        pmid: "20608755",
+                        design: "Authoritative PK + PD comparison review",
+                        finding: "L-5-MTHF at least as effective as folic acid for raising folate status and lowering plasma homocysteine; reduced risk of masking B12-deficiency hematological signs; reduced antifolate-drug interaction"
+                    },
+                    {
+                        source: "Wright AJA et al., \"Comparison of (6S)-5-methyltetrahydrofolic acid v. folic acid as the reference folate in longer-term human dietary intervention studies\"",
+                        pmid: "19852872",
+                        design: "16-week placebo-controlled RCT in 163 healthy adults",
+                        finding: "(6S)-5-MTHF produced equivalent or modestly better plasma + erythrocyte folate response than folic acid; supports use of 5-MTHF as the reference folate in intervention trials"
+                    }
+                ]
+            },
+            {
+                outcome: "Methylated B-Vitamin Stack in POTS",
+                summary: "Clinical case evidence for methylated B-vitamin support in COMT and MTHFR-variant POTS patients refractory to standard therapy.",
+                studies: [
+                    {
+                        source: "Mittal N et al., \"Improvement of hyperadrenergic postural orthostatic tachycardia syndrome (POTS) with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism\"",
+                        pmid: "34764114",
+                        design: "BMJ Case Report, POTS patient refractory to conventional treatment",
+                        finding: "Patient with COMT Val158Met heterozygosity improved on methylated B vitamins after failing conventional POTS therapy; supports methylation as a clinical layer in autonomic phenotypes"
                     }
                 ]
             }
@@ -2250,9 +2387,11 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Neurotransmitter benefits within 2-4 weeks; ECM/collagen protection is a long-term mechanism."
         },
         sources: [
-            { title: "MTHFR Polymorphisms in Patients With hEDS", pmid: "38523329", authors: "Courseault J", year: "2024" },
-            { title: "Folate-dependent hypermobility syndrome: A proposed mechanism", pmid: "37095957", authors: "Courseault J", year: "2023" },
-            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins", pmid: "34764114", authors: "Mittal N", year: "2021" }
+            { title: "MTHFR Polymorphisms in Patients With hEDS", pmid: "38523329", authors: "Courseault J et al.", year: "2024" },
+            { title: "Folate-dependent hypermobility syndrome: A proposed mechanism", pmid: "37095957", authors: "Courseault J et al.", year: "2023" },
+            { title: "Folic acid and L-5-methyltetrahydrofolate: comparison of clinical pharmacokinetics and pharmacodynamics", pmid: "20608755", authors: "Pietrzik K et al.", year: "2010" },
+            { title: "Comparison of (6S)-5-methyltetrahydrofolic acid v. folic acid as the reference folate in longer-term human dietary intervention studies", pmid: "19852872", authors: "Wright AJA et al.", year: "2009" },
+            { title: "Improvement of hyperadrenergic postural orthostatic tachycardia syndrome (POTS) with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism", pmid: "34764114", authors: "Mittal N et al.", year: "2021" }
         ]
     },
     "vitamin-b12": {
@@ -2286,24 +2425,50 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Methylcobalamin is the primary bioactive cofactor for the methylation cycle. In POTS, it is critical for maintaining baroreceptor sensitivity and proper catecholamine release. In MCAS, it supports the production of SAMe, which is required for HNMT-the enzyme responsible for clearing 50-80% of intracellular histamine. It also protects connective tissue by reducing inflammatory homocysteine.",
         research: [
             {
-                outcome: "POTS-Specific Deficiency",
-                summary: "Clinical evidence demonstrating significantly higher rates of B12 deficiency specifically in POTS patients.",
+                outcome: "POTS-Specific Deficiency Prevalence",
+                summary: "Clinical evidence shows significantly higher rates of B12 deficiency in POTS patients than controls, establishing B12 status as part of the autonomic workup for the orthostatic intolerance population.",
                 studies: [
                     {
-                        source: "Öner T, et al. (2014)",
+                        source: "Oner T et al., \"POTS and vitamin B12 deficiency in adolescents\"",
                         pmid: "24366986",
-                        finding: "47.2% of POTS patients were B12 deficient vs. 18% of controls."
+                        design: "Cross-sectional case-control study, adolescent POTS patients vs controls",
+                        finding: "47.2% of POTS patients were B12 deficient vs 18% of age-matched controls (significantly elevated prevalence)"
                     }
                 ]
             },
             {
-                outcome: "Autonomic Neuropathy Recovery",
-                summary: "Research linking B12 status to orthostatic tolerance and catecholamine regulation.",
+                outcome: "Methylcobalamin in Peripheral Neuropathy",
+                summary: "Meta-analytic evidence supports methylcobalamin (active B12) for peripheral neuropathy. Relevant for the small-fiber neuropathy phenotype common in POTS and hEDS populations.",
                 studies: [
                     {
-                        source: "Mathur N, et al. (2021)",
+                        source: "Sawangjit R et al., \"Efficacy and Safety of Mecobalamin on Peripheral Neuropathy: A Systematic Review and Meta-Analysis of Randomized Controlled Trials\"",
+                        pmid: "32716261",
+                        design: "Systematic review + meta-analysis of 15 RCTs, 1707 peripheral neuropathy patients",
+                        finding: "Methylcobalamin (in combination) significantly improved clinical therapeutic efficacy (RR 1.32, 95% CI 1.21-1.45) and nerve conduction velocity vs active control; no serious adverse events"
+                    },
+                    {
+                        source: "Oki R et al., \"Efficacy and safety of ultrahigh-dose methylcobalamin\"",
+                        pmid: "35532908",
+                        design: "Clinical trial of ultrahigh-dose methylcobalamin",
+                        finding: "Confirms safety profile of high-dose methylcobalamin and supports therapeutic use in neurological dysfunction"
+                    }
+                ]
+            },
+            {
+                outcome: "Methylated B-Vitamin Stack in Hyperadrenergic POTS",
+                summary: "Clinical evidence supports the methylated B-vitamin stack (methylfolate + methylcobalamin) in hyperadrenergic POTS, particularly in patients with MTHFR or COMT variants.",
+                studies: [
+                    {
+                        source: "Mathur N et al., \"Improvement of hyperadrenergic POTS with methylated B vitamins\"",
                         pmid: "34782356",
-                        finding: "Marked improvement in hyperadrenergic POTS with high-dose methylated B-vitamins."
+                        design: "Clinical case + mechanistic discussion",
+                        finding: "Marked autonomic improvement in hyperadrenergic POTS with high-dose methylated B-vitamins; methylation deficit framed as contributor to catecholamine handling"
+                    },
+                    {
+                        source: "Mittal N et al., \"Improvement of hyperadrenergic POTS with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism\"",
+                        pmid: "34764114",
+                        design: "BMJ Case Report, refractory POTS",
+                        finding: "Additional case-report support for the methylated B-vitamin approach in COMT-variant hyperadrenergic POTS"
                     }
                 ]
             }
@@ -2339,9 +2504,11 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Energy and neurological benefits often appear within 2-4 weeks."
         },
         sources: [
-            { title: "POTS and vitamin B12 deficiency in adolescents", pmid: "24366986", authors: "Öner T", year: "2014" },
-            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins", pmid: "34782356", authors: "Mathur N", year: "2021" },
-            { title: "Efficacy and safety of ultrahigh-dose methylcobalamin", pmid: "35532908", authors: "Oki R", year: "2022" }
+            { title: "POTS and vitamin B12 deficiency in adolescents", pmid: "24366986", authors: "Oner T et al.", year: "2014" },
+            { title: "Efficacy and Safety of Mecobalamin on Peripheral Neuropathy: A Systematic Review and Meta-Analysis of Randomized Controlled Trials", pmid: "32716261", authors: "Sawangjit R et al.", year: "2020" },
+            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins", pmid: "34782356", authors: "Mathur N et al.", year: "2021" },
+            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism", pmid: "34764114", authors: "Mittal N et al.", year: "2021" },
+            { title: "Efficacy and safety of ultrahigh-dose methylcobalamin", pmid: "35532908", authors: "Oki R et al.", year: "2022" }
         ]
     },
     "grape-seed-extract": {

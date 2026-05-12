@@ -764,7 +764,7 @@ Condition-specific:
 References:
 - Davis & Greger. (1992). Changes of manganese-dependent superoxide dismutase. PMID: 1550052
 - Dong et al.. (2021). Manganese deficiency increases MMP expression. PMID: 34546491
-- Hide & Beaven. (1991). Mn²⁺ blocks calcium influx in mast cells. PMID: 1869551
+- Hide & Beaven. (1991). Mn2+ blocks calcium influx in mast cells. PMID: 1869551
 
 ---
 
