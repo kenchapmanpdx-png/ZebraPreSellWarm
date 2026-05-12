@@ -99,13 +99,13 @@ export const ingredients: Record<string, IngredientData> = {
             whyWeIncludeIt: "PEA is one of the most thoroughly studied mast cell stabilizers with exceptional safety, directly addressing the mast cell dysfunction central to MCAS",
             dose: "1,200 mg daily in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
             keyBenefits: [
-                "Reduces histamine release by 54% through CB2 receptor activation",
+                "Reduces histamine release by ~54% via PPAR-alpha activation in the ALIA pathway",
                 "Significant pain reduction (SMD 1.68)",
                 "No documented drug interactions with any POTS or MCAS medications",
                 "Benefits continue improving through day 60"
             ]
         },
-        howItWorks: "Imagine your mast cells as tiny alarm systems throughout your body. In MCAS, these alarms are hypersensitive-triggering at the slightest provocation and releasing histamine and other inflammatory chemicals. PEA works like a gentle dimmer switch for these overactive alarms.\n\nPEA stimulates an enzyme called DAGL, which increases your body's natural production of 2-AG-a compound that activates CB2 receptors on mast cells. When CB2 receptors are activated, mast cells become significantly less likely to degranulate (release their inflammatory contents). This is the exact opposite of triggering mast cells-PEA is a stabilizer, not an activator.\n\nBecause PEA is an endogenous compound (your body already makes it), therapeutic effects occur at physiologically achievable concentrations. This is different from many supplements that require impossibly high doses to work. PEA also activates PPAR-α receptors, reducing inflammation and providing neuroprotective benefits-particularly relevant for the brain fog many patients experience.",
+        howItWorks: "Imagine your mast cells as tiny alarm systems throughout your body. In MCAS, these alarms are hypersensitive-triggering at the slightest provocation and releasing histamine and other inflammatory chemicals. PEA works like a gentle dimmer switch for these overactive alarms.\n\nPEA's primary mast cell mechanism is PPAR-alpha activation in the ALIA pathway (Autacoid Local Inflammation Antagonism). Activating PPAR-alpha lowers the inflammatory signaling that drives mast cell hyperreactivity, reducing how readily mast cells degranulate (release their inflammatory contents). PEA also stimulates DAGL, raising your body's natural 2-AG production. 2-AG then engages CB2 receptors on mast cells as a secondary entourage mechanism. Direct CB2 activation by PEA itself has not been confirmed in receptor assays; the cannabinoid-system effects of PEA work indirectly through this 2-AG entourage.\n\nBecause PEA is an endogenous compound (your body already makes it), therapeutic effects occur at physiologically achievable concentrations. This matters: many supplements require impossibly high doses to reach activity, but PEA tops up a signaling molecule your body is already trying to use. PPAR-alpha activation also provides neuroprotective benefits particularly relevant for the brain fog many patients experience.",
         research: [
             {
                 outcome: "Mast Cell Stabilization",
@@ -316,12 +316,12 @@ export const ingredients: Record<string, IngredientData> = {
             dose: "300 mg elemental magnesium daily from 2,400 mg magnesium bisglycinate, in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
             keyBenefits: [
                 "Mast cell stabilizer: Reduces degranulation in dose-dependent manner",
-                "DAO cofactor: Supports histamine degradation enzyme",
+                "Calcium channel competition: dampens mast cell degranulation by limiting calcium influx",
                 "Correction of deficiency: 75% of POTS patients are deficient",
                 "Glycine byproduct supports sleep and collagen"
             ]
         },
-        howItWorks: "Magnesium is involved in over 300 enzymatic reactions. In the triad, three functions matter most. First, magnesium stabilizes mast cells. A 2025 study showed that magnesium reduces mast cell degranulation in a dose-dependent manner. Magnesium deficiency triggers the opposite: 4-5 fold increased histamine levels.\n\nSecond, magnesium is a cofactor for diamine oxidase (DAO)-the enzyme that breaks down histamine. Without enough magnesium, your body can't efficiently degrade released histamine.\n\nThird, magnesium modulates the autonomic nervous system. It supports parasympathetic (\"rest and digest\") tone and improves heart rate variability. The glycinate form also provides ~2g of glycine daily, which supports sleep and serves as a building block for collagen.",
+        howItWorks: "Magnesium is involved in over 300 enzymatic reactions. In the triad, three functions matter most.\n\nFirst, magnesium stabilizes mast cells by competing at calcium channels. Mast cell degranulation is triggered by calcium influx; adequate magnesium dampens that influx. A 2025 in vitro study showed magnesium reduces mast cell degranulation in a dose-dependent manner. Magnesium deficiency does the opposite: in animal data, deficient rats run 4-5 fold higher blood histamine within two weeks.\n\nSecond, magnesium modulates the autonomic nervous system. It supports parasympathetic (\"rest and digest\") tone and improves heart rate variability. For POTS specifically, this matters because autonomic instability is the core mechanism of the condition.\n\nThird, the bisglycinate form delivers ~2g of glycine daily as a useful byproduct. Glycine supports sleep architecture and is a primary amino acid in collagen synthesis. DAO itself, the enzyme that degrades histamine in the gut, is copper-dependent rather than magnesium-dependent; magnesium's contribution to histamine handling is upstream, through the calcium-channel and deficiency-correction mechanisms above.",
         research: [
             {
                 outcome: "Mast Cell Stabilization",
@@ -368,7 +368,7 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         evidenceGaps: "No randomized controlled trials exist specifically testing magnesium glycinate in hEDS, POTS, or MCAS. One hEDS study found 59/94 patients had low RBC magnesium. Despite limited trials, 61-81% of hEDS patients report taking magnesium, reflecting widespread clinical use.",
         triad: {
-            mcas: "Magnesium provides dual MCAS support: (1) direct mast cell stabilization and (2) DAO cofactor support. Critically, deficiency causes 4-5 fold increased histamine. Glycinate is preferred as it's not fermentation-derived (unlike citrate).",
+            mcas: "Magnesium stabilizes mast cells directly by competing at calcium channels and corrects the deficiency state that drives mast cell hyperreactivity (animal data shows 4-5 fold increased histamine in deficient states). Glycinate is preferred because it is not fermentation-derived (unlike citrate, which carries histamine risk in MCAS-sensitive patients).",
             heds: "Magnesium may provide collagen protection through MMP inhibition. The glycine byproduct serves as a building block for collagen. It also supports muscle relaxation, helping with spasms common in hEDS.",
             pots: "75% of POTS patients have magnesium deficiency. Magnesium improves heart rate variability and supports parasympathetic tone. Monitor blood pressure in hypotensive POTS patients as it can lower BP slightly."
         },
@@ -718,12 +718,12 @@ export const ingredients: Record<string, IngredientData> = {
             dose: "1,500 mg vitamin C daily from 1,686 mg sodium ascorbate, in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
             keyBenefits: [
                 "Addresses 21% plasma deficit found in hEDS patients",
-                "Mandatory for collagen triple-helix and crosslinking",
+                "Mandatory for prolyl and lysyl hydroxylation, which enables collagen triple-helix folding",
                 "Increases DAO activity for histamine degradation",
                 "Buffered form (Sodium Ascorbate) provides extra salt for POTS"
             ]
         },
-        howItWorks: "Vitamin C is the single most critical supplement for connective tissue because your body cannot make stable collagen without it.\n\nFor collagen (hEDS): Vitamin C is the essential cofactor for 'prolyl' and 'lysyl' hydroxylase-the enzymes that weave collagen chains into stable triple-helix structures. Without it, collagen chains can't crosslink, resulting in weak, fragile tissue. A 2024 Danish study found that hEDS patients have 21% lower plasma vitamin C levels than controls, suggesting they 'use up' Vitamin C faster due to high collagen turnover.\n\nFor POTS: Vitamin C reduces oxidative stress and improves the reactivity of blood vessels. One trial showed that high-dose Vitamin C helped normalize the way veins respond to position changes in certain POTS patients.\n\nFor mast cells (MCAS): Vitamin C degrades histamine directly and serves as a vital cofactor for Diamine Oxidase (DAO)-the primary enzyme responsible for breaking down histamine. It has been shown to increase DAO activity and reduce serum histamine levels by over 30%.",
+        howItWorks: "Vitamin C is the single most critical supplement for connective tissue because your body cannot make stable collagen without it.\n\nFor collagen (hEDS): Vitamin C is the mandatory cofactor for prolyl and lysyl hydroxylase, the enzymes that hydroxylate proline and lysine residues on newly made collagen chains. That hydroxylation is what allows the chains to fold into a stable triple helix. Without enough vitamin C, the folding step idles and the resulting tissue is weak and fragile. The downstream crosslinking step between mature collagen molecules is performed by lysyl oxidase, a copper-dependent enzyme, and is a separate process from vitamin C's role. A 2024 Danish study found that hEDS patients have 21% lower plasma vitamin C levels than controls, suggesting they 'use up' Vitamin C faster due to high collagen turnover.\n\nFor POTS: Vitamin C reduces oxidative stress and improves the reactivity of blood vessels. One trial showed that high-dose Vitamin C helped normalize the way veins respond to position changes in certain POTS patients.\n\nFor mast cells (MCAS): Vitamin C degrades histamine directly and serves as a vital cofactor for Diamine Oxidase (DAO)-the primary enzyme responsible for breaking down histamine. It has been shown to increase DAO activity and reduce serum histamine levels by over 30%.",
         research: [
             {
                 outcome: "hEDS-Specific Depletion",
@@ -1132,13 +1132,13 @@ export const ingredients: Record<string, IngredientData> = {
             whyWeIncludeIt: "Essential cofactor for DAO enzyme (histamine degradation)-critical for MCAS; supports neurotransmitter synthesis for autonomic regulation",
             dose: "50 mg daily",
             keyBenefits: [
-                "Essential for DAO function; increases histamine elimination",
+                "Supporting cofactor for amine metabolism enzymes; relevant for histamine pathway handling",
                 "Supports GABA, serotonin, and dopamine synthesis",
                 "NO neuropathy risk unlike standard pyridoxine HCl",
                 "Bypasses genetic conversion polymorphisms"
             ]
         },
-        howItWorks: "P5P is the biologically active form of B6. Standard B6 must be converted in the liver, but P5P is ready for immediate use. For MCAS, it is the mandatory cofactor for Diamine Oxidase (DAO)-the enzyme that breaks down histamine in the gut. DAO is virtually non-functional without B6.\n\nBeyond histamine, P5P is required for synthesis of GABA, serotonin, and norepinephrine-critical for autonomic regulation in POTS. It is involved in over 100 enzymatic reactions, including those that convert excitatory glutamate to calming GABA.",
+        howItWorks: "P5P is the biologically active form of B6. Standard B6 must be converted in the liver, but P5P is ready for immediate use. For MCAS, P5P is a supporting cofactor for several amine-metabolism enzymes including histidine decarboxylase. DAO itself, the enzyme that breaks down histamine in the gut, is primarily copper-dependent (with TPQ as its organic cofactor); adequate B6 status supports the broader amine pathway that DAO operates within.\n\nBeyond histamine, P5P is required for synthesis of GABA, serotonin, and norepinephrine-critical for autonomic regulation in POTS. It is involved in over 100 enzymatic reactions, including those that convert excitatory glutamate to calming GABA.",
         research: [
             {
                 outcome: "DAO Cofactor Function",
@@ -1565,7 +1565,7 @@ export const ingredients: Record<string, IngredientData> = {
         bluf: "Pantothenic acid is the precursor to Coenzyme A, the molecule that powers over 70 enzymatic reactions including cellular energy production and acetylcholine synthesis. The triad commonly involves fatigue and parasympathetic dysregulation; B5 is foundational for both pathways. ZebraWell uses 5 mg daily in the PM stack.",
         atAGlance: {
             whatItIs: "An essential B vitamin that forms the core of Coenzyme A-the molecule required for over 70 enzymatic reactions in your body",
-            whyWeIncludeIt: "Supports adrenal function and stress response, both commonly compromised in POTS; CoA is essential for cellular energy production",
+            whyWeIncludeIt: "Precursor to Coenzyme A; required for acetylcholine synthesis (the parasympathetic neurotransmitter) and cellular energy production",
             dose: "5 mg daily (PM capsules)",
             keyBenefits: [
                 "CoA synthesis enables Krebs cycle function for ATP production",
@@ -1574,7 +1574,7 @@ export const ingredients: Record<string, IngredientData> = {
                 "Enhances cortisol production and stress response capacity"
             ]
         },
-        howItWorks: "Pantothenic acid converts to Coenzyme A (CoA), which participates in over 70 enzymatic pathways including the Krebs cycle and steroid hormone synthesis. For POTS, it supports the adrenal glands in producing cortisol to regulate blood pressure and heart rate. For hEDS, it stimulates fibroblast proliferation and collagen synthesis to support wound healing.",
+        howItWorks: "Pantothenic acid converts to Coenzyme A (CoA), which participates in over 70 enzymatic pathways including the Krebs cycle, fatty-acid metabolism, and acetylcholine synthesis. For POTS, the most defensible mechanism is the acetylcholine pathway: acetylcholine is the parasympathetic neurotransmitter responsible for vagal tone and slowing of the heart, and CoA is required to make it. For hEDS, B5 supports fibroblast proliferation and collagen synthesis, contributing to wound healing capacity.",
         research: [
             {
                 outcome: "Adrenal Support & Energy",
@@ -1601,7 +1601,7 @@ export const ingredients: Record<string, IngredientData> = {
         triad: {
             mcas: "Supports energy production and reduces inflammatory stress. Conservative (5mg) dose used to minimize potential histamine release risk seen in sensitive patients.",
             heds: "Indirectly supports collagen synthesis and fibroblast activity. May improve the delayed wound healing common in connective tissue disorders.",
-            pots: "Supports HPA axis and adrenal function to help regulate stress hormones and blood pressure. Participates in acetylcholine synthesis for vagal tone support."
+            pots: "Supports acetylcholine synthesis through CoA, contributing to parasympathetic vagal tone and heart-rate regulation. Also participates in the broader energy-production pathways relevant to the fatigue layer of POTS."
         },
         whyThisForm: {
             form: "Calcium Pantothenate",
