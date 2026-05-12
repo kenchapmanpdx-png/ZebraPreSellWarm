@@ -257,45 +257,26 @@ export default function PreorderPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Pre-launch transparency block (replaces fabricated testimonials).
+          FTC endorsement guides require testimonials to be from genuine users
+          of the actual product. We're not shipping yet, so there are no
+          genuine product testimonials to share. Real reviews will replace
+          this section after the first batch ships. */}
       <section className="py-16 bg-[#DED9D0]">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-              💬 What People Are Saying
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#0F2A22] mb-6">
+              We don't have testimonials yet.
             </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-amber-200 bg-white">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Heart className="w-5 h-5 text-red-500 mr-2" aria-hidden="true" />
-                    <Badge variant="secondary" className="bg-amber-100 text-amber-800">
-                      EDS + MCAS patient
-                    </Badge>
-                  </div>
-                  <blockquote className="text-lg text-gray-700 mb-4 italic">
-                    "It's the only thing I've taken that hasn't flared me up. Finally."
-                  </blockquote>
-                  <cite className="text-sm font-medium text-gray-600">- Emily</cite>
-                </CardContent>
-              </Card>
-
-              <Card className="border-amber-200 bg-white">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Heart className="w-5 h-5 text-red-500 mr-2" aria-hidden="true" />
-                    <Badge variant="secondary" className="bg-green-100 text-green-800">
-                      POTS community member
-                    </Badge>
-                  </div>
-                  <blockquote className="text-lg text-gray-700 mb-4 italic">
-                    "This is the only supplement I've tried that didn't make me feel worse. It's part of my daily survival kit now."
-                  </blockquote>
-                  <cite className="text-sm font-medium text-gray-600">- Sarah</cite>
-                </CardContent>
-              </Card>
-            </div>
+            <p className="text-lg text-[#3D3733] leading-relaxed mb-4">
+              ZebraWell is pre-launch. The first batch hasn't shipped, so no one has used the actual product yet, which means we don't have honest reviews to show you. We'd rather say that plainly than fabricate a quote.
+            </p>
+            <p className="text-lg text-[#3D3733] leading-relaxed">
+              First-batch buyers get the first opportunity to share what worked, what didn't, and what they'd want changed. Those reviews will replace this section.
+            </p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#B36B4D] font-bold mt-8">
+              Honest before convenient.
+            </p>
           </div>
         </div>
       </section>

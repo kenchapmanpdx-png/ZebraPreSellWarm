@@ -6,7 +6,7 @@
  * system is one product; CTAs reflect that.
  */
 import { motion } from "framer-motion";
-import { Star, ArrowRight, FlaskConical, Sun, Moon, Droplets } from "lucide-react";
+import { ArrowRight, FlaskConical, Sun, Moon, Droplets } from "lucide-react";
 import { Link } from "wouter";
 
 export default function ProductGrid() {
@@ -146,15 +146,6 @@ export default function ProductGrid() {
         <p className="mt-4 text-xs text-[#8A857C] font-medium">
           One waitlist for all three components. No partial reservations.
         </p>
-      </div>
-
-      <div className="max-w-2xl mx-auto text-center mt-16">
-        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#B36B4D]/20 shadow-sm">
-          <Star className="w-4 h-4 text-[#B36B4D] fill-current" aria-hidden="true" />
-          <span className="text-xs font-bold text-[#5D5752]">
-            "Finally, a system that respects my sensitivity." - <span className="text-[#3D3733]">Verified Zebra</span>
-          </span>
-        </div>
       </div>
 
     </section>
