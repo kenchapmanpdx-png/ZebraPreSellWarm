@@ -115,7 +115,7 @@ export const ingredients: Record<string, IngredientData> = {
                         source: "Petrosino S et al., \"PEA counteracts substance P-induced mast cell activation\"",
                         pmid: "31878942",
                         design: "In vitro study using RBL-2H3 mast cells",
-                        finding: "PEA achieved 54.3% inhibition of histamine release via CB2/DAGL pathway at physiological concentrations"
+                        finding: "PEA achieved 54.3% inhibition of histamine release via the DAGL/2-AG entourage pathway at physiological concentrations"
                     },
                     {
                         source: "Sarnelli G et al., \"Impaired Duodenal PEA Release Underlies...\"",
@@ -144,19 +144,19 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "No randomized controlled trials exist specifically in hEDS, POTS, or MCAS populations. All clinical evidence is extrapolated from related conditions including chronic pain, fibromyalgia, and functional dyspepsia. However, the mechanism of action (mast cell stabilization) directly addresses MCAS pathophysiology, and the Ehlers-Danlos Society GP Toolkit supports its use for MCAS management.",
+        evidenceGaps: "No randomized controlled trials exist specifically in hEDS, POTS, or MCAS populations. All clinical evidence is extrapolated from related conditions including chronic pain, fibromyalgia, and functional dyspepsia. The mast cell stabilization mechanism directly addresses MCAS pathophysiology, and Dr. Lawrence Afrin's MCAS treatment protocols incorporate PEA based on the mechanism evidence.",
         triad: {
             mcas: "PEA is a mast cell stabilizer-it calms overactive mast cells rather than triggering them. The 54% reduction in histamine release demonstrated in cell studies translates to meaningful symptom relief for many MCAS patients. Dr. Lawrence Afrin, a leading MCAS specialist, advocates for up to 3 grams daily of PEA, particularly for neurological symptoms. Critical for MCAS patients: PEA is NOT fermentation-derived, so there's no histamine/tyramine contamination risk.",
             heds: "While PEA doesn't directly affect collagen, it benefits hEDS patients through two mechanisms: (1) significant chronic pain reduction-90% of hEDS patients have chronic pain, and (2) mast cell stabilization, since MCAS is a common comorbidity affecting 14-47% of hEDS patients. PEA shows no anti-fibrotic effects that would concern hEDS patients.",
             pots: "PEA reduces neuroinflammation through PPAR-α activation, which may address the growing recognition that neuroinflammation contributes to POTS symptoms. POTS patients show elevated inflammatory markers (GDF15, NGAL, TNFR1), and PEA's anti-inflammatory effects may help. One theoretical caution: PPAR-α activation may slightly lower blood pressure-monitor BP during initiation, especially in hypotensive POTS patients."
         },
         whyThisForm: {
-            form: "Ultramicronized PEA or Levagen+",
-            rationale: "Standard PEA powder has very poor absorption-particles measuring 300-600 micrometers show minimal bioavailability. The solution is particle size reduction. We use ultramicronized or Levagen+ formulations because the enhanced absorption translates directly to clinical outcomes.",
+            form: "Generic ultramicronized PEA (≤10 μm particle size, ≥99% purity, COA-verified)",
+            rationale: "Standard PEA powder has very poor absorption: particles measuring 300-600 micrometers show minimal bioavailability. The solution is particle size reduction. We use generic ultramicronized PEA verified by Certificate of Analysis on every lot. Branded enhanced-bioavailability forms (Levagen+, LipiSperse) deliver similar pharmacokinetics through different formulation technology, but the v7.8 spec is generic-OK at the ≤10 μm + ≥99% purity tier.",
             comparison: [
                 { form: "Standard PEA (300-600 μm)", difference: "Only 1.1 pmol/mL plasma achieved; limited clinical effect", selected: false },
-                { form: "Ultramicronized PEA (0.8-6 μm)", difference: "5× higher plasma concentration (5.4 pmol/mL); 82% absorption in 3 hours", selected: true },
-                { form: "Levagen+ (LipiSperse)", difference: "1.75× higher AUC than standard; peak levels at 45 minutes vs. 2 hours", selected: true }
+                { form: "Generic ultramicronized PEA (≤10 μm, COA-verified)", difference: "5x higher plasma concentration (5.4 pmol/mL); 82% absorption in 3 hours", selected: true },
+                { form: "Levagen+ / LipiSperse (branded alternative)", difference: "1.75x higher AUC vs standard; peak levels at 45 minutes vs 2 hours", selected: false }
             ]
         },
         safety: {
@@ -166,7 +166,7 @@ export const ingredients: Record<string, IngredientData> = {
                 avoid: ["Artificial dyes", "Sodium benzoate", "PEG (polyethylene glycol)", "Titanium dioxide coatings"],
                 safe: ["Cotton-based microcrystalline cellulose", "Silica", "Rice flour"]
             },
-            cautions: "A subset of MCAS patients (10-30%) may experience temporary \"paradoxical worsening\" during the first 1-2 weeks-this represents the endocannabinoid system adjusting before therapeutic levels are achieved. This resolves with continued use and can be minimized with slow titration. Avoid formulations containing common MCAS triggers."
+            cautions: "A subset of MCAS patients (10-30%) may experience temporary \"paradoxical worsening\" during the first 1-2 weeks; this represents the endocannabinoid system adjusting before therapeutic levels are achieved. Resolves with continued use, minimized by slow titration. PPAR-alpha activation may slightly lower blood pressure; hypotensive POTS patients should monitor BP during initiation. Avoid formulations containing common MCAS triggers."
         },
         howToStart: {
             protocol: [
@@ -204,12 +204,12 @@ export const ingredients: Record<string, IngredientData> = {
         bluf: "Luteolin is a plant flavonoid (celery, parsley, artichokes) that stabilizes mast cells more potently than prescription cromolyn sodium in lab studies and crosses the blood-brain barrier to address neuroinflammation. The EDS UK GP Toolkit lists it as an option to consider for MCAS management in hEDS patients. ZebraWell uses 140 mg daily of a micronized form in the Daily Powder.",
         atAGlance: {
             whatItIs: "A plant flavonoid (celery, parsley, artichokes) that stabilizes mast cells more potently than prescription cromolyn sodium in head-to-head lab studies",
-            whyWeIncludeIt: "Luteolin is MORE POTENT than prescription cromolyn sodium at stabilizing mast cells, with excellent safety and minimal drug interactions",
+            whyWeIncludeIt: "Luteolin stabilizes mast cells more potently than prescription cromolyn sodium in head-to-head lab studies, with excellent safety and minimal drug interactions",
             dose: "140 mg daily in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
             keyBenefits: [
                 "Superior to cromolyn sodium at inhibiting histamine, tryptase, and inflammatory cytokines",
                 "Crosses the blood-brain barrier to reduce neuroinflammation",
-                "Recommended by Ehlers-Danlos Society for MCAS management",
+                "Listed by the EDS UK GP Toolkit as an option to consider for MCAS management",
                 "Minimal drug interactions with common POTS/MCAS medications"
             ]
         },
@@ -252,20 +252,20 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. Evidence for superior mast cell stabilization comes from in vitro studies comparing luteolin to cromolyn. However, the Ehlers-Danlos Society specifically recommends luteolin for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.",
+        evidenceGaps: "No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. Evidence for superior mast cell stabilization comes from in vitro studies comparing luteolin to cromolyn. However, the EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.",
         triad: {
-            mcas: "Luteolin represents one of the most effective natural mast cell stabilizers available. Research demonstrates it inhibits not just histamine, but also tryptase, IL-6, IL-8, TNF-α, and other mediators-providing broader coverage than cromolyn which primarily targets histamine. Importantly, luteolin works prophylactically (preventively). The Ehlers-Danlos Society GP Toolkit specifically recommends luteolin for MCAS management.",
+            mcas: "Luteolin represents one of the most effective natural mast cell stabilizers available. Research demonstrates it inhibits not just histamine, but also tryptase, IL-6, IL-8, TNF-α, and other mediators-providing broader coverage than cromolyn which primarily targets histamine. Importantly, luteolin works prophylactically (preventively). The EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management.",
             heds: "Luteolin provides indirect benefit to hEDS patients through anti-inflammatory effects and MCAS management (14-47% of hEDS patients have comorbid MCAS). However, luteolin does NOT achieve sufficient plasma concentrations to inhibit MMPs-don't expect direct collagen-protective effects. Its value for hEDS is through mast cell stabilization and inflammation reduction, not ECM protection.",
             pots: "Luteolin's ability to cross the blood-brain barrier makes it uniquely valuable for POTS patients experiencing brain fog, cognitive dysfunction, and neurological symptoms. It reduces microglial activation and central neuroinflammation. Additionally, it stabilizes mast cells around autonomic nerve fibers and may support vagal tone by reducing inflammatory interference with the autonomic nervous system."
         },
         whyThisForm: {
-            form: "Micronized Luteolin",
-            rationale: "Standard luteolin powder has poor bioavailability-only 4-17% reaches your bloodstream. This creates a major therapeutic gap that must be addressed through formulation technology. We use micronized luteolin to ensure adequate absorption. Taking with fat-containing meals is essential.",
+            form: "Generic micronized luteolin (≤25 μm particle size, COA-verified)",
+            rationale: "Standard luteolin powder has poor bioavailability; only 4-17% reaches the bloodstream, so plasma levels after standard doses are often undetectable. The fix is particle size reduction. We use generic micronized luteolin verified by Certificate of Analysis (≤25 μm spec, the threshold the clinical trial forms used). Liposomal and PEA-luteolin co-ultramicronized forms are valid alternatives with their own evidence but are not what we ship; we co-formulate PEA and luteolin separately in the Daily Powder.",
             comparison: [
                 { form: "Standard luteolin powder", difference: "Only 4-17% bioavailability; most passes through unabsorbed", selected: false },
-                { form: "Micronized luteolin", difference: "Reduced particle size improves absorption; moderate enhancement", selected: true },
-                { form: "Liposomal luteolin", difference: "2-3× improved absorption; crosses blood-brain barrier more effectively", selected: true },
-                { form: "PEA-Luteolin combination (10:1 ratio)", difference: "Synergistic effects; clinical trial evidence supports this combination", selected: true }
+                { form: "Generic micronized luteolin (≤25 μm, COA-verified)", difference: "Reduced particle size improves absorption to clinical-trial range", selected: true },
+                { form: "Liposomal luteolin", difference: "Alternative carrier technology with 2-3x improved absorption; not used here", selected: false },
+                { form: "Co-ultramicronized PEA-luteolin (10:1 ratio)", difference: "Co-processed branded combo; we deliver both separately in the powder", selected: false }
             ]
         },
         safety: {
@@ -275,7 +275,7 @@ export const ingredients: Record<string, IngredientData> = {
                 avoid: ["Microcrystalline cellulose (wood-derived)", "Magnesium stearate", "FD&C dyes", "Sodium lauryl sulfate"],
                 safe: ["Sunflower lecithin", "Olive pomace oil", "Rice flour"]
             },
-            cautions: "Contraindicated in pregnancy/breastfeeding. Discontinue 2 weeks before surgery. Iron supplements may reduce absorption; space by 2+ hours. Allow 4-6 weeks for full therapeutic effect."
+            cautions: "Not recommended during pregnancy or breastfeeding pending more human safety data. Discontinue 2 weeks before surgery. Iron supplements may reduce absorption; space by 2+ hours. Allow 4-6 weeks for full therapeutic effect."
         },
         howToStart: {
             protocol: [
@@ -379,7 +379,7 @@ export const ingredients: Record<string, IngredientData> = {
                 { form: "Magnesium oxide", difference: "Only 4-15% absorption; strong laxative effect", selected: false },
                 { form: "Magnesium citrate", difference: "~30% absorption; fermentation-derived = histamine risk", selected: false },
                 { form: "Magnesium glycinate", difference: "High absorption; minimal GI upset; glycine benefits", selected: true },
-                { form: "Magnesium L-threonate", difference: "Crosses blood-brain barrier; excellent for brain fog", selected: true }
+                { form: "Magnesium L-threonate", difference: "Brain-penetrant alternative for cognitive symptoms; not what we ship", selected: false }
             ]
         },
         safety: {
@@ -512,7 +512,7 @@ export const ingredients: Record<string, IngredientData> = {
     },
     "nicotinamide-riboside": {
         id: "nicotinamide-riboside",
-        name: "NICOTINAMIDE RIBOSIDE (Niagen®)",
+        name: "Nicotinamide Riboside (NR)",
         patientSummary: "Nicotinamide Riboside (NR) is a form of vitamin B3 that your body converts to NAD+ - the molecule every cell uses for energy production and DNA repair. NAD+ levels fall with age and during chronic illness, and NR is one of the few precursors with solid human evidence for raising blood NAD+. The MCAS connection comes from a 2022 study showing NR suppresses mast cell degranulation through SIRT6 - an enzyme that depends directly on NAD+. We include NR because it raises NAD+ more reliably than its alternatives, and because the mast cell mechanism work has held up across both mouse and human cell studies.",
         whyThisFormPatient: "We use generic Nicotinamide Riboside Chloride at ≥99% purity, verified by Certificate of Analysis on every batch. NR is chemically unstable - it can degrade over time to nicotinamide, which actually inhibits the enzymes NR is supposed to support. So the single most important factor isn't the brand name, it's the analytical paperwork: identity confirmation, purity assay, and stability testing. We require full COA documentation for every batch - that's what determines whether the NR in the capsule is the molecule that does the work, not the marketing on the label.",
         faq: [
@@ -571,11 +571,11 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Supports the vascular system, though caution is needed as it can lower systolic blood pressure by ~10 mmHg. For hyperadrenergic or hypertensive POTS patients, this may be a benefit; for hypotensive patients, it requires careful monitoring of medication efficacy.",
         },
         whyThisForm: {
-            form: "Niagen® (Standardized NR)",
-            rationale: "Analysis of marketplace NR products found that 87% fail their label claims or contain counterfeits. Niagen® is the standardized form used in nearly all successful clinical trials. It is synthetic (not fermentation-derived), which is critical for MCAS patients who must avoid the histamine residues common in bio-derived B-vitamins. BID dosing is essential due to NR's short 2.7-hour half-life.",
+            form: "Generic NR chloride (≥99% purity, COA-verified)",
+            rationale: "Analysis of marketplace NR/NMN products found that ~87% fail their label claims or contain counterfeits. v7.8 spec is generic NR chloride at ≥99% purity with full Certificate of Analysis verification per batch. Most published clinical trials used the branded Niagen form, but the verifiable analytical spec (identity, purity, stability) is what makes the molecule clinically equivalent, not the brand name. NR is chemically synthesized (not fermentation-derived), critical for MCAS patients who must avoid the histamine residues common in bio-derived B-vitamins. BID dosing is essential due to NR's short 2.7-hour half-life.",
             comparison: [
-                { form: "Marketplace/Generic NR", difference: "87% failure rate on label claims; potential counterfeit risk", selected: false },
-                { form: "Niagen® (ChromaDex)", difference: "Validated in 100+ trials; synthetic and fermentation-free", selected: true }
+                { form: "Unverified marketplace NR (no COA)", difference: "Up to 87% failure rate on label claims; counterfeit risk in untested suppliers", selected: false },
+                { form: "Generic NR chloride (≥99% purity, COA-verified)", difference: "Same molecule used in trials, verified by analytical paperwork; v7.8 spec", selected: true }
             ]
         },
         safety: {
@@ -583,7 +583,7 @@ export const ingredients: Record<string, IngredientData> = {
             interactions: "Blood pressure medications: Additive hypotension (~10 mmHg). Beta-blockers/Midodrine: May have opposing or additive effects on orthostatic symptoms. Warfarin: Monitor INR periodically. Diabetes medications: May affect glucose sensitivity.",
             excipientConcerns: {
                 avoid: ["Fermentation-derived B-vitamins", "Unverified marketplace fillers"],
-                safe: ["Niagen® (pure synthetic)", "Methylation support if needed"]
+                safe: ["Generic NR chloride (≥99% purity, COA-verified, fermentation-free)", "Methylation support if needed"]
             },
             cautions: "A 10 mmHg systolic blood pressure reduction is documented. Patients on fludrocortisone or midodrine should monitor for reduced medication efficacy. Patients with methylation issues may benefit from concurrent methyl-donors (B12/Folate)."
         },
@@ -866,7 +866,7 @@ export const ingredients: Record<string, IngredientData> = {
             comparison: [
                 { form: "D3 (Cholecalciferol)", difference: "3-5x more potent than D2; preferred form", selected: true },
                 { form: "D2 (Ergocalciferol)", difference: "Inferior bioavailability; shorter half-life", selected: false },
-                { form: "Oil-based Liquid/Capsule", difference: "30-50% better absorption than powder", selected: true }
+                { form: "Oil-based liquid/capsule delivery", difference: "30-50% better absorption than dry powder; descriptive of our delivery format", selected: false }
             ]
         },
         safety: {
@@ -978,7 +978,7 @@ export const ingredients: Record<string, IngredientData> = {
             comparison: [
                 { form: "MK-7 (Menaquinone-7)", difference: "72-hour half-life; once-daily dosing; 10x better bioavailability", selected: true },
                 { form: "MK-4 (Menaquinone-4)", difference: "6-hour half-life; requires multiple doses; poor absorption", selected: false },
-                { form: "Chickpea-fermented / Synthetic", difference: "Soy-free and fermentation-worry-free options", selected: true }
+                { form: "Chickpea-fermented or synthetic MK-7 source", difference: "Soy-free, no natto-derived biogenic amines; descriptive of our sourcing", selected: false }
             ]
         },
         safety: {
@@ -1083,7 +1083,7 @@ export const ingredients: Record<string, IngredientData> = {
             comparison: [
                 { form: "Benfotiamine", difference: "5x bioavailability; fat-soluble; superior tissue penetration", selected: true },
                 { form: "Thiamine HCl/Mononitrate", difference: "Water-soluble; only 5-10% absorption", selected: false },
-                { form: "TTFD (Allithiamine)", difference: "Superior CNS penetration for brain-related symptoms", selected: true }
+                { form: "TTFD (Allithiamine)", difference: "Stronger CNS penetration than benfotiamine; alternative for severe neurological symptoms; not what we ship", selected: false }
             ]
         },
         safety: {
@@ -2273,10 +2273,10 @@ export const ingredients: Record<string, IngredientData> = {
         bluf: "Methylcobalamin is the active methyl form of vitamin B12 that supports the autonomic nervous system and histamine clearance. About 47% of adolescents with fainting disorders (a population substantially overlapping with POTS) run B12 deficient; the deficit impairs baroreflex sensitivity and histamine breakdown. The methyl form skips the conversion step cyanocobalamin requires. ZebraWell uses 1,000 mcg daily in the AM stack.",
         atAGlance: {
             whatItIs: "The bioactive form of Vitamin B12 that directly supports the autonomic nervous system and histamine clearance",
-            whyWeIncludeIt: "47% of POTS patients are B12 deficient; essential for baroreflex sensitivity and intracellular histamine degradation",
+            whyWeIncludeIt: "47% of adolescents with fainting disorders (a POTS-overlapping population) run B12 deficient; essential for baroreflex sensitivity and intracellular histamine degradation",
             dose: "1,000 mcg daily (AM capsules)",
             keyBenefits: [
-                "Addresses 47% B12 deficiency rate in POTS populations",
+                "Addresses ~47% B12 deficiency rate in adolescents with fainting disorders, a POTS-overlapping population",
                 "Crucial for sympathetic baroreceptor function and catecholamine release",
                 "Mandatory cofactor for HNMT-mediated histamine metabolism",
                 "Bioactive methyl-donor (bypasses conversion steps)"
@@ -2311,7 +2311,7 @@ export const ingredients: Record<string, IngredientData> = {
         triad: {
             mcas: "Stabilizes mast cells indirectly via HNMT (histamine clearance). Methylcobalamin is bioactive but can be 'stimulatory' for some.",
             heds: "Required for enzymes that hydroxylate collagen chains. Protects tissue from homocysteine-mediated oxidative damage.",
-            pots: "Critical for baroreceptor sensitivity. Addresses the massive 47% deficiency prevalence in this population."
+            pots: "Critical for baroreceptor sensitivity. Addresses the ~47% deficiency prevalence documented in adolescents with fainting disorders (a POTS-overlapping population)."
         },
         whyThisForm: {
             form: "Methylcobalamin",
