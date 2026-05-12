@@ -1091,7 +1091,7 @@ export const ingredients: Record<string, IngredientData> = {
             interactions: "Excellent profile; no CYP450 interactions. Space apart from bile acid sequestrants or laxatives.",
             excipientConcerns: {
                 avoid: ["Artificial fillers"],
-                safe: ["Pharmaceutical-grade (Milgamma or BenfoPure®)"]
+                safe: ["Pharmaceutical-grade synthesized benfotiamine, COA-verified"]
             },
             cautions: "Monitor blood pressure. Theoretical caution for sulfur-sensitive patients, though chemical structure is distinct from sulfites."
         },
@@ -1247,7 +1247,7 @@ export const ingredients: Record<string, IngredientData> = {
                 "60-70% reduction in mast cell degranulation",
                 "MMP inhibition with net collagen increase in fibroblasts",
                 "No blood pressure effects (safe for POTS)",
-                "6,000x more effective than Vitamin C as an antioxidant"
+                "6,000x more effective than vitamin C at quenching singlet oxygen specifically (a lipid-phase oxidant)"
             ]
         },
         howItWorks: "Astaxanthin works as chronic prophylaxis for MCAS by blocking receptor aggregation on mast cell surfaces, interrupting the signaling cascade that leads to histamine release.\n\nFor hEDS, it inhibits MMP-1, MMP-3, and MMP-13 while upregulating TIMP-1 (tissue inhibitor of metalloproteinases). In human dermal fibroblasts, this results in a net increase in collagen. It's also an extraordinary antioxidant (6,000x stronger than Vitamin C at quenching singlet oxygen), protecting cardiovascular and cell membrane health.",
@@ -2224,10 +2224,10 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Produces BH4, the cofactor for norepinephrine synthesis. Essential for maintaining vascular tone and heart rate control."
         },
         whyThisForm: {
-            form: "Quatrefolic® (Glucosamine Salt)",
+            form: "(6S)-5-MTHF glucosamine salt (Quatrefolic-equivalent spec)",
             rationale: "The most stable and bioavailable form of (6S)-5-MTHF. Bypasses metabolic blocks for 100% bioactivity. Superior stability to earlier calcium salts.",
             comparison: [
-                { form: "Quatrefolic®", difference: "Glucosamine salt; superior stability; ~50% first-pass absorption", selected: true },
+                { form: "(6S)-5-MTHF glucosamine salt", difference: "Stable salt form with ~50% first-pass absorption; the Quatrefolic-brand spec is one verified source, generic-OK", selected: true },
                 { form: "Folic Acid", difference: "Inactive synthetic form; requires MTHFR conversion (ineffective for 85% of hEDS)", selected: false }
             ]
         },
