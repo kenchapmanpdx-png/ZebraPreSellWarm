@@ -172,8 +172,8 @@ export const ingredients: Record<string, IngredientData> = {
             protocol: [
                 { step: "Week 1", dosage: "300 mg once daily", notes: "Assess tolerance; watch for paradoxical reactions" },
                 { step: "Week 2", dosage: "300 mg twice daily", notes: "If tolerated, increase to BID dosing" },
-                { step: "Weeks 3-4", dosage: "600-700 mg twice daily", notes: "Target maintenance dose" },
-                { step: "Week 5+", dosage: "1,400 mg/day (maintenance)", notes: "Full therapeutic dose; continue for minimum 60 days" }
+                { step: "Weeks 3-4", dosage: "500-600 mg twice daily", notes: "Approaching target dose" },
+                { step: "Week 5+", dosage: "1,200 mg/day (maintenance, in the Daily Powder, split AM and PM scoops)", notes: "Full therapeutic dose; continue for minimum 60 days" }
             ],
             timeline: "Some patients notice benefits within 1-3 weeks, but optimal effects occur at 60+ days. The meta-analysis showed 35% additional benefit at 60 days vs. 30 days-don't abandon treatment too early."
         },
@@ -497,7 +497,7 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Week 1", dosage: "50 mg daily", notes: "MCAS-sensitive start (AM only)" },
                 { step: "Week 2", dosage: "50 mg twice daily", notes: "Standard BID frequency" },
                 { step: "Week 3", dosage: "75 mg twice daily", notes: "Increasing to therapeutic levels" },
-                { step: "Week 4+", dosage: "100 mg twice daily", notes: "Full target dose (200 mg/day)" }
+                { step: "Week 4+", dosage: "130 mg AM + 70 mg PM", notes: "Full target dose (200 mg/day, asymmetric AM-weighted split per v7.8 RFQ)" }
             ],
             timeline: "Venous/edema benefits typically appear within 2-4 weeks. MMP inhibition and collagen gene changes require 8-12 weeks of consistent dosing for visible effects."
         },
@@ -757,15 +757,15 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Sodium Ascorbate (Buffered/Corn-Free)",
-            rationale: "Standard ascorbic acid is highly acidic and often derived from fermented corn-two major triggers for MCAS GI sensitivity. Sodium Ascorbate is pH-neutral (buffered), sparing the stomach. It also provides the additional sodium benefit helpful for POTS. We specify corn-free sources because corn residues are common mast cell triggers. We Use the 2,000 mg dose because it matches the threshold for DAO enzyme activation and addresses the 21% deficit seen in hypermobility.",
+            rationale: "Standard ascorbic acid is highly acidic and often derived from fermented corn, two major triggers for MCAS GI sensitivity. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides the additional sodium benefit helpful for POTS. We specify corn-free sources because corn residues are common mast cell triggers. We deliver 1,500 mg of vitamin C from 1,686 mg of sodium ascorbate per v7.8 RFQ, past the cofactor saturation point for collagen synthesis and well clear of the oxalate trouble zone.",
             comparison: [
                 { form: "Ascorbic Acid (Corn-derived)", difference: "Highly acidic; corn-residue histamine risk; stomach set", selected: false },
                 { form: "Sodium Ascorbate (Corn-Free)", difference: "Buffered (pH 7.0); provides extra POTS sodium; corn-free", selected: true }
             ]
         },
         safety: {
-            sideEffects: "Excellent safety. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. 2,000 mg is the standard upper limit and is well-tolerated when divided into AM/PM doses.",
-            interactions: "Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 2g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we maintain a balanced 2g dose.",
+            sideEffects: "Excellent safety. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. Our 1,500 mg daily dose sits below the 2,000 mg general upper limit and is split across the AM and PM Daily Powder scoops for tolerance.",
+            interactions: "Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 1.5g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we keep the dose at 1.5 g, well below the level where copper competition becomes a concern.",
             excipientConcerns: {
                 avoid: ["Corn-derived fillers", "Synthetic dyes", "Fermentation byproducts"],
                 safe: ["Tapioca-derived ascorbate", "Sodium-buffered powder"]
@@ -776,8 +776,7 @@ export const ingredients: Record<string, IngredientData> = {
             protocol: [
                 { step: "Week 1", dosage: "250 mg twice daily", notes: "Assess GI tolerance" },
                 { step: "Week 2", dosage: "500 mg twice daily", notes: "Standard titration" },
-                { step: "Week 3", dosage: "750 mg twice daily", notes: "Building repletion" },
-                { step: "Week 4+", dosage: "1,000 mg twice daily", notes: "Full target dose (2,000 mg/day)" }
+                { step: "Week 3+", dosage: "750 mg twice daily", notes: "Full target dose (1,500 mg/day, delivered in the Daily Powder split AM and PM)" }
             ],
             timeline: "DAO enzyme activity and histamine reduction usually improve within 2-4 weeks. Collagen synthesis support is a baseline lifestyle requirement and should be continued indefinitely."
         },
@@ -1302,16 +1301,16 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "Zero direct studies in hEDS/POTS/MCAS patients. Concerns exist regarding 'Z-isomers' which may suppress collagen synthesis (always select all-E products). TGF-β pathway concerns in liver models are not currently reflected in skin fibroblast data.",
         triad: {
             mcas: "Low histamine risk as it is algae-derived, not fermented. It acts as a stabilizer rather than a trigger. We avoid carrageenan (common in softgels) by using HPMC capsules.",
-            heds: "Provides dual protection: inhibits MMP degradation and increases collagen via TIMP-1 upregulation. Strong therapeutic ratio (1.44) for MMP inhibition at our 8mg dose.",
+            heds: "Provides dual protection: inhibits MMP degradation and increases collagen via TIMP-1 upregulation. Strong therapeutic ratio (1.44) for MMP inhibition at our 4 mg dose, sized as the minimum effective standalone with overlapping NF-kB inhibition from quercetin, luteolin, and procyanidins covering the higher-dose target.",
             pots: "Protects cardiovascular tissue via extreme antioxidant capacity without lowering blood pressure-making it one of the safest anti-inflammatories for the hyperadrenergic population."
         },
         whyThisForm: {
-            form: "AstaReal® (Natural Algae Source)",
-            rationale: "The industry standard for natural astaxanthin with consistent isomer profiles and clinical validation. Delivered in a lipid carrier for 2.4-3x better absorption.",
+            form: "Natural algal astaxanthin (Haematococcus pluvialis)",
+            rationale: "Natural algal astaxanthin with the all-E-isomer dominant profile validated in human studies, sourced generic with COA verification of isomer ratio (v7.8 RFQ reclassified branded AstaReal from mandatory to preferred). Delivered in a lipid carrier for 2.4-3x better absorption.",
             comparison: [
-                { form: "AstaReal® in Liquid/Carrier", difference: "Clinically validated all-E isomer; superior absorption", selected: true },
-                { form: "Synthetic Astaxanthin", difference: "Different isomer profile; not research-validated for hEDS", selected: false },
-                { form: "Generic Softgels", difference: "Histamine risk from carrageenan or fish oil fillers", selected: false }
+                { form: "Natural algal (H. pluvialis) with COA-verified isomer profile", difference: "All-E-isomer dominant; clinically validated absorption", selected: true },
+                { form: "Synthetic astaxanthin", difference: "Different isomer profile; not research-validated for hEDS", selected: false },
+                { form: "Generic softgels with carrageenan or fish oil carriers", difference: "Histamine risk from carrageenan or fish-oil fillers", selected: false }
             ]
         },
         safety: {
