@@ -323,7 +323,10 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </section>
             )}
 
-            {/* References (numbered, unified across sources + research studies) */}
+            {/* References (numbered, unified across sources + research studies).
+                Hidden when refList is empty so pages with PubMed verification
+                still pending don't show a 'References (0)' stub. */}
+            {refList.length > 0 && (
             <section id="references" className="pt-16 border-t border-border/50">
                 <Accordion type="single" collapsible>
                     <AccordionItem value="references" className="border-none">
@@ -368,6 +371,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     </AccordionItem>
                 </Accordion>
             </section>
+            )}
 
             {/* Patient FAQ - common questions in plain language */}
             {data.faq && data.faq.length > 0 && (
