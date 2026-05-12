@@ -254,9 +254,9 @@ export default function ConditionScienceTabs() {
 
         {/* HEADER */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-4">The Clinical Logic</p>
-          <h2 className="font-serif text-5xl md:text-7xl font-bold text-[#3D3733] mb-8 leading-tight">THE HOW.</h2>
-          <p className="text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">One integrated 3-SKU system. 29 clinical actives across AM capsules, PM capsules, and the Daily Powder. Targeting the root pathways of the EDS/POTS/MCAS triad.</p>
+          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-4">Going Deeper</p>
+          <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#3D3733] mb-6 leading-tight">Pathways We Target</h2>
+          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 29 clinical actives across AM capsules, PM capsules, and the Daily Powder, working at the root pathways of the EDS/POTS/MCAS triad.</p>
         </motion.div>
 
         {/* TABS - Holographic Style */}
