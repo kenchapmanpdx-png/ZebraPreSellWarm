@@ -2,6 +2,10 @@
 import { Link } from "wouter";
 import { ArrowUp } from "lucide-react";
 
+// Build-time stamp - shows on the visible Last Updated footer line.
+// Bump implicitly each Vercel build so freshness signal matches real content cadence.
+const LAST_UPDATED = new Date().toISOString().slice(0, 10);
+
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   const year = new Date().getFullYear();
@@ -63,6 +67,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-[#EBE8E1]/40 uppercase tracking-widest">
             © {year} ZebraWell. All rights reserved.
+            <span className="ml-3 opacity-80">
+              Last updated <time dateTime={LAST_UPDATED}>{LAST_UPDATED}</time>
+            </span>
           </p>
           <button
             type="button"

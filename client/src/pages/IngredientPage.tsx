@@ -26,7 +26,7 @@ export default function IngredientPage() {
     const currentIdx = allSlugs.findIndex((i: { slug: string }) => i.slug === id);
     const related: { slug: string; name: string }[] = [];
     if (currentIdx >= 0) {
-        for (let i = 1; related.length < 4 && i < allSlugs.length; i++) {
+        for (let i = 1; related.length < 6 && i < allSlugs.length; i++) {
             const ix = (currentIdx + i) % allSlugs.length;
             if (allSlugs[ix].slug !== id) related.push(allSlugs[ix]);
         }
@@ -48,7 +48,7 @@ export default function IngredientPage() {
                     <p className="text-sm md:text-base text-[#5D5752] mb-8 max-w-2xl">
                         Continue learning about the components of ZebraWell's AM and PM formulas.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {related.map((r) => (
                             <Link
                                 key={r.slug}
