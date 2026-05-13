@@ -75,6 +75,6 @@ Allow: /
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /showcase
+# /showcase is noindex via meta tag (single-source rule per §11)
 
 Sitemap: https://www.wellnessforzebras.com/sitemap.xml
