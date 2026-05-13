@@ -32,13 +32,16 @@ export default function ExclusionsBlock() {
             Excipients we refuse to use
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#0F2A22] leading-tight">
-            Triggers We Build Around
+            Nine triggers we built around
           </h2>
         </div>
 
-        <div className="max-w-5xl mx-auto mb-10 md:mb-12">
-          <p className="text-base md:text-lg text-[#3D3733] leading-relaxed text-center">
-            If you've reacted to a supplement, the active ingredient often isn't the problem. Excipients - the fillers, binders, and coatings packed around the active - are chosen for manufacturing convenience, not for sensitive guts. Magnesium often isn't the trigger; magnesium stearate is. Vitamin C often isn't the trigger; citric acid is. These are the most common culprits.
+        <div className="max-w-2xl mx-auto mb-10 md:mb-12">
+          <p className="text-base md:text-lg text-[#3D3733] leading-relaxed">
+            If you've reacted to a supplement and walked away convinced an active ingredient wasn't for you, there's a good chance you were <em>right</em> about the reaction and <em>wrong</em> about the cause. Excipients are the inactive ingredients packed around the active - fillers, binders, coatings, flow agents. They're chosen for manufacturing convenience, not for your gut.
+          </p>
+          <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mt-4">
+            Magnesium often isn't the trigger - magnesium stearate is. Vitamin C often isn't the trigger - citric acid is. These nine are the most common culprits.
           </p>
         </div>
 
