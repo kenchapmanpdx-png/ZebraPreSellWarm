@@ -350,6 +350,7 @@ export async function prerender(data: { url: string }) {
   // and structured data.
   const canonical = `${BASE}${url === "/" ? "/" : url}`;
   const isShowcase = url === "/showcase";
+  const isHidden = url === "/the-how"; // 2026-05-12: hidden until ready, unindexed if URL is visited directly
 
   const elements = new Set<HeadElement>();
   elements.add({ type: "link", props: { rel: "canonical", href: canonical } });
@@ -360,7 +361,7 @@ export async function prerender(data: { url: string }) {
   elements.add({ type: "meta", props: { property: "og:type", content: "website" } });
   elements.add({ type: "meta", props: { name: "twitter:title", content: meta.title } });
   elements.add({ type: "meta", props: { name: "twitter:description", content: meta.description } });
-  if (isShowcase) {
+  if (isShowcase || isHidden) {
     elements.add({ type: "meta", props: { name: "robots", content: "noindex, nofollow" } });
   } else {
     // Per-route JSON-LD: BreadcrumbList (all pages) and MedicalWebPage +

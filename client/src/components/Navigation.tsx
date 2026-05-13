@@ -24,7 +24,7 @@ export default function Navigation() {
   const navLinks = [
     { name: "Our Purpose", href: "/#story" },
     // { name: "Ingredients", href: "/ingredients" }, // hidden until launch
-    { name: "The How", href: "/the-how" },
+    // { name: "The How", href: "/the-how" }, // hidden 2026-05-12 until ready
     // { name: "Quality", href: "/#quality" }, // hidden
     // { name: "Formulas", href: "/#products" }, // hidden
     { name: "Our Promise", href: "/our-promise" },

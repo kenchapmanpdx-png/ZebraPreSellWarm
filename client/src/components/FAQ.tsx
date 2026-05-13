@@ -124,7 +124,7 @@ export default function FAQ() {
                       <span className="flex-1 pt-2">{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent forceMount className="text-[#5D5752] text-sm md:text-base leading-relaxed pb-8 pl-14 pr-4 font-medium">
+                  <AccordionContent className="text-[#5D5752] text-sm md:text-base leading-relaxed pb-8 pl-14 pr-4 font-medium">
                     <div className="bg-white/40 p-5 rounded-2xl border border-white/60 shadow-inner">
                       {faq.answer}
                     </div>

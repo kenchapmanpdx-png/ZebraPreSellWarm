@@ -16,7 +16,6 @@ Every linked page below has a token-efficient Markdown companion at the same pat
 ## Brand and product
 
 - [Home](https://www.wellnessforzebras.com/): Brand overview, AM caps, PM caps, and Daily Powder formulas, mast cell + autonomic + ECM thesis.
-- [The How](https://www.wellnessforzebras.com/the-how.md): How the AM caps, PM caps, and Daily Powder address the specific biology of POTS, EDS, and MCAS.
 - [Our Promise](https://www.wellnessforzebras.com/our-promise.md): Transparency commitment, decision logs, third-party testing posture.
 - [Preorder](https://www.wellnessforzebras.com/preorder.md): Reservation list for the AM caps, PM caps, and Daily Powder.
 

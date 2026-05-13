@@ -50,10 +50,7 @@ export default function OurPromise() {
 
           <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="px-8 py-10 rounded-[3rem] bg-white/40 border-2 border-white backdrop-blur-xl shadow-2xl">
-              <p className="text-2xl md:text-3xl text-[#262321] font-serif font-bold leading-tight mb-6 italic">
-                "Designed for the conditions standard supplements weren't built to support."
-              </p>
-              <p className="text-lg md:text-xl text-[#4A4540] font-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-[#3D3733] font-bold leading-relaxed">
                 ZebraWell exists because the EDS, POTS, and MCAS triad needs a formulation built around its constraints from the start - not a generic multivitamin retrofitted with a few flagship ingredients. This is our formal commitment to how we do that work.
               </p>
             </div>
