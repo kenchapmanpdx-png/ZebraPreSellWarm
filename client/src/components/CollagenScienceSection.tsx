@@ -385,7 +385,7 @@ export default function CollagenScienceSection() {
                         <div className={`absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-base font-bold shadow-md ${styles.badge}`}>
                           {step.number}
                         </div>
-                        <h4 className={`font-serif font-bold text-base leading-tight mb-2 ${styles.text}`}>{step.title}</h4>
+                        <div className={`font-serif font-bold text-base leading-tight mb-2 ${styles.text}`}>{step.title}</div>
                         <p className="text-[13px] text-[#5D5752] leading-snug font-semibold">{step.desc}</p>
                       </div>
                     </div>
@@ -414,7 +414,7 @@ export default function CollagenScienceSection() {
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mb-3 shadow-sm ${styles.badge}`}>
                         {step.number}
                       </div>
-                      <h3 className={`font-serif font-bold text-lg mb-2 ${styles.text}`}>{step.title}</h3>
+                      <div className={`font-serif font-bold text-lg mb-2 ${styles.text}`}>{step.title}</div>
                       <p className="text-sm text-[#5D5752] leading-relaxed font-semibold">{step.desc}</p>
                     </div>
                   );
@@ -521,7 +521,7 @@ export default function CollagenScienceSection() {
                         <div className="flex-grow">
                           <div className="flex justify-between items-start">
                             <div>
-                              <h3 className="font-bold text-[#3D3733] text-lg leading-tight">{pathway.title}</h3>
+                              <div className="font-bold text-[#3D3733] text-lg leading-tight">{pathway.title}</div>
                               <span className={`text-[10px] font-bold ${pathway.color} uppercase tracking-wider block mt-1`}>
                                 {pathway.subtitle}
                               </span>
