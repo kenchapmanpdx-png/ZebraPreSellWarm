@@ -80,7 +80,7 @@ export default function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] animate-pulse" />
             <span className="text-[10px] font-black text-[#3D3733] uppercase tracking-[0.3em]">
-              Formulated for Complex Conditions
+              Advanced Formulation for Complex Conditions
             </span>
           </motion.div>
 

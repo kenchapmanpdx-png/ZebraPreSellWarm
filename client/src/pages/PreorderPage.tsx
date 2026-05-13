@@ -68,7 +68,7 @@ export default function PreorderPage() {
 
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               A 3-component system - AM capsules, PM capsules, and a Daily Powder - designed for the EDS/POTS/MCAS triad.
-              Join the reservation list to be notified when ZebraWell opens for order.
+              Join the reservation list to experience ZebraWell as soon as it opens for order.
             </p>
 
             <div className="flex items-center justify-center gap-4 mb-12">

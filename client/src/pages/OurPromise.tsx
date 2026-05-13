@@ -51,7 +51,7 @@ export default function OurPromise() {
           <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="px-8 py-10 rounded-[3rem] bg-white/40 border-2 border-white backdrop-blur-xl shadow-2xl">
               <p className="text-xl md:text-2xl text-[#3D3733] font-bold leading-relaxed">
-                ZebraWell exists because the EDS, POTS, and MCAS triad needs a formulation built around its constraints from the start - not a generic multivitamin retrofitted with a few flagship ingredients. This is our formal commitment to how we do that work.
+                ZebraWell exists because the EDS, POTS, and MCAS triad needs a formulation built around its constraints from the start - not a generic multivitamin retrofitted with a few flagship ingredients. This page is our constitution: a formal, public commitment to how we do that work.
               </p>
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function OurPromise() {
         <div className="container mx-auto max-w-3xl">
           <div className="space-y-6 text-lg md:text-xl text-[#3D3733] leading-relaxed">
             <p>
-              Our promise is short and specific. <strong>Every clinical claim on this site is anchored to peer-reviewed published research.</strong> Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
+              Our constitution is short and specific. <strong>Every clinical claim on this site is anchored to peer-reviewed published research.</strong> Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
             </p>
             <p>
               Every excipient is disclosed and chosen for MCAS safety: HPMC capsules (no gelatin, no carrageenan), CaCO<sub>3</sub> opacifier on PM caps (no titanium dioxide), rice hull and L-leucine flow agents (no magnesium stearate). No FD&amp;C dyes, no citric acid, no fermented ingredients, no corn or soy derivatives. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
