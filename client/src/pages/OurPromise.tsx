@@ -63,7 +63,10 @@ export default function OurPromise() {
         <div className="container mx-auto max-w-3xl">
           <div className="space-y-6 text-lg md:text-xl text-[#3D3733] leading-relaxed">
             <p>
-              Our promise is short and specific. <strong>Every claim on this site is anchored to peer-reviewed human research</strong> - PMID, author, study title, dose, population. If we can't cite it, we don't claim it. Every excipient is disclosed and chosen for MCAS safety: HPMC capsules (no gelatin, no carrageenan), CaCO<sub>3</sub> opacifier on PM caps (no titanium dioxide), rice hull and L-leucine flow agents (no magnesium stearate). No FD&amp;C dyes, no citric acid, no fermented ingredients, no corn or soy derivatives. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
+              Our promise is short and specific. <strong>Every clinical claim on this site is anchored to peer-reviewed published research.</strong> Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
+            </p>
+            <p>
+              Every excipient is disclosed and chosen for MCAS safety: HPMC capsules (no gelatin, no carrageenan), CaCO<sub>3</sub> opacifier on PM caps (no titanium dioxide), rice hull and L-leucine flow agents (no magnesium stearate). No FD&amp;C dyes, no citric acid, no fermented ingredients, no corn or soy derivatives. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
             </p>
             <p>
               <strong>We don't claim to treat, cure, or prevent anything.</strong> We do claim to give you ingredients with documented mechanisms in research, at doses supported by clinical evidence, in a formulation engineered for the sensitivities of the EDS/POTS/MCAS triad.

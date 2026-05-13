@@ -10,6 +10,45 @@ interface IngredientDetailProps {
     data: IngredientData;
 }
 
+
+// Evidence-level classifier. Derives a tier label from the free-form
+// study.design string so visitors can see at a glance whether a finding
+// comes from a human trial, an observational study, or a mechanism model
+// (cell-based / animal). Honest evidence-strength signal; matches the
+// /our-promise framing.
+type EvidenceTier = "Human RCT" | "Human Meta/Review" | "Human Observational" | "Mechanism: Animal" | "Mechanism: In Vitro" | "Review";
+
+function classifyEvidence(design: string | undefined): EvidenceTier | null {
+  if (!design) return null;
+  const d = design.toLowerCase();
+  // Mechanism in vitro / cell - check first to catch "Cultured human mast cell" etc.
+  if (/in vitro|cell[- ]?free|cell culture|cell line|du-145|\bhek\b|primary cells|monocyte|biochemistry|mechanistic biochemistry|cell model|cultured (human )?(mast cell|fibroblast|cells)|fibroblasts?|enzyme kinetics/i.test(d)) return "Mechanism: In Vitro";
+  // Animal / preclinical
+  if (/\brat\b|\brats\b|\bmouse\b|\bmice\b|rabbit|drosophila|ovariectomi[sz]ed|\banimal\b|preclinical/i.test(d)) return "Mechanism: Animal";
+  // Human meta-analysis / systematic review
+  if (/meta[- ]?analysis|systematic review|pooled analysis|cochrane/i.test(d)) return "Human Meta/Review";
+  // Human RCT - controlled trials with patient/n= counts
+  if (/randomi[sz]ed|double[- ]?blind|placebo[- ]?controlled|\brct\b|clinical trial|controlled trial|safety trial|comparator trial/i.test(d)) return "Human RCT";
+  // Human observational - cohort, cross-sectional, case series, comparative, pilot, biopsy
+  if (/cross[- ]?sectional|case[- ]?control|\bcohort\b|observational|case report|case series|clinical case|prevalence|epidemiolog|biopsy|biopsies|pilot study|comparative study|retrospective|\bpk\b|pharmacokinetic/i.test(d)) return "Human Observational";
+  // Reviews / commentary / guidelines
+  if (/review|commentary|narrative|guideline|consensus|case proposal/i.test(d)) return "Review";
+  // Catch-all "Human Study" / "Human Trial" patterns
+  if (/^human (study|trial|pilot)/i.test(d.trim()) || /^human .* study/i.test(d.trim())) return "Human Observational";
+  return null;
+}
+
+function evidenceTierStyle(tier: EvidenceTier): { bg: string; text: string; ring: string } {
+  switch (tier) {
+    case "Human RCT":           return { bg: "bg-emerald-100", text: "text-emerald-900", ring: "ring-emerald-300" };
+    case "Human Meta/Review":   return { bg: "bg-emerald-100", text: "text-emerald-900", ring: "ring-emerald-300" };
+    case "Human Observational": return { bg: "bg-sky-100",     text: "text-sky-900",     ring: "ring-sky-300" };
+    case "Review":              return { bg: "bg-slate-100",   text: "text-slate-800",   ring: "ring-slate-300" };
+    case "Mechanism: Animal":   return { bg: "bg-amber-100",   text: "text-amber-900",   ring: "ring-amber-300" };
+    case "Mechanism: In Vitro": return { bg: "bg-orange-100",  text: "text-orange-900",  ring: "ring-orange-300" };
+  }
+}
+
 export default function IngredientDetail({ data }: IngredientDetailProps) {
     // Build a unified, numbered reference list. Start with sources[] (the
     // canonical bibliography we ship), then add any PMIDs from
@@ -155,9 +194,24 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                     <Badge variant="outline" className="text-[10px] uppercase tracking-tighter shrink-0">PMID: {study.pmid}</Badge>
                                                 )}
                                             </div>
-                                            {study.design && (
-                                                <p className="text-xs font-bold uppercase tracking-widest text-[#A4613A]/70">{study.design}</p>
-                                            )}
+                                            {(() => {
+                                                const tier = classifyEvidence(study.design);
+                                                return (
+                                                    <div className="flex items-center gap-3 flex-wrap">
+                                                        {tier && (() => {
+                                                            const s = evidenceTierStyle(tier);
+                                                            return (
+                                                                <span className={`inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider ring-1 ring-inset ${s.bg} ${s.text} ${s.ring}`}>
+                                                                    {tier}
+                                                                </span>
+                                                            );
+                                                        })()}
+                                                        {study.design && (
+                                                            <p className="text-xs font-bold uppercase tracking-widest text-[#A4613A]/70">{study.design}</p>
+                                                        )}
+                                                    </div>
+                                                );
+                                            })()}
                                             <p className="text-muted-foreground leading-relaxed">{study.finding}</p>
                                         </div>
                                     ))}
