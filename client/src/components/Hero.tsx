@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
+import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 3400);
+    }, 4000);
     return () => clearInterval(interval);
   }, [words.length]);
 
@@ -64,6 +64,7 @@ export default function Hero() {
   const benefits = [
     "Founder pricing locked in for first batch",
     "First access when bottles ship",
+    "No spam, ever - one email at launch",
   ];
 
   return (
@@ -80,7 +81,7 @@ export default function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] animate-pulse" />
             <span className="text-[10px] font-black text-[#3D3733] uppercase tracking-[0.3em]">
-              Advanced Formulation for Complex Conditions
+              Formulated for Complex Conditions
             </span>
           </motion.div>
 
@@ -116,6 +117,10 @@ export default function Hero() {
                   Pre-launch waitlist open
                 </span>
               </div>
+
+              <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
+                <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
+              </p>
 
               <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
                 Wellness for the <br />
@@ -204,7 +209,7 @@ export default function Hero() {
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
                 <img
                   src={heroProductImage}
-                  alt="ZebraWell AM capsules, PM capsules, and Daily Powder clinical-grade supplement system for EDS, POTS, and MCAS"
+                  alt="ZebraWell AM and PM clinical-grade supplement formulas for EDS, POTS, and MCAS"
                   width={1536}
                   height={1024}
                   loading="eager"
@@ -219,6 +224,53 @@ export default function Hero() {
 
         </div>
 
+        {/* --- TRUST BAR --- */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="py-7 px-8 md:px-12 bg-white/50 backdrop-blur-md rounded-3xl border border-white/60 shadow-md mx-auto max-w-5xl"
+        >
+          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] text-center mb-5">
+            Manufacturing Standards
+          </p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
+
+            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-start">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />
+              </div>
+              <div className="text-left">
+                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">FDA Registered</span>
+                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Facility</span>
+              </div>
+            </div>
+
+            <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
+
+            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />
+              </div>
+              <div className="text-left">
+                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">NSF GMP</span>
+                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Certified</span>
+              </div>
+            </div>
+
+            <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
+
+            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-end">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />
+              </div>
+              <div className="text-left">
+                <span className="block text-xs font-black text-[#3D3733] uppercase tracking-widest leading-tight">Third-Party</span>
+                <span className="block text-[10px] font-semibold text-[#8A857C] uppercase tracking-wider mt-0.5">Lab Tested</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
