@@ -11,6 +11,8 @@ import ExclusionsBlock from '@/components/ExclusionsBlock';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
+import TheSystem from '@/components/TheSystem';
+import BrandByNumbers from '@/components/BrandByNumbers';
 
 // Direct imports - these were lazy-loaded but the prerender engine ships
 // the Suspense fallback (empty div) for them, so 8 FAQs, the Collagen
@@ -65,6 +67,9 @@ export default function Home() {
         {/* ... (Hero) */}
         <Hero />
 
+        {/* 1.25. THE SYSTEM - Horizontal scroll walkthrough of AM/Powder/PM/Together */}
+        <TheSystem />
+
         {/* 1.5. WHY ZEBRA - Brand Mascot Block */}
         <div className="px-6 py-12 bg-[#EBE8E1] relative z-20 -mt-12 md:-mt-20 mb-8">
           <WhyZebraMascot />
@@ -79,6 +84,9 @@ export default function Home() {
 
         {/* 3.5. EXCLUSIONS - what's NOT in the formula. */}
         <ExclusionsBlock />
+
+        {/* 3.75. BY THE NUMBERS - Burst-stat block transitioning from exclusions to science */}
+        <BrandByNumbers />
 
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
         <CollagenScienceSection />

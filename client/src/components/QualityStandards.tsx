@@ -1,6 +1,7 @@
 /* client/src/components/QualityStandards.tsx */
 import { motion } from "framer-motion";
 import { ShieldCheck, Microscope, Factory } from "lucide-react";
+import TiltCard from "@/components/TiltCard";
 
 export default function QualityStandards() {
   const standards = [
@@ -78,19 +79,23 @@ export default function QualityStandards() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white p-6 rounded-[1.5rem] border border-[#3D3733]/5 shadow-sm hover:shadow-md transition-all duration-500 group flex items-start gap-5"
             >
-              <div className={`w-12 h-12 ${item.bgColor} ${item.borderColor} border rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm`}>
-                {item.icon}
-              </div>
-              <div>
-                <h3 className="text-lg font-serif font-bold text-[#3D3733] mb-2 leading-tight">
-                  {item.title}
-                </h3>
-                <p className="text-[#8A857C] text-xs leading-relaxed font-medium">
-                  {item.desc}
-                </p>
-              </div>
+              <TiltCard
+                intensity={6}
+                className="bg-white p-6 rounded-[1.5rem] border border-[#3D3733]/5 shadow-sm hover:shadow-md transition-all duration-500 group flex items-start gap-5 relative"
+              >
+                <div className={`w-12 h-12 ${item.bgColor} ${item.borderColor} border rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="text-lg font-serif font-bold text-[#3D3733] mb-2 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#8A857C] text-xs leading-relaxed font-medium">
+                    {item.desc}
+                  </p>
+                </div>
+              </TiltCard>
             </motion.div>
           ))}
         </div>

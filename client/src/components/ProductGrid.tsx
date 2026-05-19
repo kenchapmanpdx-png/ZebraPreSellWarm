@@ -8,6 +8,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, FlaskConical, Sun, Moon, Droplets } from "lucide-react";
 import { Link } from "wouter";
+import TiltCard from "@/components/TiltCard";
 
 export default function ProductGrid() {
   const products = [
@@ -93,7 +94,10 @@ export default function ProductGrid() {
             viewport={{ once: true }}
             className="group relative flex flex-col h-full"
           >
-            <div className={`h-full rounded-[2.5rem] bg-gradient-to-b ${product.gradient} backdrop-blur-xl border border-white shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden flex flex-col p-2`}>
+            <TiltCard
+              intensity={5}
+              className={`h-full rounded-[2.5rem] bg-gradient-to-b ${product.gradient} backdrop-blur-xl border border-white shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden flex flex-col p-2 relative`}
+            >
 
               <div className="relative h-64 w-full bg-white/40 rounded-[2rem] flex items-center justify-center overflow-hidden group-hover:scale-[0.98] transition-transform duration-500">
                 <div className="absolute inset-0 bg-[#F2F0EA]/30" />
@@ -129,7 +133,7 @@ export default function ProductGrid() {
                   ))}
                 </div>
               </div>
-            </div>
+            </TiltCard>
           </motion.div>
         ))}
       </div>
