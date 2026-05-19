@@ -1,7 +1,7 @@
 /* client/src/components/Hero.tsx */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ShieldCheck, Factory, Microscope, ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
 
@@ -10,6 +10,8 @@ export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const magneticRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   const words = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
 
@@ -19,6 +21,33 @@ export default function Hero() {
     }, 4000);
     return () => clearInterval(interval);
   }, [words.length]);
+
+  // Magnetic gradient: copper light follows cursor across the hero
+  // Respects prefers-reduced-motion (no listener attached when set)
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+    const el = magneticRef.current;
+    if (!el) return;
+    let ticking = false;
+    let nextX = 50;
+    let nextY = 50;
+    const handleMove = (e: MouseEvent) => {
+      nextX = (e.clientX / window.innerWidth) * 100;
+      nextY = (e.clientY / window.innerHeight) * 100;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (el) {
+            el.style.setProperty('--mx', nextX + '%');
+            el.style.setProperty('--my', nextY + '%');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('mousemove', handleMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMove);
+  }, [prefersReducedMotion]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,8 +96,47 @@ export default function Hero() {
     "No spam, ever - one email at launch",
   ];
 
+  // Line-rise variants for the headline
+  const headlineContainer = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.18, delayChildren: 0.1 } },
+  };
+  const lineRise = {
+    hidden: { y: '110%' },
+    visible: { y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const } },
+  };
+  const lineRiseSweep = {
+    hidden: { y: '110%', backgroundPosition: '0% 50%' },
+    visible: {
+      y: 0,
+      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+      transition: {
+        y: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const },
+        backgroundPosition: { duration: 8, repeat: Infinity, ease: 'easeInOut' as const, delay: 1 },
+      },
+    },
+  };
+
   return (
     <section className="relative pt-24 md:pt-32 pb-16 px-6 flex flex-col justify-center min-h-screen overflow-hidden bg-[#EBE8E1]">
+      {/* MAGNETIC GRADIENT LAYER (behind content). Cursor-following copper
+          light + soft sage counter-glow on the opposite side. Blurred so it
+          reads as ambient light, not as a defined shape. Pointer-events
+          disabled so it never intercepts clicks. */}
+      <div
+        ref={magneticRef}
+        aria-hidden="true"
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(60vw 50vw at var(--mx, 50%) var(--my, 50%), rgba(179, 107, 77, 0.28) 0%, transparent 55%),
+            radial-gradient(50vw 40vw at calc(100% - var(--mx, 50%)) calc(100% - var(--my, 50%)), rgba(164, 180, 148, 0.22) 0%, transparent 55%)
+          `,
+          filter: 'blur(40px)',
+          transition: 'background 0.35s ease-out',
+        }}
+      />
+
       <div className="max-w-7xl mx-auto relative z-10 w-full">
 
         {/* --- EDITORIAL HEADER --- */}
@@ -85,15 +153,36 @@ export default function Hero() {
             </span>
           </motion.div>
 
+          {/* HEADLINE: line-by-line rise. Italic accent line gets a copper
+              gradient sweep that loops gently after the initial rise. */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "circOut" }}
+            variants={headlineContainer}
+            initial="hidden"
+            animate="visible"
             className="font-serif font-bold tracking-tight text-[#3D3733]"
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
           >
-            <span className="block mb-2">Advanced Autonomic, Mast Cell</span>
-            <span className="block text-[#B36B4D] italic font-normal">& Connective Tissue Support</span>
+            <span className="block overflow-hidden pb-1 mb-1">
+              <motion.span variants={lineRise} className="block">
+                Advanced Autonomic, Mast Cell
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden pb-2">
+              <motion.span
+                variants={lineRiseSweep}
+                className="block italic font-normal"
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, #8E5433 0%, #D88660 25%, #B36B4D 50%, #D88660 75%, #8E5433 100%)',
+                  backgroundSize: '200% 100%',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                &amp; Connective Tissue Support
+              </motion.span>
+            </span>
           </motion.h1>
         </div>
 
