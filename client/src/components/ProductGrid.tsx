@@ -95,7 +95,7 @@ export default function ProductGrid() {
             className="group relative flex flex-col h-full"
           >
             <TiltCard
-              intensity={5}
+              intensity={12}
               className={`h-full rounded-[2.5rem] bg-gradient-to-b ${product.gradient} backdrop-blur-xl border border-white shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden flex flex-col p-2 relative`}
             >
 

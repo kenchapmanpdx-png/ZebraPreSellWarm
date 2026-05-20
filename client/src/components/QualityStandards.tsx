@@ -81,7 +81,7 @@ export default function QualityStandards() {
               transition={{ delay: idx * 0.1 }}
             >
               <TiltCard
-                intensity={6}
+                intensity={12}
                 className="bg-white p-6 rounded-[1.5rem] border border-[#3D3733]/5 shadow-sm hover:shadow-md transition-all duration-500 group flex items-start gap-5 relative"
               >
                 <div className={`w-12 h-12 ${item.bgColor} ${item.borderColor} border rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm`}>
