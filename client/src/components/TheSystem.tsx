@@ -1,19 +1,24 @@
 /* client/src/components/TheSystem.tsx
  *
- * Horizontal scroll panel that walks through the four parts of the
- * ZebraWell system: Morning, Daily Powder, Evening, Together. Vertical
- * scroll inside this section is mapped to horizontal translation of
- * the card track. When the user reaches the end of the track, normal
- * vertical scrolling resumes.
+ * Horizontal scroll panel walking through the four parts of the
+ * ZebraWell system: Morning, Daily Powder, Evening, Together.
+ *
+ * Powered by GSAP ScrollTrigger: the section pins and vertical scroll
+ * is scrubbed 1:1 into horizontal translation of the card track.
  *
  * Accessibility:
- *   - prefers-reduced-motion: track stacks vertically, no transform.
- *   - Sticky pin releases on its own (no scroll-jacking).
- *   - Scroll input is always 1:1 (no momentum hijacking).
+ *   - prefers-reduced-motion: renders a static vertical stack, no pin.
+ *   - Scroll is scrubbed (1:1 with input), never hijacked.
  */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { useReducedMotion } from 'framer-motion';
 import { Sun, Droplets, Moon, Sparkles, ArrowRight } from 'lucide-react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const cards = [
   {
@@ -87,50 +92,53 @@ const cards = [
 ];
 
 export default function TheSystem() {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
-  const [, setTick] = useState(0); // force re-render for indicator if needed
 
-  useEffect(() => {
-    if (prefersReducedMotion) return;
-    const wrap = wrapperRef.current;
-    const track = trackRef.current;
-    const prog = progressRef.current;
-    if (!wrap || !track || !prog) return;
+  useGSAP(
+    () => {
+      if (prefersReducedMotion) return;
 
-    let ticking = false;
-    const update = () => {
-      const rect = wrap.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const total = wrap.offsetHeight - vh;
-      const scrolled = -rect.top;
-      const progress = Math.max(0, Math.min(1, scrolled / total));
-      const trackWidth = track.scrollWidth;
-      const maxOffset = trackWidth - window.innerWidth + window.innerWidth * 0.12;
-      track.style.transform = `translate3d(${-progress * maxOffset}px, 0, 0)`;
-      prog.style.width = `${progress * 100}%`;
-      ticking = false;
-    };
+      const mm = gsap.matchMedia();
+      mm.add('(min-width: 768px)', () => {
+        const root = rootRef.current;
+        if (!root) return;
+        const q = gsap.utils.selector(root);
+        const pin = q('#sys-pin')[0] as HTMLElement;
+        const track = q('#sys-track')[0] as HTMLElement;
+        const progress = q('#sys-progress')[0] as HTMLElement;
+        if (!pin || !track) return;
 
-    const onScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    };
+        const getScrollAmount = () => track.scrollWidth - window.innerWidth + window.innerWidth * 0.12;
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', update);
-    update();
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', update);
-    };
-  }, [prefersReducedMotion]);
+        const tween = gsap.to(track, {
+          x: () => -getScrollAmount(),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: pin,
+            start: 'top top',
+            end: () => '+=' + getScrollAmount(),
+            pin: true,
+            scrub: 1,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+            onUpdate: (self) => {
+              if (progress) progress.style.width = (self.progress * 100).toFixed(1) + '%';
+            },
+          },
+        });
 
-  // Reduced-motion fallback: render a clean vertical stack of the same cards.
+        return () => {
+          tween.kill();
+        };
+      });
+
+      return () => mm.revert();
+    },
+    { scope: rootRef, dependencies: [prefersReducedMotion] }
+  );
+
+  /* ---- Reduced-motion fallback: clean vertical stack ---- */
   if (prefersReducedMotion) {
     return (
       <section className="bg-[#FBF8F2] py-20 px-6">
@@ -178,7 +186,7 @@ export default function TheSystem() {
   }
 
   return (
-    <section className="bg-[#FBF8F2]">
+    <section ref={rootRef} className="bg-[#FBF8F2]">
       {/* Editorial header */}
       <div className="max-w-7xl mx-auto pt-20 md:pt-28 pb-10 md:pb-14 px-6 text-center">
         <motion.p
@@ -207,100 +215,117 @@ export default function TheSystem() {
         </motion.p>
       </div>
 
-      {/* Horizontal track wrapper: tall vertical space, sticky inner viewport */}
-      <div ref={wrapperRef} className="relative" style={{ height: '350vh' }}>
-        <div className="sticky top-0 h-screen overflow-hidden flex items-center">
-          <div
-            ref={trackRef}
-            className="flex gap-6 md:gap-8 will-change-transform"
-            style={{ paddingLeft: '6vw', paddingRight: '6vw' }}
-          >
-            {cards.map((c, i) => (
-              <article
-                key={c.id}
-                className="flex-shrink-0 w-[88vw] md:w-[420px] h-[68vh] md:h-[520px] bg-white rounded-[2rem] p-7 md:p-9 flex flex-col justify-between relative overflow-hidden shadow-[0_20px_50px_-20px_rgba(15,42,34,0.12)] border border-[#3D3733]/8"
-              >
-                {/* Decorative corner gradient */}
-                <span
-                  aria-hidden="true"
-                  className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-60 pointer-events-none"
-                  style={{
-                    background:
-                      'radial-gradient(circle, rgba(179, 107, 77, 0.18) 0%, transparent 70%)',
-                  }}
-                />
-
-                {/* Top: card number + pill */}
-                <header className="relative z-10 flex items-center justify-between">
-                  <span
-                    className="font-serif italic text-[#B36B4D] font-medium"
-                    style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}
-                  >
-                    0{i + 1} / 04
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <div
-                      className={`w-10 h-10 rounded-xl ${c.iconBg} flex items-center justify-center`}
-                    >
-                      <c.icon className={`w-5 h-5 ${c.iconColor}`} aria-hidden="true" />
-                    </div>
-                    <span className="text-[9px] font-black text-[#3D3733] uppercase tracking-[0.25em]">
-                      {c.pill}
-                    </span>
-                  </div>
-                </header>
-
-                {/* Middle: headline + body */}
-                <div className="relative z-10 my-6">
-                  <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.35em] mb-3">
-                    {c.tag}
-                  </p>
-                  <h3
-                    className="font-serif font-bold text-[#3D3733] leading-[1.05] tracking-tight mb-5"
-                    style={{ fontSize: 'clamp(1.75rem, 2.4vw, 2.5rem)' }}
-                  >
-                    {c.titlePlain}{' '}
-                    <span className="text-[#B36B4D] italic font-normal">{c.titleAccent}</span>
-                  </h3>
-                  <p className="text-[#5D5752] text-sm md:text-[15px] leading-relaxed font-medium">
-                    {c.body}
-                  </p>
-                </div>
-
-                {/* Bottom: bullets */}
-                <footer className="relative z-10 space-y-2.5 pt-4 border-t border-[#3D3733]/10">
-                  <p className="text-[9px] font-black text-[#B36B4D]/70 uppercase tracking-[0.25em] mb-1">
-                    What it does
-                  </p>
-                  {c.bullets.map((b) => (
-                    <div
-                      key={b}
-                      className="flex items-start gap-2.5 text-[12.5px] text-[#3D3733] font-medium leading-snug"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] flex-shrink-0 mt-1.5" />
-                      <span>{b}</span>
-                    </div>
-                  ))}
-                </footer>
-              </article>
-            ))}
-          </div>
-
-          {/* Progress indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3">
-            <span className="text-[9px] font-black text-[#8A857C] uppercase tracking-[0.3em]">
-              Scroll
-            </span>
-            <div className="w-40 h-[2px] bg-[#3D3733]/15 rounded-full overflow-hidden">
-              <div
-                ref={progressRef}
-                className="h-full bg-[#B36B4D]"
-                style={{ width: '0%', transition: 'width 0.05s linear' }}
+      {/* ---- Desktop: GSAP-pinned horizontal track ---- */}
+      <div id="sys-pin" className="hidden md:flex h-screen overflow-hidden items-center relative">
+        <div
+          id="sys-track"
+          className="flex gap-8 will-change-transform"
+          style={{ paddingLeft: '6vw', paddingRight: '6vw' }}
+        >
+          {cards.map((c, i) => (
+            <article
+              key={c.id}
+              className="flex-shrink-0 w-[420px] h-[520px] bg-white rounded-[2rem] p-9 flex flex-col justify-between relative overflow-hidden shadow-[0_20px_50px_-20px_rgba(15,42,34,0.12)] border border-[#3D3733]/8"
+            >
+              <span
+                aria-hidden="true"
+                className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-60 pointer-events-none"
+                style={{
+                  background:
+                    'radial-gradient(circle, rgba(179, 107, 77, 0.18) 0%, transparent 70%)',
+                }}
               />
-            </div>
-            <ArrowRight className="w-3.5 h-3.5 text-[#B36B4D]" aria-hidden="true" />
-          </div>
+              <header className="relative z-10 flex items-center justify-between">
+                <span
+                  className="font-serif italic text-[#B36B4D] font-medium"
+                  style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}
+                >
+                  0{i + 1} / 04
+                </span>
+                <div className="flex items-center gap-2">
+                  <div className={`w-10 h-10 rounded-xl ${c.iconBg} flex items-center justify-center`}>
+                    <c.icon className={`w-5 h-5 ${c.iconColor}`} aria-hidden="true" />
+                  </div>
+                  <span className="text-[9px] font-black text-[#3D3733] uppercase tracking-[0.25em]">
+                    {c.pill}
+                  </span>
+                </div>
+              </header>
+
+              <div className="relative z-10 my-6">
+                <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.35em] mb-3">
+                  {c.tag}
+                </p>
+                <h3
+                  className="font-serif font-bold text-[#3D3733] leading-[1.05] tracking-tight mb-5"
+                  style={{ fontSize: 'clamp(1.75rem, 2.4vw, 2.5rem)' }}
+                >
+                  {c.titlePlain}{' '}
+                  <span className="text-[#B36B4D] italic font-normal">{c.titleAccent}</span>
+                </h3>
+                <p className="text-[#5D5752] text-[15px] leading-relaxed font-medium">{c.body}</p>
+              </div>
+
+              <footer className="relative z-10 space-y-2.5 pt-4 border-t border-[#3D3733]/10">
+                <p className="text-[9px] font-black text-[#B36B4D]/70 uppercase tracking-[0.25em] mb-1">
+                  What it does
+                </p>
+                {c.bullets.map((b) => (
+                  <div
+                    key={b}
+                    className="flex items-start gap-2.5 text-[12.5px] text-[#3D3733] font-medium leading-snug"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] flex-shrink-0 mt-1.5" />
+                    <span>{b}</span>
+                  </div>
+                ))}
+              </footer>
+            </article>
+          ))}
         </div>
+
+        {/* Progress indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3">
+          <span className="text-[9px] font-black text-[#8A857C] uppercase tracking-[0.3em]">
+            Scroll
+          </span>
+          <div className="w-40 h-[2px] bg-[#3D3733]/15 rounded-full overflow-hidden">
+            <div id="sys-progress" className="h-full bg-[#B36B4D]" style={{ width: '0%' }} />
+          </div>
+          <ArrowRight className="w-3.5 h-3.5 text-[#B36B4D]" aria-hidden="true" />
+        </div>
+      </div>
+
+      {/* ---- Mobile: vertical stack ---- */}
+      <div className="md:hidden px-6 pb-16 space-y-6">
+        {cards.map((c) => (
+          <article
+            key={c.id}
+            className="bg-white rounded-[2rem] p-7 border border-[#3D3733]/8 shadow-sm"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className={`w-10 h-10 rounded-xl ${c.iconBg} flex items-center justify-center`}>
+                <c.icon className={`w-5 h-5 ${c.iconColor}`} aria-hidden="true" />
+              </div>
+              <span className="text-[10px] font-black text-[#3D3733] uppercase tracking-[0.25em]">
+                {c.tag}
+              </span>
+            </div>
+            <h3 className="text-2xl font-serif font-bold text-[#3D3733] mb-3">
+              {c.titlePlain}{' '}
+              <span className="text-[#B36B4D] italic font-normal">{c.titleAccent}</span>
+            </h3>
+            <p className="text-[#5D5752] text-sm leading-relaxed mb-4">{c.body}</p>
+            <ul className="space-y-2 pt-3 border-t border-[#3D3733]/10">
+              {c.bullets.map((b) => (
+                <li key={b} className="flex items-start gap-2 text-xs text-[#3D3733]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] flex-shrink-0 mt-1.5" />
+                  <span className="font-medium leading-snug">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );

@@ -9,8 +9,6 @@ import {
   Factory,
   ChevronDown,
   ChevronUp,
-  ChevronLeft,
-  ChevronRight,
   RefreshCcw,
   Dna,
   Battery,
@@ -19,9 +17,9 @@ import {
   Pill,
   AlertTriangle,
   CheckCircle2,
-  AlertCircle,
-  RefreshCw
+  AlertCircle
 } from 'lucide-react';
+import ViciousCycle from '@/components/ViciousCycle';
 
 export default function CollagenScienceSection() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -332,113 +330,8 @@ export default function CollagenScienceSection() {
 
   return (
     <>
-      {/* SECTION 1: VICIOUS CYCLE (cream) */}
-      <section id="science" className="py-16 px-4 sm:px-6 bg-[#EBE8E1] scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
-
-          <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-[#B36B4D]/20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#B36B4D]/5 rounded-full blur-[100px] -mr-48 -mt-48" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2D6B52]/5 rounded-full blur-[100px] -ml-48 -mb-48" />
-
-            <div className="relative z-10 max-w-5xl mx-auto">
-              <div className="text-center mb-16">
-                <div className="inline-flex p-3 bg-[#B36B4D]/10 rounded-2xl mb-6">
-                  <RefreshCw className="w-8 h-8 text-[#B36B4D] animate-spin-slow" aria-hidden="true" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#3D3733] mb-4">The "Vicious Cycle" of hEDS &amp; MCAS</h3>
-                <p className="text-[#8A857C] text-lg font-medium max-w-xl mx-auto">Understanding this biological feedback loop is key to breaking the cascade of destruction.</p>
-              </div>
-
-              {/* DESKTOP LAYOUT - THE "X" CONFIGURATION */}
-              <div className="relative w-full max-w-[600px] mx-auto aspect-square hidden md:block">
-                <svg aria-hidden="true" className="absolute inset-0 w-full h-full pointer-events-none z-0 rotate-45 opacity-20">
-                  <circle cx="50%" cy="50%" r="35%" fill="none" stroke="#B36B4D" strokeWidth="2" strokeDasharray="8 8" />
-                </svg>
-
-                {/* Directional arrows showing the rotation 1 -> 2 -> 3 -> 4 -> 1 */}
-                <div className="absolute top-[14%] left-1/2 -translate-x-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
-                  <ChevronRight className="w-7 h-7" strokeWidth={2.5} />
-                </div>
-                <div className="absolute right-[14%] top-1/2 -translate-y-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
-                  <ChevronDown className="w-7 h-7" strokeWidth={2.5} />
-                </div>
-                <div className="absolute bottom-[14%] left-1/2 -translate-x-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
-                  <ChevronLeft className="w-7 h-7" strokeWidth={2.5} />
-                </div>
-                <div className="absolute left-[14%] top-1/2 -translate-y-1/2 z-[5] text-[#B36B4D]" aria-hidden="true">
-                  <ChevronUp className="w-7 h-7" strokeWidth={2.5} />
-                </div>
-
-                {[
-                  { id: 1, number: "1", title: "Collagen Breaks Down", desc: "Weak connective tissue degrades due to genetic/stress factors.", theme: "brown", pos: "top-0 left-0" },
-                  { id: 2, number: "2", title: "Fragments Trigger Inflammation", desc: "Biological debris activates aggressive immune responses.", theme: "green", pos: "top-0 right-0" },
-                  { id: 3, number: "3", title: "Mast Cells Activate", desc: "Hyper-sensitive cells release histamine and toxic chemicals.", theme: "brown", pos: "bottom-0 right-0" },
-                  { id: 4, number: "4", title: "Enzymes Attack Collagen", desc: "Destructive enzymes shred remaining tissue, repeating the cycle.", theme: "green", pos: "bottom-0 left-0" }
-                ].map((step) => {
-                  const styles = step.theme === 'brown'
-                    ? { badge: 'bg-[#B47F65] text-white', text: 'text-[#8B5E4B]' }
-                    : { badge: 'bg-[#2E5C55] text-white', text: 'text-[#1F443E]' };
-
-                  return (
-                    <div key={step.id} className={`absolute w-60 h-60 flex items-center justify-center ${step.pos}`}>
-                      <div className="relative w-full h-full rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex flex-col items-center justify-center text-center p-6 z-10 border border-gray-50 overflow-visible transition-transform hover:scale-105 duration-300">
-                        <div className={`absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center text-base font-bold shadow-md ${styles.badge}`}>
-                          {step.number}
-                        </div>
-                        <div className={`font-serif font-bold text-base leading-tight mb-2 ${styles.text}`}>{step.title}</div>
-                        <p className="text-[13px] text-[#5D5752] leading-snug font-semibold">{step.desc}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center justify-center z-20 border border-gray-100">
-                  <RefreshCw className="w-10 h-10 text-[#B36B4D]/30 animate-spin-slow" aria-hidden="true" />
-                </div>
-              </div>
-
-              {/* MOBILE LAYOUT - VERTICAL STACK */}
-              <div className="flex flex-col gap-6 w-full max-w-sm mx-auto md:hidden">
-                {[
-                  { id: 1, number: "1", title: "Collagen Breaks Down", desc: "Weak connective tissue degrades due to genetic/stress factors.", theme: "brown" },
-                  { id: 2, number: "2", title: "Fragments Trigger Inflammation", desc: "Biological debris activates aggressive immune responses.", theme: "green" },
-                  { id: 3, number: "3", title: "Mast Cells Activate", desc: "Hyper-sensitive cells release histamine and toxic chemicals.", theme: "brown" },
-                  { id: 4, number: "4", title: "Enzymes Attack Collagen", desc: "Destructive enzymes shred remaining tissue, repeating the cycle.", theme: "green" }
-                ].map((step) => {
-                  const styles = step.theme === 'brown'
-                    ? { badge: 'bg-[#B47F65] text-white', text: 'text-[#8B5E4B]' }
-                    : { badge: 'bg-[#2E5C55] text-white', text: 'text-[#1F443E]' };
-
-                  return (
-                    <div key={step.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center flex flex-col items-center relative transition-transform hover:scale-102 duration-300">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mb-3 shadow-sm ${styles.badge}`}>
-                        {step.number}
-                      </div>
-                      <div className={`font-serif font-bold text-lg mb-2 ${styles.text}`}>{step.title}</div>
-                      <p className="text-sm text-[#5D5752] leading-relaxed font-semibold">{step.desc}</p>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="flex justify-center mt-12 md:mt-20">
-                <div className="flex items-center gap-3 px-8 py-3 rounded-full bg-[#B36B4D]/10 text-[#B36B4D] border border-[#B36B4D]/10">
-                  <RefreshCw className="w-5 h-5 animate-spin-slow" aria-hidden="true" />
-                  <span className="text-sm font-black uppercase tracking-[0.2em]">The cycle repeats indefinitely</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative w-full flex flex-col items-center justify-center pt-12 pb-4 z-20">
-            <div className="h-16 w-0.5 bg-gradient-to-b from-transparent via-[#D4A373] to-[#D4A373]" aria-hidden="true" />
-            <div className="bg-white border border-[#D4A373]/30 px-6 py-2 rounded-full shadow-sm text-[#8B5E4B] font-serif italic text-lg z-10 -mt-4">
-              Intervention is possible
-            </div>
-            <div className="h-10 w-0.5 bg-[#D4A373]" aria-hidden="true" />
-          </div>
-        </div>
-      </section>
+      {/* SECTION 1: VICIOUS CYCLE - pinned scroll-scrubbed sequence */}
+      <ViciousCycle />
 
       {/* SECTION 2: DARK BAND - "14 Pathways" intro */}
       <section className="bg-[#0F2A22] py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden">
