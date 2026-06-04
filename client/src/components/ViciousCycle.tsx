@@ -128,24 +128,23 @@ export default function ViciousCycle() {
           scrollTrigger: {
             trigger: root,
             start: 'top top',
-            end: '+=2400',
+            end: '+=4600',
             pin: true,
             scrub: 1,
             anticipatePin: 1,
           },
         });
 
-        // Intro recedes as the cycle begins
-        tl.to(intro, { opacity: 0.0, y: -24, duration: 0.8 }, 0.6);
+        // Header stays visible for the whole scroll (no intro fade).
 
         // Arc traces the full loop (units 1 -> 7)
-        tl.to(arc, { strokeDashoffset: 0, ease: 'none', duration: 6 }, 1);
+        tl.to(arc, { strokeDashoffset: 0, ease: 'none', duration: 12 }, 1);
 
         // Centre hub rotates with the draw
-        tl.to(hub, { rotation: 540, ease: 'none', duration: 6 }, 1);
+        tl.to(hub, { rotation: 540, ease: 'none', duration: 12 }, 1);
 
         // Each node ignites as the arc passes it
-        const igniteAt = [1.0, 2.5, 4.0, 5.5];
+        const igniteAt = [1.0, 4.0, 7.0, 10.0];
         NODES.forEach((node, i) => {
           const at = igniteAt[i];
           tl.to(cards[i], { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.5)' }, at);
@@ -156,19 +155,19 @@ export default function ViciousCycle() {
           );
         });
 
-        // Loop closes: inflamed red wash (units 7 -> 8.3)
-        tl.to(redOverlay, { opacity: 1, duration: 1.2, ease: 'power1.in' }, 7);
-        tl.to(arc, { stroke: '#C0392B', duration: 1.2 }, 7);
-        tl.to(inflamed, { opacity: 1, y: 0, duration: 0.7 }, 7.4);
+        // Loop closes: inflamed red wash (slowed 2x after step 1)
+        tl.to(redOverlay, { opacity: 1, duration: 2.4, ease: 'power1.in' }, 13);
+        tl.to(arc, { stroke: '#C0392B', duration: 2.4 }, 13);
+        tl.to(inflamed, { opacity: 1, y: 0, duration: 1.4 }, 13.8);
 
-        // Intervention (units 8.3 -> 10)
-        tl.to(inflamed, { opacity: 0, y: -14, duration: 0.5 }, 8.3);
-        tl.to(redOverlay, { opacity: 0, duration: 1.1 }, 8.5);
+        // Intervention (slowed 2x)
+        tl.to(inflamed, { opacity: 0, y: -14, duration: 1.0 }, 15.6);
+        tl.to(redOverlay, { opacity: 0, duration: 2.2 }, 16.0);
         // Arc retracts open, leaving a gap at the top, and recolours copper
-        tl.to(arc, { strokeDashoffset: 190, stroke: '#A4613A', duration: 1.1, ease: 'power2.inOut' }, 8.5);
-        tl.to(slash, { opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(2)' }, 8.8);
-        tl.to(hub, { rotation: '+=70', duration: 1 }, 8.6);
-        tl.to(climax, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 9.1);
+        tl.to(arc, { strokeDashoffset: 190, stroke: '#A4613A', duration: 2.2, ease: 'power2.inOut' }, 16.0);
+        tl.to(slash, { opacity: 1, scale: 1, duration: 1.4, ease: 'back.out(2)' }, 16.6);
+        tl.to(hub, { rotation: '+=70', duration: 2 }, 16.2);
+        tl.to(climax, { opacity: 1, y: 0, duration: 1.8, ease: 'power2.out' }, 17.2);
 
         return () => {
           tl.kill();
@@ -200,9 +199,6 @@ export default function ViciousCycle() {
               <h3 className="text-2xl md:text-4xl font-serif font-bold text-[#3D3733] mb-2">
                 The "Vicious Cycle" of hEDS &amp; MCAS
               </h3>
-              <p className="text-[#8A857C] text-sm md:text-base font-medium max-w-xl mx-auto">
-                Scroll to trace the feedback loop, then watch where it can be broken.
-              </p>
             </div>
 
             {/* ============ DESKTOP: scrubbed circular stage ============ */}
