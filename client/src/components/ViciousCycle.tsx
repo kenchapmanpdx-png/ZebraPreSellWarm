@@ -128,7 +128,7 @@ export default function ViciousCycle() {
           scrollTrigger: {
             trigger: root,
             start: 'top top',
-            end: '+=7200',
+            end: '+=4800',
             pin: true,
             scrub: 1,
             anticipatePin: 1,
