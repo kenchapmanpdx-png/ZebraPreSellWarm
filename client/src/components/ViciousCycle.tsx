@@ -128,7 +128,7 @@ export default function ViciousCycle() {
           scrollTrigger: {
             trigger: root,
             start: 'top top',
-            end: '+=4600',
+            end: '+=7200',
             pin: true,
             scrub: 1,
             anticipatePin: 1,
@@ -155,19 +155,23 @@ export default function ViciousCycle() {
           );
         });
 
-        // Loop closes: inflamed red wash (slowed 2x after step 1)
+        // Loop closes: inflamed red wash
         tl.to(redOverlay, { opacity: 1, duration: 2.4, ease: 'power1.in' }, 13);
         tl.to(arc, { stroke: '#C0392B', duration: 2.4 }, 13);
         tl.to(inflamed, { opacity: 1, y: 0, duration: 1.4 }, 13.8);
+        // BIG DWELL: the red "self-reinforcing" state holds static from ~15 to 23
+        // (a long read window before anything else moves).
 
-        // Intervention (slowed 2x)
-        tl.to(inflamed, { opacity: 0, y: -14, duration: 1.0 }, 15.6);
-        tl.to(redOverlay, { opacity: 0, duration: 2.2 }, 16.0);
+        // Release into intervention
+        tl.to(inflamed, { opacity: 0, y: -14, duration: 1.0 }, 23);
+        tl.to(redOverlay, { opacity: 0, duration: 2.2 }, 23.4);
         // Arc retracts open, leaving a gap at the top, and recolours copper
-        tl.to(arc, { strokeDashoffset: 190, stroke: '#A4613A', duration: 2.2, ease: 'power2.inOut' }, 16.0);
-        tl.to(slash, { opacity: 1, scale: 1, duration: 1.4, ease: 'back.out(2)' }, 16.6);
-        tl.to(hub, { rotation: '+=70', duration: 2 }, 16.2);
-        tl.to(climax, { opacity: 1, y: 0, duration: 1.8, ease: 'power2.out' }, 17.2);
+        tl.to(arc, { strokeDashoffset: 190, stroke: '#A4613A', duration: 2.2, ease: 'power2.inOut' }, 23.4);
+        tl.to(slash, { opacity: 1, scale: 1, duration: 1.4, ease: 'back.out(2)' }, 24.0);
+        tl.to(hub, { rotation: '+=70', duration: 2 }, 23.6);
+        tl.to(climax, { opacity: 1, y: 0, duration: 1.8, ease: 'power2.out' }, 24.6);
+        // SMALL DWELL: hold "Intervention is possible" ~2 units before the pin releases
+        tl.to({}, { duration: 2 }, 26.4);
 
         return () => {
           tl.kill();
