@@ -24,14 +24,6 @@ export const contactSubmissions = pgTable("contact_submissions", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
-// Sample request submissions table
-export const sampleRequests = pgTable("sample_requests", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
-  reason: text("reason").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-});
 
 // Waitlist submissions table
 export const waitlistSubmissions = pgTable("waitlist_submissions", {
@@ -63,14 +55,6 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   message: z.string().min(1, "Message is required"),
 });
 
-export const insertSampleRequestSchema = createInsertSchema(sampleRequests).omit({
-  id: true,
-  createdAt: true,
-}).extend({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Please enter a valid email address"),
-  reason: z.string().min(1, "Reason is required"),
-});
 
 export const insertWaitlistSubmissionSchema = createInsertSchema(waitlistSubmissions).omit({
   id: true,
@@ -86,8 +70,6 @@ export type PreorderReservation = typeof preorderReservations.$inferSelect;
 export type InsertContactSubmission = z.infer<typeof insertContactSubmissionSchema>;
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 
-export type InsertSampleRequest = z.infer<typeof insertSampleRequestSchema>;
-export type SampleRequest = typeof sampleRequests.$inferSelect;
 
 export type InsertWaitlistSubmission = z.infer<typeof insertWaitlistSubmissionSchema>;
 export type WaitlistSubmission = typeof waitlistSubmissions.$inferSelect;

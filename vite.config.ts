@@ -5,7 +5,7 @@ import { vitePrerenderPlugin } from "vite-prerender-plugin";
 import ingredientList from "./scripts/ingredient-routes.json";
 
 // All routes prerendered at build time.
-// Root + section pages + 35 ingredient detail pages = 40 routes.
+// Root + section pages + 29 ingredient detail pages = 38 routes.
 // (Note: /showcase is intentionally NOT in this list - internal review page,
 //  no need to prerender; SPA fallback will serve it via index.html.)
 const PRERENDER_ROUTES = [
@@ -62,7 +62,7 @@ export default defineConfig({
             "@radix-ui/react-slot",
           ],
           "framer": ["framer-motion"],
-          "icons": ["lucide-react", "react-icons"],
+          "icons": ["lucide-react"],
           "forms": ["react-hook-form", "@hookform/resolvers", "zod", "zod-validation-error"],
           "query": ["@tanstack/react-query"],
         },

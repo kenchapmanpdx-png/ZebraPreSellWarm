@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
   Activity,
@@ -147,9 +148,9 @@ export default function FAQ() {
                 <p className="text-[#8A857C] text-xs font-medium">We can provide a detailed data sheet for your doctor.</p>
               </div>
             </div>
-            <button className="px-8 py-4 bg-[#B36B4D] text-white font-bold text-[10px] uppercase tracking-widest rounded-full hover:bg-[#3D3733] transition-all shadow-md active:scale-95">
+            <Link href="/contact" className="px-8 py-4 bg-[#B36B4D] text-white font-bold text-[10px] uppercase tracking-widest rounded-full hover:bg-[#3D3733] transition-all shadow-md active:scale-95">
               Request Clinical Data
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -10,7 +10,7 @@ import ProductGrid from '@/components/ProductGrid';
 import ExclusionsBlock from '@/components/ExclusionsBlock';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
-import SampleRequestModal from '@/components/SampleRequestModal';
+import BrandByNumbers from '@/components/BrandByNumbers';
 
 // Direct imports - these were lazy-loaded but the prerender engine ships
 // the Suspense fallback (empty div) for them, so 8 FAQs, the Collagen
@@ -80,6 +80,9 @@ export default function Home() {
         {/* 3.5. EXCLUSIONS - what's NOT in the formula. */}
         <ExclusionsBlock />
 
+        {/* 3.75. BY THE NUMBERS - animated stat band (29 / 100% / 14 / 0) */}
+        <BrandByNumbers />
+
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
         <CollagenScienceSection />
 
@@ -96,7 +99,6 @@ export default function Home() {
       {/* GLOBAL FOOTER & UTILITIES */}
       <Footer />
       <FloatingCTA />
-      <SampleRequestModal />
     </div>
   );
 }

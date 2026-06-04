@@ -67,7 +67,7 @@ export default function IngredientPage() {
                             href="/ingredients"
                             className="inline-block px-6 py-3 bg-[#0F2A22] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#B36B4D] transition-colors"
                         >
-                            Browse all 35 ingredients
+                            Browse all {ingredientList.length} ingredients
                         </Link>
                     </div>
                 </div>

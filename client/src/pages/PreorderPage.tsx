@@ -13,6 +13,12 @@ import { CheckCircle, Heart, Sparkles, Clock, Mail } from 'lucide-react';
 
 export default function PreorderPage() {
   const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [conditions, setConditions] = useState<string[]>([]);
+  const [currentSupplements, setCurrentSupplements] = useState('');
+  const [hearAboutUs, setHearAboutUs] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
@@ -23,10 +29,19 @@ export default function PreorderPage() {
 
     try {
       const hp = (document.getElementById('preorder-website-hp') as HTMLInputElement | null)?.value || '';
-      const response = await fetch('/api/waitlist', {
+      const response = await fetch('/api/preorder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim(), website: hp }),
+        body: JSON.stringify({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim(),
+          phone: phone.trim() || undefined,
+          conditions,
+          currentSupplements: currentSupplements.trim() || undefined,
+          hearAboutUs: hearAboutUs || undefined,
+          website: hp,
+        }),
       });
       if (!response.ok) throw new Error('Request failed');
       setIsSubmitted(true);
@@ -44,6 +59,9 @@ export default function PreorderPage() {
       setIsSubmitting(false);
     }
   };
+
+  const toggleCondition = (c: string) =>
+    setConditions((prev) => (prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c]));
 
   return (
     <div className="min-h-screen bg-[#EBE8E1]">
@@ -299,22 +317,64 @@ export default function PreorderPage() {
 
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true" />
-                    <Input
-                      type="email"
-                      placeholder="Enter your email address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className="pl-12 py-3 text-lg border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white"
-                    />
+                  {/* Honeypot - hidden from humans */}
+                  <input type="text" name="website" id="preorder-website-hp" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute left-[-9999px] h-px w-px opacity-0" />
+
+                  <div className="grid sm:grid-cols-2 gap-4 text-left">
+                    <div>
+                      <label htmlFor="po-first" className="block text-sm font-semibold text-gray-700 mb-1">First name</label>
+                      <Input id="po-first" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required className="py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white" />
+                    </div>
+                    <div>
+                      <label htmlFor="po-last" className="block text-sm font-semibold text-gray-700 mb-1">Last name</label>
+                      <Input id="po-last" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required className="py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white" />
+                    </div>
+                  </div>
+
+                  <div className="text-left">
+                    <label htmlFor="po-email" className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true" />
+                      <Input id="po-email" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required className="pl-12 py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white" />
+                    </div>
+                  </div>
+
+                  <div className="text-left">
+                    <label htmlFor="po-phone" className="block text-sm font-semibold text-gray-700 mb-1">Phone <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <Input id="po-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} className="py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white" />
+                  </div>
+
+                  <fieldset className="text-left">
+                    <legend className="text-sm font-semibold text-gray-700 mb-2">Which apply to you? <span className="text-gray-400 font-normal">(optional)</span></legend>
+                    <div className="flex flex-wrap gap-2">
+                      {['hEDS', 'POTS', 'MCAS', 'Caregiver', 'Other'].map((c) => (
+                        <button type="button" key={c} onClick={() => toggleCondition(c)} aria-pressed={conditions.includes(c)} className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${conditions.includes(c) ? 'bg-[#0F2A22] text-white border-[#0F2A22]' : 'bg-white text-gray-700 border-amber-200 hover:border-amber-400'}`}>{c}</button>
+                      ))}
+                    </div>
+                  </fieldset>
+
+                  <div className="text-left">
+                    <label htmlFor="po-supps" className="block text-sm font-semibold text-gray-700 mb-1">Current supplements <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <textarea id="po-supps" value={currentSupplements} onChange={(e) => setCurrentSupplements(e.target.value)} rows={2} className="w-full px-4 py-3 rounded-md border border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white text-gray-900" />
+                  </div>
+
+                  <div className="text-left">
+                    <label htmlFor="po-hear" className="block text-sm font-semibold text-gray-700 mb-1">How did you hear about us? <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <select id="po-hear" value={hearAboutUs} onChange={(e) => setHearAboutUs(e.target.value)} className="w-full px-4 py-3 rounded-md border border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white text-gray-900">
+                      <option value="">Select...</option>
+                      <option value="Search engine">Search engine</option>
+                      <option value="Social media">Social media</option>
+                      <option value="Friend or family">Friend or family</option>
+                      <option value="Doctor or practitioner">Doctor or practitioner</option>
+                      <option value="Support group or community">Support group or community</option>
+                      <option value="Other">Other</option>
+                    </select>
                   </div>
 
                   <Button
                     type="submit"
-                    disabled={isSubmitting}
-                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)] ${email
+                    disabled={isSubmitting || !firstName || !lastName || !email}
+                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)] ${(firstName && lastName && email)
                         ? 'bg-[#0F2A22] border-[#0F2A22] hover:bg-[#B36B4D] active:bg-[#744428]'
                         : 'bg-[#7A8691] border-[#7A8691] opacity-70 cursor-not-allowed'
                       }`}
@@ -322,7 +382,7 @@ export default function PreorderPage() {
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                        Adding you to the list...
+                        Reserving your spot...
                       </div>
                     ) : (
                       "Claim Your Spot"

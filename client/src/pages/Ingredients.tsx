@@ -4,7 +4,6 @@ import { ingredients, ingredientList } from "@/data/ingredients";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
-import SampleRequestModal from "@/components/SampleRequestModal";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { useState } from "react";
@@ -114,7 +113,6 @@ export default function Ingredients() {
 
             <Footer />
             <FloatingCTA />
-            <SampleRequestModal />
         </div>
     );
 }

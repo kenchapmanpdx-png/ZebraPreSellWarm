@@ -34,13 +34,6 @@ export const contactSubmissions = pgTable("contact_submissions", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
-export const sampleRequests = pgTable("sample_requests", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
-  reason: text("reason").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-});
 
 export const waitlistSubmissions = pgTable("waitlist_submissions", {
   id: serial("id").primaryKey(),
@@ -70,14 +63,6 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   message: z.string().min(1, "Message is required"),
 });
 
-export const insertSampleRequestSchema = createInsertSchema(sampleRequests).omit({
-  id: true,
-  createdAt: true,
-}).extend({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Please enter a valid email address"),
-  reason: z.string().min(1, "Reason is required"),
-});
 
 export const insertWaitlistSubmissionSchema = createInsertSchema(waitlistSubmissions).omit({
   id: true,

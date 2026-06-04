@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ZebraWell">
+  <rect width="512" height="512" rx="112" fill="#0F2A22"/>
+  <g fill="#B36B4D" opacity="0.55">
+    <rect x="372" y="96" width="14" height="120" rx="7" transform="rotate(24 379 156)"/>
+    <rect x="404" y="110" width="14" height="120" rx="7" transform="rotate(24 411 170)"/>
+  </g>
+  <g fill="#FBF8F2">
+    <rect x="150" y="150" width="212" height="58" rx="8"/>
+    <rect x="150" y="354" width="212" height="58" rx="8"/>
+    <polygon points="300,150 362,150 212,412 150,412"/>
+  </g>
+</svg>

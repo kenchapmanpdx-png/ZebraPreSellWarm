@@ -41,7 +41,7 @@ export default function Hero() {
         });
         setEmail('');
       } else {
-        throw new Error(data.error || 'Failed to subscribe');
+        throw new Error(data.message || 'Failed to subscribe');
       }
     } catch (error) {
       toast({

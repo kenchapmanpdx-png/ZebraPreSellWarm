@@ -4,7 +4,6 @@ import ConditionScienceTabs from "@/components/ConditionScienceTab";
 import IngredientByCondition from "@/components/IngredientByCondition";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
-import SampleRequestModal from "@/components/SampleRequestModal";
 
 export default function TheHow() {
   return (
@@ -47,7 +46,6 @@ export default function TheHow() {
 
       <Footer />
       <FloatingCTA />
-      <SampleRequestModal />
     </div>
   );
 }

@@ -22,7 +22,6 @@ const KEY_LOCATION = `${BASE}/${KEY}.txt`;
 
 const CORE_ROUTES = [
   "/",
-  "/the-how",
   "/ingredients",
   "/our-promise",
   "/preorder",
@@ -37,7 +36,6 @@ const MD_ROUTES = [
   "/llms-full.txt",
   "/llms-routes.txt",
   "/ingredients.md",
-  "/the-how.md",
   "/our-promise.md",
   "/preorder.md",
   "/contact.md",
