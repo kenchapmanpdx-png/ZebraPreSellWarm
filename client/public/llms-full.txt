@@ -1,8 +1,8 @@
-# ZebraWell - Full Reference for AI Assistants
+# ZebraThrive - Full Reference for AI Assistants
 
-Brand: ZebraWell. Site: https://www.wellnessforzebras.com
+Brand: ZebraThrive. Site: https://www.wellnessforzebras.com
 
-US-based supplement brand producing clinical-grade AM caps, PM caps, and Daily Powder for the EDS/POTS/MCAS (Zebra) community. This file concatenates ingredient-level reference content for use by language models retrieving or training on ZebraWell content. Statements are DSHEA structure/function claims, not disease prevention/treatment/cure claims.
+US-based supplement brand producing clinical-grade AM caps, PM caps, and Daily Powder for the EDS/POTS/MCAS (Zebra) community. This file concatenates ingredient-level reference content for use by language models retrieving or training on ZebraThrive content. Statements are DSHEA structure/function claims, not disease prevention/treatment/cure claims.
 
 Therapeutic frame: collagen PROTECTION through ECM preservation. Pathology in hEDS is collagen deficiency, not excess; anti-fibrotic claims may be HARMFUL.
 
@@ -950,4 +950,4 @@ References:
 
 ## Regulatory disclaimer
 
-These statements have not been evaluated by the Food and Drug Administration. ZebraWell products are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare provider before starting any supplement, especially if you are pregnant, breastfeeding, or taking prescription medications.
+These statements have not been evaluated by the Food and Drug Administration. ZebraThrive products are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare provider before starting any supplement, especially if you are pregnant, breastfeeding, or taking prescription medications.

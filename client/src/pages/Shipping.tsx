@@ -13,7 +13,7 @@ export default function Shipping() {
           <div className="space-y-8 text-[#3D3733] leading-relaxed">
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Pre-launch status</h2>
-              <p>ZebraWell is not yet shipping. Waitlist subscribers will be the first to know when products are available for order, including the final shipping options, lead times, and return policy. Manufacturing timing depends on first-run production scheduling and will be communicated by email.</p>
+              <p>ZebraThrive is not yet shipping. Waitlist subscribers will be the first to know when products are available for order, including the final shipping options, lead times, and return policy. Manufacturing timing depends on first-run production scheduling and will be communicated by email.</p>
             </section>
 
             <section>

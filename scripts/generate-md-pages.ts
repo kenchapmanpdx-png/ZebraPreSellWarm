@@ -57,8 +57,8 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   }
   out.push("");
   out.push(`**Page:** ${url}`);
-  out.push(`**Brand:** ZebraWell`);
-  out.push(`**Author:** Ken Chapman, Founder of ZebraWell`);
+  out.push(`**Brand:** ZebraThrive`);
+  out.push(`**Author:** Ken Chapman, Founder of ZebraThrive`);
   out.push(`**Last reviewed:** ${LAST_REVIEWED}`);
   if (ing.scientificName) out.push(`**Scientific name:** ${ing.scientificName}`);
   if (ing.atAGlance?.dose) out.push(`**Daily dose:** ${ing.atAGlance.dose}`);
@@ -266,11 +266,11 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
 
 function ingredientsIndexMarkdown(): string {
   const out: string[] = [];
-  out.push("# ZebraWell Ingredients");
+  out.push("# ZebraThrive Ingredients");
   out.push("");
-  out.push("> Every ingredient in ZebraWell's AM and PM formulas with doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol. Each ingredient links to a full markdown summary with PMID citations.");
+  out.push("> Every ingredient in ZebraThrive's AM and PM formulas with doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol. Each ingredient links to a full markdown summary with PMID citations.");
   out.push("");
-  out.push(`**Brand:** ZebraWell. **Last reviewed:** ${LAST_REVIEWED}.`);
+  out.push(`**Brand:** ZebraThrive. **Last reviewed:** ${LAST_REVIEWED}.`);
   out.push("");
   out.push("## Ingredients");
   out.push("");
@@ -293,18 +293,18 @@ function corePagesMarkdown(): Array<{ path: string; content: string }> {
   const pages = [
     {
       path: "the-how.md",
-      content: `# The How: ZebraWell's Clinical Trinity
+      content: `# The How: ZebraThrive's Clinical Trinity
 
-> ZebraWell's AM and PM formulas address the specific biology of hEDS, POTS, and MCAS through three pillars: autonomic stability (HRV, sympathetic dampening), mast cell modulation (stabilization, DAO support, histamine clearance), and ECM preservation (MMP inhibition, LOX/copper-driven crosslinking, antioxidant protection of existing collagen).
+> ZebraThrive's AM and PM formulas address the specific biology of hEDS, POTS, and MCAS through three pillars: autonomic stability (HRV, sympathetic dampening), mast cell modulation (stabilization, DAO support, histamine clearance), and ECM preservation (MMP inhibition, LOX/copper-driven crosslinking, antioxidant protection of existing collagen).
 
 **Page:** ${BASE}/the-how
-**Brand:** ZebraWell
-**Author:** Ken Chapman, Founder of ZebraWell
+**Brand:** ZebraThrive
+**Author:** Ken Chapman, Founder of ZebraThrive
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## Core thesis
 
-ZebraWell is a collagen-protection brand, not a collagen-building brand. In hypermobile Ehlers-Danlos Syndrome the underlying defect is structural and genetic; pumping more collagen into a body that cannot crosslink it correctly does not fix the problem. The biology that ZebraWell targets is upstream of structure: matrix metalloproteinase (MMP) inhibition to slow collagen breakdown, lysyl oxidase (LOX) and copper-dependent crosslinking to improve the quality of new collagen, and mast-cell stabilization to lower the chronic inflammatory load that drives MMP upregulation in the first place.
+ZebraThrive is a collagen-protection brand, not a collagen-building brand. In hypermobile Ehlers-Danlos Syndrome the underlying defect is structural and genetic; pumping more collagen into a body that cannot crosslink it correctly does not fix the problem. The biology that ZebraThrive targets is upstream of structure: matrix metalloproteinase (MMP) inhibition to slow collagen breakdown, lysyl oxidase (LOX) and copper-dependent crosslinking to improve the quality of new collagen, and mast-cell stabilization to lower the chronic inflammatory load that drives MMP upregulation in the first place.
 
 ## The AM formula
 
@@ -325,13 +325,13 @@ ${FDA_DISCLAIMER}
     },
     {
       path: "our-promise.md",
-      content: `# Our Promise: ZebraWell's Constitution
+      content: `# Our Promise: ZebraThrive's Constitution
 
-> ZebraWell's formal commitment to the Zebra community: full ingredient transparency, decision logs, third-party testing posture, and accountability when we get something wrong.
+> ZebraThrive's formal commitment to the Zebra community: full ingredient transparency, decision logs, third-party testing posture, and accountability when we get something wrong.
 
 **Page:** ${BASE}/our-promise
-**Brand:** ZebraWell
-**Author:** Ken Chapman, Founder of ZebraWell
+**Brand:** ZebraThrive
+**Author:** Ken Chapman, Founder of ZebraThrive
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## Commitments
@@ -350,18 +350,18 @@ ${FDA_DISCLAIMER}
     },
     {
       path: "preorder.md",
-      content: `# ZebraWell Preorder
+      content: `# ZebraThrive Preorder
 
-> Reserve your spot in line for the ZebraWell AM and PM Clinical Trinity. Pre-launch reservation list, no charge until launch.
+> Reserve your spot in line for the ZebraThrive AM and PM Clinical Trinity. Pre-launch reservation list, no charge until launch.
 
 **Page:** ${BASE}/preorder
-**Brand:** ZebraWell
-**Author:** Ken Chapman, Founder of ZebraWell
+**Brand:** ZebraThrive
+**Author:** Ken Chapman, Founder of ZebraThrive
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## Product
 
-ZebraWell AM and PM Clinical Trinity is a paired supplement system providing autonomic, mast cell, and connective-tissue support for adults with hypermobile Ehlers-Danlos Syndrome, POTS, or MCAS.
+ZebraThrive AM and PM Clinical Trinity is a paired supplement system providing autonomic, mast cell, and connective-tissue support for adults with hypermobile Ehlers-Danlos Syndrome, POTS, or MCAS.
 
 ## How preorder works
 
@@ -374,14 +374,14 @@ ${FDA_DISCLAIMER}
     },
     {
       path: "contact.md",
-      content: `# Contact ZebraWell
+      content: `# Contact ZebraThrive
 
 > Support, partnerships, press, and formulation feedback. Two-business-day response window.
 
 **Page:** ${BASE}/contact
 **Email:** ken@wellnessforzebras.com
-**Brand:** ZebraWell
-**Author:** Ken Chapman, Founder of ZebraWell
+**Brand:** ZebraThrive
+**Author:** Ken Chapman, Founder of ZebraThrive
 **Last reviewed:** ${LAST_REVIEWED}
 
 ## How to reach us

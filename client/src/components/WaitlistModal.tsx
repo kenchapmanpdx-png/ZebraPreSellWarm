@@ -50,7 +50,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
       setIsSubmitted(true);
       toast({
         title: "You're on the list!",
-        description: "We'll notify you the moment ZebraWell is available.",
+        description: "We'll notify you the moment ZebraThrive is available.",
       });
     } catch (err) {
       toast({
@@ -85,7 +85,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
                 Join the Waitlist
               </DialogTitle>
               <DialogDescription className="text-[#3D3733]/80 leading-relaxed">
-                Be the first to know when ZebraWell opens for reservations.
+                Be the first to know when ZebraThrive opens for reservations.
                 Research-driven AM/PM formulas built for the EDS, POTS, and MCAS triad - no spam, no filler emails.
               </DialogDescription>
             </DialogHeader>
@@ -127,7 +127,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
                 )}
               </button>
               <p className="text-xs text-center text-[#3D3733]/60">
-                We use your email only to notify you about ZebraWell. Unsubscribe any time.
+                We use your email only to notify you about ZebraThrive. Unsubscribe any time.
               </p>
             </form>
           </>
@@ -140,7 +140,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
               You're on the list
             </DialogTitle>
             <DialogDescription className="text-[#3D3733]/80 leading-relaxed">
-              We'll email you the moment ZebraWell is available. In the meantime, you can explore the ingredients, the science, and our promise from the nav above.
+              We'll email you the moment ZebraThrive is available. In the meantime, you can explore the ingredients, the science, and our promise from the nav above.
             </DialogDescription>
           </div>
         )}

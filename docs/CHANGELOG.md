@@ -1,8 +1,8 @@
-# ZebraWell - Wellness Supplements for Rare Conditions
+# ZebraThrive - Wellness Supplements for Rare Conditions
 
 ## Overview
 
-ZebraWell is a modern wellness supplement company focused on providing clinical-grade supplements for individuals with rare conditions including EDS (Ehlers-Danlos Syndrome), POTS (Postural Orthostatic Tachycardia Syndrome), and MCAS (Mast Cell Activation Syndrome). The application is a full-stack web platform built with React and Express, featuring a comprehensive product showcase, educational content, and contact management system.
+ZebraThrive is a modern wellness supplement company focused on providing clinical-grade supplements for individuals with rare conditions including EDS (Ehlers-Danlos Syndrome), POTS (Postural Orthostatic Tachycardia Syndrome), and MCAS (Mast Cell Activation Syndrome). The application is a full-stack web platform built with React and Express, featuring a comprehensive product showcase, educational content, and contact management system.
 
 ## System Architecture
 
@@ -31,7 +31,7 @@ ZebraWell is a modern wellness supplement company focused on providing clinical-
 ### Frontend Components
 1. **Landing Page**: Hero section with product showcase
 2. **Product Grid**: Detailed AM/PM formula displays with ingredient tooltips
-3. **Educational Sections**: Why ZebraWell, comparison tables, testimonials
+3. **Educational Sections**: Why ZebraThrive, comparison tables, testimonials
 4. **Interactive Elements**: Sample request modal, contact forms
 5. **Design System**: Consistent zebra-pattern theming with earth tones
 
@@ -92,8 +92,8 @@ ZebraWell is a modern wellness supplement company focused on providing clinical-
 Changelog:
 - June 13, 2025. Initial setup
 - June 15, 2025. Major structural reorganization:
-  - Moved all 8 benefits from "Why Choose ZebraWell" section to "What Makes ZebraWell Different" section
-  - Removed entire "Why Choose ZebraWell" section from site
+  - Moved all 8 benefits from "Why Choose ZebraThrive" section to "What Makes ZebraThrive Different" section
+  - Removed entire "Why Choose ZebraThrive" section from site
   - Updated navigation links to point to "What Makes Us Different" section
   - Doubled font size for ingredient benefits in tooltips (text-lg to text-2xl)
   - Reduced ingredient tab height by 50% in "Why Each Ingredient Matters" section (p-4 to p-2)

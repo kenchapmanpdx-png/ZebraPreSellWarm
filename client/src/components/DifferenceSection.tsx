@@ -90,7 +90,7 @@ export default function DifferenceSection() {
           transition={{ duration: 1 }}
         >
           <p className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
-            The ZebraWell Standard
+            The ZebraThrive Standard
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] mb-8 tracking-tight">
             What Makes Us Different

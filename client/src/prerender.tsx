@@ -17,7 +17,7 @@ import { ingredients as ingredientData } from "./data/ingredients";
 import type { IngredientData } from "./data/ingredients";
 
 const BASE = "https://www.wellnessforzebras.com";
-const BRAND_NAME = "ZebraWell";
+const BRAND_NAME = "ZebraThrive";
 const LOGO = `${BASE}/zebra-logo.svg`;
 const HERO_IMAGE = `${BASE}/images/zebrawell-bottles-final2.jpg`;
 // Site-wide last-reviewed date for educational content. Bump when you do a
@@ -30,7 +30,7 @@ const LAST_REVIEWED = "2026-05-11";
 const AUTHOR = {
   "@type": "Person",
   name: "Ken Chapman",
-  jobTitle: "Founder, ZebraWell",
+  jobTitle: "Founder, ZebraThrive",
   worksFor: { "@id": "https://www.wellnessforzebras.com/#organization" },
 };
 
@@ -41,49 +41,49 @@ type RouteMeta = {
 
 const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/": {
-    title: "ZebraWell | Clinical Support for POTS, EDS & MCAS",
+    title: "ZebraThrive | Clinical Support for POTS, EDS & MCAS",
     description:
       "Advanced autonomic, mast cell, and connective tissue support. Research-driven supplements for the Zebra community. Zero fillers. 100% transparent.",
   },
   "/the-how": {
-    title: "The How - Condition Science | ZebraWell",
+    title: "The How - Condition Science | ZebraThrive",
     description:
-      "How ZebraWell's 3-component system (AM caps, PM caps, Daily Powder) addresses the specific biology of POTS, EDS, and MCAS - autonomic stability, mast cell modulation, and ECM preservation.",
+      "How ZebraThrive's 3-component system (AM caps, PM caps, Daily Powder) addresses the specific biology of POTS, EDS, and MCAS - autonomic stability, mast cell modulation, and ECM preservation.",
   },
   "/ingredients": {
-    title: "All Ingredients | ZebraWell",
+    title: "All Ingredients | ZebraThrive",
     description:
-      "Every ingredient across ZebraWell's AM capsules, PM capsules, and Daily Powder. Doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol.",
+      "Every ingredient across ZebraThrive's AM capsules, PM capsules, and Daily Powder. Doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol.",
   },
   "/our-promise": {
-    title: "Our Promise - Constitution | ZebraWell",
+    title: "Our Promise - Constitution | ZebraThrive",
     description:
-      "ZebraWell's formal commitment: transparent ingredients, decision logs, third-party testing, and accountability for the Zebra community.",
+      "ZebraThrive's formal commitment: transparent ingredients, decision logs, third-party testing, and accountability for the Zebra community.",
   },
   "/preorder": {
-    title: "Reserve - Coming Soon | ZebraWell",
+    title: "Reserve - Coming Soon | ZebraThrive",
     description:
-      "Join the reservation list to be notified when ZebraWell's 3-component system (AM caps, PM caps, Daily Powder) opens for preorder.",
+      "Join the reservation list to be notified when ZebraThrive's 3-component system (AM caps, PM caps, Daily Powder) opens for preorder.",
   },
   "/privacy": {
-    title: "Privacy Policy | ZebraWell",
+    title: "Privacy Policy | ZebraThrive",
     description:
-      "How ZebraWell collects, uses, and protects your information. Email-only data collection, no third-party sharing, full delete-on-request.",
+      "How ZebraThrive collects, uses, and protects your information. Email-only data collection, no third-party sharing, full delete-on-request.",
   },
   "/terms": {
-    title: "Terms of Service | ZebraWell",
+    title: "Terms of Service | ZebraThrive",
     description:
       "Terms governing your use of wellnessforzebras.com. Medical disclaimer, waitlist terms, intellectual property, and liability.",
   },
   "/shipping": {
-    title: "Shipping & Returns | ZebraWell",
+    title: "Shipping & Returns | ZebraThrive",
     description:
-      "Pre-launch shipping policy and what to expect when ZebraWell becomes available. 30-day satisfaction guarantee planned at launch.",
+      "Pre-launch shipping policy and what to expect when ZebraThrive becomes available. 30-day satisfaction guarantee planned at launch.",
   },
   "/contact": {
-    title: "Contact Support | ZebraWell",
+    title: "Contact Support | ZebraThrive",
     description:
-      "Reach the ZebraWell team. Product questions, formulation feedback, partnerships, press. We respond within two business days.",
+      "Reach the ZebraThrive team. Product questions, formulation feedback, partnerships, press. We respond within two business days.",
   },
 };
 
@@ -120,7 +120,7 @@ function metaForRoute(url: string): RouteMeta {
     if (ag?.keyBenefits && ag.keyBenefits.length) parts.push(ag.keyBenefits.slice(0, 3).join(". "));
     let desc = parts.join(" ").trim();
     if (desc.length < 80) {
-      desc = `${name}: evidence-based dose rationale and mechanism for ZebraWell's hEDS, POTS, and MCAS protocol. ${desc}`.trim();
+      desc = `${name}: evidence-based dose rationale and mechanism for ZebraThrive's hEDS, POTS, and MCAS protocol. ${desc}`.trim();
     }
     if (desc.length > 160) {
       const cut = desc.slice(0, 160);
@@ -129,14 +129,14 @@ function metaForRoute(url: string): RouteMeta {
     }
 
     return {
-      title: `${name} | ZebraWell`,
+      title: `${name} | ZebraThrive`,
       description: desc,
     };
   }
 
   // Fallback (e.g., /showcase or unknown routes - handled but noindex)
   return {
-    title: "ZebraWell",
+    title: "ZebraThrive",
     description: "Research-driven supplements for EDS, POTS, and MCAS.",
   };
 }
@@ -291,7 +291,7 @@ function howToForIngredient(
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: `How to start ${cleanName} for hEDS, POTS, or MCAS`,
-    description: `Stepwise titration protocol for introducing ${cleanName} in a mast-cell-sensitive population, drawn from the ZebraWell ingredient page.`,
+    description: `Stepwise titration protocol for introducing ${cleanName} in a mast-cell-sensitive population, drawn from the ZebraThrive ingredient page.`,
     url: `${BASE}/ingredients/${slug}#how-to-start`,
     totalTime: ing.howToStart?.timeline || undefined,
     step: protocol.map((p, idx) => ({
@@ -306,7 +306,7 @@ function howToForIngredient(
 function schemaElementsForRoute(url: string, title: string): HeadElement[] {
   const out: HeadElement[] = [];
   // Breadcrumbs on every page.
-  out.push(jsonLdElement(breadcrumbList(url, title.replace(" | ZebraWell", ""))));
+  out.push(jsonLdElement(breadcrumbList(url, title.replace(" | ZebraThrive", ""))));
 
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
   if (ingMatch) {

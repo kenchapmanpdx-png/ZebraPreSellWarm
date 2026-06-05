@@ -84,7 +84,7 @@ export default function OurStory() {
               Ava is my daughter. She lives with scoliosis, <a href="https://www.ehlers-danlos.com/heds-diagnostic-checklist/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">hEDS</a>, <a href="https://www.dysautonomiainternational.org/page.php?ID=30" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">POTS</a>, and <a href="https://tmsforacure.org/overview/mast-cell-activation-syndrome-mcas/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">MCAS</a>. Mostly invisible conditions that affect everything from how her body uses nutrients to how she lives with chronic pain, subluxating joints, and extreme fatigue.
             </motion.p>
             <motion.p custom={3} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
-              ZebraWell wasn't born in a boardroom. It was born from my relentless pursuit to help her feel better. Not just temporarily, but sustainably and safely.
+              ZebraThrive wasn't born in a boardroom. It was born from my relentless pursuit to help her feel better. Not just temporarily, but sustainably and safely.
             </motion.p>
 
             {/* MOBILE ONLY: photo of Ken & Ava + quote card, placed mid-story (desktop shows it in the left column instead) */}

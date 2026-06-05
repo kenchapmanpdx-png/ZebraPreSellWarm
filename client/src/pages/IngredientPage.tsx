@@ -46,7 +46,7 @@ export default function IngredientPage() {
                         Explore More Ingredients
                     </h2>
                     <p className="text-sm md:text-base text-[#5D5752] mb-8 max-w-2xl">
-                        Continue learning about the components of ZebraWell's AM and PM formulas.
+                        Continue learning about the components of ZebraThrive's AM and PM formulas.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {related.map((r) => (

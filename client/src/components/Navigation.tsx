@@ -58,14 +58,14 @@ export default function Navigation() {
           <Link
             href="/"
             onClick={handleLogoClick}
-            aria-label="ZebraWell home"
+            aria-label="ZebraThrive home"
             className="flex items-center gap-2 cursor-pointer group"
           >
             <div className="w-8 h-8 bg-[#3D3733] rounded-lg flex items-center justify-center text-[#EBE8E1] font-serif font-bold text-lg group-hover:bg-[#B36B4D] transition-colors">
               Z
             </div>
             <span className="font-serif font-bold text-2xl text-[#3D3733] tracking-tight">
-              Zebra<span className="text-[#B36B4D]">Well</span>
+              Zebra<span className="text-[#B36B4D]">Thrive</span>
             </span>
           </Link>
 

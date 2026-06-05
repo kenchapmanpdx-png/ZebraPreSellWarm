@@ -37,7 +37,7 @@ export default function Hero() {
       if (response.ok) {
         toast({
           title: "You're on the list!",
-          description: "We'll notify you the moment ZebraWell is available."
+          description: "We'll notify you the moment ZebraThrive is available."
         });
         setEmail('');
       } else {
@@ -209,7 +209,7 @@ export default function Hero() {
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
                 <img
                   src={heroProductImage}
-                  alt="ZebraWell Triad Support system: AM capsules, PM capsules, and Daily Powder for hEDS, POTS, and MCAS"
+                  alt="ZebraThrive Triad Support system: AM capsules, PM capsules, and Daily Powder for hEDS, POTS, and MCAS"
                   width={1388}
                   height={1133}
                   loading="eager"

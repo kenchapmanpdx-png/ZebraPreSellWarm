@@ -451,7 +451,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 attribution for AI crawlers; this visible line backs it. */}
             <section className="pt-8 border-t border-border/40 text-sm text-muted-foreground/80">
                 <p>
-                    Written by <span className="font-medium text-foreground/85">Ken Chapman</span>, Founder of ZebraWell.
+                    Written by <span className="font-medium text-foreground/85">Ken Chapman</span>, Founder of ZebraThrive.
                     Reviewed and last updated <time dateTime="2026-05-11">May 11, 2026</time>.
                 </p>
             </section>

@@ -337,7 +337,7 @@ export default function ViciousCycle() {
                     Intervention is possible
                   </span>
                   <span className="mt-3 text-[#8A857C] text-sm font-medium">
-                    ZebraWell is built to break this loop at multiple points.
+                    ZebraThrive is built to break this loop at multiple points.
                   </span>
                 </div>
               </div>

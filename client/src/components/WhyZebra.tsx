@@ -1,7 +1,7 @@
 /* client/src/components/WhyZebra.tsx */
 import { Check } from 'lucide-react';
 
-export default function WhyZebraWell() {
+export default function WhyZebraThrive() {
   return (
     <section className="py-20 px-4 bg-[#DED9D0]"> 
       <div className="max-w-7xl mx-auto">
@@ -10,7 +10,7 @@ export default function WhyZebraWell() {
         <div className="max-w-3xl mx-auto mb-16">
           <div className="bg-white/60 backdrop-blur-md border-2 border-[#262321] rounded-3xl p-8 md:p-10 text-center shadow-xl shadow-black/5">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#262321] mb-4">
-              Why <span className="text-[#B36B4D] italic font-normal">ZebraWell</span>?
+              Why <span className="text-[#B36B4D] italic font-normal">ZebraThrive</span>?
             </h2>
             <p className="text-lg text-[#4A4540] leading-relaxed">
               We don't just make supplements. We engineer stability for the complex 

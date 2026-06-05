@@ -6,7 +6,7 @@ export default function QualityStandards() {
   const standards = [
     {
       title: "FDA-Registered Facility",
-      desc: "ZebraWell is manufactured in a facility fully registered with the FDA, subject to regular, rigorous clinical inspections.",
+      desc: "ZebraThrive is manufactured in a facility fully registered with the FDA, subject to regular, rigorous clinical inspections.",
       icon: <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"

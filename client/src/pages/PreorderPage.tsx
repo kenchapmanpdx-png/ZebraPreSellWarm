@@ -47,7 +47,7 @@ export default function PreorderPage() {
       setIsSubmitted(true);
       toast({
         title: "You're on the list!",
-        description: "We'll notify you as soon as ZebraWell is available for order.",
+        description: "We'll notify you as soon as ZebraThrive is available for order.",
       });
     } catch (error) {
       toast({
@@ -80,13 +80,13 @@ export default function PreorderPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Be the First to Experience
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 mt-2">
-                ZebraWell
+                ZebraThrive
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               A 3-component system - AM capsules, PM capsules, and a Daily Powder - designed for the EDS/POTS/MCAS triad.
-              Join the reservation list to experience ZebraWell as soon as it opens for order.
+              Join the reservation list to experience ZebraThrive as soon as it opens for order.
             </p>
 
             <div className="flex items-center justify-center gap-4 mb-12">
@@ -134,11 +134,11 @@ export default function PreorderPage() {
                   <div className="mb-6">
                     <div className="flex flex-col sm:flex-row gap-4 mb-4">
                       <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex-1">
-                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraWell AM</h3>
+                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraThrive AM</h3>
                         <p className="text-[#1D4526] font-medium">Fuel + Focus</p>
                       </div>
                       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex-1">
-                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraWell PM</h3>
+                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraThrive PM</h3>
                         <p className="text-[#1D4526] font-medium">Repair + Recover</p>
                       </div>
                     </div>
@@ -191,7 +191,7 @@ export default function PreorderPage() {
       <section id="zebrawell-quiz" className="py-12 px-4 md:px-12 bg-[#F4F2ED]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-green-900 mb-4">What Symptoms Are You Struggling With Most?</h2>
-          <p className="text-base md:text-lg text-gray-700 mb-6">Select up to 3 symptoms and see how ZebraWell supports them.</p>
+          <p className="text-base md:text-lg text-gray-700 mb-6">Select up to 3 symptoms and see how ZebraThrive supports them.</p>
 
           {/* Quiz Form */}
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mb-6">
@@ -269,7 +269,7 @@ export default function PreorderPage() {
 
           {/* Results Output */}
           <div id="quizResults" className="mt-8 hidden text-left bg-white border border-green-200 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold text-green-800 mb-2">Here's how ZebraWell can help:</h3>
+            <h3 className="text-xl font-bold text-green-800 mb-2">Here's how ZebraThrive can help:</h3>
             <ul id="resultList" className="list-disc list-inside text-gray-800"></ul>
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function PreorderPage() {
               We don't have testimonials yet.
             </h2>
             <p className="text-lg text-[#3D3733] leading-relaxed mb-4">
-              ZebraWell is pre-launch. The first batch hasn't shipped, so no one has used the actual product yet, which means we don't have honest reviews to show you. We'd rather say that plainly than fabricate a quote.
+              ZebraThrive is pre-launch. The first batch hasn't shipped, so no one has used the actual product yet, which means we don't have honest reviews to show you. We'd rather say that plainly than fabricate a quote.
             </p>
             <p className="text-lg text-[#3D3733] leading-relaxed">
               First-batch buyers get the first opportunity to share what worked, what didn't, and what they'd want changed. Those reviews will replace this section.
@@ -310,7 +310,7 @@ export default function PreorderPage() {
                   Reserve Your Spot - Limited First Run!
                 </h2>
                 <p className="text-lg text-gray-700">
-                  Be the first to know when ZebraWell is available for order.
+                  Be the first to know when ZebraThrive is available for order.
                   No spam, just the important updates.
                 </p>
               </div>
@@ -396,7 +396,7 @@ export default function PreorderPage() {
                     You're all set!
                   </h3>
                   <p className="text-gray-700">
-                    We'll send you an email as soon as ZebraWell is ready to order.
+                    We'll send you an email as soon as ZebraThrive is ready to order.
                   </p>
                 </div>
               )}

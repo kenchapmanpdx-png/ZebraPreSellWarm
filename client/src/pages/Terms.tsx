@@ -18,7 +18,7 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Medical disclaimer</h2>
-              <p>ZebraWell is a dietary supplement brand. <strong>The information on this site is for educational purposes only and is not medical advice.</strong> The statements made about our products have not been evaluated by the Food and Drug Administration. Our products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+              <p>ZebraThrive is a dietary supplement brand. <strong>The information on this site is for educational purposes only and is not medical advice.</strong> The statements made about our products have not been evaluated by the Food and Drug Administration. Our products are not intended to diagnose, treat, cure, or prevent any disease.</p>
               <p className="mt-3">Hypermobile Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS), and Mast Cell Activation Syndrome (MCAS) are complex conditions that require care from qualified healthcare providers. Always consult your physician before starting any new supplement, especially if you take prescription medications, have a diagnosed medical condition, are pregnant or nursing, or are giving the product to a minor.</p>
             </section>
 
@@ -29,12 +29,12 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Intellectual property</h2>
-              <p>All content on this site - text, formulation rationale, ingredient research summaries, brand assets - is owned by ZebraWell unless otherwise credited. You may not copy, redistribute, or use our content for commercial purposes without written permission.</p>
+              <p>All content on this site - text, formulation rationale, ingredient research summaries, brand assets - is owned by ZebraThrive unless otherwise credited. You may not copy, redistribute, or use our content for commercial purposes without written permission.</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Limitation of liability</h2>
-              <p>To the maximum extent permitted by law, ZebraWell is not liable for any indirect, incidental, or consequential damages arising from your use of this site or our products. Your use is at your own risk.</p>
+              <p>To the maximum extent permitted by law, ZebraThrive is not liable for any indirect, incidental, or consequential damages arising from your use of this site or our products. Your use is at your own risk.</p>
             </section>
 
             <section>

@@ -340,7 +340,7 @@ export default function CollagenScienceSection() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <span className="text-[#D4A373] font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">
-            The ZebraWell Solution
+            The ZebraThrive Solution
           </span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
             14 Pathways. <span className="text-[#D4A373] italic font-normal">One System.</span>

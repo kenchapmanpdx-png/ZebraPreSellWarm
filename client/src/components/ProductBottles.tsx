@@ -66,7 +66,7 @@ export default function ProductBottles() {
       </g>
       
       {/* Brand label */}
-      <text x="160" y="240" textAnchor="middle" fill="#0f2e24" fontSize="18" fontWeight="bold" fontFamily="Playfair Display, serif">ZebraWell</text>
+      <text x="160" y="240" textAnchor="middle" fill="#0f2e24" fontSize="18" fontWeight="bold" fontFamily="Playfair Display, serif">ZebraThrive</text>
       <text x="160" y="258" textAnchor="middle" fill="#0f2e24" fontSize="10" fillOpacity="0.7">Clinical-Grade Formula</text>
       
       {/* Decorative elements */}

@@ -23,7 +23,7 @@ export default function FAQ() {
   const faqs = [
     {
       icon: Sparkles,
-      question: "What makes ZebraWell actually different?",
+      question: "What makes ZebraThrive actually different?",
       answer: "Most supplements just try to give you 'more collagen,' but if you have hEDS, your body often produces too many enzymes (called MMPs) that actively break down the collagen you already have. It's like trying to fill a bucket with a hole in the bottom. We include specific ingredients to help 'plug the hole' by protecting your existing collagen, while providing the nutrients to support the new collagen your body builds."
     },
     {
@@ -84,7 +84,7 @@ export default function FAQ() {
         {/* Editorial Header */}
         <div className="mb-20 text-left border-l-2 border-[#B36B4D]/30 pl-8">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="flex items-center gap-3 mb-6">
-            <span className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em]">ZebraWell Intelligence</span>
+            <span className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em]">ZebraThrive Intelligence</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-6 leading-tight">
             Straight <span className="text-[#B36B4D] italic font-normal">Answers.</span>

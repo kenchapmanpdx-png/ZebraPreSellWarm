@@ -22,7 +22,7 @@ export default function Footer() {
                 Z
               </div>
               <span className="font-serif font-bold text-2xl tracking-tight">
-                Zebra<span className="text-[#B36B4D]">Well</span>
+                Zebra<span className="text-[#B36B4D]">Thrive</span>
               </span>
             </div>
             <p className="text-[#EBE8E1]/60 text-sm leading-relaxed mb-8">
@@ -66,7 +66,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-[#EBE8E1]/40 uppercase tracking-widest">
-            © {year} ZebraWell. All rights reserved.
+            © {year} ZebraThrive. All rights reserved.
             <span className="ml-3 opacity-80">
               Last updated <time dateTime={LAST_UPDATED}>{LAST_UPDATED}</time>
             </span>

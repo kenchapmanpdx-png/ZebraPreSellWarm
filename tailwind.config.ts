@@ -66,7 +66,7 @@ export default {
         },
         cream: "#FDFBF7", // Background
         
-        // ZEBRAWELL COLOR TOKENS
+        // ZEBRATHRIVE COLOR TOKENS
         zw: {
           'cream-0': '#FBF8F2',
           'cream-1': '#F6F0E6',

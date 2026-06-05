@@ -60,7 +60,7 @@ export default function Contact() {
             Contact Support
           </h1>
           <p className="text-lg text-[#3D3733] mb-10 leading-relaxed">
-            We read every message. ZebraWell is built by people who live with the conditions we
+            We read every message. ZebraThrive is built by people who live with the conditions we
             formulate for, and we treat your questions with that respect.
           </p>
 

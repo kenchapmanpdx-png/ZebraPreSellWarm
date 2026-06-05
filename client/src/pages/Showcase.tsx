@@ -81,7 +81,7 @@ const ENTRIES: ShowcaseEntry[] = [
     blurb:
       "Eight-tile feature grid: '2 Bottles Replace 15', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Gentle by Design', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
     context:
-      "Per the June 15 changelog, the 'Why Choose ZebraWell' section was removed and its benefits moved into 'What Makes ZebraWell Different.' This component may be the orphaned predecessor - verify against the live homepage before reintroducing.",
+      "Per the June 15 changelog, the 'Why Choose ZebraThrive' section was removed and its benefits moved into 'What Makes ZebraThrive Different.' This component may be the orphaned predecessor - verify against the live homepage before reintroducing.",
     Component: DifferenceSection,
   },
   {
@@ -90,7 +90,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/WhyZebra.tsx",
     lines: 51,
     blurb:
-      "Compact 'Why ZebraWell?' callout block. Single paragraph framing the autonomic / mast cell / connective tissue trinity.",
+      "Compact 'Why ZebraThrive?' callout block. Single paragraph framing the autonomic / mast cell / connective tissue trinity.",
     context:
       "Distinct from WhyZebraMascot (which IS used on the homepage). This one looks like a textual companion that may have been replaced by the mascot block.",
     Component: WhyZebra,
@@ -115,7 +115,7 @@ export default function Showcase() {
     meta.name = "robots";
     meta.content = "noindex, nofollow";
     document.head.appendChild(meta);
-    document.title = "ZebraWell - Component Showcase (internal)";
+    document.title = "ZebraThrive - Component Showcase (internal)";
     return () => {
       document.head.removeChild(meta);
     };

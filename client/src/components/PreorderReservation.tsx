@@ -25,7 +25,7 @@ export default function PreorderReservation() {
         setEmail('');
         toast({
           title: "You're on the reservation list!",
-          description: "We'll notify you as soon as ZebraWell is available for order.",
+          description: "We'll notify you as soon as ZebraThrive is available for order.",
         });
       } else {
         throw new Error(data.error || 'Failed to subscribe');
@@ -50,7 +50,7 @@ export default function PreorderReservation() {
             <div className="text-6xl mb-4">✅</div>
             <h2 className="text-3xl font-serif font-bold text-[#262321] mb-4">You're All Set!</h2>
             <p className="text-xl text-[#4A4540] leading-relaxed max-w-2xl mx-auto">
-              We'll send you an email as soon as ZebraWell is ready to order. Thank you for joining our community.
+              We'll send you an email as soon as ZebraThrive is ready to order. Thank you for joining our community.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function PreorderReservation() {
         <div className="rounded-2xl shadow-xl border-2 border-[#262321] p-4 md:p-12 text-center bg-white">
           <h2 className="text-3xl font-serif font-bold text-[#B36B4D] mb-3 md:mb-6">📧 Reserve Your Spot - Limited First Run!</h2>
           <p className="text-xl text-[#262321] leading-relaxed max-w-2xl mx-auto mb-4 md:mb-8">
-            Be the first to know when ZebraWell is available for order.
+            Be the first to know when ZebraThrive is available for order.
           </p>
 
           <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
