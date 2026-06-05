@@ -51,7 +51,7 @@ export default function OurStory() {
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6.75, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
-              className="absolute right-[-30px] md:right-[-50px] bottom-[-115px] md:bottom-[-130px] z-20 w-[70%] max-w-[280px] bg-white border-t border-l border-white/80 rounded-2xl p-5 md:p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
+              className="absolute right-2 md:right-[-50px] -bottom-20 md:bottom-[-130px] z-20 w-[78%] max-w-[260px] md:max-w-[280px] bg-white border-t border-l border-white/80 rounded-2xl p-5 md:p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
             >
               <p className="text-[#3D3733] font-serif italic text-base md:text-lg leading-relaxed">
                 "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
@@ -95,7 +95,7 @@ export default function OurStory() {
           <motion.div custom={5} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="flex flex-col gap-10">
             <Link
               href="/ingredients"
-              className="group inline-flex items-center gap-4 px-12 py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-xs tracking-widest"
+              className="group inline-flex w-full sm:w-auto justify-center items-center gap-3 sm:gap-4 px-6 sm:px-12 py-4 sm:py-5 bg-[#0F2A22] hover:bg-[#B36B4D] text-white font-bold rounded-full shadow-2xl transition-all duration-500 transform hover:scale-[1.05] uppercase text-xs tracking-widest"
             >
               Explore Our Ingredients
               <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />

@@ -112,7 +112,7 @@ export default function FAQ() {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="group border-none bg-white/40 backdrop-blur-md rounded-[2rem] px-8 transition-all duration-700 data-[state=open]:bg-white data-[state=open]:shadow-2xl data-[state=open]:shadow-[#B36B4D]/10 border border-transparent data-[state=open]:border-[#B36B4D]/10"
+                  className="group border-none bg-white/40 backdrop-blur-md rounded-[2rem] px-5 sm:px-8 transition-all duration-700 data-[state=open]:bg-white data-[state=open]:shadow-2xl data-[state=open]:shadow-[#B36B4D]/10 border border-transparent data-[state=open]:border-[#B36B4D]/10"
                 >
                   <AccordionTrigger className="text-left text-base md:text-lg font-serif font-bold text-[#3D3733] py-6 hover:no-underline hover:text-[#B36B4D] transition-colors leading-snug">
                     <div className="flex items-start gap-4 w-full">

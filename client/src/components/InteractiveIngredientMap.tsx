@@ -317,7 +317,7 @@ export default function InteractiveIngredientMap() {
           <div className="flex flex-row justify-between items-start gap-4 md:gap-16">
 
             {/* Column 1: Health Goals */}
-            <div id="issues-col" className="w-[39%] md:w-[31%] space-y-2 md:space-y-6" role="list">
+            <div id="issues-col" className="w-[47%] md:w-[31%] space-y-2 md:space-y-6" role="list">
               <h3 className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-3 text-center md:text-left">Targeted Health Goals</h3>
               <div id="issue-mitochondria" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-yellow-400 font-serif font-bold text-[#262321] text-xs md:text-base flex items-center" role="listitem" tabIndex={0}>Mitochondrial Health</div>
               <div id="issue-energy" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-red-500 font-serif font-bold text-[#262321] text-xs md:text-base flex items-center" role="listitem" tabIndex={0}>Fatigue & Energy Production</div>
@@ -336,7 +336,7 @@ export default function InteractiveIngredientMap() {
             </div>
 
             {/* Column 2: Ingredients */}
-            <div id="ingredients-col" className="w-[39%] md:w-[31%] space-y-1 md:space-y-2" role="list">
+            <div id="ingredients-col" className="w-[47%] md:w-[31%] space-y-1.5 md:space-y-2" role="list">
               <h3 className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-3 text-center md:text-left">Formulation Ingredients</h3>
               <div id="ing-astaxanthin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Astaxanthin</span></div>
               <div id="ing-benfotiamine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Benfotiamine (B1)</span></div>

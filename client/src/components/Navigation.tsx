@@ -103,7 +103,7 @@ export default function Navigation() {
           {/* MOBILE MENU TOGGLE */}
           <button
             type="button"
-            className="md:hidden text-[#3D3733]"
+            className="md:hidden text-[#3D3733] p-2 -mr-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}

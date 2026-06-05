@@ -492,9 +492,9 @@ export default function CollagenScienceSection() {
           })}
 
           <div className="text-center pt-8">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#3D3733] text-white rounded-full shadow-xl hover:scale-105 transition-transform cursor-default">
-              <Zap className="w-4 h-4 text-[#B36B4D]" aria-hidden="true" />
-              <span className="text-xs font-bold tracking-widest uppercase">29 Ingredients - 14 Pathways - 1 System</span>
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 max-w-[92vw] px-5 sm:px-6 py-3 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-xl hover:scale-105 transition-transform cursor-default">
+              <Zap className="w-4 h-4 text-[#B36B4D] flex-shrink-0" aria-hidden="true" />
+              <span className="text-[11px] sm:text-xs font-bold tracking-wider sm:tracking-widest uppercase">29 Ingredients - 14 Pathways - 1 System</span>
             </div>
           </div>
 

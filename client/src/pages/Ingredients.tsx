@@ -31,7 +31,7 @@ export default function Ingredients() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="font-serif font-bold text-5xl md:text-6xl text-[#3D3733] mb-6"
+                            className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-[#3D3733] mb-6 break-words"
                         >
                             The <span className="text-[#B36B4D]">Ingredients</span>
                         </motion.h1>

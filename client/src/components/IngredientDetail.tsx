@@ -84,7 +84,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
         <div className="max-w-4xl mx-auto px-4 py-12 space-y-16">
             {/* Header */}
             <div className="space-y-6 text-center md:text-left">
-                <h1 className="text-4xl md:text-6xl font-serif text-primary leading-tight">{data.name}</h1>
+                <h1 className="text-4xl md:text-6xl font-serif text-primary leading-tight break-words">{data.name}</h1>
                 {data.scientificName && (
                     <p className="text-2xl text-muted-foreground italic font-light">{data.scientificName}</p>
                 )}

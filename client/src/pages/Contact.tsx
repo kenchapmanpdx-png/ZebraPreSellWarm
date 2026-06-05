@@ -151,7 +151,7 @@ export default function Contact() {
             </p>
             <a
               href="mailto:ken@wellnessforzebras.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#0F2A22] hover:bg-[#B36B4D] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full transition-colors"
+              className="inline-flex items-center justify-center gap-2 max-w-full break-all px-5 sm:px-6 py-3 bg-[#0F2A22] hover:bg-[#B36B4D] text-white text-[11px] sm:text-xs font-bold uppercase tracking-tight sm:tracking-[0.2em] rounded-full transition-colors text-center"
             >
               ken@wellnessforzebras.com
             </a>

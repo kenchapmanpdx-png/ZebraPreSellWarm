@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           {/* Explore Links */}
-          <div className="grid grid-cols-2 gap-16">
+          <div className="grid grid-cols-2 gap-8 sm:gap-16">
             <div>
               <h3 className="text-[#B36B4D] font-bold uppercase tracking-[0.2em] text-[10px] mb-6">Explore</h3>
               <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">

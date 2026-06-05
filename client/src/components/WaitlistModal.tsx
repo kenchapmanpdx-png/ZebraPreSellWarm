@@ -77,7 +77,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="bg-[#EBE8E1] border border-[#3D3733]/15 sm:max-w-md">
+      <DialogContent className="bg-[#EBE8E1] border border-[#3D3733]/15 w-[calc(100vw-2rem)] max-w-[calc(100vw-2rem)] sm:w-full sm:max-w-md rounded-2xl">
         {!isSubmitted ? (
           <>
             <DialogHeader>

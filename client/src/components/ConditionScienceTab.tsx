@@ -261,7 +261,7 @@ export default function ConditionScienceTabs() {
 
         {/* TABS - Holographic Style */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white/40 backdrop-blur-md rounded-2xl p-1.5 shadow-xl border border-white/50">
+          <div className="flex w-full max-w-md sm:inline-flex sm:w-auto sm:max-w-none bg-white/40 backdrop-blur-md rounded-2xl p-1.5 shadow-xl border border-white/50">
             {(Object.keys(conditions) as Condition[]).map((key) => {
               const cond = conditions[key];
               const isActive = activeCondition === key;
@@ -269,7 +269,7 @@ export default function ConditionScienceTabs() {
                 <button
                   key={key}
                   onClick={() => { setActiveCondition(key); setExpandedSection(null); }}
-                  className={`relative px-8 py-4 rounded-xl font-bold transition-all duration-300 flex items-center gap-3 ${isActive ? `${cond.bg} ${cond.color} shadow-md` : 'text-[#8A857C] hover:text-[#5D5752] hover:bg-white/30'}`}
+                  className={`relative flex-1 sm:flex-initial justify-center px-2 sm:px-8 py-3 sm:py-4 rounded-xl font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-3 ${isActive ? `${cond.bg} ${cond.color} shadow-md` : 'text-[#8A857C] hover:text-[#5D5752] hover:bg-white/30'}`}
                 >
                   <cond.icon size={18} aria-hidden="true" />
                   <span className="hidden sm:inline tracking-wide">{cond.fullName}</span>
@@ -369,7 +369,7 @@ export default function ConditionScienceTabs() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-20 text-center"><div className="inline-flex items-center gap-4 px-8 py-4 bg-[#3D3733] text-white rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D]" aria-hidden="true" /><span className="text-xs font-black tracking-widest uppercase">29 CLINICAL ACTIVES • 10 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
+        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">29 CLINICAL ACTIVES • 10 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
       </div>
     </section>
   );

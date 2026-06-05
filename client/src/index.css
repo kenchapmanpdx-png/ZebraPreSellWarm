@@ -110,3 +110,16 @@
     @apply bg-[#0F2A22] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#14372D] active:bg-[#1A4639] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)] border border-white/10;
   }
 }
+
+/* ---- Mobile base + horizontal-overflow safety net ---- */
+/* Stop iOS from auto-inflating text after rotation. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+/* Belt-and-suspenders: never let a stray wide element produce a sideways
+   scrollbar on phones. Scoped to <=767px so it can never interfere with the
+   desktop ScrollTrigger pin in ViciousCycle (which only runs >=768px). */
+@media (max-width: 767px) {
+  html, body { overflow-x: hidden; }
+}

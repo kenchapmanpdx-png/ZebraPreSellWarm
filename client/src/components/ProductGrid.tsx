@@ -138,7 +138,7 @@ export default function ProductGrid() {
       <div className="max-w-7xl mx-auto mt-16 text-center relative z-10">
         <Link
           href="/#hero-waitlist-email"
-          className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#B36B4D] transition-all shadow-xl hover:scale-[1.02]"
+          className="inline-flex items-center justify-center gap-3 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl bg-[#0F2A22] text-white font-bold uppercase tracking-wide sm:tracking-[0.2em] text-xs sm:text-sm hover:bg-[#B36B4D] transition-all shadow-xl hover:scale-[1.02]"
         >
           Reserve the Full System
           <ArrowRight size={18} aria-hidden="true" />

@@ -39,12 +39,12 @@ export default function OurPromise() {
       {/* THE CONSTITUTION HEADER: Slow Fade Down */}
       <section id="main-content" className="relative pt-32 pb-20 px-6 bg-[#DED9D0]">
         <div className="container mx-auto max-w-5xl text-center relative z-10" data-aos="fade-down">
-          <div className="inline-flex items-center gap-3 mb-8 px-6 py-2 rounded-full bg-white/60 border border-[#A4613A]/20 text-[#0F2A22] text-xs font-bold uppercase tracking-[0.4em] backdrop-blur-md shadow-sm">
-            <ShieldCheck size={16} className="text-[#A4613A]" aria-hidden="true" />
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 max-w-[92vw] px-4 sm:px-6 py-2 rounded-full bg-white/60 border border-[#A4613A]/20 text-[#0F2A22] text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.4em] backdrop-blur-md shadow-sm text-center">
+            <ShieldCheck size={16} className="text-[#A4613A] flex-shrink-0" aria-hidden="true" />
             The Zebra Science Promise
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-10 text-[#5A3E2B] leading-tight">
+          <h1 className="font-serif font-bold mb-10 text-[#5A3E2B] leading-tight break-words" style={{ fontSize: 'clamp(2.5rem, 9vw, 6rem)' }}>
             Our <span className="text-[#A4613A] italic font-normal">Constitution</span>
           </h1>
 
@@ -176,9 +176,9 @@ export default function OurPromise() {
             "We're not a wellness brand chasing trends. We're a safe harbor for people whose bodies don't follow the rules."
           </p>
 
-          <div className="bg-[#A4613A] p-12 rounded-[4rem] text-white shadow-2xl relative" data-aos="zoom-out-up">
+          <div className="bg-[#A4613A] p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] text-white shadow-2xl relative" data-aos="zoom-out-up">
             <div className="relative z-10">
-              <p className="text-lg font-bold uppercase tracking-[0.4em] mb-6">The Zebra Filter</p>
+              <p className="text-xs sm:text-base md:text-lg font-bold uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-6">The Zebra Filter</p>
               <h3 className="text-3xl md:text-5xl font-serif font-bold mb-8 italic">Does this serve the patient?</h3>
               <div className="flex flex-col md:flex-row justify-center gap-12 text-lg font-bold">
                 <span className="flex items-center gap-3"><CheckCircle2 className="text-[#0F2A22]" aria-hidden="true" /> If yes, we do it.</span>
