@@ -236,7 +236,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
 
-            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-start">
+            <div className="flex items-center gap-4 group cursor-default w-56 mx-auto justify-start md:w-auto md:mx-0 md:flex-1 md:justify-start">
               <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
                 <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />
               </div>
@@ -248,7 +248,7 @@ export default function Hero() {
 
             <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
 
-            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center">
+            <div className="flex items-center gap-4 group cursor-default w-56 mx-auto justify-start md:w-auto md:mx-0 md:flex-1 md:justify-center">
               <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
                 <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />
               </div>
@@ -260,7 +260,7 @@ export default function Hero() {
 
             <div className="hidden md:block w-px h-12 bg-[#3D3733]/10" aria-hidden="true" />
 
-            <div className="flex items-center gap-4 group cursor-default flex-1 justify-center md:justify-end">
+            <div className="flex items-center gap-4 group cursor-default w-56 mx-auto justify-start md:w-auto md:mx-0 md:flex-1 md:justify-end">
               <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center border border-orange-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
                 <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />
               </div>

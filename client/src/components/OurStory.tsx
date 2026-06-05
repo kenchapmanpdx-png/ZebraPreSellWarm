@@ -51,7 +51,7 @@ export default function OurStory() {
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6.75, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
-              className="absolute right-2 md:right-[-50px] -bottom-20 md:bottom-[-130px] z-20 w-[78%] max-w-[260px] md:max-w-[280px] bg-white border-t border-l border-white/80 rounded-2xl p-5 md:p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
+              className="relative mt-5 mx-auto right-auto bottom-auto w-[90%] max-w-[340px] md:absolute md:mt-0 md:mx-0 md:right-[-50px] md:bottom-[-130px] md:w-[78%] md:max-w-[280px] z-20 bg-white border-t border-l border-white/80 rounded-2xl p-5 md:p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
             >
               <p className="text-[#3D3733] font-serif italic text-base md:text-lg leading-relaxed">
                 "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
