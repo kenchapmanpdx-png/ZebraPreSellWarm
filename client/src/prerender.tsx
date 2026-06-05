@@ -19,7 +19,7 @@ import type { IngredientData } from "./data/ingredients";
 const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
 const LOGO = `${BASE}/zebra-logo.svg`;
-const HERO_IMAGE = `${BASE}/images/zebrawell-bottles-final2.jpg`;
+const HERO_IMAGE = `${BASE}/images/zebrathrive-bottles-og.jpg`;
 // Site-wide last-reviewed date for educational content. Bump when you do a
 // pass through ingredients.ts content. Used for MedicalWebPage.lastReviewed.
 const LAST_REVIEWED = "2026-05-11";
