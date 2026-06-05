@@ -206,7 +206,7 @@ export default function BrandByNumbers() {
       <style>{`
         @keyframes bbn-ripple {
           0%   { opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
-          100% { opacity: 0;    transform: translate(-50%, -50%) scale(22); }
+          100% { opacity: 0;    transform: translate(-50%, -50%) scale(17.6); }
         }
       `}</style>
     </section>
