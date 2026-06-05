@@ -209,9 +209,9 @@ export default function Hero() {
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
                 <img
                   src={heroProductImage}
-                  alt="ZebraWell AM and PM clinical-grade supplement formulas for EDS, POTS, and MCAS"
-                  width={1536}
-                  height={1024}
+                  alt="ZebraWell Triad Support system: AM capsules, PM capsules, and Daily Powder for hEDS, POTS, and MCAS"
+                  width={1388}
+                  height={1133}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
