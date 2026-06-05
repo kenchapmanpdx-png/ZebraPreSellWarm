@@ -24,7 +24,7 @@ export default function OurStory() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="w-full md:w-1/2 relative pl-4 pt-4"
+          className="hidden md:block w-full md:w-1/2 relative pl-4 pt-4"
         >
           {/* Decorative Trim */}
           <motion.div
@@ -51,7 +51,7 @@ export default function OurStory() {
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6.75, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
-              className="relative mt-5 mx-auto right-auto bottom-auto w-[90%] max-w-[340px] md:absolute md:mt-0 md:mx-0 md:right-[-50px] md:bottom-[-130px] md:w-[78%] md:max-w-[280px] z-20 bg-white border-t border-l border-white/80 rounded-2xl p-5 md:p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
+              className="absolute right-[-50px] bottom-[-130px] w-[78%] max-w-[280px] z-20 bg-white border-t border-l border-white/80 rounded-2xl p-6 shadow-[0_40px_80px_-15px_rgba(90,62,43,0.25)] backdrop-blur-sm will-change-transform"
             >
               <p className="text-[#3D3733] font-serif italic text-base md:text-lg leading-relaxed">
                 "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
@@ -62,7 +62,7 @@ export default function OurStory() {
         </motion.div>
 
         {/* RIGHT: CONTENT & COLOR RESTORATION */}
-        <div className="w-full md:w-1/2 pt-12 md:pt-0">
+        <div className="w-full md:w-1/2">
           <motion.p
             custom={0} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}
             className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-6 flex items-center gap-3"
@@ -86,6 +86,28 @@ export default function OurStory() {
             <motion.p custom={3} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
               ZebraWell wasn't born in a boardroom. It was born from my relentless pursuit to help her feel better. Not just temporarily, but sustainably and safely.
             </motion.p>
+
+            {/* MOBILE ONLY: photo of Ken & Ava + quote card, placed mid-story (desktop shows it in the left column instead) */}
+            <div className="md:hidden">
+              <div className="relative pl-3 pt-3">
+                <div className="absolute top-0 left-0 right-3 bottom-3 border border-[#B36B4D]/30 rounded-[2rem] z-0" aria-hidden="true" />
+                <div className="relative z-10 overflow-hidden rounded-[2rem] shadow-2xl bg-[#EDEAE3] border border-white/50">
+                  <img
+                    src="/images/ken-and-ava.webp"
+                    alt="Ken and Ava"
+                    className="w-full h-auto object-cover grayscale-[0.2]"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="mt-5 mx-auto w-[92%] max-w-[340px] bg-white border-t border-l border-white/80 rounded-2xl p-5 shadow-[0_30px_60px_-15px_rgba(90,62,43,0.25)]">
+                <p className="text-[#3D3733] font-serif italic text-base leading-relaxed">
+                  "If it's not good enough for Ava, it's not good enough for you. And it's not going in."
+                </p>
+                <div className="w-12 h-[2px] bg-[#B36B4D] mt-4" />
+              </div>
+            </div>
+
             <motion.p custom={4} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="font-bold text-[#3D3733]">
               We couldn't find what she needed. So we created it. A system designed to be effective, tolerable, and honest about what's inside.
             </motion.p>
