@@ -19,6 +19,7 @@
  */
 import { useState } from 'react';
 import { Link } from 'wouter';
+import { ingredients } from '@/data/ingredients';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -221,6 +222,23 @@ function entriesFor(cond: CondKey, tier: Tier) {
   return INGREDIENTS.filter((ing) => ing[cond] && ing[cond]!.tier === tier);
 }
 
+// Pull up to 3 verified PMIDs for an ingredient from its existing sources[]
+// bibliography in the ingredient data. No new research; these are the same
+// citations rendered on the ingredient's own page.
+function pmidsFor(slug: string): string[] {
+  const ing = (ingredients as Record<string, { sources?: { pmid?: string }[] }>)[slug];
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const src of ing?.sources ?? []) {
+    if (src.pmid && !seen.has(src.pmid)) {
+      seen.add(src.pmid);
+      out.push(src.pmid);
+    }
+    if (out.length >= 3) break;
+  }
+  return out;
+}
+
 function IngredientLink({ slug, name }: { slug: string; name: string }) {
   return (
     <Link
@@ -326,16 +344,37 @@ export default function BenefitsByCondition() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                   {conditionItems.map((ing) => {
                     const lead = ing[active]!.tier === 'P';
+                    const pmids = pmidsFor(ing.slug);
                     return (
                       <div key={ing.slug} className="flex gap-3 pb-4 border-b border-[#3D3733]/8">
                         <span className={`mt-2 w-2 h-2 rounded-full flex-shrink-0 ${lead ? 'bg-[#B36B4D]' : 'bg-[#B36B4D]/40'}`} aria-hidden="true" />
-                        <p className="text-sm leading-relaxed text-[#5D5752]">
-                          <IngredientLink slug={ing.slug} name={ing.name} />
-                          {lead && (
-                            <span className="ml-2 align-middle inline-block px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-[#B36B4D]/12 text-[#B36B4D]">Lead</span>
+                        <div className="flex-1">
+                          <p className="text-sm leading-relaxed text-[#5D5752]">
+                            <IngredientLink slug={ing.slug} name={ing.name} />
+                            {lead && (
+                              <span className="ml-2 align-middle inline-block px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-[#B36B4D]/12 text-[#B36B4D]">Lead</span>
+                            )}
+                            <span className="text-[#6B655F]"> {' '} {ing[active]!.line}</span>
+                          </p>
+                          {pmids.length > 0 && (
+                            <p className="mt-1.5 text-[11px] leading-relaxed">
+                              <span className="text-[10px] font-black uppercase tracking-wider text-[#6B655F] mr-1.5">Studies</span>
+                              {pmids.map((pmid, i) => (
+                                <span key={pmid}>
+                                  {i > 0 && <span className="text-[#6B655F]">, </span>}
+                                  <a
+                                    href={`https://pubmed.ncbi.nlm.nih.gov/${pmid}/`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#B36B4D] hover:underline"
+                                  >
+                                    PMID {pmid}
+                                  </a>
+                                </span>
+                              ))}
+                            </p>
                           )}
-                          <span className="text-[#6B655F]"> {' '} {ing[active]!.line}</span>
-                        </p>
+                        </div>
                       </div>
                     );
                   })}
@@ -370,7 +409,7 @@ export default function BenefitsByCondition() {
           {/* Footnote + path to evidence */}
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-[#6B655F] text-xs leading-relaxed max-w-2xl">
-              Lead actives do the targeted work. The rest is supporting cast and whole-body foundation, not equal claims. Every ingredient links to its evidence.
+              Lead actives do the targeted work. The rest is supporting cast and whole-body foundation, not equal claims. Each PMID links to the study on PubMed; the full, per-condition evidence lives on every ingredient's page.
             </p>
             <Link
               href="/ingredients"
