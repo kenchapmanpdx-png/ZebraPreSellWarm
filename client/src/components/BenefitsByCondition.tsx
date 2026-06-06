@@ -286,29 +286,27 @@ export default function BenefitsByCondition() {
         <div role="tabpanel" aria-label={activeMeta.full}>
           {/* Inclusive stat: condition count + near-full segmented bar (no deficit fraction) */}
           <div className="mb-12 pb-8 border-b border-[#3D3733]/10 max-w-2xl">
-            <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
-              <span className="font-serif font-bold text-[#0F2A22] leading-none" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', letterSpacing: '-0.04em' }}>
-                {relevant}
-              </span>
-              <span className="text-[#5D5752] text-base md:text-lg font-medium pb-2">
-                actives work on your {activeMeta.label}
-              </span>
+            <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
+              <div className="flex items-end gap-x-3">
+                <span className="font-serif font-bold text-[#0F2A22] leading-none" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', letterSpacing: '-0.04em' }}>
+                  {relevant}
+                </span>
+                <span className="text-[#5D5752] text-base md:text-lg font-medium pb-2">
+                  actives work on your {activeMeta.label}
+                </span>
+              </div>
+              <div className="flex items-end gap-x-2 pb-2">
+                <span className="font-serif font-bold text-2xl text-[#3D3733] leading-none">+{general.length}</span>
+                <span className="text-[#6B655F] text-sm font-medium">whole-body foundation</span>
+              </div>
             </div>
 
             {/* Condition-targeted + whole-body together fill nearly the whole formula */}
-            <div className="mt-4 flex h-2.5 w-full rounded-full bg-[#0F2A22]/10 overflow-hidden" aria-hidden="true">
+            <div className="mt-5 flex h-2.5 w-full rounded-full bg-[#0F2A22]/10 overflow-hidden" aria-hidden="true">
               <div className="h-full bg-[#B36B4D] transition-all duration-500" style={{ width: `${(relevant / TOTAL) * 100}%` }} />
               <div className="h-full bg-[#B36B4D]/35 transition-all duration-500" style={{ width: `${(general.length / TOTAL) * 100}%` }} />
             </div>
-            <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-xs">
-              <span className="inline-flex items-center gap-1.5 text-[#5D5752] font-medium">
-                <span className="w-2.5 h-2.5 rounded-sm bg-[#B36B4D]" aria-hidden="true" /> {relevant} for your {activeMeta.label}
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-[#5D5752] font-medium">
-                <span className="w-2.5 h-2.5 rounded-sm bg-[#B36B4D]/35" aria-hidden="true" /> {general.length} whole-body foundation
-              </span>
-            </div>
-            <p className="mt-4 text-[#5D5752] text-sm font-medium max-w-xl">
+            <p className="mt-3 text-[#5D5752] text-sm font-medium max-w-xl">
               That is {doingSomething} of {TOTAL} ingredients doing something for you. With one condition you are far from a bystander to your own formula.
             </p>
           </div>
