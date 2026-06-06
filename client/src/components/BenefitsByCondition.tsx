@@ -240,6 +240,8 @@ export default function BenefitsByCondition() {
   const supporting = entriesFor(active, 'S');
   const general = entriesFor(active, 'G');
   const relevant = primary.length + supporting.length;
+  const conditionItems = [...primary, ...supporting]; // lead actives first, then supporting
+  const doingSomething = relevant + general.length;
 
   return (
     <section id="benefits-by-condition" className="px-6 py-20 md:py-28 bg-[#F2F0EA] scroll-mt-24">
@@ -282,34 +284,33 @@ export default function BenefitsByCondition() {
 
         {/* Panel */}
         <div role="tabpanel" aria-label={activeMeta.full}>
-          {/* Inclusive stat strip */}
-          <div className="flex flex-wrap items-end gap-x-8 gap-y-4 mb-12 pb-8 border-b border-[#3D3733]/10">
-            <div>
-              <div className="font-serif font-bold text-[#0F2A22] leading-none" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', letterSpacing: '-0.04em' }}>
+          {/* Inclusive stat: condition count + near-full segmented bar (no deficit fraction) */}
+          <div className="mb-12 pb-8 border-b border-[#3D3733]/10 max-w-2xl">
+            <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
+              <span className="font-serif font-bold text-[#0F2A22] leading-none" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', letterSpacing: '-0.04em' }}>
                 {relevant}
-                <span className="text-[#B36B4D] text-2xl md:text-3xl italic font-medium"> of {TOTAL}</span>
-              </div>
-              <div className="mt-3 h-2 w-full max-w-[16rem] rounded-full bg-[#0F2A22]/10 overflow-hidden" aria-hidden="true">
-                <div className="h-full rounded-full bg-[#B36B4D] transition-all duration-500" style={{ width: `${Math.round((relevant / TOTAL) * 100)}%` }} />
-              </div>
-              <p className="mt-2 text-[#5D5752] text-sm font-medium max-w-xs">
-                actives with a {activeMeta.label} role. You are far from a bystander to your own formula.
-              </p>
+              </span>
+              <span className="text-[#5D5752] text-base md:text-lg font-medium pb-2">
+                actives work on your {activeMeta.label}
+              </span>
             </div>
-            <div className="flex gap-6 text-sm">
-              <div>
-                <div className="font-serif font-bold text-2xl text-[#3D3733]">{primary.length}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-[#B36B4D] mt-1">Target it directly</div>
-              </div>
-              <div>
-                <div className="font-serif font-bold text-2xl text-[#3D3733]">{supporting.length}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-[#6B655F] mt-1">Supporting role</div>
-              </div>
-              <div>
-                <div className="font-serif font-bold text-2xl text-[#3D3733]">{general.length}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-[#6B655F] mt-1">Whole-body</div>
-              </div>
+
+            {/* Condition-targeted + whole-body together fill nearly the whole formula */}
+            <div className="mt-4 flex h-2.5 w-full rounded-full bg-[#0F2A22]/10 overflow-hidden" aria-hidden="true">
+              <div className="h-full bg-[#B36B4D] transition-all duration-500" style={{ width: `${(relevant / TOTAL) * 100}%` }} />
+              <div className="h-full bg-[#B36B4D]/35 transition-all duration-500" style={{ width: `${(general.length / TOTAL) * 100}%` }} />
             </div>
+            <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-xs">
+              <span className="inline-flex items-center gap-1.5 text-[#5D5752] font-medium">
+                <span className="w-2.5 h-2.5 rounded-sm bg-[#B36B4D]" aria-hidden="true" /> {relevant} for your {activeMeta.label}
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-[#5D5752] font-medium">
+                <span className="w-2.5 h-2.5 rounded-sm bg-[#B36B4D]/35" aria-hidden="true" /> {general.length} whole-body foundation
+              </span>
+            </div>
+            <p className="mt-4 text-[#5D5752] text-sm font-medium max-w-xl">
+              That is {doingSomething} of {TOTAL} ingredients doing something for you. With one condition you are far from a bystander to your own formula.
+            </p>
           </div>
 
           <motion.div
@@ -318,43 +319,28 @@ export default function BenefitsByCondition() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
           >
-            {/* PRIMARY */}
-            {primary.length > 0 && (
+            {/* WORKING ON YOUR CONDITION (lead actives + supporting, consolidated into one group) */}
+            {conditionItems.length > 0 && (
               <div className="mb-12">
                 <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#0F2A22] mb-5">
-                  Targets {activeMeta.label} directly
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {primary.map((ing) => (
-                    <div
-                      key={ing.slug}
-                      className="rounded-2xl bg-white border border-[#3D3733]/8 shadow-sm p-5"
-                      style={{ borderLeftWidth: '4px', borderLeftColor: '#B36B4D' }}
-                    >
-                      <IngredientLink slug={ing.slug} name={ing.name} />
-                      <p className="mt-2 text-[#5D5752] text-sm leading-relaxed">{ing[active]!.line}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* SUPPORTING */}
-            {supporting.length > 0 && (
-              <div className="mb-12">
-                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#6B655F] mb-5">
-                  Also working for your {activeMeta.label}
+                  Working on your {activeMeta.label}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                  {supporting.map((ing) => (
-                    <div key={ing.slug} className="flex gap-3 pb-4 border-b border-[#3D3733]/8">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#B36B4D]/50 flex-shrink-0" aria-hidden="true" />
-                      <p className="text-sm leading-relaxed text-[#5D5752]">
-                        <IngredientLink slug={ing.slug} name={ing.name} />
-                        <span className="text-[#6B655F]"> {' '} {ing[active]!.line}</span>
-                      </p>
-                    </div>
-                  ))}
+                  {conditionItems.map((ing) => {
+                    const lead = ing[active]!.tier === 'P';
+                    return (
+                      <div key={ing.slug} className="flex gap-3 pb-4 border-b border-[#3D3733]/8">
+                        <span className={`mt-2 w-2 h-2 rounded-full flex-shrink-0 ${lead ? 'bg-[#B36B4D]' : 'bg-[#B36B4D]/40'}`} aria-hidden="true" />
+                        <p className="text-sm leading-relaxed text-[#5D5752]">
+                          <IngredientLink slug={ing.slug} name={ing.name} />
+                          {lead && (
+                            <span className="ml-2 align-middle inline-block px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-[#B36B4D]/12 text-[#B36B4D]">Lead</span>
+                          )}
+                          <span className="text-[#6B655F]"> {' '} {ing[active]!.line}</span>
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
