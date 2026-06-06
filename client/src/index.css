@@ -118,8 +118,8 @@ html {
   text-size-adjust: 100%;
 }
 /* Belt-and-suspenders: never let a stray wide element produce a sideways
-   scrollbar on phones. Scoped to <=767px so it can never interfere with the
-   desktop ScrollTrigger pin in ViciousCycle (which only runs >=768px). */
+   scrollbar on phones. Scoped to <=767px so it can never interfere with any
+   desktop-only scroll-driven animations (which run >=768px). */
 @media (max-width: 767px) {
   html, body { overflow-x: hidden; }
 }

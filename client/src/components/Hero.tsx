@@ -1,7 +1,7 @@
 /* client/src/components/Hero.tsx */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
 
@@ -9,16 +9,6 @@ export default function Hero() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  const words = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [words.length]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -81,7 +71,7 @@ export default function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] animate-pulse" />
             <span className="text-[10px] font-black text-[#3D3733] uppercase tracking-[0.3em]">
-              Formulated for Complex Conditions
+              Formulated for POTS, MCAS, and hEDS
             </span>
           </motion.div>
 
@@ -92,9 +82,18 @@ export default function Hero() {
             className="font-serif font-bold tracking-tight text-[#3D3733]"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
           >
-            <span className="block mb-2">Advanced Autonomic, Mast Cell</span>
-            <span className="block text-[#B36B4D] italic font-normal">& Connective Tissue Support</span>
+            <span className="block">For bodies that don't follow</span>
+            <span className="block text-[#B36B4D] italic font-normal">the rules.</span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="mt-8 max-w-3xl mx-auto text-[#5D5752] text-base md:text-lg leading-relaxed font-medium"
+          >
+            If your labs keep coming back "normal," if you have been told it is all in your head, or if managing your health has turned into a part-time job of bottles, reactions, and appointments that go nowhere, you are in the right place. We built one system for the way your body actually works, not a generic multivitamin with a few trendy ingredients bolted on.
+          </motion.p>
         </div>
 
         {/* --- THE HOLOGRAPHIC TRINITY GRID --- */}
@@ -121,24 +120,6 @@ export default function Hero() {
               <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
               </p>
-
-              <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
-                Wellness for the <br />
-                <span className="relative inline-block min-w-[200px] h-[1.2em]">
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={words[currentWordIndex]}
-                      initial={{ y: 15, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -15, opacity: 0 }}
-                      transition={{ duration: 0.8, ease: "easeInOut" }}
-                      className="absolute left-0 text-[#B36B4D]"
-                    >
-                      {words[currentWordIndex]}
-                    </motion.span>
-                  </AnimatePresence>
-                </span>
-              </h2>
 
               <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
                 {/* Honeypot */}

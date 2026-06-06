@@ -5,11 +5,21 @@
  * up from zero, and emits two copper ripple rings that expand and
  * dissipate. Lands between ExclusionsBlock and the science section.
  *
- * Accessibility: prefers-reduced-motion users see the final values
+ * Static-fallback fix (spec Section 6): the final values (29 / 100% / 14 / 0)
+ * are the DEFAULT render state, so prerendered HTML, crawlers, and no-JS
+ * visitors always read the real numbers - never "0% third-party tested." The
+ * count-up + burst + ripple is progressive enhancement, applied only on the
+ * client when motion is allowed.
+ *
+ * Accessibility: prefers-reduced-motion users keep the final values
  * immediately, with no burst, count-up, or ripple.
  */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useReducedMotion } from 'framer-motion';
+
+// useLayoutEffect warns under renderToString; fall back to useEffect on the
+// server so the prerender build stays clean.
+const useIsoLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 const stats = [
   {
@@ -41,17 +51,25 @@ const stats = [
 export default function BrandByNumbers() {
   const sectionRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
-  const [active, setActive] = useState<boolean[]>(stats.map(() => false));
-  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
+  // Default = final values, fully visible. This is what the server prerenders
+  // and what the first client render produces (so hydration matches). Only
+  // after mount do we switch into the animated "enhancement" state.
+  const [enhance, setEnhance] = useState(false);
+  const [active, setActive] = useState<boolean[]>(stats.map(() => true));
+  const [counts, setCounts] = useState<number[]>(stats.map((s) => s.target));
+
+  // Client-only, before paint: if motion is allowed, reset to the animation
+  // start state so the count-up can play. Skipped entirely for reduced motion.
+  useIsoLayoutEffect(() => {
+    if (prefersReducedMotion) return;
+    setEnhance(true);
+    setActive(stats.map(() => false));
+    setCounts(stats.map(() => 0));
+  }, [prefersReducedMotion]);
 
   useEffect(() => {
     if (!sectionRef.current) return;
-
-    if (prefersReducedMotion) {
-      setActive(stats.map(() => true));
-      setCounts(stats.map((s) => s.target));
-      return;
-    }
+    if (prefersReducedMotion) return; // values already final, nothing to animate
 
     const items = sectionRef.current.querySelectorAll<HTMLElement>('[data-stat-index]');
 
@@ -131,7 +149,9 @@ export default function BrandByNumbers() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-y-0">
           {stats.map((s, i) => {
             const isActive = active[i];
-            const shown = prefersReducedMotion ? s.target : counts[i];
+            // Show real values until enhancement kicks in on the client.
+            const shown = enhance ? counts[i] : s.target;
+            const visible = !enhance || isActive;
             return (
               <div
                 key={s.label}
@@ -145,8 +165,8 @@ export default function BrandByNumbers() {
                     style={{
                       fontSize: 'clamp(3.5rem, 6.5vw, 5.5rem)',
                       letterSpacing: '-0.04em',
-                      opacity: isActive ? 1 : 0,
-                      transform: isActive ? 'scale(1)' : 'scale(0.5)',
+                      opacity: visible ? 1 : 0,
+                      transform: visible ? 'scale(1)' : 'scale(0.5)',
                       transition:
                         'opacity 0.4s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
                     }}
@@ -157,8 +177,8 @@ export default function BrandByNumbers() {
                     )}
                   </div>
 
-                  {/* Ripple rings (fire once on burst) */}
-                  {isActive && !prefersReducedMotion && (
+                  {/* Ripple rings (fire once on burst, enhancement only) */}
+                  {enhance && isActive && (
                     <>
                       <span
                         aria-hidden="true"
@@ -185,7 +205,7 @@ export default function BrandByNumbers() {
                 <div
                   className="mt-5"
                   style={{
-                    opacity: isActive ? 1 : 0,
+                    opacity: visible ? 1 : 0,
                     transition: 'opacity 0.6s ease 0.4s',
                   }}
                 >

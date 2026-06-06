@@ -19,7 +19,6 @@ import {
   CheckCircle2,
   AlertCircle
 } from 'lucide-react';
-import ViciousCycle from '@/components/ViciousCycle';
 
 export default function CollagenScienceSection() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -182,7 +181,7 @@ export default function CollagenScienceSection() {
       bg: "bg-orange-50",
       border: "border-orange-200",
       gradient: "from-orange-500/10 to-transparent",
-      summary: "POTS is a mitochondrial issue. We support every step of the electron transport chain.",
+      summary: "POTS runs on many systems at once. We support the cellular energy production that fatigue and brain fog draw down.",
       problem: "Without cellular energy, nothing else works properly.",
       solution: "Support each complex of the electron transport chain for maximum ATP.",
       mechanisms: [
@@ -254,7 +253,7 @@ export default function CollagenScienceSection() {
       bg: "bg-red-50",
       border: "border-red-200",
       gradient: "from-red-500/10 to-transparent",
-      summary: "We support blood volume and vascular tone without worsening orthostatic issues.",
+      summary: "We support healthy vascular tone, with attention to not worsening orthostatic symptoms.",
       problem: "Supplements must not lower blood pressure too much in POTS patients.",
       solution: "Support vascular tone and blood volume safely.",
       mechanisms: [
@@ -330,10 +329,9 @@ export default function CollagenScienceSection() {
 
   return (
     <>
-      {/* SECTION 1: VICIOUS CYCLE - pinned scroll-scrubbed sequence */}
-      <ViciousCycle />
-
-      {/* SECTION 2: DARK BAND - "14 Pathways" intro */}
+      {/* SECTION: DARK BAND - "14 Pathways" intro
+          (the old linear "Vicious Cycle" graphic was removed; the three-way
+          loop now lives in the standalone WhyOneSystem section above) */}
       <section className="bg-[#0F2A22] py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B36B4D]/10 rounded-full blur-[120px]" aria-hidden="true" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#2D6B52]/15 rounded-full blur-[120px]" aria-hidden="true" />
@@ -346,7 +344,7 @@ export default function CollagenScienceSection() {
             14 Pathways. <span className="text-[#D4A373] italic font-normal">One System.</span>
           </h2>
           <p className="text-white/75 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-            We don't just patch one symptom. We flood the body with support across every major biological pathway involved in the collagen-mast cell loop, organized into four clusters of action.
+            We don't just patch one symptom. We support every major biological pathway in the collagen, mast cell, and autonomic loop, organized into four clusters of action.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mt-10">

@@ -1,11 +1,12 @@
 /* client/src/pages/Home.tsx */
 import { useEffect } from 'react';
-import { Link } from "wouter"; // Added for the button link
-import { ArrowRight } from "lucide-react"; // Added for the button icon
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import FindYours from '@/components/FindYours';
 import WhyZebraMascot from '@/components/WhyZebraMascot';
 import OurStory from '@/components/OurStory';
+import ComorbidityNudge from '@/components/ComorbidityNudge';
+import WhyOneSystem from '@/components/WhyOneSystem';
 import ProductGrid from '@/components/ProductGrid';
 import ExclusionsBlock from '@/components/ExclusionsBlock';
 import Footer from '@/components/Footer';
@@ -62,36 +63,44 @@ export default function Home() {
       <Navigation />
 
       <main id="main-content">
-        {/* ... (Hero) */}
+        {/* 1. HERO - hook */}
         <Hero />
 
-        {/* 1.5. WHY ZEBRA - Brand Mascot Block */}
-        <div className="px-6 py-12 bg-[#EBE8E1] relative z-20 -mt-12 md:-mt-20 mb-8">
+        {/* 2. FIND YOURS - three co-equal condition entry points (POTS / MCAS / hEDS) */}
+        <FindYours />
+
+        {/* 3. WHY ZEBRA - Brand Mascot Block */}
+        <div className="px-6 py-12 bg-[#EBE8E1] relative z-20">
           <WhyZebraMascot />
         </div>
 
-        {/* 2. QUALITY STANDARDS - Moved above the Ava story so manufacturing
-                  credibility lands before the emotional appeal. */}
-        <QualityStandards />
-
-        {/* 3. OUR STORY - Ken & Ava (Heart of the brand) */}
+        {/* 4. OUR STORY - Ken & Ava (Heart of the brand) */}
         <OurStory />
 
-        {/* 3.5. EXCLUSIONS - what's NOT in the formula. */}
-        <ExclusionsBlock />
+        {/* 5. COMORBIDITY NUDGE - placed directly after Ava ("she has all three, you might too") */}
+        <ComorbidityNudge />
 
-        {/* 3.75. BY THE NUMBERS - animated stat band (29 / 100% / 14 / 0) */}
-        <BrandByNumbers />
+        {/* 6. WHY ONE SYSTEM - three-way loop (replaces the old linear Vicious Cycle) */}
+        <WhyOneSystem />
 
-        {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
+        {/* 7. 14 PATHWAYS - mechanism depth */}
         <CollagenScienceSection />
 
-        {/* 5. PRODUCT GRID - The "Clinical Collection" */}
+        {/* 8. NINE TRIGGERS - what's NOT in the formula */}
+        <ExclusionsBlock />
+
+        {/* 9. BY THE NUMBERS - animated stat band (29 / 100% / 14 / 0) */}
+        <BrandByNumbers />
+
+        {/* 10. CLINICAL QUALITY - FDA / GMP / third-party */}
+        <QualityStandards />
+
+        {/* 11. PRODUCT GRID - The "Clinical Collection" */}
         <div id="products" className="fade-in py-8 md:py-16">
           <ProductGrid />
         </div>
 
-        {/* 6. SOCIAL PROOF & OBJECTIONS */}
+        {/* 12. SOCIAL PROOF & OBJECTIONS */}
         <Testimonials />
         <FAQ />
       </main>

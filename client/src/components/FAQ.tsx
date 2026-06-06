@@ -52,6 +52,11 @@ export default function FAQ() {
       answer: "Safety is our first priority. We excluded ingredients that are known to interfere with common meds like beta-blockers or thyroid treatments. We generally recommend a 2-hour window between your medications and supplements. We provide a full ingredient breakdown that you can take directly to your doctor to ensure it fits your specific plan."
     },
     {
+      icon: Droplets,
+      question: "Will this replace my salt, fluids, or POTS medication?",
+      answer: "No. Those are the foundation of managing POTS and you should keep them. This system works on the layers underneath, cellular energy, autonomic balance, and vascular tone. Think of it as the part of your routine those frontline tools do not cover, not a replacement for them."
+    },
+    {
       icon: Sun,
       question: "Why is it split into a Morning, Evening, and Daily Powder system?",
       answer: "Your body needs different support at 8 AM than it does at 8 PM. The AM capsules focus on heart rate stability, methylation, and energy; the PM capsules focus on histamine clearing and tissue repair overnight. The Daily Powder carries the gram-scale ingredients that need real dose to work (ECM-protective polyphenols and mast cell calm) and is titratable from a sprinkle, which matters if your system is reactive or if you have slow digestion or gastroparesis."

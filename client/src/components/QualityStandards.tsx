@@ -70,6 +70,12 @@ export default function QualityStandards() {
           </motion.div>
         </div>
 
+        {/* 4.8 connective lead line (no new section, no reuse of the
+            "evidence can defend" header) */}
+        <p className="max-w-4xl mb-10 text-[#5D5752] text-base md:text-lg leading-relaxed font-medium">
+          Whichever condition brought you here, the standard is the same. Every active is mapped to a published mechanism, every batch is third-party tested, and every excipient was chosen for sensitive systems, not for shelf appeal. If we cannot cite it, we do not claim it.
+        </p>
+
         {/* Standards Grid - Highly Condensed Horizontal Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {standards.map((item, idx) => (
