@@ -54,7 +54,7 @@ export default function ComorbidityNudge() {
               Take the 30-second zebra check
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            <span className="text-white/55 text-xs font-medium">
+            <span className="text-white/70 text-xs font-medium">
               Educational only. Bring the result to your clinician.
             </span>
           </div>

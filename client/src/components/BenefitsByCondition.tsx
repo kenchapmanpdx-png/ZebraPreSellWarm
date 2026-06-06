@@ -289,6 +289,9 @@ export default function BenefitsByCondition() {
                 {relevant}
                 <span className="text-[#B36B4D] text-2xl md:text-3xl italic font-medium"> of {TOTAL}</span>
               </div>
+              <div className="mt-3 h-2 w-full max-w-[16rem] rounded-full bg-[#0F2A22]/10 overflow-hidden" aria-hidden="true">
+                <div className="h-full rounded-full bg-[#B36B4D] transition-all duration-500" style={{ width: `${Math.round((relevant / TOTAL) * 100)}%` }} />
+              </div>
               <p className="mt-2 text-[#5D5752] text-sm font-medium max-w-xs">
                 actives with a {activeMeta.label} role. You are far from a bystander to your own formula.
               </p>
@@ -300,11 +303,11 @@ export default function BenefitsByCondition() {
               </div>
               <div>
                 <div className="font-serif font-bold text-2xl text-[#3D3733]">{supporting.length}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-[#8A857C] mt-1">Supporting role</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-[#6B655F] mt-1">Supporting role</div>
               </div>
               <div>
                 <div className="font-serif font-bold text-2xl text-[#3D3733]">{general.length}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-[#8A857C] mt-1">Whole-body</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-[#6B655F] mt-1">Whole-body</div>
               </div>
             </div>
           </div>
@@ -339,7 +342,7 @@ export default function BenefitsByCondition() {
             {/* SUPPORTING */}
             {supporting.length > 0 && (
               <div className="mb-12">
-                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#8A857C] mb-5">
+                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#6B655F] mb-5">
                   Also working for your {activeMeta.label}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
@@ -348,7 +351,7 @@ export default function BenefitsByCondition() {
                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#B36B4D]/50 flex-shrink-0" aria-hidden="true" />
                       <p className="text-sm leading-relaxed text-[#5D5752]">
                         <IngredientLink slug={ing.slug} name={ing.name} />
-                        <span className="text-[#8A857C]"> {' '} {ing[active]!.line}</span>
+                        <span className="text-[#6B655F]"> {' '} {ing[active]!.line}</span>
                       </p>
                     </div>
                   ))}
@@ -359,7 +362,7 @@ export default function BenefitsByCondition() {
             {/* GENERAL (summarized, explicitly not condition-specific) */}
             {general.length > 0 && (
               <div className="rounded-2xl bg-[#EBE8E1] border border-[#3D3733]/8 p-6">
-                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#8A857C] mb-2">
+                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#6B655F] mb-2">
                   Whole-body foundation
                 </h3>
                 <p className="text-[#5D5752] text-sm leading-relaxed mb-4 max-w-2xl">
@@ -382,7 +385,7 @@ export default function BenefitsByCondition() {
 
           {/* Footnote + path to evidence */}
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <p className="text-[#8A857C] text-xs leading-relaxed max-w-2xl">
+            <p className="text-[#6B655F] text-xs leading-relaxed max-w-2xl">
               Lead actives do the targeted work. The rest is supporting cast and whole-body foundation, not equal claims. Every ingredient links to its evidence.
             </p>
             <Link

@@ -131,11 +131,13 @@ export default function WhyOneSystem() {
             />
           </svg>
 
-          {/* Center hub label */}
-          <div className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
-            <span className="block text-[10px] font-black uppercase tracking-[0.35em] text-[#B36B4D]">
-              The loop
-            </span>
+          {/* Center hub medallion (gives the triangle's middle a focal point) */}
+          <div className="absolute left-1/2 top-[54%] -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+            <div className="w-28 h-28 rounded-full border border-[#0F2A22]/10 bg-[#EBE8E1]/70 backdrop-blur-sm flex flex-col items-center justify-center px-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#B36B4D] mb-2" aria-hidden="true" />
+              <span className="block text-[10px] font-black uppercase tracking-[0.3em] text-[#B36B4D]">The loop</span>
+              <span className="block text-[9px] text-[#6B655F] mt-1 leading-tight">self-reinforcing</span>
+            </div>
           </div>
 
           {/* Node cards pinned to the triangle vertices */}

@@ -212,7 +212,7 @@ export default function BrandByNumbers() {
                   <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-3">
                     {s.label}
                   </p>
-                  <p className="text-[#8A857C] text-xs md:text-sm leading-relaxed font-medium max-w-[28ch] mx-auto">
+                  <p className="text-[#6B655F] text-xs md:text-sm leading-relaxed font-medium max-w-[28ch] mx-auto">
                     {s.blurb}
                   </p>
                 </div>

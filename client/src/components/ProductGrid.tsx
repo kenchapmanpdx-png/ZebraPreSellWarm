@@ -72,7 +72,7 @@ export default function ProductGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-4"
         >
-          Targeted Biological <span className="text-[#B36B4D] italic">Intervention.</span>
+          Made for your whole <span className="text-[#B36B4D] italic">system.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}

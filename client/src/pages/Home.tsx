@@ -70,9 +70,6 @@ export default function Home() {
         {/* 2. FIND YOURS - three co-equal condition entry points (POTS / MCAS / hEDS) */}
         <FindYours />
 
-        {/* 2.5 BENEFITS BY CONDITION - how much of the 29-active system works for a single condition */}
-        <BenefitsByCondition />
-
         {/* 3. WHY ZEBRA - Brand Mascot Block */}
         <div className="px-6 py-12 bg-[#EBE8E1] relative z-20">
           <WhyZebraMascot />
@@ -89,6 +86,9 @@ export default function Home() {
 
         {/* 7. 14 PATHWAYS - mechanism depth */}
         <CollagenScienceSection />
+
+        {/* 7.5 BENEFITS BY CONDITION - how much of the 29-active system works for a single condition */}
+        <BenefitsByCondition />
 
         {/* 8. NINE TRIGGERS - what's NOT in the formula */}
         <ExclusionsBlock />
