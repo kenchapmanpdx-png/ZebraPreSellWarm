@@ -1,14 +1,14 @@
 /* client/src/components/FAQ.tsx */
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
-  Activity,
+  ArrowRight,
   Sparkles,
   Droplets,
   Award,
@@ -18,8 +18,10 @@ import {
   Sun,
   ShieldOff,
 } from "lucide-react";
+import WaitlistModal from "@/components/WaitlistModal";
 
 export default function FAQ() {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
   const faqs = [
     {
       icon: Sparkles,
@@ -141,23 +143,26 @@ export default function FAQ() {
           })}
         </Accordion>
 
-        {/* Supportive Concierge Pod */}
+        {/* Join the Waitlist CTA (wired to the same /api/waitlist endpoint as the hero) */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-24 flex justify-center">
-          <div className="inline-flex flex-col md:flex-row items-center gap-8 p-8 bg-white/70 backdrop-blur-md rounded-[3rem] border border-white shadow-xl">
-            <div className="flex items-center gap-5">
-              <div className="w-12 h-12 rounded-full bg-[#3D3733] flex items-center justify-center text-white shadow-lg">
-                <Activity size={22} aria-hidden="true" />
-              </div>
-              <div className="text-left">
-                <p className="text-[#3D3733] font-bold text-sm">Have a specific medical question?</p>
-                <p className="text-[#8A857C] text-xs font-medium">We can provide a detailed data sheet for your doctor.</p>
-              </div>
+          <div className="inline-flex flex-col md:flex-row items-center gap-8 p-8 bg-white/70 backdrop-blur-md rounded-[3rem] border border-white shadow-xl text-center md:text-left">
+            <div>
+              <p className="text-[#3D3733] font-bold text-base">Ready to join the herd?</p>
+              <p className="text-[#6B655F] text-xs font-medium mt-1">Founder pricing for the first batch. One email when bottles ship. No spam, ever.</p>
             </div>
-            <Link href="/contact" className="px-8 py-4 bg-[#B36B4D] text-white font-bold text-[10px] uppercase tracking-widest rounded-full hover:bg-[#3D3733] transition-all shadow-md active:scale-95">
-              Request Clinical Data
-            </Link>
+            <button
+              type="button"
+              onClick={() => setWaitlistOpen(true)}
+              className="px-8 py-4 bg-[#B36B4D] text-white font-bold text-[10px] uppercase tracking-widest rounded-full hover:bg-[#3D3733] transition-all shadow-md active:scale-95 inline-flex items-center gap-2 whitespace-nowrap"
+            >
+              Join the Waitlist
+              <ArrowRight size={14} aria-hidden="true" />
+            </button>
           </div>
         </motion.div>
+
+        {/* Waitlist modal (same email capture + endpoint as the hero and floating CTA) */}
+        <WaitlistModal open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       </div>
     </section>
   );
