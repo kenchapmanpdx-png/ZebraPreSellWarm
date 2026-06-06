@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FindYours from '@/components/FindYours';
+import BenefitsByCondition from '@/components/BenefitsByCondition';
 import WhyZebraMascot from '@/components/WhyZebraMascot';
 import OurStory from '@/components/OurStory';
 import ComorbidityNudge from '@/components/ComorbidityNudge';
@@ -68,6 +69,9 @@ export default function Home() {
 
         {/* 2. FIND YOURS - three co-equal condition entry points (POTS / MCAS / hEDS) */}
         <FindYours />
+
+        {/* 2.5 BENEFITS BY CONDITION - how much of the 29-active system works for a single condition */}
+        <BenefitsByCondition />
 
         {/* 3. WHY ZEBRA - Brand Mascot Block */}
         <div className="px-6 py-12 bg-[#EBE8E1] relative z-20">
