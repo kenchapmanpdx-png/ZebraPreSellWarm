@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { trackLead, track } from "@/lib/metaPixel";
 
 export default function PreorderReservation() {
   const [email, setEmail] = useState('');
@@ -23,6 +24,7 @@ export default function PreorderReservation() {
       if (response.ok) {
         setIsSubmitted(true);
         setEmail('');
+        trackLead({ content_name: 'Preorder reservation' });
         toast({
           title: "You're on the reservation list!",
           description: "We'll notify you as soon as ZebraThrive is available for order.",

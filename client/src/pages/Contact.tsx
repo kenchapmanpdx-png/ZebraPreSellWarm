@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, CheckCircle } from "lucide-react";
+import { trackLead, track } from "@/lib/metaPixel";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -30,6 +31,7 @@ export default function Contact() {
       });
       if (!res.ok) throw new Error("Request failed");
       setIsSubmitted(true);
+      track('Contact', { content_name: 'Contact form' });
       toast({
         title: "Message sent",
         description: "Thanks for reaching out. We respond within two business days.",

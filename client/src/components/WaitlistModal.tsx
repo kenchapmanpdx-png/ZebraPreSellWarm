@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import { trackLead, track } from "@/lib/metaPixel";
 
 interface WaitlistModalProps {
   open: boolean;
@@ -48,6 +49,7 @@ export default function WaitlistModal({ open, onOpenChange }: WaitlistModalProps
       });
       if (!response.ok) throw new Error("Request failed");
       setIsSubmitted(true);
+      trackLead({ content_name: 'Waitlist modal' });
       toast({
         title: "You're on the list!",
         description: "We'll notify you the moment ZebraThrive is available.",

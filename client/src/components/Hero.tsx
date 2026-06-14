@@ -4,6 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
+import { trackLead, track } from "@/lib/metaPixel";
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -40,6 +41,7 @@ export default function Hero() {
           description: "We'll notify you the moment ZebraThrive is available."
         });
         setEmail('');
+        trackLead({ content_name: 'Hero waitlist' });
       } else {
         throw new Error(data.message || 'Failed to subscribe');
       }
