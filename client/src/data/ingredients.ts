@@ -767,7 +767,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         safety: {
             sideEffects: "Excellent safety. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. Our 1,500 mg daily dose sits below the 2,000 mg general upper limit and is split across the AM and PM Daily Powder scoops for tolerance.",
-            interactions: "Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 1.5g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we keep the dose at 1.5 g, well below the level where copper competition becomes a concern.",
+            interactions: "Propranolol: in a small 1995 study of healthy volunteers, a single 2 g dose of vitamin C lowered propranolol blood levels (peak about 28% lower, total exposure about 37% lower), with a small effect on heart rate. If you take propranolol, talk with your prescriber before starting. Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 1.5g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we keep the dose at 1.5 g, well below the level where copper competition becomes a concern.",
             excipientConcerns: {
                 avoid: ["Corn-derived fillers", "Synthetic dyes", "Fermentation byproducts"],
                 safe: ["Tapioca-derived ascorbate", "Sodium-buffered powder"]
@@ -787,7 +787,8 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "IV vitamin C increased cardiac output 40% in POTS", pmid: "21622825", authors: "Stewart et al.", year: "2011" },
             { title: "Intravenous infusion of ascorbic acid decreases serum histamine concentrations in patients with allergic and non-allergic diseases", pmid: "23666445", authors: "Hagel AF et al.", year: "2013" },
             { title: "Vitamin C + gelatin doubled collagen synthesis markers", pmid: "27852613", authors: "Shaw et al.", year: "2017" },
-            { title: "2g oral increased DAO activity", pmid: "25095772", authors: "Johnston", year: "2015" }
+            { title: "2g oral increased DAO activity", pmid: "25095772", authors: "Johnston", year: "2015" },
+            { title: "Influence of vitamin C on the absorption and first pass metabolism of propranolol", pmid: "7589058", authors: "Gonzalez JP et al.", year: "1995" }
         ]
     },
     "vitamin-d3": {

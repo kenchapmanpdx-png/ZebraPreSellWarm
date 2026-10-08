@@ -49,7 +49,7 @@ export default function FAQ() {
     {
       icon: Pill,
       question: "Can I take this with my POTS or MCAS medications?",
-      answer: "Safety is our first priority. We excluded ingredients that are known to interfere with common meds like beta-blockers or thyroid treatments. We generally recommend a 2-hour window between your medications and supplements. We provide a full ingredient breakdown that you can take directly to your doctor to ensure it fits your specific plan."
+      answer: "We checked every ingredient against the medications most common in POTS and MCAS: beta-blockers, ivabradine, fludrocortisone, midodrine, antihistamines, and mast cell stabilizers. Where human data shows an interaction, it is listed on that ingredient's page. Two examples: vitamin C lowered propranolol blood levels in a small study, and magnesium should be spaced away from thyroid medication. We generally recommend a 2-hour window between your medications and supplements. We provide a full ingredient breakdown that you can take directly to your doctor to make sure it fits your specific plan."
     },
     {
       icon: Sun,
