@@ -20,7 +20,9 @@ import Shipping from "./pages/Shipping";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/not-found";
 
-const Showcase = lazy(() => import("./pages/Showcase"));
+// Internal design-review page. Dev server only: never bundled or routed in
+// production builds (it shows retired components and superseded ingredients).
+const Showcase = import.meta.env.DEV ? lazy(() => import("./pages/Showcase")) : null;
 
 /**
  * ScrollToTop - fires on every route change to bring the user to the top
@@ -52,11 +54,13 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/shipping" component={Shipping} />
       <Route path="/contact" component={Contact} />
-      <Route path="/showcase">
-        <Suspense fallback={<div className="min-h-screen bg-[#EBE8E1]" />}>
-          <Showcase />
-        </Suspense>
-      </Route>
+      {Showcase ? (
+        <Route path="/showcase">
+          <Suspense fallback={<div className="min-h-screen bg-[#EBE8E1]" />}>
+            <Showcase />
+          </Suspense>
+        </Route>
+      ) : null}
       <Route component={NotFound} />
     </Switch>
   );

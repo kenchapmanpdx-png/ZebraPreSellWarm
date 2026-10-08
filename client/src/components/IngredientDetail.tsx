@@ -5,6 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { CheckCircle2, AlertCircle, XCircle, Beaker, ShieldCheck, Microscope } from "lucide-react";
+import { CONTENT_LAST_REVIEWED, CONTENT_LAST_REVIEWED_LABEL } from "@/lib/siteDates";
 
 interface IngredientDetailProps {
     data: IngredientData;
@@ -88,8 +89,8 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 {data.scientificName && (
                     <p className="text-2xl text-muted-foreground italic font-light">{data.scientificName}</p>
                 )}
-                <p className="text-sm text-muted-foreground/70 leading-relaxed">
-                    Last reviewed <time dateTime="2026-05-11">May 11, 2026</time>
+                <p className="text-sm text-[#5D5752] leading-relaxed">
+                    Last reviewed <time dateTime={CONTENT_LAST_REVIEWED}>{CONTENT_LAST_REVIEWED_LABEL}</time>
                 </p>
             </div>
 
@@ -125,11 +126,11 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         prerender meta description fallback and the .md
                         companion's Quick reference block. */}
                     <div className="space-y-3">
-                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Daily Dose</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-[#8F5238]">Daily Dose</h3>
                         <p className="text-xl font-serif font-medium text-primary">{data.atAGlance.dose}</p>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-accent/80">Key Benefits</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-[#8F5238]">Key Benefits</h3>
                         <div className="flex flex-wrap gap-2">
                             {data.atAGlance.keyBenefits.map((benefit, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm bg-white/60 px-3 py-1.5 rounded-full border border-border/50 shadow-sm">
@@ -182,7 +183,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                     {refNumberForPmid(study.pmid) !== undefined && (
                                                         <a
                                                             href={`#ref-${refNumberForPmid(study.pmid)}`}
-                                                            className="text-accent font-bold mr-2 no-underline hover:underline"
+                                                            className="text-[#8F5238] font-bold mr-2 no-underline hover:underline"
                                                             aria-label={`Jump to reference ${refNumberForPmid(study.pmid)}`}
                                                         >
                                                             [{refNumberForPmid(study.pmid)}]
@@ -207,7 +208,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                             );
                                                         })()}
                                                         {study.design && (
-                                                            <p className="text-xs font-bold uppercase tracking-widest text-[#A4613A]/70">{study.design}</p>
+                                                            <p className="text-xs font-bold uppercase tracking-widest text-[#8F5238]">{study.design}</p>
                                                         )}
                                                     </div>
                                                 );
@@ -236,7 +237,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         { title: "POTS", content: data.triadPlain?.pots || data.triad.pots }
                     ].map((item, idx) => (
                         <div key={idx} className="group relative p-8 bg-white rounded-3xl shadow-lg border border-border/30 transition-all hover:-translate-y-1">
-                            <div className="absolute top-0 right-8 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
+                            <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#8F5238] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
                                 {item.title}
                             </div>
                             <p className="text-muted-foreground leading-relaxed mt-2">{item.content}</p>
@@ -265,11 +266,11 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                             <h3 className="font-bold text-xs uppercase tracking-[0.2em] opacity-60">Form Comparison</h3>
                             <div className="grid gap-3">
                                 {data.whyThisForm.comparison.map((comp, i) => (
-                                    <div key={i} className={`p-4 rounded-xl flex items-start gap-4 transition-colors ${comp.selected ? 'bg-white/10 border border-white/20' : 'opacity-40 grayscale'}`}>
+                                    <div key={i} className={`p-4 rounded-xl flex items-start gap-4 transition-colors ${comp.selected ? 'bg-white/10 border border-white/20' : 'opacity-70 grayscale'}`}>
                                         {comp.selected ? <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" aria-hidden="true" /> : <XCircle className="w-5 h-5 opacity-40 shrink-0 mt-0.5" aria-hidden="true" />}
                                         <div>
                                             <p className="font-bold text-sm">{comp.form}</p>
-                                            <p className="text-xs opacity-70">{comp.difference}</p>
+                                            <p className="text-xs opacity-90">{comp.difference}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -301,7 +302,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
 
                 <div className="grid gap-8 md:grid-cols-2">
                     <div className="p-8 bg-red-50/50 rounded-3xl border border-red-100 space-y-4">
-                        <h3 className="font-bold text-xs uppercase tracking-widest text-red-800/70">Excipients to Avoid</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-red-800">Excipients to Avoid</h3>
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.avoid.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-red-900/80">
@@ -312,7 +313,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         </ul>
                     </div>
                     <div className="p-8 bg-green-50/50 rounded-3xl border border-green-100 space-y-4">
-                        <h3 className="font-bold text-xs uppercase tracking-widest text-green-800/70">Safe Excipients</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-green-800">Safe Excipients</h3>
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.safe.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-green-900/80">
@@ -334,10 +335,10 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
 
             {/* Titration Protocol */}
             {data.howToStart && (
-                <section className="space-y-10">
+                <section id="how-to-start" className="space-y-10 scroll-mt-28">
                     <h2 className="text-3xl font-serif">How to Start</h2>
                     <div className="overflow-hidden border border-border/50 rounded-[2rem] shadow-xl bg-white p-2">
-                        <Table>
+                        <Table regionLabel="How to start: dosing schedule">
                             <TableHeader className="bg-secondary/20">
                                 <TableRow className="border-none">
                                     <TableHead className="py-6 px-8 text-xs uppercase tracking-[0.2em] font-bold">Protocol Step</TableHead>
@@ -398,7 +399,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                         <div className="flex flex-col gap-1">
                                             <div className="flex justify-between items-start gap-4">
                                                 <span className="font-serif text-lg leading-snug">
-                                                    <span className="text-accent font-bold mr-2">[{ref.n}]</span>
+                                                    <span className="text-[#8F5238] font-bold mr-2">[{ref.n}]</span>
                                                     {ref.title}
                                                 </span>
                                                 {ref.pmid && (
@@ -452,7 +453,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             <section className="pt-8 border-t border-border/40 text-sm text-muted-foreground/80">
                 <p>
                     Written by <span className="font-medium text-foreground/85">Ken Chapman</span>, Founder of ZebraThrive.
-                    Reviewed and last updated <time dateTime="2026-05-11">May 11, 2026</time>.
+                    Reviewed and last updated <time dateTime={CONTENT_LAST_REVIEWED}>{CONTENT_LAST_REVIEWED_LABEL}</time>.
                 </p>
             </section>
         </div>

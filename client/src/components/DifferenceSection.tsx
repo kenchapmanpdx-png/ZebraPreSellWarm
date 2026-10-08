@@ -89,7 +89,7 @@ export default function DifferenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <p className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
+          <p className="text-[#8F5238] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
             The ZebraThrive Standard
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] mb-8 tracking-tight">
@@ -120,7 +120,7 @@ export default function DifferenceSection() {
                 {feature.title}
               </h3>
 
-              <p className="text-[#8A857C] text-sm leading-relaxed font-medium">
+              <p className="text-[#6B655F] text-sm leading-relaxed font-medium">
                 {feature.description}
               </p>
             </motion.div>

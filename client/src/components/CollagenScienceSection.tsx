@@ -93,14 +93,14 @@ export default function CollagenScienceSection() {
       bg: "bg-red-50",
       border: "border-red-200",
       gradient: "from-red-500/10 to-transparent",
-      summary: "Collagen fragments trigger mast cells, which release more enzymes. We stop this cycle.",
+      summary: "Collagen fragments can trigger mast cells, which release more enzymes. We support several points in this cycle.",
       problem: "ECM degradation triggers matrikine release; matrikines activate mast cells; mast cells drive more ECM degradation.",
-      solution: "We interrupt this loop at multiple points-blocking signals and stabilizing mast cells.",
+      solution: "We support several points in this loop: the signaling pathways involved and mast cell stability.",
       mechanisms: [
         { name: "TLR4 Blockade", role: "Matrikines activate mast cells here", ingredients: ["Quercetin Phytosome", "Luteolin"] },
         { name: "Mast Cell Stabilization", role: "Reduce mediator release that drives MMP secretion", ingredients: ["PEA", "Astaxanthin"] }
       ],
-      keyInsight: "This feedback loop explains why hEDS patients so often develop MCAS."
+      keyInsight: "Researchers have proposed this feedback loop as one reason hEDS and mast cell issues are often reported together."
     },
     {
       id: 'adamts',
@@ -153,7 +153,7 @@ export default function CollagenScienceSection() {
         { name: "Copper", role: "Essential LOX cofactor", ingredients: ["Copper Bisglycinate"] },
         { name: "Homocysteine", role: "Clearing it prevents LOX damage", ingredients: ["P5P", "Methyl B12/Folate"] }
       ],
-      keyInsight: "B-vitamin deficiency destroys the LOX enzyme via homocysteine."
+      keyInsight: "Elevated homocysteine can inhibit LOX; B vitamins support normal homocysteine metabolism."
     },
     {
       id: 'fibroblasts',
@@ -182,11 +182,12 @@ export default function CollagenScienceSection() {
       bg: "bg-orange-50",
       border: "border-orange-200",
       gradient: "from-orange-500/10 to-transparent",
-      summary: "POTS is a mitochondrial issue. We support every step of the electron transport chain.",
+      summary: "Every cell runs on mitochondrial energy. We include cofactors used at several steps of energy production.",
       problem: "Without cellular energy, nothing else works properly.",
-      solution: "Support each complex of the electron transport chain for maximum ATP.",
+      solution: "Provide the B-vitamin cofactors that mitochondrial energy production depends on.",
       mechanisms: [
-        { name: "Complex I", role: "First step of ETC", ingredients: ["Benfotiamine", "R5P"] },
+        { name: "Complex I/II", role: "FMN and FAD cofactors for electron transport", ingredients: ["R5P"] },
+        { name: "Pyruvate Dehydrogenase", role: "Thiamine-dependent entry into the Krebs cycle", ingredients: ["Benfotiamine"] },
         { name: "NAD+ Regeneration", role: "Fuel for the system", ingredients: ["Nicotinamide Riboside", "Niacinamide"] }
       ],
       keyInsight: "Benfotiamine is the fat-soluble form of B1 with roughly 5x the bioavailability of plain thiamine."
@@ -200,11 +201,11 @@ export default function CollagenScienceSection() {
       bg: "bg-rose-50",
       border: "border-rose-200",
       gradient: "from-rose-500/10 to-transparent",
-      summary: "We use 6 compounds to stop mast cells from releasing tissue-destroying enzymes.",
-      problem: "MCAS creates constant low-grade inflammation that damages tissue.",
-      solution: "Six compounds with different stabilizing mechanisms.",
+      summary: "Six compounds that support normal mast cell stability.",
+      problem: "Overactive mast cells release mediators, including enzymes that can affect connective tissue.",
+      solution: "Six compounds with different stabilizing mechanisms in lab research.",
       mechanisms: [
-        { name: "PPAR-alpha Activation", role: "Suppresses mediator release", ingredients: ["PEA (Micronized)"] },
+        { name: "PPAR-alpha Activation", role: "Suppresses mediator release", ingredients: ["PEA (Ultramicronized)"] },
         { name: "Membrane Stability", role: "Prevents degranulation", ingredients: ["Luteolin"] }
       ],
       keyInsight: "Quercetin Phytosome (Quercefit®) reaches plasma concentrations roughly 20x higher than plain quercetin."
@@ -219,10 +220,10 @@ export default function CollagenScienceSection() {
       border: "border-pink-200",
       gradient: "from-pink-500/10 to-transparent",
       summary: "We provide cofactors for DAO and HNMT to clear histamine from your system.",
-      problem: "Impaired clearance makes even normal histamine levels toxic.",
+      problem: "When histamine breakdown is slow, even normal amounts can build up.",
       solution: "Provide essential cofactors for DAO and HNMT enzymes.",
       mechanisms: [
-        { name: "DAO Enzyme", role: "Gut histamine breakdown", ingredients: ["P5P", "Copper", "Vit C"] },
+        { name: "DAO Enzyme", role: "Gut histamine breakdown", ingredients: ["Copper", "Vit C"] },
         { name: "Methylation", role: "Intracellular breakdown", ingredients: ["Methylfolate", "B12"] }
       ],
       keyInsight: "DAO requires the same copper needed for collagen cross-linking."
@@ -236,9 +237,9 @@ export default function CollagenScienceSection() {
       bg: "bg-cyan-50",
       border: "border-cyan-200",
       gradient: "from-cyan-500/10 to-transparent",
-      summary: "We use Taurine and Magnesium to dampen the 'fight-or-flight' overdrive of POTS.",
-      problem: "POTS is 'fight-or-flight' stuck in the ON position.",
-      solution: "Support inhibitory neurotransmitters to restore balance.",
+      summary: "Taurine, magnesium, and L-theanine support a calm, balanced stress response.",
+      problem: "The nervous system balances 'fight-or-flight' (sympathetic) and 'rest-and-digest' (parasympathetic) signals.",
+      solution: "Support the body's calming (inhibitory) neurotransmitter systems.",
       mechanisms: [
         { name: "GABA-A", role: "Inhibitory system", ingredients: ["L-Theanine", "Taurine"] },
         { name: "Sympathetic Dampening", role: "Calms adrenaline", ingredients: ["Magnesium"] }
@@ -254,14 +255,14 @@ export default function CollagenScienceSection() {
       bg: "bg-red-50",
       border: "border-red-200",
       gradient: "from-red-500/10 to-transparent",
-      summary: "We support blood volume and vascular tone without worsening orthostatic issues.",
-      problem: "Supplements must not lower blood pressure too much in POTS patients.",
-      solution: "Support vascular tone and blood volume safely.",
+      summary: "Ingredients chosen to support vascular health with small or neutral effects on blood pressure.",
+      problem: "Many people in this community run low blood pressure, so ingredients that lower it are a poor fit.",
+      solution: "Support vascular tone with ingredients that have small or neutral blood-pressure effects in people with normal blood pressure.",
       mechanisms: [
-        { name: "Blood Volume", role: "Critical for POTS", ingredients: ["Sodium Ascorbate"] },
+        { name: "Sodium", role: "Small sodium contribution", ingredients: ["Sodium Ascorbate"] },
         { name: "Vascular Tone", role: "Vessel health", ingredients: ["Vitamin C", "Magnesium"] }
       ],
-      keyInsight: "Sodium Ascorbate provides beneficial sodium for POTS patients."
+      keyInsight: "Sodium ascorbate adds about 195 mg of sodium per day alongside the vitamin C."
     },
     {
       id: 'gi-protection',
@@ -279,7 +280,7 @@ export default function CollagenScienceSection() {
         { name: "Mucosal Protection", role: "Maintains lining", ingredients: ["Zinc Carnosine"] },
         { name: "Buffered Forms", role: "Reduces irritation", ingredients: ["Sodium Ascorbate"] }
       ],
-      keyInsight: "Zinc Carnosine is clinically proven to protect gastric mucosa."
+      keyInsight: "Zinc carnosine (polaprezinc) has been studied for gastric mucosal support in human trials in Japan, where it is an approved drug."
     }
   ];
 
@@ -296,7 +297,7 @@ export default function CollagenScienceSection() {
       id: 'protect',
       label: 'Cluster 01',
       title: 'Protect Existing Collagen',
-      subtitle: 'Stop the enzymes that shred connective tissue before they can do damage.',
+      subtitle: 'Support a healthy balance of the enzymes that break down connective tissue.',
       accent: '#0F2A22',
       pathwayIds: ['mmp-inhibition', 'timps', 'transcription', 'adamts']
     },
@@ -312,7 +313,7 @@ export default function CollagenScienceSection() {
       id: 'calm',
       label: 'Cluster 03',
       title: 'Calm the Triggers',
-      subtitle: 'Stabilize mast cells and clear histamine so the loop has nothing to feed.',
+      subtitle: 'Support mast cell stability and normal histamine breakdown.',
       accent: '#B36B4D',
       pathwayIds: ['mast-cells', 'histamine']
     },
@@ -346,7 +347,7 @@ export default function CollagenScienceSection() {
             14 Pathways. <span className="text-[#D4A373] italic font-normal">One System.</span>
           </h2>
           <p className="text-white/75 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-            We don't just patch one symptom. We flood the body with support across every major biological pathway involved in the collagen-mast cell loop, organized into four clusters of action.
+            Rather than targeting one thing, the formula supports many of the biological pathways involved in the collagen-mast cell loop, organized into four clusters.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mt-10">
@@ -380,7 +381,7 @@ export default function CollagenScienceSection() {
               <div key={cluster.id}>
                 <div className="mb-8 pb-5 flex flex-col md:flex-row md:items-end md:justify-between gap-3 border-b" style={{ borderColor: cluster.accent + '33' }}>
                   <div>
-                    <span className="block text-[10px] font-black uppercase tracking-[0.4em] mb-2" style={{ color: cluster.accent }}>
+                    <span className="block text-[10px] font-black uppercase tracking-[0.4em] mb-2" style={{ color: ({ '#B36B4D': '#8F5238', '#A0825A': '#7A6240' } as Record<string, string>)[cluster.accent] ?? cluster.accent }}>
                       {cluster.label}
                     </span>
                     <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#3D3733] leading-tight">
@@ -427,7 +428,7 @@ export default function CollagenScienceSection() {
                           </div>
 
                           {expandedSection !== pathway.id && (
-                            <p className="text-[#8A857C] text-xs mt-3 line-clamp-2 leading-relaxed font-medium">
+                            <p className="text-[#6B655F] text-xs mt-3 line-clamp-2 leading-relaxed font-medium">
                               {pathway.summary}
                             </p>
                           )}
@@ -463,7 +464,7 @@ export default function CollagenScienceSection() {
                                   <div key={i} className="flex flex-col sm:flex-row gap-2 text-xs border-b border-gray-100 last:border-0 pb-2 last:pb-0">
                                     <span className="font-bold text-[#3D3733] sm:w-1/3">{mech.name}</span>
                                     <div className="sm:w-2/3">
-                                      <span className="block text-[#8A857C] mb-1">{mech.role}</span>
+                                      <span className="block text-[#6B655F] mb-1">{mech.role}</span>
                                       <div className="flex flex-wrap gap-1">
                                         {mech.ingredients.map((ing, j) => (
                                           <span key={j} className={`px-1.5 py-0.5 rounded-sm ${pathway.bg} ${pathway.color} font-bold text-[9px] uppercase`}>
@@ -477,7 +478,7 @@ export default function CollagenScienceSection() {
                               </div>
 
                               <div className={`p-4 rounded-lg ${pathway.bg} border ${pathway.border}`}>
-                                <p className={`text-[9px] font-black ${pathway.color} uppercase mb-1 tracking-widest`}>Clinical Insight</p>
+                                <p className={`text-[9px] font-black ${pathway.color} uppercase mb-1 tracking-widest`}>Research Note</p>
                                 <p className="text-[#3D3733] text-xs italic font-medium leading-relaxed">"{pathway.keyInsight}"</p>
                               </div>
                             </div>

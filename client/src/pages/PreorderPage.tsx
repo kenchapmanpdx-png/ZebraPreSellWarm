@@ -1,4 +1,5 @@
-import { useState, FormEvent } from 'react';
+import { useState, useRef, FormEvent } from 'react';
+import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,7 +10,24 @@ import Footer from '@/components/Footer';
 import ZebraPatternOverlay from '@/components/ZebraPatternOverlay';
 import ZebraHeart from '@/components/ZebraHeart';
 import ProductBottles from '@/components/ProductBottles';
-import { CheckCircle, Heart, Sparkles, Clock, Mail } from 'lucide-react';
+import { CheckCircle, Sparkles, Clock, Mail } from 'lucide-react';
+import { trackLead } from '@/lib/metaPixel';
+import { trackGa } from '@/lib/analytics';
+
+const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+const FALLBACK_ERROR =
+  'Something went wrong. Please try again, or email ken@wellnessforzebras.com.';
+
+async function readErrorMessage(response: Response): Promise<string> {
+  try {
+    const data: unknown = await response.json();
+    const msg = (data as { message?: unknown } | null)?.message;
+    if (typeof msg === 'string' && msg.trim()) return msg;
+  } catch {
+    /* non-JSON body */
+  }
+  return FALLBACK_ERROR;
+}
 
 export default function PreorderPage() {
   const [email, setEmail] = useState('');
@@ -21,10 +39,20 @@ export default function PreorderPage() {
   const [hearAboutUs, setHearAboutUs] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [submitError, setSubmitError] = useState('');
+  const emailRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setSubmitError('');
+    if (!EMAIL_RE.test(email.trim())) {
+      setEmailError('Please enter a valid email address, like name@example.com.');
+      emailRef.current?.focus();
+      return;
+    }
+    setEmailError('');
     setIsSubmitting(true);
 
     try {
@@ -43,18 +71,19 @@ export default function PreorderPage() {
           website: hp,
         }),
       });
-      if (!response.ok) throw new Error('Request failed');
+      if (!response.ok) {
+        setSubmitError(await readErrorMessage(response));
+        return;
+      }
       setIsSubmitted(true);
+      trackLead({ content_name: 'Preorder page' });
+      trackGa('generate_lead', { form: 'preorder_page' });
       toast({
         title: "You're on the list!",
         description: "We'll notify you as soon as ZebraThrive is available for order.",
       });
-    } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or contact us directly.",
-        variant: "destructive",
-      });
+    } catch {
+      setSubmitError(FALLBACK_ERROR);
     } finally {
       setIsSubmitting(false);
     }
@@ -64,12 +93,16 @@ export default function PreorderPage() {
     setConditions((prev) => (prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c]));
 
   return (
-    <div className="min-h-screen bg-[#EBE8E1]">
+    <div className="relative min-h-screen bg-[#EBE8E1]">
       <Navigation />
-      <ZebraPatternOverlay opacity={0.03} />
+      {/* Clip the rotated pattern so it cannot widen the page on mobile. */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <ZebraPatternOverlay opacity={0.03} />
+      </div>
 
+      <main id="main-content" className="relative">
       {/* Hero Section */}
-      <section id="main-content" className="relative pt-24 pb-16 overflow-hidden">
+      <section className="relative pt-24 pb-16 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-amber-100 text-amber-800 border-amber-200 px-4 py-2 text-sm font-medium">
@@ -85,14 +118,14 @@ export default function PreorderPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              A 3-component system - AM capsules, PM capsules, and a Daily Powder - designed for the EDS/POTS/MCAS triad.
-              Join the reservation list to experience ZebraThrive as soon as it opens for order.
+              A three-part system (AM capsules, PM capsules, and a Daily Powder) built around the sensitivities common in the hEDS, POTS, and MCAS community.
+              Join the reservation list to hear as soon as ZebraThrive opens for order.
             </p>
 
             <div className="flex items-center justify-center gap-4 mb-12">
-              <div className="flex items-center text-amber-700">
+              <div className="flex items-center text-amber-800">
                 <ZebraHeart className="mr-2" size={20} />
-                <span className="font-medium">Made with care for rare conditions</span>
+                <span className="font-medium">Made with care for the zebra community</span>
               </div>
             </div>
           </div>
@@ -105,7 +138,7 @@ export default function PreorderPage() {
           <div className="bg-white/60 backdrop-blur-sm border border-[#B36B4D]/30 rounded-3xl p-8 md:p-10 shadow-lg">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#0F2A22] mb-5">Why reserve now</h2>
             <p className="text-lg leading-relaxed text-[#3D3733] mb-4">
-              The first batch is limited, and once we close the list, the next public opening is months away - that's the manufacturing lead time on the next run. Here's why that matters: <strong>we set aside bottles from the first batch specifically for your refills.</strong> When you finish a bottle, your next one is already reserved - no gap while we manufacture the next run.
+              The first batch is limited, and once we close the list, the next public opening is months away. That's the manufacturing lead time on the next run. Here's why that matters: <strong>we set aside bottles from the first batch specifically for your refills.</strong> When you finish a bottle, your next one is already reserved, so there is no gap while we manufacture the next run.
             </p>
             <p className="text-lg leading-relaxed text-[#3D3733]">
               New customers in later rounds don't get that guarantee. First-batch buyers do.
@@ -131,38 +164,34 @@ export default function PreorderPage() {
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                     What's Inside
                   </h2>
-                  <div className="mb-6">
-                    <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex-1">
-                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraThrive AM</h3>
-                        <p className="text-[#1D4526] font-medium">Fuel + Focus</p>
-                      </div>
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex-1">
-                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraThrive PM</h3>
-                        <p className="text-[#1D4526] font-medium">Repair + Recover</p>
-                      </div>
-                    </div>
-                  </div>
                   <p className="text-lg text-gray-700 mb-6">
-                    Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night.
-                    That's it-no more 12-bottle stacks.
+                    Each capsule bottle holds 90 capsules: a 30-day supply at 3 capsules each morning (AM) and 3 each evening (PM).
+                    The Daily Powder adds about 7.7 g a day in two scoops, one with each dose. That's it: no more 12-bottle stacks.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <Card className="border-amber-200 bg-amber-50/50">
                     <CardContent className="p-4 text-center">
-                      <div className="text-2xl font-bold text-amber-700 mb-1">AM</div>
-                      <div className="text-sm text-gray-600">Morning Formula</div>
-                      <div className="text-xs text-gray-500 mt-1">4 capsules</div>
+                      <div className="text-2xl font-bold text-amber-800 mb-1">AM</div>
+                      <div className="text-sm text-gray-700">Morning Capsules</div>
+                      <div className="text-xs text-gray-600 mt-1">3 capsules</div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-blue-200 bg-blue-50/50">
+                    <CardContent className="p-4 text-center">
+                      <div className="text-2xl font-bold text-blue-800 mb-1">PM</div>
+                      <div className="text-sm text-gray-700">Evening Capsules</div>
+                      <div className="text-xs text-gray-600 mt-1">3 capsules</div>
                     </CardContent>
                   </Card>
 
                   <Card className="border-green-200 bg-green-50/50">
                     <CardContent className="p-4 text-center">
-                      <div className="text-2xl font-bold text-green-700 mb-1">PM</div>
-                      <div className="text-sm text-gray-600">Evening Formula</div>
-                      <div className="text-xs text-gray-500 mt-1">4 capsules</div>
+                      <div className="text-2xl font-bold text-green-800 mb-1">Powder</div>
+                      <div className="text-sm text-gray-700">Daily Powder</div>
+                      <div className="text-xs text-gray-600 mt-1">2 scoops (about 7.7 g)</div>
                     </CardContent>
                   </Card>
                 </div>
@@ -170,11 +199,11 @@ export default function PreorderPage() {
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
-                    <span>Clinical-grade ingredients</span>
+                    <span>No magnesium stearate, titanium dioxide, or citric acid</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
-                    <span>Formulated for rare conditions</span>
+                    <span>Openable capsules and a titratable powder for low-and-slow starts</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
@@ -183,94 +212,6 @@ export default function PreorderPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Symptom Selector Quiz */}
-      <section id="zebrawell-quiz" className="py-12 px-4 md:px-12 bg-[#F4F2ED]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-green-900 mb-4">What Symptoms Are You Struggling With Most?</h2>
-          <p className="text-base md:text-lg text-gray-700 mb-6">Select up to 3 symptoms and see how ZebraThrive supports them.</p>
-
-          {/* Quiz Form */}
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mb-6">
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Fatigue" className="quiz-checkbox" />
-              Fatigue / Low Energy
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Brain Fog" className="quiz-checkbox" />
-              Brain Fog
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Dizziness" className="quiz-checkbox" />
-              Dizziness / Lightheadedness
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Poor Circulation" className="quiz-checkbox" />
-              Cold Hands / Poor Circulation
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Joint Pain" className="quiz-checkbox" />
-              Joint Pain / Hypermobile Discomfort
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Gut Issues" className="quiz-checkbox" />
-              Gut Issues / IBS
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Anxiety" className="quiz-checkbox" />
-              Anxiety / Dysautonomia
-            </label>
-            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
-              <input type="checkbox" name="symptoms" value="Inflammation" className="quiz-checkbox" />
-              Chronic Inflammation
-            </label>
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="button"
-            onClick={() => {
-              const selected = Array.from(document.querySelectorAll('input[name="symptoms"]:checked')).map(el => (el as HTMLInputElement).value);
-              const resultList = document.getElementById('resultList');
-              const resultBox = document.getElementById('quizResults');
-
-              if (resultList && resultBox) {
-                resultList.innerHTML = '';
-                if (selected.length === 0) {
-                  resultList.innerHTML = '<li>Please select at least one symptom.</li>';
-                } else {
-                  const data: Record<string, string[]> = {
-                    "Fatigue": ["Nicotinamide Riboside (AM)", "Benfotiamine (AM)", "Taurine (Powder)"],
-                    "Brain Fog": ["Methylcobalamin B12 (AM)", "Methylfolate (AM)", "L-Theanine (AM)"],
-                    "Dizziness": ["Taurine (Powder)", "Magnesium Bisglycinate (Powder)", "Vitamin C - Sodium Ascorbate (Powder)"],
-                    "Poor Circulation": ["Vitamin K2 MK-7 (PM)", "Copper Bisglycinate (PM)", "Pine Bark Extract (AM)"],
-                    "Joint Pain": ["PEA (AM)", "Grape Seed Extract (AM/PM)", "Astaxanthin (AM)"],
-                    "Gut Issues": ["Zinc Carnosine (AM/PM)", "PEA (AM)", "Magnesium Bisglycinate (Powder)"],
-                    "Anxiety": ["L-Theanine (AM)", "Taurine (Powder)", "Magnesium Bisglycinate (Powder)"],
-                    "Inflammation": ["Luteolin (AM)", "Quercetin Phytosome (Powder)", "PEA (AM)"]
-                  };
-
-                  selected.forEach(symptom => {
-                    const ingredients = data[symptom] || [];
-                    const line = `<li><strong>${symptom}</strong>: ${ingredients.join(', ')}</li>`;
-                    resultList.innerHTML += line;
-                  });
-                }
-                resultBox.classList.remove('hidden');
-              }
-            }}
-            className="bg-[#0F2A22] hover:bg-[#B36B4D] active:bg-[#8E5433] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 mt-4 focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
-          >
-            Show My Support Plan
-          </button>
-
-          {/* Results Output */}
-          <div id="quizResults" className="mt-8 hidden text-left bg-white border border-green-200 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold text-green-800 mb-2">Here's how ZebraThrive can help:</h3>
-            <ul id="resultList" className="list-disc list-inside text-gray-800"></ul>
           </div>
         </div>
       </section>
@@ -307,7 +248,7 @@ export default function PreorderPage() {
               <div className="mb-8">
                 <Clock className="w-12 h-12 text-amber-600 mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-3xl md:text-4xl font-bold text-terra mb-4">
-                  Reserve Your Spot - Limited First Run!
+                  Reserve Your Spot: Limited First Run
                 </h2>
                 <p className="text-lg text-gray-700">
                   Be the first to know when ZebraThrive is available for order.
@@ -335,17 +276,31 @@ export default function PreorderPage() {
                     <label htmlFor="po-email" className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true" />
-                      <Input id="po-email" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required className="pl-12 py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white" />
+                      <Input
+                        id="po-email"
+                        ref={emailRef}
+                        type="email"
+                        placeholder="you@example.com"
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
+                        required
+                        aria-invalid={emailError ? true : undefined}
+                        aria-describedby={emailError ? 'po-email-error' : undefined}
+                        className="pl-12 py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white"
+                      />
                     </div>
+                    {emailError ? (
+                      <p id="po-email-error" className="mt-1 text-sm font-medium text-[#9B2C2C]">{emailError}</p>
+                    ) : null}
                   </div>
 
                   <div className="text-left">
-                    <label htmlFor="po-phone" className="block text-sm font-semibold text-gray-700 mb-1">Phone <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <label htmlFor="po-phone" className="block text-sm font-semibold text-gray-700 mb-1">Phone <span className="text-gray-600 font-normal">(optional)</span></label>
                     <Input id="po-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} className="py-3 border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white" />
                   </div>
 
                   <fieldset className="text-left">
-                    <legend className="text-sm font-semibold text-gray-700 mb-2">Which apply to you? <span className="text-gray-400 font-normal">(optional)</span></legend>
+                    <legend className="text-sm font-semibold text-gray-700 mb-2">Which apply to you? <span className="text-gray-600 font-normal">(optional; never sent to advertising platforms)</span></legend>
                     <div className="flex flex-wrap gap-2">
                       {['hEDS', 'POTS', 'MCAS', 'Caregiver', 'Other'].map((c) => (
                         <button type="button" key={c} onClick={() => toggleCondition(c)} aria-pressed={conditions.includes(c)} className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${conditions.includes(c) ? 'bg-[#0F2A22] text-white border-[#0F2A22]' : 'bg-white text-gray-700 border-amber-200 hover:border-amber-400'}`}>{c}</button>
@@ -354,12 +309,12 @@ export default function PreorderPage() {
                   </fieldset>
 
                   <div className="text-left">
-                    <label htmlFor="po-supps" className="block text-sm font-semibold text-gray-700 mb-1">Current supplements <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <label htmlFor="po-supps" className="block text-sm font-semibold text-gray-700 mb-1">Current supplements <span className="text-gray-600 font-normal">(optional)</span></label>
                     <textarea id="po-supps" value={currentSupplements} onChange={(e) => setCurrentSupplements(e.target.value)} rows={2} className="w-full px-4 py-3 rounded-md border border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white text-gray-900" />
                   </div>
 
                   <div className="text-left">
-                    <label htmlFor="po-hear" className="block text-sm font-semibold text-gray-700 mb-1">How did you hear about us? <span className="text-gray-400 font-normal">(optional)</span></label>
+                    <label htmlFor="po-hear" className="block text-sm font-semibold text-gray-700 mb-1">How did you hear about us? <span className="text-gray-600 font-normal">(optional)</span></label>
                     <select id="po-hear" value={hearAboutUs} onChange={(e) => setHearAboutUs(e.target.value)} className="w-full px-4 py-3 rounded-md border border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white text-gray-900">
                       <option value="">Select...</option>
                       <option value="Search engine">Search engine</option>
@@ -370,6 +325,12 @@ export default function PreorderPage() {
                       <option value="Other">Other</option>
                     </select>
                   </div>
+
+                  {submitError ? (
+                    <div role="alert" className="text-left text-sm font-medium text-[#9B2C2C] bg-white/80 border border-[#9B2C2C]/30 rounded-md px-4 py-3">
+                      {submitError}
+                    </div>
+                  ) : null}
 
                   <Button
                     type="submit"
@@ -401,13 +362,16 @@ export default function PreorderPage() {
                 </div>
               )}
 
-              <p className="text-sm text-gray-600 mt-6">
-                We respect your privacy. Unsubscribe at any time.
+              <p className="text-sm text-gray-700 mt-6">
+                We respect your privacy. See our{' '}
+                <Link href="/privacy" className="text-[#8F5238] underline underline-offset-2 hover:text-[#0F2A22]">privacy policy</Link>
+                . Unsubscribe at any time.
               </p>
             </div>
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

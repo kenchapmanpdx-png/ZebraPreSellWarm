@@ -14,12 +14,11 @@ import BrandByNumbers from '@/components/BrandByNumbers';
 
 // Direct imports - these were lazy-loaded but the prerender engine ships
 // the Suspense fallback (empty div) for them, so 8 FAQs, the Collagen
-// Shredder science framing, Quality Standards, and Testimonials were
+// Shredder science framing, and Quality Standards were
 // invisible to Google/Ahrefs/AudioEye. Loading directly ensures they
 // appear in the prerendered HTML.
 import CollagenScienceSection from '@/components/CollagenScienceSection';
 import QualityStandards from '@/components/QualityStandards';
-import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 
 export default function Home() {
@@ -86,13 +85,12 @@ export default function Home() {
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
         <CollagenScienceSection />
 
-        {/* 5. PRODUCT GRID - The "Clinical Collection" */}
+        {/* 5. PRODUCT GRID */}
         <div id="products" className="fade-in py-8 md:py-16">
           <ProductGrid />
         </div>
 
         {/* 6. SOCIAL PROOF & OBJECTIONS */}
-        <Testimonials />
         <FAQ />
       </main>
 

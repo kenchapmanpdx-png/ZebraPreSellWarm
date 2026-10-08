@@ -334,10 +334,10 @@ export default function ViciousCycle() {
                   className="absolute inset-x-0 top-0 flex flex-col items-center"
                 >
                   <span className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#A4613A] text-white text-base font-bold shadow-lg">
-                    Intervention is possible
+                    Support at several points
                   </span>
-                  <span className="mt-3 text-[#8A857C] text-sm font-medium">
-                    ZebraThrive is built to break this loop at multiple points.
+                  <span className="mt-3 text-[#6B655F] text-sm font-medium">
+                    We support mast cell stability, collagen protection and energy at several points.
                   </span>
                 </div>
               </div>
@@ -369,7 +369,7 @@ export default function ViciousCycle() {
               <div className="flex flex-col items-center pt-8">
                 <div className="h-12 w-0.5 bg-gradient-to-b from-transparent to-[#D4A373]" aria-hidden="true" />
                 <div className="bg-white border border-[#D4A373]/30 px-6 py-2 rounded-full shadow-sm text-[#8B5E4B] font-serif italic text-base -mt-3">
-                  Intervention is possible
+                  Support at several points
                 </div>
               </div>
             </div>

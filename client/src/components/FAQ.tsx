@@ -24,12 +24,12 @@ export default function FAQ() {
     {
       icon: Sparkles,
       question: "What makes ZebraThrive actually different?",
-      answer: "Most supplements just try to give you 'more collagen,' but if you have hEDS, your body often produces too many enzymes (called MMPs) that actively break down the collagen you already have. It's like trying to fill a bucket with a hole in the bottom. We include specific ingredients to help 'plug the hole' by protecting your existing collagen, while providing the nutrients to support the new collagen your body builds."
+      answer: "Most supplements just try to give you 'more collagen.' But healthy connective tissue depends on a balance between building collagen and breaking it down, and enzymes called MMPs handle the breaking down. We include ingredients that support a healthy balance of that turnover and help protect the collagen you already have, alongside the cofactors your body uses to build new collagen."
     },
     {
       icon: Droplets,
       question: "How should I start taking these if my system is reactive?",
-      answer: "We know our community is highly sensitive, so we designed these for a gradual start. You don't have to start with four or five capsules on day one; you can start with a single capsule to give your body a real chance to adjust. With our powder, you can even start with a tiny sprinkle. This 'low and slow' approach prevents overwhelming your system."
+      answer: "We know our community is highly sensitive, so we designed these for a gradual start. You don't have to start with all three capsules on day one; you can start with a single capsule to give your body a real chance to adjust. With our powder, you can even start with a tiny sprinkle. This 'low and slow' approach prevents overwhelming your system."
     },
     {
       icon: Award,
@@ -44,7 +44,7 @@ export default function FAQ() {
     {
       icon: Clock,
       question: "Is this a permanent fix for my connective tissue?",
-      answer: "Nothing can permanently fix a genetic collagen structure, but we can help you manage and preserve what you have. Our goal is to stop the premature breakdown of your existing tissue while supporting the highest quality 'new build' possible. It's about building a more stable daily foundation, not promising a miracle cure."
+      answer: "No. Nothing changes your genes, and this is not a treatment for any condition. Our goal is to support your body's normal collagen maintenance: helping protect existing collagen and supporting healthy new collagen formation. It's about a steadier daily foundation, not a miracle cure."
     },
     {
       icon: Pill,
@@ -54,7 +54,7 @@ export default function FAQ() {
     {
       icon: Sun,
       question: "Why is it split into a Morning, Evening, and Daily Powder system?",
-      answer: "Your body needs different support at 8 AM than it does at 8 PM. The AM capsules focus on heart rate stability, methylation, and energy; the PM capsules focus on histamine clearing and tissue repair overnight. The Daily Powder carries the gram-scale ingredients that need real dose to work (ECM-protective polyphenols and mast cell calm) and is titratable from a sprinkle, which matters if your system is reactive or if you have slow digestion or gastroparesis."
+      answer: "Your body needs different support at 8 AM than it does at 8 PM. The AM capsules (3 per day) carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, and the copper and manganese used for collagen cross-linking. The PM capsules (3 per day) carry L-theanine, astaxanthin, pantothenic acid, biotin, selenium, boron, and molybdenum. NR, pine bark, grape seed, and zinc carnosine are split across both. The Daily Powder (about 7.7 g a day, in an AM and a PM scoop) carries the gram-scale ingredients: magnesium, vitamin C, taurine, PEA, Quercefit, chlorogenic acid, and luteolin. It is titratable from a sprinkle, which matters if your system is reactive or if you have slow digestion or gastroparesis."
     },
     {
       icon: ShieldOff,
@@ -84,12 +84,12 @@ export default function FAQ() {
         {/* Editorial Header */}
         <div className="mb-20 text-left border-l-2 border-[#B36B4D]/30 pl-8">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="flex items-center gap-3 mb-6">
-            <span className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em]">ZebraThrive Intelligence</span>
+            <span className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.4em]">Common Questions</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-6 leading-tight">
             Straight <span className="text-[#B36B4D] italic font-normal">Answers.</span>
           </h2>
-          <p className="text-[#8A857C] text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
+          <p className="text-[#6B655F] text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
             No fluff. Just the facts on how we protect your stability and support your system.
           </p>
         </div>
@@ -145,11 +145,11 @@ export default function FAQ() {
               </div>
               <div className="text-left">
                 <p className="text-[#3D3733] font-bold text-sm">Have a specific medical question?</p>
-                <p className="text-[#8A857C] text-xs font-medium">We can provide a detailed data sheet for your doctor.</p>
+                <p className="text-[#6B655F] text-xs font-medium">We can provide a detailed data sheet for your doctor.</p>
               </div>
             </div>
             <Link href="/contact" className="px-8 py-4 bg-[#B36B4D] text-white font-bold text-[10px] uppercase tracking-widest rounded-full hover:bg-[#3D3733] transition-all shadow-md active:scale-95">
-              Request Clinical Data
+              Request Ingredient Data
             </Link>
           </div>
         </motion.div>

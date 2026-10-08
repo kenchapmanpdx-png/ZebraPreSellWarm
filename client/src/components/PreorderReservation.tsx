@@ -1,41 +1,69 @@
-import { useState, FormEvent } from 'react';
+import { useRef, useState, FormEvent } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { trackLead, track } from "@/lib/metaPixel";
+import { trackLead } from "@/lib/metaPixel";
+import { trackGa } from "@/lib/analytics";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+const FALLBACK_ERROR =
+  "Something went wrong. Please try again, or email ken@wellnessforzebras.com.";
+
+async function readErrorMessage(response: Response): Promise<string> {
+  try {
+    const data: unknown = await response.json();
+    const msg = (data as { message?: unknown } | null)?.message;
+    if (typeof msg === 'string' && msg.trim()) return msg;
+  } catch {
+    /* non-JSON body */
+  }
+  return FALLBACK_ERROR;
+}
 
 export default function PreorderReservation() {
   const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const emailRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    const trimmed = email.trim();
+    if (!EMAIL_RE.test(trimmed)) {
+      setEmailError('Please enter a valid email address, like name@example.com.');
+      emailRef.current?.focus();
+      return;
+    }
+    setEmailError('');
     setIsSubmitting(true);
 
     try {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({ email: trimmed }),
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         setIsSubmitted(true);
         setEmail('');
         trackLead({ content_name: 'Preorder reservation' });
+        trackGa('generate_lead', { form: 'preorder' });
         toast({
           title: "You're on the reservation list!",
           description: "We'll notify you as soon as ZebraThrive is available for order.",
         });
       } else {
-        throw new Error(data.error || 'Failed to subscribe');
+        toast({
+          title: "Something went wrong",
+          description: await readErrorMessage(response),
+          variant: "destructive",
+        });
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact us directly.",
+        description: FALLBACK_ERROR,
         variant: "destructive",
       });
     } finally {
@@ -70,14 +98,23 @@ export default function PreorderReservation() {
             Be the first to know when ZebraThrive is available for order.
           </p>
 
-          <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
+          <form onSubmit={handleSubmit} noValidate className="w-full max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-3">
+              <label htmlFor="preorder-reservation-email" className="sr-only">Email address</label>
               <input
+                ref={emailRef}
+                id="preorder-reservation-email"
                 type="email"
                 placeholder="Enter your email address"
+                autoComplete="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (emailError) setEmailError('');
+                }}
                 required
+                aria-invalid={emailError ? 'true' : undefined}
+                aria-describedby={emailError ? 'preorder-reservation-email-error' : undefined}
                 className="flex-1 min-w-0 px-4 py-3 border-2 border-[#BCC2BB] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B36B4D] focus:border-[#B36B4D] text-gray-900 bg-white"
               />
               <button
@@ -101,6 +138,11 @@ export default function PreorderReservation() {
                 )}
               </button>
             </div>
+            {emailError && (
+              <p id="preorder-reservation-email-error" role="alert" className="mt-2 text-sm font-medium text-left text-[#9B2C2C]">
+                {emailError}
+              </p>
+            )}
             <p className="text-sm text-[#7A8691] mt-3 opacity-80">
               We respect your privacy. Unsubscribe at any time.
             </p>

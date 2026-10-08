@@ -1,28 +1,77 @@
 /* client/src/components/Hero.tsx */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
-import { trackLead, track } from "@/lib/metaPixel";
+import { trackLead } from "@/lib/metaPixel";
+import { trackGa } from "@/lib/analytics";
+
+const WORDS = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
+const WORD_INTERVAL_MS = 4000;
+const WORD_ROTATIONS = 3;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+const FALLBACK_ERROR =
+  "Something went wrong. Please try again, or email ken@wellnessforzebras.com.";
+
+async function readErrorMessage(response: Response): Promise<string> {
+  try {
+    const data: unknown = await response.json();
+    const msg = (data as { message?: unknown } | null)?.message;
+    if (typeof msg === 'string' && msg.trim()) return msg;
+  } catch {
+    /* non-JSON body */
+  }
+  return FALLBACK_ERROR;
+}
 
 export default function Hero() {
   const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const emailRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+  // Always starts at 0 so the prerendered word matches the first client render.
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = WORDS;
 
-  const words = ['Unseen', 'Disbelieved', 'Dismissed', 'Frustrated', 'Fighting Alone', 'Overlooked', 'Rare', 'Resilient'];
-
+  // Rotate only after mount, only when the user has NOT asked for reduced
+  // motion, and stop after WORD_ROTATIONS full passes through the list.
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [words.length]);
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (reduceMotion.matches) return;
+
+    const maxTicks = WORDS.length * WORD_ROTATIONS;
+    let ticks = 0;
+    const interval = window.setInterval(() => {
+      ticks += 1;
+      setCurrentWordIndex((prev) => (prev + 1) % WORDS.length);
+      if (ticks >= maxTicks) window.clearInterval(interval);
+    }, WORD_INTERVAL_MS);
+
+    // If the user turns on reduced motion mid-visit, stop immediately.
+    const onChange = (e: MediaQueryListEvent) => {
+      if (e.matches) window.clearInterval(interval);
+    };
+    reduceMotion.addEventListener?.('change', onChange);
+
+    return () => {
+      window.clearInterval(interval);
+      reduceMotion.removeEventListener?.('change', onChange);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const trimmed = email.trim();
+    if (!EMAIL_RE.test(trimmed)) {
+      setEmailError('Please enter a valid email address, like name@example.com.');
+      emailRef.current?.focus();
+      return;
+    }
+    setEmailError('');
     setIsSubmitting(true);
 
     try {
@@ -30,10 +79,8 @@ export default function Hero() {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim(), website: hp }),
+        body: JSON.stringify({ email: trimmed, website: hp }),
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         toast({
@@ -42,13 +89,18 @@ export default function Hero() {
         });
         setEmail('');
         trackLead({ content_name: 'Hero waitlist' });
+        trackGa('generate_lead', { form: 'hero' });
       } else {
-        throw new Error(data.message || 'Failed to subscribe');
+        toast({
+          title: "Something went wrong",
+          description: await readErrorMessage(response),
+          variant: "destructive"
+        });
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact us directly.",
+        description: FALLBACK_ERROR,
         variant: "destructive"
       });
     } finally {
@@ -115,12 +167,12 @@ export default function Hero() {
               {/* Microbadge: scarcity / urgency */}
               <div className="inline-flex items-center gap-2 self-start mb-5 px-3 py-1 rounded-full bg-[#B36B4D]/10 border border-[#B36B4D]/20">
                 <Clock className="w-3 h-3 text-[#B36B4D]" aria-hidden="true" />
-                <span className="text-[9px] font-black text-[#B36B4D] uppercase tracking-[0.25em]">
+                <span className="text-[9px] font-black text-[#8F5238] uppercase tracking-[0.25em]">
                   Pre-launch waitlist open
                 </span>
               </div>
 
-              <p className="text-xs font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
+              <p className="text-xs font-black text-[#8F5238] uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
               </p>
 
@@ -142,7 +194,7 @@ export default function Hero() {
                 </span>
               </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
+              <form onSubmit={handleSubmit} noValidate className="space-y-4 relative z-10">
                 {/* Honeypot */}
                 <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
                   <label htmlFor="hero-website-hp">Website (leave blank)</label>
@@ -151,16 +203,27 @@ export default function Hero() {
                 <div className="relative">
                   <label htmlFor="hero-waitlist-email" className="sr-only">Email address for waitlist signup</label>
                   <input
+                    ref={emailRef}
                     id="hero-waitlist-email"
                     type="email"
                     placeholder="Email Address"
                     aria-label="Email address for waitlist signup"
+                    aria-invalid={emailError ? 'true' : undefined}
+                    aria-describedby={emailError ? 'hero-waitlist-email-error' : undefined}
                     autoComplete="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (emailError) setEmailError('');
+                    }}
                     required
                     className="w-full py-5 px-6 bg-white/50 border border-[#3D3733]/10 rounded-2xl text-[#3D3733] text-lg focus:outline-none focus:border-[#B36B4D] focus:bg-white transition-all placeholder:text-[#8A857C]/50"
                   />
+                  {emailError && (
+                    <p id="hero-waitlist-email-error" role="alert" className="mt-2 text-sm font-medium text-[#9B2C2C]">
+                      {emailError}
+                    </p>
+                  )}
                 </div>
                 <button
                   type="submit"

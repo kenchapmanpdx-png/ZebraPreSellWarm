@@ -1,33 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Pixel Code (ID 334231342457223) -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '334231342457223');
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVEJ68587X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-DVEJ68587X');
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <!-- Meta Pixel (334231342457223) + GA4 (G-DVEJ68587X) bootstrap. External
+         file so the CSP can forbid inline scripts. Disclosed at /privacy. -->
+    <script src="/js/analytics-init.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVEJ68587X"></script>
+
 
     <!--
       Per-page <title>, canonical, description, OG, Twitter tags are
@@ -35,7 +15,6 @@
       them here. Universal tags below.
     -->
 
-    <meta name="keywords" content="POTS supplements, MCAS support, Ehlers-Danlos Syndrome, Dysautonomia, Clinical grade supplements, ZebraThrive" />
     <meta name="author" content="ZebraThrive" />
     <meta name="theme-color" content="#0F2A22" />
 
@@ -46,6 +25,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.wellnessforzebras.com/images/zebrathrive-bottles-og.jpg" />
 
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/zebra-logo.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,7 +47,7 @@
         "@type": "ImageObject",
         "url": "https://www.wellnessforzebras.com/zebra-logo.svg"
       },
-      "description": "US-based supplement brand formulating a clinical-grade 3-component system (AM capsules, PM capsules, Daily Powder) for the EDS, POTS, and MCAS (Zebra) community. Mechanism, dose, and primary-literature citations on every ingredient page.",
+      "description": "US-based supplement brand formulating a 3-component system (AM capsules, PM capsules, Daily Powder) for the EDS, POTS, and MCAS (zebra) community. Mechanism, dose, and primary-literature citations on every ingredient page.",
       "founder": {
         "@type": "Person",
         "name": "Ken Chapman",
@@ -79,7 +59,7 @@
         "Mast Cell Activation Syndrome",
         "dietary supplements",
         "extracellular matrix preservation",
-        "matrix metalloproteinase inhibition",
+        "collagen turnover",
         "histamine degradation",
         "autonomic nervous system support"
       ],
@@ -104,17 +84,11 @@
     {
       "@context": "https://schema.org",
       "@type": ["Product", "DietarySupplement"],
-      "@id": "https://www.wellnessforzebras.com/#product-clinical-trinity",
-      "name": "ZebraThrive Clinical Trinity (AM Capsules + PM Capsules + Daily Powder)",
-      "description": "Research-driven 3-component supplement system (AM capsules, PM capsules, Daily Powder) providing autonomic, mast cell, and connective tissue support for adults with hypermobile Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS), and Mast Cell Activation Syndrome (MCAS).",
+      "@id": "https://www.wellnessforzebras.com/#product-system",
+      "name": "ZebraThrive System (AM Capsules + PM Capsules + Daily Powder)",
+      "description": "Research-driven 3-component dietary supplement system: AM capsules (3 per day), PM capsules (3 per day), and a Daily Powder (about 7.7 g per day). Pre-launch; not yet available for purchase.",
       "brand": { "@type": "Brand", "name": "ZebraThrive" },
-      "manufacturer": { "@id": "https://www.wellnessforzebras.com/#organization" },
       "image": "https://www.wellnessforzebras.com/images/zebrathrive-bottles-og.jpg",
-      "targetPopulation": "Adults 18+ with hypermobile Ehlers-Danlos Syndrome, POTS, or Mast Cell Activation Syndrome",
-      "legalStatus": {
-        "@type": "DrugLegalStatus",
-        "name": "Dietary supplement, US DSHEA"
-      },
       "safetyConsideration": "Consult a qualified healthcare provider before starting, especially if pregnant, breastfeeding, or taking prescription medications. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."
     }
     </script>

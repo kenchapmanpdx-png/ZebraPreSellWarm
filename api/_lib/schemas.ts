@@ -9,6 +9,10 @@
  * This is a near-duplicate of shared/schema.ts; the original stays
  * for the Express dev server and Drizzle CLI (db:push). When schema
  * changes, update BOTH files. Keep them in sync.
+ *
+ * The request validation rules below (trim, max lengths, messages) are only
+ * enforced here; shared/schema.ts is used by drizzle-kit for table
+ * definitions only, so the two may differ in validation without harm.
  */
 import { pgTable, text, serial, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
@@ -41,26 +45,58 @@ export const waitlistSubmissions = pgTable("waitlist_submissions", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
+/* Field helpers: every string is trimmed and length-capped. Messages are
+ * short and human because the first one is shown to the user on a 400. */
+const requiredText = (label: string, max: number) =>
+  z
+    .string({ required_error: `${label} is required`, invalid_type_error: `${label} must be text` })
+    .trim()
+    .min(1, `${label} is required`)
+    .max(max, `${label} is too long (${max} characters max)`);
+
+const optionalText = (label: string, max: number) =>
+  z
+    .string({ invalid_type_error: `${label} must be text` })
+    .trim()
+    .max(max, `${label} is too long (${max} characters max)`)
+    .optional();
+
+const emailField = z
+  .string({ required_error: "Email is required", invalid_type_error: "Email must be text" })
+  .trim()
+  .min(1, "Email is required")
+  .max(254, "Email is too long (254 characters max)")
+  .email("Please enter a valid email address");
+
 export const insertPreorderReservationSchema = createInsertSchema(preorderReservations).omit({
   id: true,
   createdAt: true,
 }).extend({
-  email: z.string().email("Please enter a valid email address"),
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  phone: z.string().optional(),
-  conditions: z.array(z.string()).optional(),
-  currentSupplements: z.string().optional(),
-  hearAboutUs: z.string().optional(),
+  email: emailField,
+  firstName: requiredText("First name", 100),
+  lastName: requiredText("Last name", 100),
+  phone: optionalText("Phone", 40),
+  conditions: z
+    .array(
+      z
+        .string({ invalid_type_error: "Each condition must be text" })
+        .trim()
+        .max(60, "Each condition must be 60 characters or fewer"),
+      { invalid_type_error: "Conditions must be a list" },
+    )
+    .max(10, "Please choose 10 conditions or fewer")
+    .optional(),
+  currentSupplements: optionalText("Current supplements", 2000),
+  hearAboutUs: optionalText("How you heard about us", 200),
 });
 
 export const insertContactSubmissionSchema = createInsertSchema(contactSubmissions).omit({
   id: true,
   createdAt: true,
 }).extend({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(1, "Message is required"),
+  name: requiredText("Name", 100),
+  email: emailField,
+  message: requiredText("Message", 5000),
 });
 
 
@@ -68,5 +104,5 @@ export const insertWaitlistSubmissionSchema = createInsertSchema(waitlistSubmiss
   id: true,
   createdAt: true,
 }).extend({
-  email: z.string().email("Please enter a valid email address"),
+  email: emailField,
 });

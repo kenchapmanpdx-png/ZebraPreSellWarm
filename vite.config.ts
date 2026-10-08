@@ -5,7 +5,7 @@ import { vitePrerenderPlugin } from "vite-prerender-plugin";
 import ingredientList from "./scripts/ingredient-routes.json";
 
 // All routes prerendered at build time.
-// Root + section pages + 29 ingredient detail pages = 38 routes.
+// Root + section pages + 404 + 29 ingredient detail pages = 39 routes.
 // (Note: /showcase is intentionally NOT in this list - internal review page,
 //  no need to prerender; SPA fallback will serve it via index.html.)
 const PRERENDER_ROUTES = [
@@ -18,6 +18,9 @@ const PRERENDER_ROUTES = [
   "/terms",
   "/shipping",
   "/contact",
+  // Rendered by the catch-all NotFound route; scripts/finalize-404.ts moves it
+  // to dist/public/404.html, which Vercel serves with HTTP 404 for unknown URLs.
+  "/404",
   ...ingredientList.map((i: { slug: string }) => `/ingredients/${i.slug}`),
 ];
 
@@ -63,7 +66,6 @@ export default defineConfig({
           ],
           "framer": ["framer-motion"],
           "icons": ["lucide-react"],
-          "forms": ["react-hook-form", "@hookform/resolvers", "zod", "zod-validation-error"],
           "query": ["@tanstack/react-query"],
         },
       },

@@ -13,11 +13,26 @@ import { execSync } from "node:child_process";
 import { writeFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import ingredientList from "./ingredient-routes.json" with { type: "json" };
+import { CONTENT_LAST_REVIEWED } from "../client/src/lib/siteDates";
 
 const HOST = "https://www.wellnessforzebras.com";
-const TODAY = new Date().toISOString().slice(0, 10);
+
+// Vercel builds from a shallow clone, where `git log -- <file>` returns the
+// deploy commit's date for every file. In that case use the maintained
+// content-review date instead of a fake "everything changed today".
+function isShallowClone(): boolean {
+  try {
+    return (
+      execSync("git rev-parse --is-shallow-repository", { encoding: "utf8" }).trim() === "true"
+    );
+  } catch {
+    return true;
+  }
+}
+const SHALLOW = isShallowClone();
 
 function gitDateFor(...paths: string[]): string {
+  if (SHALLOW) return CONTENT_LAST_REVIEWED;
   let latest = "";
   for (const p of paths) {
     const full = resolve(p);
@@ -32,7 +47,7 @@ function gitDateFor(...paths: string[]): string {
       // ignore - file not tracked or git not available
     }
   }
-  return latest || TODAY;
+  return latest || CONTENT_LAST_REVIEWED;
 }
 
 type Route = {
@@ -52,7 +67,6 @@ const CORE_ROUTES: Route[] = [
       "client/src/components/OurStory.tsx",
       "client/src/components/WhyZebraMascot.tsx",
       "client/src/components/QualityStandards.tsx",
-      "client/src/components/Testimonials.tsx",
       "client/src/components/FAQ.tsx",
       "client/src/components/ProductGrid.tsx",
       "client/src/components/ExclusionsBlock.tsx",
@@ -61,13 +75,8 @@ const CORE_ROUTES: Route[] = [
     changefreq: "weekly",
     priority: "1.0",
   },
-  {
-    loc: "/preorder",
-    sources: ["client/src/pages/PreorderPage.tsx", "client/src/components/PreorderReservation.tsx"],
-    changefreq: "weekly",
-    priority: "0.9",
-    hasMd: true,
-  },
+  // /preorder is noindex (2026-10-07) and /the-how is noindex (2026-05-12):
+  // neither belongs in the sitemap.
   {
     loc: "/ingredients",
     sources: ["client/src/pages/Ingredients.tsx", "client/src/data/ingredients.ts"],
@@ -131,15 +140,8 @@ for (const ing of ingredientList as Array<{ slug: string }>) {
   entries.push(xmlEntry(`/ingredients/${ing.slug}`, ingredientLastmod, "monthly", "0.6"));
 }
 
-// .md companion pages - same lastmod as their HTML parent
-for (const r of CORE_ROUTES) {
-  if (!r.hasMd) continue;
-  const lastmod = gitDateFor(...r.sources);
-  entries.push(xmlEntry(`${r.loc === "/" ? "" : r.loc}.md`, lastmod, r.changefreq, "0.5"));
-}
-for (const ing of ingredientList as Array<{ slug: string }>) {
-  entries.push(xmlEntry(`/ingredients/${ing.slug}.md`, ingredientLastmod, "monthly", "0.5"));
-}
+// .md companion pages are NOT listed: they duplicate the HTML pages. They stay
+// reachable for AI assistants through /llms.txt.
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -149,4 +151,6 @@ ${entries.join("\n")}
 
 const outPath = resolve("dist/public/sitemap.xml");
 writeFileSync(outPath, xml, "utf8");
-console.log(`[sitemap] wrote ${outPath} with ${entries.length} URLs (per-URL git-derived lastmod)`);
+console.log(
+  `[sitemap] wrote ${outPath} with ${entries.length} URLs (lastmod: ${SHALLOW ? `content review date ${CONTENT_LAST_REVIEWED}` : "per-URL git dates"})`,
+);

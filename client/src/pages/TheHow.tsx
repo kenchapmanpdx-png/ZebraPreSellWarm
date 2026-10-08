@@ -19,19 +19,19 @@ export default function TheHow() {
             </h1>
             <div className="space-y-6 text-lg md:text-xl text-[#3D3733] leading-relaxed">
               <p className="text-xl md:text-2xl font-serif text-[#0F2A22]">
-                The formulation works at three layers because the triad pathologies overlap at three layers.
+                The formulation is organized in three layers because the biology behind the triad overlaps in three places.
               </p>
               <p>
-                <strong>For hEDS,</strong> the real problem isn't running low on collagen - it's that your body breaks it down too fast. Enzymes called MMPs go into overdrive and shred the collagen you've already built. So instead of just adding more, we focus on protecting what's there: ingredients that slow those enzymes down (pine bark, grape seed, quercetin, astaxanthin), nutrients that help collagen weave together correctly (copper, manganese), and compounds that calm the inflammation behind it all.
+                <strong>For hEDS,</strong> our focus is protecting the collagen you have, not just adding more. Enzymes called MMPs break collagen down as part of normal turnover, so we include ingredients studied for supporting a healthy MMP balance (pine bark, grape seed, quercetin, astaxanthin), nutrients that help collagen cross-link correctly (copper, manganese), and compounds that support a calm inflammatory response.
               </p>
               <p>
-                <strong>For MCAS,</strong> no single ingredient is enough - mast cells fire through too many different switches. So we layer ingredients that calm them through different mechanisms: PEA, luteolin, quercetin, and astaxanthin each block a different trigger. Vitamin C, P5P, copper, and the methylation B-vitamins help your body clear histamine after it's released. The overlap is intentional - it's how we cover the whole pathway instead of just one piece.
+                <strong>For MCAS,</strong> mast cells respond to many different signals, so we layer ingredients that support mast cell stability through different mechanisms: in lab research, PEA, luteolin, quercetin, and astaxanthin each act on a different pathway. Copper, vitamin C, and the methylation B-vitamins (with P5P) support the body's normal histamine breakdown. The overlap is intentional.
               </p>
               <p>
-                <strong>For POTS,</strong> most of the help comes indirectly. We support cellular energy production (NR, benfotiamine, taurine), help calm the overactive autonomic nervous system (L-theanine, the methylation B-vitamins), and reduce the mast cell and inflammation activity that drives so many POTS symptoms. Vitamin D3 has the most direct POTS evidence on the list - a 2025 study in young patients showed 74% symptom improvement at 800 IU daily.
+                <strong>For POTS,</strong> the support is indirect. We support cellular energy production (NR, benfotiamine, taurine), a balanced stress response (L-theanine, magnesium, the methylation B-vitamins), and normal mast cell and inflammatory balance. Vitamin D3 is the ingredient with the most POTS-specific research: a 2025 retrospective study of 65 children with POTS (no placebo group) reported that about three in four had improved symptom scores after two months of 800 IU daily vitamin D. That is an observational finding in children, not a result for this formula.
               </p>
               <p className="border-l-4 border-[#B36B4D]/60 pl-6 py-2 bg-white/40 rounded-r-xl">
-                <strong>Underneath all three layers: ruthless excipient discipline.</strong> No magnesium stearate, no titanium dioxide, no citric acid, no carrageenan, no FD&amp;C dyes, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. HPMC capsules. Rice hull concentrate and L-leucine as flow agents. Every carrier listed, down to the milligram. Sodium ascorbate buffered for MCAS guts. Quality before convenience, on every line.
+                <strong>Underneath all three layers: ruthless excipient discipline.</strong> No magnesium stearate, no titanium dioxide, no citric acid, no carrageenan, no FD&amp;C dyes, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. HPMC capsules. Rice hull concentrate and L-leucine as flow agents. Every carrier we have confirmed is listed, down to the milligram. Sodium ascorbate buffered for MCAS guts. Quality before convenience, on every line.
               </p>
             </div>
           </div>

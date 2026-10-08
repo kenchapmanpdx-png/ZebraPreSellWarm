@@ -36,7 +36,7 @@ export default function WhyZebraMascot() {
 
             <div className="relative z-10">
                 {/* Eyebrow */}
-                <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#B36B4D] mb-4">
+                <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#8F5238] mb-4">
                     The Origin of the Name
                 </span>
 

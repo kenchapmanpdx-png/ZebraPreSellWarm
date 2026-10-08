@@ -24,21 +24,18 @@ const CORE_ROUTES = [
   "/",
   "/ingredients",
   "/our-promise",
-  "/preorder",
   "/privacy",
   "/terms",
   "/shipping",
   "/contact",
 ];
 
+// AI-facing text files. The .md page duplicates are not pushed: they carry
+// X-Robots-Tag: noindex (vercel.json) and are reachable through /llms.txt.
 const MD_ROUTES = [
   "/llms.txt",
   "/llms-full.txt",
   "/llms-routes.txt",
-  "/ingredients.md",
-  "/our-promise.md",
-  "/preorder.md",
-  "/contact.md",
 ];
 
 async function main() {
@@ -58,7 +55,6 @@ async function main() {
   for (const r of CORE_ROUTES) urls.push(`${BASE}${r}`);
   for (const i of ingredientList as Array<{ slug: string }>) {
     urls.push(`${BASE}/ingredients/${i.slug}`);
-    urls.push(`${BASE}/ingredients/${i.slug}.md`);
   }
   for (const r of MD_ROUTES) urls.push(`${BASE}${r}`);
 

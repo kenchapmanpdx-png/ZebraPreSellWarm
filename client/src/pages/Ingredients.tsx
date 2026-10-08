@@ -76,7 +76,7 @@ export default function Ingredients() {
                                     >
                                         <div className="contents">
                                             <div className="mb-3">
-                                                <span className="text-[10px] uppercase tracking-[0.2em] text-[#B36B4D] font-bold">
+                                                <span className="text-[10px] uppercase tracking-[0.2em] text-[#8F5238] font-bold">
                                                     Ingredient {index + 1}
                                                 </span>
                                                 <h3 className="font-serif font-bold text-xl text-[#3D3733] mt-1 group-hover:text-[#B36B4D] transition-colors leading-tight">
@@ -90,7 +90,7 @@ export default function Ingredients() {
                                                 </p>
                                             )}
 
-                                            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B36B4D] group-hover:translate-x-2 transition-transform">
+                                            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8F5238] group-hover:translate-x-2 transition-transform">
                                                 Clinical Science
                                                 <span className="text-lg">→</span>
                                             </div>

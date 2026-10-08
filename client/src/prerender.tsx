@@ -15,14 +15,16 @@ import App from "./App";
 import ingredientList from "../../scripts/ingredient-routes.json";
 import { ingredients as ingredientData } from "./data/ingredients";
 import type { IngredientData } from "./data/ingredients";
+import { CONTENT_LAST_REVIEWED } from "./lib/siteDates";
 
 const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
 const LOGO = `${BASE}/zebra-logo.svg`;
 const HERO_IMAGE = `${BASE}/images/zebrathrive-bottles-og.jpg`;
-// Site-wide last-reviewed date for educational content. Bump when you do a
-// pass through ingredients.ts content. Used for MedicalWebPage.lastReviewed.
-const LAST_REVIEWED = "2026-05-11";
+// Site-wide last-reviewed date for educational content. Bump in
+// client/src/lib/siteDates.ts when you do a content pass. Used for
+// MedicalWebPage.lastReviewed and dateModified.
+const LAST_REVIEWED = CONTENT_LAST_REVIEWED;
 // Named author on every educational page. YMYL E-E-A-T pattern:
 // AI assistants weight content with named credentialed humans much higher
 // than anonymous content. reviewedBy is intentionally absent until a
@@ -41,34 +43,34 @@ type RouteMeta = {
 
 const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/": {
-    title: "ZebraThrive | Clinical Support for POTS, EDS & MCAS",
+    title: "ZebraThrive | Supplements for the EDS, POTS & MCAS Community",
     description:
-      "Advanced autonomic, mast cell, and connective tissue support. Research-driven supplements for the Zebra community. Every excipient disclosed.",
+      "Research-driven AM capsules, PM capsules, and Daily Powder built around the sensitivities of the zebra community. Forms, doses, and excipients disclosed.",
   },
   "/the-how": {
-    title: "The How - Condition Science | ZebraThrive",
+    title: "The How: Formulation Rationale | ZebraThrive",
     description:
-      "How ZebraThrive's 3-component system (AM caps, PM caps, Daily Powder) addresses the specific biology of POTS, EDS, and MCAS - autonomic stability, mast cell modulation, and ECM preservation.",
+      "How ZebraThrive's AM capsules, PM capsules, and Daily Powder are organized, and the published research behind each layer of the formulation.",
   },
   "/ingredients": {
     title: "All Ingredients | ZebraThrive",
     description:
-      "Every ingredient across ZebraThrive's AM capsules, PM capsules, and Daily Powder. Doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol.",
+      "Every ingredient in ZebraThrive's AM capsules, PM capsules, and Daily Powder, with doses, forms, evidence, and the reason each one is included.",
   },
   "/our-promise": {
-    title: "Our Promise - Constitution | ZebraThrive",
+    title: "Our Promise: Constitution | ZebraThrive",
     description:
-      "ZebraThrive's formal commitment: transparent ingredients, decision logs, third-party testing, and accountability for the Zebra community.",
+      "ZebraThrive's commitments: disclosed ingredients and excipients, lot-verified ingredient COAs, cited evidence, and honest limits on what we claim.",
   },
   "/preorder": {
-    title: "Reserve - Coming Soon | ZebraThrive",
+    title: "Reserve: Coming Soon | ZebraThrive",
     description:
-      "Join the reservation list to be notified when ZebraThrive's 3-component system (AM caps, PM caps, Daily Powder) opens for preorder.",
+      "Join the reservation list to hear when ZebraThrive's AM capsules, PM capsules, and Daily Powder open for order.",
   },
   "/privacy": {
     title: "Privacy Policy | ZebraThrive",
     description:
-      "How ZebraThrive collects, uses, and protects your information. Email-only data collection, no third-party sharing, full delete-on-request.",
+      "What ZebraThrive collects through its forms, who processes it, the analytics and advertising tools on this site, and how to opt out or request deletion.",
   },
   "/terms": {
     title: "Terms of Service | ZebraThrive",
@@ -79,6 +81,10 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
     title: "Shipping & Returns | ZebraThrive",
     description:
       "Pre-launch shipping policy and what to expect when ZebraThrive becomes available. 30-day satisfaction guarantee planned at launch.",
+  },
+  "/404": {
+    title: "Page Not Found | ZebraThrive",
+    description: "This page does not exist on wellnessforzebras.com.",
   },
   "/contact": {
     title: "Contact Support | ZebraThrive",
@@ -120,7 +126,7 @@ function metaForRoute(url: string): RouteMeta {
     if (ag?.keyBenefits && ag.keyBenefits.length) parts.push(ag.keyBenefits.slice(0, 3).join(". "));
     let desc = parts.join(" ").trim();
     if (desc.length < 80) {
-      desc = `${name}: evidence-based dose rationale and mechanism for ZebraThrive's hEDS, POTS, and MCAS protocol. ${desc}`.trim();
+      desc = `${name}: dose rationale, mechanism, and evidence for its place in the ZebraThrive formula. ${desc}`.trim();
     }
     if (desc.length > 160) {
       const cut = desc.slice(0, 160);
@@ -137,7 +143,7 @@ function metaForRoute(url: string): RouteMeta {
   // Fallback (e.g., /showcase or unknown routes - handled but noindex)
   return {
     title: "ZebraThrive",
-    description: "Research-driven supplements for EDS, POTS, and MCAS.",
+    description: "Research-driven supplements for the zebra community.",
   };
 }
 
@@ -228,11 +234,6 @@ function medicalWebPageForIngredient(
     ing.safety?.interactions ? `Interactions: ${ing.safety.interactions}` : "",
   ].filter(Boolean);
   if (safetyParts.length) about.safetyConsideration = safetyParts.join(" ");
-  about.targetPopulation = "Adults 18+ with hypermobile Ehlers-Danlos Syndrome, POTS, or Mast Cell Activation Syndrome";
-  about.legalStatus = {
-    "@type": "DrugLegalStatus",
-    name: "Dietary supplement, US DSHEA",
-  };
 
   return {
     "@context": "https://schema.org",
@@ -240,7 +241,7 @@ function medicalWebPageForIngredient(
     "@id": url,
     url,
     name: `${cleanName}: Evidence, Mechanism, Dose, and Safety`,
-    headline: `${cleanName}: Evidence, Mechanism, Dose, and Safety for hEDS, POTS, and MCAS`,
+    headline: `${cleanName}: Evidence, Mechanism, Dose, and Safety`,
     description,
     inLanguage: "en-US",
     audience: { "@type": "MedicalAudience", audienceType: "Patient" },
@@ -290,8 +291,8 @@ function howToForIngredient(
   return {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: `How to start ${cleanName} for hEDS, POTS, or MCAS`,
-    description: `Stepwise titration protocol for introducing ${cleanName} in a mast-cell-sensitive population, drawn from the ZebraThrive ingredient page.`,
+    name: `How to start ${cleanName}`,
+    description: `A gradual, step-by-step way to introduce ${cleanName}, from the ZebraThrive ingredient page.`,
     url: `${BASE}/ingredients/${slug}#how-to-start`,
     totalTime: ing.howToStart?.timeline || undefined,
     step: protocol.map((p, idx) => ({
@@ -350,18 +351,25 @@ export async function prerender(data: { url: string }) {
   // and structured data.
   const canonical = `${BASE}${url === "/" ? "/" : url}`;
   const isShowcase = url === "/showcase";
-  const isHidden = url === "/the-how"; // 2026-05-12: hidden until ready, unindexed if URL is visited directly
+  const isNotFound = url === "/404"; // copied to dist/public/404.html at build; served with HTTP 404
+  const isHidden =
+    url === "/the-how" || // 2026-05-12: hidden until ready, unindexed if URL is visited directly
+    url === "/preorder"; // 2026-10-07: reservation page kept live but out of search until rebuilt
 
   const elements = new Set<HeadElement>();
-  elements.add({ type: "link", props: { rel: "canonical", href: canonical } });
+  if (!isNotFound) {
+    elements.add({ type: "link", props: { rel: "canonical", href: canonical } });
+  }
   elements.add({ type: "meta", props: { name: "description", content: meta.description } });
   elements.add({ type: "meta", props: { property: "og:title", content: meta.title } });
   elements.add({ type: "meta", props: { property: "og:description", content: meta.description } });
-  elements.add({ type: "meta", props: { property: "og:url", content: canonical } });
+  if (!isNotFound) {
+    elements.add({ type: "meta", props: { property: "og:url", content: canonical } });
+  }
   elements.add({ type: "meta", props: { property: "og:type", content: "website" } });
   elements.add({ type: "meta", props: { name: "twitter:title", content: meta.title } });
   elements.add({ type: "meta", props: { name: "twitter:description", content: meta.description } });
-  if (isShowcase || isHidden) {
+  if (isShowcase || isHidden || isNotFound) {
     elements.add({ type: "meta", props: { name: "robots", content: "noindex, nofollow" } });
   } else {
     // Per-route JSON-LD: BreadcrumbList (all pages) and MedicalWebPage +

@@ -8,7 +8,7 @@ export default function Terms() {
       <main id="main-content" className="pt-32 pb-20 px-6">
         <article className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#0F2A22] mb-3">Terms of Service</h1>
-          <p className="text-sm text-[#5D5752] mb-12">Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+          <p className="text-sm text-[#5D5752] mb-12">Last updated: <time dateTime="2026-10-07">October 7, 2026</time></p>
 
           <div className="space-y-8 text-[#3D3733] leading-relaxed">
             <section>
@@ -18,7 +18,7 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Medical disclaimer</h2>
-              <p>ZebraThrive is a dietary supplement brand. <strong>The information on this site is for educational purposes only and is not medical advice.</strong> The statements made about our products have not been evaluated by the Food and Drug Administration. Our products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+              <p>ZebraThrive is a dietary supplement brand. <strong>The information on this site is for educational purposes only and is not medical advice.</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
               <p className="mt-3">Hypermobile Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS), and Mast Cell Activation Syndrome (MCAS) are complex conditions that require care from qualified healthcare providers. Always consult your physician before starting any new supplement, especially if you take prescription medications, have a diagnosed medical condition, are pregnant or nursing, or are giving the product to a minor.</p>
             </section>
 
@@ -29,7 +29,7 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Intellectual property</h2>
-              <p>All content on this site - text, formulation rationale, ingredient research summaries, brand assets - is owned by ZebraThrive unless otherwise credited. You may not copy, redistribute, or use our content for commercial purposes without written permission.</p>
+              <p>All content on this site (text, formulation rationale, ingredient research summaries, brand assets) is owned by ZebraThrive unless otherwise credited. You may not copy, redistribute, or use our content for commercial purposes without written permission.</p>
             </section>
 
             <section>
@@ -44,7 +44,7 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Contact</h2>
-              <p>Questions about these terms: <a href="mailto:ken@wellnessforzebras.com" className="text-[#B36B4D] hover:underline">ken@wellnessforzebras.com</a></p>
+              <p>Questions about these terms: <a href="mailto:ken@wellnessforzebras.com" className="text-[#8F5238] underline underline-offset-2 hover:text-[#0F2A22]">ken@wellnessforzebras.com</a></p>
             </section>
           </div>
         </article>

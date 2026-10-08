@@ -61,7 +61,7 @@ export default function ConditionScienceTabs() {
       name: "hEDS",
       fullName: "Hypermobile Ehlers-Danlos Syndrome",
       tagline: "Collagen Protection & Repair",
-      description: "Addressing the elevated collagen-degrading enzyme activity (MMPs) documented in hEDS patients.",
+      description: "Supporting collagen structure and a healthy balance of the enzymes (MMPs) that break collagen down.",
       color: "text-emerald-800",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
@@ -72,23 +72,23 @@ export default function ConditionScienceTabs() {
       name: "POTS", 
       fullName: "Postural Orthostatic Tachycardia",
       tagline: "Autonomic & Cardiovascular Balance",
-      description: "Restoring the equilibrium between sympathetic overdrive and parasympathetic insufficiency.",
+      description: "Supporting a balanced autonomic nervous system and normal cardiovascular function.",
       color: "text-blue-800",
       bg: "bg-blue-50", 
       border: "border-blue-200",
       icon: Heart,
-      stats: { pathways: 3, ingredients: 14 }
+      stats: { pathways: 2, ingredients: 14 }
     },
     mcas: {
       name: "MCAS",
       fullName: "Mast Cell Activation Syndrome", 
       tagline: "Cellular Stabilization & Histamine Clearance",
-      description: "Calming hyper-reactive immune cells to stop the chronic inflammatory cascade.",
+      description: "Supporting normal mast cell stability and the body's own histamine breakdown.",
       color: "text-rose-800",
       bg: "bg-rose-50",
       border: "border-rose-200", 
       icon: FlaskConical,
-      stats: { pathways: 3, ingredients: 18 }
+      stats: { pathways: 2, ingredients: 18 }
     }
   };
 
@@ -125,7 +125,7 @@ export default function ConditionScienceTabs() {
         { name: "TIMP-1", role: "Blocks MMP-1, 3, and 9", ingredients: ["Luteolin", "Astaxanthin", "PEA"] },
         { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Quercetin Phytosome", "Astaxanthin"] }
       ],
-      keyInsight: "Healing requires both reducing the 'shredder' and increasing the 'bodyguards'."
+      keyInsight: "Collagen balance depends on both the 'shredders' (MMPs) and the 'bodyguards' (TIMPs)."
     },
     {
       id: 'synthesis',
@@ -172,28 +172,29 @@ export default function ConditionScienceTabs() {
       color: "text-blue-700",
       bg: "bg-blue-50",
       border: "border-blue-200",
-      summary: "Stabilizing the nervous system to stop heart rate spikes during position changes.",
-      problem: "Sympathetic overdrive (fight-or-flight) stuck 'ON' while parasympathetic signals are too weak.",
-      solution: "Inhibitory neurotransmitter support using L-Theanine, Taurine, and Magnesium Bisglycinate.",
+      summary: "Supporting a calm, balanced nervous system response.",
+      problem: "The nervous system balances 'fight-or-flight' (sympathetic) and 'rest-and-digest' (parasympathetic) signals.",
+      solution: "Calming (inhibitory) neurotransmitter support using L-Theanine, Taurine, and Magnesium Bisglycinate.",
       mechanisms: [
         { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium Bisglycinate"] },
         { name: "Cardiac Rhythm", role: "Heart rate regulation and flexibility", ingredients: ["Taurine"] }
       ],
-      keyInsight: "Taurine shows roughly 3.6 bpm heart rate reduction in human studies, meaningful for baseline tachycardia."
+      keyInsight: "A 2024 meta-analysis of 20 randomized trials (Tzang et al., PMID 39148075), mostly in heart failure, hypertension, and healthy volunteers, found taurine lowered resting heart rate by about 3.6 bpm on average."
     },
     {
       id: 'mitochondrial-etc',
       icon: Battery,
-      title: "End Chronic Fatigue",
+      title: "Support Cellular Energy",
       subtitle: "Mitochondrial Support",
       color: "text-orange-700",
       bg: "bg-orange-50",
       border: "border-orange-200",
-      summary: "Fueling the electron transport chain to power the cells that regulate the heart.",
-      problem: "Mitochondrial dysfunction is a hallmark of dysautonomia; without ATP, nothing works.",
-      solution: "Supporting the electron transport chain at multiple points: Benfotiamine and R5P at Complex I, NR for NAD+ regeneration, plus Taurine for cardiac rhythm support.",
+      summary: "B-vitamin cofactors for the mitochondria that power every cell, including those in the heart and blood vessels.",
+      problem: "Every cell runs on ATP made in mitochondria, and energy production depends on B-vitamin cofactors.",
+      solution: "Cofactors at several points of energy production: R5P (as FMN and FAD) for Complexes I and II, Benfotiamine for the thiamine-dependent entry into the Krebs cycle, NR for NAD+ regeneration, plus Taurine.",
       mechanisms: [
-        { name: "Complex I", role: "The first step of electron transport", ingredients: ["Benfotiamine", "R5P"] },
+        { name: "Complex I/II", role: "FMN and FAD cofactors for electron transport", ingredients: ["R5P"] },
+        { name: "Pyruvate dehydrogenase", role: "Thiamine-dependent entry into the Krebs cycle", ingredients: ["Benfotiamine"] },
         { name: "NAD+ Cycling", role: "Sirtuin pathway + mitochondrial fuel", ingredients: ["Nicotinamide Riboside", "Niacinamide"] }
       ],
       keyInsight: "Benfotiamine is the fat-soluble form of B1 with roughly 5x the bioavailability of plain thiamine."
@@ -204,16 +205,16 @@ export default function ConditionScienceTabs() {
     {
       id: 'mast-cell-stabilization',
       icon: FlaskConical,
-      title: "Stop the Flare",
+      title: "Steady the Mast Cell",
       subtitle: "Membrane Stabilization",
       color: "text-rose-700",
       bg: "bg-rose-50",
       border: "border-rose-200",
-      summary: "Blocking the release of histamine and tryptase before they damage your collagen.",
-      problem: "Hyper-reactive mast cells degranulate in response to benign triggers.",
-      solution: "Redundant coverage using six different stabilization mechanisms.",
+      summary: "Supporting mast cell stability so less histamine and tryptase are released.",
+      problem: "Overreactive mast cells can release mediators in response to everyday triggers.",
+      solution: "Six ingredients that act on different mast cell stability pathways in lab research.",
       mechanisms: [
-        { name: "PPARα", role: "Nuclear switch to suppress mediator release", ingredients: ["PEA (Micronized)"] },
+        { name: "PPARα", role: "Nuclear switch to suppress mediator release", ingredients: ["PEA (Ultramicronized)"] },
         { name: "ORAI Channel", role: "Block the calcium influx that triggers flares", ingredients: ["Quercetin Phytosome"] }
       ],
       keyInsight: "Quercetin Phytosome (Quercefit®) solves quercetin's bioavailability problem; only the phospholipid-carrier form reaches relevant plasma concentrations."
@@ -226,11 +227,11 @@ export default function ConditionScienceTabs() {
       color: "text-purple-700",
       bg: "bg-purple-50",
       border: "border-purple-200",
-      summary: "Providing the enzymes your body needs to process and remove histamine safely.",
-      problem: "Impaired histamine clearance makes even normal levels toxic to the system.",
+      summary: "Providing cofactors that support the enzymes your body uses to break down histamine.",
+      problem: "When histamine breakdown is slow, even normal amounts can build up.",
       solution: "Cofactors for both gut (DAO) and intracellular (HNMT) pathways.",
       mechanisms: [
-        { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper", "P5P", "Vitamin C"] },
+        { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper", "Vitamin C"] },
         { name: "Methylation", role: "SAMe production for HNMT function", ingredients: ["Methylfolate", "B12"] }
       ],
       keyInsight: "Copper is a DAO cofactor-the same mineral required for collagen cross-linking. One mineral, two massive jobs."
@@ -254,9 +255,9 @@ export default function ConditionScienceTabs() {
 
         {/* HEADER */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-4">Going Deeper</p>
+          <p className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.4em] mb-4">Going Deeper</p>
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#3D3733] mb-6 leading-tight">Pathways We Target</h2>
-          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 29 clinical actives across AM capsules, PM capsules, and the Daily Powder, working at the root pathways of the EDS/POTS/MCAS triad.</p>
+          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 29 active ingredients across AM capsules, PM capsules, and the Daily Powder, chosen for pathways relevant to the EDS/POTS/MCAS triad.</p>
         </motion.div>
 
         {/* TABS - Holographic Style */}
@@ -269,7 +270,7 @@ export default function ConditionScienceTabs() {
                 <button
                   key={key}
                   onClick={() => { setActiveCondition(key); setExpandedSection(null); }}
-                  className={`relative flex-1 sm:flex-initial justify-center px-2 sm:px-8 py-3 sm:py-4 rounded-xl font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-3 ${isActive ? `${cond.bg} ${cond.color} shadow-md` : 'text-[#8A857C] hover:text-[#5D5752] hover:bg-white/30'}`}
+                  className={`relative flex-1 sm:flex-initial justify-center px-2 sm:px-8 py-3 sm:py-4 rounded-xl font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-3 ${isActive ? `${cond.bg} ${cond.color} shadow-md` : 'text-[#6B655F] hover:text-[#5D5752] hover:bg-white/30'}`}
                 >
                   <cond.icon size={18} aria-hidden="true" />
                   <span className="hidden sm:inline tracking-wide">{cond.fullName}</span>
@@ -296,11 +297,11 @@ export default function ConditionScienceTabs() {
               <div className="flex gap-10 md:flex-col md:gap-4 md:items-end border-t md:border-t-0 md:border-l border-black/5 pt-8 md:pt-0 md:pl-10">
                 <div className="text-center md:text-right">
                   <p className={`text-5xl font-serif font-bold ${currentCondition.color}`}>{currentCondition.stats.pathways}</p>
-                  <p className="text-[10px] text-[#8A857C] font-black uppercase tracking-[0.2em]">Clinical Pathways</p>
+                  <p className="text-[10px] text-[#6B655F] font-black uppercase tracking-[0.2em]">Pathways</p>
                 </div>
                 <div className="text-center md:text-right">
                   <p className={`text-5xl font-serif font-bold ${currentCondition.color}`}>{currentCondition.stats.ingredients}</p>
-                  <p className="text-[10px] text-[#8A857C] font-black uppercase tracking-[0.2em]">Targeted Actives</p>
+                  <p className="text-[10px] text-[#6B655F] font-black uppercase tracking-[0.2em]">Targeted Actives</p>
                 </div>
               </div>
             </div>
@@ -319,7 +320,7 @@ export default function ConditionScienceTabs() {
                   <div className="flex-grow">
                     <h3 className="font-bold text-[#3D3733] text-xl leading-tight mb-2">{pathway.title}</h3>
                     <span className={`text-[10px] font-black ${pathway.color} uppercase tracking-widest bg-white border border-black/5 px-2 py-1 rounded-md shadow-sm`}>{pathway.subtitle}</span>
-                    {!expandedSection && <p className="text-[#8A857C] text-sm mt-4 line-clamp-2 font-medium">{pathway.summary}</p>}
+                    {!expandedSection && <p className="text-[#6B655F] text-sm mt-4 line-clamp-2 font-medium">{pathway.summary}</p>}
                   </div>
                   <div className="mt-2"><ChevronDown className={`transition-transform duration-300 ${expandedSection === pathway.id ? 'rotate-180' : ''}`} aria-hidden="true" /></div>
                 </button>
@@ -345,12 +346,12 @@ export default function ConditionScienceTabs() {
                             </div>
                         </div>
                         <div className="bg-[#F8F7F4] rounded-2xl p-6">
-                            <p className="text-[10px] font-black text-[#8A857C] uppercase mb-4">Mechanism of Action</p>
+                            <p className="text-[10px] font-black text-[#6B655F] uppercase mb-4">Mechanism of Action</p>
                             <div className="space-y-4">
                                 {pathway.mechanisms.map((mech, i) => (
                                     <div key={i} className="text-xs border-b border-black/5 pb-4 last:border-0 last:pb-0">
                                         <div className="font-black text-[#3D3733] mb-1">{mech.name}</div>
-                                        <div className="text-[#8A857C] mb-2">{mech.role}</div>
+                                        <div className="text-[#6B655F] mb-2">{mech.role}</div>
                                         <div className="flex flex-wrap gap-1.5">{mech.ingredients.map((ing, j) => <span key={j} className="px-2 py-0.5 bg-white rounded border border-black/5 text-[9px] font-bold text-[#3D3733]">{ing}</span>)}</div>
                                     </div>
                                 ))}
@@ -369,7 +370,7 @@ export default function ConditionScienceTabs() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">29 CLINICAL ACTIVES • 10 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
+        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">29 ACTIVE INGREDIENTS • 8 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
       </div>
     </section>
   );

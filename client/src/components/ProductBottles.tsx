@@ -67,7 +67,7 @@ export default function ProductBottles() {
       
       {/* Brand label */}
       <text x="160" y="240" textAnchor="middle" fill="#0f2e24" fontSize="18" fontWeight="bold" fontFamily="Playfair Display, serif">ZebraThrive</text>
-      <text x="160" y="258" textAnchor="middle" fill="#0f2e24" fontSize="10" fillOpacity="0.7">Clinical-Grade Formula</text>
+      <text x="160" y="258" textAnchor="middle" fill="#0f2e24" fontSize="10" fillOpacity="0.7">AM + PM + Daily Powder</text>
       
       {/* Decorative elements */}
       <circle cx="50" cy="50" r="2" fill="#d4af37" fillOpacity="0.3" />

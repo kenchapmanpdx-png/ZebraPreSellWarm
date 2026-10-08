@@ -7,9 +7,14 @@
  *
  * Accessibility: prefers-reduced-motion users see the final values
  * immediately, with no burst, count-up, or ripple.
+ *
+ * Rendering: the server-rendered HTML (and the first client render) shows the
+ * final values, fully visible, so crawlers and no-JS readers see the real
+ * numbers and hydration always matches. Only after mount, and only when the
+ * section is still below the fold and motion is allowed, do we reset to the
+ * hidden state and animate in on scroll.
  */
 import React, { useEffect, useRef, useState } from 'react';
-import { useReducedMotion } from 'framer-motion';
 
 const stats = [
   {
@@ -21,8 +26,8 @@ const stats = [
   {
     target: 100,
     suffix: '%',
-    label: 'Third-party tested',
-    blurb: 'Every batch. Heavy metals, microbials, potency. Results published.',
+    label: 'Lot-verified',
+    blurb: 'Every ingredient lot checked against its Certificate of Analysis before production.',
   },
   {
     target: 14,
@@ -40,20 +45,24 @@ const stats = [
 
 export default function BrandByNumbers() {
   const sectionRef = useRef<HTMLElement>(null);
-  const prefersReducedMotion = useReducedMotion();
-  const [active, setActive] = useState<boolean[]>(stats.map(() => false));
-  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
+  const [animate, setAnimate] = useState(false);
+  const [active, setActive] = useState<boolean[]>(stats.map(() => true));
+  const [counts, setCounts] = useState<number[]>(stats.map((s) => s.target));
 
   useEffect(() => {
-    if (!sectionRef.current) return;
+    const section = sectionRef.current;
+    if (!section || typeof window === 'undefined') return;
 
-    if (prefersReducedMotion) {
-      setActive(stats.map(() => true));
-      setCounts(stats.map((s) => s.target));
-      return;
-    }
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const alreadyVisible = section.getBoundingClientRect().top < window.innerHeight;
+    if (reduce || alreadyVisible || typeof IntersectionObserver === 'undefined') return;
 
-    const items = sectionRef.current.querySelectorAll<HTMLElement>('[data-stat-index]');
+    // Below the fold with motion allowed: hide, then burst in on scroll.
+    setAnimate(true);
+    setActive(stats.map(() => false));
+    setCounts(stats.map(() => 0));
+
+    const items = section.querySelectorAll<HTMLElement>('[data-stat-index]');
 
     const runCountUp = (idx: number) => {
       const target = stats[idx].target;
@@ -96,7 +105,7 @@ export default function BrandByNumbers() {
     );
     items.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [prefersReducedMotion]);
+  }, []);
 
   return (
     <section
@@ -116,7 +125,7 @@ export default function BrandByNumbers() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-14 md:mb-20">
-          <p className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-4">
+          <p className="text-[#8F5238] font-bold uppercase tracking-[0.4em] text-[10px] mb-4">
             By the numbers
           </p>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight max-w-3xl mx-auto">
@@ -131,7 +140,7 @@ export default function BrandByNumbers() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-y-0">
           {stats.map((s, i) => {
             const isActive = active[i];
-            const shown = prefersReducedMotion ? s.target : counts[i];
+            const shown = counts[i];
             return (
               <div
                 key={s.label}
@@ -158,7 +167,7 @@ export default function BrandByNumbers() {
                   </div>
 
                   {/* Ripple rings (fire once on burst) */}
-                  {isActive && !prefersReducedMotion && (
+                  {isActive && animate && (
                     <>
                       <span
                         aria-hidden="true"
@@ -189,10 +198,10 @@ export default function BrandByNumbers() {
                     transition: 'opacity 0.6s ease 0.4s',
                   }}
                 >
-                  <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.3em] mb-3">
+                  <p className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.3em] mb-3">
                     {s.label}
                   </p>
-                  <p className="text-[#8A857C] text-xs md:text-sm leading-relaxed font-medium max-w-[28ch] mx-auto">
+                  <p className="text-[#6B655F] text-xs md:text-sm leading-relaxed font-medium max-w-[28ch] mx-auto">
                     {s.blurb}
                   </p>
                 </div>

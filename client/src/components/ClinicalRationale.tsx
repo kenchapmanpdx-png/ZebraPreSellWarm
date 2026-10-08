@@ -123,7 +123,7 @@ export default function ClinicalRationale() {
                   {pillar.title}
                 </h3>
 
-                <p className="text-[#8A857C] text-base md:text-lg leading-relaxed font-medium">
+                <p className="text-[#6B655F] text-base md:text-lg leading-relaxed font-medium">
                   {pillar.desc}
                 </p>
               </div>

@@ -56,7 +56,7 @@ export default function IngredientPage() {
                                 className="block p-5 bg-white/60 hover:bg-white border border-[#3D3733]/10 hover:border-[#B36B4D]/40 rounded-2xl transition-colors"
                             >
                                 <h3 className="font-bold text-[#0F2A22] text-base mb-1">{r.name}</h3>
-                                <span className="text-xs text-[#B36B4D] font-medium tracking-wide">
+                                <span className="text-xs text-[#8F5238] font-medium tracking-wide">
                                     Read details →
                                 </span>
                             </Link>

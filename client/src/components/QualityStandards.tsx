@@ -5,22 +5,22 @@ import { ShieldCheck, Microscope, Factory } from "lucide-react";
 export default function QualityStandards() {
   const standards = [
     {
-      title: "FDA-Registered Facility",
-      desc: "ZebraThrive is manufactured in a facility fully registered with the FDA, subject to regular, rigorous clinical inspections.",
+      title: "cGMP Manufacturing",
+      desc: "Made by a contract manufacturer operating under FDA's dietary supplement manufacturing rule (21 CFR Part 111), with incoming quality control on every ingredient lot.",
       icon: <Factory className="w-6 h-6 text-blue-600" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"
     },
     {
-      title: "GMP-Certified Manufacturing",
-      desc: "Our partner runs a GMP-certified facility, ensuring every step follows the global standards for supplement purity and safety.",
+      title: "Lot-Verified Ingredients",
+      desc: "Each ingredient lot is checked against its Certificate of Analysis and the specifications written into our purchase order before it goes into production.",
       icon: <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"
     },
     {
-      title: "Third-Party Lab Tested",
-      desc: "Every batch is verified by independent labs to ensure that what’s on the label is exactly what is in the bottle.",
+      title: "Finished-Batch Testing",
+      desc: "Before release, each finished batch goes through our manufacturer's finished-product testing.",
       icon: <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       bgColor: "bg-orange-50",
       borderColor: "border-orange-100"
@@ -40,7 +40,7 @@ export default function QualityStandards() {
               className="flex items-center gap-4 mb-4"
             >
               <div className="w-12 h-[1px] bg-[#B36B4D]" />
-              <span className="text-[10px] font-bold text-[#B36B4D] uppercase tracking-[0.4em]">Manufacturing Integrity</span>
+              <span className="text-[10px] font-bold text-[#8F5238] uppercase tracking-[0.4em]">Manufacturing Integrity</span>
             </motion.div>
 
             <motion.h2
@@ -48,8 +48,8 @@ export default function QualityStandards() {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight"
             >
-              Clinical Quality, <br />
-              <span className="text-[#B36B4D] italic font-normal">Without Compromise.</span>
+              Quality, <br />
+              <span className="text-[#B36B4D] italic font-normal">Verified Lot by Lot.</span>
             </motion.h2>
           </div>
 
@@ -60,11 +60,11 @@ export default function QualityStandards() {
             className="bg-white border border-[#0F2A22]/5 p-6 rounded-[2rem] shadow-xl flex items-center gap-4"
           >
             <div className="flex flex-col items-center">
-              <span className="text-[#B36B4D] font-serif font-bold text-4xl italic leading-none">0%</span>
-              <span className="text-[#0F2A22] font-black uppercase tracking-widest text-[7px] mt-1 text-center">Trigger<br />Excipients</span>
+              <span className="text-[#B36B4D] font-serif font-bold text-4xl italic leading-none">0</span>
+              <span className="text-[#0F2A22] font-black uppercase tracking-widest text-[9px] mt-1 text-center">Hidden<br />Excipients</span>
             </div>
             <div className="w-[1px] h-10 bg-[#0F2A22]/10" />
-            <p className="text-[10px] font-medium text-[#5D5752] leading-relaxed max-w-[150px]">
+            <p className="text-xs font-medium text-[#5D5752] leading-relaxed max-w-[170px]">
               Designed around the excipients sensitive systems react to.
             </p>
           </motion.div>
@@ -87,7 +87,7 @@ export default function QualityStandards() {
                 <h3 className="text-lg font-serif font-bold text-[#3D3733] mb-2 leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-[#8A857C] text-xs leading-relaxed font-medium">
+                <p className="text-[#5D5752] text-sm leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>

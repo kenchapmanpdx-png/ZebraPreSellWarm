@@ -30,7 +30,7 @@ export default function ExclusionsBlock() {
     <section className="py-14 md:py-20 px-6 bg-[#EBE8E1]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8">
-          <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#B36B4D] mb-3">
+          <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#8F5238] mb-3">
             Excipients we refuse to use
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#0F2A22] leading-tight">
@@ -73,7 +73,7 @@ export default function ExclusionsBlock() {
         <div className="text-center">
           <Link
             href="/our-promise"
-            className="inline-flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-[#B36B4D] hover:text-[#0F2A22] transition-colors"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-[#8F5238] hover:text-[#0F2A22] transition-colors"
           >
             Why each is excluded
             <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />

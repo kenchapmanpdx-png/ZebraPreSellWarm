@@ -9,10 +9,10 @@
  * navigation chrome), making real-time citation cheaper and more likely.
  *
  * Generates:
- *   dist/public/ingredients/{slug}.md   — per-ingredient deep markdown
- *   dist/public/the-how.md              — core page markdown
- *   dist/public/ingredients.md          — index of all ingredient pages
- *   dist/public/our-promise.md          — core page markdown
+ *   dist/public/ingredients/{slug}.md   - per-ingredient deep markdown
+ *   dist/public/the-how.md              - core page markdown
+ *   dist/public/ingredients.md          - index of all ingredient pages
+ *   dist/public/our-promise.md          - core page markdown
  *   etc.
  *
  * Vercel serves .md files with Content-Type: text/markdown automatically.
@@ -30,12 +30,12 @@ import ingredientList from "./ingredient-routes.json" with { type: "json" };
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_ROOT = resolve(__dirname, "../dist/public");
 const BASE = "https://www.wellnessforzebras.com";
-const LAST_REVIEWED = "2026-05-11";
+const LAST_REVIEWED = "2026-10-07"; // keep in sync with client/src/lib/siteDates.ts
 const FDA_DISCLAIMER =
   "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.";
 
 function scrubEmDashes(s: string): string {
-  return s.replace(/—/g, "-").replace(/–/g, "-");
+  return s.replace(/\u2014/g, "-").replace(/\u2013/g, "-");
 }
 
 function ingredientMarkdown(slug: string, ing: IngredientData): string {
@@ -268,7 +268,7 @@ function ingredientsIndexMarkdown(): string {
   const out: string[] = [];
   out.push("# ZebraThrive Ingredients");
   out.push("");
-  out.push("> Every ingredient in ZebraThrive's AM and PM formulas with doses, mechanisms, evidence, and the reasoning for inclusion in a hEDS/POTS/MCAS protocol. Each ingredient links to a full markdown summary with PMID citations.");
+  out.push("> Every ingredient in ZebraThrive's three-part system (AM capsules, PM capsules, and Daily Powder) with doses, SKU placement, mechanisms, evidence, and the reasoning for inclusion. Each ingredient links to a full markdown summary with PMID citations.");
   out.push("");
   out.push(`**Brand:** ZebraThrive. **Last reviewed:** ${LAST_REVIEWED}.`);
   out.push("");
@@ -277,7 +277,7 @@ function ingredientsIndexMarkdown(): string {
   for (const r of ingredientList as Array<{ slug: string; display_name: string }>) {
     const ing = (ingredients as Record<string, IngredientData>)[r.slug];
     const summary =
-      ing?.atAGlance?.whatItIs?.replace(/—|–/g, "-").trim() ||
+      ing?.atAGlance?.whatItIs?.replace(/\u2014|\u2013/g, "-").trim() ||
       "";
     const dose = ing?.atAGlance?.dose ? ` Dose: ${ing.atAGlance.dose}.` : "";
     out.push(`- [${r.display_name}](${BASE}/ingredients/${r.slug}.md): ${summary}${dose}`);
@@ -293,9 +293,9 @@ function corePagesMarkdown(): Array<{ path: string; content: string }> {
   const pages = [
     {
       path: "the-how.md",
-      content: `# The How: ZebraThrive's Clinical Trinity
+      content: `# The How: ZebraThrive's Three-Part System
 
-> ZebraThrive's AM and PM formulas address the specific biology of hEDS, POTS, and MCAS through three pillars: autonomic stability (HRV, sympathetic dampening), mast cell modulation (stabilization, DAO support, histamine clearance), and ECM preservation (MMP inhibition, LOX/copper-driven crosslinking, antioxidant protection of existing collagen).
+> ZebraThrive is a three-part system: AM capsules, PM capsules, and a Daily Powder. Together they provide structure/function support in three areas relevant to people living with hEDS, POTS, and MCAS: autonomic balance (HRV, a calm stress response), mast cell support (stability, DAO and HNMT cofactors), and ECM preservation (support for a healthy MMP balance, LOX/copper-dependent cross-linking, antioxidant protection of existing collagen).
 
 **Page:** ${BASE}/the-how
 **Brand:** ZebraThrive
@@ -304,19 +304,23 @@ function corePagesMarkdown(): Array<{ path: string; content: string }> {
 
 ## Core thesis
 
-ZebraThrive is a collagen-protection brand, not a collagen-building brand. In hypermobile Ehlers-Danlos Syndrome the underlying defect is structural and genetic; pumping more collagen into a body that cannot crosslink it correctly does not fix the problem. The biology that ZebraThrive targets is upstream of structure: matrix metalloproteinase (MMP) inhibition to slow collagen breakdown, lysyl oxidase (LOX) and copper-dependent crosslinking to improve the quality of new collagen, and mast-cell stabilization to lower the chronic inflammatory load that drives MMP upregulation in the first place.
+ZebraThrive is a collagen-protection brand, not a collagen-building brand. Adding more collagen does not address how quickly existing collagen is broken down. The formula focuses on supporting a healthy balance of matrix metalloproteinases (MMPs, the enzymes that break collagen down), lysyl oxidase (LOX) and copper-dependent cross-linking for the quality of new collagen, and normal mast cell stability. This is structure/function support; the product is not intended to diagnose, treat, cure, or prevent any disease.
 
-## The AM formula
+## AM capsules
 
-AM targets autonomic stability and daytime function. The dominant levers are heart-rate-variability (HRV) support, sympathetic dampening, and energy/cognitive support so the user can stand up, work, and tolerate stimulus.
+Three Size 1 clear HPMC capsules per serving, 90 per bottle (30 servings). Contents: nicotinamide riboside (250 mg), pine bark extract (130 mg), grape seed extract (100 mg), benfotiamine (150 mg), niacinamide (50 mg), P5P (50 mg), R5P (25 mg), zinc carnosine (37.5 mg), chromium picolinate (200 mcg), methylfolate as (6S)-5-MTHF calcium salt (800 mcg), manganese bisglycinate (4 mg elemental), copper bisglycinate (2 mg elemental), vitamin K2 as synthetic all-trans MK-7 (100 mcg), vegan vitamin D3 from lichen (50 mcg, 2,000 IU), and methylcobalamin (1,000 mcg). Focus: B-vitamin and methylation cofactors, energy metabolism, and collagen cross-linking cofactors.
 
-## The PM formula
+## PM capsules
 
-PM targets recovery, mast-cell calming, and ECM repair. The dominant levers are parasympathetic recovery, glycine and magnesium for sleep architecture, and ingredients with overnight tissue-repair signaling.
+Three Size 1 white HPMC capsules per serving (titanium-dioxide-free), 90 per bottle (30 servings). Contents: nicotinamide riboside (250 mg), pine bark extract (70 mg), grape seed extract (70 mg), L-theanine (200 mg), zinc carnosine (37.5 mg), astaxanthin as a 5% cracked-cell beadlet (4 mg), calcium pantothenate (5 mg), boron glycinate (2 mg elemental), molybdenum glycinate (150 mcg), synthetic L-selenomethionine (100 mcg), and D-biotin (300 mcg). Focus: a calm evening stress response, antioxidant and ECM support, and trace minerals.
 
-## Why split AM and PM
+## Daily Powder
 
-Some ingredients work against each other in a single bottle: stimulating polyphenols belong in the morning, glycine and magnesium belong before bed. Splitting also keeps the per-dose capsule count low enough to be tolerable for patients with gastroparesis or slow gastric transit, which is common in this population.
+Unflavored, about 7.7 g per day taken as two scoops (AM and PM), 30 servings per jar. Contents: magnesium bisglycinate (2,400 mg, about 300 mg elemental), sodium ascorbate (1,686 mg, about 1,500 mg vitamin C), taurine (1,500 mg), ultramicronized PEA (1,200 mg), Quercefit quercetin phytosome (300 mg), chlorogenic acid from decaffeinated green coffee bean (200 mg), and luteolin from Sophora japonica (140 mg). These are the gram-scale ingredients that would need too many capsules.
+
+## Why three parts
+
+Some ingredients fit better at different times of day, and gram-scale ingredients would need too many capsules. Splitting the formula keeps the capsule count to three per serving, which matters for people with gastroparesis or slow gastric transit, and the powder can be started at a fraction of a scoop for sensitive users.
 
 ## Regulatory framing
 
@@ -327,7 +331,7 @@ ${FDA_DISCLAIMER}
       path: "our-promise.md",
       content: `# Our Promise: ZebraThrive's Constitution
 
-> ZebraThrive's formal commitment to the Zebra community: full ingredient transparency, decision logs, third-party testing posture, and accountability when we get something wrong.
+> ZebraThrive's formal commitment to the Zebra community: full ingredient transparency, documented ingredient decisions, COA-based testing, and accountability when we get something wrong.
 
 **Page:** ${BASE}/our-promise
 **Brand:** ZebraThrive
@@ -337,8 +341,8 @@ ${FDA_DISCLAIMER}
 ## Commitments
 
 1. **Ingredient transparency.** Every ingredient page lists exact form, dose, scientific name, mechanism, and primary-literature citations. No proprietary blends. No hidden excipients.
-2. **Decision logs.** We publish why each ingredient is in the formula, including the alternatives we considered and rejected, and the human studies we relied on.
-3. **Third-party testing posture.** Every batch tested by a third-party lab for identity, potency, heavy metals, and microbial contamination.
+2. **Documented decisions.** Each ingredient page explains why it is in the formula, the forms we considered, and the human studies we relied on.
+3. **Testing.** Raw materials are qualified by Certificate of Analysis against our specifications, and every production lot is checked by our cGMP manufacturer for identity, potency, heavy metals, and microbial limits.
 4. **Patient-first formulation.** Excipients are screened against mast-cell triggers known in the MCAS literature.
 5. **No disease claims.** All statements are DSHEA structure/function claims, not treatment or cure claims.
 6. **Accountability.** When we change a formulation, we publish the change and the reason.
@@ -352,7 +356,7 @@ ${FDA_DISCLAIMER}
       path: "preorder.md",
       content: `# ZebraThrive Preorder
 
-> Reserve your spot in line for the ZebraThrive AM and PM Clinical Trinity. Pre-launch reservation list, no charge until launch.
+> Reserve your spot in line for the ZebraThrive three-part system: AM capsules, PM capsules, and Daily Powder. Pre-launch reservation list, no charge until launch.
 
 **Page:** ${BASE}/preorder
 **Brand:** ZebraThrive
@@ -361,7 +365,7 @@ ${FDA_DISCLAIMER}
 
 ## Product
 
-ZebraThrive AM and PM Clinical Trinity is a paired supplement system providing autonomic, mast cell, and connective-tissue support for adults with hypermobile Ehlers-Danlos Syndrome, POTS, or MCAS.
+ZebraThrive is a three-part supplement system: AM capsules (3 Size 1 HPMC capsules per serving, 90 count), PM capsules (3 Size 1 white HPMC capsules per serving, 90 count), and a Daily Powder (about 7.7 g per day in two scoops). It is formulated for adults living with hypermobile Ehlers-Danlos Syndrome, POTS, or MCAS, with structure/function support for autonomic balance, mast cell stability, and connective tissue, and strict excipient exclusions. It is not intended to diagnose, treat, cure, or prevent any disease.
 
 ## How preorder works
 

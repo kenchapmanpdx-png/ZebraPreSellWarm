@@ -33,7 +33,7 @@ export default function Shipping() {
 
             <section>
               <h2 className="text-2xl font-serif font-bold mb-3">Contact</h2>
-              <p>For shipping questions after launch: <a href="mailto:ken@wellnessforzebras.com" className="text-[#B36B4D] hover:underline">ken@wellnessforzebras.com</a></p>
+              <p>For shipping questions after launch: <a href="mailto:ken@wellnessforzebras.com" className="text-[#8F5238] underline underline-offset-2 hover:text-[#0F2A22]">ken@wellnessforzebras.com</a></p>
             </section>
           </div>
         </article>

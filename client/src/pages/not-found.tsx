@@ -10,8 +10,8 @@ export default function NotFound() {
       <Navigation />
       <main id="main-content" className="pt-32 pb-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#B36B4D] mb-6">
-            404 - Page Not Found
+          <span className="inline-block text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#8F5238] mb-6">
+            404: Page Not Found
           </span>
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#0F2A22] mb-6 leading-tight">
             That page <span className="text-[#B36B4D] italic font-normal">went off-road.</span>
@@ -35,7 +35,7 @@ export default function NotFound() {
             >
               <ArrowRight className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />
               <span className="text-sm font-bold uppercase tracking-widest text-[#0F2A22]">The How</span>
-              <span className="text-xs text-[#5D5752]">How the formula addresses each condition.</span>
+              <span className="text-xs text-[#5D5752]">Why each ingredient is in the formula.</span>
             </Link>
             <Link
               href="/our-promise"
@@ -47,9 +47,9 @@ export default function NotFound() {
             </Link>
           </div>
 
-          <p className="text-xs text-[#8A857C]">
+          <p className="text-xs text-[#5D5752]">
             If you got here from a link on our site, let us know:{" "}
-            <a href="mailto:ken@wellnessforzebras.com" className="text-[#B36B4D] hover:underline">
+            <a href="mailto:ken@wellnessforzebras.com" className="text-[#8F5238] underline underline-offset-2 hover:text-[#0F2A22]">
               ken@wellnessforzebras.com
             </a>
           </p>

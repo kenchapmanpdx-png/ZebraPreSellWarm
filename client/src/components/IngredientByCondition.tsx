@@ -1,7 +1,7 @@
 /* client/src/components/IngredientByCondition.tsx
  *
  * Interactive condition-filter explorer. Lets visitors pick 1, 2, or 3 of
- * { hEDS, POTS, MCAS } and see a grid of every v7.8 ingredient with a
+ * { hEDS, POTS, MCAS } and see a grid of every formula ingredient with a
  * patient-friendly blurb for each selected condition. Pulls from the
  * canonical triadPlain field in ingredients.ts.
  */
@@ -57,23 +57,48 @@ const CONDITION_META: Record<Condition, {
 };
 
 const SKU_META: Record<SKU, { color: string; bg: string; icon: typeof Sun }> = {
-  AM: { color: "text-[#B36B4D]", bg: "bg-orange-50 border-orange-200", icon: Sun },
+  AM: { color: "text-[#8F5238]", bg: "bg-orange-50 border-orange-200", icon: Sun },
   PM: { color: "text-indigo-700", bg: "bg-indigo-50 border-indigo-200", icon: Moon },
   Powder: { color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200", icon: Droplets },
 };
 
-// Per-ingredient SKU fallback for cases where the dose string is not explicit
-// about AM/PM/Powder placement. Derived from the v7.8 RFQ spec.
-const SKU_FALLBACK: Record<string, SKU[]> = {
-  "vitamin-d3": ["AM"],
-  "vitamin-k2": ["PM"],
+// Authoritative SKU placement per ZebraThrive Master Formulation Record v8.0
+// (AM capsules, PM capsules, Daily Powder). Takes precedence over parsing the
+// dose string so a wording change can never mislabel a badge.
+const SKU_MAP: Record<string, SKU[]> = {
+  // AM capsules
   "benfotiamine": ["AM"],
-  "l-theanine": ["AM"],
-  "niacinamide": ["PM"],
-  "zinc-carnosine": ["AM", "PM"],
-  "nicotinamide-riboside": ["AM", "PM"],
+  "niacinamide": ["AM"],
   "p5p": ["AM"],
-  "astaxanthin": ["AM"],
+  "r5p": ["AM"],
+  "chromium": ["AM"],
+  "methylfolate": ["AM"],
+  "manganese-bisglycinate": ["AM"],
+  "copper-bisglycinate": ["AM"],
+  "vitamin-k2": ["AM"],
+  "vitamin-d3": ["AM"],
+  "vitamin-b12": ["AM"],
+  // AM and PM capsules
+  "nicotinamide-riboside": ["AM", "PM"],
+  "pine-bark-extract": ["AM", "PM"],
+  "grape-seed-extract": ["AM", "PM"],
+  "zinc-carnosine": ["AM", "PM"],
+  // PM capsules
+  "l-theanine": ["PM"],
+  "astaxanthin": ["PM"],
+  "pantothenic-acid": ["PM"],
+  "boron": ["PM"],
+  "molybdenum": ["PM"],
+  "selenium": ["PM"],
+  "biotin": ["PM"],
+  // Daily Powder (split AM and PM scoops)
+  "magnesium-bisglycinate": ["Powder"],
+  "vitamin-c": ["Powder"],
+  "taurine": ["Powder"],
+  "palmitoylethanolamide": ["Powder"],
+  "quercetin-phytosome": ["Powder"],
+  "chlorogenic-acid": ["Powder"],
+  "luteolin": ["Powder"],
 };
 
 const slugify = (text: string) => {
@@ -93,6 +118,7 @@ function shortBlurb(text: string | undefined, maxChars = 220): string {
 }
 
 function detectSKUs(id: string, data: IngredientData): SKU[] {
+  if (SKU_MAP[id]) return SKU_MAP[id];
   const dose = (data.atAGlance?.dose || "").toString();
   const result: SKU[] = [];
   // Powder claims override AM/PM mentions inside (which describe scoop split)
@@ -102,8 +128,7 @@ function detectSKUs(id: string, data: IngredientData): SKU[] {
     if (/\bAM\b/.test(dose)) result.push("AM");
     if (/\bPM\b/.test(dose)) result.push("PM");
   }
-  if (result.length > 0) return result;
-  return SKU_FALLBACK[id] ?? [];
+  return result;
 }
 
 const ALL_CONDITIONS: Condition[] = ["heds", "pots", "mcas"];
@@ -151,14 +176,14 @@ export default function IngredientByCondition() {
       <div className="max-w-7xl mx-auto">
         {/* Editorial header */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <p className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-4">
+          <p className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.4em] mb-4">
             By Your Conditions
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight mb-4">
             How each ingredient helps <span className="text-[#B36B4D] italic">your</span> triad
           </h2>
           <p className="text-base md:text-lg text-[#5D5752] leading-relaxed">
-            Tap the conditions you live with. The grid below shows how every ingredient in the formula addresses each one, in plain language.
+            Tap the conditions you live with. The grid below shows how every ingredient in the formula relates to the biology behind each one, in plain language.
           </p>
         </div>
 
@@ -176,7 +201,7 @@ export default function IngredientByCondition() {
                 className={`group inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold uppercase tracking-[0.15em] text-xs md:text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B36B4D] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F2ED] ${
                   active
                     ? `${meta.bgActive} ${meta.color} border-2 ${meta.borderActive} shadow-md`
-                    : "bg-white/60 text-[#8A857C] border-2 border-transparent hover:bg-white hover:scale-[1.02]"
+                    : "bg-white/60 text-[#6B655F] border-2 border-transparent hover:bg-white hover:scale-[1.02]"
                 }`}
               >
                 <span
@@ -219,7 +244,7 @@ export default function IngredientByCondition() {
               <div
                 className={`hidden md:grid sticky top-20 z-20 bg-[#F4F2ED]/95 backdrop-blur-md gap-6 mb-3 py-4 px-5 border-b-2 border-[#3D3733]/15 shadow-[0_4px_12px_-8px_rgba(15,42,34,0.15)] rounded-t-lg ${gridColsClass}`}
               >
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#8A857C]">
+                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#6B655F]">
                   Ingredient
                 </div>
                 {conditionsArr.map((c) => {
@@ -287,7 +312,7 @@ export default function IngredientByCondition() {
                         {/* "Full ingredient page" - hover-only on desktop, persistent on mobile */}
                         <Link
                           href={`/ingredients/${id}`}
-                          className="mt-3 md:mt-3 inline-flex items-center gap-1.5 text-[10px] font-bold text-[#B36B4D]/60 uppercase tracking-[0.15em] hover:text-[#B36B4D] md:opacity-0 md:group-hover:opacity-100 transition-all"
+                          className="mt-3 md:mt-3 inline-flex items-center gap-1.5 text-[10px] font-bold text-[#8F5238] uppercase tracking-[0.15em] hover:text-[#B36B4D] md:opacity-0 md:group-hover:opacity-100 transition-all"
                         >
                           Full page
                           <ArrowRight size={10} className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
@@ -313,7 +338,7 @@ export default function IngredientByCondition() {
                             </div>
                             <p className="text-[13.5px] md:text-sm text-[#5D5752] leading-relaxed">
                               {blurb || (
-                                <span className="italic text-[#8A857C]/60">
+                                <span className="italic text-[#6B655F]">
                                   No direct mechanism for this condition.
                                 </span>
                               )}
@@ -327,7 +352,7 @@ export default function IngredientByCondition() {
               </div>
 
               {/* Footer note */}
-              <p className="text-center text-xs text-[#8A857C] mt-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-center text-xs text-[#6B655F] mt-10 max-w-2xl mx-auto leading-relaxed">
                 Patient-language summaries. Each ingredient page has the full mechanism, dose, primary literature with PMIDs, safety, and excipient details.
               </p>
             </motion.div>

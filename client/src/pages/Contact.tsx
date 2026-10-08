@@ -1,20 +1,45 @@
-import { useState, FormEvent } from "react";
+import { useRef, useState, FormEvent } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, CheckCircle } from "lucide-react";
-import { trackLead, track } from "@/lib/metaPixel";
+import { track } from "@/lib/metaPixel";
+import { trackGa } from "@/lib/analytics";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+const FALLBACK_ERROR =
+  "Something went wrong. Please try again, or email ken@wellnessforzebras.com.";
+
+async function readErrorMessage(response: Response): Promise<string> {
+  try {
+    const data: unknown = await response.json();
+    const msg = (data as { message?: unknown } | null)?.message;
+    if (typeof msg === "string" && msg.trim()) return msg;
+  } catch {
+    /* non-JSON body */
+  }
+  return FALLBACK_ERROR;
+}
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const emailRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    const trimmedEmail = email.trim();
+    if (!EMAIL_RE.test(trimmedEmail)) {
+      setEmailError("Please enter a valid email address, like name@example.com.");
+      emailRef.current?.focus();
+      return;
+    }
+    setEmailError("");
     setIsSubmitting(true);
     try {
       const hp =
@@ -24,14 +49,22 @@ export default function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name.trim(),
-          email: email.trim(),
+          email: trimmedEmail,
           message: message.trim(),
           website: hp,
         }),
       });
-      if (!res.ok) throw new Error("Request failed");
+      if (!res.ok) {
+        toast({
+          title: "Something went wrong",
+          description: await readErrorMessage(res),
+          variant: "destructive",
+        });
+        return;
+      }
       setIsSubmitted(true);
       track('Contact', { content_name: 'Contact form' });
+      trackGa("contact_form_submit");
       toast({
         title: "Message sent",
         description: "Thanks for reaching out. We respond within two business days.",
@@ -42,7 +75,7 @@ export default function Contact() {
     } catch {
       toast({
         title: "Something went wrong",
-        description: "Please try again, or email ken@wellnessforzebras.com directly.",
+        description: FALLBACK_ERROR,
         variant: "destructive",
       });
     } finally {
@@ -69,7 +102,7 @@ export default function Contact() {
           {/* Contact form -> /api/contact */}
           <section className="bg-white/60 border border-[#3D3733]/10 rounded-2xl p-8 md:p-10 mb-8">
             {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 <h2 className="text-2xl font-serif font-bold text-[#0F2A22] mb-2">Send a message</h2>
                 {/* Honeypot - hidden from humans, bots fill it */}
                 <input
@@ -88,6 +121,8 @@ export default function Contact() {
                   <input
                     id="contact-name"
                     type="text"
+                    autoComplete="name"
+                    maxLength={100}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -99,13 +134,25 @@ export default function Contact() {
                     Email
                   </label>
                   <input
+                    ref={emailRef}
                     id="contact-email"
                     type="email"
+                    autoComplete="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (emailError) setEmailError("");
+                    }}
                     required
+                    aria-invalid={emailError ? "true" : undefined}
+                    aria-describedby={emailError ? "contact-email-error" : undefined}
                     className={inputClass}
                   />
+                  {emailError && (
+                    <p id="contact-email-error" role="alert" className="mt-2 text-sm font-medium text-[#9B2C2C]">
+                      {emailError}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="contact-message" className="block text-sm font-semibold text-[#3D3733] mb-1">
@@ -113,6 +160,7 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="contact-message"
+                    maxLength={5000}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
@@ -122,7 +170,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  disabled={isSubmitting || !name || !email || !message}
+                  disabled={isSubmitting || !name.trim() || !email.trim() || !message.trim()}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#0F2A22] hover:bg-[#B36B4D] disabled:opacity-60 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full transition-colors"
                 >
                   {isSubmitting ? "Sending..." : "Send message"}

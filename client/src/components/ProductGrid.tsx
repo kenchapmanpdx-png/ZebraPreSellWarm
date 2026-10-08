@@ -1,6 +1,6 @@
 /* client/src/components/ProductGrid.tsx
  *
- * Three-SKU lineup for v7.8: AM Capsules, PM Capsules, Daily Powder.
+ * Three-SKU lineup for v8.0: AM Capsules, PM Capsules, Daily Powder.
  * Cards describe what each part of the system DOES for the patient (not
  * specific ingredients - those live on the deep-dive pages). The full
  * system is one product; CTAs reflect that.
@@ -16,12 +16,12 @@ export default function ProductGrid() {
       tag: "AM CAPSULES",
       title: "AM Capsules",
       subtitle: "Morning Foundation",
-      description: "Set the day up to be stable. The morning capsules carry the methylation, energy, and cross-linking nutrients your body needs at the front of the day - the work that gets the autonomic system, mitochondria, and connective tissue rebuilding pathways online.",
+      description: "Three morning capsules carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, and the copper and manganese your body uses to cross-link collagen.",
       icon: <Sun className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       benefits: [
-        "Steadier energy, less morning crash",
-        "Methylation support for hard-to-clear histamine",
-        "Cofactors for collagen cross-linking",
+        "B vitamins for normal energy metabolism",
+        "Methylfolate and B12 for normal methylation",
+        "Copper and manganese for collagen cross-linking",
       ],
       gradient: "from-orange-100/50 to-white/50"
     },
@@ -29,13 +29,13 @@ export default function ProductGrid() {
       id: "pm",
       tag: "PM CAPSULES",
       title: "PM Capsules",
-      subtitle: "Evening Reset",
-      description: "Help the body actually recover overnight. The evening capsules protect the gut lining, support tissue repair, and reduce the inflammatory load left over from the day so it doesn't follow you into sleep.",
+      subtitle: "Evening Routine",
+      description: "Three evening capsules carry L-theanine, astaxanthin, pantothenic acid, biotin, selenium, boron, and molybdenum. NR, pine bark, grape seed, and zinc carnosine are split between the AM and PM capsules.",
       icon: <Moon className="w-6 h-6 text-indigo-600" aria-hidden="true" />,
       benefits: [
-        "Calmer histamine load before bed",
-        "Gut lining protection while you sleep",
-        "Overnight connective-tissue recovery",
+        "L-theanine to support relaxation in the evening",
+        "Zinc carnosine to support the stomach lining",
+        "Astaxanthin for antioxidant support",
       ],
       gradient: "from-indigo-100/50 to-white/50"
     },
@@ -43,12 +43,12 @@ export default function ProductGrid() {
       id: "powder",
       tag: "DAILY POWDER",
       title: "Daily Powder",
-      subtitle: "ECM Protection & Mast Cell Calm",
-      description: "Carry the actives that need real dose to work. The powder is where the heavy lifters live - the gram-scale ingredients that protect existing collagen, calm mast cells across multiple pathways, and replenish what gets used up. Mixed into water; titratable from a sprinkle.",
+      subtitle: "The Gram-Scale Ingredients",
+      description: "Some ingredients are studied at doses too large for a few capsules. The powder carries magnesium, vitamin C, taurine, PEA, quercetin phytosome, chlorogenic acid, and luteolin: about 7.7 g a day in an AM and a PM scoop, mixed into water.",
       icon: <Droplets className="w-6 h-6 text-emerald-700" aria-hidden="true" />,
       benefits: [
-        "Protects existing collagen from MMP-driven breakdown",
-        "Multi-pathway mast cell stabilization",
+        "Vitamin C for normal collagen formation",
+        "PEA, quercetin, and luteolin, researched for mast cell balance",
         "Titratable from a sprinkle for sensitive starts",
       ],
       gradient: "from-emerald-100/50 to-white/50"
@@ -63,23 +63,23 @@ export default function ProductGrid() {
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="text-[#B36B4D] font-bold uppercase tracking-[0.4em] text-[10px] mb-4"
+          className="text-[#8F5238] font-bold uppercase tracking-[0.4em] text-[10px] mb-4"
         >
-          The Clinical Collection
+          The System
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-4"
         >
-          Targeted Biological <span className="text-[#B36B4D] italic">Intervention.</span>
+          Three Parts, <span className="text-[#B36B4D] italic">One Routine.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="text-[#5D5752] text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed"
         >
-          Three components, one system. AM capsules, PM capsules, and the Daily Powder all work together - not sold separately.
+          AM capsules, PM capsules, and the Daily Powder are designed to be taken together and are not sold separately.
         </motion.p>
       </div>
 
@@ -110,7 +110,7 @@ export default function ProductGrid() {
                   <h3 className="text-2xl font-serif font-bold text-[#3D3733] leading-tight group-hover:text-[#B36B4D] transition-colors">
                     {product.title}
                   </h3>
-                  <p className="text-[10px] font-bold text-[#8A857C] uppercase tracking-widest mt-1">
+                  <p className="text-[10px] font-bold text-[#6B655F] uppercase tracking-widest mt-1">
                     {product.subtitle}
                   </p>
                 </div>
@@ -120,7 +120,7 @@ export default function ProductGrid() {
                 </p>
 
                 <div className="mt-auto space-y-3 pt-4 border-t border-[#3D3733]/10">
-                  <p className="text-[9px] font-black text-[#B36B4D]/60 uppercase tracking-[0.2em]">What it does</p>
+                  <p className="text-[9px] font-black text-[#8F5238] uppercase tracking-[0.2em]">What it does</p>
                   {product.benefits.map((b) => (
                     <div key={b} className="flex items-start gap-3 text-xs text-[#3D3733] font-medium leading-snug">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] flex-shrink-0 mt-1.5" />
@@ -143,7 +143,7 @@ export default function ProductGrid() {
           Reserve the Full System
           <ArrowRight size={18} aria-hidden="true" />
         </Link>
-        <p className="mt-4 text-xs text-[#8A857C] font-medium">
+        <p className="mt-4 text-xs text-[#6B655F] font-medium">
           One waitlist for all three components. No partial reservations.
         </p>
       </div>

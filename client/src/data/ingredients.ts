@@ -86,22 +86,22 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "What does PEA actually do?", a: "PEA tells overactive nerves and mast cells to settle down by activating your body's PPAR-alpha pathway. The advantage over symptom-blocking drugs: PEA works upstream, lowering how easily pain or mast cell reactivity gets switched on in the first place, rather than masking signals once they're firing. The strongest clinical evidence is in chronic pain and central sensitization conditions." },
             { q: "Why ultramicronized? Isn't all PEA the same?", a: "Same molecule, completely different absorption. Standard PEA is waxy and barely dissolves in the gut; ultramicronized PEA is ground to roughly 10-micron particles so your gut can absorb it reliably. Every PEA trial that showed clinical benefit used a micronized or ultramicronized form. Cheap bulk PEA usually isn't micronized." },
             { q: "How long until I notice anything?", a: "Most people start noticing changes around 30 days, with bigger shifts coming between 30 and 60 days. PEA works by gradually retuning your nervous and immune systems, so it builds over time. Some people feel a small adjustment bump in the first week as the system recalibrates - this usually settles on its own within a few days. Give it a clean 60 days at full dose for the real picture." },
-            { q: "Is PEA safe with my POTS and MCAS medications?", a: "PEA has one of the cleanest safety records of any natural supplement. No documented interactions with beta-blockers, ivabradine, fludrocortisone, antihistamines, or cromolyn. It isn't metabolized through the major liver enzymes that drive most drug interactions, so it tends to play well with whatever else you're taking. Run new supplements past your pharmacist as always - but PEA is one where the answer is usually a clean yes." }
+            { q: "Is PEA safe with my POTS and MCAS medications?", a: "PEA has one of the cleanest safety records of any natural supplement. No interaction studies with POTS or MCAS medications exist; no interactions have been reported with beta-blockers, ivabradine, fludrocortisone, antihistamines, or cromolyn. It isn't metabolized through the major liver enzymes that drive most drug interactions. Run new supplements past your pharmacist or prescriber as always." }
         ],
         triadPlain: {
             mcas: "PEA is one of the most overlooked tools for MCAS. Two MCAS-specific advantages stand out: it doesn't lose its punch over time (no tachyphylaxis), and it's gentle enough that even hyper-sensitive patients usually tolerate it well. We pair it with luteolin because together they hit more mast cell pathways than either alone. PEA is also not fermentation-derived, so no histamine or tyramine contamination risk, which matters when most flavonoids and amino acids carry that risk.",
-            heds: "Living with hEDS often means daily pain that doesn't respond to regular painkillers - because the pain isn't from one injury, it's from a constantly inflamed nervous system. That's exactly where PEA shines. It's been studied for decades in nerve pain, inflammatory pain, and central sensitization (the brain-amplifies-pain pattern common in hEDS). PEA also calms the mast cells that release enzymes activating MMPs - the proteins that break down your collagen. So calmer mast cells means less of that destruction cascade kicking off. PEA is a key piece of an ECM-protective protocol - taking serious pressure off the system.",
-            pots: "PEA targets the inflammation layer that fuels so many POTS symptoms, especially the post-viral and post-COVID cases where neuroinflammation is increasingly recognized as a key driver. As one of the best-studied natural neuroinflammation calmers, it addresses the parts of the POTS picture that propranolol and salt tablets just don't touch. If your POTS comes with chronic pain, brain fog, or persistent inflammation symptoms, PEA is one of the most useful additions to the protocol."
+            heds: "PEA has been studied for decades in nerve, inflammatory, and central-sensitization pain research, in populations other than hEDS. In lab models it supports a calmer nervous-system and inflammatory response. PEA also calms the mast cells that release enzymes activating MMPs - the proteins that break down your collagen. So calmer mast cells means less of that destruction cascade kicking off. That is why PEA sits alongside the ECM-protective ingredients in the formula.",
+            pots: "PEA's POTS relevance is indirect: researchers increasingly discuss neuroinflammation in POTS, especially after viral illness, and PEA is one of the better-studied natural compounds for supporting a normal inflammatory response in the nervous system. It has not been studied in POTS, and it is not a substitute for any prescribed treatment."
         },
-        bluf: "Palmitoylethanolamide (PEA) is a fatty acid amide your body produces to dampen inflammation and stabilize mast cells, primarily through PPAR-alpha activation in the ALIA pathway. Lab studies show roughly 54% reduction in histamine release at therapeutic concentrations, relevant for MCAS. ZebraThrive uses 1,200 mg daily of ultramicronized PEA in the Daily Powder, split AM and PM.",
+        bluf: "Palmitoylethanolamide (PEA) is a fatty acid amide your body produces to dampen inflammation and stabilize mast cells, primarily through PPAR-alpha activation in the ALIA pathway. In a rat mast cell line, PEA reduced histamine release by roughly 54% (lab data). ZebraThrive uses 1,200 mg daily of ultramicronized PEA in the Daily Powder, split AM and PM.",
         atAGlance: {
             whatItIs: "A naturally occurring fatty acid compound your body makes to calm inflammation and stabilize mast cells",
             whyWeIncludeIt: "PEA is one of the most thoroughly studied mast cell stabilizers with exceptional safety, directly addressing the mast cell dysfunction central to MCAS",
-            dose: "1,200 mg daily in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
+            dose: "1,200 mg daily in the Daily Powder, split AM and PM scoops",
             keyBenefits: [
-                "Reduces histamine release by ~54% via PPAR-alpha activation in the ALIA pathway",
-                "Significant pain reduction (SMD 1.68)",
-                "No documented drug interactions with any POTS or MCAS medications",
+                "Reduced histamine release by about 54% in a rat mast cell line via the 2-AG pathway (lab data)",
+                "Meta-analysis of 11 RCTs in chronic pain populations reported lower pain scores (SMD 1.68)",
+                "No interaction studies with POTS or MCAS medications exist; no interactions have been reported",
                 "Benefits continue improving through day 60"
             ]
         },
@@ -144,15 +144,15 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "No randomized controlled trials exist specifically in hEDS, POTS, or MCAS populations. All clinical evidence is extrapolated from related conditions including chronic pain, fibromyalgia, and functional dyspepsia. The mast cell stabilization mechanism directly addresses MCAS pathophysiology, and Dr. Lawrence Afrin's MCAS treatment protocols incorporate PEA based on the mechanism evidence.",
+        evidenceGaps: "No randomized controlled trials exist specifically in hEDS, POTS, or MCAS populations. All clinical evidence is extrapolated from related conditions including chronic pain, fibromyalgia, and functional dyspepsia. The mast cell evidence is mechanistic (cell and tissue studies), not clinical outcome data in MCAS.",
         triad: {
-            mcas: "PEA is a mast cell stabilizer-it calms overactive mast cells rather than triggering them. The 54% reduction in histamine release demonstrated in cell studies translates to meaningful symptom relief for many MCAS patients. Dr. Lawrence Afrin, a leading MCAS specialist, advocates for up to 3 grams daily of PEA, particularly for neurological symptoms. Critical for MCAS patients: PEA is NOT fermentation-derived, so there's no histamine/tyramine contamination risk.",
+            mcas: "PEA supports mast cell stability rather than triggering mast cells. In a cell study (rat RBL-2H3 mast cells), PEA reduced histamine release by about 54%; that is lab data and has not been tested as a symptom outcome in people with MCAS. For sensitive users: PEA is NOT fermentation-derived, so there's no histamine/tyramine contamination risk.",
             heds: "While PEA doesn't directly affect collagen, it benefits hEDS patients through two mechanisms: (1) significant chronic pain reduction-90% of hEDS patients have chronic pain, and (2) mast cell stabilization, since MCAS is a common comorbidity affecting 14-47% of hEDS patients. PEA shows no anti-fibrotic effects that would concern hEDS patients.",
             pots: "PEA reduces neuroinflammation through PPAR-α activation, which may address the growing recognition that neuroinflammation contributes to POTS symptoms. POTS patients show elevated inflammatory markers (GDF15, NGAL, TNFR1), and PEA's anti-inflammatory effects may help. One theoretical caution: PPAR-α activation may slightly lower blood pressure-monitor BP during initiation, especially in hypotensive POTS patients."
         },
         whyThisForm: {
-            form: "Generic ultramicronized PEA (≤10 μm particle size, ≥99% purity, COA-verified)",
-            rationale: "Standard PEA powder has very poor absorption: particles measuring 300-600 micrometers show minimal bioavailability. The solution is particle size reduction. We use generic ultramicronized PEA verified by Certificate of Analysis on every lot. Branded enhanced-bioavailability forms (Levagen+, LipiSperse) deliver similar pharmacokinetics through different formulation technology, but the v7.8 spec is generic-OK at the ≤10 μm + ≥99% purity tier.",
+            form: "Generic ultramicronized PEA (D90 under 10 μm, synthetic, ≥99% purity, COA-verified)",
+            rationale: "Standard PEA powder has very poor absorption: particles measuring 300-600 micrometers show minimal bioavailability. The solution is particle size reduction. We use generic ultramicronized PEA verified by Certificate of Analysis on every lot. Branded enhanced-bioavailability forms (Levagen+, LipiSperse) deliver similar pharmacokinetics through different formulation technology, but our spec is generic-OK at the D90 under 10 μm + ≥99% purity tier.",
             comparison: [
                 { form: "Standard PEA (300-600 μm)", difference: "Only 1.1 pmol/mL plasma achieved; limited clinical effect", selected: false },
                 { form: "Generic ultramicronized PEA (≤10 μm, COA-verified)", difference: "5x higher plasma concentration (5.4 pmol/mL); 82% absorption in 3 hours", selected: true },
@@ -161,7 +161,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         safety: {
             sideEffects: "PEA demonstrates exceptional safety. A meta-analysis of 16 clinical trials found no treatment-related adverse events at doses up to 1,800 mg daily. The most commonly reported side effects-mild dizziness (16-18%) and rare palpitations-occurred at rates similar to placebo. Long-term safety data extends to 120 days of continuous use without serious adverse events.",
-            interactions: "PEA has NO documented drug interactions with any POTS or MCAS medications across 4,000+ patients in historical data. This includes beta-blockers, ivabradine, fludrocortisone, midodrine, hydroxyzine, cromolyn, ketotifen, and all H1/H2 blockers.",
+            interactions: "No interaction studies with POTS or MCAS medications exist; no interactions have been reported. That includes beta-blockers, ivabradine, fludrocortisone, midodrine, hydroxyzine, cromolyn, ketotifen, and H1/H2 blockers. Absence of reports is not proof of no interaction, so tell your prescriber you take it.",
             excipientConcerns: {
                 avoid: ["Artificial dyes", "Sodium benzoate", "PEG (polyethylene glycol)", "Titanium dioxide coatings"],
                 safe: ["Microcrystalline cellulose", "Silica", "Rice flour"]
@@ -175,7 +175,7 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Weeks 3-4", dosage: "500-600 mg twice daily", notes: "Approaching target dose" },
                 { step: "Week 5+", dosage: "1,200 mg/day (maintenance, in the Daily Powder, split AM and PM scoops)", notes: "Full therapeutic dose; continue for minimum 60 days" }
             ],
-            timeline: "Some patients notice benefits within 1-3 weeks, but optimal effects occur at 60+ days. The meta-analysis showed 35% additional benefit at 60 days vs. 30 days-don't abandon treatment too early."
+            timeline: "Some patients notice benefits within 1-3 weeks, but optimal effects occur at 60+ days. In the meta-analysis, pain-score changes at 60 days were larger than at 30 days, so give it time."
         },
         sources: [
             { title: "PEA counteracts substance P-induced mast cell activation by stimulating 2-AG biosynthesis", pmid: "31878942", authors: "Petrosino S et al.", year: "2019" },
@@ -188,42 +188,42 @@ export const ingredients: Record<string, IngredientData> = {
     "luteolin": {
         id: "luteolin",
         name: "Luteolin",
-        patientSummary: "Luteolin is a plant compound found in celery, parsley, artichokes, and chamomile - and it happens to be one of the most studied natural mast cell stabilizers in the world. For people with MCAS, it calms the cells that misfire and release histamine, tryptase, and inflammatory chemicals into your body. In head-to-head lab tests, luteolin actually outperformed cromolyn - blocking a wider range of inflammatory signals like IL-6, IL-8, and TNF. For hEDS and POTS, mast cell calm tends to ripple outward: fewer flares, less brain fog, steadier autonomic function. We use a micronized form because standard luteolin barely absorbs.",
-        whyThisFormPatient: "We use micronized luteolin (≤25 microns). Plain luteolin powder is so poorly water-soluble it can pass through your digestive system without ever entering your bloodstream - plasma levels after standard luteolin doses are often undetectable. Micronization grinds the particles small enough that your gut can actually absorb them. We source generic micronized luteolin meeting that spec rather than paying a branded premium, because the analytical particle-size verification on the Certificate of Analysis is what determines whether the ingredient works in your body. The spec is the product.",
+        patientSummary: "Luteolin is a plant compound found in celery, parsley, artichokes, and chamomile - and it happens to be one of the most studied natural mast cell stabilizers in the world. In lab studies of cultured human mast cells, luteolin reduced the release of histamine, tryptase, and inflammatory signals like IL-6, IL-8, and TNF. That is cell data, not a human outcome. We use standard (non-micronized) luteolin from Sophora japonica, a non-peanut source.",
+        whyThisFormPatient: "We use standard (non-micronized) luteolin from Sophora japonica (Japanese pagoda tree). The source is the real gate: some commercial luteolin is extracted from peanut hulls, and a peanut-derived ingredient is a non-starter for an allergy-sensitive community. We do not pay for micronization because luteolin's absorption is limited mainly by first-pass metabolism (glucuronidation in the gut wall and liver), not by how fast it dissolves, and micronized luteolin has no human pharmacokinetic data showing it helps. The source and purity on the Certificate of Analysis are what matter.",
         faq: [
-            { q: "What does luteolin do that quercetin doesn't?", a: "Both stabilize mast cells, but luteolin has two real edges. It crosses the blood-brain barrier better - important when you're fighting MCAS brain fog or neuroinflammation. And it skips the ivabradine interaction concern that quercetin carries. In direct head-to-head testing against cromolyn, luteolin blocked a wider range of inflammatory chemicals - including the cytokines (IL-1β, IL-6, TNF) that cromolyn doesn't affect. For a single mast cell calmer with the broadest reach, luteolin is a strong pick." },
-            { q: "Why does luteolin need a special form?", a: "Standard luteolin powder barely dissolves in water. The clinical-trial forms use micronization, particles ground to single-digit microns so the gut can actually absorb them, and that's the spec we use. Cheap retail luteolin tablets typically aren't micronized, which is one reason their results disappoint." },
+            { q: "What does luteolin do that quercetin doesn't?", a: "Both stabilize mast cells, but luteolin has two real edges. It crosses the blood-brain barrier better, which matters for brain fog and neuroinflammation research. And it skips the ivabradine interaction concern that quercetin carries. In cultured human mast cells (lab data), luteolin also reduced cytokines such as IL-1β, IL-6, and TNF, not just histamine." },
+            { q: "Why standard luteolin instead of micronized?", a: "Luteolin's absorption is limited mainly by first-pass metabolism: enzymes in the gut wall and liver (UGT1A9) attach glucuronic acid to it quickly. Making the particles smaller does not change that, and micronized luteolin has no human pharmacokinetic studies showing an advantage. So we put our spec where it matters: standard luteolin from Sophora japonica, a non-peanut source, verified on the Certificate of Analysis." },
             { q: "How should I start luteolin if I'm reactive?", a: "Start low and go slow. A subset of MCAS patients are reactive to anything that touches their mast cells in the early days - the same is true for cromolyn, ketotifen, and luteolin. The standard approach is to start at a fraction of the target dose and step up over 2-3 weeks. This gives your system time to adjust to the calmer baseline. Most people tolerate the full dose just fine once they've ramped up." },
-            { q: "How long until I notice anything?", a: "Mast cell stabilizers don't work like antihistamines - they make flares harder to trigger in the first place. Most people who respond start noticing the difference in 4-8 weeks of consistent dosing, and trials that have shown meaningful benefit typically ran 2-6 months. Daily consistency is what unlocks the benefit. Build it into your routine the same way you would any prescription, and the effects build steadily over the first couple of months." }
+            { q: "How long until I notice anything?", a: "Mast cell stabilizers don't work like antihistamines; they support mast cell stability over time rather than acting in the moment. Human studies of luteolin-containing supplements typically ran 2-6 months, so give it consistent daily use over the first couple of months." }
         ],
         triadPlain: {
-            mcas: "Luteolin sits near the top of the list for natural mast cell stabilizers, and the mechanism evidence is unusually deep. Beyond what most mast cell options block, luteolin also calms the cytokines (IL-1β, IL-6, TNF) that drive systemic MCAS symptoms, not just histamine. There's good safety data from decades of use in related conditions like allergic rhinitis, and small trials in post-COVID smell loss have shown real benefit. For anyone evaluating mast cell options, luteolin is one of the most well-supported choices on the table.",
+            mcas: "Luteolin sits near the top of the list for natural mast cell stabilizers, and the mechanism evidence is unusually deep. Beyond what most mast cell options block, luteolin also calms the cytokines (IL-1β, IL-6, TNF) that drive systemic MCAS symptoms, not just histamine. There's good safety data from decades of dietary and supplement use. For anyone evaluating mast cell support options, luteolin has one of the deeper mechanism literatures.",
             heds: "Luteolin protects connective tissue from the inside. Mast cells release proteases (chymase and tryptase) that turn on the MMPs - the enzymes that break down collagen faster than your body can rebuild it. By calming mast cells, luteolin keeps that destruction cascade from getting started. For the many hEDS patients who also live with MCAS, this is one of the most efficient indirect routes to ECM protection. Less mast cell activity means less collagen degradation means better-protected tissue over time. It's why luteolin earned its spot in the formulation.",
-            pots: "Luteolin works upstream of POTS - on the inflammation and mast cell activity that fuel symptoms, particularly in post-viral and post-COVID cases. It crosses the blood-brain barrier well enough to reach the neuroinflammation layer that's increasingly recognized as a POTS driver. A small but compelling RCT in post-COVID smell loss patients showed about 40% improvement on luteolin. Many people in the POTS community also have MCAS in the mix, and luteolin's one of the strongest natural options for both at once. It addresses the layers underneath POTS that standard medications don't reach."
+            pots: "Luteolin's POTS relevance is indirect: it supports normal mast cell and inflammatory balance, and it crosses the blood-brain barrier, which is why it shows up in neuroinflammation research. Many people in the POTS community also have mast cell issues. Luteolin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
         },
-        bluf: "Luteolin is a plant flavonoid (celery, parsley, artichokes) that stabilizes mast cells more potently than prescription cromolyn sodium in lab studies and crosses the blood-brain barrier to address neuroinflammation. The EDS UK GP Toolkit lists it as an option to consider for MCAS management in hEDS patients. ZebraThrive uses 140 mg daily of a micronized form in the Daily Powder.",
+        bluf: "Luteolin is a plant flavonoid (found in celery, parsley, artichokes) that supports mast cell stability in lab studies of cultured human mast cells and crosses the blood-brain barrier. ZebraThrive uses 140 mg daily of standard (non-micronized) luteolin from Sophora japonica, a non-peanut source, in the Daily Powder, split AM and PM.",
         atAGlance: {
-            whatItIs: "A plant flavonoid (celery, parsley, artichokes) that stabilizes mast cells more potently than prescription cromolyn sodium in head-to-head lab studies",
-            whyWeIncludeIt: "Luteolin stabilizes mast cells more potently than prescription cromolyn sodium in head-to-head lab studies, with excellent safety and minimal drug interactions",
-            dose: "140 mg daily in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
+            whatItIs: "A plant flavonoid (found in celery, parsley, artichokes) that supports mast cell stability in lab studies",
+            whyWeIncludeIt: "In cultured human mast cells, luteolin reduced release of histamine, tryptase, and inflammatory cytokines (lab data), with a good safety record and few known drug interactions",
+            dose: "140 mg daily in the Daily Powder, split AM and PM scoops",
             keyBenefits: [
-                "Superior to cromolyn sodium at inhibiting histamine, tryptase, and inflammatory cytokines",
-                "Crosses the blood-brain barrier to reduce neuroinflammation",
-                "Listed by the EDS UK GP Toolkit as an option to consider for MCAS management",
-                "Minimal drug interactions with common POTS/MCAS medications"
+                "Reduced histamine, tryptase, and cytokine release in cultured human mast cells (lab data)",
+                "Crosses the blood-brain barrier",
+                "Standard luteolin from Sophora japonica (non-peanut source)",
+                "Few known drug interactions with common POTS/MCAS medications"
             ]
         },
-        howItWorks: "Think of luteolin as a master mast cell controller that works through multiple locks simultaneously. While cromolyn sodium (Gastrocrom) works through one pathway, luteolin blocks mast cell activation through several.\n\nFirst, luteolin prevents calcium from entering mast cells-calcium influx is the trigger for degranulation. No calcium surge, no histamine release. Second, it blocks NF-κB, a master switch for inflammatory gene expression. Third, it inhibits protein kinase C (PKC), another pathway that leads to mast cell activation.\n\nWhat makes luteolin special is that it's the most lipophilic (fat-loving) flavonoid, meaning it crosses the blood-brain barrier effectively. This matters because many patients experience \"brain fog\" and cognitive symptoms-luteolin can reduce neuroinflammation directly in the brain where it's causing problems. It also induces synthesis of brain-derived neurotrophic factor (BDNF) and other compounds that support nerve health.",
+        howItWorks: "In lab studies, luteolin acts on mast cell activation through several pathways at once.\n\nFirst, luteolin prevents calcium from entering mast cells-calcium influx is the trigger for degranulation. No calcium surge, no histamine release. Second, it blocks NF-κB, a master switch for inflammatory gene expression. Third, it inhibits protein kinase C (PKC), another pathway that leads to mast cell activation.\n\nWhat makes luteolin special is that it's the most lipophilic (fat-loving) flavonoid, meaning it crosses the blood-brain barrier effectively. This matters because many patients experience \"brain fog\" and cognitive symptoms-luteolin can reduce neuroinflammation directly in the brain where it's causing problems. It also induces synthesis of brain-derived neurotrophic factor (BDNF) and other compounds that support nerve health.",
         research: [
             {
-                outcome: "Superior Mast Cell Stabilization",
-                summary: "Head-to-head comparisons show luteolin outperforms the prescription mast cell stabilizer cromolyn sodium.",
+                outcome: "Mast Cell Stabilization (Lab Data)",
+                summary: "In a cultured human mast cell line, luteolin reduced the release of several mast cell mediators. This is in vitro data, not a clinical outcome.",
                 studies: [
                     {
-                        source: "Tsilioni I & Theoharides TC, \"Luteolin more effective than cromolyn at inhibiting mast cell activation\"",
+                        source: "Tsilioni I & Theoharides TC, 2024 (Int Arch Allergy Immunol)",
                         pmid: "38588651",
-                        design: "Cultured human mast cell comparison study",
-                        finding: "Luteolin more effectively inhibited release of histamine, tryptase, IL-6, IL-8, and TNF-α across 10 different inflammatory markers compared to cromolyn"
+                        design: "In vitro, cultured human LADR mast cell line",
+                        finding: "Luteolin pretreatment inhibited release of histamine, tryptase, MMP-9, VEGF, IL-1β, IL-6, IL-8, and TNF from stimulated human mast cells in culture"
                     }
                 ]
             },
@@ -252,18 +252,19 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. Evidence for superior mast cell stabilization comes from in vitro studies comparing luteolin to cromolyn. However, the EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.",
+        evidenceGaps: "No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. The mast cell evidence comes from in vitro studies in cultured cells. Separately, the EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.",
         triad: {
-            mcas: "Luteolin represents one of the most effective natural mast cell stabilizers available. Research demonstrates it inhibits not just histamine, but also tryptase, IL-6, IL-8, TNF-α, and other mediators-providing broader coverage than cromolyn which primarily targets histamine. Importantly, luteolin works prophylactically (preventively). The EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management.",
+            mcas: "Luteolin represents one of the most effective natural mast cell stabilizers available. In cultured human mast cells it reduced not just histamine, but also tryptase, IL-6, IL-8, TNF-α, and other mediators (lab data). Its effect in those studies required pretreatment, so it is a daily-support ingredient rather than an in-the-moment one.",
             heds: "Luteolin provides indirect benefit to hEDS patients through anti-inflammatory effects and MCAS management (14-47% of hEDS patients have comorbid MCAS). However, luteolin does NOT achieve sufficient plasma concentrations to inhibit MMPs-don't expect direct collagen-protective effects. Its value for hEDS is through mast cell stabilization and inflammation reduction, not ECM protection.",
             pots: "Luteolin's ability to cross the blood-brain barrier makes it uniquely valuable for POTS patients experiencing brain fog, cognitive dysfunction, and neurological symptoms. It reduces microglial activation and central neuroinflammation. Additionally, it stabilizes mast cells around autonomic nerve fibers and may support vagal tone by reducing inflammatory interference with the autonomic nervous system."
         },
         whyThisForm: {
-            form: "Generic micronized luteolin (≤25 μm particle size, COA-verified)",
-            rationale: "Standard luteolin powder has poor bioavailability; only 4-17% reaches the bloodstream, so plasma levels after standard doses are often undetectable. The fix is particle size reduction. We use generic micronized luteolin verified by Certificate of Analysis (≤25 μm spec, the threshold the clinical trial forms used). Liposomal and PEA-luteolin co-ultramicronized forms are valid alternatives with their own evidence but are not what we ship; we co-formulate PEA and luteolin separately in the Daily Powder.",
+            form: "Standard (non-micronized) luteolin from Sophora japonica, non-peanut source, COA-verified",
+            rationale: "Luteolin's oral bioavailability is low because it is rapidly glucuronidated in the gut wall and liver (UGT1A9 first-pass metabolism). Absorption is metabolism-limited, not dissolution-limited, so grinding particles smaller buys little, and micronized luteolin has no human pharmacokinetic validation. The decisive spec is the source: we require luteolin from Sophora japonica, confirmed in writing as non-peanut, because some commercial luteolin is extracted from peanut hulls. Liposomal and PEA-luteolin co-ultramicronized forms are alternatives with their own evidence but are not what we ship; we deliver PEA and luteolin separately in the Daily Powder.",
             comparison: [
-                { form: "Standard luteolin powder", difference: "Only 4-17% bioavailability; most passes through unabsorbed", selected: false },
-                { form: "Generic micronized luteolin (≤25 μm, COA-verified)", difference: "Reduced particle size improves absorption to clinical-trial range", selected: true },
+                { form: "Standard luteolin from Sophora japonica (non-peanut, COA-verified)", difference: "Our form; source confirmed non-peanut by supplier statement", selected: true },
+                { form: "Micronized luteolin (≤25 μm)", difference: "Smaller particles, but absorption is metabolism-limited; no human PK data showing benefit", selected: false },
+                { form: "Peanut-hull-derived luteolin", difference: "Peanut allergen risk; excluded", selected: false },
                 { form: "Liposomal luteolin", difference: "Alternative carrier technology with 2-3x improved absorption; not used here", selected: false },
                 { form: "Co-ultramicronized PEA-luteolin (10:1 ratio)", difference: "Co-processed branded combo; we deliver both separately in the powder", selected: false }
             ]
@@ -287,7 +288,7 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "Allow 4-6 weeks for full therapeutic effect. Many patients report initial improvement around week 3-4. Consistent daily dosing is important due to the short half-life."
         },
         sources: [
-            { title: "Luteolin more effective than cromolyn sodium at inhibiting mast cell activation", pmid: "38588651", authors: "Tsilioni I & Theoharides TC", year: "2024" },
+            { title: "Luteolin Is More Potent than Cromolyn in Their Ability to Inhibit Mediator Release from Cultured Human Mast Cells", pmid: "38588651", authors: "Tsilioni I & Theoharides TC", year: "2024" },
             { title: "Long-COVID syndrome-associated brain fog and chemofog: Luteolin to the rescue", pmid: "33847020", authors: "Theoharides TC et al.", year: "2021" },
             { title: "Ultramicronized PEA and Luteolin Supplement Combined with Olfactory Training", pmid: "35086448", authors: "Di Stadio A et al.", year: "2022" },
             { title: "Beneficial Effects of Co-Ultramicronized Palmitoylethanolamide/Luteolin in a Mouse Model of Autism", pmid: "27611916", authors: "Bertolino B et al.", year: "2017" }
@@ -297,7 +298,7 @@ export const ingredients: Record<string, IngredientData> = {
         id: "magnesium-bisglycinate",
         name: "Magnesium Bisglycinate",
         patientSummary: "Magnesium bisglycinate is magnesium bonded to two glycine amino acids - a gentle form that absorbs well without the laxative effect you get from cheaper magnesium forms like oxide or citrate. For the EDS/POTS/MCAS triad, magnesium is foundational. Most people in this community run low on it, and being low triggers mast cell instability, sympathetic overdrive, and lousy sleep. The bisglycinate form has the cleanest gut profile and the best human trial data for sleep quality and heart rate variability. We chose it over magnesium oxide (barely absorbed) and threonate (more expensive without the across-the-board benefits).",
-        whyThisFormPatient: "We use magnesium bisglycinate - magnesium chelated to two glycine amino acids. The chelate gets absorbed through PepT1, the peptide transporter, instead of the routes that cause the laxative effect of citrate or oxide. We required spectroscopic (FT-IR) proof that ours is a true chelate, because many cheaper 'bisglycinate' products are actually magnesium oxide buffered with glycine, not true chelate. We deliver 2,400 mg of the bisglycinate salt to give you 300 mg of elemental magnesium - the dose with actual HRV and sleep trial data in human studies.",
+        whyThisFormPatient: "We use magnesium bisglycinate - magnesium chelated to two glycine amino acids. The chelate gets absorbed through PepT1, the peptide transporter, instead of the routes that cause the laxative effect of citrate or oxide. We required spectroscopic (FT-IR) proof that ours is a true chelate, because many cheaper 'bisglycinate' products are actually magnesium oxide buffered with glycine, not true chelate. We deliver 2,400 mg of the bisglycinate chelate for about 300 mg of elemental magnesium (our current lot assays 12.3% magnesium, about 295 mg), in the dose range used in human HRV and sleep studies.",
         faq: [
             { q: "Why not magnesium oxide - it's cheaper?", a: "Because most of it never gets into your bloodstream. Magnesium oxide is about 4-10% bioavailable - most of it pulls water into your colon and you find out 30 minutes later. Bisglycinate is 20-40% bioavailable, absorbed through a different transporter (PepT1) that bypasses the laxative pathway. The glycine portion also has its own modest calming and sleep-supporting effects. For anyone with gastroparesis or a sensitive gut, bisglycinate is the only form that makes sense." },
             { q: "Will magnesium drop my blood pressure?", a: "For most POTS patients, no. The most recent meta-analysis (2,700+ people) found magnesium had essentially no significant blood pressure effect in people with normal BP. The 'magnesium lowers BP' framing came from older studies in hypertensive populations. If you're already on midodrine and running low, give your prescriber a heads-up - but the data doesn't support magnesium as a meaningful BP dropper at the doses we use." },
@@ -309,11 +310,11 @@ export const ingredients: Record<string, IngredientData> = {
             heds: "For hEDS specifically, the most reliable benefits are practical: less muscle tension, fewer cramps, calmer sympathetic tone, better sleep. Animal and lab studies also show magnesium can inhibit MMPs (the enzymes that degrade collagen), adding an ECM-protective angle on top of the symptomatic relief. People with hEDS often describe magnesium as the supplement that makes everything else work better, the foundation that lets the rest of the protocol do its job.",
             pots: "Magnesium has some of the cleanest evidence of any supplement on this list for POTS-relevant outcomes. Multiple RCTs show improvements in heart rate variability - the autonomic stability marker that's directly impaired in POTS. A 2025 trial of 155 people on magnesium bisglycinate specifically showed better sleep quality and improved HRV readiness scores. The mechanism is layered: magnesium dampens sympathetic dominance, supports inhibitory neurotransmission through glycine, and helps your nervous system actually rest. We split the dose AM and PM to maintain steady levels instead of dumping it all at once."
         },
-        bluf: "Magnesium bisglycinate is magnesium chelated to two glycine molecules, the form with the best absorption and the cleanest gut profile for mast-cell-sensitive patients. It stabilizes mast cells by competing at calcium channels, supports HRV in POTS, and serves as a foundational electrolyte. ZebraThrive uses 300 mg elemental daily (from 2,400 mg bisglycinate) in the Daily Powder, split AM and PM.",
+        bluf: "Magnesium bisglycinate is magnesium chelated to two glycine molecules, the form with the best absorption and the cleanest gut profile for mast-cell-sensitive patients. It supports mast cell stability by competing at calcium channels, supports heart rate variability, and serves as a foundational electrolyte. ZebraThrive uses 2,400 mg bisglycinate (about 300 mg elemental magnesium) daily in the Daily Powder, split AM and PM.",
         atAGlance: {
             whatItIs: "A highly absorbable, gentle form of magnesium bound to the amino acid glycine",
-            whyWeIncludeIt: "Magnesium is a foundational mineral for mast cell stability, autonomic function, and as a cofactor for histamine degradation (DAO enzyme)",
-            dose: "300 mg elemental magnesium daily from 2,400 mg magnesium bisglycinate, in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
+            whyWeIncludeIt: "Magnesium is a foundational mineral for mast cell stability and autonomic function, and correcting low magnesium removes an upstream histamine trigger",
+            dose: "2,400 mg magnesium bisglycinate daily (about 300 mg elemental magnesium), in the Daily Powder, split AM and PM scoops",
             keyBenefits: [
                 "Mast cell stabilizer: Reduces degranulation in dose-dependent manner",
                 "Calcium channel competition: dampens mast cell degranulation by limiting calcium influx",
@@ -373,8 +374,8 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "75% of POTS patients have magnesium deficiency. Magnesium improves heart rate variability and supports parasympathetic tone. Monitor blood pressure in hypotensive POTS patients as it can lower BP slightly."
         },
         whyThisForm: {
-            form: "Magnesium Glycinate",
-            rationale: "Form selection matters for absorption and MCAS tolerability. We chose glycinate because it uses the PEPT1 dipeptide pathway, causes minimal GI upset, is NOT fermentation-derived, and provides beneficial glycine.",
+            form: "Magnesium bisglycinate, generic true chelate (FT-IR verified), non-buffered, no citric acid",
+            rationale: "Form selection matters for absorption and MCAS tolerability. We chose bisglycinate because it uses the PEPT1 dipeptide pathway, causes minimal GI upset, is NOT fermentation-derived, and provides beneficial glycine. We use a generic chelate verified as a true chelate by FT-IR spectrum (no oxide buffering) and free of the citric acid found in some branded chelates.",
             comparison: [
                 { form: "Magnesium oxide", difference: "Only 4-15% absorption; strong laxative effect", selected: false },
                 { form: "Magnesium citrate", difference: "~30% absorption; fermentation-derived = histamine risk", selected: false },
@@ -396,7 +397,7 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Week 1", dosage: "100 mg elemental", notes: "MCAS ultra-sensitive start" },
                 { step: "Week 2", dosage: "125 mg twice daily", notes: "Standard start" },
                 { step: "Week 3", dosage: "150 mg twice daily", notes: "Target maintenance" },
-                { step: "Week 4+", dosage: "300 mg elemental daily", notes: "Full therapeutic dose, split AM/PM" }
+                { step: "Week 4+", dosage: "About 300 mg elemental daily (2,400 mg bisglycinate)", notes: "Full daily amount, split AM/PM scoops" }
             ],
             timeline: "RBC magnesium repletion requires 8-12 weeks. Don't expect immediate effects-repletion takes time. Sleep benefits may appear within 2-4 weeks."
         },
@@ -410,8 +411,8 @@ export const ingredients: Record<string, IngredientData> = {
     "pine-bark-extract": {
         id: "pine-bark-extract",
         name: "Pine Bark Extract",
-        patientSummary: "Pine bark extract is one of the most studied natural sources of procyanidins - oligomeric plant compounds that calm inflammation, support venous tone, and protect connective tissue from MMP-driven breakdown. The standout for the triad is MMP inhibition: a 2025 human RCT showed pine bark extract reduced MMP-8 (one of the matrix-degrading enzymes elevated in hEDS) and IL-6 over three months. It also stabilizes mast cells in lab studies with potency comparable to cromolyn. We use pine bark standardized to 65-75% procyanidins by HPLC - the analytical method that actually correlates with clinical activity.",
-        whyThisFormPatient: "We use generic pine bark extract standardized to 65-75% procyanidins by HPLC, sourced from a blend of pine species (Pinus pinaster, P. massoniana, P. sylvestris). The HPLC standardization matters more than the species or origin - what drives the activity is the procyanidin profile and the spectrum of minor compounds in the extract. Cheap 'pine bark 95% OPC' products usually use UV-Vis testing that inflates the apparent percentage while concentrating only the oligomeric fraction and stripping the minor compounds that help the extract work. We specify by analytical method, not marketing percentage.",
+        patientSummary: "Pine bark extract is one of the most studied natural sources of procyanidins - oligomeric plant compounds that calm inflammation, support venous tone, and protect connective tissue from MMP-driven breakdown. The standout for the triad is MMP inhibition: a 2025 human RCT showed pine bark extract reduced MMP-8 (one of the matrix-degrading enzymes elevated in hEDS) and IL-6 over three months. In a rat mast cell study, a pine bark extract also reduced histamine release (lab data). We use Pinus massoniana pine bark standardized to 65-75% procyanidins by HPLC - the analytical method that actually correlates with clinical activity.",
+        whyThisFormPatient: "We use generic pine bark extract from Pinus massoniana, standardized to 65-75% procyanidins by HPLC, non-fermented and confirmed peanut-free. Most published human pine bark studies used French maritime pine bark (Pinus pinaster, Pycnogenol), so our evidence is extrapolated across species. The HPLC standardization matters more than marketing percentages - what drives the activity is the procyanidin profile and the spectrum of minor compounds in the extract. Cheap 'pine bark 95% OPC' products usually use UV-Vis testing that inflates the apparent percentage while concentrating only the oligomeric fraction and stripping the minor compounds that help the extract work. We specify by analytical method, not marketing percentage.",
         faq: [
             { q: "Why pine bark instead of grape seed?", a: "We use both, actually. Pine bark and grape seed are complementary - they share the procyanidin chemistry but differ in minor constituents. Pine bark has the only human RCT showing MMP-8 reduction (Bayer 2025); grape seed has stronger venous tone data. Together they cover a wider MMP profile than either alone. Procyanidin M1 - the gut-microbiome-derived metabolite they both produce - is what does most of the work once it's in your bloodstream." },
             { q: "What does '65-75% procyanidins by HPLC' actually mean?", a: "HPLC is high-performance liquid chromatography - the analytical method that separates the procyanidin compounds and quantifies them specifically. It's the method used to standardize the pine bark extracts that have human clinical data behind them. The cheap alternative method (UV-Vis) measures total absorbance and can be inflated by other plant compounds, which is why some products advertise '95% OPCs' but don't have the same activity. The method on the COA matters." },
@@ -419,15 +420,15 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "Is pine bark safe long-term?", a: "Pine bark extract has one of the longest safety records of any major polyphenol - 50+ years of clinical use in Europe, trials running 3-12 months without serious adverse events. The main caution is mild blood-thinning activity. Not enough to be clinically meaningful for most people, but if you're on warfarin or a DOAC, mention it to your prescriber. For people scheduled for surgery, standard practice is to stop 1-2 weeks beforehand." }
         ],
         triadPlain: {
-            mcas: "Pine bark procyanidins stabilize mast cells with potency comparable to cromolyn in lab studies - inhibiting histamine release, calcium influx, NF-κB activation, TNF, and IL-6. The 2025 Bayer human RCT found IL-6 reduction, which lines up with downstream mast cell calming. The procyanidin chemistry has been used safely in Europe for half a century, so the long-term safety picture is unusually well-mapped. We pair pine bark with grape seed because the metabolite M1 - the form that actually circulates in your blood - comes from both sources, and together they hit a wider procyanidin profile than either alone.",
+            mcas: "Pine bark procyanidins support mast cell stability in lab studies, including reduced histamine release from rat mast cells and effects on calcium influx, NF-κB activation, TNF, and IL-6. The 2025 Bayer human RCT found IL-6 reduction, which lines up with downstream mast cell calming. The procyanidin chemistry has been used safely in Europe for half a century, so the long-term safety picture is unusually well-mapped. We pair pine bark with grape seed because the metabolite M1 - the form that actually circulates in your blood - comes from both sources, and together they hit a wider procyanidin profile than either alone.",
             heds: "This is where pine bark has the most direct hEDS-relevant data on the list. A 2025 human RCT in 91 people showed three months of pine bark extract twice daily reduced MMP-8 - one of the matrix-degrading enzymes elevated in hEDS. Earlier work showed reduced MMP-9, MMP-3, and MMP-13 in osteoarthritis chondrocytes, reduced MMP-9 secretion in human ex vivo blood, and supported collagen type I gene expression in skin (+29% COL1A1, +41% COL1A2). The mechanism cluster maps neatly onto what hEDS pathology needs: less MMP activity, more TIMP support, more collagen gene expression.",
             pots: "Pine bark targets the venous tone side of POTS. Multiple RCTs show reduced lower-leg edema and improved venous return, including a trial where pine bark extract outperformed compression stockings. Blood pooling in the legs is one of the core POTS mechanisms - when you stand, gravity pulls blood downward, and weak venous tone means your heart compensates by speeding up. Pine bark's support for venous wall integrity can meaningfully reduce that pooling. The BP meta-analysis showed neutral effect, so there's no orthostatic hypotension concern - exactly what you want in a POTS-relevant ingredient."
         },
         bluf: "Pine bark extract delivers concentrated oligomeric proanthocyanidins (OPCs), one of the few natural compounds that achieves clinically meaningful MMP inhibition for connective tissue protection in hEDS. It also provides venous support for POTS and mast cell stabilization for MCAS. ZebraThrive uses 200 mg daily standardized to 65-75% OPCs by HPLC, dosed 130 mg AM and 70 mg PM.",
         atAGlance: {
-            whatItIs: "A standardized extract from pine bark (Pinus pinaster, P. massoniana, P. sylvestris) delivering concentrated oligomeric proanthocyanidins (OPCs).",
+            whatItIs: "A standardized extract from Pinus massoniana pine bark delivering concentrated oligomeric proanthocyanidins (OPCs).",
             whyWeIncludeIt: "pine bark extract is one of the few natural compounds that achieves clinically meaningful MMP inhibition, essential for connective tissue protection in hEDS, while also providing venous support for POTS and mast cell stabilization for MCAS.",
-            dose: "200 mg daily (130 mg AM + 70 mg PM) (per v7.8 RFQ)",
+            dose: "200 mg daily (130 mg AM capsule + 70 mg PM capsule)",
             keyBenefits: [
                 "Strong MMP inhibition (MMP-8/9) at oral doses",
                 "Stabilizes mast cells (histamine & tryptase inhibition)",
@@ -435,7 +436,7 @@ export const ingredients: Record<string, IngredientData> = {
                 "Increases Type I collagen gene expression"
             ]
         },
-        howItWorks: "pine bark extract works through a unique metabolite called M1 that your body produces after absorption.\n\nFor connective tissue (hEDS): pine bark extract is one of the few natural compounds that achieves clinically meaningful MMP inhibition at oral doses. The M1 metabolite reaches plasma concentrations that match the requirements for inhibiting MMP-9, an enzyme that breaks down collagen. Studies show significant reduction in MMP-8 and upregulation of protective proteins like TIMP-4.\n\nFor mast cells (MCAS): pine bark extract stabilizes mast cells through histamine and tryptase inhibition comparable to prescription stabilizers like cromolyn sodium. It also blocks allergic responses, reducing the release of inflammatory cytokines.\n\nFor blood pooling (POTS): pine bark extract provides significant venous-toning effects. It has been shown to be more effective than compression stockings alone in reducing edema related to venous insufficiency, directly addressing the peripheral blood pooling common in POTS.",
+        howItWorks: "pine bark extract works through a unique metabolite called M1 that your body produces after absorption.\n\nFor connective tissue (hEDS): pine bark extract is one of the few natural compounds that achieves clinically meaningful MMP inhibition at oral doses. The M1 metabolite reaches plasma concentrations that match the requirements for inhibiting MMP-9, an enzyme that breaks down collagen. Studies show significant reduction in MMP-8 and upregulation of protective proteins like TIMP-4.\n\nFor mast cells (MCAS): in a lab study using rat peritoneal mast cells, a pine bark extract reduced histamine release in a concentration-dependent way. That is lab data, not a human outcome.\n\nFor blood pooling (POTS): pine bark extract provides significant venous-toning effects. It has been shown to be more effective than compression stockings alone in reducing edema related to venous insufficiency, directly addressing the peripheral blood pooling common in POTS.",
         research: [
             {
                 outcome: "MMP Inhibition (Connective Tissue Protection)",
@@ -463,25 +464,25 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Mast Cell Stabilization",
-                summary: "Inhibits the release of histamine at levels comparable to prescription options.",
+                summary: "Lab data: a French maritime pine bark extract reduced histamine release from isolated rat mast cells.",
                 studies: [
-                    { source: "Sharma SC et al., \"Histamine release inhibition comparable to cromolyn\"", pmid: "12557250", finding: "pine bark extract demonstrates histamine inhibition profile similar to cromolyn sodium in mast cell models." }
+                    { source: "Sharma SC et al., \"Pycnogenol inhibits the release of histamine from mast cells\"", pmid: "12557250", design: "In vitro, rat peritoneal mast cells", finding: "French maritime pine bark extract (Pycnogenol) produced concentration-dependent inhibition of histamine release induced by compound 48/80 or calcium ionophore." }
                 ]
             }
         ],
         evidenceGaps: "No direct clinical trials exist specifically in hEDS, POTS, or MCAS populations. The mechanistic evidence is strength, but findings are extrapolated from periodontal, skin, and chronic venous insufficiency studies. Clinical validation in these specific triple-triad populations is still needed.",
         triad: {
-            mcas: "pine bark extract is a potent mast cell stabilizer that inhibits histamine and tryptase. Research suggests it is comparable to cromolyn sodium in its ability to inhibit degranulation. Importantly, it is not fermentation-derived, which eliminates histamine/tyramine contamination risks common with other plant extracts.",
+            mcas: "Pine bark extract reduced histamine release from rat mast cells in lab studies. Importantly, it is not fermentation-derived, which eliminates histamine/tyramine contamination risks common with other plant extracts.",
             heds: "Addresses the 'broken bucket' of hEDS by inhibiting MMPs (enzymes that break down collagen) and upregulating Type I collagen genes. It is one of the few supplements with human pharmacokinetic data proving that it reaches tissue concentrations high enough to actually stop these destructive enzymes.",
             pots: "Addresses the peripheral blood pooling mechanism of POTS by strengthening venous tone. Clinical data shows it and its metabolites reduce edema and fluid leakage more effectively than professional compression stockings in some populations.",
         },
         whyThisForm: {
             form: "Generic pine bark extract standardized to 65-75% procyanidins by HPLC (COA-verified)",
-            rationale: "Pine bark activity depends on procyanidin content and the gut-microbiome-derived M1 metabolite that comes from those procyanidins. Unstandardized pine bark extracts vary dramatically in procyanidin levels and pharmacokinetic behavior. v7.8 spec is generic pine bark from multi-species sourcing (Pinus pinaster, P. massoniana, P. sylvestris) standardized to 65-75% procyanidins by HPLC, the analytical method that quantifies the active compounds specifically. Split AM/PM dosing keeps M1 levels steady because the metabolite peaks at 6-10 hours post-dose.",
+            rationale: "Pine bark activity depends on procyanidin content and the gut-microbiome-derived M1 metabolite that comes from those procyanidins. Unstandardized pine bark extracts vary dramatically in procyanidin levels. Our spec is generic Pinus massoniana pine bark standardized to 65-75% procyanidins by HPLC (not the inflated 95% UV-Vis figure), non-fermented and peanut-free. The 65-75% range keeps the free monomers that drive M1 production. Most published human studies used French maritime pine bark (Pycnogenol), so the clinical evidence is extrapolated across species. Split AM/PM dosing keeps M1 levels steady because the metabolite peaks at 6-10 hours post-dose.",
             comparison: [
-                { form: "Unstandardized generic pine bark extract", difference: "Lacks procyanidin standardization and pharmacokinetic validation; inconsistent active content", selected: false },
-                { form: "Generic pine bark, 65-75% procyanidins by HPLC, COA-verified", difference: "v7.8 spec; analytical method matches the standardization used in the clinical trials", selected: true },
-                { form: "Branded Pycnogenol", difference: "Single-species French maritime pine; well-studied but premium-priced; v7.8 reclassified as generic-OK", selected: false }
+                { form: "Unstandardized generic pine bark extract", difference: "Lacks procyanidin standardization; inconsistent active content", selected: false },
+                { form: "Pinus massoniana pine bark, 65-75% procyanidins by HPLC, COA-verified", difference: "Our spec; HPLC quantifies procyanidins specifically", selected: true },
+                { form: "Branded Pycnogenol (French maritime pine)", difference: "Single-species Pinus pinaster; the most-studied extract but premium-priced; not what we ship", selected: false }
             ]
         },
         safety: {
@@ -498,7 +499,7 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Week 1", dosage: "50 mg daily", notes: "MCAS-sensitive start (AM only)" },
                 { step: "Week 2", dosage: "50 mg twice daily", notes: "Standard BID frequency" },
                 { step: "Week 3", dosage: "75 mg twice daily", notes: "Increasing to therapeutic levels" },
-                { step: "Week 4+", dosage: "130 mg AM + 70 mg PM", notes: "Full target dose (200 mg/day, asymmetric AM-weighted split per v7.8 RFQ)" }
+                { step: "Week 4+", dosage: "130 mg AM + 70 mg PM", notes: "Full target dose (200 mg/day, AM-weighted split)" }
             ],
             timeline: "Venous/edema benefits typically appear within 2-4 weeks. MMP inhibition and collagen gene changes require 8-12 weeks of consistent dosing for visible effects."
         },
@@ -507,7 +508,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Human plasma inhibits MMP-9 after oral dosing of pine bark extract", pmid: "16441890", authors: "Grimm T", year: "2006" },
             { title: "pine bark extract metabolite M1 inhibits MMP-9", pmid: "14990359", authors: "Grimm T", year: "2004" },
             { title: "Increased COL1A1/COL1A2 gene expression in human skin", pmid: "22270036", authors: "Marini A", year: "2012" },
-            { title: "Mast cell histamine inhibition comparable to cromolyn", pmid: "12557250", authors: "Sharma SC", year: "2003" },
+            { title: "Pycnogenol inhibits the release of histamine from mast cells", pmid: "12557250", authors: "Sharma SC", year: "2003" },
             { title: "60% complete edema resolution in CVI trial", pmid: "11081989", authors: "Arcangeli P", year: "2000" }
         ]
     },
@@ -531,7 +532,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "A specialized form of vitamin B3 that efficiently raises NAD+ levels, essential for cellular energy and repair.",
             whyWeIncludeIt: "NR directly suppresses mast cell degranulation via the SIRT6 pathway and protects collagen by inhibiting MMP enzymes and upregulating crosslinking proteins.",
-            dose: "500 mg daily (250 mg BID)",
+            dose: "500 mg daily (250 mg AM capsule + 250 mg PM capsule)",
             keyBenefits: [
                 "Elevates blood NAD+ by 40-60%",
                 "Suppresses histamine, tryptase, and leukotrienes via SIRT6",
@@ -545,7 +546,7 @@ export const ingredients: Record<string, IngredientData> = {
                 outcome: "Mast Cell Stabilization (SIRT6 Pathway)",
                 summary: "NR directly inhibits the release of standard allergy mediators from human mast cells.",
                 studies: [
-                    { source: "Kim et al., \"NR suppresses mast cell degranulation via SIRT6\"", pmid: "35547746", design: "Preclinical (Theranostics, 2022)", finding: "Reduced histamine, tryptase, PGD2, and LTC4 production in human cord blood-derived mast cells." }
+                    { source: "Kim HW et al., \"NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice\"", pmid: "35547746", design: "Preclinical (Theranostics, 2022)", finding: "Reduced histamine, tryptase, PGD2, and LTC4 production in human cord blood-derived mast cells." }
                 ]
             },
             {
@@ -573,10 +574,10 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Generic NR chloride (≥99% purity, COA-verified)",
-            rationale: "Analysis of marketplace NR/NMN products found that ~87% fail their label claims or contain counterfeits. v7.8 spec is generic NR chloride at ≥99% purity with full Certificate of Analysis verification per batch. Most published clinical trials used the branded Niagen form, but the verifiable analytical spec (identity, purity, stability) is what makes the molecule clinically equivalent, not the brand name. NR is chemically synthesized (not fermentation-derived), critical for MCAS patients who must avoid the histamine residues common in bio-derived B-vitamins. BID dosing is essential due to NR's short 2.7-hour half-life.",
+            rationale: "Analysis of marketplace NR/NMN products found that ~87% fail their label claims or contain counterfeits. Our spec is generic NR chloride at ≥99% purity with full Certificate of Analysis verification per batch. Most published clinical trials used the branded Niagen form, but the verifiable analytical spec (identity, purity, stability) is what makes the molecule clinically equivalent, not the brand name. NR is chemically synthesized (not fermentation-derived), critical for MCAS patients who must avoid the histamine residues common in bio-derived B-vitamins. BID dosing is essential due to NR's short 2.7-hour half-life.",
             comparison: [
                 { form: "Unverified marketplace NR (no COA)", difference: "Up to 87% failure rate on label claims; counterfeit risk in untested suppliers", selected: false },
-                { form: "Generic NR chloride (≥99% purity, COA-verified)", difference: "Same molecule used in trials, verified by analytical paperwork; v7.8 spec", selected: true }
+                { form: "Generic NR chloride (≥99% purity, COA-verified)", difference: "Same molecule used in trials, verified by analytical paperwork; our spec", selected: true }
             ]
         },
         safety: {
@@ -598,7 +599,7 @@ export const ingredients: Record<string, IngredientData> = {
             timeline: "NAD+ elevation occurs within days. Functional improvements in energy or mast cell symptoms are highly variable and may take 4-12 weeks of consistent Use."
         },
         sources: [
-            { title: "NR suppresses mast cell degranulation via SIRT6", pmid: "35547746", authors: "Kim et al.", year: "2022" },
+            { title: "NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice", pmid: "35547746", authors: "Kim HW et al.", year: "2022" },
             { title: "Dose-dependent NAD+ increase; 300 mg safe and effective", pmid: "31278280", authors: "Conze et al.", year: "2019" },
             { title: "NR restores mitochondrial function in vEDS cells", pmid: "40497944", authors: "Marcos-Ríos", year: "2025" },
             { title: "~10 mmHg BP reduction at 1000 mg/day", pmid: "29599478", authors: "Martens", year: "2018" },
@@ -616,7 +617,7 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "Why synthetic taurine?", a: "Most 'natural' taurine in supplements is produced by microbial fermentation, which can leave trace histamine and tyramine in the final product. Both are common MCAS triggers. Synthetic taurine is made by chemical synthesis - no microbes involved, no histamine, no tyramine. The molecule is identical; the contamination profile isn't. For an MCAS-safe formulation, synthetic is the only defensible choice. It's a small but important detail that separates a brand built for this community from one that isn't." }
         ],
         triadPlain: {
-            mcas: "Taurine stabilizes mast cells at concentrations you actually reach from oral dosing - which is the unusual part. The effective range is 0.8-80 micromolar, and your blood levels at 1.5 g/day land between 190-320 micromolar. So the mechanism translates directly from the lab to your body. Taurine works through multiple channels: it dampens NF-κB, calms JNK and p38 stress signaling, and reduces release of TNF, IL-6, and IL-1β. It also doesn't cause the receptor-adjustment flare that cromolyn and ketotifen sometimes produce in the first weeks. Smooth, consistent, well-tolerated - one of the easier additions to a sensitive stack.",
+            mcas: "Taurine stabilizes mast cells at concentrations you actually reach from oral dosing - which is the unusual part. The effective range is 0.8-80 micromolar, and your blood levels at 1.5 g/day land between 190-320 micromolar. So the mechanism translates directly from the lab to your body. Taurine works through multiple channels: it dampens NF-κB, calms JNK and p38 stress signaling, and reduces release of TNF, IL-6, and IL-1β. Smooth, consistent, well-tolerated - one of the easier additions to a sensitive stack.",
             heds: "Taurine is one of the few supplements with a human RCT showing reduced circulating MMP-9 - the matrix-degrading enzyme that runs high in hEDS fibroblasts. That trial ran 14 weeks at 1.5 g/day in elderly women, with a clear reduction in MMP-9 vs placebo. Animal and skin-wound studies also show taurine supports collagen deposition without driving the anti-fibrotic activity that would be counterproductive in hEDS. Add the antioxidant effects in connective tissue and the mitochondrial support in fibroblasts, and you've got a versatile piece of an ECM-protective protocol - mechanistically clean and well-supported.",
             pots: "Taurine's cardiovascular evidence is one of the strongest stories on this list. In heart failure trials, taurine improved cardiac output and exercise tolerance. Post-MI trials show fewer arrhythmias. A 2025 trial in patients with vascular disease showed improved endothelial function - the measure of how well your blood vessels relax and constrict, directly relevant to the blood pooling pattern in POTS. The mechanisms (calcium handling in cardiac muscle, sympathetic damping) translate naturally to POTS, and a trial is currently running at York University in long-COVID and POTS-adjacent patients. We split the dose AM/PM to keep the BP curve smooth."
         },
@@ -624,7 +625,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "A conditionally essential amino acid that serves as a master regulator of the cardiovascular and nervous systems.",
             whyWeIncludeIt: "Taurine stabilizes mast cells, modulates autonomic tone (reducing heart rate), and has rare human evidence for inhibiting MMP-9 enzymes.",
-            dose: "1,500 mg daily in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
+            dose: "1,500 mg daily in the Daily Powder, split AM and PM scoops",
             keyBenefits: [
                 "Reduces heart rate (-3.58 bpm) and systolic BP (-4.0 mmHg)",
                 "Human evidence for MMP-9 inhibition at 1.5g doses",
@@ -664,8 +665,8 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Ideal for hyperadrenergic POTS patients experiencing high heart rates and sympathetic overdrive. It helps shift the body back toward parasympathetic (vagal) tone. Because it can lower blood pressure slightly, it should be used with more caution in the hypotensive 'fainting' POTS subtype.",
         },
         whyThisForm: {
-            form: "Synthetic Taurine Powder",
-            rationale: "Taurine is chemically synthesized (not fermentation-derived), eliminating histamine contamination risk. We chose the powder form because the therapeutic dose (1,500 mg) would require multiple large capsules to deliver, which is burdensome for a population with frequent gastroparesis and slow gastric transit. Taurine is nearly tasteless and dissolves easily. The 1,500 mg dose is specific: doses below 1g fail to achieve the cardiovascular benefits documented in recent meta-analyses.",
+            form: "Synthetic taurine powder (non-fermentation, USP38/JP17), up to 0.5% silica anticaking agent",
+            rationale: "Taurine is chemically synthesized (not fermentation-derived), eliminating histamine contamination risk. The raw material carries up to 0.5% silica as an anticaking agent (up to 7.5 mg per day), which we disclose. We chose the powder form because the therapeutic dose (1,500 mg) would require multiple large capsules to deliver, which is burdensome for a population with frequent gastroparesis and slow gastric transit. Taurine is nearly tasteless and dissolves easily. The 1,500 mg dose is specific: doses below 1g fail to achieve the cardiovascular benefits documented in recent meta-analyses.",
             comparison: [
                 { form: "Fermentation-derived Taurine", difference: "Risk of histamine/tyramine contamination (high MCAS risk)", selected: false },
                 { form: "Synthetic Taurine", difference: "Chemically pure; safe for high-sensitivity MCAS", selected: true }
@@ -716,7 +717,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "The essential cofactor for collagen synthesis and a potent regulator of histamine degradation.",
             whyWeIncludeIt: "hEDS patients have been shown to have 21% lower plasma Vitamin C levels. It is the mandatory cofactor for the enzymes that crosslink collagen chains and for DAO, the enzyme that clears histamine.",
-            dose: "1,500 mg vitamin C daily from 1,686 mg sodium ascorbate, in the Daily Powder, split AM and PM scoops (per v7.8 RFQ)",
+            dose: "About 1,500 mg vitamin C daily from 1,686 mg sodium ascorbate, in the Daily Powder, split AM and PM scoops",
             keyBenefits: [
                 "Addresses 21% plasma deficit found in hEDS patients",
                 "Mandatory for prolyl and lysyl hydroxylation, which enables collagen triple-helix folding",
@@ -745,7 +746,7 @@ export const ingredients: Record<string, IngredientData> = {
                 outcome: "MCAS & Histamine Clearance",
                 summary: "Significant reduction in histamine levels and increase in degradation enzymes.",
                 studies: [
-                    { source: "Hagel et al., \"IV vitamin C reduced serum histamine 31%\"", pmid: "23666445", finding: "Direct clinical evidence of massive histamine reduction via vitamin C administration." },
+                    { source: "Hagel AF et al., \"Intravenous infusion of ascorbic acid decreases serum histamine concentrations\"", pmid: "23666445", design: "Human study, 89 patients, single 7.5 g IV infusion", finding: "Serum histamine fell from 0.83 to 0.57 ng/ml x m2 body surface area after IV ascorbic acid. IV route; oral doses do not reach these blood levels." },
                     { source: "Johnston, \"2g oral increased DAO activity (p<0.001)\"", pmid: "25095772", design: "Human RCT", finding: "Oral doses significantly increased the activity of the enzyme responsible for clearing histamine from the gut." }
                 ]
             }
@@ -753,15 +754,15 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "While the 21% deficit in hEDS establishes a clear need, no randomized clinical trial has yet proven that high-dose Vitamin C reverses hypermobility symptoms. Much of the dramatic POTS cardiovascular data used IV doses that are much higher than what can be absorbed through purely oral supplementation.",
         triad: {
             mcas: "A foundational 'triad stabilizer.' It acts at both ends of the mast cell problem: it helps stabilize the membrane itself and provides the engine for DAO, the enzyme that cleans up the 'histamine mess' after degranulation. We use a buffered, corn-free form to avoid the triggers found in cheap ascorbic acid.",
-            heds: "The mandatory building block for collagen. Without it, your 'broken bucket' of hEDS cannot even attempt to repair itself. Given the 2024 proof that hypermobile patients are deficient, 2,000 mg ensures you have enough for both daily repair and the extra demand of EDS collagen turnover.",
-            pots: "By using the Sodium Ascorbate form, we provide ~218mg of sodium per day alongside the Vitamin C. Since POTS patients require high sodium intake (3-10g), this form provides a small salt boost while improving blood vessel reactivity and reducing oxidative stress on the vascular system.",
+            heds: "The mandatory building block for collagen. Without it, your 'broken bucket' of hEDS cannot even attempt to repair itself. Given the 2024 Danish data showing lower vitamin C levels in hypermobile patients, our 1,500 mg daily amount is set well above the collagen-cofactor saturation point.",
+            pots: "By using the Sodium Ascorbate form, we provide about 195 mg of sodium per day alongside the Vitamin C. Since POTS patients require high sodium intake (3-10g), this form provides a small salt boost while improving blood vessel reactivity and reducing oxidative stress on the vascular system.",
         },
         whyThisForm: {
-            form: "Sodium Ascorbate (Buffered/Corn-Free)",
-            rationale: "Standard ascorbic acid is highly acidic and often derived from fermented corn, two major triggers for MCAS GI sensitivity. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides the additional sodium benefit helpful for POTS. We specify corn-free sources because corn residues are common mast cell triggers. We deliver 1,500 mg of vitamin C from 1,686 mg of sodium ascorbate per v7.8 RFQ, past the cofactor saturation point for collagen synthesis and well clear of the oxalate trouble zone.",
+            form: "Sodium Ascorbate (buffered, non-corn source)",
+            rationale: "Standard ascorbic acid is highly acidic and often derived from fermented corn, two major triggers for MCAS GI sensitivity. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides the additional sodium benefit helpful for POTS. We specify corn-free sources because corn residues are common mast cell triggers. We deliver about 1,500 mg of vitamin C from 1,686 mg of sodium ascorbate, past the cofactor saturation point for collagen synthesis and well clear of the oxalate trouble zone.",
             comparison: [
                 { form: "Ascorbic Acid (Corn-derived)", difference: "Highly acidic; corn-residue histamine risk; stomach set", selected: false },
-                { form: "Sodium Ascorbate (Corn-Free)", difference: "Buffered (pH 7.0); provides extra POTS sodium; corn-free", selected: true }
+                { form: "Sodium Ascorbate (non-corn source)", difference: "Buffered to near-neutral pH; adds a small amount of sodium; non-corn source", selected: true }
             ]
         },
         safety: {
@@ -784,7 +785,7 @@ export const ingredients: Record<string, IngredientData> = {
         sources: [
             { title: "hEDS patients have 21% lower plasma vitamin C", pmid: "39311717", authors: "Leinøe et al.", year: "2024" },
             { title: "IV vitamin C increased cardiac output 40% in POTS", pmid: "21622825", authors: "Stewart et al.", year: "2011" },
-            { title: "7.5g IV reduced serum histamine 31%", pmid: "23666445", authors: "Hagel et al.", year: "2014" },
+            { title: "Intravenous infusion of ascorbic acid decreases serum histamine concentrations in patients with allergic and non-allergic diseases", pmid: "23666445", authors: "Hagel AF et al.", year: "2013" },
             { title: "Vitamin C + gelatin doubled collagen synthesis markers", pmid: "27852613", authors: "Shaw et al.", year: "2017" },
             { title: "2g oral increased DAO activity", pmid: "25095772", authors: "Johnston", year: "2015" }
         ]
@@ -792,8 +793,8 @@ export const ingredients: Record<string, IngredientData> = {
     "vitamin-d3": {
         id: "vitamin-d3",
         name: "Vitamin D3 (Cholecalciferol)",
-        patientSummary: "Vitamin D3 (cholecalciferol) is the form your skin produces in response to sunlight and the form most studied in human trials. For the triad, D3 has the strongest direct POTS evidence of any ingredient on this list: a 2025 Chinese RCT in 65 pediatric POTS patients showed 74% symptom improvement with 800 IU daily for 2 months. Add in mast cell stabilization through VDR-mediated pathways and connective tissue support through tendon and wound-healing data, and D3 is one of the most evidence-backed inclusions. We dose 2,000 IU (50 mcg) in the AM with K2 - both fat-soluble, better absorbed with breakfast fat.",
-        whyThisFormPatient: "We use D3 (cholecalciferol) rather than D2 (ergocalciferol) - D3 raises blood levels of the active 25(OH)D form more efficiently and durably (meta-analyses consistently favor D3 over D2 for repletion). The 2,000 IU dose is the standard daily supplement amount: high enough to maintain sufficiency in most adults, low enough to remain conservative for daily long-term use. We pair D3 with K2 in the same AM capsule because K2 directs calcium handling - D3 increases calcium absorption, and K2 ensures it ends up in bones and teeth rather than soft tissues. Take with breakfast fat for absorption.",
+        patientSummary: "Vitamin D3 (cholecalciferol) is the form your skin produces in response to sunlight and the form most studied in human trials. Vitamin D has the most POTS-specific research of any ingredient on this list: a 2025 retrospective study of 65 children with POTS (no placebo group) reported that about three in four had improved symptom scores after two months of 800 IU daily vitamin D. That is an observational finding in children, not a result for this formula. Vitamin D also acts on mast cells through the vitamin D receptor in lab studies and supports normal bone and connective tissue. We use vegan vitamin D3 from lichen at 2,000 IU (50 mcg) in the AM capsule with K2; both are fat-soluble and better absorbed with breakfast fat.",
+        whyThisFormPatient: "We use vegan D3 (cholecalciferol) made from lichen, not the usual lanolin (sheep's wool) source, supplied as a dry powder (100,000 IU per gram on a small maltodextrin carrier) in the AM capsule. We chose D3 rather than D2 (ergocalciferol) because D3 raises blood levels of the active 25(OH)D form more efficiently and durably (meta-analyses consistently favor D3 over D2 for repletion). The 2,000 IU dose is the standard daily supplement amount: high enough to maintain sufficiency in most adults, low enough to remain conservative for daily long-term use. We pair D3 with K2 in the same AM capsule because K2 directs calcium handling - D3 increases calcium absorption, and K2 ensures it ends up in bones and teeth rather than soft tissues. Take with breakfast fat for absorption.",
         faq: [
             { q: "Do I really need to supplement vitamin D?", a: "For this community, probably yes. The prevalence data is striking: 51% of POTS patients have D levels under 20 ng/mL, 56% under 30 ng/mL - significantly higher rates than the general population. EDS populations show similar patterns. MCAS is paradoxical - some cohorts have better D status - but European expert consensus still recommends supplementation. Most chronic illness compromises D status through reduced sun exposure, altered metabolism, and inflammation. 2,000 IU daily is the conservative maintenance dose." },
             { q: "Will I need a higher D3 dose than 2,000 IU?", a: "Possibly. 2,000 IU is the conservative maintenance dose - enough to keep most adults in the sufficient range (30-50 ng/mL serum 25(OH)D) if starting from sufficient. If starting deficient, you'll need a higher loading dose for 6-12 weeks before dropping to maintenance. Check your serum 25(OH)D at baseline and after 3 months on the formulation - if still under 30 ng/mL, add more D3 separately. The dose isn't one-size-fits-all; testing is the way to dial it in." },
@@ -803,15 +804,15 @@ export const ingredients: Record<string, IngredientData> = {
         triadPlain: {
             mcas: "Vitamin D acts as a hormone through the VDR (vitamin D receptor) on mast cells: at adequate levels, it reduces degranulation, lowers IL-4 production, and dampens FcεRI signaling in lab studies. The clinical picture is paradoxical though - MCAS cohorts often have better D status than the general population, which argues against simple deficiency as a primary MCAS driver. The European expert consensus still recommends supplementation in mastocytosis/MCAS based on mechanism rather than deficiency correction. Our position: at 2,000 IU, the mast cell mechanisms are operative at clinically relevant levels.",
             heds: "For hEDS, vitamin D matters for connective tissue maintenance, especially tendon and bone. Korean studies in surgical tendon repair showed 3-times higher retear rates in D-deficient patients. Wound healing RCTs show nearly 2-times faster healing with D3 supplementation. Bone density data in EDS populations consistently shows higher fracture rates that correlate with D status. The direct EDS intervention trials don't exist yet, but the prevalence data is clear: D deficiency is more common in EDS, and the downstream tissues that fail in EDS (tendons, bones, skin) all show D-dependent repair signaling. Foundational ingredient.",
-            pots: "This is where vitamin D earns its place in the formulation. A 2025 Chinese RCT in 65 pediatric POTS patients found 74% symptom improvement with 800 IU daily for 2 months - the strongest direct POTS evidence for any ingredient on this list. A Brazilian study at 7,000 IU showed improved heart rate variability. A meta-analysis of 16,326 patients found D-deficient people had 36% higher risk of orthostatic hypotension. The mechanism is multifactorial - VDR on autonomic neurons, calcium handling in vascular smooth muscle, anti-inflammatory effects. The evidence converges."
+            pots: "Vitamin D has the most POTS-specific research on this list, though it is observational. A 2025 retrospective study of 65 children with POTS (no placebo group) reported that about three in four had improved symptom scores after two months of 800 IU daily vitamin D; children with POTS also had lower vitamin D levels than healthy controls. A meta-analysis of 16,326 people found vitamin D deficiency was associated with higher odds of orthostatic hypotension. Proposed mechanisms include vitamin D receptors on autonomic neurons and calcium handling in vascular smooth muscle. None of these studies tested this formula."
         },
-        bluf: "Vitamin D3 is a fat-soluble hormone that regulates calcium, supports immune function, and stabilizes mast cells. About 51% of POTS patients run deficient; correcting the deficit produces mast cell stabilization and autonomic support that supplementation studies have repeatedly shown. ZebraThrive uses 2,000 IU daily, paired with K2 to route calcium correctly.",
+        bluf: "Vitamin D3 is a fat-soluble vitamin that regulates calcium, supports immune function, and supports mast cell stability in lab studies. About 51% of POTS patients in one cohort had low vitamin D levels. ZebraThrive uses 2,000 IU (50 mcg) of vegan, lichen-derived D3 daily in the AM capsule, paired with K2 to route calcium correctly.",
         atAGlance: {
             whatItIs: "A fat-soluble hormone that regulates calcium, supports immune function, and stabilizes mast cells",
             whyWeIncludeIt: "Addresses the high deficiency rate in POTS patients (51% are deficient) while providing mast cell stabilization and autonomic support",
-            dose: "2,000 IU (50 mcg) daily",
+            dose: "2,000 IU (50 mcg) daily in the AM capsule",
             keyBenefits: [
-                "74% of pediatric POTS patients improved in clinical trial",
+                "Vegan D3 from lichen (not lanolin), supplied as a dry powder",
                 "Reduces histamine release by 23-34%",
                 "Deficiency linked to 36% higher orthostatic hypotension risk",
                 "Nearly 2x faster wound healing in RCTs"
@@ -820,20 +821,20 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Vitamin D3 acts as a neuroactive hormone with profound effects on multiple systems. In POTS patients, it modulates autonomic nervous system function-deficiency correlates with decreased heart rate variability and impaired baroreflex sensitivity. It enhances β-adrenergic signal transduction in cardiac cells and regulates the renin-angiotensin system.\n\nFor MCAS, vitamin D3 works as a mast cell stabilizer. Mast cells express both vitamin D receptors (VDR) and the enzyme CYP27B1, enabling local conversion to active calcitriol. Through VDR-dependent mechanisms, it suppresses histamine release and reduces inflammatory mediators including leukotrienes, TNF-α, and IL-6.\n\nIn connective tissue, vitamin D influences the hydroxylation processes essential for stable collagen cross-linking, working synergistically with vitamin C and iron. High deficiency rates in hEDS (60%) and POTS (51%) make supplementation particularly relevant.",
         research: [
             {
-                outcome: "POTS Symptom Improvement",
-                summary: "Strong direct evidence from pediatric studies shows significant symptom improvement with supplementation.",
+                outcome: "Pediatric POTS Cohort (Retrospective)",
+                summary: "A retrospective study in children with POTS, without a placebo group. It describes an association; it cannot show that vitamin D caused the change, and it did not test this formula.",
                 studies: [
                     {
-                        source: "Dong et al., Lanzhou University",
+                        source: "Dong T et al., Lanzhou University (Zhonghua Er Ke Za Zhi, 2025)",
                         pmid: "40962545",
-                        design: "RCT, n=65 pediatric POTS patients",
-                        finding: "74% improved with 800 IU/day; POTS patients had markedly lower baseline 25(OH)D levels."
+                        design: "Retrospective case-control (no placebo); 65 children with POTS, 102 healthy controls",
+                        finding: "Children with POTS had lower 25(OH)D levels than controls. After 2 months of vitamin D 800 IU/day, 48 of 65 (about 74%) met the study's responder definition (symptom score improved by 2 or more points). The study's aim was to test whether a heart rate variability measure (VLF) predicts response."
                     }
                 ]
             },
             {
                 outcome: "Orthostatic Hypotension Risk",
-                summary: "Large meta-analysis confirms deficiency significantly increases orthostatic intolerance risk.",
+                summary: "A large meta-analysis found vitamin D deficiency is associated with higher odds of orthostatic hypotension (an association, not proof of cause).",
                 studies: [
                     {
                         source: "Zuin et al.",
@@ -859,23 +860,24 @@ export const ingredients: Record<string, IngredientData> = {
         triad: {
             mcas: "Vitamin D3 stabilizes rather than triggers mast cells. It suppresses IgE-dependent activation and reduces histamine, tryptase, and inflammatory cytokine release. European expert consensus recommends continuing supplementation in mastocytosis/MCAS based on these mechanisms.",
             heds: "60% of hEDS patients show deficiency, often due to GI malabsorption. Vitamin D supports collagen synthesis and bone mineralization. For joint health, deficiency is linked to significantly higher surgical retear rates. It works synergistically with K2 to ensure proper calcium utilization.",
-            pots: "51% of POTS patients have levels below 20 ng/mL. The Chinese pediatric trial showed 74% improvement with supplementation. Heart rate variability markers may help identify those most likely to respond to Vitamin D."
+            pots: "51% of POTS patients in one cohort had levels below 20 ng/mL. A 2025 retrospective study of 65 children with POTS (no placebo group) reported that about three in four had improved symptom scores after two months of 800 IU daily, and that a heart rate variability measure helped predict who responded."
         },
         whyThisForm: {
-            form: "D3 (Cholecalciferol) - Oil-based",
-            rationale: "D3 consistently outperforms D2 (ergocalciferol) in raising and maintaining serum levels. Oil-based formulations show 30-50% better absorption compared to powders when taken with food.",
+            form: "Vegan D3 (cholecalciferol) from lichen, 100,000 IU/g powder, in the AM capsule",
+            rationale: "D3 consistently outperforms D2 (ergocalciferol) in raising and maintaining serum levels. We use vegan, lichen-derived D3 rather than the common lanolin (sheep's wool) source, for people avoiding animal-derived ingredients, including those with alpha-gal concerns. It is supplied as a dry powder at 100,000 IU per gram; 2,000 IU needs about 20 mg of material, on a maltodextrin carrier of roughly 17 mg per serving. Vitamin D is fat-soluble, so take the AM capsule with a meal that contains fat.",
             comparison: [
-                { form: "D3 (Cholecalciferol)", difference: "3-5x more potent than D2; preferred form", selected: true },
-                { form: "D2 (Ergocalciferol)", difference: "Inferior bioavailability; shorter half-life", selected: false },
-                { form: "Oil-based liquid/capsule delivery", difference: "30-50% better absorption than dry powder; descriptive of our delivery format", selected: false }
+                { form: "Vegan D3 (cholecalciferol) from lichen, dry powder", difference: "Our form; animal-free; fits a dry-fill capsule", selected: true },
+                { form: "D3 from lanolin (sheep's wool)", difference: "Most common D3 source; animal-derived", selected: false },
+                { form: "D2 (Ergocalciferol)", difference: "Less effective at raising blood levels; shorter half-life", selected: false },
+                { form: "Oil-based liquid or softgel D3", difference: "Not compatible with our dry HPMC capsule; softgels often use gelatin", selected: false }
             ]
         },
         safety: {
             sideEffects: "Generally well-tolerated. Hypercalcemia is possible at very high doses (>10,000 IU) without monitoring. Some patients report initial paradoxical reactions, often excipient-related.",
             interactions: "No direct interactions with common POTS/MCAS meds. H2 blockers may slightly reduce absorption (space by 2 hours). Thiazide diuretics require calcium monitoring.",
             excipientConcerns: {
-                avoid: ["FD&C dyes", "Titanium dioxide", "Carrageenan", "Corn starch", "BHA/BHT"],
-                safe: ["MCT oil", "Olive oil", "Minimal-ingredient liquid drops"]
+                avoid: ["FD&C dyes", "Titanium dioxide", "Carrageenan", "Corn starch", "BHA/BHT", "Gelatin softgels"],
+                safe: ["Lichen-derived (vegan) cholecalciferol", "Small maltodextrin micro-carrier (about 17 mg)", "HPMC capsules"]
             },
             cautions: "Monitor serum 25(OH)D levels (target 40-60 ng/mL). Check serum calcium if taking high doses (>4,000 IU)."
         },
@@ -885,10 +887,10 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Weeks 3-4", dosage: "2,000 IU daily", notes: "Standard maintenance" },
                 { step: "Ongoing", dosage: "2,000-4,000 IU daily", notes: "Adjust based on labs" }
             ],
-            timeline: "Repletion takes 8-12 weeks; symptom improvement usually seen within 2-3 months. Take with fat-containing meal."
+            timeline: "Blood-level repletion takes 8-12 weeks. Take with a fat-containing meal."
         },
         sources: [
-            { title: "Vitamin D supplementation in pediatric POTS", pmid: "40962545", authors: "Dong et al.", year: "2025" },
+            { title: "The predictive value of very low frequency power for the efficacy of vitamin D treatment in children with postural orthostatic tachycardia syndrome (retrospective case-control)", pmid: "40962545", authors: "Dong T et al.", year: "2025" },
             { title: "Vitamin D deficiency and orthostatic hypotension meta-analysis", pmid: "34628636", authors: "Zuin et al.", year: "2022" },
             { title: "Vitamin D suppresses IgE-dependent mast cell activation", pmid: "27998003", authors: "Liu et al.", year: "2017" },
             { title: "Vitamin D and autonomic function", pmid: "38747749", authors: "Faria et al.", year: "2024" },
@@ -899,23 +901,23 @@ export const ingredients: Record<string, IngredientData> = {
         id: "vitamin-k2",
         name: "Vitamin K2 (MK-7)",
         patientSummary: "Vitamin K2 (specifically the MK-7 form, menaquinone-7) is the cofactor that activates the proteins responsible for directing calcium where it belongs - bones and teeth, not arteries or soft tissues. We include K2 alongside D3 because D3 increases calcium absorption, and K2 ensures that calcium ends up in the right places. For the triad, K2 also has documented mast cell stabilization (the 1975 Kimura studies showed K2 inhibited mast cell degranulation in both rat and human models) and supports bone density - relevant for the higher fracture rates seen in EDS populations. Important: K2 is contraindicated with warfarin.",
-        whyThisFormPatient: "We use MK-7 (menaquinone-7) specifically, not MK-4 or short-chain forms. MK-7 has a half-life of around 3 days (compared to MK-4's roughly 1 hour), which means a single daily dose maintains steady tissue concentrations. The 100 mcg dose is within the clinical trial range (45-720 mcg daily, up to 24 months in human studies). Sourcing matters for MCAS: we specify synthetic or chickpea-fermented MK-7, not natto-derived. Natto is heavily fermented and a documented MCAS trigger - the same molecule from a non-natto source delivers the same benefits without the histamine load.",
+        whyThisFormPatient: "We use MK-7 (menaquinone-7) specifically, not MK-4 or short-chain forms. MK-7 has a half-life of around 3 days (compared to MK-4's roughly 1 hour), which means a single daily dose maintains steady tissue concentrations. The 100 mcg dose is within the clinical trial range (45-720 mcg daily, up to 24 months in human studies). Sourcing matters for MCAS: we use all-trans MK-7 made synthetically from geraniol (a plant-derived starting material) on a microcrystalline cellulose carrier, not natto- or soy-derived and not fermentation-derived. Natto is fermented soy, so natto-derived MK-7 carries soy and fermentation concerns; the synthetic all-trans molecule avoids both.",
         faq: [
             { q: "Why MK-7 instead of regular vitamin K?", a: "Vitamin K comes in two main forms: K1 (phylloquinone) from leafy greens, primarily used for blood clotting, and K2 (menaquinone) from bacterial and animal sources, primarily used for calcium-directing proteins. K2 has several subforms (MK-4, MK-7, MK-9, etc.) defined by the length of their isoprenoid tails. MK-7 has the longest half-life and the strongest activation of osteocalcin and matrix Gla protein (the calcium-directing proteins). For maintenance dosing, MK-7 is the standard supplement choice." },
             { q: "I'm on warfarin - can I take this?", a: "No. This is the one absolute contraindication for K2 supplementation. Warfarin works by blocking vitamin K-dependent clotting factor activation; supplementing K2 directly opposes warfarin's mechanism and can destabilize INR control with serious clinical consequences. The same applies to other vitamin K antagonists. If you're on warfarin, skip vitamin K supplements entirely (take our formulation without the AM capsule, or talk to your prescriber about non-VKA alternatives like DOACs that don't have this conflict)." },
-            { q: "Why not natto-derived MK-7?", a: "Natto is the cheapest natural source of MK-7 and is what most commercial supplements use. The problem for our community: natto is heavily fermented and carries substantial biogenic amines (histamine, tyramine, polyamines) that ride along even into extracted MK-7 products. Synthetic and chickpea-fermented MK-7 produce the same molecule without that contamination profile, which is why we specify them." },
+            { q: "Why not natto-derived MK-7?", a: "Natto is the cheapest natural source of MK-7 and is what most commercial supplements use. The problem for our community: natto is heavily fermented and carries substantial biogenic amines (histamine, tyramine, polyamines) that ride along even into extracted MK-7 products. Natto is also soy, one of our excluded allergens. Synthetic all-trans MK-7 made from geraniol is the same molecule without the soy or fermentation baggage, which is why it is the only form we use." },
             { q: "Does K2 actually help with mast cells?", a: "Yes, with caveats. The supporting evidence is real but historical and understudied in MCAS specifically. K2 sits in the formulation as secondary mast cell support, not a primary stabilizer; the dedicated mast cell work happens through PEA, luteolin, quercetin, and astaxanthin. See the Addressing the Triad section above for the specific study references." }
         ],
         triadPlain: {
-            mcas: "K2 has documented mast cell stabilization activity - the original work goes back to Kimura 1975 (rat mesenteric mast cells, human basophils from asthma patients) showing K2 inhibited both IgE-mediated and antibody-induced degranulation. A 2021 pediatric atopic dermatitis study (Zhang) confirmed K2 suppresses IL-17A, IL-10, and TNF-α through MAPK/ERK inhibition. The mechanism is real but understudied in MCAS populations specifically. We position K2 as secondary mast cell support alongside the dedicated stabilizers. Sourcing matters: synthetic or chickpea-fermented MK-7, not natto-derived, because natto's biogenic amines are a documented MCAS trigger.",
+            mcas: "K2 has documented mast cell stabilization activity - the original work goes back to Kimura 1975 (rat mesenteric mast cells, human basophils from asthma patients) showing K2 inhibited both IgE-mediated and antibody-induced degranulation. A 2021 pediatric atopic dermatitis study (Zhang) confirmed K2 suppresses IL-17A, IL-10, and TNF-α through MAPK/ERK inhibition. The mechanism is real but understudied in MCAS populations specifically. We position K2 as secondary mast cell support alongside the dedicated stabilizers. Sourcing matters: we use synthetic all-trans MK-7 from geraniol, not natto-derived, because natto is fermented soy.",
             heds: "For hEDS, K2's primary relevance is bone and connective tissue: K2 activates matrix Gla protein (MGP) and osteocalcin - proteins that direct calcium to where it's structurally needed. EDS populations show higher fracture rates that correlate with both D and K status. K2 also inhibits MMP-3 (a connective tissue-degrading enzyme) at 100 mcg/day in clinical trials in rheumatoid arthritis patients. Studies in pseudoxanthoma elasticum (a different connective tissue disorder) were negative, so we don't overclaim - but the protein activation mechanism is well-established and the safety profile across 40+ trials is favorable.",
             pots: "K2's POTS relevance is mostly indirect, working through cardiovascular maintenance. Activating matrix Gla protein keeps calcium from depositing in vascular smooth muscle - important for long-term vascular function. Some animal studies suggest K2 supports endothelial responsiveness. There's no direct POTS clinical evidence - K2 is not a primary autonomic intervention. The reason it's in the formulation is mostly the D3 pairing (D3 raises calcium absorption, K2 directs where calcium goes) and the broader bone-and-connective-tissue maintenance work. For POTS specifically, the bigger benefits come from other ingredients in the stack."
         },
-        bluf: "Vitamin K2 in the MK-7 form activates the proteins that route calcium into bone rather than soft tissue and vasculature, and supports collagen matrix quality relevant to hEDS. It works synergistically with D3 to reduce the soft tissue calcification risk that long-term D3 supplementation can otherwise drive. ZebraThrive uses 100 mcg MK-7 daily.",
+        bluf: "Vitamin K2 in the MK-7 form activates the proteins that route calcium into bone rather than soft tissue and vasculature, and supports collagen matrix quality. It pairs with D3, which increases calcium absorption. ZebraThrive uses 100 mcg of synthetic all-trans MK-7 (not natto or soy derived) daily in the AM capsule.",
         atAGlance: {
             whatItIs: "A fat-soluble vitamin that activates proteins essential for calcium regulation and vascular health",
             whyWeIncludeIt: "Works synergistically with D3 to reduce the risk of soft tissue calcification, supports collagen matrix quality, and demonstrates mast cell stabilizing properties in lab models",
-            dose: "100 mcg MK-7 daily",
+            dose: "100 mcg MK-7 daily in the AM capsule",
             keyBenefits: [
                 "Reduces arterial calcification risk via Matrix Gla Protein activation",
                 "Inhibits mast cell degranulation (Kimura studies)",
@@ -923,22 +925,17 @@ export const ingredients: Record<string, IngredientData> = {
                 "Superior 72-hour half-life vs MK-4"
             ]
         },
-        howItWorks: "Vitamin K2 activates Matrix Gla Protein (MGP), which binds calcium in the bloodstream and limits its deposition in arteries and soft tissues, directing it toward bone instead. This is critical when taking D3, which increases calcium absorption.\n\nIn connective tissue, K2 activates osteocalcin, enhancing collagen matrix quality. Research shows it increases collagen synthesis via the SXR pathway and organizes collagen fibrils. Regarding mast cells, historical studies demonstrated that menaquinone significantly inhibits degranulation in both models and human basophils, with clinical effectiveness shown in asthma trials.",
+        howItWorks: "Vitamin K2 activates Matrix Gla Protein (MGP), which binds calcium in the bloodstream and limits its deposition in arteries and soft tissues, directing it toward bone instead. This is critical when taking D3, which increases calcium absorption.\n\nIn connective tissue, K2 activates osteocalcin, enhancing collagen matrix quality. Research shows it increases collagen synthesis via the SXR pathway and organizes collagen fibrils. Regarding mast cells, a 1975 study found menaquinone inhibited degranulation of rat mesenteric mast cells, and basophils from people who had taken it long-term were less reactive. This is older mechanism work that needs modern replication.",
         research: [
             {
                 outcome: "Mast Cell Stabilization",
-                summary: "Historical research demonstrates significant stabilizing properties.",
+                summary: "Older (1975) mechanism research; modern replication is needed.",
                 studies: [
                     {
-                        source: "Kimura I et al.",
+                        source: "Kimura I et al., \"Menaquinone (vitamin K2) therapy for bronchial asthma. I. Mechanism of action of menaquinone on allergic reactions\"",
                         pmid: "126001",
-                        finding: "Menaquinone significantly inhibited mast cell degranulation in rat models and human basophils."
-                    },
-                    {
-                        source: "Kimura I et al.",
-                        pmid: "51576",
-                        design: "Controlled trial, n=191 asthma patients",
-                        finding: "72.7-90.9% clinical effectiveness in asthma compared to 16.7% for placebo."
+                        design: "Rat mast cell experiments plus basophils from treated patients",
+                        finding: "Menaquinone significantly inhibited degranulation of rat mesenteric mast cells; basophils from patients given menaquinone long-term showed modestly reduced degranulation, while adding menaquinone directly to cells in vitro did not."
                     }
                 ]
             },
@@ -969,17 +966,17 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         evidenceGaps: "No direct evidence in hEDS, POTS, or MCAS populations. Mast cell evidence is historical (1975) and requires modern replication. No studies exist on heart rate or autonomic markers.",
         triad: {
-            mcas: "K2 appears to stabilize mast cells. However, fermentation sources (natto) can contain histamine. It is critical to use purified, pharmaceutical-grade MK-7 extracts that remove these contaminants. Some sensitive patients may prefer synthetic or chickpea-fermented alternatives.",
+            mcas: "K2 may support mast cell stability, based on older lab data. Fermentation sources (natto) can carry histamine and are soy-derived, so we use synthetic all-trans MK-7 made from geraniol instead.",
             heds: "Demonstrates MMP inhibition and supports collagen synthesis. While direct hEDS data is missing, the reduction in MMP-3 seen in other conditions is theoretically beneficial for preventing ECM degradation.",
             pots: "This represents a large evidence gap. Improved arterial stiffness could theoretically benefit blood pressure regulation in POTS, but direct autonomic data is currently lacking."
         },
         whyThisForm: {
-            form: "MK-7 (Menaquinone-7)",
-            rationale: "MK-7 is far superior to MK-4 due to its 72-hour half-life and 10x better bioavailability. 420 μg of MK-7 is easily detectable in serum while the same dose of MK-4 is not.",
+            form: "MK-7 (menaquinone-7), all-trans, synthetic from geraniol, 1% on microcrystalline cellulose",
+            rationale: "MK-7 is far superior to MK-4 due to its 72-hour half-life and 10x better bioavailability. 420 μg of MK-7 is easily detectable in serum while the same dose of MK-4 is not. Our MK-7 is all-trans and made synthetically from geraniol (a plant-derived starting material), supplied at 1% on a wood-pulp microcrystalline cellulose carrier. It is not natto- or soy-derived and not fermentation-derived.",
             comparison: [
-                { form: "MK-7 (Menaquinone-7)", difference: "72-hour half-life; once-daily dosing; 10x better bioavailability", selected: true },
-                { form: "MK-4 (Menaquinone-4)", difference: "6-hour half-life; requires multiple doses; poor absorption", selected: false },
-                { form: "Chickpea-fermented or synthetic MK-7 source", difference: "Soy-free, no natto-derived biogenic amines; descriptive of our sourcing", selected: false }
+                { form: "Synthetic all-trans MK-7 (geraniol-derived, on MCC)", difference: "Our form; 72-hour half-life; once-daily dosing; soy-free and non-fermented", selected: true },
+                { form: "Natto-derived MK-7", difference: "Fermented soy source; soy allergen and fermentation concerns; not used", selected: false },
+                { form: "MK-4 (Menaquinone-4)", difference: "Short half-life; requires multiple doses; poor absorption", selected: false }
             ]
         },
         safety: {
@@ -1010,12 +1007,12 @@ export const ingredients: Record<string, IngredientData> = {
         id: "benfotiamine",
         name: "Benfotiamine",
         patientSummary: "Benfotiamine is a fat-soluble form of vitamin B1 (thiamine), originally developed in Japan to reach tissues that water-soluble thiamine has trouble penetrating. For the triad, it's most relevant for two reasons: thiamine deficiency directly triggers mast cell degranulation in lab studies (correcting marginal deficiency may quiet mast cell reactivity), and B1 supports mitochondrial energy through transketolase and PDH activation - both relevant to the chronic fatigue that frequently shadows POTS and hEDS. We dose 150 mg in the AM with a fat-containing meal. Benfotiamine is synthetic, not fermentation-derived, so no MCAS contamination concerns.",
-        whyThisFormPatient: "We use standard benfotiamine (S-benzoylthiamine O-monophosphate) at 150 mg per day, taken with a fat-containing meal. The 150 mg dose sits at the saturation point of transketolase activation (Frank 2000 demonstrated this in renal patients) - going higher doesn't translate to better outcomes, as confirmed by the 2026 BOND trial that tested 600 mg for 12 months and found no additional clinical benefit. Benfotiamine is chemically synthesized, not fermentation-derived, so it's a clean choice for MCAS-sensitive patients who react to fermented ingredient sources. Standard pharmaceutical-grade quality on every batch.",
+        whyThisFormPatient: "We use standard benfotiamine (S-benzoylthiamine O-monophosphate) at 150 mg per day, taken with a fat-containing meal. The 150 mg dose sits at the saturation point of transketolase activation (Frank 2000 demonstrated this in renal patients) - going higher doesn't translate to better outcomes, as confirmed by the 2026 BOND trial that tested 600 mg for 12 months and found no additional clinical benefit. Benfotiamine is chemically synthesized, not fermentation-derived, so it's a clean choice for MCAS-sensitive patients who react to fermented ingredient sources. USP/EP-grade material, checked by our manufacturer's incoming quality control.",
         faq: [
             { q: "Benfotiamine vs regular thiamine - what's the difference?", a: "Regular thiamine (vitamin B1) is water-soluble and has trouble reaching some tissues - especially nervous and muscle tissue, where lipid membranes act as a barrier. Benfotiamine is a fat-soluble prodrug: it crosses lipid membranes much more easily, converts back to thiamine inside the cell, and produces blood thiamine levels several times higher than equivalent doses of regular thiamine. For most healthy people, the difference is academic. For people with chronic illness or marginal absorption, the lipid-soluble form is more reliable." },
             { q: "I've heard about thiamine deficiency in POTS - does this address that?", a: "Partially. A 2017 chart review at SUNY Buffalo (Blitshteyn) found 6% of POTS patients had whole-blood B1 deficiency, and a quarter of that subset improved on oral thiamine. A small subset, but real. Benfotiamine at 150 mg/day covers daily B1 needs and gives some headroom for marginal deficiency. It's not a high-dose autonomic intervention - the 2026 BOND trial at 600 mg for a year showed no autonomic benefit. For known severe deficiency, your prescriber may want injectable B1." },
             { q: "Does benfotiamine help with mast cells?", a: "Indirectly. There's no direct study testing benfotiamine on mast cells, but three preclinical studies show that thiamine deficiency itself directly triggers mast cell degranulation in neural tissue. Correcting marginal thiamine status may quiet that pathway. Benfotiamine also inhibits NF-kB (a central mast cell signaling pathway) in lab models. It's not a primary mast cell stabilizer - that work is done by PEA, luteolin, quercetin - but it removes one potential upstream trigger if you're running B1-low." },
-            { q: "Will benfotiamine help with my migraines or neuropathy?", a: "For neuropathy: the diabetes data is mixed. Some smaller trials showed benfotiamine improved diabetic neuropathy symptoms, but the definitive 2026 BOND trial at 600 mg for a year was negative for nerve function endpoints. For migraines: benfotiamine isn't the right B vitamin - riboflavin (B2, our R5P) is the migraine-prophylaxis B vitamin with the strongest data. Benfotiamine's value in our formulation is daily B1 coverage and mitochondrial support, not targeted neuropathy or migraine treatment." }
+            { q: "Is benfotiamine in the formula for nerve or headache support?", a: "No. Benfotiamine is here for daily B1 coverage and mitochondrial energy support. Studies in adults with diabetes have measured nerve-related endpoints at much higher doses (300-600 mg/day) with mixed results, and the 2026 BOND trial at 600 mg/day for a year did not show benefit on nerve function endpoints. We do not position benfotiamine, or this formula, for any nerve or headache condition." }
         ],
         triadPlain: {
             mcas: "Benfotiamine's MCAS relevance is the deficiency-correction angle. Three preclinical studies demonstrate that thiamine deficiency directly triggers mast cell degranulation in neural tissue - meaning marginal B1 status acts as an upstream trigger for the mast cell activation we're trying to quiet. Correcting that deficiency removes one potential trigger without doing pharmacological work on the mast cell itself. Benfotiamine also inhibits NF-kB activation (a central signaling pathway in mast cell biology) in lab models. The synthesized origin means no fermentation-derived contamination, which matters for sulfite-sensitive and biogenic-amine-reactive MCAS patients.",
@@ -1026,10 +1023,10 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "A fat-soluble derivative of vitamin B1 (thiamine) with 5-fold greater bioavailability",
             whyWeIncludeIt: "Supports mitochondrial energy production; 6% of POTS patients are thiamine deficient with 25% responding to supplementation",
-            dose: "150 mg daily",
+            dose: "150 mg daily in the AM capsule",
             keyBenefits: [
                 "5-fold greater bioavailability than thiamine HCl",
-                "Improves HRV parasympathetic markers by 21-46%",
+                "HRV parasympathetic markers rose 21-46% in a trial in adults with diabetic neuropathy",
                 "Supports Krebs cycle and energy production",
                 "Anti-inflammatory via NF-κB inhibition"
             ]
@@ -1038,7 +1035,7 @@ export const ingredients: Record<string, IngredientData> = {
         research: [
             {
                 outcome: "Autonomic Function / HRV",
-                summary: "Improves parasympathetic markers in clinical neuropathy trials.",
+                summary: "Parasympathetic heart rate variability markers were measured in a trial in adults with diabetic neuropathy.",
                 studies: [
                     {
                         source: "Serhiyenko et al.",
@@ -1060,14 +1057,14 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             },
             {
-                outcome: "Neuropathy Symptom Improvement",
-                summary: "Landmark trials established efficacy for nerve-related symptoms.",
+                outcome: "Dose-Ranging Human Data (BENDIP)",
+                summary: "A randomized trial in adults with diabetic polyneuropathy compared two benfotiamine doses with placebo. We cite it for dose and tolerability context, not as a claim for any condition.",
                 studies: [
                     {
-                        source: "Stracke et al. (BENDIP Trial)",
+                        source: "Stracke H et al. (BENDIP Trial)",
                         pmid: "18473286",
-                        design: "RCT, 6 weeks",
-                        finding: "Neuropathy Symptom Score improved; established 100mg as subtherapeutic for neuropathy."
+                        design: "Randomized, double-blind, placebo-controlled, 6 weeks; 165 adults randomized to 600 mg/day, 300 mg/day, or placebo",
+                        finding: "In adults with diabetic polyneuropathy, the Neuropathy Symptom Score was measured after 6 weeks; differences reached significance in the per-protocol analysis (p=0.033) but not the intention-to-treat analysis (p=0.055), and were larger at 600 mg. The trial did not test 100 mg or our 150 mg dose. Treatment was well tolerated."
                     }
                 ]
             }
@@ -1092,7 +1089,7 @@ export const ingredients: Record<string, IngredientData> = {
             interactions: "Excellent profile; no CYP450 interactions. Space apart from bile acid sequestrants or laxatives.",
             excipientConcerns: {
                 avoid: ["Artificial fillers"],
-                safe: ["Pharmaceutical-grade synthesized benfotiamine, COA-verified"]
+                safe: ["USP/EP-grade synthesized benfotiamine, COA-verified"]
             },
             cautions: "Monitor blood pressure. Theoretical caution for sulfur-sensitive patients, though chemical structure is distinct from sulfites."
         },
@@ -1107,7 +1104,7 @@ export const ingredients: Record<string, IngredientData> = {
         sources: [
             { title: "BENDIP: Benfotiamine in diabetic polyneuropathy RCT", pmid: "18473286", authors: "Stracke H et al.", year: "2008" },
             { title: "Vitamin B1 deficiency in POTS", pmid: "28531358", authors: "Blitshteyn S", year: "2017" },
-            { title: "Benfotiamine reduces collagen genes in skeletal muscle", pmid: "38710523", authors: "Coles JG et al.", year: "2024" },
+            { title: "Benfotiamine improves dystrophic pathology and exercise capacity in mdx mice by reducing inflammation and fibrosis", pmid: "38710523", authors: "Coles CA et al.", year: "2024" },
             { title: "Benfotiamine in Alzheimer's (cognitive/autonomic trial)", pmid: "33074237", authors: "Gibson GE et al.", year: "2020" },
             { title: "24-month benfotiamine safety in type 1 diabetes", pmid: "22446172", authors: "Fraser DA et al.", year: "2012" }
         ]
@@ -1115,35 +1112,35 @@ export const ingredients: Record<string, IngredientData> = {
     "p5p": {
         id: "p5p",
         name: "P5P (Pyridoxal-5-Phosphate)",
-        patientSummary: "P5P is the active, phosphorylated form of vitamin B6 - the form your enzymes can use directly. For the triad, P5P is one of the most directly MCAS-relevant B vitamins on the list: it's the essential cofactor for DAO (diamine oxidase), the primary enzyme that breaks down histamine in your gut. German clinical research has shown that adequate B6 (over 20 µg/L) increases histamine elimination by 20% when DAO is supplemented. P5P also supports neurotransmitter synthesis (GABA, serotonin, dopamine) - relevant for autonomic regulation in POTS. We dose 50 mg in the AM.",
+        patientSummary: "P5P is the active, phosphorylated form of vitamin B6 - the form your enzymes can use directly. For the triad, P5P is one of the most directly MCAS-relevant B vitamins on the list: it's the essential cofactor for DAO (diamine oxidase), the primary enzyme that breaks down histamine in your gut. German clinical research has shown that adequate B6 (over 20 µg/L) increases histamine elimination by 20% when DAO is supplemented. P5P also supports neurotransmitter synthesis (GABA, serotonin, dopamine), relevant for autonomic regulation. We dose 50 mg of P5P in the AM capsule, which our draft Supplement Facts panel declares as 31.9 mg of vitamin B6.",
         faq: [
-            { q: "Why P5P instead of regular B6?", a: "P5P is the active, phosphorylated form your enzymes use directly - no liver conversion required. Regular pyridoxine has to be converted to P5P, and that conversion can be impaired in chronic illness or genetic variants. Crucially, high-dose pyridoxine has been linked to peripheral neuropathy at doses as low as 50 mg/day in sensitive individuals. P5P has no documented neuropathy risk even at much higher doses. For long-term daily use in a sensitive population, the active form is the safe form." },
+            { q: "Why P5P instead of regular B6?", a: "P5P is the active, phosphorylated form your enzymes use directly - no liver conversion required. Regular pyridoxine has to be converted to P5P, and that conversion can be impaired in chronic illness or genetic variants. One safety point applies to every form: high long-term vitamin B6 intake has been linked to peripheral neuropathy, and EFSA's 2023 upper intake level (12 mg/day of total vitamin B6 for adults) applies to all forms, including P5P. Our AM capsule provides 50 mg P5P, declared as 31.9 mg vitamin B6, which is above the EFSA level (the US upper limit is 100 mg/day). If you take other B6-containing supplements, count them too, and stop and tell your clinician if you notice tingling or numbness." },
             { q: "How does P5P help with histamine?", a: "Through amine metabolism support. P5P is a coenzyme for histidine decarboxylase and several other enzymes in the amine pathways that handle histamine and related compounds. DAO itself, the enzyme that breaks histamine down in your gut, is primarily copper-dependent (with TPQ as its organic cofactor) rather than B6-dependent. That said, B6 status does correlate with histamine clearance in observational data: a 2024 Clinical Chemistry study showed B6 levels over 20 µg/L produced about 20% better histamine clearance than deficient levels. The mechanism is upstream support of the broader amine pathway DAO operates within, not direct DAO cofactoring." },
-            { q: "Does P5P stabilize mast cells directly?", a: "There's moderate evidence. A 2022 study (Kazama) showed P5P produces dose-dependent mast cell suppression, synergistic with vitamin C. An older 1979 study (García) reported a cromolyn-like mast cell stabilizing profile. The mechanism likely involves both direct mast cell membrane effects and broader support of amine metabolism. We don't lead with mast cell stabilization for P5P; the indirect amine-pathway work is the stronger evidence base, but the direct effect is documented." },
+            { q: "Does P5P stabilize mast cells directly?", a: "There's moderate evidence. A 2022 study (Kazama) showed P5P produces dose-dependent mast cell suppression, synergistic with vitamin C. An older 1979 study (García) also reported mast cell stabilizing effects in lab models. The mechanism likely involves both direct mast cell membrane effects and broader support of amine metabolism. We don't lead with mast cell stabilization for P5P; the indirect amine-pathway work is the stronger evidence base, but the direct effect is documented." },
             { q: "Will P5P interact with my medications?", a: "P5P at 50 mg has minimal documented interactions. The main one to know: levodopa (for Parkinson's). High-dose B6 increases the conversion of levodopa to dopamine before it can cross the blood-brain barrier, reducing its effectiveness. Carbidopa blocks this interaction, so if you're on Sinemet (carbidopa/levodopa), the interaction is manageable. Some antiepileptics may slightly lower B6 levels over time. For standard POTS, MCAS, and hEDS medications, P5P is a clean addition." }
         ],
         triadPlain: {
             mcas: "P5P supports histamine handling through amine metabolism pathways. It's the coenzyme for histidine decarboxylase and several other enzymes in the broader amine pathway DAO operates within. DAO itself is primarily copper-dependent (with TPQ as its organic cofactor), so the B6 contribution is upstream support rather than direct DAO cofactoring. B6 status does correlate with histamine clearance in observational data, and P5P has documented direct mast cell stabilization in lab studies (Kazama 2022, synergistic with vitamin C). Both mechanisms support the broader MCAS strategy.",
             heds: "For hEDS, P5P's role is indirect through homocysteine metabolism. B6 deficiency raises homocysteine, and elevated homocysteine inhibits lysyl oxidase (LOX) - the enzyme that creates collagen cross-links. Properly cross-linked collagen is what gives connective tissue its tensile strength. A 2006 Japanese study (Saito) found that hip fracture patients with low pyridoxal had reduced collagen cross-links. P5P doesn't directly build collagen, but it removes one upstream constraint on cross-link formation. Note: copper, not B6, is the direct LOX cofactor - but the homocysteine pathway is a real B6-dependent mechanism for cross-link quality.",
-            pots: "For POTS, P5P supports neurotransmitter synthesis: it's the cofactor for glutamic acid decarboxylase (GABA production) and aromatic L-amino acid decarboxylase (dopamine production). Both pathways are relevant to autonomic balance. A 2025 study (Kovalchuk, n=68) showed reduced syncope frequency with B6 supplementation. A 2017 study (Zhong) showed improved heart rate variability. A 2010 study (Cui) showed reduced sympathetic activity. The evidence is moderate but consistent - B6 supports the neurotransmitter machinery that autonomic regulation depends on. Particularly relevant for hyperadrenergic POTS patterns where catecholamine balance is disrupted."
+            pots: "For POTS, P5P supports neurotransmitter synthesis: it's the cofactor for glutamic acid decarboxylase (GABA production) and aromatic L-amino acid decarboxylase (dopamine production). Both pathways are relevant to autonomic balance. A 2025 study (Kovalchuk, n=68) reported reduced syncope frequency with B6 supplementation. A 2017 study (Zhong) reported improved heart rate variability. A 2011 study (Cui) in healthy volunteers found that pyridoxine infused into the forearm blunted the sympathetic nerve and blood pressure response to fatiguing handgrip exercise. The evidence is moderate but consistent - B6 supports the neurotransmitter machinery that autonomic regulation depends on. Particularly relevant for hyperadrenergic POTS patterns where catecholamine balance is disrupted."
         },
-        bluf: "P5P is the active coenzyme form of vitamin B6, immediately usable by the body without conversion. It serves as a key cofactor for DAO, the enzyme that breaks down histamine, making it critical for MCAS, and it supports neurotransmitter synthesis for autonomic regulation. ZebraThrive uses 50 mg daily.",
+        bluf: "P5P is the active coenzyme form of vitamin B6, immediately usable by the body without conversion. It is a cofactor for amine-metabolism enzymes in the broader histamine pathway and supports neurotransmitter synthesis for autonomic regulation. ZebraThrive uses 50 mg P5P daily in the AM capsule (31.9 mg vitamin B6).",
         atAGlance: {
             whatItIs: "The active, coenzyme form of vitamin B6 that is immediately usable by the body",
-            whyWeIncludeIt: "Essential cofactor for DAO enzyme (histamine degradation)-critical for MCAS; supports neurotransmitter synthesis for autonomic regulation",
-            dose: "50 mg daily",
+            whyWeIncludeIt: "Cofactor for amine-metabolism enzymes in the histamine pathway; supports neurotransmitter synthesis for autonomic regulation",
+            dose: "50 mg P5P daily in the AM capsule (31.9 mg vitamin B6)",
             keyBenefits: [
                 "Supporting cofactor for amine metabolism enzymes; relevant for histamine pathway handling",
                 "Supports GABA, serotonin, and dopamine synthesis",
-                "NO neuropathy risk unlike standard pyridoxine HCl",
+                "Counts toward total vitamin B6 intake; the EFSA 2023 upper level applies to P5P too",
                 "Bypasses genetic conversion polymorphisms"
             ]
         },
         howItWorks: "P5P is the biologically active form of B6. Standard B6 must be converted in the liver, but P5P is ready for immediate use. For MCAS, P5P is a supporting cofactor for several amine-metabolism enzymes including histidine decarboxylase. DAO itself, the enzyme that breaks down histamine in the gut, is primarily copper-dependent (with TPQ as its organic cofactor); adequate B6 status supports the broader amine pathway that DAO operates within.\n\nBeyond histamine, P5P is required for synthesis of GABA, serotonin, and norepinephrine-critical for autonomic regulation in POTS. It is involved in over 100 enzymatic reactions, including those that convert excitatory glutamate to calming GABA.",
         research: [
             {
-                outcome: "DAO Cofactor Function",
-                summary: "Essential for the activity of the primary histamine-degrading enzyme.",
+                outcome: "B6 Status and Histamine Handling",
+                summary: "B6 status correlates with histamine handling in observational data. DAO itself is copper-dependent; B6 supports the broader amine pathway.",
                 studies: [
                     {
                         source: "Clinical Chemistry (2024)",
@@ -1163,7 +1160,7 @@ export const ingredients: Record<string, IngredientData> = {
                     {
                         source: "Kazama et al.",
                         pmid: "35781358",
-                        finding: "Dose-dependent suppression of mast cell activation; cromolyn-like profile."
+                        finding: "Dose-dependent suppression of mast cell activation in lab studies."
                     }
                 ]
             },
@@ -1178,29 +1175,30 @@ export const ingredients: Record<string, IngredientData> = {
                         finding: "B6 supplementation significantly reduced syncope frequency."
                     },
                     {
-                        source: "Cui et al.",
+                        source: "Cui J et al., 2011",
                         pmid: "21078590",
-                        finding: "Demonstrated reduced sympathetic activity and improved HRV restoration."
+                        design: "Human physiology study, healthy young volunteers, local forearm infusion of pyridoxine",
+                        finding: "After pyridoxine was infused into the isolated forearm circulation, muscle sympathetic nerve activity and blood pressure responses to fatiguing handgrip were smaller than before; saline had no such effect. Heart rate variability was not measured, and this was IV infusion, not oral P5P."
                     }
                 ]
             }
         ],
         evidenceGaps: "No direct RCTs in hEDS or POTS populations. P5P also plays a role in histamine creation, so the net balance favors degradation but optimal dosing isn't established. Misconception exists: P5P is NOT a direct LOX cofactor (copper is).",
         triad: {
-            mcas: "Primary indication as a DAO cofactor. Supports the pathway that clears histamine after degranulation. Unlike standard B6 (pyridoxine), P5P does not carry the risk of peripheral neuropathy. The 'B6 Paradox' is avoided by using the active form directly.",
+            mcas: "Supports the broader amine pathway that clears histamine after degranulation (DAO itself is copper-dependent). The active form avoids the conversion step, but high total B6 intake carries a neuropathy risk in any form, including P5P.",
             heds: "Indirect support via homocysteine metabolism. Deficiency leads to elevated homocysteine, which inhibits collagen crosslinking via LOX inhibition. P5P helps counteract this inhibition and supports crosslink quality.",
             pots: "Supports synthesis of neurotransmitters essential for autonomic balance (GABA, norepinephrine). Deficiency is common (up to 47% in some studies) and is associated with autonomic neuropathy and fainting frequency."
         },
         whyThisForm: {
             form: "P5P (Pyridoxal-5-Phosphate)",
-            rationale: "Pyridoxine HCl can cause peripheral neuropathy and the 'B6 Paradox' (functional deficiency with high blood levels). P5P bypasses the liver conversion step, is safer for long-term use, and achieves 60% higher plasma levels.",
+            rationale: "P5P bypasses the liver conversion step that pyridoxine HCl requires, and it avoids the 'B6 paradox' proposed for pyridoxine (unconverted pyridoxine competing with active B6). It is not risk-free: EFSA's 2023 opinion sets an upper intake level of 12 mg/day of total vitamin B6 for adults, based on peripheral neuropathy, and that level applies to all forms including P5P. Our 50 mg P5P provides 31.9 mg vitamin B6.",
             comparison: [
-                { form: "P5P (Pyridoxal-5-Phosphate)", difference: "Active form; no conversion needed; NO neuropathy risk", selected: true },
-                { form: "Pyridoxine HCl", difference: "Neuropathy risk at doses as low as 2mg; conversion dependent", selected: false }
+                { form: "P5P (Pyridoxal-5-Phosphate)", difference: "Active form; no conversion needed; counts toward total B6 intake", selected: true },
+                { form: "Pyridoxine HCl", difference: "Requires conversion; most B6 neuropathy reports involve high long-term pyridoxine intake", selected: false }
             ]
         },
         safety: {
-            sideEffects: "Excellent safety. No neuropathy risk even at high (750mg) doses. May cause vivid dreams if taken before bed.",
+            sideEffects: "Generally well tolerated. High long-term vitamin B6 intake, in any form, has been linked to peripheral neuropathy; EFSA's 2023 upper level is 12 mg/day of total B6 for adults, and our 31.9 mg B6 (from 50 mg P5P) is above it, though below the US upper limit of 100 mg/day. Stop and talk to your clinician if you notice tingling or numbness. May cause vivid dreams if taken late in the day.",
             interactions: "CONTRAINDICATED with Levodopa without carbidopa. Anticonvulsants may require monitoring. Synergistic with Magnesium, Zinc, and Vitamin C.",
             excipientConcerns: {
                 avoid: ["Artificial colors", "Citric acid", "Corn dextrose", "Magnesium stearate"],
@@ -1219,19 +1217,19 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Histamine and histamine intolerance (DAO/B6 review)", pmid: "17490952", authors: "Maintz L, Novak N", year: "2007" },
             { title: "P5P mast cell suppression, vitamin C synergy", pmid: "35781358", authors: "Kazama et al.", year: "2022" },
             { title: "The B6 paradox: pyridoxine disrupts GABA and cause neuropathy", pmid: "33912895", authors: "Hadtstein F, Vrolijk M", year: "2021" },
-            { title: "Updated B6 safety and upper limits", pmid: "37207271", authors: "EFSA", year: "2023" },
+            { title: "Scientific opinion on the tolerable upper intake level for vitamin B6", pmid: "37207271", authors: "EFSA NDA Panel (Turck D et al.)", year: "2023" },
             { title: "Pyridoxal and collagen crosslinks in hip fracture", pmid: "16969591", authors: "Saito M et al.", year: "2006" }
         ]
     },
 "astaxanthin": {
         id: "astaxanthin",
         name: "Astaxanthin",
-        patientSummary: "Astaxanthin is the red carotenoid produced by Haematococcus pluvialis algae - the same molecule that gives salmon and flamingos their color. It's one of the most potent antioxidants tested in humans (about 6,000 times more potent than vitamin C against singlet oxygen). For the triad specifically, astaxanthin brings three mechanisms: mast cell stabilization with around 60-70% reduction in degranulation in lab studies, MMP-1 inhibition with collagen restoration in human dermal fibroblasts, and broad anti-inflammatory activity. We use the natural algal source (not synthetic) at 4 mg of active astaxanthin daily - within the dose range of the clinical literature.",
-        whyThisFormPatient: "We use natural astaxanthin from Haematococcus pluvialis algae (not synthetic). The natural form contains the all-E-isomer dominant profile that human studies have validated; synthetic astaxanthin has a different isomer ratio that doesn't reproduce the same clinical results. Our spec requires US-origin sourcing because some European batches have shown rising 9-cis isomer content (up to 29% in 2021 batches) that exceeds the EU safety spec - and the 9-cis isomer suppresses collagen synthesis, which would defeat the point. Take with a fat-containing meal: astaxanthin absorption increases 2-3 times with dietary fat.",
+        patientSummary: "Astaxanthin is the red carotenoid produced by Haematococcus pluvialis algae - the same molecule that gives salmon and flamingos their color. It's one of the most potent antioxidants tested in humans (about 6,000 times more potent than vitamin C against singlet oxygen). For the triad specifically, astaxanthin brings three mechanisms: mast cell stabilization with around 60-70% reduction in degranulation in lab studies, MMP-1 inhibition with collagen restoration in human dermal fibroblasts, and broad anti-inflammatory activity. We use natural algal astaxanthin (not synthetic) as a 5% cracked-cell beadlet, at 4 mg of active astaxanthin daily in the PM capsule, within the dose range of the clinical literature.",
+        whyThisFormPatient: "We use natural astaxanthin extracted from Haematococcus pluvialis algae (not synthetic), supplied as a 5% cracked-cell beadlet. Whole-cell algae powder was rejected: the algae's tough cyst wall resists digestion, so the astaxanthin inside is poorly released, and taking more does not fix the wrong material. Our spec requires all-trans astaxanthin above 60% and 9-cis at or below 30% (the limit in EU Regulation 2024/1026), verified by HPLC on each lot's COA. The supplier's carrier-free declaration states the beadlet contains no gelatin, soy, or corn-derived carriers or excipients. Take with a fat-containing meal: astaxanthin absorption increases 2-3 times with dietary fat.",
         faq: [
-            { q: "Why does astaxanthin need to be taken with fat?", a: "Astaxanthin is fat-soluble - it can't be efficiently absorbed without dietary fat to form the lipid micelles that ferry it across the intestinal wall. Studies show absorption increases 2-3 times when astaxanthin is taken with a meal containing fat compared to water-only intake. This is non-negotiable for getting clinical-grade plasma levels at our 4 mg dose. Take it with breakfast, lunch, or dinner - whichever meal has at least a few grams of fat (avocado, olive oil, eggs, nuts)." },
+            { q: "Why does astaxanthin need to be taken with fat?", a: "Astaxanthin is fat-soluble - it can't be efficiently absorbed without dietary fat to form the lipid micelles that ferry it across the intestinal wall. Studies show absorption increases 2-3 times when astaxanthin is taken with a meal containing fat compared to water-only intake. This matters for getting useful plasma levels at our 4 mg dose. Take it with breakfast, lunch, or dinner - whichever meal has at least a few grams of fat (avocado, olive oil, eggs, nuts)." },
             { q: "When will I notice astaxanthin working?", a: "Astaxanthin requires chronic dosing - it's prophylactic, not acute. The mast cell stabilization mechanism needs about 4 hours of pre-treatment in lab studies to engage, and the clinical effects show up over weeks. Most human RCTs run 4-12 weeks before measurable changes. Skin elasticity and connective tissue effects can take 8-12 weeks. This isn't a same-day-results ingredient; it's a slow-building, broad-spectrum protector. Consistency over months is what generates the response." },
-            { q: "How is your astaxanthin sourced?", a: "Generic natural astaxanthin from Haematococcus pluvialis, US-origin (the 9-cis isomer issue in some European batches was the deciding factor), all-E isomer dominant with full COA verification per lot. We evaluated branded options but generic at this spec delivers equivalent clinical performance at meaningfully lower cost." },
+            { q: "How is your astaxanthin sourced?", a: "Natural astaxanthin extracted from Haematococcus pluvialis and supplied as a 5% cracked-cell beadlet, with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026 limit) verified by HPLC on each lot's COA. Whole-cell algae powder was rejected because its cyst wall blocks release. The supplier has declared the beadlet free of gelatin, soy, and corn-derived carriers. Our spec has no country-of-origin requirement; the gates are the cracked-cell form, the isomer profile, and the allergen declaration." },
             { q: "Are there any drug interactions to know about?", a: "One documented case worth noting: a 2019 case report described an INR elevation in a warfarin patient who started astaxanthin. The mechanism is unclear, but caution is warranted. If you're on warfarin or another anticoagulant, mention astaxanthin to your prescriber and consider a baseline INR check at 2-4 weeks. Otherwise, astaxanthin has a clean interaction profile - no documented issues with beta-blockers, midodrine, ivabradine, antihistamines, or mast cell stabilizers. The safety profile across all other medications is excellent." }
         ],
         triadPlain: {
@@ -1239,15 +1237,15 @@ export const ingredients: Record<string, IngredientData> = {
             heds: "Astaxanthin has strong human dermal fibroblast data - exactly the cell type relevant to hEDS skin findings. In studies on human buttock skin biopsies (Yoon 2014), oral astaxanthin reduced MMP-1 mRNA by 68% and MMP-12 by 77% while increasing procollagen I by 240%. A 2016 study showed similar MMP-1 and MMP-3 reduction in cultured human dermal fibroblasts (Chou 2016). The mechanism - combined matrix protection and pro-collagen support - is exactly the profile an hEDS ingredient should hit. The all-E isomer dominant sourcing matters: 9-cis-rich batches suppress rather than support collagen synthesis.",
             pots: "For POTS, astaxanthin's role is mostly the systemic anti-inflammatory and mast cell layers - many POTS cases overlap with MCAS, and reducing the inflammatory background can quiet the autonomic instability that runs alongside it. Astaxanthin is BP-neutral (a meta-analysis of 14 RCTs found no significant change in systolic or diastolic BP), so there's no orthostatic hypotension concern. Heart rate effects haven't been studied directly. The strongest POTS-relevant case is the dermal microvascular work - astaxanthin supports endothelial function in skin biopsies, a useful background effect for the vascular dysregulation in POTS."
         },
-        bluf: "Astaxanthin is a carotenoid antioxidant from microalgae (Haematococcus pluvialis) with the highest lipid-phase antioxidant capacity in the category. It stabilizes mast cells (60-70% inhibition in lab studies) and inhibits collagen-degrading enzymes in human dermal fibroblasts at orally achievable doses, relevant for MCAS and hEDS. ZebraThrive uses 4 mg daily in the PM capsule, with dinner fat for absorption.",
+        bluf: "Astaxanthin is a carotenoid antioxidant from microalgae (Haematococcus pluvialis) with the highest lipid-phase antioxidant capacity in the category. In lab studies it reduced mast cell degranulation by 60-70% and reduced collagen-degrading enzymes in human dermal fibroblasts. ZebraThrive uses 4 mg daily from a 5% cracked-cell beadlet in the PM capsule, with dinner fat for absorption.",
         atAGlance: {
             whatItIs: "A lipid-phase carotenoid antioxidant from microalgae (Haematococcus pluvialis)",
             whyWeIncludeIt: "Dual action: stabilizes mast cells (60-70% inhibition) AND inhibits collagen-degrading enzymes at oral doses",
-            dose: "4 mg daily in the PM capsule, taken with dinner fat for absorption (per v7.8 RFQ)",
+            dose: "4 mg daily in the PM capsule (5% cracked-cell beadlet), taken with dinner fat for absorption",
             keyBenefits: [
-                "60-70% reduction in mast cell degranulation",
+                "60-70% reduction in mast cell degranulation (lab data)",
                 "MMP inhibition with net collagen increase in fibroblasts",
-                "No blood pressure effects (safe for POTS)",
+                "No significant blood pressure change in a meta-analysis of 14 RCTs",
                 "6,000x more effective than vitamin C at quenching singlet oxygen specifically (a lipid-phase oxidant)"
             ]
         },
@@ -1288,7 +1286,7 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Blood Pressure Safety (POTS)",
-                summary: "Meta-analysis confirms zero blood pressure impact, and perfect safety for orthostatic intolerance.",
+                summary: "A meta-analysis of 14 RCTs found no significant change in blood pressure.",
                 studies: [
                     {
                         source: "Xia et al., 2020",
@@ -1302,30 +1300,31 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "Zero direct studies in hEDS/POTS/MCAS patients. Concerns exist regarding 'Z-isomers' which may suppress collagen synthesis (always select all-E products). TGF-β pathway concerns in liver models are not currently reflected in skin fibroblast data.",
         triad: {
             mcas: "Low histamine risk as it is algae-derived, not fermented. It acts as a stabilizer rather than a trigger. We avoid carrageenan (common in softgels) by using HPMC capsules.",
-            heds: "Provides dual protection: inhibits MMP degradation and increases collagen via TIMP-1 upregulation. Strong therapeutic ratio (1.44) for MMP inhibition at our 4 mg dose, sized as the minimum effective standalone with overlapping NF-kB inhibition from quercetin, luteolin, and procyanidins covering the higher-dose target.",
+            heds: "Provides dual protection: inhibits MMP degradation and increases collagen via TIMP-1 upregulation. Our internal concentration estimate (achievable versus required level, ratio about 1.44) supports MMP relevance at 4 mg; it is a calculation, not a clinical outcome. The dose is sized as a minimum standalone with overlapping NF-kB inhibition from quercetin, luteolin, and procyanidins covering the higher-dose target.",
             pots: "Protects cardiovascular tissue via extreme antioxidant capacity without lowering blood pressure-making it one of the safest anti-inflammatories for the hyperadrenergic population."
         },
         whyThisForm: {
-            form: "Natural algal astaxanthin (Haematococcus pluvialis)",
-            rationale: "Natural algal astaxanthin with the all-E-isomer dominant profile validated in human studies, sourced generic with COA verification of isomer ratio (v7.8 RFQ reclassified branded AstaReal from mandatory to preferred). Delivered in a lipid carrier for 2.4-3x better absorption.",
+            form: "Natural astaxanthin, 5% cracked-cell beadlet (extracted Haematococcus pluvialis), all-trans >60%, 9-cis ≤30%",
+            rationale: "Whole-cell H. pluvialis is not a usable form: the algal cyst wall (tough, digestion-resistant) blocks release of the astaxanthin inside, and dosing up does not compensate for the wrong material. We use an extracted, cracked-cell beadlet at 5% astaxanthin, with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026), verified by HPLC per lot. The supplier's carrier-free declaration states no gelatin, soy, or corn-derived carriers or excipients. Take with a meal containing fat; absorption rises 2-3x with dietary fat.",
             comparison: [
-                { form: "Natural algal (H. pluvialis) with COA-verified isomer profile", difference: "All-E-isomer dominant; clinically validated absorption", selected: true },
-                { form: "Synthetic astaxanthin", difference: "Different isomer profile; not research-validated for hEDS", selected: false },
-                { form: "Generic softgels with carrageenan or fish oil carriers", difference: "Histamine risk from carrageenan or fish-oil fillers", selected: false }
+                { form: "5% cracked-cell beadlet (extracted H. pluvialis), HPLC-verified isomer profile", difference: "Our form; astaxanthin released from the cell wall; carrier-free declaration", selected: true },
+                { form: "Whole-cell H. pluvialis powder", difference: "Intact cyst wall resists digestion; rejected", selected: false },
+                { form: "Synthetic astaxanthin", difference: "Different isomer profile; not what the human studies used", selected: false },
+                { form: "Softgels with carrageenan, gelatin, or fish oil carriers", difference: "Trigger excipients; not used", selected: false }
             ]
         },
         safety: {
             sideEffects: "Excellent safety profile at doses up to 24mg daily. Well-tolerated in pediatrics at 4mg.",
             interactions: "CONTRAINDICATED with Warfarin (case report of INR increase). Minimal CYP450 inhibition at oral doses.",
             excipientConcerns: {
-                avoid: ["Carrageenan softgels", "Soy/Krill oil carriers"],
-                safe: ["HPMC capsules", "MCT or Olive oil lipid carrier"]
+                avoid: ["Carrageenan softgels", "Soy/Krill oil carriers", "Gelatin beadlet matrices", "Whole-cell algae powder"],
+                safe: ["HPMC capsules", "Cracked-cell beadlet with carrier-free declaration (no gelatin, soy, or corn-derived carriers)"]
             },
             cautions: "Pre-treatment is required for mast cell effects (prophylaxis, not rescue)."
         },
         howToStart: {
             protocol: [
-                { step: "Ongoing", dosage: "4 mg daily in the PM capsule, taken with dinner fat for absorption (per v7.8 RFQ)", notes: "Standard PM dose with dinner" }
+                { step: "Ongoing", dosage: "4 mg daily in the PM capsule, taken with dinner fat for absorption", notes: "Standard PM dose with dinner" }
             ],
             timeline: "Inflammatory marker changes within weeks; skin/collagen benefits typically require 8-12 weeks."
         },
@@ -1340,8 +1339,8 @@ export const ingredients: Record<string, IngredientData> = {
 "l-theanine": {
         id: "l-theanine",
         name: "L-Theanine",
-        patientSummary: "L-Theanine is the amino acid in green tea responsible for its calm, focused feel. For the triad specifically, L-theanine is most useful at night: it increases alpha brain wave activity (the relaxed-but-alert state), supports GABA and serotonin neurotransmission, and helps quiet the sympathetic overdrive that keeps so many POTS and MCAS patients wired-and-tired at bedtime. We dose 190 mg in the PM capsule, well within the human-trial range (100-400 mg). Important caveat: a small subset of hyperadrenergic POTS patients have paradoxical reactions to L-theanine - if you fall into that pattern, you may want to skip it.",
-        whyThisFormPatient: "We use generic L-theanine with two non-negotiable specs: at least 98% L-isomer (the active form - D-theanine has no documented benefits) and bulk density at or above 0.35 g/mL (a manufacturing requirement for our PM capsule fill profile). Verified by Certificate of Analysis on every lot. We don't require a branded form because the L-theanine clinical literature uses both branded and generic products with equivalent results - the active molecule is the same. The spec discipline is what matters: get the ≥98% L-isomer or you're paying for the wrong stereoisomer.",
+        patientSummary: "L-Theanine is the amino acid in green tea responsible for its calm, focused feel. For the triad specifically, L-theanine is most useful at night: it increases alpha brain wave activity (the relaxed-but-alert state), supports GABA and serotonin neurotransmission, and helps quiet the sympathetic overdrive that keeps so many POTS and MCAS patients wired-and-tired at bedtime. We dose 200 mg in the PM capsule, well within the human-trial range (100-400 mg). Important caveat: a small subset of hyperadrenergic POTS patients have paradoxical reactions to L-theanine - if you fall into that pattern, you may want to skip it.",
+        whyThisFormPatient: "We use generic L-theanine with one non-negotiable spec: at least 98% L-isomer (specific rotation +7.5 to +8.5 degrees), because D-theanine has no documented benefits. Verified by Certificate of Analysis on every lot. We don't require a branded form because the L-theanine clinical literature uses both branded and generic products with equivalent results - the active molecule is the same. The spec discipline is what matters: get the ≥98% L-isomer or you're paying for the wrong stereoisomer.",
         faq: [
             { q: "Why is L-theanine in the PM and not AM?", a: "L-theanine has a paradoxical reputation: it's calming but not sedating, so people use it during the day for focus. We chose PM placement because for the triad, the bigger problem is usually the sympathetic overdrive that prevents winding down at night. PM dosing supports the parasympathetic shift that needs to happen for actual sleep, without the morning grogginess that comes with stronger sleep aids. If you prefer daytime use, take it whenever you want - the timing is flexible." },
             { q: "What's this 'paradoxical reaction' caveat about?", a: "A subset of hyperadrenergic POTS patients (roughly 10-30% of the POTS population) have a flipped response to L-theanine: instead of calming them, it makes them more anxious or jittery. The same pattern shows up in glutamate-sensitive MCAS subsets. The mechanism likely involves L-theanine's mild glutamate effects interacting with already-elevated catecholamine tone. If you've tried L-theanine before and felt worse, that's the pattern. The PM capsule is still useful, but you may want to skip the L-theanine specifically." },
@@ -1357,15 +1356,15 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "An amino acid tea derivative that promotes calm alertness without sedation",
             whyWeIncludeIt: "Reduces sympathetic overdrive (relevant for hyperadrenergic POTS) while supporting parasympathetic tone",
-            dose: "200 mg daily",
+            dose: "200 mg daily in the PM capsule",
             keyBenefits: [
-                "Reduces caffeine-induced tachycardia by 75%",
+                "In a 12-person crossover study, rapid heartbeat after caffeine fell from 92% to 17% of athletes when L-theanine was added",
                 "Significantly lowers anxiety scores in human RCTs",
                 "Improves sleep quality without next-day drowsiness",
                 "Promotes alpha brainwave activity for relaxed focus"
             ]
         },
-        howItWorks: "L-theanine crosses the blood-brain barrier to modulate GABA-A receptors and increase alpha brainwaves. For POTS, it breaks the cyclic sympathetic overdrive of 'stress-induced tachycardia' by reducing stress markers like salivary α-amylase.\n\nRemarkably, it reduces caffeine-induced tachycardia incidents from 92% to 17% in studies. Preclinical data shows it also stabilizes mast cells by inhibiting FcεRI signaling, though human MCAS data is still pending. It may also protect collagen ECM from inflammatory degradation (inhibiting MMP-3/13).",
+        howItWorks: "L-theanine crosses the blood-brain barrier to modulate GABA-A receptors and increase alpha brainwaves. It is associated with lower stress markers such as salivary α-amylase.\n\nIn one small crossover study of 12 elite wrestlers, tachycardia was reported by 92% after caffeine alone and 17% after caffeine plus L-theanine (3 mg/kg each). Preclinical data shows it also stabilizes mast cells by inhibiting FcεRI signaling, though human MCAS data is still pending. It may also protect collagen ECM from inflammatory degradation (inhibiting MMP-3/13).",
         research: [
             {
                 outcome: "Anxiety and Stress Reduction (Human)",
@@ -1374,8 +1373,8 @@ export const ingredients: Record<string, IngredientData> = {
                     {
                         source: "Hidese et al., 2019",
                         pmid: "31623400",
-                        design: "RCT, n=30 adults, 4 weeks",
-                        finding: "Anxiety (STAI) and depression scores significantly decreased; sleep and cognition improved."
+                        design: "Randomized, placebo-controlled crossover trial, 30 healthy adults, 200 mg/day for 4 weeks",
+                        finding: "In healthy adults, stress-related questionnaire scores and sleep-quality (PSQI) scores improved versus placebo; verbal fluency and executive function scores also improved."
                     },
                     {
                         source: "Unno et al., 2013",
@@ -1385,13 +1384,14 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             },
             {
-                outcome: "Caffeine Tachycardia Reduction",
-                summary: "Critical finding for POTS patients regarding heart rate management.",
+                outcome: "Caffeine Side-Effect Study (Healthy Athletes)",
+                summary: "A small crossover study in healthy elite athletes, not in people with POTS.",
                 studies: [
                     {
-                        source: "Razazan et al., 2025",
+                        source: "Razazan R et al., 2025",
                         pmid: "40977612",
-                        finding: "Reduced caffeine-induced tachycardia from 92% of subjects to 17% when combined."
+                        design: "Double-blind, placebo-controlled crossover, 12 elite male wrestlers, single doses of 3 mg/kg",
+                        finding: "Caffeine-induced tachycardia was reported in 92% of participants after caffeine alone and 17% after caffeine plus L-theanine; anxiety incidence was also lower with the combination."
                     }
                 ]
             },
@@ -1412,19 +1412,19 @@ export const ingredients: Record<string, IngredientData> = {
         triad: {
             mcas: "L-theanine decreases rather than increases histamine release in models. It is non-fermented (enzymatic synthesis), eliminating biogenic amine risk. Preclinical evidence is promising but not yet established in humans.",
             heds: "International research suggests L-theanine preserves collagen architecture and epidermal thickness while reducing MMP-3/13 inflammatory degradation in chondrocytes.",
-            pots: "Crucial for the hyperadrenergic population. By modulating brain GABA and reducing the systemic sympathetic response to stress, it helps lower resting tachycardia and improves sleep architecture."
+            pots: "Relevant to a calmer stress response: it supports GABA signaling and is associated with lower sympathetic stress markers and better sleep quality in healthy adults. Not studied in POTS; a subset of people react paradoxically."
         },
         whyThisForm: {
             form: "Generic L-theanine (≥98% L-isomer purity, COA-verified)",
             rationale: "Mandatory to ensure ≥98% pure L-theanine. Generic products are often 50% inactive D-theanine, which competes for absorption and lacks the calming effect.",
             comparison: [
-                { form: "Generic L-theanine (≥98% L-isomer, COA-verified)", difference: "v7.8 generic-OK spec: ≥98% L-isomer purity verified analytically, BD ≥0.35 g/mL", selected: true },
+                { form: "Generic L-theanine (≥98% L-isomer, COA-verified)", difference: "Our spec: ≥98% L-isomer (specific rotation +7.5 to +8.5 degrees), verified analytically", selected: true },
                 { form: "Unverified generic L-theanine (no COA)", difference: "Risk of up to 50% D-isomer contamination, reducing efficacy", selected: false }
             ]
         },
         safety: {
             sideEffects: "GRAS status; extremely high safety margin. No adverse events in pediatrics at 400mg.",
-            interactions: "理論上可能與β-受體阻滯劑有協同鎮靜作用（從小劑量開始）。與組胺拮抗劑安全並用。",
+            interactions: "Theoretical additive calming effect with beta-blockers (start low). Generally compatible with antihistamines.",
             excipientConcerns: {
                 avoid: ["Synthetic D-isomer contamination"],
                 safe: ["Vegetable cellulose", "Standard fillers"]
@@ -1439,7 +1439,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         sources: [
             { title: "L-theanine on anxiety, sleep, and cognition (RCT)", pmid: "31623400", authors: "Hidese et al.", year: "2019" },
-            { title: "Caffeine-induced tachycardia reduction by L-theanine", pmid: "40977612", authors: "Razazan et al.", year: "2025" },
+            { title: "Performance-enhancing effects of caffeine and L-Theanine among Iranian elite wrestlers", pmid: "40977612", authors: "Razazan R et al.", year: "2025" },
             { title: "Suntheanine toxicology and safety", pmid: "16759779", authors: "Borzelleca et al.", year: "2006" },
             { title: "L-theanine systematic sleep review", pmid: "41176609", authors: "Cotter et al.", year: "2025" },
             { title: "Generic L-theanine isomer contamination analysis", pmid: "14755608", authors: "Desai & Armstrong", year: "2004" }
@@ -1448,24 +1448,24 @@ export const ingredients: Record<string, IngredientData> = {
 "zinc-carnosine": {
         id: "zinc-carnosine",
         name: "Zinc Carnosine",
-        patientSummary: "Zinc carnosine (also called polaprezinc) is a 1:1 chelated complex of zinc and L-carnosine, originally developed in Japan as a gastric ulcer drug. For the triad, it brings two distinct mechanisms: gut barrier protection (the strongest evidence base - complete prevention of NSAID-induced intestinal permeability in a clinical trial) and mast cell stabilization through both zinc-driven membrane stabilization and carnosine's antioxidant activity. We dose 37.5 mg twice daily (AM and PM) because every human RCT showing efficacy at 75 mg/day used split dosing, not once-daily. The localized mucosal mechanism requires repeated coating.",
+        patientSummary: "Zinc carnosine (also called polaprezinc) is a 1:1 chelated complex of zinc and L-carnosine, originally developed in Japan, where it is an approved prescription medicine. For the triad, it brings two distinct mechanisms: gut barrier protection (the strongest evidence base - complete prevention of NSAID-induced intestinal permeability in a clinical trial) and mast cell stabilization through both zinc-driven membrane stabilization and carnosine's antioxidant activity. We dose 37.5 mg twice daily (AM and PM) because every human RCT showing efficacy at 75 mg/day used split dosing, not once-daily. The localized mucosal mechanism requires repeated coating.",
         whyThisFormPatient: "We use generic zinc carnosine specified as a 1:1 zinc-to-carnosine molar chelate (verifiable by Certificate of Analysis on every lot). The 1:1 molar ratio is the structural feature responsible for the gut barrier and mast cell mechanisms - not a brand-specific advantage. We dose 37.5 mg twice daily (AM and PM), not 75 mg once daily, because the human RCTs that established efficacy all used split BID dosing - the mucosal coating mechanism requires repeated administration. Take with or just before meals for optimal local contact with the gut lining.",
         faq: [
             { q: "Why split into AM and PM?", a: "Every human RCT showing zinc carnosine's gut barrier benefit used 37.5 mg twice daily. The mechanism is local mucosal coating that clears within about 2 hours, so once-daily dosing leaves a long window with no protective effect. Splitting AM and PM keeps the coating active across both digestive periods at the exact dose used in the trials." },
-            { q: "Is zinc carnosine the same as regular zinc?", a: "Not exactly. The 1:1 zinc-to-carnosine chelate behaves differently from elemental zinc supplements like zinc bisglycinate or zinc gluconate. Zinc carnosine survives stomach acid, adheres to gut mucosa for about 2 hours of local contact, and releases zinc slowly at the lining - that's where the GI-protective effect comes from. About 23% of the 37.5 mg dose is elemental zinc (~8.5 mg per dose, ~17 mg/day), separate from any other zinc you take. The carnosine half contributes antioxidant activity." },
+            { q: "Is zinc carnosine the same as regular zinc?", a: "Not exactly. The 1:1 zinc-to-carnosine chelate behaves differently from elemental zinc supplements like zinc bisglycinate or zinc gluconate. Zinc carnosine survives stomach acid, adheres to gut mucosa for about 2 hours of local contact, and releases zinc slowly at the lining - that's where the GI-protective effect comes from. About 23% of the 37.5 mg dose is elemental zinc (~8.6 mg per dose, ~17 mg/day), separate from any other zinc you take. The carnosine half contributes antioxidant activity." },
             { q: "I take famotidine - is this a problem?", a: "Yes, but it's a timing issue, not an outright conflict. H2 blockers like famotidine significantly reduce zinc absorption - the science is well-documented. Separate zinc carnosine from famotidine by at least 2 hours in either direction. Most patients on famotidine take it at bedtime; if that's your pattern, take the PM zinc carnosine with dinner (well before the famotidine) and the AM dose with breakfast. The separation is necessary; the combination is fine when timed properly." },
             { q: "Is the higher-dose MMP-9 evidence concerning?", a: "This deserves a direct answer. A 2021 study in autoimmune hepatitis patients at 150 mg/day (twice our dose, opposite tissue pathology) showed MMP-9 elevated, which raised concerns about hEDS use. We looked carefully: at 150 mg in a fibrotic-liver context, MMP-9 rises were anti-fibrotic but irrelevant to our 75 mg dose in a non-fibrotic population. MMP-1 and MMP-13 - the actual collagen-degrading enzymes in hEDS - were unaffected. We're confident at 75 mg/day; we wouldn't dose higher." }
         ],
         triadPlain: {
             mcas: "Zinc carnosine stabilizes mast cells through two complementary mechanisms in lab studies. The zinc half stabilizes mast cell membranes and reduces calcium-ionophore-induced degranulation by around 75% - zinc directly competes for the calcium channels that trigger mast cell release. The carnosine half contributes antioxidant activity that reduces oxidative-stress-induced degranulation. The combined effect is broader than either component alone. The gut barrier work also matters for MCAS specifically: a leaky gut accelerates food-protein and bacterial-fragment translocation that drives mast cell activation in many MCAS patients. Protecting the gut barrier reduces upstream mast cell triggers.",
             heds: "Zinc carnosine's hEDS relevance is mostly the gut barrier story, but with a twist worth knowing. Many hEDS patients have higher rates of intestinal permeability ('leaky gut') that can drive systemic inflammation - and chronic systemic inflammation amplifies MMP expression in connective tissue. Reducing gut-driven inflammation can quiet that loop. At our 75 mg/day dose, MMP-1 and MMP-13 (the actual collagen-degrading enzymes elevated in hEDS) are unaffected based on the available data. The 150 mg/day study in fibrotic liver isn't a useful comparison for our non-fibrotic population at half that dose.",
-            pots: "For POTS, zinc carnosine's role is mostly indirect, working through the gut-autonomic axis. Many POTS patients have GI symptoms (gastroparesis, post-meal palpitations, IBS-like patterns) that interact with autonomic dysregulation in both directions. The gut barrier protection from zinc carnosine - stabilizing tight junctions and reducing intestinal permeability - addresses one upstream contributor to the inflammatory cascade that feeds autonomic instability. Zinc carnosine isn't a primary POTS intervention; it's gut maintenance that supports the autonomic system indirectly. The 12-hour split between zinc and copper in our formulation avoids absorption competition."
+            pots: "For POTS, zinc carnosine's role is mostly indirect, working through the gut-autonomic axis. Many POTS patients have GI symptoms (gastroparesis, post-meal palpitations, IBS-like patterns) that interact with autonomic dysregulation in both directions. The gut barrier protection from zinc carnosine - stabilizing tight junctions and reducing intestinal permeability - addresses one upstream contributor to the inflammatory cascade that feeds autonomic instability. Zinc carnosine isn't a primary POTS ingredient; it's gut maintenance that supports the autonomic system indirectly. Zinc carnosine is in both the AM and PM capsules and copper is in the AM capsule; at about 17 mg zinc to 2 mg copper per day, the ratio stays in the commonly used range."
         },
         bluf: "Zinc Carnosine is a unique 1:1 chelate of zinc and L-carnosine that adheres to the gut lining. It has the strongest human evidence of any supplement for protecting intestinal permeability, while also providing direct mast cell stabilization in the GI tract where MCAS symptoms often start. ZebraThrive uses 75 mg daily, split 37.5 mg AM and PM.",
         atAGlance: {
             whatItIs: "A unique 1:1 chelate of zinc and L-carnosine that targets the GI lining",
             whyWeIncludeIt: "The strongest human evidence for protecting intestinal permeability while providing direct mast cell stabilization in the GI tract",
-            dose: "75 mg daily",
+            dose: "75 mg daily (37.5 mg AM capsule + 37.5 mg PM capsule)",
             keyBenefits: [
                 "Complete prevention of NSAID-induced permeability increase",
                 "70% reduction in exercise-induced gut permeability",
@@ -1514,10 +1514,10 @@ export const ingredients: Record<string, IngredientData> = {
         triad: {
             mcas: "Directly stabilizes mast cells and inhibits inflammatory cytokines (TNF, IL-8). Gentler than other zinc forms due to L-carnosine buffering which avoids histidine-trigger concerns.",
             heds: "Supports wound healing and collagen structural integrity by upregulating collagen genes and inhibiting collagen-degrading MMPs.",
-            pots: "Crucial for exercise-intolerant patients; data shows a 70% reduction in the gut permeability caused by physical stress and temperature spikes."
+            pots: "In a small study of athletes, it reduced the rise in gut permeability caused by heavy exercise by about 70%."
         },
         whyThisForm: {
-            form: "Zinc Carnosine (Polaprezinc)",
+            form: "Generic zinc carnosine (polaprezinc-type), 1:1 molar chelate (23% zinc / 77% L-carnosine)",
             rationale: "Stable 1:1 chelate with 2x longer gastric residence than separate components. Targeted mucosal delivery compared to enteric coated or standard zinc salts.",
             comparison: [
                 { form: "Polaprezinc", difference: "Stable 1:1 chelate; 2x longer mucosal contact; targeted action", selected: true },
@@ -1536,7 +1536,7 @@ export const ingredients: Record<string, IngredientData> = {
         howToStart: {
             protocol: [
                 { step: "Week 1", dosage: "37.5 mg daily", notes: "Check GI tolerance" },
-                { step: "Week 2+", dosage: "75 mg daily", notes: "Target dose (PM)" }
+                { step: "Week 2+", dosage: "37.5 mg twice daily (75 mg/day)", notes: "Target dose (AM + PM capsules)" }
             ],
             timeline: "GI barrier benefits within 2-14 days; structural improvement noticeably at 4-8 weeks."
         },
@@ -1567,7 +1567,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "An essential B vitamin that forms the core of Coenzyme A-the molecule required for over 70 enzymatic reactions in your body",
             whyWeIncludeIt: "Precursor to Coenzyme A; required for acetylcholine synthesis (the parasympathetic neurotransmitter) and cellular energy production",
-            dose: "5 mg daily (PM capsules)",
+            dose: "5 mg daily (PM capsule)",
             keyBenefits: [
                 "CoA synthesis enables Krebs cycle function for ATP production",
                 "Supports adrenal hormone synthesis and HPA axis function",
@@ -1640,7 +1640,7 @@ export const ingredients: Record<string, IngredientData> = {
         howToStart: {
             protocol: [
                 { step: "Weeks 1-2", dosage: "2.5 mg daily", notes: "Sensitive start" },
-                { step: "Week 3+", dosage: "5 mg daily", notes: "Target (PM with dinner)" }
+                { step: "Week 3+", dosage: "5 mg daily", notes: "Target (PM capsule with dinner)" }
             ],
             timeline: "Energy and stress response benefits typically emerge within 4-6 weeks."
         },
@@ -1659,7 +1659,7 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "Why is biotin in the formulation?", a: "Biotin is a required cofactor for several carboxylase enzymes that handle fundamental metabolism - fatty acid synthesis, gluconeogenesis, and amino acid breakdowns. Severe biotin deficiency causes a recognizable syndrome with skin rashes, hair changes, neurological symptoms, and connective tissue effects. Most people aren't deficient, but biotin can be depleted by chronic antibiotic use (which kills gut bacteria contributing some biotin), certain antiepileptics, and very high egg-white intake (raw egg whites contain avidin, which binds biotin). 300 mcg provides comfortable headroom." },
             { q: "Will biotin interfere with blood tests?", a: "Yes - this is the most important biotin consideration. High-dose biotin (especially 5,000+ mcg) can interfere with immunoassay lab tests, particularly thyroid function tests (causing falsely elevated T4/T3, suppressed TSH), troponin tests (potentially masking a heart attack), and some hormone panels. Our 300 mcg is well below the interference threshold for most assays, but if you're getting bloodwork done, mention biotin supplementation to your doctor - particularly for thyroid panels. Some labs recommend stopping biotin 72 hours before sensitive assays." },
             { q: "Does biotin help with hair, skin, and nails?", a: "The 'hair, skin, and nails' marketing claims for biotin are mostly aimed at people who don't have biotin deficiency, where the effect is genuinely modest. For people with marginal deficiency or biotin-related metabolic conditions, supplementation can produce visible improvement. For most people in this community, biotin won't be a transformative addition for skin or hair on its own - but combined with the broader B-vitamin and connective tissue support, it contributes to keeping tissues healthy at the baseline level." },
-            { q: "Is the D-biotin form important?", a: "Yes. Biotin exists as two stereoisomers - D-biotin (the natural, biologically active form) and L-biotin (which has no metabolic activity). Cheap supplements sometimes contain biotin mixtures or are vague about stereochemistry. Pharmaceutical USP grade specifies D-biotin specifically. Our spec calls for D-biotin USP on Certificate of Analysis verification. The L-biotin issue is mostly avoided by quality supplement manufacturers, but it's worth specifying - same active compound, but only the D form delivers the benefit." }
+            { q: "Is the D-biotin form important?", a: "Yes. Biotin exists as two stereoisomers - D-biotin (the natural, biologically active form) and L-biotin (which has no metabolic activity). Cheap supplements sometimes contain biotin mixtures or are vague about stereochemistry. USP grade specifies D-biotin specifically. Our spec calls for D-biotin USP on Certificate of Analysis verification. The L-biotin issue is mostly avoided by quality supplement manufacturers, but it's worth specifying - same active compound, but only the D form delivers the benefit." }
         ],
         triadPlain: {
             mcas: "Biotin doesn't directly engage mast cell biology - it's not a mast cell ingredient. The MCAS-relevant case is foundational and indirect: biotin-dependent carboxylase reactions affect fatty acid metabolism, including the production of membrane lipids that affect mast cell membrane stability and signaling. The role is similar to other trace B vitamins - keeping the cellular metabolic machinery running so the dedicated mast cell stabilizers can do their work. There's no high-dose biotin evidence in MCAS. At 300 mcg, we're providing daily coverage rather than targeted intervention. Foundational, not a hero ingredient.",
@@ -1670,7 +1670,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "An essential B vitamin that serves as a cofactor for energy-producing enzymes",
             whyWeIncludeIt: "Supports mitochondrial ATP production-addressing the profound fatigue common in the triad",
-            dose: "300 mcg daily (PM capsules)",
+            dose: "300 mcg daily (PM capsule)",
             keyBenefits: [
                 "Essential cofactor for 5 carboxylases involved in ATP production",
                 "Supports mitochondrial function and energy metabolism",
@@ -1724,11 +1724,11 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Supports nervous system function through neurotransmitter synthesis. Helps mitigate autonomic dysfunction and inflammatory markers."
         },
         whyThisForm: {
-            form: "D-Biotin (Natural Form)",
-            rationale: "100% bioavailability compared to synthetic forms. D-biotin is the natural, bioactive form required as an enzyme cofactor.",
+            form: "D-Biotin, USP",
+            rationale: "D-biotin is the biologically active stereoisomer required as an enzyme cofactor, with near-complete oral absorption. USP-grade D-biotin is made synthetically and is chemically identical to the biotin in food; the spec that matters is the D-isomer, not the source.",
             comparison: [
-                { form: "D-Biotin", difference: "Natural form; 100% bioavailability; preferred bioactivity", selected: true },
-                { form: "Synthetic Biotin", difference: "May have lower overall bioactivity", selected: false }
+                { form: "D-Biotin, USP", difference: "Active stereoisomer; near-complete absorption", selected: true },
+                { form: "Unspecified or mixed-isomer biotin", difference: "L-biotin has no metabolic activity", selected: false }
             ]
         },
         safety: {
@@ -1767,13 +1767,13 @@ export const ingredients: Record<string, IngredientData> = {
         triadPlain: {
             mcas: "Boron's MCAS relevance is mostly anti-inflammatory rather than direct mast cell stabilization. A 2015 study showed boron supplementation at 6 mg/day reduced hsCRP and TNF-α significantly within a week - both inflammatory mediators that amplify mast cell reactivity when elevated. Boron also affects steroid hormone metabolism (raising vitamin D half-life, modestly raising free testosterone), which has downstream effects on immune balance. There's no direct MCAS clinical evidence - the case is mechanistic through inflammatory background reduction. Foundational trace mineral rather than a primary mast cell intervention. Dedicated stabilization happens through PEA, luteolin, quercetin.",
             heds: "For hEDS, boron's relevance is mostly bone and joint support - both meaningful given the higher fracture rates and joint instability common in EDS populations. Boron supports bone mineralization through effects on vitamin D metabolism (raising D3 half-life), calcium handling, and possibly direct osteoblast effects. Joint comfort scores improved in osteoarthritis trials at 6 mg/day. Boron also affects estrogen metabolism, which has connective tissue implications (estrogen influences MMP expression and collagen synthesis). At 2 mg, we provide foundational support rather than therapeutic dosing. The targeted ECM-protective work happens through polyphenols and MMP-modulators.",
-            pots: "For POTS, boron has minimal direct relevance - it's not an autonomic or cardiovascular ingredient. The trace anti-inflammatory effect (hsCRP and TNF-α reduction) and the vitamin D half-life support are the most relevant indirect connections. Vitamin D status matters significantly for POTS (per the Dong 2025 RCT showing 74% improvement with D3), and boron extends D3's effective half-life - modest but real. Beyond that, boron's POTS contribution is the broader trace mineral foundation rather than a primary intervention. The hemodynamic, neurotransmitter, and autonomic work happens through other ingredients in the formulation."
+            pots: "For POTS, boron has minimal direct relevance - it's not an autonomic or cardiovascular ingredient. The trace anti-inflammatory effect (hsCRP and TNF-α reduction) and the vitamin D half-life support are the most relevant indirect connections. Vitamin D status is an active research topic in POTS (a 2025 retrospective pediatric study, with no placebo group, reported improved symptom scores in about three in four children on vitamin D), and boron may extend vitamin D's half-life. Beyond that, boron's POTS contribution is the broader trace mineral foundation rather than a primary intervention. The hemodynamic, neurotransmitter, and autonomic work happens through other ingredients in the formulation."
         },
         bluf: "Boron is a trace mineral that supports bone metabolism, hormone function, and collagen synthesis. It also enhances utilization of vitamin D and magnesium, both of which ZebraThrive supplies elsewhere in the stack, and provides systemic anti-inflammatory effects relevant to MCAS. ZebraThrive uses 2 mg daily in the PM stack.",
         atAGlance: {
             whatItIs: "A trace mineral that supports bone metabolism, hormone function, and collagen synthesis",
             whyWeIncludeIt: "Enhances Vitamin D and Magnesium utilization while providing potent systemic anti-inflammatory effects",
-            dose: "2 mg daily (PM capsules)",
+            dose: "2 mg elemental boron daily (PM capsule)",
             keyBenefits: [
                 "Reduces TNF-α (30%) and IL-6 (44%) in human studies",
                 "Supports bone mineral density and joint health",
@@ -1851,7 +1851,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         howToStart: {
             protocol: [
-                { step: "Week 1+", dosage: "2 mg daily", notes: "Full dose (PM)" }
+                { step: "Week 1+", dosage: "2 mg daily", notes: "Full dose (PM capsule)" }
             ],
             timeline: "Anti-inflammatory effects in 2-4 weeks; bone benefits take 8-12 weeks."
         },
@@ -1881,7 +1881,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "An essential trace mineral required for enzymes that detoxify sulfites and aldehydes",
             whyWeIncludeIt: "Supports sulfite metabolism-addressing a root trigger for mast cell degranulation in 60% of MCAS patients",
-            dose: "150 mcg daily (PM capsules)",
+            dose: "150 mcg daily (PM capsule)",
             keyBenefits: [
                 "Essential cofactor for Sulfite Oxidase (sulfite → sulfate)",
                 "Reduces chemical sensitivity in MCAS patients",
@@ -1935,8 +1935,8 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Reduces total body load of inflammatory triggers, helping to reduce the frequency of tachycardia flares and chemical-induced crashes."
         },
         whyThisForm: {
-            form: "Molybdenum Glycinate (Chelate)",
-            rationale: "90-95% absorption compared to 57% for sodium forms. TRAACS chelated forms are best tolerated and avoid ammonia-sensitivity risks.",
+            form: "Molybdenum glycinate (generic chelate)",
+            rationale: "90-95% absorption compared to 57% for sodium forms. Glycinate chelates are generally well tolerated.",
             comparison: [
                 { form: "Molybdenum Glycinate", difference: "90-95% absorption; best tolerability; ammonia-free", selected: true },
                 { form: "Sodium Molybdate", difference: "Common alternative; lower (57-88%) absorption rate", selected: false }
@@ -1955,7 +1955,7 @@ export const ingredients: Record<string, IngredientData> = {
             protocol: [
                 { step: "Week 1", dosage: "75 mcg (EOD)", notes: "Every other day for sensitive start" },
                 { step: "Week 2", dosage: "75 mcg daily", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "150 mcg daily", notes: "Full target dose (PM)" }
+                { step: "Week 3+", dosage: "150 mcg daily", notes: "Full target dose (PM capsule)" }
             ],
             timeline: "Chemical sensitivity improvements typically seen within 2-4 weeks."
         },
@@ -1972,7 +1972,7 @@ export const ingredients: Record<string, IngredientData> = {
         patientSummary: "Copper is an essential trace mineral and the single non-negotiable cofactor for lysyl oxidase (LOX) - the enzyme that creates cross-links between collagen and elastin fibers. Cross-links are what give connective tissue its tensile strength. Without adequate copper, LOX can't function properly, and the collagen your body makes won't cross-link the way it needs to. For hEDS specifically, copper is foundational. A 2010 RCT in young women (DiSilvestro) showed that 2 mg/day copper for 8 weeks increased the urinary collagen crosslink ratio by 62%. We dose exactly that: 2 mg of elemental copper as copper bisglycinate.",
         faq: [
             { q: "Why copper bisglycinate vs other copper forms?", a: "Bisglycinate is copper chelated to two glycine molecules - the amino acid carrier ferries the copper through amino acid transporters rather than competing for the limited mineral transporters used by zinc, iron, and calcium. The result is better absorption, less GI irritation, and less competition with other minerals in the same supplement. The chelation approach has decades of well-studied use across magnesium, copper, manganese, and zinc supplements. We use copper bisglycinate with full Certificate of Analysis verification on every lot." },
-            { q: "Will copper interfere with zinc?", a: "At our doses, no - but the design matters. Copper and zinc compete for the same intestinal transporters, so high-dose zinc taken simultaneously can reduce copper absorption (and vice versa). Our formulation places copper in the AM capsule and zinc carnosine in both AM and PM, with the heaviest zinc dosing separated from copper by enough time to minimize competition. The 2 mg copper to ~17 mg total elemental zinc daily ratio is within the well-studied safe range." },
+            { q: "Will copper interfere with zinc?", a: "At our doses, no - but the design matters. Copper and zinc compete for the same intestinal transporters, so high-dose zinc taken simultaneously can reduce copper absorption (and vice versa). Our formulation places copper in the AM capsule and zinc carnosine (37.5 mg, about 8.6 mg zinc) in both the AM and PM capsules. The 2 mg copper to about 17 mg total elemental zinc daily ratio (roughly 8.6 to 1) is within the commonly used range." },
             { q: "Is 2 mg of copper safe long-term?", a: "Yes. The 2 mg dose is the exact amount tested in the DiSilvestro 2010 RCT for 8 weeks with no safety concerns. The Tolerable Upper Intake Level for adults is 10 mg/day, so 2 mg sits comfortably at one-fifth of the UL. One screening consideration: if you have a family history of Wilson disease (a genetic copper-handling disorder, about 1 in 40-90 carrier frequency), mention it to your prescriber and consider a baseline serum copper test before chronic supplementation." },
             { q: "Why does copper matter for connective tissue?", a: "Copper is the essential cofactor for lysyl oxidase (LOX), the enzyme that creates the cross-links giving collagen and elastin their tensile strength. Without adequate copper, those cross-links can't form properly. The genetic copper-deficiency disorders (Menkes disease, occipital horn syndrome) produce a phenotype that overlaps with EDS, which is the strongest case that copper adequacy is foundational for proper collagen architecture in hEDS too." }
         ],
@@ -1985,12 +1985,12 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "An essential trace mineral in a highly bioavailable chelated form that serves as the critical cofactor for the enzyme that cross-links collagen fibers",
             whyWeIncludeIt: "Required for lysyl oxidase (LOX), the enzyme responsible for creating the covalent bonds that give collagen its tensile strength",
-            dose: "2mg elemental copper daily (AM capsules only)",
+            dose: "2 mg elemental copper daily (AM capsule)",
             keyBenefits: [
-                "62% increase in collagen cross-link ratio in human RCT",
-                "Stabilizes mast cells and inhibits histamine release",
+                "62% higher collagen cross-link ratio in a small RCT in healthy young women",
+                "Stabilizes mast cells and inhibits histamine release (lab data)",
                 "Critical cofactor for DAO (histamine degradation enzyme)",
-                "Essential for norepinephrine synthesis and orthostatic tolerance"
+                "Cofactor for dopamine beta-hydroxylase (norepinephrine synthesis)"
             ]
         },
         howItWorks: "Copper is the primary power source for Lysyl Oxidase (LOX), which weaves together collagen threads into strong tissue. It also stabilizers mast cells (copper deficiency increases mast cell population by 53%) and serves as a cofactor for Diamine Oxidase (DAO), which breaks down histamine. For POTS, it is essential for the conversion of dopamine to norepinephrine, crucial for vascular tone.",
@@ -2026,12 +2026,12 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "No direct clinical trials in EDS/POTS cohorts; the 2025 KLK15 discovery suggests LOX mislocalization may be a factor in EDS regardless of copper levels.",
         triad: {
             mcas: "Stabilizes mast cells and supports DAO. The bisglycinate form avoids GI irritation. Deficiency is linked to increased mast cell reactivity.",
-            heds: "The single most evidence-supported intervention for collagen cross-linking optimization (62% improvement at 2mg).",
+            heds: "Copper is the cofactor for lysyl oxidase, the collagen cross-linking enzyme. In a small RCT in healthy young women, 2 mg/day for 8 weeks was associated with a 62% higher urinary collagen cross-link ratio (DiSilvestro 2010).",
             pots: "Essential for norepinephrine synthesis (dopamine β-hydroxylase), which is required to maintain vascular tone and blood pressure."
         },
         whyThisForm: {
-            form: "Copper Bisglycinate",
-            rationale: "Uses amino acid transporters (PEPT1) rather than mineral transporters, achieving 40-50% bioavailability vs 10% for sulfate forms. Gentler on the stomach.",
+            form: "Copper bisglycinate (generic chelate; citric-acid-free, magnesium-stearate-free)",
+            rationale: "Uses amino acid transporters (PEPT1) rather than mineral transporters, achieving 40-50% bioavailability vs 10% for sulfate forms. Gentler on the stomach. We use a generic chelate because the branded chelate we evaluated contains citric acid.",
             comparison: [
                 { form: "Copper Bisglycinate", difference: "40-50% bioavailability; PEPT1 transport; superior GI tolerance", selected: true },
                 { form: "Copper Sulfate", difference: "10-15% bioavailability; common GI irritation", selected: false }
@@ -2039,17 +2039,17 @@ export const ingredients: Record<string, IngredientData> = {
         },
         safety: {
             sideEffects: "Well-tolerated at 2mg. dose is 5x below upper tolerable limit. no documented tachycardia risk.",
-            interactions: "MUST be separated from Zinc by 12+ hours to prevent competition. Contraindicated with penicillamine.",
+            interactions: "High-dose zinc reduces copper absorption; this formula pairs about 17 mg zinc with 2 mg copper per day. If you take extra zinc separately, mention it to your clinician. Contraindicated with penicillamine.",
             excipientConcerns: {
                 avoid: ["Copper Citrate (MCAS trigger)", "Corn-derived fillers"],
                 safe: ["Rice flour", "HPMC capsules"]
             },
-            cautions: "Separate from high-dose Vitamin C (Fenton reaction concern). Wilson's disease is absolute contraindication."
+            cautions: "Very high-dose vitamin C can affect copper handling; our 1,500 mg/day vitamin C is below the range where that is a concern. Wilson disease is an absolute contraindication."
         },
         howToStart: {
             protocol: [
                 { step: "Weeks 1-2", dosage: "0.5-1 mg daily", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "2 mg daily", notes: "Target maintenance (AM)" }
+                { step: "Week 3+", dosage: "2 mg daily", notes: "Target maintenance (AM capsule)" }
             ],
             timeline: "Collagen cross-linking benefits require 8 weeks minimum."
         },
@@ -2079,7 +2079,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "An essential trace mineral that serves as the cofactor for enzymes in connective tissue synthesis and mitochondrial protection",
             whyWeIncludeIt: "Required for SOD2 (mitochondrial antioxidant), glycosyltransferases (GAG synthesis), and prolidase (collagen recycling)",
-            dose: "4mg elemental manganese daily (AM capsules)",
+            dose: "4 mg elemental manganese daily (AM capsule)",
             keyBenefits: [
                 "Essential cofactor for MnSOD (SOD2) mitochondrial protection",
                 "Limits upregulation of collagen-degrading enzymes (MMPs)",
@@ -2119,13 +2119,13 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Essential Cofactor Role and Dosing Context",
-                summary: "Manganese is the cofactor for arginase, glutamine synthetase, pyruvate carboxylase, and Mn-SOD. These metalloproteins underpin antioxidant defense (Mn-SOD), urea-cycle handling (arginase), glutamine metabolism (GS), and TCA-cycle anaplerosis (pyruvate carboxylase). Daily dietary intake is the primary determinant of status; the 2 mg supplement dose sits well below the UL (11 mg/day).",
+                summary: "Manganese is the cofactor for arginase, glutamine synthetase, pyruvate carboxylase, and Mn-SOD. These metalloproteins underpin antioxidant defense (Mn-SOD), urea-cycle handling (arginase), glutamine metabolism (GS), and TCA-cycle anaplerosis (pyruvate carboxylase). Daily dietary intake is the primary determinant of status; our 4 mg supplement dose sits well below the UL (11 mg/day).",
                 studies: [
                     {
                         source: "Chen P, Bornhorst J, Aschner M, \"Manganese metabolism in humans\"",
                         pmid: "29293455",
                         design: "Comprehensive metabolic review",
-                        finding: "Manganese is essential for development, digestion, reproduction, antioxidant defense, energy production, and immune response via cofactor function for arginase, GS, pyruvate carboxylase, and Mn-SOD; deficiency is rare but supplementation is appropriate at the 2 mg dose range"
+                        finding: "Manganese is essential for development, digestion, reproduction, antioxidant defense, energy production, and immune response via cofactor function for arginase, GS, pyruvate carboxylase, and Mn-SOD; deficiency is rare"
                     },
                     {
                         source: "Martins AC et al., \"Manganese in the Diet: Bioaccessibility, Adequate Intake, and Neurotoxicological Effects\"",
@@ -2143,8 +2143,8 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Supports mitochondrial health in ME/CFS/POTS populations where 100% of patients show measurable dysfunction."
         },
         whyThisForm: {
-            form: "Manganese Bisglycinate",
-            rationale: "Chelated delivery through amino acid transporters. EFSA confirms bisglycinate offers better GI tolerance than inorganic salts.",
+            form: "Manganese bisglycinate (generic chelate; citric-acid-free, magnesium-stearate-free)",
+            rationale: "Chelated delivery through amino acid transporters, with better GI tolerance than inorganic salts. We use a generic chelate because the branded chelate we evaluated contains citric acid.",
             comparison: [
                 { form: "Manganese Bisglycinate", difference: "Chelated; amino acid transport; superior GI tolerance", selected: true },
                 { form: "Manganese Sulfate", difference: "Standard reference form; higher rates of GI upset", selected: false }
@@ -2162,7 +2162,7 @@ export const ingredients: Record<string, IngredientData> = {
         howToStart: {
             protocol: [
                 { step: "Weeks 1-2", dosage: "1-2 mg daily", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "4 mg daily", notes: "Target maintenance (AM)" }
+                { step: "Week 3+", dosage: "4 mg daily", notes: "Target maintenance (AM capsule)" }
             ],
             timeline: "SOD2 activity enhancement requires ~3 months for full cellular effect."
         },
@@ -2177,26 +2177,26 @@ export const ingredients: Record<string, IngredientData> = {
     "selenium": {
         id: "selenium",
         name: "Selenium (Selenomethionine)",
-        patientSummary: "Selenium is an essential trace mineral and the core element of selenoproteins - most importantly the glutathione peroxidase family (GPx), your body's primary defense against lipid peroxidation. Selenium also supports thyroid hormone conversion (relevant because thyroid dysfunction commonly overlaps with POTS and MCAS), immune regulation, and DNA repair. For the triad, selenium's role is mostly anti-inflammatory foundation work - reducing the oxidative stress background that amplifies mast cell reactivity, MMP expression, and autonomic dysregulation. We use selenomethionine, the most-studied organic form with the best absorption profile. 100 mcg in the PM capsule - well within standard supplement range.",
+        patientSummary: "Selenium is an essential trace mineral and the core element of selenoproteins - most importantly the glutathione peroxidase family (GPx), your body's primary defense against lipid peroxidation. Selenium also supports thyroid hormone conversion (relevant because thyroid dysfunction commonly overlaps with POTS and MCAS), immune regulation, and DNA repair. For the triad, selenium's role is mostly anti-inflammatory foundation work - reducing the oxidative stress background that amplifies mast cell reactivity, MMP expression, and autonomic dysregulation. We use synthetic L-selenomethionine (not selenium yeast), the most-studied organic form with the best absorption profile. 100 mcg in the PM capsule, well within the standard supplement range.",
         faq: [
-            { q: "Why selenomethionine vs other selenium forms?", a: "Selenomethionine is the organic form found naturally in plants and animal proteins - it's absorbed through the methionine amino acid transport pathway, which gives it the highest bioavailability of any selenium form. Inorganic forms (selenite, selenate) are absorbed less efficiently and can be less well-tolerated. Selenium yeast (often labeled as 'high-selenium yeast') is mostly selenomethionine, but yeast-derived forms add an MCAS contamination concern. Pure selenomethionine gives you the bioavailable form without the fermentation baggage." },
+            { q: "Why selenomethionine vs other selenium forms?", a: "Selenomethionine is the organic form found naturally in plants and animal proteins - it's absorbed through the methionine amino acid transport pathway, which gives it the highest bioavailability of any selenium form. Inorganic forms (selenite, selenate) are absorbed less efficiently and can be less well-tolerated. Selenium yeast (often labeled as 'high-selenium yeast') is mostly selenomethionine, but yeast-derived forms add an MCAS contamination concern. Synthetic L-selenomethionine gives you the bioavailable form without the yeast or fermentation baggage, and that is what we use." },
             { q: "Is selenium safe long-term?", a: "At 100 mcg, yes. The Recommended Dietary Allowance is 55 mcg/day; the Tolerable Upper Intake Level is 400 mcg/day. Our 100 mcg sits comfortably between, well within the dose used in long-term safety studies. Selenium has a relatively narrow therapeutic window - adequate is essential, but very high doses can cause selenosis (hair, nail, neurological changes) over months. The 100 mcg dose is conservative. If you eat a lot of Brazil nuts (which are extremely selenium-dense), watch your total intake." },
-            { q: "Does selenium help with thyroid?", a: "Yes, indirectly relevant. Selenium is the deiodinase cofactor that converts T4 to active T3 and protects the thyroid gland from oxidative damage. Several studies show selenium supplementation reduces TPO antibodies in Hashimoto's, which commonly overlaps with POTS and MCAS. If your thyroid panel is borderline or you have known antibodies, the selenium contribution may be more clinically relevant for you." },
+            { q: "What does selenium do for the thyroid?", a: "Selenium is the cofactor for the deiodinase enzymes that convert T4 to active T3, and the thyroid uses selenium-dependent antioxidant enzymes to protect itself during normal hormone production. That is normal thyroid function support. If you have a diagnosed thyroid condition, talk with your clinician before adding selenium, and do not use this formula in place of thyroid treatment." },
             { q: "Will selenium interact with my medications?", a: "Selenium has a clean interaction profile with standard POTS, MCAS, and hEDS medications. Some considerations: high doses can theoretically affect levothyroxine absorption, so separate your thyroid medication by at least an hour if you're on it. Selenium may modestly enhance the effects of statins and reduce cardiovascular risk markers - generally favorable, but mention to your prescriber if you're on a statin. No documented interactions with beta-blockers, midodrine, fludrocortisone, ivabradine, antihistamines, or mast cell stabilizers." }
         ],
         triadPlain: {
             mcas: "Selenium's MCAS relevance is indirect, through glutathione peroxidase activity. GPx is your primary defense against lipid peroxidation - and mast cell membranes are particularly vulnerable to lipid peroxide damage, which sensitizes them to degranulation. Adequate selenium status supports GPx activity, which reduces the oxidative stress background that amplifies mast cell reactivity. Selenium also supports immune regulation broadly, including the Th1/Th2 balance that affects mast cell activation patterns. No direct MCAS clinical evidence, but the antioxidant and immune-modulating mechanism profile makes selenium a sensible foundation for the broader anti-inflammatory work.",
             heds: "For hEDS, selenium works mostly through anti-inflammatory and antioxidant pathways rather than direct connective tissue mechanisms. Chronic oxidative stress amplifies MMP expression and matrix degradation - and selenium's GPx-supporting role keeps the antioxidant defense system topped up. Selenium also supports selenoprotein P, which has emerging roles in tissue repair and homeostasis. There's no direct hEDS clinical evidence - the case is mechanistic, working through the inflammatory background that drives matrix degradation. Foundational trace mineral rather than a primary ECM intervention. The targeted protection happens through the polyphenols and MMP-modulators elsewhere in the formulation.",
-            pots: "For POTS, selenium has two relevant angles. First: thyroid support. Selenium is the cofactor for the deiodinases that convert T4 to T3, and thyroid dysfunction (especially Hashimoto's) frequently overlaps with POTS - many POTS patients have undiagnosed thyroid antibodies that contribute to their fatigue and dysregulation pattern. Second: oxidative stress reduction. POTS is associated with elevated oxidative stress markers, and selenium's GPx contribution helps quiet that background. No direct POTS trials, but the mechanism layers (thyroid, oxidative stress, immune balance) all support broader autonomic stability. Foundational trace mineral rather than a primary intervention."
+            pots: "For POTS, selenium has two relevant angles. First: normal thyroid hormone metabolism. Selenium is the cofactor for the deiodinases that convert T4 to T3, and thyroid hormone affects energy and heart rate regulation. Second: oxidative stress reduction. POTS is associated with elevated oxidative stress markers, and selenium's GPx contribution helps quiet that background. No direct POTS trials, but the mechanism layers (thyroid, oxidative stress, immune balance) all support broader autonomic stability. Foundational trace mineral rather than a primary intervention."
         },
         bluf: "Selenium is an essential trace mineral in its most bioavailable organic form (selenomethionine). It is the critical cofactor for glutathione peroxidase (the body's primary cellular antioxidant) and for thyroid hormone conversion. Both pathways tend to underperform in the triad. ZebraThrive uses 100 mcg daily in the PM stack.",
         atAGlance: {
             whatItIs: "An essential trace mineral in its most bioavailable organic form",
             whyWeIncludeIt: "Critical cofactor for Glutathione Peroxidase (cellular antioxidant) and thyroid hormone conversion",
-            dose: "100 mcg daily in the PM stack (per v7.8 RFQ)",
+            dose: "100 mcg daily (PM capsule)",
             keyBenefits: [
                 "Essential for Glutathione Peroxidase cellular defense",
-                "Reduces thyroid antibodies by 30-40% in autoimmunity",
+                "Cofactor for the deiodinases that support normal thyroid hormone conversion",
                 "Limits H₂O₂ accumulation that could amplify MMP activity",
                 "Reduces IgE-mediated mediator release from mast cells"
             ]
@@ -2204,20 +2204,20 @@ export const ingredients: Record<string, IngredientData> = {
         howItWorks: "Selenium is the mandatory cofactor for Selenoproteins, primarily Glutathione Peroxidase (GPx). GPx neutralizes the oxidative stress that triggers mast cell degranulation. For hEDS, it protects fibroblasts and collagen synthesis (deficiency is associated with damaged connective tissue). For POTS, it supports the deiodinase enzymes needed for T4 to T3 thyroid conversion.",
         research: [
             {
-                outcome: "Thyroid Autoantibody Reduction",
-                summary: "Selenium supplementation (200 mcg/day selenomethionine) reduces thyroid peroxidase autoantibodies (TPOAb) in patients with autoimmune thyroiditis. Relevant for the triad because thyroid autoimmunity is over-represented in hEDS, POTS, and MCAS populations.",
+                outcome: "Thyroid Biology (Studies in Autoimmune Thyroiditis)",
+                summary: "Studies of adults with autoimmune thyroiditis have measured thyroid peroxidase antibodies (TPOAb) during selenium supplementation, usually at 200 mcg/day (twice our dose). We cite them for selenium's role in thyroid biology, not as a treatment claim for any thyroid condition.",
                 studies: [
                     {
                         source: "Wichman J et al., \"Selenium Supplementation Significantly Reduces Thyroid Autoantibody Levels in Patients with Chronic Autoimmune Thyroiditis: A Systematic Review and Meta-Analysis\"",
                         pmid: "27702392",
                         design: "Systematic review + meta-analysis of 16 controlled trials in autoimmune thyroiditis",
-                        finding: "Selenium reduced TPOAb at 3 months (WMD -271 in LT4-treated; -512 in untreated), sustained through 12 months in LT4-treated populations"
+                        finding: "Pooled 16 controlled trials in adults with chronic autoimmune thyroiditis; TPOAb levels were measured at 3, 6, and 12 months"
                     },
                     {
                         source: "van Zuuren EJ et al., \"Selenium supplementation for Hashimoto thyroiditis\"",
                         pmid: "23744563",
                         design: "Cochrane systematic review, 4 RCTs, 463 participants",
-                        finding: "Selenomethionine 200 mcg/day produced significant TPO antibody reduction vs placebo; subjective wellbeing improvement reported; serious adverse events not increased"
+                        finding: "Reviewed 4 RCTs (463 participants) in adults with Hashimoto thyroiditis, mostly using 200 mcg/day selenomethionine; serious adverse events were not increased"
                     }
                 ]
             },
@@ -2240,17 +2240,18 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "No direct trials specifically in hEDS populations; findings extrapolated from related connective tissue models and autoimmune thyroid research.",
+        evidenceGaps: "No direct trials specifically in hEDS, POTS, or MCAS populations; findings are extrapolated from general selenium biology and from studies in other populations.",
         triad: {
-            mcas: "Reduces oxidative stress-driven mast cell reactivity. Selenomethionine is preferred to avoid yeast/fermentation sensitivities.",
+            mcas: "Supports antioxidant defenses relevant to oxidative stress-driven mast cell reactivity. We use synthetic L-selenomethionine, not selenium yeast, to avoid yeast and fermentation sensitivities.",
             heds: "Essential for limiting the damaged fibroblasts and cartilage degeneration seen in deficiency models. Synergistic with Manganese.",
-            pots: "Critical for the 16-20% of POTS patients with concurrent thyroid autoimmunity. Supports autonomic function via thyroid hormone optimization."
+            pots: "Supports normal thyroid hormone conversion (T4 to T3), which affects energy metabolism and heart rate regulation."
         },
         whyThisForm: {
-            form: "L-Selenomethionine",
-            rationale: "Organic form with 90-95% bioavailability (vs 50% for selenite). Pure form avoids the yeast sensitivity risk present in selenium-enriched yeast.",
+            form: "Synthetic L-selenomethionine (not selenium yeast)",
+            rationale: "Organic form with 90-95% bioavailability (vs 50% for selenite). Generic 'selenomethionine' is often selenium-enriched yeast; ours is confirmed in writing as synthetic L-selenomethionine, which avoids the yeast and fermentation sensitivity risk.",
             comparison: [
-                { form: "Selenomethionine", difference: "90-95% bioavailable; organic; MCAS-safe", selected: true },
+                { form: "Synthetic L-selenomethionine", difference: "90-95% bioavailable; organic; no yeast", selected: true },
+                { form: "Selenium yeast", difference: "Mostly selenomethionine, but yeast-derived and fermented; not used", selected: false },
                 { form: "Sodium Selenite", difference: "50-85% bioavailable; inorganic; lower retention", selected: false }
             ]
         },
@@ -2259,14 +2260,14 @@ export const ingredients: Record<string, IngredientData> = {
             interactions: "Separate from Levothyroxine by 4+ hours. May enhance warfarin anticoagulant effects.",
             excipientConcerns: {
                 avoid: ["Sulfites", "Artificial dyes", "Corn-derived fillers"],
-                safe: ["Selenomethionine pure form"]
+                safe: ["Synthetic L-selenomethionine"]
             },
             cautions: "Narrow therapeutic window; target 70-120 ng/mL plasma levels for long-term use."
         },
         howToStart: {
             protocol: [
                 { step: "Weeks 1-2", dosage: "50 mcg daily", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "100 mcg daily", notes: "Target maintenance (AM)" }
+                { step: "Week 3+", dosage: "100 mcg daily", notes: "Target maintenance (PM capsule)" }
             ],
             timeline: "Selenium status optimization takes 3-6 months based on clinical data."
         },
@@ -2280,23 +2281,23 @@ export const ingredients: Record<string, IngredientData> = {
     "methylfolate": {
         id: "methylfolate",
         name: "Methylfolate (5-MTHF)",
-        patientSummary: "Methylfolate is the active, methylated form of folate (vitamin B9) - the form your cells use directly without needing MTHFR enzyme conversion. This matters specifically because 85% of hEDS patients carry MTHFR polymorphisms (a 2024 Tulane study found C677T and/or A1298C variants in 85% of hEDS/HSD patients - more than double the general population rate). Methylfolate bypasses the impaired enzyme entirely. We use the (6S)-5-MTHF calcium salt at 800 mcg in the PM capsule. Methylation supports histamine clearance, catecholamine breakdown, and the dozens of methylation-dependent reactions running every minute in your body.",
+        patientSummary: "Methylfolate is the active, methylated form of folate (vitamin B9) - the form your cells use directly without needing MTHFR enzyme conversion. This matters specifically because 85% of hEDS patients carry MTHFR polymorphisms (a 2024 Tulane study found C677T and/or A1298C variants in 85% of hEDS/HSD patients - more than double the general population rate). Methylfolate bypasses the impaired enzyme entirely. We use the (6S)-5-MTHF calcium salt at 800 mcg in the AM capsule. Methylation supports histamine clearance, catecholamine breakdown, and the dozens of methylation-dependent reactions running every minute in your body.",
         faq: [
             { q: "Why methylfolate instead of folic acid?", a: "Folic acid is the synthetic form most commonly used in fortified foods and basic supplements - it has to be converted through DHFR and then MTHFR to become biologically active. In people with MTHFR variants (85% of hEDS patients), that conversion is impaired, so folic acid can actually accumulate unmethylated and may interfere with normal folate metabolism. Methylfolate is already the active form - it skips the conversion step entirely. For this community, methylfolate is the only defensible folate choice." },
             { q: "What's the MTHFR connection to hEDS?", a: "A 2024 Tulane Fascia Institute study (Courseault et al.) found that 85% of hEDS patients carry C677T and/or A1298C MTHFR polymorphisms - more than double the general population prevalence. The researchers proposed a 'folate-dependent hypermobility syndrome' model, suggesting that impaired methylation may be a contributing factor to the connective tissue dysfunction in hEDS. MTHFR variants compromise the production of activated folate, which affects everything from neurotransmitter synthesis to histamine clearance to homocysteine handling. Methylfolate bypasses the impaired enzyme directly." },
-            { q: "I've heard some people react badly to methylfolate - should I worry?", a: "It's real. About 5-15% of people experience 'overmethylation' symptoms starting methylated B vitamins - anxiety, agitation, irritability, sleep disruption. MCAS patients can be more sensitive than average. The mechanism is usually a transient rise in neurotransmitter synthesis before clearance catches up. We deliberately dose 800 mcg in the PM capsule - conservative compared to the 15 mg used for depression. If you have a history of overmethylation reactions, start slow and consider taking the PM capsule every other day initially." },
+            { q: "I've heard some people react badly to methylfolate - should I worry?", a: "It's real. About 5-15% of people experience 'overmethylation' symptoms starting methylated B vitamins - anxiety, agitation, irritability, sleep disruption. MCAS patients can be more sensitive than average. The mechanism is usually a transient rise in neurotransmitter synthesis before clearance catches up. We deliberately dose 800 mcg in the AM capsule, conservative compared with prescription-strength L-methylfolate products, which run many times higher. If you have a history of overmethylation reactions, start slow and consider taking the AM capsule every other day initially." },
             { q: "How does methylfolate help with histamine?", a: "Methylfolate doesn't break down histamine directly, but it's foundational to the methylation pathway that does. Your body breaks down histamine through HNMT (in your cells and CNS) and DAO (in your gut). HNMT uses methyl groups from SAMe to inactivate histamine. SAMe is regenerated through the methylfolate-B12 cycle. Inadequate methylfolate means slower SAMe regeneration, which means slower HNMT activity, which means slower histamine clearance - exactly the wrong bottleneck for MCAS. Methylfolate keeps that cycle turning." }
         ],
         triadPlain: {
-            mcas: "Methylfolate matters for MCAS through methylation-dependent histamine clearance. HNMT (histamine N-methyltransferase) is the primary intracellular histamine-degrading enzyme - it uses methyl groups from SAMe to inactivate histamine. SAMe regeneration depends on the methylfolate-B12 cycle running properly. Inadequate methylfolate is a real bottleneck for HNMT activity, and MTHFR polymorphisms (common in this community) make that bottleneck more likely. Methylfolate also supports the broader methylation pathway that affects multiple mediator clearance routes. The 800 mcg PM dose is conservative - therapeutic doses for depression run 15 mg, but MCAS patients can be sensitive to higher doses.",
+            mcas: "Methylfolate matters for MCAS through methylation-dependent histamine clearance. HNMT (histamine N-methyltransferase) is the primary intracellular histamine-degrading enzyme - it uses methyl groups from SAMe to inactivate histamine. SAMe regeneration depends on the methylfolate-B12 cycle running properly. Inadequate methylfolate is a real bottleneck for HNMT activity, and MTHFR polymorphisms (common in this community) make that bottleneck more likely. Methylfolate also supports the broader methylation pathway that affects multiple mediator clearance routes. The 800 mcg AM dose is conservative; prescription-strength L-methylfolate products run many times higher, and MCAS patients can be sensitive to higher doses.",
             heds: "This is the hEDS evidence highlight of the formulation. A 2024 Tulane Fascia Institute study (Courseault et al.) found 85% of hEDS/HSD patients carry MTHFR polymorphisms - more than double the general population rate. The researchers proposed a 'folate-dependent hypermobility syndrome' model: when MTHFR is impaired, methylation suffers, and methylation directly affects MMP-2 gene regulation. MMP-2 derepression cleaves decorin and disrupts ECM organization - driving the hypermobility and tissue fragility patterns. Methylfolate bypasses the impaired enzyme. This is one of the rare ingredients with direct hEDS evidence at the population genetics level.",
-            pots: "For POTS, methylfolate has two main pathways. First: BH4 (tetrahydrobiopterin) production. BH4 is the rate-limiting cofactor for synthesis of dopamine, norepinephrine, and serotonin - all directly relevant to autonomic regulation. Methylfolate is required for BH4 synthesis. Second: catecholamine clearance through COMT, a methylation-dependent enzyme. Slow methylation means catecholamines stay elevated longer than they should - directly relevant to hyperadrenergic POTS. A 2021 case report (Mittal) described hyperadrenergic POTS improvement with methylated B vitamins. The methylation stack (methylfolate + methylcobalamin + R5P) is foundational for autonomic balance in this community."
+            pots: "For POTS, methylfolate has two main pathways. First: BH4 (tetrahydrobiopterin) production. BH4 is the rate-limiting cofactor for synthesis of dopamine, norepinephrine, and serotonin - all directly relevant to autonomic regulation. Methylfolate is required for BH4 synthesis. Second: catecholamine clearance through COMT, a methylation-dependent enzyme. Slow methylation means catecholamines are cleared more slowly. A 2021 single-patient case report (Mittal) discussed methylated B vitamins in a person with a COMT gene variant; one case cannot establish benefit. The methylation stack (methylfolate + methylcobalamin + R5P) is foundational for autonomic balance in this community."
         },
         bluf: "Methylfolate (5-MTHF) is the bioactive form of folate that bypasses MTHFR genetic blocks. Since around 85% of hEDS patients carry an MTHFR variant, standard folic acid often won't convert efficiently. Methylfolate also regulates MMPs that degrade collagen and supports neurotransmitter synthesis. ZebraThrive uses 800 mcg daily in the AM stack.",
         atAGlance: {
             whatItIs: "The bioactive form of folate that bypasses MTHFR genetic blocks and regulates collagen-destroying enzymes",
             whyWeIncludeIt: "Addresses the 85% MTHFR polymorphism prevalence in hEDS patients; essential for ECM protection and neurotransmitter synthesis",
-            dose: "800 mcg daily (AM capsules)",
+            dose: "800 mcg daily (AM capsule)",
             keyBenefits: [
                 "85% of hEDS patients carry MTHFR variants in landmark study",
                 "Regulates MMP-2 activity to protect collagen from degradation",
@@ -2343,30 +2344,31 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             },
             {
-                outcome: "Methylated B-Vitamin Stack in POTS",
-                summary: "Clinical case evidence for methylated B-vitamin support in COMT and MTHFR-variant POTS patients refractory to standard therapy.",
+                outcome: "Methylated B Vitamins: Single Case Report",
+                summary: "One published case report discusses methylated B vitamins in a person with a COMT gene variant. Case reports are the lowest level of clinical evidence and cannot show that a supplement caused a change.",
                 studies: [
                     {
                         source: "Mittal N et al., \"Improvement of hyperadrenergic postural orthostatic tachycardia syndrome (POTS) with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism\"",
                         pmid: "34764114",
-                        design: "BMJ Case Report, POTS patient refractory to conventional treatment",
-                        finding: "Patient with COMT Val158Met heterozygosity improved on methylated B vitamins after failing conventional POTS therapy; supports methylation as a clinical layer in autonomic phenotypes"
+                        design: "Case report (n=1), BMJ Case Reports",
+                        finding: "Describes a single adult with POTS and a heterozygous COMT Val158Met variant who was given methylated B vitamins. Cited for the methylation-catecholamine hypothesis, not as evidence of benefit"
                     }
                 ]
             }
         ],
-        evidenceGaps: "While the genetic association is Grade A, clinical RCTs testing symptom reversal with methylfolate in hEDS are still pending.",
+        evidenceGaps: "The MTHFR prevalence data come from a single-center study. No clinical trials have tested methylfolate in hEDS, POTS, or MCAS.",
         triad: {
             mcas: "Supports HNMT function, which clears 50-80% of intracellular histamine. Low overmethylation risk at 800mcg dose.",
             heds: "Addresses a nearly universal genetic bottleneck in hEDS. Protects collagen by 'silencing' destructive MMP-2 enzymes.",
             pots: "Produces BH4, the cofactor for norepinephrine synthesis. Essential for maintaining vascular tone and heart rate control."
         },
         whyThisForm: {
-            form: "(6S)-5-MTHF glucosamine salt (Quatrefolic-equivalent spec)",
-            rationale: "The most stable and bioavailable form of (6S)-5-MTHF. Bypasses metabolic blocks for 100% bioactivity. Superior stability to earlier calcium salts.",
+            form: "(6S)-5-MTHF calcium salt",
+            rationale: "The active form of folate; bypasses the MTHFR conversion step. We use the calcium salt of (6S)-5-MTHF, confirmed by supplier statement. We do not use the glucosamine salt (the Quatrefolic-type form) because glucosamine is typically derived from shellfish, an allergen we exclude.",
             comparison: [
-                { form: "(6S)-5-MTHF glucosamine salt", difference: "Stable salt form with ~50% first-pass absorption; the Quatrefolic-brand spec is one verified source, generic-OK", selected: true },
-                { form: "Folic Acid", difference: "Inactive synthetic form; requires MTHFR conversion (ineffective for 85% of hEDS)", selected: false }
+                { form: "(6S)-5-MTHF calcium salt", difference: "Our form; active folate; no shellfish-derived component", selected: true },
+                { form: "(6S)-5-MTHF glucosamine salt", difference: "Glucosamine is typically shellfish-derived; excluded for allergen reasons", selected: false },
+                { form: "Folic Acid", difference: "Synthetic form that requires conversion, including through MTHFR", selected: false }
             ]
         },
         safety: {
@@ -2397,7 +2399,7 @@ export const ingredients: Record<string, IngredientData> = {
     "vitamin-b12": {
         id: "vitamin-b12",
         name: "Methylcobalamin (Vitamin B12)",
-        patientSummary: "Methylcobalamin is the active, methylated form of vitamin B12 - the form your body uses directly without needing the cyanide-cleaving conversion step required by cyanocobalamin. For the triad, B12 matters most for the methylation pathway: 85% of hEDS patients carry at least one MTHFR variant, and proper methylation depends on adequate methylated B12 alongside methylfolate to keep the methyl-group cycle running. Methylation directly affects histamine clearance (through HNMT), catecholamine breakdown (through COMT), and neurotransmitter handling. We dose 1,000 mcg in the PM capsule - well above the basic requirement and within the therapeutic range used in B12 trials.",
+        patientSummary: "Methylcobalamin is the active, methylated form of vitamin B12 - the form your body uses directly without needing the cyanide-cleaving conversion step required by cyanocobalamin. For the triad, B12 matters most for the methylation pathway: 85% of hEDS patients carry at least one MTHFR variant, and proper methylation depends on adequate methylated B12 alongside methylfolate to keep the methyl-group cycle running. Methylation directly affects histamine clearance (through HNMT), catecholamine breakdown (through COMT), and neurotransmitter handling. We dose 1,000 mcg in the AM capsule, well above the basic requirement and within the range used in B12 studies.",
         whyThisFormPatient: "We use methylcobalamin (the methylated, active form) rather than cyanocobalamin (the synthetic form that requires conversion). The conversion step from cyanocobalamin to methylcobalamin can be impaired in chronic illness, MTHFR variants, and other methylation issues - exactly the populations this formulation serves. Methylcobalamin skips that step. We also avoid hydroxocobalamin and adenosylcobalamin because the methylated form is the one that supports MTHFR cycling directly. At 1,000 mcg, the dose is high enough to overcome the marginal absorption in oral B12 above the intrinsic-factor saturation point.",
         faq: [
             { q: "Methylcobalamin vs cyanocobalamin - does it really matter?", a: "For most healthy people, the difference is negligible - both forms eventually become methylcobalamin in the body. For this community, it matters more. The conversion from cyanocobalamin to methylcobalamin requires intact methylation machinery, which is often compromised by MTHFR variants (85% of hEDS patients have at least one) or chronic illness. Using the already-methylated form skips a potentially impaired conversion step. The cyanide group from cyanocobalamin is also a small toxic load that adds nothing useful." },
@@ -2414,7 +2416,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "The bioactive form of Vitamin B12 that directly supports the autonomic nervous system and histamine clearance",
             whyWeIncludeIt: "47% of adolescents with fainting disorders (a POTS-overlapping population) run B12 deficient; essential for baroreflex sensitivity and intracellular histamine degradation",
-            dose: "1,000 mcg daily (AM capsules)",
+            dose: "1,000 mcg daily (AM capsule)",
             keyBenefits: [
                 "Addresses ~47% B12 deficiency rate in adolescents with fainting disorders, a POTS-overlapping population",
                 "Crucial for sympathetic baroreceptor function and catecholamine release",
@@ -2437,43 +2439,37 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             },
             {
-                outcome: "Methylcobalamin in Peripheral Neuropathy",
-                summary: "Meta-analytic evidence supports methylcobalamin (active B12) for peripheral neuropathy. Relevant for the small-fiber neuropathy phenotype common in POTS and hEDS populations.",
+                outcome: "Nerve Function Research (Methylcobalamin)",
+                summary: "Trials of methylcobalamin in adults with peripheral neuropathy have measured nerve conduction and clinical response, usually at higher doses and often combined with other agents. We cite them for B12's role in normal nerve function and for high-dose safety, not as a treatment claim.",
                 studies: [
                     {
                         source: "Sawangjit R et al., \"Efficacy and Safety of Mecobalamin on Peripheral Neuropathy: A Systematic Review and Meta-Analysis of Randomized Controlled Trials\"",
                         pmid: "32716261",
                         design: "Systematic review + meta-analysis of 15 RCTs, 1707 peripheral neuropathy patients",
-                        finding: "Methylcobalamin (in combination) significantly improved clinical therapeutic efficacy (RR 1.32, 95% CI 1.21-1.45) and nerve conduction velocity vs active control; no serious adverse events"
+                        finding: "Pooled 15 RCTs (1,707 adults with peripheral neuropathy); clinical response and nerve conduction velocity were measured, mostly with methylcobalamin given alongside other agents; no serious adverse events were reported"
                     },
                     {
                         source: "Oki R et al., \"Efficacy and safety of ultrahigh-dose methylcobalamin\"",
                         pmid: "35532908",
                         design: "Clinical trial of ultrahigh-dose methylcobalamin",
-                        finding: "Confirms safety profile of high-dose methylcobalamin and supports therapeutic use in neurological dysfunction"
+                        finding: "Reported the safety profile of very high-dose methylcobalamin"
                     }
                 ]
             },
             {
-                outcome: "Methylated B-Vitamin Stack in Hyperadrenergic POTS",
-                summary: "Clinical evidence supports the methylated B-vitamin stack (methylfolate + methylcobalamin) in hyperadrenergic POTS, particularly in patients with MTHFR or COMT variants.",
+                outcome: "Methylated B Vitamins: Single Case Report",
+                summary: "One published case report discusses methylated B vitamins (methylfolate plus methylcobalamin) in a person with a COMT gene variant. Case reports are the lowest level of clinical evidence and cannot show that a supplement caused a change.",
                 studies: [
-                    {
-                        source: "Mathur N et al., \"Improvement of hyperadrenergic POTS with methylated B vitamins\"",
-                        pmid: "34782356",
-                        design: "Clinical case + mechanistic discussion",
-                        finding: "Marked autonomic improvement in hyperadrenergic POTS with high-dose methylated B-vitamins; methylation deficit framed as contributor to catecholamine handling"
-                    },
                     {
                         source: "Mittal N et al., \"Improvement of hyperadrenergic POTS with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism\"",
                         pmid: "34764114",
-                        design: "BMJ Case Report, refractory POTS",
-                        finding: "Additional case-report support for the methylated B-vitamin approach in COMT-variant hyperadrenergic POTS"
+                        design: "Case report (n=1), BMJ Case Reports",
+                        finding: "Describes a single adult with POTS and a heterozygous COMT Val158Met variant who was given methylated B vitamins. Cited for the methylation-catecholamine hypothesis, not as evidence of benefit"
                     }
                 ]
             }
         ],
-        evidenceGaps: "While deficiency prevalence is clear, larger dual-blind RCTs for autonomic outcomes are needed.",
+        evidenceGaps: "Deficiency prevalence data exist for adolescents with POTS, but there are no controlled trials of methylcobalamin for autonomic outcomes.",
         triad: {
             mcas: "Stabilizes mast cells indirectly via HNMT (histamine clearance). Methylcobalamin is bioactive but can be 'stimulatory' for some.",
             heds: "Required for enzymes that hydroxylate collagen chains. Protects tissue from homocysteine-mediated oxidative damage.",
@@ -2506,7 +2502,6 @@ export const ingredients: Record<string, IngredientData> = {
         sources: [
             { title: "POTS and vitamin B12 deficiency in adolescents", pmid: "24366986", authors: "Oner T et al.", year: "2014" },
             { title: "Efficacy and Safety of Mecobalamin on Peripheral Neuropathy: A Systematic Review and Meta-Analysis of Randomized Controlled Trials", pmid: "32716261", authors: "Sawangjit R et al.", year: "2020" },
-            { title: "Improvement of hyperadrenergic POTS with methylated B vitamins", pmid: "34782356", authors: "Mathur N et al.", year: "2021" },
             { title: "Improvement of hyperadrenergic POTS with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism", pmid: "34764114", authors: "Mittal N et al.", year: "2021" },
             { title: "Efficacy and safety of ultrahigh-dose methylcobalamin", pmid: "35532908", authors: "Oki R et al.", year: "2022" }
         ]
@@ -2515,15 +2510,15 @@ export const ingredients: Record<string, IngredientData> = {
         id: "grape-seed-extract",
         name: "Grape Seed Extract",
         patientSummary: "Grape seed extract is one of the most concentrated natural sources of procyanidins - the same compound family in pine bark, with a different minor-compound profile that complements it. For the triad, the standout mechanism is MMP inhibition: procyanidins reduce the matrix-degrading enzymes that drive collagen breakdown in hEDS. Lab studies also show mast cell stabilization through three independent pathways (FcεRI downregulation, calcium influx inhibition, and cAMP elevation). We pair grape seed with pine bark in the formulation because their gut-derived metabolite M1 - the form that actually circulates in your blood - comes from both sources.",
-        whyThisFormPatient: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by DMAC - the analytical method that specifically quantifies the procyanidins doing the work. The source matters for MCAS safety: we specify non-fermented grape seed extract to eliminate the biogenic amine contamination (histamine, tyramine) that can ride along with grape products. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites.",
+        whyThisFormPatient: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that specifically quantifies the procyanidins doing the work. It is confirmed peanut-free by ELISA testing. The source matters for MCAS safety: we specify non-fermented grape seed extract to eliminate the biogenic amine contamination (histamine, tyramine) that can ride along with grape products. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites.",
         faq: [
             { q: "Why grape seed AND pine bark - aren't they the same thing?", a: "They share the procyanidin chemistry, but they're not identical. Grape seed delivers higher procyanidin density per milligram; pine bark brings a different minor-compound profile that contributes additional MMP and mast cell activity. The gut metabolite M1 - the form that actually circulates in your blood and does most of the work - comes from both sources, and together they hit a wider mechanism profile than either alone. It's complementary, not redundant." },
             { q: "Is grape seed safe with blood thinners?", a: "Grape seed extract has mild antiplatelet activity - not enough to be clinically meaningful for most people, but worth flagging if you're on warfarin, aspirin, or a DOAC. The human RCTs in cardiovascular populations have generally been positive without serious bleeding events, but the standard caution applies: tell your prescriber if you're on blood thinners, and stop 1-2 weeks before scheduled surgery. Otherwise, the safety profile is one of the cleanest in polyphenol research." },
-            { q: "How does grape seed help with mast cells?", a: "Grape seed procyanidins stabilize mast cells through three lab-documented pathways (FcεRI downregulation, calcium influx inhibition, cAMP elevation), giving wider coverage than cromolyn. For MCAS patients with overlapping connective tissue or vascular symptoms, grape seed addresses both the mast cell and ECM-protective layers at once, which is why we include it alongside pine bark rather than picking one." },
-            { q: "What does '≥95% OPCs by DMAC' actually mean?", a: "DMAC is dimethylaminocinnamaldehyde - a specific analytical method that selectively quantifies the procyanidins (the active oligomeric compounds) while excluding unrelated plant constituents. It's more accurate than the older vanillin or UV-Vis methods, which can produce inflated percentages by detecting compounds that aren't actually procyanidins. When the COA specifies DMAC, you know the percentage on the label corresponds to what's actually doing the work." }
+            { q: "How does grape seed help with mast cells?", a: "In lab studies, grape seed procyanidins act on mast cells through three pathways (FcεRI downregulation, calcium influx inhibition, cAMP elevation). For people with overlapping connective tissue or vascular symptoms, grape seed addresses both the mast cell and ECM-protective layers at once, which is why we include it alongside pine bark rather than picking one." },
+            { q: "What does '≥95% OPCs by HPLC' actually mean?", a: "HPLC (high-performance liquid chromatography) separates and quantifies the procyanidins specifically, rather than measuring total absorbance like the older UV-Vis or vanillin methods, which can produce inflated percentages by detecting compounds that aren't procyanidins. DMAC is another procyanidin-specific method; our supplier tests by HPLC, which meets the same goal. When the COA specifies HPLC, the percentage corresponds to the compounds actually doing the work." }
         ],
         triadPlain: {
-            mcas: "Grape seed procyanidins stabilize mast cells across a wider mechanism profile than cromolyn covers in lab studies. The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination (histamine, tyramine) that can ride along with grape products from less careful sourcing.",
+            mcas: "Grape seed procyanidins support mast cell stability through several mechanisms in lab studies. The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination (histamine, tyramine) that can ride along with grape products from less careful sourcing.",
             heds: "Grape seed is one of the strongest ECM-protective ingredients on this list. The gut-derived metabolite M1 - the form that actually circulates in your blood - directly inhibits MMP-9 (one of the matrix-degrading enzymes upregulated in hEDS) at concentrations achievable from oral dosing. Grape seed procyanidins also directly cross-link with collagen fibers, stabilizing them against enzymatic breakdown - a unique mechanism among polyphenols. We pair grape seed with pine bark to deliver more M1 to your bloodstream and broader MMP coverage across the matrix-degrading enzymes elevated in hEDS.",
             pots: "For POTS, grape seed extract has solid clinical data for venous tone and lower-leg edema - the same blood pooling pattern that drives the orthostatic tachycardia of POTS. A meta-analysis of 16 RCTs (n=810) found grape seed reduced systolic blood pressure by about 6 mmHg in hypertensive populations, with the effect essentially neutral in normotensives (floor effect), so no orthostatic hypotension concern. The procyanidin support for endothelial function and venous wall integrity is the relevant mechanism for POTS - strengthening the vasculature that gravity works against when you stand."
         },
@@ -2531,7 +2526,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "Grape seed extract is one of the most concentrated natural sources of procyanidins - the same compound family in pine bark, with a different minor-compound profile that complements it.",
             whyWeIncludeIt: "For the triad, the standout mechanism is MMP inhibition: procyanidins reduce the matrix-degrading enzymes that drive collagen breakdown in hEDS. Lab studies also show mast cell stabilization through three independent pathways (FcεRI downregulation, calcium influx inhibition, and cAMP elevation).",
-            dose: "100 mg AM + 70 mg PM (170 mg/day total)",
+            dose: "170 mg daily (100 mg AM capsule + 70 mg PM capsule)",
             keyBenefits: ["MMP-9 inhibition via the gut-derived M1 metabolite at orally achievable concentrations", "Mast cell stabilization through three lab-documented pathways (FcεRI, calcium influx, cAMP)", "Direct procyanidin crosslinking with collagen fibers (rare mechanism among polyphenols)", "Venous-tone support with neutral BP effect in normotensives (no orthostatic concern)"]
         },
         howItWorks: "Grape seed extract is one of the most concentrated natural sources of procyanidins - the same compound family in pine bark, with a different minor-compound profile that complements it. For the triad, the standout mechanism is MMP inhibition: procyanidins reduce the matrix-degrading enzymes that drive collagen breakdown in hEDS. Lab studies also show mast cell stabilization through three independent pathways (FcεRI downregulation, calcium influx inhibition, and cAMP elevation). We pair grape seed with pine bark in the formulation because their gut-derived metabolite M1 - the form that actually circulates in your blood - comes from both sources.",
@@ -2580,13 +2575,13 @@ export const ingredients: Record<string, IngredientData> = {
             }
         ],
         triad: {
-            mcas: "Grape seed procyanidins stabilize mast cells through three complementary mechanisms in lab studies: they downregulate FcεRI (the IgE receptor that triggers mast cell activation), they block calcium influx (the trigger for releasing histamine and inflammatory mediators), and they raise cAMP (which actively suppresses degranulation). This is a wider mechanism profile than cromolyn covers. The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination that can ride along with grape products from less careful sourcing.",
+            mcas: "Grape seed procyanidins stabilize mast cells through three complementary mechanisms in lab studies: they downregulate FcεRI (the IgE receptor that triggers mast cell activation), they block calcium influx (the trigger for releasing histamine and inflammatory mediators), and they raise cAMP (which actively suppresses degranulation). The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination that can ride along with grape products from less careful sourcing.",
             heds: "Grape seed is one of the strongest ECM-protective ingredients on this list. The gut-derived metabolite M1 - the form that actually circulates in your blood - directly inhibits MMP-9 (one of the matrix-degrading enzymes upregulated in hEDS) at concentrations achievable from oral dosing. Grape seed procyanidins also directly cross-link with collagen fibers, stabilizing them against enzymatic breakdown - a unique mechanism among polyphenols. We pair grape seed with pine bark to deliver more M1 to your bloodstream and broader MMP coverage across the matrix-degrading enzymes elevated in hEDS.",
             pots: "For POTS, grape seed extract has solid clinical data for venous tone and lower-leg edema - the same blood pooling pattern that drives the orthostatic tachycardia of POTS. A meta-analysis of 16 RCTs (n=810) found grape seed reduced systolic blood pressure by about 6 mmHg in hypertensive populations, with the effect essentially neutral in normotensives (floor effect), so no orthostatic hypotension concern. The procyanidin support for endothelial function and venous wall integrity is the relevant mechanism for POTS - strengthening the vasculature that gravity works against when you stand."
         },
         whyThisForm: {
-            form: "Generic non-fermented grape seed extract (Vitis vinifera), ≥95% OPCs by DMAC, COA-verified",
-            rationale: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by DMAC - the analytical method that specifically quantifies the procyanidins doing the work. The source matters for MCAS safety: we specify non-fermented grape seed extract to eliminate the biogenic amine contamination (histamine, tyramine) that can ride along with grape products. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 160 mg total daily, split 100 mg AM and 60 mg PM to maintain steady levels of the active metabolites."
+            form: "Generic non-fermented grape seed extract (Vitis vinifera), ≥95% OPCs by HPLC, peanut-free, COA-verified",
+            rationale: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that specifically quantifies the procyanidins doing the work (DMAC is not required). Peanut protein was not detected by ELISA testing. The source matters for MCAS safety: we specify non-fermented grape seed extract to eliminate the biogenic amine contamination (histamine, tyramine) that can ride along with grape products. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites."
         },
         safety: {
             sideEffects: "Excellent safety profile in cardiovascular RCTs running 8-12 weeks. Mild GI discomfort possible at high single doses; rare transient headache. The non-fermented sourcing eliminates the biogenic amine contamination concern that affects many grape products.",
@@ -2608,27 +2603,27 @@ export const ingredients: Record<string, IngredientData> = {
     "quercetin-phytosome": {
         id: "quercetin-phytosome",
         name: "Quercetin Phytosome (Quercefit®)",
-        patientSummary: "Quercetin Phytosome is quercetin - the flavonoid known as a natural antihistamine - wrapped in a phospholipid carrier that solves quercetin's biggest problem: terrible absorption. Plain quercetin has bioavailability around 1-2%. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram. For MCAS, quercetin is one of the most-studied natural mast cell stabilizers - in head-to-head testing against cromolyn, quercetin matched or beat cromolyn across histamine, prostaglandins, leukotrienes, TNF, and IL-8 release. The phytosome form is the only way to get clinically meaningful quercetin levels at a reasonable dose.",
+        patientSummary: "Quercetin Phytosome is quercetin - a flavonoid studied for mast cell support - wrapped in a phospholipid carrier that solves quercetin's biggest problem: terrible absorption. Plain quercetin has bioavailability around 1-2%. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram. For mast cells, quercetin is one of the most-studied natural compounds: in lab studies of human mast cells, it reduced release of histamine, prostaglandins, leukotrienes, TNF, and IL-8. The phytosome form is what lets an oral dose reach meaningful blood levels.",
         whyThisFormPatient: "We use Quercefit® - Indena's quercetin phytosome - because it's the only quercetin form with human pharmacokinetic studies showing 20× higher bioavailability than plain quercetin. The phospholipid carrier (sunflower-derived lecithin, MCAS-safe) wraps the quercetin in a structure your gut absorbs efficiently. This is one of the few cases where the branded form is genuinely non-negotiable - generic 'quercetin phytosome' blends typically achieve only 1.5-2× the absorption of standard quercetin, far below Quercefit's 20× number. Quercefit® is the one mandatory branded sourcing in our formulation. Spec verified by Certificate of Analysis on every batch.",
         faq: [
             { q: "Why mandatory Quercefit® instead of generic quercetin phytosome?", a: "The bioavailability difference is real and dramatic. Quercefit® has the human PK study showing 20× absorption - generic 'quercetin phytosome' blends typically deliver 1.5-2× absorption at best. The phytosome technology requires a specific manufacturing process to produce a true phospholipid-quercetin complex; simple mixing doesn't replicate it. For an ingredient where bioavailability is the entire point of paying a premium, the branded form is the only one that delivers on the claim. This is the one mandatory brand in our formulation." },
             { q: "How is Quercefit different from EMIQ or plain quercetin?", a: "All three deliver quercetin to your body, but the mechanisms differ. Plain quercetin is barely absorbed (1-2%). EMIQ uses an enzymatic glucose tag to lift absorption about 17-fold. Quercefit uses a phospholipid carrier to lift absorption about 20-fold. EMIQ and Quercefit are similar magnitudes of bioavailability boost - the carrier chemistry differs. Quercefit has 15 human clinical studies across allergic rhinitis, exercise recovery, and COVID-19 - the deepest clinical literature of any enhanced quercetin form." },
             { q: "Is Quercefit safe with ivabradine and beta-blockers?", a: "This was a longstanding question, and recent human data has clarified it. Quercetin is a CYP3A4 inhibitor in lab tests, but repeated dosing in humans produces CYP3A4 induction (not inhibition) via the PXR receptor. The risk for ivabradine has been downgraded to LOW-MODERATE. For metoprolol and propranolol (CYP2D6 substrates), in vivo data is mixed. The cautious approach is to start at standard dose, monitor your medications normally, and mention quercetin to your prescriber." },
-            { q: "How long until I notice anything from Quercefit?", a: "For mast cell stabilization, the same rules apply as with other natural stabilizers: most people who respond notice changes in 4-8 weeks of consistent dosing, with the clinical trials running 2-6 months. The big difference with Quercefit is that you actually reach mast-cell-active concentrations at a normal supplement dose - plain quercetin often doesn't, which is why people try quercetin and feel nothing. Daily consistency is the unlock; the bioavailability is the prerequisite." }
+            { q: "How long until I notice anything from Quercefit?", a: "For mast cell stabilization, the same rules apply as with other natural stabilizers: most people who respond notice changes in 4-8 weeks of consistent dosing, with the clinical trials running 2-6 months. The big difference with Quercefit is that you reach much higher blood levels at a normal supplement dose - plain quercetin often doesn't, which is why people try quercetin and feel nothing. Daily consistency is the unlock; the bioavailability is the prerequisite." }
         ],
         triadPlain: {
-            mcas: "Quercefit® delivers quercetin to your bloodstream at concentrations that actually engage the mast cell stabilization mechanisms. In side-by-side testing with cromolyn, quercetin matched or beat cromolyn across histamine, PGD2, leukotrienes, TNF, and IL-8 release. It also doesn't develop tachyphylaxis - the rapid loss of effect that limits cromolyn over time. A newer mechanism gets it even closer to home for MCAS: quercetin binds CLM-1 to suppress MRGPRX2-mediated degranulation, the non-IgE pathway that drives many MCAS reactions to medications and contrast dyes. Quercefit gives you actual clinical-grade quercetin levels at a swallowable dose.",
+            mcas: "Quercefit® delivers quercetin to your bloodstream at much higher levels than plain quercetin. In lab studies of human mast cells, quercetin reduced release of histamine, PGD2, leukotrienes, TNF, and IL-8. A newer lab mechanism: quercetin binds CLM-1 to suppress MRGPRX2-mediated degranulation, a non-IgE mast cell pathway. These are lab findings, not clinical outcomes.",
             heds: "Quercefit has the most direct hEDS-relevant collagen data of any ingredient in the formulation. A 2023 study in human uterosacral ligament fibroblasts showed quercetin reduced MMP-1, increased LOX (the cross-linking enzyme), and raised fibrillin-2 expression. A 2025 rat tendon study showed oral quercetin improved every measured biomechanical parameter of healing tendons - failure load, stiffness, ultimate stress, strain. At achievable Quercefit concentrations, quercetin sits in the pro-collagen, MMP-inhibiting range (the dose-response goes anti-fibrotic only at much higher concentrations not reached orally). An unusually well-aligned ingredient for hEDS.",
-            pots: "For POTS, Quercefit's relevance is mostly the mast cell layer that overlaps with so many POTS cases. A small human trial showed quercetin improved endothelial function (the responsiveness of the lining of your blood vessels), which could theoretically reduce blood pooling. The strongest documented POTS-relevant case is a 2021 published case report of a post-COVID POTS+MCAS patient who recovered from bed-bound to 85-90% of baseline on quercetin therapy. That's one case, not a trial - but the mechanism map (mast cells, vascular endothelium, anti-inflammatory) lines up with what POTS pathology looks like."
+            pots: "For POTS, Quercefit's relevance is mostly the mast cell layer that overlaps with many POTS cases. A small human trial reported improved endothelial function (the responsiveness of the lining of your blood vessels) with quercetin. Quercetin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
         },
-        bluf: "Quercetin Phytosome is quercetin, a natural antihistamine flavonoid, wrapped in a phospholipid carrier that solves quercetin's biggest limitation: terrible absorption. Plain quercetin runs 1-2% bioavailable; Indena's branded Quercefit form delivers about 20 times more quercetin into the bloodstream per milligram, achieving levels relevant for MCAS mast cell stabilization. ZebraThrive uses 300 mg daily in the powder.",
+        bluf: "Quercetin Phytosome is quercetin, a flavonoid studied for mast cell support, wrapped in a sunflower-lecithin phospholipid carrier that solves quercetin's biggest limitation: poor absorption. Plain quercetin runs 1-2% bioavailable; Indena's branded Quercefit form delivers about 20 times more quercetin into the bloodstream per milligram. ZebraThrive uses 300 mg of Quercefit daily in the Daily Powder, split AM and PM.",
         atAGlance: {
-            whatItIs: "Quercetin Phytosome is quercetin - the flavonoid known as a natural antihistamine - wrapped in a phospholipid carrier that solves quercetin's biggest problem: terrible absorption.",
+            whatItIs: "Quercetin Phytosome is quercetin - a flavonoid studied for mast cell support - wrapped in a phospholipid carrier that solves quercetin's biggest problem: terrible absorption.",
             whyWeIncludeIt: "Plain quercetin has bioavailability around 1-2%. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram.",
-            dose: "300 mg (Daily Powder)",
-            keyBenefits: ["~20x higher bioavailability than plain quercetin (plain runs 1-2%, Quercefit phospholipid carrier hits clinical-grade levels)", "Mast cell stabilization matched or beat cromolyn across histamine, prostaglandins, leukotrienes, TNF, and IL-8 in head-to-head testing", "Engages MRGPRX2 via CLM-1 - the non-IgE pathway that drives many MCAS reactions to medications and contrast dyes", "v7.8 mandatory-branded sourcing (Indena Quercefit® is the only quercetin form with the 20x human PK data)"]
+            dose: "300 mg Quercefit® quercetin phytosome daily in the Daily Powder, split AM and PM scoops (300 mg of the phytosome complex, not 300 mg of free quercetin)",
+            keyBenefits: ["~20x higher bioavailability than plain quercetin (plain runs 1-2%) in a human pharmacokinetic study", "Reduced histamine, prostaglandin, leukotriene, TNF, and IL-8 release in lab studies of human mast cells", "Engages MRGPRX2 via CLM-1, a non-IgE mast cell pathway (lab data)", "Mandatory branded sourcing: Indena Quercefit® is the form with the 20x human PK data"]
         },
-        howItWorks: "Quercetin Phytosome is quercetin - the flavonoid known as a natural antihistamine - wrapped in a phospholipid carrier that solves quercetin's biggest problem: terrible absorption. Plain quercetin has bioavailability around 1-2%. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram. For MCAS, quercetin is one of the most-studied natural mast cell stabilizers - in head-to-head testing against cromolyn, quercetin matched or beat cromolyn across histamine, prostaglandins, leukotrienes, TNF, and IL-8 release. The phytosome form is the only way to get clinically meaningful quercetin levels at a reasonable dose.",
+        howItWorks: "Quercetin Phytosome is quercetin - a flavonoid studied for mast cell support - wrapped in a phospholipid carrier that solves quercetin's biggest problem: terrible absorption. Plain quercetin has bioavailability around 1-2%. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram. For mast cells, quercetin is one of the most-studied natural compounds: in lab studies of human mast cells, it reduced release of histamine, prostaglandins, leukotrienes, TNF, and IL-8. The phytosome form is what lets an oral dose reach meaningful blood levels.",
         research: [
             {
                 outcome: "Quercefit® Phytosome Bioavailability",
@@ -2643,43 +2638,43 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             },
             {
-                outcome: "Allergic Rhinitis (Symptom Reduction)",
-                summary: "Quercetin Phytosome formulations have human RCT evidence in allergic rhinitis, a closely-related histamine-driven condition with similar pathophysiology to MCAS.",
+                outcome: "Seasonal Allergy Symptom Study (Healthy Adults)",
+                summary: "A randomized placebo-controlled trial in Japanese adults with seasonal pollen allergy symptoms. Seasonal allergy is a different condition from MCAS; we cite it as human data on Quercetin Phytosome and histamine-related responses, not as evidence of an MCAS effect.",
                 studies: [
                     {
                         source: "Yamada S et al., \"Effects of repeated oral intake of a quercetin-containing supplement on allergic reaction: a randomized, placebo-controlled, double-blind study\"",
                         pmid: "35776034",
-                        design: "Randomized double-blind placebo-controlled trial, n=66, Japan",
-                        finding: "Quercetin Phytosome at 200 mg/day significantly improved allergic rhinitis symptoms vs placebo over the trial period"
+                        design: "Randomized double-blind placebo-controlled trial, n=66 adults, Japan, 4 weeks",
+                        finding: "With 200 mg/day quercetin as Quercetin Phytosome, several eye and nose discomfort scores on a quality-of-life questionnaire improved versus placebo"
                     }
                 ]
             },
             {
-                outcome: "Clinical Application (Post-Viral Inflammation)",
-                summary: "Quercetin Phytosome has been evaluated in randomized clinical trials for early-stage COVID-19, which shares with MCAS and post-viral POTS a mast-cell/cytokine-driven inflammatory pathophysiology.",
+                outcome: "Human Tolerability Data (Open-Label Trials)",
+                summary: "Quercefit has been given alongside standard care in open-label randomized trials in adults with early-stage COVID-19. We cite them only as human exposure and tolerability data for this ingredient form, not as evidence of any effect on COVID-19, MCAS, or POTS.",
                 studies: [
                     {
                         source: "Di Pierro F et al., \"Quercetin as a possible complementary agent for early-stage COVID-19: Concluding results of a randomized clinical trial\"",
                         pmid: "36712674",
                         design: "Randomized clinical trial, early-stage COVID-19",
-                        finding: "Quercefit® supplementation accelerated symptom resolution and reduced inflammatory markers in early-stage COVID-19 patients"
+                        finding: "Quercefit was given alongside standard care in adults with early-stage COVID-19 and was reported as well tolerated"
                     },
                     {
                         source: "Di Pierro F et al., \"Potential Clinical Benefits of Quercetin in the Early Stage of COVID-19: Results of a Second, Pilot, Randomized, Controlled and Open-Label Clinical Trial\"",
                         pmid: "34194240",
                         design: "Randomized controlled open-label trial, n=42",
-                        finding: "Quercefit® reduced time to molecular conversion to SARS-CoV-2 negative; LDH -35.5%, Ferritin -40%, CRP -54.8%, D-dimer -11.9% vs standard of care"
+                        finding: "Pilot open-label trial (n=42) giving Quercefit alongside standard care in adults with early-stage COVID-19; laboratory markers were tracked and the supplement was reported as well tolerated"
                     }
                 ]
             }
         ],
         triad: {
-            mcas: "Quercefit® delivers quercetin to your bloodstream at concentrations that actually engage the mast cell stabilization mechanisms. In side-by-side testing with cromolyn, quercetin matched or beat cromolyn across histamine, PGD2, leukotrienes, TNF, and IL-8 release. It also doesn't develop tachyphylaxis - the rapid loss of effect that limits cromolyn over time. A newer mechanism gets it even closer to home for MCAS: quercetin binds CLM-1 to suppress MRGPRX2-mediated degranulation, the non-IgE pathway that drives many MCAS reactions to medications and contrast dyes. Quercefit gives you actual clinical-grade quercetin levels at a swallowable dose.",
+            mcas: "Quercefit® delivers quercetin to your bloodstream at much higher levels than plain quercetin. In lab studies of human mast cells, quercetin reduced release of histamine, PGD2, leukotrienes, TNF, and IL-8. A newer lab mechanism: quercetin binds CLM-1 to suppress MRGPRX2-mediated degranulation, a non-IgE mast cell pathway. These are lab findings, not clinical outcomes.",
             heds: "Quercefit has the most direct hEDS-relevant collagen data of any ingredient in the formulation. A 2023 study in human uterosacral ligament fibroblasts showed quercetin reduced MMP-1, increased LOX (the cross-linking enzyme), and raised fibrillin-2 expression. A 2025 rat tendon study showed oral quercetin improved every measured biomechanical parameter of healing tendons - failure load, stiffness, ultimate stress, strain. At achievable Quercefit concentrations, quercetin sits in the pro-collagen, MMP-inhibiting range (the dose-response goes anti-fibrotic only at much higher concentrations not reached orally). An unusually well-aligned ingredient for hEDS.",
-            pots: "For POTS, Quercefit's relevance is mostly the mast cell layer that overlaps with so many POTS cases. A small human trial showed quercetin improved endothelial function (the responsiveness of the lining of your blood vessels), which could theoretically reduce blood pooling. The strongest documented POTS-relevant case is a 2021 published case report of a post-COVID POTS+MCAS patient who recovered from bed-bound to 85-90% of baseline on quercetin therapy. That's one case, not a trial - but the mechanism map (mast cells, vascular endothelium, anti-inflammatory) lines up with what POTS pathology looks like."
+            pots: "For POTS, Quercefit's relevance is mostly the mast cell layer that overlaps with many POTS cases. A small human trial reported improved endothelial function (the responsiveness of the lining of your blood vessels) with quercetin. Quercetin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
         },
         whyThisForm: {
-            form: "Quercefit® (Indena quercetin phytosome) - v7.8 mandatory-branded sourcing",
+            form: "Quercefit® (Indena quercetin phytosome, sunflower lecithin), mandatory branded sourcing",
             rationale: "We use Quercefit® - Indena's quercetin phytosome - because it's the only quercetin form with human pharmacokinetic studies showing 20× higher bioavailability than plain quercetin. The phospholipid carrier (sunflower-derived lecithin, MCAS-safe) wraps the quercetin in a structure your gut absorbs efficiently. This is one of the few cases where the branded form is genuinely non-negotiable - generic 'quercetin phytosome' blends typically achieve only 1.5-2× the absorption of standard quercetin, far below Quercefit's 20× number. Quercefit® is the one mandatory branded sourcing in our formulation. Spec verified by Certificate of Analysis on every batch."
         },
         safety: {
@@ -2705,7 +2700,7 @@ export const ingredients: Record<string, IngredientData> = {
         faq: [
             { q: "Why include chromium in a formulation for hEDS/POTS/MCAS?", a: "Reactive hypoglycemia - a post-meal blood sugar dip - produces symptoms that overlap with POTS and MCAS: palpitations, sweating, shakiness, brain fog, sometimes anxiety. Many people in the triad have it without knowing, and it can amplify autonomic symptoms or trigger mast cell flares. Supporting normal glucose handling is foundational background work that addresses one common confounder. Chromium isn't a hero ingredient; it's part of the trace mineral floor that lets the more targeted ingredients do their work." },
             { q: "Will chromium interact with my POTS medications?", a: "No documented interactions with the standard POTS medication stack: beta-blockers, midodrine, fludrocortisone, ivabradine. Chromium picolinate doesn't engage the CYP enzymes that drive most drug interactions. Some interaction is theoretically possible with diabetes medications (insulin sensitizers) - if you're on metformin or insulin, mention chromium to your prescriber, since better glucose handling might mean your doses need adjustment. For most POTS patients without diabetes, chromium is a clean addition." },
-            { q: "Is chromium picolinate safe long-term?", a: "Yes. Chromium picolinate has decades of human use at the 200 mcg supplement dose without serious adverse events in trials running up to a year. Older case reports raised concerns at very high doses (1,000+ mcg over months) in people with kidney disease, but those don't apply to standard supplement levels. The biggest risk with chromium is buying poorly-made products - we source pharmaceutical-grade picolinate with full Certificate of Analysis on every batch." },
+            { q: "Is chromium picolinate safe long-term?", a: "Yes. Chromium picolinate has decades of human use at the 200 mcg supplement dose without serious adverse events in trials running up to a year. Older case reports raised concerns at very high doses (1,000+ mcg over months) in people with kidney disease, but those don't apply to standard supplement levels. The biggest risk with chromium is buying poorly-made products; we use USP-grade picolinate with a Certificate of Analysis on every batch." },
             { q: "What about chromium picolinate vs other chromium forms?", a: "Picolinate is the most-studied form with the best absorption - around 2-3% bioavailability, which is high for chromium (most forms are under 1%). Chromium chloride and chromium polynicotinate are alternatives, but neither has the same depth of human trial data. For an essential trace mineral where the goal is reliable repletion at a modest dose, picolinate is the standard choice. It's the form used in nearly every supplement study showing glucose-handling benefits." }
         ],
         triadPlain: {
@@ -2717,32 +2712,32 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "Chromium is an essential trace mineral that supports how your body responds to insulin and processes carbohydrates.",
             whyWeIncludeIt: "We include it at 200 micrograms - the standard supplement dose with the deepest human safety data - because the EDS/POTS/MCAS triad commonly comes with overlapping reactive hypoglycemia. Post-meal blood sugar dips can produce a cascade of symptoms (palpitations, brain fog, fatigue, shakiness) that mimic POTS flares and trigger mast cell activity.",
-            dose: "200 mcg AM (chromium picolinate)",
+            dose: "200 mcg daily as chromium picolinate (AM capsule)",
             keyBenefits: ["Supports insulin response and post-meal glucose handling at the well-studied 200 mcg supplement dose", "Reactive hypoglycemia is common in the triad and produces palpitations, brain fog, fatigue, and shakiness that mimic POTS flares", "Picolinate chelate delivers 2-3% bioavailability (the highest of any practical chromium form)", "Foundational trace mineral with the deepest human safety record (200 mcg is the standard supplement dose)"]
         },
         howItWorks: "Chromium is an essential trace mineral that supports how your body responds to insulin and processes carbohydrates. We include it at 200 micrograms - the standard supplement dose with the deepest human safety data - because the EDS/POTS/MCAS triad commonly comes with overlapping reactive hypoglycemia. Post-meal blood sugar dips can produce a cascade of symptoms (palpitations, brain fog, fatigue, shakiness) that mimic POTS flares and trigger mast cell activity. Supporting glucose regulation removes one common confounding variable. We use chromium picolinate - the most-studied form with the cleanest absorption profile of any practical chromium supplement.",
         research: [
             {
                 outcome: "Glucose Handling and Insulin Response",
-                summary: "Meta-analytic evidence in glucose-tolerance-impaired and type 2 diabetic populations consistently shows chromium supplementation supports more stable post-meal blood sugar and lower fasting glucose. Reactive hypoglycemia is the indirect mechanism that connects chromium to the triad: post-meal sugar dips drive adrenaline-mediated autonomic surges that mimic or amplify POTS flares.",
+                summary: "Chromium's role in insulin signaling and normal glucose metabolism is well characterized. Most human trials were run in adults with impaired glucose tolerance or type 2 diabetes, measuring fasting glucose and HbA1c; we cite them for chromium's role in glucose metabolism, not as a diabetes claim. ZebraThrive is not intended for diabetes.",
                 studies: [
                     {
                         source: "Suksomboon N et al., \"Systematic review and meta-analysis of the efficacy and safety of chromium supplementation in diabetes\"",
                         pmid: "24635480",
-                        design: "Systematic review + meta-analysis of 25 RCTs in T2DM",
-                        finding: "Chromium supplementation significantly reduced fasting plasma glucose (mean -1.0 mmol/L) and HbA1c (-0.55%) vs placebo; effect dose-dependent and most consistent with the picolinate form"
+                        design: "Systematic review + meta-analysis of 25 RCTs in adults with type 2 diabetes",
+                        finding: "Pooled trials measuring fasting glucose and HbA1c; the most consistent data came from the picolinate form; supplements were generally well tolerated"
                     },
                     {
-                        source: "Huang H et al., \"Chromium supplementation for adjuvant treatment of type 2 diabetes mellitus: results from a pooled analysis\"",
+                        source: "Huang H et al., pooled analysis of chromium trials (2017)",
                         pmid: "28677892",
-                        design: "Pooled analysis of RCTs in T2DM, 22 trials",
-                        finding: "Significant reductions in fasting glucose and HbA1c with chromium picolinate vs placebo; effect plateaued around 200-400 mcg/day with no added benefit at higher doses"
+                        design: "Pooled analysis of 22 RCTs in adults with type 2 diabetes",
+                        finding: "Glucose-handling measures were compared across doses; no added effect was seen above about 200-400 mcg/day"
                     },
                     {
                         source: "Ghosh D et al., \"Role of chromium supplementation in Indians with type 2 diabetes mellitus\"",
                         pmid: "12550067",
-                        design: "RCT, 50 T2DM patients, 400 mcg/day chromium picolinate vs placebo for 3 months",
-                        finding: "Significant improvements in fasting and post-prandial glucose and HbA1c in the chromium arm vs placebo"
+                        design: "RCT, 50 adults with type 2 diabetes, 400 mcg/day chromium picolinate vs placebo for 3 months",
+                        finding: "Fasting and post-meal glucose and HbA1c were measured; cited for chromium's role in glucose metabolism"
                     },
                     {
                         source: "Havel PJ, \"A scientific review: the role of chromium in insulin resistance\"",
@@ -2753,20 +2748,20 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             },
             {
-                outcome: "Cardiovascular and POTS-Relevant Effects",
-                summary: "A small RCT in T2DM showed chromium picolinate shortened the QTc interval (an autonomic marker), suggesting parasympathetic-side autonomic effects beyond glucose handling alone. Relevant context for the POTS-overlap reactive-hypoglycemia inclusion rationale.",
+                outcome: "Cardiac Electrical Measures (Higher-Dose Study)",
+                summary: "A small RCT in adults with type 2 diabetes, at 1,000 mcg/day (five times our dose), measured the QTc interval. It is not POTS data and did not test our dose.",
                 studies: [
                     {
                         source: "Vrtovec M et al., \"Chromium supplementation shortens QTc interval duration in patients with type 2 diabetes mellitus\"",
                         pmid: "15990745",
                         design: "Double-blind RCT, 60 T2DM patients, 1000 mcg/day chromium picolinate for 3 months",
-                        finding: "Chromium significantly shortened QTc interval vs placebo (consistent with improved autonomic balance); supports chromium's relevance beyond pure glycemic control"
+                        finding: "QTc interval was shorter with chromium than placebo after 3 months"
                     }
                 ]
             },
             {
                 outcome: "Long-Term Safety at Supplement Doses",
-                summary: "Chromium picolinate at the 200 mcg supplement dose has decades of human use without serious adverse events. Meta-analytic safety review confirms tolerability in T2DM populations and the dose well below the 1,000 mcg Tolerable Upper Intake Level.",
+                summary: "Chromium picolinate at the 200 mcg supplement dose has decades of human use without serious adverse events in trials.",
                 studies: [
                     {
                         source: "Georgaki MN et al., \"The role of chromium supplementation in human health and disease: a review\"",
@@ -2783,11 +2778,11 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "This is where chromium earns its inclusion. Many POTS patients have reactive hypoglycemia - a post-meal blood sugar dip that produces palpitations, sweating, brain fog, and shakiness that's easily mistaken for POTS flares (or that genuinely triggers POTS-like autonomic responses). Studies in glucose-tolerance-impaired patients consistently show chromium supplementation supports more stable post-meal blood sugar. Steadier glucose means fewer of the adrenaline-driven autonomic surges that come with a sugar crash. For POTS patients who notice clear post-meal symptom patterns, addressing the glucose layer can take meaningful pressure off the autonomic system."
         },
         whyThisForm: {
-            form: "Chromium picolinate, USP grade, 200 mcg AM",
+            form: "Chromium picolinate, USP grade, 200 mcg (AM capsule)",
             rationale: "We use chromium picolinate at 200 micrograms - the form and dose with the deepest human safety record. Chromium has terrible absorption in most forms (often under 1%); picolinic acid is a natural chelator that lifts absorption to around 2-3%, the highest of any practical supplement form. The 200 mcg dose sits in the well-studied range (50-400 mcg in trials), avoiding the cumulative concerns around the much higher doses (1,000+ mcg) used in some diabetes trials. This is a multivitamin-completion ingredient: modest dose, strong safety, real trace mineral coverage at negligible bulk weight."
         },
         safety: {
-            sideEffects: "Excellent tolerability at the 200 mcg supplement dose; decades of human use without serious adverse events in trials up to 12 months. Very rare reports of mild GI discomfort. The dose is one-fifth of the Tolerable Upper Intake Level (1,000 mcg), with substantial safety margin.",
+            sideEffects: "Excellent tolerability at the 200 mcg supplement dose; decades of human use without serious adverse events in trials up to 12 months. Very rare reports of mild GI discomfort. The US has not set a Tolerable Upper Intake Level for chromium; 200 mcg is a standard supplement amount.",
             interactions: "Theoretical interaction with diabetes medications (insulin, metformin); if you are on either, mention chromium to your prescriber since improved glucose handling might affect dosing requirements. Chromium picolinate does not engage CYP enzymes meaningfully and has no documented interactions with the standard POTS, MCAS, or hEDS medication stack.",
             excipientConcerns: {
                 avoid: ["Fermentation-derived sources", "Artificial colors", "Magnesium stearate"],
@@ -2806,10 +2801,10 @@ export const ingredients: Record<string, IngredientData> = {
     "chlorogenic-acid": {
         id: "chlorogenic-acid",
         name: "Chlorogenic Acid",
-        patientSummary: "Chlorogenic acid (CGA) is the polyphenol that gives green coffee beans most of their biological activity - separate from caffeine. For the triad, it brings three useful mechanisms: pro-collagen support in dermal fibroblasts at concentrations achievable from oral dosing, mast cell stabilization through both PPAR-gamma and NF-kB pathways, and modest cardiovascular support. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-β/Smad pathway while reducing MMP-1 and MMP-3 - a rare combination that supports ECM protection and gentle pro-collagen activity at the same time. We source from decaffeinated green coffee bean extract.",
-        whyThisFormPatient: "We source chlorogenic acid from decaffeinated green coffee bean extract, standardized to ≥45% CGAs by HPLC. The decaf spec matters: residual caffeine at supplement doses can trigger mast cell activation in sensitive MCAS patients, and the autonomic symptoms of POTS often worsen with caffeine. Our spec calls for under 2% residual caffeine on the COA, preferring under 0.1% - well below the threshold that affects symptoms. We specify water/CO₂ extraction (non-fermented) to avoid the histamine and tyramine that can ride along with poorly-sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder.",
+        patientSummary: "Chlorogenic acid (CGA) is the polyphenol that gives green coffee beans most of their biological activity - separate from caffeine. For the triad, it brings three useful mechanisms: pro-collagen support in dermal fibroblasts at concentrations achievable from oral dosing, mast cell stabilization through both PPAR-gamma and NF-kB pathways, and modest cardiovascular support. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-β/Smad pathway while reducing MMP-1 and MMP-3 - a rare combination that supports ECM protection and gentle pro-collagen activity at the same time. We source from decaffeinated green coffee bean extract (caffeine under 0.1%).",
+        whyThisFormPatient: "We source chlorogenic acid from decaffeinated green coffee bean extract, standardized to ≥45% CGAs by HPLC. The decaf spec matters: residual caffeine at supplement doses can trigger mast cell activation in sensitive MCAS patients, and the autonomic symptoms of POTS often worsen with caffeine. Our spec requires decaffeinated extract with caffeine under 0.1%, assayed on the COA for every lot. We specify water/CO₂ extraction (non-fermented) to avoid the histamine and tyramine that can ride along with poorly-sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder.",
         faq: [
-            { q: "Is chlorogenic acid the same as coffee?", a: "It's the polyphenol found in coffee, but a useful supplement dose is far higher than coffee delivers, and coffee brings caffeine that's a problem for many in this community. Our CGA comes from decaffeinated green coffee bean extract (unroasted bean has higher CGA than roasted coffee) at under 2% residual caffeine. The active compound, none of the caffeine-driven mast cell or autonomic effects." },
+            { q: "Is chlorogenic acid the same as coffee?", a: "It's the polyphenol found in coffee, but a useful supplement dose is far higher than coffee delivers, and coffee brings caffeine that's a problem for many in this community. Our CGA comes from decaffeinated green coffee bean extract (unroasted bean has higher CGA than roasted coffee) with caffeine under 0.1%. The active compound, none of the caffeine-driven mast cell or autonomic effects." },
             { q: "Will chlorogenic acid affect my blood pressure?", a: "Probably not at our dose. The cleanest meta-analyses show CGA produces a modest 2-3 mmHg systolic drop in hypertensive populations, with the effect essentially disappearing in normotensives (the floor effect). For most POTS patients with normal or low BP, CGA shouldn't be a hypotensive concern. Earlier '−7 to −10 mmHg' claims came from a now-retracted study; the current evidence is much more modest. If you're already running low on midodrine, mention it to your prescriber." },
             { q: "Does chlorogenic acid help with collagen or just mast cells?", a: "Both, which is unusual for a single ingredient. The collagen and mast cell mechanisms run through separate signaling pathways (TGF-β/Smad for collagen, PPAR-gamma and NF-kB for mast cells), and the pro-collagen effect happens without driving the anti-fibrotic activity that would be harmful in hEDS. See the How It Works and Addressing the Triad sections above for the full mechanism walk." },
             { q: "How does chlorogenic acid handle methylation?", a: "CGA is partly cleared through methylation, so it does draw on the methyl donor pool - but the demand is small at 200 mg/day relative to total methylation throughput. We balance the formulation with methylfolate and methylated B12 to keep that pool topped up. If you have known MTHFR variants and significant methylation concerns, mention CGA to your prescriber, but most people tolerate it without issue. Common foods like coffee, tea, and apples contribute similar methylation load daily." }
@@ -2823,7 +2818,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "Chlorogenic acid (CGA) is the polyphenol that gives green coffee beans most of their biological activity - separate from caffeine.",
             whyWeIncludeIt: "For the triad, it brings three useful mechanisms: pro-collagen support in dermal fibroblasts at concentrations achievable from oral dosing, mast cell stabilization through both PPAR-gamma and NF-kB pathways, and modest cardiovascular support. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-β/Smad pathway while reducing MMP-1 and MMP-3 - a rare combination that supports ECM protection and gentle pro-collagen activity at the same time.",
-            dose: "200 mg CGA (Daily Powder)",
+            dose: "200 mg chlorogenic acid daily (from about 444 mg decaffeinated green coffee bean extract) in the Daily Powder, split AM and PM scoops",
             keyBenefits: ["Increases Type I collagen synthesis via TGF-beta/Smad pathway at oral-achievable concentrations", "Reduces MMP-1 and MMP-3 (matrix-degrading enzymes elevated in hEDS dermal fibroblasts)", "Mast cell stabilization via PPAR-gamma and Akt1/NF-kB pathways", "Decaffeinated green coffee bean sourcing avoids caffeine triggers common in MCAS and POTS"]
         },
         howItWorks: "Chlorogenic acid (CGA) is the polyphenol that gives green coffee beans most of their biological activity - separate from caffeine. For the triad, it brings three useful mechanisms: pro-collagen support in dermal fibroblasts at concentrations achievable from oral dosing, mast cell stabilization through both PPAR-gamma and NF-kB pathways, and modest cardiovascular support. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-β/Smad pathway while reducing MMP-1 and MMP-3 - a rare combination that supports ECM protection and gentle pro-collagen activity at the same time. We source from decaffeinated green coffee bean extract.",
@@ -2883,14 +2878,14 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "CGA's POTS relevance is the polyphenol family of effects: gentle support for endothelial function, modest BP effects (only meaningful in hypertensives, essentially neutral in normotensives), and the trace cardiovascular benefits that come with reducing oxidative stress. The bigger story for the triad is the mast cell side - many POTS patients have overlapping MCAS, and CGA addresses both. The decaffeinated sourcing also matters specifically for POTS: caffeine is a major POTS trigger, and we deliberately avoid it. Getting the polyphenol without the caffeine is the point."
         },
         whyThisForm: {
-            form: "Decaffeinated green coffee bean extract, >=45% CGAs by HPLC (COA-verified)",
-            rationale: "We source chlorogenic acid from decaffeinated green coffee bean extract, standardized to ≥45% CGAs by HPLC. The decaf spec matters: residual caffeine at supplement doses can trigger mast cell activation in sensitive MCAS patients, and the autonomic symptoms of POTS often worsen with caffeine. Our spec calls for under 2% residual caffeine on the COA, preferring under 0.1% - well below the threshold that affects symptoms. We specify water/CO2 extraction (non-fermented) to avoid the histamine and tyramine that can ride along with poorly-sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder."
+            form: "Decaffeinated green coffee bean extract, ≥45% CGAs by HPLC, caffeine under 0.1% (COA-verified)",
+            rationale: "We source chlorogenic acid from decaffeinated green coffee bean extract, standardized to ≥45% CGAs by HPLC. The decaf spec matters: caffeine can trigger mast cell activation in sensitive people, and many in the POTS community avoid it. Decaffeination is required, with caffeine under 0.1% assayed on the COA for every lot. We specify water/CO2 extraction (non-fermented) to avoid the histamine and tyramine that can ride along with poorly-sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder."
         },
         safety: {
             sideEffects: "Excellent tolerability in human cardiovascular and metabolic trials at 200-400 mg/day. Mild GI discomfort possible at high single doses. The decaffeinated, non-fermented sourcing eliminates the caffeine and biogenic-amine triggers that affect this population.",
             interactions: "Modest BP-lowering effect in hypertensive populations (2-3 mmHg systolic in meta-analyses); neutral in normotensives. If you are on midodrine or other BP-supporting medications and prone to symptomatic hypotension, mention CGA to your prescriber. CGA undergoes methylation clearance; the demand is small at 200 mg/day but we balance with methylfolate and methylated B12 in the formulation.",
             excipientConcerns: {
-                avoid: ["Fermented botanical sources", "Residual caffeine above 2%", "Artificial colors"],
+                avoid: ["Fermented botanical sources", "Residual caffeine at or above 0.1%", "Artificial colors"],
                 safe: ["HPMC capsules", "Rice flour", "Cellulose"]
             }
         },
@@ -2914,7 +2909,7 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "What's niacinamide's role alongside NR?", a: "NR (nicotinamide riboside) is the more efficient NAD+ precursor - it raises blood NAD+ levels more reliably than niacinamide does. Niacinamide at 50 mg provides additional NAD+ pathway support and a different downstream metabolite profile, including the historical mast cell stabilization data from older lab studies. Think of niacinamide as broad B3 coverage and NR as targeted NAD+ raise. We include both because they cover different aspects of the vitamin B3 family at low cumulative cost." }
         ],
         triadPlain: {
-            mcas: "Niacinamide has mixed evidence in MCAS, and we navigate it carefully. The favorable side: older lab studies (Bekier 1974, 1975) showed niacinamide inhibits mast cell degranulation similarly to cromolyn. The constraint: human data at higher doses raises a methylation/histamine concern, which is why we cap at the conservative dose described in Why This Form. We also include methylfolate and methylated B12 to keep the methyl donor pool topped up. A conservative middle path that respects what the human data actually shows.",
+            mcas: "Niacinamide has mixed evidence in MCAS, and we navigate it carefully. The favorable side: older lab studies (Bekier 1974, 1975) showed niacinamide inhibits mast cell degranulation. The constraint: human data at higher doses raises a methylation/histamine concern, which is why we cap at the conservative dose described in Why This Form. We also include methylfolate and methylated B12 to keep the methyl donor pool topped up. A conservative middle path that respects what the human data actually shows.",
             heds: "For hEDS, niacinamide contributes pro-collagen activity in dermal fibroblasts - part of the broader connective tissue support stack, though not a hero ingredient at our 50 mg dose. The bigger contribution is NAD+ pathway support alongside NR, which feeds the sirtuin-MMP axis (SIRT1/SIRT6 activation reduces MMP-1 and MMP-9 expression in dermal fibroblasts and tenocytes). At our conservative dose, niacinamide is a foundation B-vitamin for hEDS rather than a targeted intervention. The targeted ECM-protective work happens through the polyphenols and direct MMP-modulating ingredients elsewhere in the formulation.",
             pots: "Niacinamide's POTS relevance is mitochondrial: NAD+ pathway support for the chronic fatigue that frequently shadows POTS (many POTS patients also meet ME/CFS criteria). Niacinamide alongside NR provides broader B3 coverage for mitochondrial energy production. The 50 mg dose is deliberately conservative enough not to push methylation balance, which matters because methylation competition can affect catecholamine metabolism - and catecholamine handling is already disordered in POTS. The conservative dose is itself part of the POTS-friendliness, alongside the methylation-supporting B-vitamins that anchor that pathway."
         },
@@ -2922,7 +2917,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "Niacinamide is vitamin B3 in its amide form - different from niacin, which causes flushing through prostaglandin release.",
             whyWeIncludeIt: "Niacinamide is non-flushing and historically demonstrates mast cell stabilizing effects in lab models. It supports skin barrier function, NAD+ production, and pro-collagen activity in dermal fibroblasts at concentrations achievable from supplementation.",
-            dose: "50 mg AM",
+            dose: "50 mg daily (AM capsule)",
             keyBenefits: ["Non-flushing B3 form (niacin's flush is prostaglandin-driven and reads as a controlled mast cell event)", "Historical mast cell stabilizing effects in lab models (Bekier 1974, 1975)", "Pro-collagen activity in dermal fibroblasts at supplemental doses", "Conservative 50 mg dose stays below the methylation-driven histamine threshold flagged in human data"]
         },
         howItWorks: "Niacinamide is vitamin B3 in its amide form - different from niacin, which causes flushing through prostaglandin release. Niacinamide is non-flushing and historically demonstrates mast cell stabilizing effects in lab models. It supports skin barrier function, NAD+ production, and pro-collagen activity in dermal fibroblasts at concentrations achievable from supplementation. For the triad specifically, we use a conservative 50 mg dose because human data shows higher doses can transiently raise plasma histamine through methylation pathway competition - important to know for an MCAS-aware formulation. At 50 mg, niacinamide hits the benefit profile without the histamine concern.",
@@ -2968,7 +2963,7 @@ export const ingredients: Record<string, IngredientData> = {
                 summary: "Niacinamide functions as a complementary B3 form alongside Nicotinamide Riboside for NAD+ pathway support. Recent mechanistic work documents the NAD-boosting class as a mast cell stabilizing pathway through SIRT6 signaling.",
                 studies: [
                     {
-                        source: "Kim DJ et al., \"NAD-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice\"",
+                        source: "Kim HW et al., \"NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice\"",
                         pmid: "35547746",
                         design: "Mouse + human cord blood-derived mast cell + cell models",
                         finding: "NAD-boosting molecules (NMN and NR) suppress mast cell degranulation through SIRT6 pathway; the same NAD+ axis niacinamide contributes to at a smaller magnitude"
@@ -2977,7 +2972,7 @@ export const ingredients: Record<string, IngredientData> = {
             }
         ],
         triad: {
-            mcas: "Niacinamide has mixed evidence in MCAS - and we navigate it carefully. Older lab studies (Bekier 1974, 1975) showed niacinamide inhibits mast cell degranulation similarly to cromolyn, which is favorable. But a 2013 human study showed 100 mg raised plasma histamine through methylation pathway competition, which is unfavorable. We dose at 50 mg specifically to capture the mast-cell-stabilizing side without crossing into the methylation/histamine threshold. We also include methylfolate and methylated B12 to keep the methyl donor pool topped up. A conservative middle path that respects what the human data actually shows.",
+            mcas: "Niacinamide has mixed evidence in MCAS - and we navigate it carefully. Older lab studies (Bekier 1974, 1975) showed niacinamide inhibits mast cell degranulation, which is favorable. But a 2013 human study showed 100 mg raised plasma histamine through methylation pathway competition, which is unfavorable. We dose at 50 mg specifically to capture the mast-cell-stabilizing side without crossing into the methylation/histamine threshold. We also include methylfolate and methylated B12 to keep the methyl donor pool topped up. A conservative middle path that respects what the human data actually shows.",
             heds: "For hEDS, niacinamide contributes pro-collagen activity in dermal fibroblasts - part of the broader connective tissue support stack, though not a hero ingredient at our 50 mg dose. The bigger contribution is NAD+ pathway support alongside NR, which feeds the sirtuin-MMP axis (SIRT1/SIRT6 activation reduces MMP-1 and MMP-9 expression in dermal fibroblasts and tenocytes). At our conservative dose, niacinamide is a foundation B-vitamin for hEDS rather than a targeted intervention. The targeted ECM-protective work happens through the polyphenols and direct MMP-modulating ingredients elsewhere in the formulation.",
             pots: "Niacinamide's POTS relevance is mitochondrial: NAD+ pathway support for the chronic fatigue that frequently shadows POTS (many POTS patients also meet ME/CFS criteria). Niacinamide alongside NR provides broader B3 coverage for mitochondrial energy production. The 50 mg dose is deliberately conservative enough not to push methylation balance, which matters because methylation competition can affect catecholamine metabolism - and catecholamine handling is already disordered in POTS. The conservative dose is itself part of the POTS-friendliness, alongside the methylation-supporting B-vitamins that anchor that pathway."
         },
@@ -2998,37 +2993,37 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Kinetic Mechanism of Nicotinamide N-Methyltransferase", pmid: "30148963", authors: "Loring HS, Thompson PR", year: "2018" },
             { title: "Safety of high-dose nicotinamide: a review", pmid: "11126400", authors: "Knip M et al.", year: "2000" },
             { title: "Final report of the safety assessment of niacinamide and niacin", pmid: "16596767", authors: "Cosmetic Ingredient Review Expert Panel", year: "2005" },
-            { title: "NAD-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice", pmid: "35547746", authors: "Kim DJ et al.", year: "2022" }
+            { title: "NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice", pmid: "35547746", authors: "Kim HW et al.", year: "2022" }
         ]
     },
     "r5p": {
         id: "r5p",
         name: "R5P (Riboflavin-5-Phosphate)",
-        patientSummary: "R5P is the activated form of vitamin B2 (riboflavin) - your body normally has to convert plain riboflavin into R5P before it can do its work as a cofactor. For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin has decades of clinical evidence in migraine prophylaxis (relevant because around 65% of POTS patients also have migraines) and supports mitochondrial energy production through the electron transport chain. We use the activated form because the conversion step can be impaired.",
-        whyThisFormPatient: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg - well above the basic vitamin requirement but conservative compared to the 400 mg used in migraine prophylaxis trials. It's an MTHFR-friendly dose for daily methylation support without crossing into therapeutic migraine territory.",
+        patientSummary: "R5P is the activated form of vitamin B2 (riboflavin) - your body normally has to convert plain riboflavin into R5P before it can do its work as a cofactor. For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin also supports mitochondrial energy production through the electron transport chain. We use the activated form because the conversion step can be impaired.",
+        whyThisFormPatient: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg, well above the basic vitamin requirement and far below the 400 mg used in some high-dose riboflavin studies. It is a daily B2 and methylation-cofactor dose.",
         faq: [
             { q: "Why R5P instead of regular riboflavin?", a: "Riboflavin needs to be converted by an enzyme called riboflavin kinase before your body can use it as a cofactor. That conversion can be impaired in chronic illness, inflammation, hypothyroidism, or methylation pathway issues - all common in this community. R5P is the already-activated form, so it skips the conversion step and goes directly to work. The bioavailability advantage isn't dramatic for healthy people, but for people whose enzyme systems are running compromised, it's a more reliable path." },
-            { q: "Does R5P help with my migraines?", a: "At our 25 mg dose, the migraine effect would be modest - the riboflavin migraine prophylaxis trials used 400 mg/day (16x higher) for 3 months. At 400 mg, about 59% of patients achieve at least 50% reduction in headache days. If migraine is a major issue, you'd need a higher dose than we provide. Our R5P is dosed for daily methylation and mitochondrial support, with migraine support as a modest secondary benefit rather than a primary intervention." },
+            { q: "Is R5P in the formula for headaches?", a: "No. Our 25 mg dose is for daily B2 coverage, MTHFR cofactor support, and mitochondrial energy support. Riboflavin studies in people with headache conditions used 400 mg/day, 16 times our dose. This formula is not intended for any headache condition; talk with your clinician about headache care." },
             { q: "Why does MTHFR matter for the riboflavin dose?", a: "MTHFR is the enzyme that converts folate into its active methyl form - what your body actually uses for methylation. R5P (as FAD) is MTHFR's required cofactor. In people with MTHFR C677T variants (about 85% of hEDS patients carry at least one copy), the enzyme is less stable and more dependent on R5P availability to work properly. Daily R5P at 25 mg supports stable MTHFR function, which keeps methylation working, which affects everything from neurotransmitter handling to histamine clearance." },
             { q: "Will R5P interact with my medications?", a: "R5P doesn't have documented interactions with the standard POTS or MCAS medication stack. It doesn't engage CYP enzymes meaningfully, and at 25 mg the methylation load is small. Some medications used in autoimmune and psychiatric conditions (methotrexate, tetracyclines, anti-malarials) can interact with riboflavin metabolism - if you're on any of those, mention R5P to your prescriber. For most patients, it's one of the cleaner B-vitamin choices alongside standard meds." }
         ],
         triadPlain: {
             mcas: "R5P doesn't directly engage mast cells - it's a vitamin B2 cofactor. The MCAS-relevant role is indirect and important: methylation. Your body breaks down histamine through HNMT (histamine N-methyltransferase), which needs methyl groups from SAMe, which needs the methyl-folate cycle, which needs MTHFR, which needs R5P. So R5P keeps the histamine clearance pathway functional from the back end. For MCAS patients with MTHFR variants - and most have them - R5P is part of why the methylation support stack (methylfolate, methylated B12, R5P) actually works together. Foundational, not a hero ingredient.",
             heds: "For hEDS, R5P contributes on two layers. First, mitochondrial energy: riboflavin is the precursor to FAD and FMN, the cofactors for Complex I and Complex II of the electron transport chain. Fibroblasts with mitochondrial dysfunction upregulate MMP-1 (the matrix-degrading enzyme), and supporting energy production at the cellular level helps keep that pathway quieter. Second, methylation: 85% of hEDS patients carry MTHFR variants, and R5P is the cofactor MTHFR needs to do its job. Better methylation supports the whole downstream pathway - neurotransmitters, histamine, homocysteine handling, methyl group availability.",
-            pots: "For POTS, R5P contributes on two layers: mitochondrial energy support for the deep fatigue that frequently shadows POTS (many patients also meet ME/CFS criteria), and methylation support that matters for catecholamine breakdown through COMT. Our 25 mg dose is well below the 400 mg used in migraine prophylaxis trials but provides daily baseline coverage relevant to the migraine-POTS overlap. Foundational rather than a primary intervention."
+            pots: "For POTS, R5P contributes on two layers: mitochondrial energy support for the deep fatigue that frequently shadows POTS (many patients also meet ME/CFS criteria), and methylation support that matters for catecholamine breakdown through COMT. Foundational rather than a primary ingredient."
         },
-        bluf: "R5P is the activated form of vitamin B2 that bypasses the conversion step plain riboflavin requires. Around 85% of hEDS patients carry MTHFR variants where R5P is the cofactor needed for proper methylation. Riboflavin also has strong evidence in migraine prophylaxis, relevant for the 65% of POTS patients who get migraines. ZebraThrive uses 25 mg AM.",
+        bluf: "R5P is the activated form of vitamin B2 that bypasses the conversion step plain riboflavin requires. Around 85% of hEDS patients carry MTHFR variants where R5P is the cofactor needed for proper methylation. Riboflavin also supports mitochondrial energy production. ZebraThrive uses 25 mg daily in the AM capsule.",
         atAGlance: {
             whatItIs: "R5P is the activated form of vitamin B2 (riboflavin) - your body normally has to convert plain riboflavin into R5P before it can do its work as a cofactor.",
-            whyWeIncludeIt: "For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin has decades of clinical evidence in migraine prophylaxis (relevant because around 65% of POTS patients also have migraines) and supports mitochondrial energy production through the electron transport chain.",
-            dose: "25 mg AM",
-            keyBenefits: ["Activated FAD/FMN cofactor; bypasses the conversion step plain riboflavin requires", "MTHFR-cofactor: keeps methylation working in the ~85% of hEDS patients with MTHFR variants", "Mitochondrial energy: cofactor for Complex I and Complex II of the electron transport chain", "Daily B2 coverage at MTHFR-friendly 25 mg (well below the 400 mg used for migraine prophylaxis)"]
+            whyWeIncludeIt: "For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin also supports mitochondrial energy production through the electron transport chain.",
+            dose: "25 mg daily (AM capsule)",
+            keyBenefits: ["Activated FAD/FMN cofactor; bypasses the conversion step plain riboflavin requires", "MTHFR-cofactor: keeps methylation working in the ~85% of hEDS patients with MTHFR variants", "Mitochondrial energy: cofactor for Complex I and Complex II of the electron transport chain", "Daily B2 coverage at an MTHFR-friendly 25 mg"]
         },
-        howItWorks: "R5P is the activated form of vitamin B2 (riboflavin) - your body normally has to convert plain riboflavin into R5P before it can do its work as a cofactor. For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin has decades of clinical evidence in migraine prophylaxis (relevant because around 65% of POTS patients also have migraines) and supports mitochondrial energy production through the electron transport chain. We use the activated form because the conversion step can be impaired.",
+        howItWorks: "R5P is the activated form of vitamin B2 (riboflavin) - your body normally has to convert plain riboflavin into R5P before it can do its work as a cofactor. For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin also supports mitochondrial energy production through the electron transport chain. We use the activated form because the conversion step can be impaired.",
         research: [
             {
                 outcome: "MTHFR Cofactor Support and Blood Pressure",
-                summary: "Riboflavin (as FAD) is the cofactor for MTHFR. In people with MTHFR C677T variants (around 85% of hEDS patients carry at least one copy), the enzyme is less stable and more dependent on riboflavin availability. RCT evidence in TT-homozygous adults shows targeted riboflavin supplementation produces clinically meaningful blood-pressure improvements, confirming the genotype-cofactor interaction.",
+                summary: "Riboflavin (as FAD) is the cofactor for MTHFR. In people with MTHFR C677T variants (around 85% of hEDS patients carry at least one copy), the enzyme is less stable and more dependent on riboflavin availability. Studies in adults with the TT genotype have measured blood pressure in relation to riboflavin status, illustrating the genotype-cofactor interaction.",
                 studies: [
                     {
                         source: "Rooney M et al., \"Higher levels of dietary B vitamins are associated with better blood pressure in homozygous MTHFR 677TT adults\"",
@@ -3046,58 +3041,45 @@ export const ingredients: Record<string, IngredientData> = {
                         source: "McAuley E et al., \"Riboflavin status, MTHFR genotype and blood pressure\"",
                         pmid: "27170501",
                         design: "Narrative + targeted review",
-                        finding: "Summarises RCT evidence that riboflavin supplementation in TT homozygotes reduces SBP by 5-13 mmHg; identifies riboflavin as a modifiable factor for the most common genetic cause of hypertension"
+                        finding: "Reviews trials of riboflavin in adults with the MTHFR 677TT genotype in which blood pressure was measured"
                     }
                 ]
             },
             {
-                outcome: "Migraine Prophylaxis (Reference Dose)",
-                summary: "Riboflavin has decades of clinical evidence in migraine prophylaxis at the reference dose of 400 mg/day; meta-analytic evidence supports a meaningful reduction in monthly headache days. Our 25 mg dose is well below the migraine-prophylactic range and is positioned as foundational methylation support, not migraine treatment.",
+                outcome: "High-Dose Riboflavin Research (400 mg/day)",
+                summary: "Studies in adults with migraine have used riboflavin at 400 mg/day, 16 times our dose. We cite them as human data on riboflavin tolerability at high intakes. Our 25 mg dose is for daily B2 and methylation-cofactor coverage; ZebraThrive is not intended for migraine or any headache condition.",
                 studies: [
                     {
                         source: "Chen YS et al., \"Effects of vitamin B2 supplementation in adults with migraine: a systematic review and meta-analysis\"",
                         pmid: "33779525",
-                        design: "Systematic review + meta-analysis of 9 studies, 673 subjects, riboflavin 400 mg/day",
-                        finding: "Riboflavin supplementation reduced monthly migraine days and frequency vs placebo; effect size consistent across studies"
+                        design: "Systematic review + meta-analysis of 9 studies, 673 adults with migraine, riboflavin 400 mg/day",
+                        finding: "Pooled studies that measured migraine days and frequency at 400 mg/day; riboflavin was well tolerated"
                     },
                     {
                         source: "Pringsheim T et al., \"Canadian Headache Society guideline for migraine prophylaxis\"",
                         pmid: "22683887",
                         design: "Evidence-graded clinical practice guideline",
-                        finding: "Riboflavin given a strong recommendation for migraine prophylaxis based on consistent RCT evidence"
-                    },
-                    {
-                        source: "Sándor PS et al., \"Efficacy of coenzyme Q10 in migraine prophylaxis: a randomized controlled trial\"",
-                        pmid: "15728298",
-                        design: "Randomized, placebo-controlled trial in episodic migraine",
-                        finding: "Comparator trial confirming riboflavin as established migraine prophylactic; situates B2 within the mitochondrial-energy class of preventives"
+                        finding: "Graded the evidence for high-dose riboflavin in adults with migraine"
                     }
                 ]
             },
             {
                 outcome: "Mitochondrial Energy and FAD/FMN Cofactor Role",
-                summary: "Riboflavin is the precursor to FAD and FMN, the cofactors for Complex I and Complex II of the electron transport chain and the FAD-dependent flavoproteins of fatty acid beta-oxidation. The mitochondrial mechanism is why riboflavin works for migraine and is mechanistically relevant to the deep fatigue many POTS and hEDS patients experience.",
-                studies: [
-                    {
-                        source: "Sándor PS et al., \"Efficacy of coenzyme Q10 in migraine prophylaxis: a randomized controlled trial\"",
-                        pmid: "15728298",
-                        design: "RCT placing riboflavin alongside CoQ10 in the mitochondrial-energy class",
-                        finding: "Establishes mitochondrial energy support (riboflavin -> FAD/FMN -> Complex I/II) as the mechanistic class for migraine prophylaxis and post-exertional fatigue"
-                    }
-                ]
+                summary: "Riboflavin is the precursor to FAD and FMN, the cofactors for Complex I and Complex II of the electron transport chain and the FAD-dependent flavoproteins of fatty acid beta-oxidation. This is textbook biochemistry and the reason riboflavin is relevant to cellular energy.",
+                studies: []
             }
         ],
         triad: {
             mcas: "R5P doesn't directly engage mast cells - it's a vitamin B2 cofactor. The MCAS-relevant role is indirect and important: methylation. Your body breaks down histamine through HNMT (histamine N-methyltransferase), which needs methyl groups from SAMe, which needs the methyl-folate cycle, which needs MTHFR, which needs R5P. So R5P keeps the histamine clearance pathway functional from the back end. For MCAS patients with MTHFR variants - and most have them - R5P is part of why the methylation support stack (methylfolate, methylated B12, R5P) actually works together. Foundational, not a hero ingredient.",
             heds: "For hEDS, R5P contributes on two layers. First, mitochondrial energy: riboflavin is the precursor to FAD and FMN, the cofactors for Complex I and Complex II of the electron transport chain. Fibroblasts with mitochondrial dysfunction upregulate MMP-1 (the matrix-degrading enzyme), and supporting energy production at the cellular level helps keep that pathway quieter. Second, methylation: 85% of hEDS patients carry MTHFR variants, and R5P is the cofactor MTHFR needs to do its job. Better methylation supports the whole downstream pathway - neurotransmitters, histamine, homocysteine handling, methyl group availability.",
-            pots: "For POTS, R5P has two relevant angles. The first is mitochondrial energy support for the deep fatigue that frequently shadows POTS - many POTS patients also meet ME/CFS criteria. The second is migraine: around 65% of POTS patients also live with migraines, and riboflavin has the strongest clinical data of any nutrient for migraine prophylaxis. Our 25 mg dose is well below the 400 mg used in migraine trials, but it provides daily baseline support. For methylation-related autonomic effects (catecholamine breakdown depends on methylation), R5P plays a quiet but important supporting role."
+            pots: "For POTS, R5P's main angle is mitochondrial energy support for the deep fatigue that frequently shadows POTS (many POTS patients also meet ME/CFS criteria). For methylation-related autonomic effects (catecholamine breakdown depends on methylation), R5P plays a quiet but important supporting role."
         },
         whyThisForm: {
-            form: "Riboflavin-5-Phosphate (R5P), USP grade, 25 mg AM",
-            rationale: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg - well above the basic vitamin requirement but conservative compared to the 400 mg used in migraine prophylaxis trials. It's an MTHFR-friendly dose for daily methylation support without crossing into therapeutic migraine territory."
+            form: "Riboflavin-5-Phosphate (R5P), USP grade, 25 mg (AM capsule)",
+            rationale: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg, well above the basic vitamin requirement and far below the 400 mg used in some high-dose riboflavin studies. It is a daily B2 and methylation-cofactor dose."
         },
         safety: {
-            sideEffects: "Excellent safety profile. May cause harmless bright yellow urine color (excreted excess riboflavin). No clinically meaningful adverse events at the 25 mg dose; trial doses up to 400 mg/day for migraine prophylaxis have been used safely for 3+ months.",
+            sideEffects: "Excellent safety profile. May cause harmless bright yellow urine color (excreted excess riboflavin). No clinically meaningful adverse events at the 25 mg dose; study doses up to 400 mg/day have been used safely for 3+ months.",
             interactions: "Methotrexate users should mention any methylated B-vitamin stack to their prescriber, as methylated cofactors can affect methotrexate's antifolate mechanism. Some antiepileptics (phenobarbital, carbamazepine) and tetracycline antibiotics can interact with riboflavin metabolism; mention to your prescriber if you are on any of those. Otherwise, R5P has one of the cleaner interaction profiles among B vitamins.",
             excipientConcerns: {
                 avoid: ["Fermentation-derived sources", "Artificial colors", "Magnesium stearate"],
@@ -3109,8 +3091,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Higher levels of dietary B vitamins are associated with better blood pressure in homozygous MTHFR 677TT adults", pmid: "32330571", authors: "Rooney M et al.", year: "2020" },
             { title: "Impact of the MTHFR C677T polymorphism on blood pressure phenotype: results from the JINGO project", pmid: "35821207", authors: "Rooney M et al.", year: "2022" },
             { title: "Riboflavin status, MTHFR genotype and blood pressure", pmid: "27170501", authors: "McAuley E et al.", year: "2016" },
-            { title: "Canadian Headache Society guideline for migraine prophylaxis", pmid: "22683887", authors: "Pringsheim T et al.", year: "2012" },
-            { title: "Efficacy of coenzyme Q10 in migraine prophylaxis: a randomized controlled trial", pmid: "15728298", authors: "Sandor PS et al.", year: "2005" }
+            { title: "Canadian Headache Society guideline for migraine prophylaxis", pmid: "22683887", authors: "Pringsheim T et al.", year: "2012" }
         ]
     }
 

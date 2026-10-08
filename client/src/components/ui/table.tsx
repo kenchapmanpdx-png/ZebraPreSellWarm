@@ -4,9 +4,16 @@ import { cn } from "@/lib/utils"
 
 const Table = React.forwardRef<
   HTMLTableElement,
-  React.HTMLAttributes<HTMLTableElement>
->(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto">
+  React.HTMLAttributes<HTMLTableElement> & { regionLabel?: string }
+>(({ className, regionLabel, ...props }, ref) => (
+  // Focusable, labelled scroll container so keyboard users can scroll
+  // tables that overflow on small screens (WCAG 2.1.1).
+  <div
+    className="relative w-full overflow-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8F5238]"
+    tabIndex={0}
+    role="region"
+    aria-label={regionLabel ?? "Table"}
+  >
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
