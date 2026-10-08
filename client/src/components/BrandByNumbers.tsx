@@ -32,9 +32,9 @@ const stats = [
   },
   {
     target: 0,
-    suffix: ' fillers',
-    label: 'Excipient policy',
-    blurb: 'No magnesium stearate, no titanium dioxide, no citric acid.',
+    suffix: ' hidden',
+    label: 'Excipients',
+    blurb: 'Every excipient listed, down to the carriers some vitamins arrive on.',
   },
 ];
 

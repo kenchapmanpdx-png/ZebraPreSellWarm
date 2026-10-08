@@ -31,7 +31,7 @@ export default function TheHow() {
                 <strong>For POTS,</strong> most of the help comes indirectly. We support cellular energy production (NR, benfotiamine, taurine), help calm the overactive autonomic nervous system (L-theanine, the methylation B-vitamins), and reduce the mast cell and inflammation activity that drives so many POTS symptoms. Vitamin D3 has the most direct POTS evidence on the list - a 2025 study in young patients showed 74% symptom improvement at 800 IU daily.
               </p>
               <p className="border-l-4 border-[#B36B4D]/60 pl-6 py-2 bg-white/40 rounded-r-xl">
-                <strong>Underneath all three layers: ruthless excipient discipline.</strong> No magnesium stearate, no titanium dioxide, no citric acid, no carrageenan, no FD&amp;C dyes, no fermented ingredients, no corn or soy derivatives. HPMC capsules. Rice hull and L-leucine as flow agents. Sodium ascorbate buffered for MCAS guts. Quality before convenience, on every line.
+                <strong>Underneath all three layers: ruthless excipient discipline.</strong> No magnesium stearate, no titanium dioxide, no citric acid, no carrageenan, no FD&amp;C dyes, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. HPMC capsules. Rice hull concentrate and L-leucine as flow agents. Every carrier listed, down to the milligram. Sodium ascorbate buffered for MCAS guts. Quality before convenience, on every line.
               </p>
             </div>
           </div>

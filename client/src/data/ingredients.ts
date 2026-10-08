@@ -164,7 +164,7 @@ export const ingredients: Record<string, IngredientData> = {
             interactions: "PEA has NO documented drug interactions with any POTS or MCAS medications across 4,000+ patients in historical data. This includes beta-blockers, ivabradine, fludrocortisone, midodrine, hydroxyzine, cromolyn, ketotifen, and all H1/H2 blockers.",
             excipientConcerns: {
                 avoid: ["Artificial dyes", "Sodium benzoate", "PEG (polyethylene glycol)", "Titanium dioxide coatings"],
-                safe: ["Cotton-based microcrystalline cellulose", "Silica", "Rice flour"]
+                safe: ["Microcrystalline cellulose", "Silica", "Rice flour"]
             },
             cautions: "A subset of MCAS patients (10-30%) may experience temporary \"paradoxical worsening\" during the first 1-2 weeks; this represents the endocannabinoid system adjusting before therapeutic levels are achieved. Resolves with continued use, minimized by slow titration. PPAR-alpha activation may slightly lower blood pressure; hypotensive POTS patients should monitor BP during initiation. Avoid formulations containing common MCAS triggers."
         },
@@ -272,7 +272,7 @@ export const ingredients: Record<string, IngredientData> = {
             sideEffects: "Luteolin demonstrates an excellent safety profile in clinical trials up to 26 weeks. Very few adverse effects are reported even in highly reactive MCAS individuals. Unlike quercetin, which causes paradoxical reactions in 10-15% of MCAS patients, luteolin is generally well-tolerated.",
             interactions: "Luteolin shows minimal CYP450 enzyme interactions. No direct interactions found with beta blockers, antihistamines, fludrocortisone, midodrine, or cromolyn/ketotifen. Theoretical caution with anticoagulants (may enhance effects).",
             excipientConcerns: {
-                avoid: ["Microcrystalline cellulose (wood-derived)", "Magnesium stearate", "FD&C dyes", "Sodium lauryl sulfate"],
+                avoid: ["Magnesium stearate", "FD&C dyes", "Sodium lauryl sulfate"],
                 safe: ["Sunflower lecithin", "Olive pomace oil", "Rice flour"]
             },
             cautions: "Not recommended during pregnancy or breastfeeding pending more human safety data. Discontinue 2 weeks before surgery. Iron supplements may reduce absorption; space by 2+ hours. Allow 4-6 weeks for full therapeutic effect."
@@ -297,7 +297,7 @@ export const ingredients: Record<string, IngredientData> = {
         id: "magnesium-bisglycinate",
         name: "Magnesium Bisglycinate",
         patientSummary: "Magnesium bisglycinate is magnesium bonded to two glycine amino acids - a gentle form that absorbs well without the laxative effect you get from cheaper magnesium forms like oxide or citrate. For the EDS/POTS/MCAS triad, magnesium is foundational. Most people in this community run low on it, and being low triggers mast cell instability, sympathetic overdrive, and lousy sleep. The bisglycinate form has the cleanest gut profile and the best human trial data for sleep quality and heart rate variability. We chose it over magnesium oxide (barely absorbed) and threonate (more expensive without the across-the-board benefits).",
-        whyThisFormPatient: "We use magnesium bisglycinate - magnesium chelated to two glycine amino acids. The chelate gets absorbed through PepT1, the peptide transporter, instead of the routes that cause the laxative effect of citrate or oxide. Albion's TRAACS form is the preferred sourcing because the chelation is verified analytically - many cheaper 'bisglycinate' products are actually magnesium oxide buffered with glycine, not true chelate. We deliver 2,400 mg of the bisglycinate salt to give you 300 mg of elemental magnesium - the dose with actual HRV and sleep trial data in human studies.",
+        whyThisFormPatient: "We use magnesium bisglycinate - magnesium chelated to two glycine amino acids. The chelate gets absorbed through PepT1, the peptide transporter, instead of the routes that cause the laxative effect of citrate or oxide. We required spectroscopic (FT-IR) proof that ours is a true chelate, because many cheaper 'bisglycinate' products are actually magnesium oxide buffered with glycine, not true chelate. We deliver 2,400 mg of the bisglycinate salt to give you 300 mg of elemental magnesium - the dose with actual HRV and sleep trial data in human studies.",
         faq: [
             { q: "Why not magnesium oxide - it's cheaper?", a: "Because most of it never gets into your bloodstream. Magnesium oxide is about 4-10% bioavailable - most of it pulls water into your colon and you find out 30 minutes later. Bisglycinate is 20-40% bioavailable, absorbed through a different transporter (PepT1) that bypasses the laxative pathway. The glycine portion also has its own modest calming and sleep-supporting effects. For anyone with gastroparesis or a sensitive gut, bisglycinate is the only form that makes sense." },
             { q: "Will magnesium drop my blood pressure?", a: "For most POTS patients, no. The most recent meta-analysis (2,700+ people) found magnesium had essentially no significant blood pressure effect in people with normal BP. The 'magnesium lowers BP' framing came from older studies in hypertensive populations. If you're already on midodrine and running low, give your prescriber a heads-up - but the data doesn't support magnesium as a meaningful BP dropper at the doses we use." },
@@ -387,7 +387,7 @@ export const ingredients: Record<string, IngredientData> = {
             interactions: "Antibiotics: Space by 2-6 hours. Bisphosphonates: Separate by 2+ hours. Thyroid medications: Space 2-4 hours. Fludrocortisone: Monitor electrolytes.",
             excipientConcerns: {
                 avoid: ["Fermentation-derived citrate", "Magnesium stearate", "Artificial colors"],
-                safe: ["Magnesium glycinate from Albion chelate", "Powder form (eliminates fillers)"]
+                safe: ["FT-IR-verified bisglycinate chelate", "Powder form (eliminates fillers)"]
             },
             cautions: "Monitor blood pressure when initiating. Kidney function should be normal. Paradoxical reactions occur in 25-30% of MCAS patients; try a different form if this happens."
         },

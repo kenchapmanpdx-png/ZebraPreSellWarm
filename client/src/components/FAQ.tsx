@@ -59,7 +59,7 @@ export default function FAQ() {
     {
       icon: ShieldOff,
       question: "Does this contain common triggers like gluten or dairy?",
-      answer: "Absolutely not. We avoid gluten, dairy, soy, and corn-derived ingredients. We even removed 'standard' healthy fillers like bovine gelatin to avoid alpha-gal risk. We use only clean, hypoallergenic plant-based capsules and rice-based flow agents to keep your system calm."
+      answer: "We formulate without gluten, dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan, and artificial dyes. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few vitamins arrive on small carriers, and we list every one on our Promise page, including the maltodextrin on the vitamin D3, whose source we are confirming with our manufacturer."
     }
   ];
 

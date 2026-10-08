@@ -66,7 +66,7 @@ export default function OurPromise() {
               Our constitution is short and specific. <strong>Every clinical claim on this site is anchored to peer-reviewed published research.</strong> Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
             </p>
             <p>
-              Every excipient is disclosed and chosen for MCAS safety: HPMC capsules (no gelatin, no carrageenan), CaCO<sub>3</sub> opacifier on PM caps (no titanium dioxide), rice hull and L-leucine flow agents (no magnesium stearate). No FD&amp;C dyes, no citric acid, no fermented ingredients, no corn or soy derivatives. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
+              Every excipient is disclosed and chosen with MCAS in mind: HPMC capsules (no gelatin, no carrageenan), a calcium carbonate opacifier on the PM caps (no titanium dioxide), and rice hull concentrate and L-leucine as flow agents (no magnesium stearate). Some vitamins and actives arrive on carriers, and we list those too: maltodextrin on the vitamin D3 (about 17 mg a day), microcrystalline cellulose on the vitamin K2 (about 10 mg), sunflower lecithin in the quercetin phytosome, and silica in the taurine (up to 7.5 mg). We are confirming the last two carriers, in the astaxanthin beadlet and the selenium premix, with our manufacturer and will list them before launch. No FD&amp;C dyes, no citric acid, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. Every batch comes with Certificate of Analysis verification on identity, potency, and contaminants.
             </p>
             <p>
               <strong>We don't claim to treat, cure, or prevent anything.</strong> We do claim to give you ingredients with documented mechanisms in research, at doses supported by clinical evidence, in a formulation engineered for the sensitivities of the EDS/POTS/MCAS triad.
@@ -233,8 +233,8 @@ const ALWAYS_DO = [
     desc: "Histamine screening. Heavy metals. Biogenic amines. We test for the specific contaminants that trigger your population."
   },
   {
-    title: "Always use MCAS-safe excipients.",
-    desc: "Minimal fillers. Hypoallergenic alternatives. We treat 'inactive' ingredients with the same scrutiny as active ones."
+    title: "Always choose excipients for sensitive systems.",
+    desc: "Minimal fillers. Every carrier disclosed. We treat 'inactive' ingredients with the same scrutiny as active ones."
   },
   {
     title: "Always support titration.",

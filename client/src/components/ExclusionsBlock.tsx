@@ -19,9 +19,11 @@ const EXCLUDED = [
   "Gelatin",
   "FD&C dyes",
   "Artificial flavors",
-  "Corn derivatives",
   "Soy derivatives",
 ];
+// "Corn derivatives" removed 2026-10-07: the vitamin D3 arrives on ~17 mg
+// maltodextrin whose source is unconfirmed. Restore (and the "eight" copy
+// below back to "nine") once the manufacturer confirms a non-corn source.
 
 export default function ExclusionsBlock() {
   return (
@@ -32,16 +34,16 @@ export default function ExclusionsBlock() {
             Excipients we refuse to use
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#0F2A22] leading-tight">
-            Nine triggers we built around
+            Eight triggers we built around
           </h2>
         </div>
 
         <div className="max-w-2xl mx-auto mb-10 md:mb-12">
           <p className="text-base md:text-lg text-[#3D3733] leading-relaxed">
-            If you've reacted to a supplement and walked away convinced an active ingredient wasn't for you, there's a good chance you were <em>right</em> about the reaction and <em>wrong</em> about the cause. Excipients are the inactive ingredients packed around the active - fillers, binders, coatings, flow agents. They're chosen for manufacturing convenience, not for your gut.
+            If you've reacted to a supplement and walked away convinced an active ingredient wasn't for you, you may have been <em>right</em> about the reaction and <em>wrong</em> about the cause. Excipients are the inactive ingredients packed around the active - fillers, binders, coatings, flow agents. They're chosen for manufacturing convenience, not for your gut.
           </p>
           <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mt-4">
-            Magnesium often isn't the trigger - magnesium stearate is. Vitamin C often isn't the trigger - citric acid is. These nine are the most common culprits.
+            If magnesium has never agreed with you, it's worth asking whether it was the magnesium or the magnesium stearate. Same with vitamin C and citric acid. These eight are the excipients our community reports reacting to most, so we left them out.
           </p>
         </div>
 

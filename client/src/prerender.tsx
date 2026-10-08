@@ -43,7 +43,7 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/": {
     title: "ZebraThrive | Clinical Support for POTS, EDS & MCAS",
     description:
-      "Advanced autonomic, mast cell, and connective tissue support. Research-driven supplements for the Zebra community. Zero fillers. 100% transparent.",
+      "Advanced autonomic, mast cell, and connective tissue support. Research-driven supplements for the Zebra community. Every excipient disclosed.",
   },
   "/the-how": {
     title: "The How - Condition Science | ZebraThrive",
