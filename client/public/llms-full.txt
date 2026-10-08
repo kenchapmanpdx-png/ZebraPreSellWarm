@@ -106,7 +106,7 @@ Evidence notes:
 Evidence gaps: No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. The mast cell evidence comes from in vitro studies in cultured cells. Separately, the EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.
 
 Safety: Luteolin demonstrates an excellent safety profile in clinical trials up to 26 weeks. Very few adverse effects are reported even in highly reactive MCAS individuals. Unlike quercetin, which causes paradoxical reactions in 10-15% of MCAS patients, luteolin is generally well-tolerated.
-Interactions: No human study has tested luteolin with any POTS or MCAS medication, and there are no human blood-level data to show whether lab findings apply at our dose. In lab studies luteolin inhibits CYP2D6, the enzyme that clears metoprolol; it both inhibits and induces CYP3A4, which clears ivabradine and hydroxyzine; and it blocks OCT2, the kidney transporter that clears famotidine. Whether any of this happens at 140 mg a day is unknown. If you take metoprolol, ivabradine, hydroxyzine, or famotidine, tell your prescriber. Lab studies that used propranolol found no sign of a beta-receptor interaction. Nothing has been reported with fludrocortisone, midodrine, cromolyn, or ketotifen, but none has been studied. Theoretical caution with anticoagulants (may enhance effects).
+Interactions: No human study has tested luteolin with any POTS or MCAS medication, and there are no human blood-level data to show whether lab findings apply at our dose. In lab studies luteolin inhibits CYP2D6, the enzyme that clears metoprolol and inactivates midodrine's active form; it both inhibits and induces CYP3A4, which clears ivabradine; and it blocks OCT2, the kidney transporter that clears famotidine. Whether any of this happens at 140 mg a day is unknown. Hydroxyzine is often taken alongside luteolin in MCAS, and the pair has never been studied. If you take metoprolol, midodrine, ivabradine, hydroxyzine, or famotidine, tell your prescriber. Lab studies that used propranolol found no sign of a beta-receptor interaction. Nothing has been reported with fludrocortisone, cromolyn, or ketotifen, but none has been studied. Theoretical caution with anticoagulants (may enhance effects).
 Cautions: Not recommended during pregnancy or breastfeeding pending more human safety data. Discontinue 2 weeks before surgery. Iron supplements may reduce absorption; space by 2+ hours. Allow 4-6 weeks for full therapeutic effect.
 
 References:
@@ -160,7 +160,7 @@ Evidence notes:
 Evidence gaps: No randomized controlled trials exist specifically testing magnesium glycinate in hEDS, POTS, or MCAS. One hEDS study found 59/94 patients had low RBC magnesium. Despite limited trials, 61-81% of hEDS patients report taking magnesium, reflecting widespread clinical use.
 
 Safety: Magnesium glycinate is the best-tolerated form for GI-sensitive patients. Diarrhea can occur if dose is increased too rapidly. Theoretical concern of hypotension exists but is usually not significant in normotensive populations.
-Interactions: Antibiotics: Space by 2-6 hours. Bisphosphonates: Separate by 2+ hours. Thyroid medications: Space 2-4 hours. Fludrocortisone: the electrolyte to watch on fludrocortisone is potassium; a study in children found fludrocortisone did not lower magnesium, and adults have not been tested directly. Beta-blockers: no human data for this form; older studies of antacid magnesium salts gave conflicting results on metoprolol and propranolol absorption. Famotidine: gram doses of antacid magnesium lowered famotidine absorption by up to about 20-25% in some studies; this chelate is not an antacid, but taking famotidine 2 hours apart costs nothing.
+Interactions: Antibiotics: Space by 2-6 hours. Bisphosphonates: Separate by 2+ hours. Thyroid medications: Space 2-4 hours. Fludrocortisone: the electrolyte to watch on fludrocortisone is potassium; a study in children found fludrocortisone did not lower magnesium, and adults have not been tested directly. Beta-blockers: the only human study of oral magnesium with beta-blockers (a different salt, in 39 people with high blood pressure) found no significant blood pressure change between groups; older studies of antacid magnesium salts gave conflicting results on metoprolol and propranolol absorption, and none used this form. Famotidine: gram doses of antacid magnesium lowered famotidine absorption by up to about 20-25% in some studies; this chelate is not an antacid, but taking famotidine 2 hours apart costs nothing.
 Cautions: Monitor blood pressure when initiating. Kidney function should be normal. Paradoxical reactions occur in 25-30% of MCAS patients; try a different form if this happens.
 
 References:
@@ -168,6 +168,7 @@ References:
 - Srebro D et al. (2023). Magnesium reduces mast cell degranulation in orofacial pain model. PMID: 37047214
 - Almoznino-Sarafian D et al. (2009). Magnesium administration and heart rate variability. PMID: 19201586
 - Schuette SA et al. (1994). Bioavailability of magnesium diglycinate vs magnesium oxide. PMID: 7815675
+- Wirell et al. (1994). Nutritional dose of magnesium in hypertensive patients on beta blockers lowers systolic blood pressure: a double-blind, cross-over study. PMID: 7913949
 
 ---
 
@@ -386,7 +387,7 @@ Evidence notes:
 Evidence gaps: No direct clinical trials exist specifically in hEDS, POTS, or MCAS populations. The mechanistic evidence is strength, but findings are extrapolated from periodontal, skin, and chronic venous insufficiency studies. Clinical validation in these specific triple-triad populations is still needed.
 
 Safety: pine bark extract shows excellent safety across nearly 7,000 trial participants. The overall adverse event rate is only 2.4%. Most common effects are mild GI discomfort, prevented by taking with food. Transient headache or dizziness can occurs in rare cases.
-Interactions: Beta-blockers: possible small additive blood pressure lowering, about 0 to 3 mmHg systolic. Nearly all of that data is from French maritime pine bark (Pycnogenol); our extract is Pinus massoniana, and trials at 200 mg a day found no blood pressure change. Fludrocortisone/Midodrine: the same small blood pressure lowering could slightly oppose these medications; no study has tested the combination. Ivabradine: no human data; pine bark has never been tested on liver enzymes in people. Anticoagulants: Theoretical antiplatelet effects; monitor if on warfarin.
+Interactions: Beta-blockers: possible small additive blood pressure lowering, about 0 to 2 mmHg systolic in people with normal blood pressure (up to 3 mmHg in pooled trials). Nearly all of that data is from French maritime pine bark (Pycnogenol); our extract is Pinus massoniana, and trials at 200 mg a day found no blood pressure change. Fludrocortisone/Midodrine: the same small blood pressure lowering could slightly oppose these medications; no study has tested the combination. Ivabradine: no human data; pine bark has never been tested on liver enzymes in people. Anticoagulants: Theoretical antiplatelet effects; monitor if on warfarin.
 Cautions: Stop 2 weeks before surgery due to antiplatelet effects. Avoid in first-trimester pregnancy. Autoimmune patients should use caution as pine bark extract may stimulate certain immune pathways. Monitor for orthostatic symptoms if your baseline BP is very low (<100 mmHg).
 
 References:
@@ -434,7 +435,7 @@ Evidence notes:
   - Zhang H et al., "The impact of grape seed extract treatment on blood pressure changes: A meta-analysis of 16 randomized controlled trials". Design: Meta-analysis of 16 RCTs, n=810. Finding: Systolic BP WMD -6.1 mmHg in hypertensive populations; effect essentially neutral in normotensives (floor effect). PMID: 27537554
 
 Safety: Excellent safety profile in cardiovascular RCTs running 8-12 weeks. Mild GI discomfort possible at high single doses; rare transient headache. The non-fermented sourcing eliminates the biogenic amine contamination concern that affects many grape products.
-Interactions: Mild antiplatelet activity. Mention to your prescriber if you are on warfarin, aspirin, or a DOAC. Discontinue 1-2 weeks before scheduled surgery. No study has tested grape seed with POTS medications, but its own effects matter. Beta-blockers (metoprolol, propranolol): grape seed alone lowered systolic blood pressure about 2 to 6 mmHg and heart rate about 1 to 1.4 beats per minute in meta-analyses, so it may add slightly to these drugs; a human study found no effect on CYP2D6, the enzyme that clears metoprolol. Fludrocortisone/Midodrine: the same blood pressure lowering could slightly oppose these medications; our 170 mg a day is below the doses that lowered blood pressure significantly. Ivabradine: may add slightly to heart-rate lowering. Hydroxyzine: no human data on the CYP3A4 route. One trial in treated hypertensives found vitamin C plus grape-seed polyphenols together raised blood pressure by about 5 mmHg; our formula has both, at a higher vitamin C and much lower polyphenol dose, so the relevance is unknown.
+Interactions: Mild antiplatelet activity. Mention to your prescriber if you are on warfarin, aspirin, or a DOAC. Discontinue 1-2 weeks before scheduled surgery. No study has tested grape seed with POTS medications, but its own effects matter. Beta-blockers (metoprolol, propranolol): grape seed alone lowered systolic blood pressure about 2 to 6 mmHg and heart rate about 1 to 1.4 beats per minute in meta-analyses, so it may add slightly to these drugs; a human study found no effect on CYP2D6, the enzyme that clears metoprolol. Fludrocortisone/Midodrine: the same blood pressure lowering could slightly oppose these medications; our 170 mg a day is below the doses that lowered blood pressure significantly. Ivabradine: may add slightly to heart-rate lowering; a three-month human study of a related grape seed product found no change in CYP3A4, the enzyme that clears ivabradine. Hydroxyzine: rated low; the human enzyme studies found no CYP2D6 or CYP3A4 effect. One trial in treated hypertensives found vitamin C plus grape-seed polyphenols together raised blood pressure by about 5 mmHg; our formula has both, at a higher vitamin C and much lower polyphenol dose, so the relevance is unknown.
 
 References:
 - Grimm T et al. (2004). Antioxidant activity and inhibition of matrix metalloproteinases by metabolites of maritime pine bark extract (pycnogenol). PMID: 14990359
@@ -445,6 +446,7 @@ References:
 - Cho HS et al. (2007). Anti-wrinkling effects of the mixture of vitamin C, vitamin E, pycnogenol and evening primrose oil on hairless mouse skin caused by chronic ultraviolet B irradiation. PMID: 17803593
 - Goey et al. (2013). The effect of grape seed extract on the pharmacokinetics of dextromethorphan in healthy volunteers. PMID: 23881421
 - Ward et al. (2005). The combination of vitamin C and grape-seed polyphenols increases blood pressure: a randomized, double-blind, placebo-controlled trial. PMID: 15662232
+- Xue et al. (2024). The Effects of a Grape Seed Procyanidin Extract on Cytochrome P450 3A4 Activity and Inflammatory Mediators in the Lungs of Heavy Active and Former Smokers. PMID: 39684816
 
 ---
 
@@ -483,7 +485,7 @@ Evidence notes:
   - Di Pierro F et al., "Potential Clinical Benefits of Quercetin in the Early Stage of COVID-19: Results of a Second, Pilot, Randomized, Controlled and Open-Label Clinical Trial". Design: Randomized controlled open-label trial, n=42. Finding: Pilot open-label trial (n=42) giving Quercefit alongside standard care in adults with early-stage COVID-19; laboratory markers were tracked and the supplement was reported as well tolerated. PMID: 34194240
 
 Safety: Quercefit shows excellent tolerability in 15+ human clinical studies. Plain quercetin causes paradoxical reactions in 10-15% of MCAS patients (one reason luteolin is often preferred for high-sensitivity profiles); Quercefit has fewer reported paradoxical reactions due to the different delivery vehicle, but the pattern can still occur.
-Interactions: No study has tested quercetin with POTS or MCAS medications. Ivabradine: in people, repeated quercetin dosing induces CYP3A (the opposite of the lab-test inhibition), which could lower ivabradine levels and weaken heart-rate control; rated low-to-moderate. Metoprolol/Propranolol: lab and animal data on drug levels conflict and are untested in people; the better-supported effect is a small added blood pressure drop (about 2 to 3 mmHg). Fludrocortisone/Midodrine: the same blood pressure drop, and for fludrocortisone possibly lower drug levels, could slightly oppose these medications. Mention to your prescriber when initiating.
+Interactions: No study has tested quercetin with POTS or MCAS medications. Ivabradine: in people, repeated quercetin dosing induces CYP3A (the opposite of the lab-test inhibition), which could lower ivabradine levels and weaken heart-rate control; rated low-to-moderate. Metoprolol/Propranolol: the lab effect on their clearing enzymes needs higher quercetin levels than our dose reaches, so drug levels are unlikely to change; the better-supported effect is a small added blood pressure drop (about 2 to 3 mmHg). Fludrocortisone/Midodrine: the same blood pressure drop could slightly oppose these medications; fludrocortisone levels could fall too, but only if it is cleared by CYP3A4, which is not documented. Mention to your prescriber when initiating.
 
 References:
 - Riva A et al. (2019). Improved Oral Absorption of Quercetin from Quercetin Phytosome®, a New Delivery System Based on Food Grade Lecithin. PMID: 30328058
@@ -530,7 +532,7 @@ Evidence notes:
   - Samavat S et al., "The effects of green coffee bean extract on blood pressure and heart rate: A systematic review and dose-response meta-analysis of randomized controlled trials". Design: Meta-analysis of 10 RCTs, n=563. Finding: Green coffee bean extract reduced systolic BP by 2.95 mmHg and diastolic BP by 2.15 mmHg overall; subgroup analysis showed greater effect in hypertensive populations and no effect in females; HR effect neutral. PMID: 39368321
 
 Safety: Excellent tolerability in human cardiovascular and metabolic trials at 200-400 mg/day. Mild GI discomfort possible at high single doses. The decaffeinated, non-fermented sourcing eliminates the caffeine and biogenic-amine triggers that affect this population.
-Interactions: No study has tested CGA with any POTS medication. Modest BP-lowering effect in hypertensive populations (2-3 mmHg systolic in meta-analyses); neutral in normotensives. Beta-blockers: may add slightly to blood pressure lowering. Lab data suggested a CGA breakdown product could slow metoprolol and propranolol clearance, but blood levels at our dose are about 8 times too low for that. If you are on midodrine or other BP-supporting medications and prone to symptomatic hypotension, mention CGA to your prescriber. CGA undergoes methylation clearance; the demand is small at 200 mg/day but we balance with methylfolate and methylated B12 in the formulation.
+Interactions: No study has tested CGA with any POTS medication. Modest BP-lowering effect in hypertensive populations (2-3 mmHg systolic in meta-analyses); about 0 to 2 mmHg in people with normal blood pressure, and none found in women. Beta-blockers: may add slightly to blood pressure lowering. Lab data suggested a CGA breakdown product could slow metoprolol and propranolol clearance, but blood levels at our dose are about 8 times too low for that. If you are on midodrine or other BP-supporting medications and prone to symptomatic hypotension, mention CGA to your prescriber. CGA undergoes methylation clearance; the demand is small at 200 mg/day but we balance with methylfolate and methylated B12 in the formulation.
 
 References:
 - Xue N et al. (2022). Chlorogenic Acid Prevents UVA-Induced Skin Photoaging through Regulating Collagen Metabolism and Apoptosis in Human Dermal Fibroblasts. PMID: 35805942
@@ -628,7 +630,7 @@ Evidence notes:
 Evidence gaps: No direct clinical trials in hEDS, POTS, or MCAS populations. Most data extrapolated from athletic, NSAID-user, and gastric ulcer populations.
 
 Safety: Excellent safety record (30+ years prescription use). Mild nausea possible but rare.
-Interactions: Famotidine and other acid reducers: lower zinc absorption (about 28% for a soluble zinc salt with famotidine); spacing doses may not help because the effect lasts longer than 2 hours. AVOID with Warfarin (reports of increased INR). Separate from fluoroquinolones, tetracyclines, and iron by 4-6 hours.
+Interactions: Famotidine and other acid reducers: lower zinc absorption (about 28% for a soluble zinc salt with famotidine); a 2-hour gap may not help because famotidine's effect lasts 10 to 12 hours; taking zinc carnosine near the end of that window is the more logical timing (untested). AVOID with Warfarin (reports of increased INR). Separate from fluoroquinolones, tetracyclines, and iron by 4-6 hours.
 Cautions: Monitor copper status if supplementing long-term above 40mg total zinc.
 
 References:
@@ -681,7 +683,7 @@ Evidence notes:
 Evidence gaps: Zero direct studies in hEDS/POTS/MCAS patients. Concerns exist regarding 'Z-isomers' which may suppress collagen synthesis (always select all-E products). TGF-β pathway concerns in liver models are not currently reflected in skin fibroblast data.
 
 Safety: Excellent safety profile at doses up to 24mg daily. Well-tolerated in pediatrics at 4mg.
-Interactions: CONTRAINDICATED with Warfarin (case report of INR increase). Does not meaningfully inhibit CYP enzymes in lab tests, but induced CYP3A4 in human liver cells (never tested in people). If induction occurred at 4 mg, ivabradine, hydroxyzine, and possibly fludrocortisone levels could fall slightly.
+Interactions: CONTRAINDICATED with Warfarin (case report of INR increase). Does not meaningfully inhibit CYP enzymes in lab tests, but induced CYP3A4 in human liver cells (never tested in people). If induction occurred at 4 mg, ivabradine levels could fall slightly. Fludrocortisone: rated low; no blood pressure change in trials, and its clearing enzymes are not documented.
 Cautions: Pre-treatment is required for mast cell effects (prophylaxis, not rescue).
 
 References:
@@ -780,7 +782,7 @@ Evidence notes:
   - Kim HW et al., "NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice". Design: Mouse + human cord blood-derived mast cell + cell models. Finding: NAD-boosting molecules (NMN and NR) suppress mast cell degranulation through SIRT6 pathway; the same NAD+ axis niacinamide contributes to at a smaller magnitude. PMID: 35547746
 
 Safety: Excellent safety at the 50 mg dose. Niacinamide is non-flushing (unlike niacin). Very high doses (>3 g/day) have hepatotoxicity concerns; our dose is 50x below that level. No reported acute side effects in healthy populations at supplement doses.
-Interactions: At 50 mg, no clinically meaningful interactions with the standard POTS, MCAS, or hEDS medication stack. Theoretical methylation competition with high doses (>500 mg) of other methylation-dependent compounds; the formulation includes methylfolate and methylated B12 to support methyl group availability. Mention to your prescriber if you take additional high-dose B3 separately.
+Interactions: No study has tested niacinamide with standard POTS, MCAS, or hEDS medications. Famotidine slows kidney clearance of a niacinamide breakdown product, raising its blood level; no clinical effect of that is known. Theoretical methylation competition with high doses (>500 mg) of other methylation-dependent compounds; the formulation includes methylfolate and methylated B12 to support methyl group availability. Mention to your prescriber if you take additional high-dose B3 separately.
 
 References:
 - Tian YJ et al. (2013). Excess nicotinamide increases plasma serotonin and histamine levels. PMID: 23426511
@@ -1029,7 +1031,7 @@ Evidence notes:
 Evidence gaps: No direct RCTs specifically in adult hEDS, POTS, or MCAS populations. Some findings are counterintuitive (e.g., higher vitamin D status in some MCAS cohorts). All autonomic benefits are extrapolated primarily from pediatric and diabetic populations.
 
 Safety: Generally well-tolerated. Hypercalcemia is possible at very high doses (>10,000 IU) without monitoring. Some patients report initial paradoxical reactions, often excipient-related.
-Interactions: No study has tested vitamin D3 with common POTS/MCAS medications, including H2 blockers such as famotidine. In people, vitamin D3 did not change a marker of CYP3A, the liver enzyme that clears ivabradine and hydroxyzine, so no effect on those drugs is expected, though the pairs are untested. Thiazide diuretics require calcium monitoring.
+Interactions: No study has tested vitamin D3 with common POTS/MCAS medications, including H2 blockers such as famotidine. In people, vitamin D3 did not change a marker of CYP3A, the liver enzyme that clears ivabradine, so no effect on ivabradine is expected, though the pair is untested. Thiazide diuretics require calcium monitoring.
 Cautions: Monitor serum 25(OH)D levels (target 40-60 ng/mL). Check serum calcium if taking high doses (>4,000 IU).
 
 References:
@@ -1079,7 +1081,7 @@ Evidence notes:
 Evidence gaps: No direct evidence in hEDS, POTS, or MCAS populations. Mast cell evidence is historical (1975) and requires modern replication. No studies exist on heart rate or autonomic markers.
 
 Safety: Excellent safety profile. Does not increase bleeding risk at standard doses.
-Interactions: CONTRAINDICATED with warfarin/vitamin K antagonists. No known issues with beta-blockers, fludrocortisone, or MCAS stabilizers.
+Interactions: CONTRAINDICATED with warfarin/vitamin K antagonists. No study has tested K2 with beta-blockers, fludrocortisone, or MCAS stabilizers; none of these drugs acts on the vitamin K cycle.
 Cautions: Absolutely avoid if on warfarin. Coagulation safety confirmed at 90μg doses in healthy volunteers.
 
 References:

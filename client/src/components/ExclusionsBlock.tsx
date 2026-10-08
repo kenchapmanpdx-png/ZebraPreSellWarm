@@ -34,7 +34,7 @@ export default function ExclusionsBlock() {
             Excipients we refuse to use
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#0F2A22] leading-tight">
-            Eight triggers we built around
+            Eight reported triggers we built around
           </h2>
         </div>
 
