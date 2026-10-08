@@ -316,7 +316,7 @@ Three Size 1 white HPMC capsules per serving (titanium-dioxide-free), 90 per bot
 
 ## Daily Powder
 
-Unflavored, about 7.7 g per day taken as two scoops (AM and PM), 30 servings per jar. Contents: magnesium bisglycinate (2,400 mg, about 300 mg elemental), sodium ascorbate (1,686 mg, about 1,500 mg vitamin C), taurine (1,500 mg), ultramicronized PEA (1,200 mg), Quercefit quercetin phytosome (300 mg), chlorogenic acid from decaffeinated green coffee bean (200 mg), and luteolin from Sophora japonica (140 mg). These are the gram-scale ingredients that would need too many capsules.
+Unflavored, about 7.7 g per day taken as two one-scoop servings (AM and PM), 60 servings per jar (30-day supply). Contents: magnesium bisglycinate (2,400 mg, about 300 mg elemental), sodium ascorbate (1,686 mg, about 1,500 mg vitamin C), taurine (1,500 mg), ultramicronized PEA (1,200 mg), Quercefit quercetin phytosome (300 mg), chlorogenic acid from decaffeinated green coffee bean (200 mg), and luteolin from Sophora japonica (140 mg). These are the gram-scale ingredients that would need too many capsules.
 
 ## Why three parts
 

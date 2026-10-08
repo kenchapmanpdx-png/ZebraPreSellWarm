@@ -10,7 +10,7 @@ Formulation frame: collagen PROTECTION through ECM preservation (support for a h
 
 - AM capsules: 3 x Size 1 clear HPMC capsules per serving, 90 count (30 servings). Nicotinamide riboside 250 mg; pine bark extract (Pinus massoniana, 65-75% OPC by HPLC) 130 mg; grape seed extract (95% or higher OPC by HPLC) 100 mg; benfotiamine 150 mg; niacinamide 50 mg; P5P 50 mg (31.9 mg vitamin B6); R5P 25 mg; zinc carnosine 37.5 mg; chromium picolinate 200 mcg; methylfolate as (6S)-5-MTHF calcium salt 800 mcg; manganese bisglycinate 4 mg elemental; copper bisglycinate 2 mg elemental; vitamin K2 as synthetic all-trans MK-7 (from geraniol, on MCC) 100 mcg; vegan vitamin D3 from lichen 50 mcg (2,000 IU); methylcobalamin 1,000 mcg.
 - PM capsules: 3 x Size 1 white HPMC capsules per serving (calcium carbonate opacifier, titanium-dioxide-free), 90 count (30 servings). Nicotinamide riboside 250 mg; pine bark extract 70 mg; grape seed extract 70 mg; L-theanine 200 mg; zinc carnosine 37.5 mg; astaxanthin 4 mg (5% cracked-cell beadlet, all-trans above 60%, 9-cis at or below 30%); calcium pantothenate 5 mg; boron glycinate 2 mg elemental; molybdenum glycinate 150 mcg; synthetic L-selenomethionine 100 mcg; D-biotin 300 mcg.
-- Daily Powder: unflavored, about 7.7 g per day taken as two scoops (AM and PM), 30 servings per jar. Magnesium bisglycinate 2,400 mg (about 300 mg elemental magnesium); sodium ascorbate 1,686 mg (about 1,500 mg vitamin C); taurine 1,500 mg; ultramicronized PEA 1,200 mg; Quercefit quercetin phytosome 300 mg; chlorogenic acid 200 mg (from decaffeinated green coffee bean extract, caffeine under 0.1%); luteolin 140 mg (standard, from Sophora japonica).
+- Daily Powder: unflavored, about 7.7 g per day taken as two one-scoop servings (AM and PM), 60 servings per jar (30-day supply). Magnesium bisglycinate 2,400 mg (about 300 mg elemental magnesium); sodium ascorbate 1,686 mg (about 1,500 mg vitamin C); taurine 1,500 mg; ultramicronized PEA 1,200 mg; Quercefit quercetin phytosome 300 mg; chlorogenic acid 200 mg (from decaffeinated green coffee bean extract, caffeine under 0.1%); luteolin 140 mg (standard, from Sophora japonica).
 - Capsule flow agents: rice hull concentrate and L-leucine. Powder flow agent: rice hull concentrate. Excluded: magnesium stearate, titanium dioxide, citric acid, carrageenan, gelatin, artificial colors, flavors and sweeteners, soy-derived ingredients, and silicon dioxide as an added flow agent.
 
 ---
@@ -74,13 +74,12 @@ Dose: 140 mg daily in the Daily Powder, split AM and PM scoops
 Form: Standard (non-micronized) luteolin from Sophora japonica, non-peanut source, COA-verified
 
 What it is: A plant flavonoid (found in celery, parsley, artichokes) that supports mast cell stability in lab studies
-Why we include it: In cultured human mast cells, luteolin reduced release of histamine, tryptase, and inflammatory cytokines (lab data), with a good safety record and few known drug interactions
+Why we include it: In cultured human mast cells, luteolin reduced release of histamine, tryptase, and inflammatory cytokines (lab data), with a good safety record
 
 Key benefits:
 - Reduced histamine, tryptase, and cytokine release in cultured human mast cells (lab data)
 - Crosses the blood-brain barrier
 - Standard luteolin from Sophora japonica (non-peanut source)
-- Few known drug interactions with common POTS/MCAS medications
 
 Summary: Luteolin is a plant compound found in celery, parsley, artichokes, and chamomile - and it happens to be one of the most studied natural mast cell stabilizers in the world. In lab studies of cultured human mast cells, luteolin reduced the release of histamine, tryptase, and inflammatory signals like IL-6, IL-8, and TNF. That is cell data, not a human outcome. We use standard (non-micronized) luteolin from Sophora japonica, a non-peanut source.
 
@@ -107,7 +106,7 @@ Evidence notes:
 Evidence gaps: No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. The mast cell evidence comes from in vitro studies in cultured cells. Separately, the EDS UK GP Toolkit (Royal College of General Practitioners) lists luteolin as an option to consider for MCAS management in hEDS patients. Additionally, luteolin CANNOT achieve MMP inhibition at oral doses-its value lies exclusively in mast cell stabilization, not collagen protection.
 
 Safety: Luteolin demonstrates an excellent safety profile in clinical trials up to 26 weeks. Very few adverse effects are reported even in highly reactive MCAS individuals. Unlike quercetin, which causes paradoxical reactions in 10-15% of MCAS patients, luteolin is generally well-tolerated.
-Interactions: Luteolin shows minimal CYP450 enzyme interactions. No direct interactions found with beta blockers, antihistamines, fludrocortisone, midodrine, or cromolyn/ketotifen. Theoretical caution with anticoagulants (may enhance effects).
+Interactions: No human study has tested luteolin with any POTS or MCAS medication, and there are no human blood-level data to show whether lab findings apply at our dose. In lab studies luteolin inhibits CYP2D6, the enzyme that clears metoprolol; it both inhibits and induces CYP3A4, which clears ivabradine and hydroxyzine; and it blocks OCT2, the kidney transporter that clears famotidine. Whether any of this happens at 140 mg a day is unknown. If you take metoprolol, ivabradine, hydroxyzine, or famotidine, tell your prescriber. Lab studies that used propranolol found no sign of a beta-receptor interaction. Nothing has been reported with fludrocortisone, midodrine, cromolyn, or ketotifen, but none has been studied. Theoretical caution with anticoagulants (may enhance effects).
 Cautions: Not recommended during pregnancy or breastfeeding pending more human safety data. Discontinue 2 weeks before surgery. Iron supplements may reduce absorption; space by 2+ hours. Allow 4-6 weeks for full therapeutic effect.
 
 References:
@@ -161,7 +160,7 @@ Evidence notes:
 Evidence gaps: No randomized controlled trials exist specifically testing magnesium glycinate in hEDS, POTS, or MCAS. One hEDS study found 59/94 patients had low RBC magnesium. Despite limited trials, 61-81% of hEDS patients report taking magnesium, reflecting widespread clinical use.
 
 Safety: Magnesium glycinate is the best-tolerated form for GI-sensitive patients. Diarrhea can occur if dose is increased too rapidly. Theoretical concern of hypotension exists but is usually not significant in normotensive populations.
-Interactions: Antibiotics: Space by 2-6 hours. Bisphosphonates: Separate by 2+ hours. Thyroid medications: Space 2-4 hours. Fludrocortisone: Monitor electrolytes.
+Interactions: Antibiotics: Space by 2-6 hours. Bisphosphonates: Separate by 2+ hours. Thyroid medications: Space 2-4 hours. Fludrocortisone: the electrolyte to watch on fludrocortisone is potassium; a study in children found fludrocortisone did not lower magnesium, and adults have not been tested directly. Beta-blockers: no human data for this form; older studies of antacid magnesium salts gave conflicting results on metoprolol and propranolol absorption. Famotidine: gram doses of antacid magnesium lowered famotidine absorption by up to about 20-25% in some studies; this chelate is not an antacid, but taking famotidine 2 hours apart costs nothing.
 Cautions: Monitor blood pressure when initiating. Kidney function should be normal. Paradoxical reactions occur in 25-30% of MCAS patients; try a different form if this happens.
 
 References:
@@ -215,7 +214,7 @@ Evidence notes:
 Evidence gaps: No direct clinical trials exist specifically in hEDS, POTS, or MCAS populations. The cardiovascular benefits are extrapolated from hypertensive and heart failure populations. Cardiovascular benefits specifically require doses of 1.5g or higher; lower doses often fail to show heart rate changes.
 
 Safety: Taurine has an excellent safety profile (EFSA permits up to 6g daily). Most users tolerate 1.5g perfectly. Rare reports include paradoxical stimulation (jitteriness) or temporary sleep disruption. Mild GI effects can occur at much higher doses.
-Interactions: Beta-blockers/Ivabradine: Additive heart rate lowering; monitor for excessive bradycardia. Fludrocortisone/Midodrine: May partially oppose the blood-pressure raising effects of these medications.
+Interactions: Beta-blockers/Ivabradine: Additive heart rate lowering is likely (taurine alone lowered heart rate about 3.6 beats per minute in a meta-analysis of 20 trials); no study has tested the combination; monitor for excessive bradycardia. Fludrocortisone/Midodrine: May partially oppose the blood-pressure raising effects of these medications.
 Cautions: Likely beneficial for Hyperadrenergic POTS; requires closer monitoring for Hypotensive (low BP) POTS. If you experience paradoxical anxiety or insomnia, discontinue use.
 
 References:
@@ -270,7 +269,7 @@ Evidence notes:
 Evidence gaps: While the 21% deficit in hEDS establishes a clear need, no randomized clinical trial has yet proven that high-dose Vitamin C reverses hypermobility symptoms. Much of the dramatic POTS cardiovascular data used IV doses that are much higher than what can be absorbed through purely oral supplementation.
 
 Safety: Excellent safety. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. Our 1,500 mg daily dose sits below the 2,000 mg general upper limit and is split across the AM and PM Daily Powder scoops for tolerance.
-Interactions: Propranolol: in a small 1995 study of healthy volunteers, a single 2 g dose of vitamin C lowered propranolol blood levels (peak about 28% lower, total exposure about 37% lower), with a small effect on heart rate. If you take propranolol, talk with your prescriber before starting. Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 1.5g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we keep the dose at 1.5 g, well below the level where copper competition becomes a concern.
+Interactions: Propranolol: in a small 1995 study of healthy volunteers, a single 2 g dose of vitamin C lowered propranolol blood levels (peak about 28% lower, total exposure about 37% lower), with a small effect on heart rate. That study used ascorbic acid; we use sodium ascorbate at about 75% of the study dose. If you take propranolol, talk with your prescriber before starting. Taking the two at least 2 hours apart is the logical precaution, though spacing itself has not been tested. No study has checked metoprolol; the same spacing costs nothing. Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 1.5g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we keep the dose at 1.5 g, well below the level where copper competition becomes a concern.
 Cautions: Monitor for iron overload if you have Hemochromatosis. For men, ensure adequate hydration to mitigate any theoretical kidney stone risk associated with high-dose B-vitamins/C (though risk is not proven in women).
 
 References:
@@ -279,6 +278,7 @@ References:
 - Hagel AF et al. (2013). Intravenous infusion of ascorbic acid decreases serum histamine concentrations in patients with allergic and non-allergic diseases. PMID: 23666445
 - Shaw et al. (2017). Vitamin C + gelatin doubled collagen synthesis markers. PMID: 27852613
 - Johnston. (2015). 2g oral increased DAO activity. PMID: 25095772
+- Gonzalez JP et al. (1995). Influence of vitamin C on the absorption and first pass metabolism of propranolol. PMID: 7589058
 
 ---
 
@@ -311,14 +311,14 @@ For mitochondria: NR consistently raises NAD+ levels, which restores mitochondri
 Condition-specific notes (structure/function context, not treatment claims):
 - MCAS: NR is the first NAD+ booster shown to directly stabilize mast cells via the SIRT6 pathway. By reducing Tryptase and Prostaglandin D2 release, it offers a novel mechanism of protection that complements traditional stabilizers like quercetin or luteolin.
 - hEDS: Protects collagen from destruction by inhibiting MMPs and supports the crosslinking process by upregulating PLOD1. For patients with vascular EDS or severe hypermobility, its ability to restore mitochondrial energy in connective tissue cells is a critical benefit.
-- POTS: Supports the vascular system, though caution is needed as it can lower systolic blood pressure by ~10 mmHg. For hyperadrenergic or hypertensive POTS patients, this may be a benefit; for hypotensive patients, it requires careful monitoring of medication efficacy.
+- POTS: Supports cellular energy metabolism. In the strongest human trial to date (adults with raised blood pressure, 1,000 mg a day plus exercise), NR did not lower blood pressure more than placebo, so no blood pressure effect is expected at our dose. NR has not been tested with any POTS medication.
 
 Evidence notes:
 - Mast Cell Stabilization (SIRT6 Pathway): NR directly inhibits the release of standard allergy mediators from human mast cells.
   - Kim HW et al., "NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice". Design: Preclinical (Theranostics, 2022). Finding: Reduced histamine, tryptase, PGD2, and LTC4 production in human cord blood-derived mast cells. PMID: 35547746
 - NAD+ Elevation: Consistently doubles or raises NAD+ levels at therapeutic doses.
   - Conze et al., "300 mg → 51% elevation in blood NAD+". Design: Human RCT (2019). Finding: Dose-dependent and safe NAD+ increases established in multiple human cohorts. PMID: 31278280
-  - Berven et al., "NR-SAFE trial established safety at 3000 mg/day". Design: High-dose safety trial (2024). Finding: Demonstrated 5-fold NAD+ increase with no serious adverse events at massive doses. PMID: 38016950
+  - Berven et al., "NR-SAFE trial established safety at 3000 mg/day". Design: High-dose safety trial (2023). Finding: Demonstrated 5-fold NAD+ increase with no serious adverse events at massive doses. PMID: 38016950
 - Collagen & Mitochondrial Protection: Protects the extracellular matrix and restores energy production in connective tissue cells.
   - Marcos-Ríos et al., "NR restores mitochondrial function in vEDS cells". Design: vEDS Cell Model (2025). Finding: Improved mitochondrial health and reduced MMP activity in cells with vascular EDS mutations. PMID: 40497944
   - Busch et al., "SIRT1 reverses MMP-9 upregulation in tenocytes". Finding: Activation of sirtuin pathways directly opposes the 'broken bucket' mechanism of collagen breakdown. PMID: 22689577
@@ -326,15 +326,16 @@ Evidence notes:
 Evidence gaps: No clinical trials currently exist specifically in hEDS, POTS, or MCAS populations. While NR robustly elevates NAD+ (a biomarker), functional clinical outcomes in humans have been mixed in other populations. The mast cell stabilization property is currently supported by high-quality preclinical/lab data but requires MCAS patient validation.
 
 Safety: NR shows excellent safety even at extremely high doses (up to 3,000 mg). Occasional mild effects (<10%) include nausea, bloating, fatigue, or mild headaches. Long-term safety has been established in multi-month trials.
-Interactions: Blood pressure medications: Additive hypotension (~10 mmHg). Beta-blockers/Midodrine: May have opposing or additive effects on orthostatic symptoms. Warfarin: Monitor INR periodically. Diabetes medications: May affect glucose sensitivity.
-Cautions: A 10 mmHg systolic blood pressure reduction is documented. Patients on fludrocortisone or midodrine should monitor for reduced medication efficacy. Patients with methylation issues may benefit from concurrent methyl-donors (B12/Folate).
+Interactions: No human study has tested NR with any POTS or MCAS medication (beta-blockers, ivabradine, fludrocortisone, midodrine, hydroxyzine, famotidine); that means unknown, not proven safe. The strongest human blood pressure trial found no blood pressure lowering, so no added effect on blood pressure medications is expected. Warfarin: Monitor INR periodically. Diabetes medications: May affect glucose sensitivity.
+Cautions: Earlier claims of a 10 mmHg blood pressure drop are not supported: the strongest human trial found no blood pressure lowering. Patients with methylation issues may benefit from concurrent methyl-donors (B12/Folate).
 
 References:
 - Kim HW et al. (2022). NAD(+)-boosting molecules suppress mast cell degranulation and anaphylactic responses in mice. PMID: 35547746
 - Conze et al. (2019). Dose-dependent NAD+ increase; 300 mg safe and effective. PMID: 31278280
 - Marcos-Ríos. (2025). NR restores mitochondrial function in vEDS cells. PMID: 40497944
-- Martens. (2018). ~10 mmHg BP reduction at 1000 mg/day. PMID: 29599478
-- Berven. (2024). NR-SAFE: 3000 mg/day safe with 5-fold NAD+ increase. PMID: 38016950
+- Martens. (2018). Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD+ in healthy middle-aged and older adults. PMID: 29599478
+- Berven. (2023). NR-SAFE: 3000 mg/day safe with 5-fold NAD+ increase. PMID: 38016950
+- Lin et al. (2025). Nicotinamide riboside combined with exercise to treat hypertension in middle-aged and older adults: a pilot randomized clinical trial. PMID: 40770531
 
 ---
 
@@ -385,7 +386,7 @@ Evidence notes:
 Evidence gaps: No direct clinical trials exist specifically in hEDS, POTS, or MCAS populations. The mechanistic evidence is strength, but findings are extrapolated from periodontal, skin, and chronic venous insufficiency studies. Clinical validation in these specific triple-triad populations is still needed.
 
 Safety: pine bark extract shows excellent safety across nearly 7,000 trial participants. The overall adverse event rate is only 2.4%. Most common effects are mild GI discomfort, prevented by taking with food. Transient headache or dizziness can occurs in rare cases.
-Interactions: Beta-blockers: Additive blood pressure lowering (~2-3 mmHg). Anticoagulants: Theoretical antiplatelet effects; monitor if on warfarin. Fludrocortisone/Midodrine: Opposing blood pressure effects are theoretically possible.
+Interactions: Beta-blockers: possible small additive blood pressure lowering, about 0 to 3 mmHg systolic. Nearly all of that data is from French maritime pine bark (Pycnogenol); our extract is Pinus massoniana, and trials at 200 mg a day found no blood pressure change. Fludrocortisone/Midodrine: the same small blood pressure lowering could slightly oppose these medications; no study has tested the combination. Ivabradine: no human data; pine bark has never been tested on liver enzymes in people. Anticoagulants: Theoretical antiplatelet effects; monitor if on warfarin.
 Cautions: Stop 2 weeks before surgery due to antiplatelet effects. Avoid in first-trimester pregnancy. Autoimmune patients should use caution as pine bark extract may stimulate certain immune pathways. Monitor for orthostatic symptoms if your baseline BP is very low (<100 mmHg).
 
 References:
@@ -421,7 +422,7 @@ Grape seed extract is one of the most concentrated natural sources of procyanidi
 Condition-specific notes (structure/function context, not treatment claims):
 - MCAS: Grape seed procyanidins stabilize mast cells through three complementary mechanisms in lab studies: they downregulate FcεRI (the IgE receptor that triggers mast cell activation), they block calcium influx (the trigger for releasing histamine and inflammatory mediators), and they raise cAMP (which actively suppresses degranulation). The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination that can ride along with grape products from less careful sourcing.
 - hEDS: Grape seed is one of the strongest ECM-protective ingredients on this list. The gut-derived metabolite M1 - the form that actually circulates in your blood - directly inhibits MMP-9 (one of the matrix-degrading enzymes upregulated in hEDS) at concentrations achievable from oral dosing. Grape seed procyanidins also directly cross-link with collagen fibers, stabilizing them against enzymatic breakdown - a unique mechanism among polyphenols. We pair grape seed with pine bark to deliver more M1 to your bloodstream and broader MMP coverage across the matrix-degrading enzymes elevated in hEDS.
-- POTS: For POTS, grape seed extract has solid clinical data for venous tone and lower-leg edema - the same blood pooling pattern that drives the orthostatic tachycardia of POTS. A meta-analysis of 16 RCTs (n=810) found grape seed reduced systolic blood pressure by about 6 mmHg in hypertensive populations, with the effect essentially neutral in normotensives (floor effect), so no orthostatic hypotension concern. The procyanidin support for endothelial function and venous wall integrity is the relevant mechanism for POTS - strengthening the vasculature that gravity works against when you stand.
+- POTS: For POTS, grape seed extract has solid clinical data for venous tone and lower-leg edema - the same blood pooling pattern that drives the orthostatic tachycardia of POTS. A meta-analysis of 16 RCTs (n=810) found grape seed reduced systolic blood pressure by about 6 mmHg in hypertensive populations, with the effect essentially neutral in normotensives (floor effect), so a large blood pressure drop is not expected at our dose, though no study has measured standing blood pressure. The procyanidin support for endothelial function and venous wall integrity is the relevant mechanism for POTS - strengthening the vasculature that gravity works against when you stand.
 
 Evidence notes:
 - MMP Inhibition via Procyanidin M1/DHPV Metabolite: The gut-microbiome-derived metabolite M1 (delta-(3,4-dihydroxyphenyl)-gamma-valerolactone, also called DHPV) directly inhibits MMP-9 at orally achievable concentrations and is the shared active metabolite produced from procyanidin sources including both pine bark and grape seed.
@@ -433,7 +434,7 @@ Evidence notes:
   - Zhang H et al., "The impact of grape seed extract treatment on blood pressure changes: A meta-analysis of 16 randomized controlled trials". Design: Meta-analysis of 16 RCTs, n=810. Finding: Systolic BP WMD -6.1 mmHg in hypertensive populations; effect essentially neutral in normotensives (floor effect). PMID: 27537554
 
 Safety: Excellent safety profile in cardiovascular RCTs running 8-12 weeks. Mild GI discomfort possible at high single doses; rare transient headache. The non-fermented sourcing eliminates the biogenic amine contamination concern that affects many grape products.
-Interactions: Mild antiplatelet activity. Mention to your prescriber if you are on warfarin, aspirin, or a DOAC. Discontinue 1-2 weeks before scheduled surgery. No documented interactions with the standard POTS, MCAS, or hEDS medication stack.
+Interactions: Mild antiplatelet activity. Mention to your prescriber if you are on warfarin, aspirin, or a DOAC. Discontinue 1-2 weeks before scheduled surgery. No study has tested grape seed with POTS medications, but its own effects matter. Beta-blockers (metoprolol, propranolol): grape seed alone lowered systolic blood pressure about 2 to 6 mmHg and heart rate about 1 to 1.4 beats per minute in meta-analyses, so it may add slightly to these drugs; a human study found no effect on CYP2D6, the enzyme that clears metoprolol. Fludrocortisone/Midodrine: the same blood pressure lowering could slightly oppose these medications; our 170 mg a day is below the doses that lowered blood pressure significantly. Ivabradine: may add slightly to heart-rate lowering. Hydroxyzine: no human data on the CYP3A4 route. One trial in treated hypertensives found vitamin C plus grape-seed polyphenols together raised blood pressure by about 5 mmHg; our formula has both, at a higher vitamin C and much lower polyphenol dose, so the relevance is unknown.
 
 References:
 - Grimm T et al. (2004). Antioxidant activity and inhibition of matrix metalloproteinases by metabolites of maritime pine bark extract (pycnogenol). PMID: 14990359
@@ -442,6 +443,8 @@ References:
 - Cardoso CDM et al. (2023). Naringenin and proanthocyanidins pre-treatment decreases synthesis and activity of gelatinases induced by zoledronic acid in a dental cell model. PMID: 37146390
 - Kim BJ et al. (2017). Oligomeric Procyanidins (OPCs) Inhibit Procollagen Type I Secretion of Fibroblasts. PMID: 30603486
 - Cho HS et al. (2007). Anti-wrinkling effects of the mixture of vitamin C, vitamin E, pycnogenol and evening primrose oil on hairless mouse skin caused by chronic ultraviolet B irradiation. PMID: 17803593
+- Goey et al. (2013). The effect of grape seed extract on the pharmacokinetics of dextromethorphan in healthy volunteers. PMID: 23881421
+- Ward et al. (2005). The combination of vitamin C and grape-seed polyphenols increases blood pressure: a randomized, double-blind, placebo-controlled trial. PMID: 15662232
 
 ---
 
@@ -480,13 +483,14 @@ Evidence notes:
   - Di Pierro F et al., "Potential Clinical Benefits of Quercetin in the Early Stage of COVID-19: Results of a Second, Pilot, Randomized, Controlled and Open-Label Clinical Trial". Design: Randomized controlled open-label trial, n=42. Finding: Pilot open-label trial (n=42) giving Quercefit alongside standard care in adults with early-stage COVID-19; laboratory markers were tracked and the supplement was reported as well tolerated. PMID: 34194240
 
 Safety: Quercefit shows excellent tolerability in 15+ human clinical studies. Plain quercetin causes paradoxical reactions in 10-15% of MCAS patients (one reason luteolin is often preferred for high-sensitivity profiles); Quercefit has fewer reported paradoxical reactions due to the different delivery vehicle, but the pattern can still occur.
-Interactions: Quercetin is a CYP3A4 inhibitor in lab tests; recent human data shows repeated dosing produces CYP3A4 induction (not inhibition) via the PXR receptor, downgrading the ivabradine concern to LOW-MODERATE. For metoprolol and propranolol (CYP2D6 substrates), in vivo human data is mixed; start at standard dose and monitor. Mention to your prescriber when initiating.
+Interactions: No study has tested quercetin with POTS or MCAS medications. Ivabradine: in people, repeated quercetin dosing induces CYP3A (the opposite of the lab-test inhibition), which could lower ivabradine levels and weaken heart-rate control; rated low-to-moderate. Metoprolol/Propranolol: lab and animal data on drug levels conflict and are untested in people; the better-supported effect is a small added blood pressure drop (about 2 to 3 mmHg). Fludrocortisone/Midodrine: the same blood pressure drop, and for fludrocortisone possibly lower drug levels, could slightly oppose these medications. Mention to your prescriber when initiating.
 
 References:
 - Riva A et al. (2019). Improved Oral Absorption of Quercetin from Quercetin Phytosome®, a New Delivery System Based on Food Grade Lecithin. PMID: 30328058
 - Yamada S et al. (2022). Effects of repeated oral intake of a quercetin-containing supplement on allergic reaction: a randomized, placebo-controlled, double-blind study. PMID: 35776034
 - Di Pierro F et al. (2023). Quercetin as a possible complementary agent for early-stage COVID-19: Concluding results of a randomized clinical trial. PMID: 36712674
 - Di Pierro F et al. (2021). Potential Clinical Benefits of Quercetin in the Early Stage of COVID-19: Results of a Second, Pilot, Randomized, Controlled and Open-Label Clinical Trial. PMID: 34194240
+- Duan et al. (2012). Effect of quercetin on CYP3A activity in Chinese healthy participants. PMID: 21680781
 
 ---
 
@@ -526,7 +530,7 @@ Evidence notes:
   - Samavat S et al., "The effects of green coffee bean extract on blood pressure and heart rate: A systematic review and dose-response meta-analysis of randomized controlled trials". Design: Meta-analysis of 10 RCTs, n=563. Finding: Green coffee bean extract reduced systolic BP by 2.95 mmHg and diastolic BP by 2.15 mmHg overall; subgroup analysis showed greater effect in hypertensive populations and no effect in females; HR effect neutral. PMID: 39368321
 
 Safety: Excellent tolerability in human cardiovascular and metabolic trials at 200-400 mg/day. Mild GI discomfort possible at high single doses. The decaffeinated, non-fermented sourcing eliminates the caffeine and biogenic-amine triggers that affect this population.
-Interactions: Modest BP-lowering effect in hypertensive populations (2-3 mmHg systolic in meta-analyses); neutral in normotensives. If you are on midodrine or other BP-supporting medications and prone to symptomatic hypotension, mention CGA to your prescriber. CGA undergoes methylation clearance; the demand is small at 200 mg/day but we balance with methylfolate and methylated B12 in the formulation.
+Interactions: No study has tested CGA with any POTS medication. Modest BP-lowering effect in hypertensive populations (2-3 mmHg systolic in meta-analyses); neutral in normotensives. Beta-blockers: may add slightly to blood pressure lowering. Lab data suggested a CGA breakdown product could slow metoprolol and propranolol clearance, but blood levels at our dose are about 8 times too low for that. If you are on midodrine or other BP-supporting medications and prone to symptomatic hypotension, mention CGA to your prescriber. CGA undergoes methylation clearance; the demand is small at 200 mg/day but we balance with methylfolate and methylated B12 in the formulation.
 
 References:
 - Xue N et al. (2022). Chlorogenic Acid Prevents UVA-Induced Skin Photoaging through Regulating Collagen Metabolism and Apoptosis in Human Dermal Fibroblasts. PMID: 35805942
@@ -576,7 +580,7 @@ Evidence notes:
 Evidence gaps: Zero human studies on mast cell effects (preclinical only). Zero POTS-specific trials (extrapolated from stress research). Generic L-theanine is often contaminated with 50% inactive D-isomer.
 
 Safety: GRAS status; extremely high safety margin. No adverse events in pediatrics at 400mg.
-Interactions: Theoretical additive calming effect with beta-blockers (start low). Generally compatible with antihistamines.
+Interactions: No human study has tested L-theanine with any POTS or MCAS medication. With beta-blockers or ivabradine it may slightly add to the blunting of stress-related heart-rate rises (start low). With hydroxyzine it may add to drowsiness, the intended direction for a PM capsule; in human studies reaction time got faster at 100 and 200 mg, with one study finding the opposite at 200 mg.
 Cautions: Peak plasma occurs in ~60 minutes; half-life is short (~1 hour). Best taken in the PM to support sleep.
 
 References:
@@ -592,7 +596,7 @@ References:
 
 URL: https://www.wellnessforzebras.com/ingredients/zinc-carnosine
 Dose: 75 mg daily (37.5 mg AM capsule + 37.5 mg PM capsule)
-Form: Generic zinc carnosine (polaprezinc-type), 1:1 molar chelate (23% zinc / 77% L-carnosine)
+Form: Generic zinc carnosine (polaprezinc-type), 1:1 molar chelate (about 22.6% zinc / 77.4% L-carnosine by molecular weight)
 
 What it is: A unique 1:1 chelate of zinc and L-carnosine that targets the GI lining
 Why we include it: The strongest human evidence for protecting intestinal permeability while providing direct mast cell stabilization in the GI tract
@@ -624,7 +628,7 @@ Evidence notes:
 Evidence gaps: No direct clinical trials in hEDS, POTS, or MCAS populations. Most data extrapolated from athletic, NSAID-user, and gastric ulcer populations.
 
 Safety: Excellent safety record (30+ years prescription use). Mild nausea possible but rare.
-Interactions: AVOID with Warfarin (reports of increased INR). Separate from fluoroquinolones, tetracyclines, and iron by 4-6 hours.
+Interactions: Famotidine and other acid reducers: lower zinc absorption (about 28% for a soluble zinc salt with famotidine); spacing doses may not help because the effect lasts longer than 2 hours. AVOID with Warfarin (reports of increased INR). Separate from fluoroquinolones, tetracyclines, and iron by 4-6 hours.
 Cautions: Monitor copper status if supplementing long-term above 40mg total zinc.
 
 References:
@@ -633,6 +637,7 @@ References:
 - Cho et al. (1991). Zinc carnosine mast cell stabilization. PMID: 1943472
 - Gross et al. (2019). Anti-inflammatory effects in human mast cells. PMID: 30521103
 - Odashima et al. (2002). HSP70 induction by zinc carnosine. PMID: 12498304
+- Henderson et al. (1995). Effect of intragastric pH on the absorption of oral zinc acetate and zinc oxide in young healthy volunteers. PMID: 8577018
 
 ---
 
@@ -676,7 +681,7 @@ Evidence notes:
 Evidence gaps: Zero direct studies in hEDS/POTS/MCAS patients. Concerns exist regarding 'Z-isomers' which may suppress collagen synthesis (always select all-E products). TGF-β pathway concerns in liver models are not currently reflected in skin fibroblast data.
 
 Safety: Excellent safety profile at doses up to 24mg daily. Well-tolerated in pediatrics at 4mg.
-Interactions: CONTRAINDICATED with Warfarin (case report of INR increase). Minimal CYP450 inhibition at oral doses.
+Interactions: CONTRAINDICATED with Warfarin (case report of INR increase). Does not meaningfully inhibit CYP enzymes in lab tests, but induced CYP3A4 in human liver cells (never tested in people). If induction occurred at 4 mg, ivabradine, hydroxyzine, and possibly fludrocortisone levels could fall slightly.
 Cautions: Pre-treatment is required for mast cell effects (prophylaxis, not rescue).
 
 References:
@@ -685,6 +690,7 @@ References:
 - Xia et al. (2020). No effect of astaxanthin on blood pressure (Meta-analysis). PMID: 32755613
 - Brendler et al. (2019). Safety review of astaxanthin (87 studies). PMID: 31788888
 - Honda et al. (2023). Z-isomer collagen suppression concern. PMID: 37305308
+- Kistler et al. (2002). Metabolism and CYP-inducer properties of astaxanthin in man and primary human hepatocytes. PMID: 11876499
 
 ---
 
@@ -726,7 +732,7 @@ Evidence notes:
 Evidence gaps: No direct studies in non-diabetic dysautonomia or EDS. Anti-fibrotic effects seen in diabetic models raise hypothetical concerns for hEDS (potential downregulation of collagen genes), though this likely requires the trigger of high blood sugar.
 
 Safety: Generally mild GI or skin reactions (~1-4%). Long-term studies (~24 months) show excellent safety. Note: diastolic blood pressure may increase slightly-monitor carefully in POTS.
-Interactions: Excellent profile; no CYP450 interactions. Space apart from bile acid sequestrants or laxatives.
+Interactions: No human study has tested benfotiamine with POTS or MCAS medications, and nothing has been reported. Famotidine blocks a thiamine transporter in lab studies, but benfotiamine is absorbed by a different route, so little effect is expected (untested). Space apart from bile acid sequestrants or laxatives.
 Cautions: Monitor blood pressure. Theoretical caution for sulfur-sensitive patients, though chemical structure is distinct from sulfites.
 
 References:
@@ -922,7 +928,7 @@ Evidence notes:
 Evidence gaps: The MTHFR prevalence data come from a single-center study. No clinical trials have tested methylfolate in hEDS, POTS, or MCAS.
 
 Safety: Generally well-tolerated. Anxiety, irritability, or insomnia possible in sensitive overmethylators.
-Interactions: Antagonized by Methotrexate. May mask B12 deficiency (always paired with B12 in ZebraThrive).
+Interactions: Propranolol: in a trial in people with cirrhosis, methylfolate added to propranolol lowered portal vein pressure more than propranolol alone (20% vs 12.5%). Whether it adds to propranolol's effect on blood pressure or heart rate has not been tested; if you take propranolol, mention it to your prescriber. Antagonized by Methotrexate. May mask B12 deficiency (always paired with B12 in ZebraThrive).
 Cautions: Always ensure B12 status is optimized alongside folate to prevent neurological masking.
 
 References:
@@ -931,6 +937,7 @@ References:
 - Pietrzik K et al. (2010). Folic acid and L-5-methyltetrahydrofolate: comparison of clinical pharmacokinetics and pharmacodynamics. PMID: 20608755
 - Wright AJA et al. (2009). Comparison of (6S)-5-methyltetrahydrofolic acid v. folic acid as the reference folate in longer-term human dietary intervention studies. PMID: 19852872
 - Mittal N et al. (2021). Improvement of hyperadrenergic postural orthostatic tachycardia syndrome (POTS) with methylated B vitamins in the setting of a heterozygous COMT Val158Met polymorphism. PMID: 34764114
+- Vukotic et al. (2023). 5-MTHF enhances the portal pressure reduction achieved with propranolol in patients with cirrhosis: A randomized placebo-controlled trial. PMID: 37482222
 
 ---
 
@@ -971,7 +978,7 @@ Evidence notes:
 Evidence gaps: Deficiency prevalence data exist for adolescents with POTS, but there are no controlled trials of methylcobalamin for autonomic outcomes.
 
 Safety: Exceptionally safe. High doses are non-toxic. Paradoxical anxiety or trembling possible in sensitive overmethylators.
-Interactions: Absorption impaired by Metformin, H2 blockers, and PPIs. Safe with all standard triad medications.
+Interactions: Metformin and long-term PPIs lower B12 status, mainly by reducing absorption of B12 from food. For H2 blockers such as famotidine the evidence is mixed (the best controlled test found no change), and they are not shown to affect supplemental methylcobalamin. No interactions have been reported with other standard triad medications, though most have not been studied.
 Cautions: If methylcobalamin is too stimulatory, consider hydroxocobalamin as a gentler alternative.
 
 References:
@@ -1022,7 +1029,7 @@ Evidence notes:
 Evidence gaps: No direct RCTs specifically in adult hEDS, POTS, or MCAS populations. Some findings are counterintuitive (e.g., higher vitamin D status in some MCAS cohorts). All autonomic benefits are extrapolated primarily from pediatric and diabetic populations.
 
 Safety: Generally well-tolerated. Hypercalcemia is possible at very high doses (>10,000 IU) without monitoring. Some patients report initial paradoxical reactions, often excipient-related.
-Interactions: No direct interactions with common POTS/MCAS meds. H2 blockers may slightly reduce absorption (space by 2 hours). Thiazide diuretics require calcium monitoring.
+Interactions: No study has tested vitamin D3 with common POTS/MCAS medications, including H2 blockers such as famotidine. In people, vitamin D3 did not change a marker of CYP3A, the liver enzyme that clears ivabradine and hydroxyzine, so no effect on those drugs is expected, though the pairs are untested. Thiazide diuretics require calcium monitoring.
 Cautions: Monitor serum 25(OH)D levels (target 40-60 ng/mL). Check serum calcium if taking high doses (>4,000 IU).
 
 References:
@@ -1168,7 +1175,7 @@ Evidence notes:
 Evidence gaps: No direct trials in EDS/POTS cohorts. The 'MMP paradox' requires selenium co-supplementation (included) to be safe.
 
 Safety: Well-tolerated at 4mg (dose is below IOM upper limit of 11mg). Neurotoxicity risk is only for chronic high-dose inhalation.
-Interactions: No clinically relevant interactions with medications. Separate from tetracyclines by 2+ hours.
+Interactions: No reported interactions with POTS or MCAS medications (none has been studied). Separate from tetracyclines by 2+ hours.
 Cautions: Iron status affects absorption (low ferritin increases manganese uptake).
 
 References:
@@ -1341,7 +1348,7 @@ Key benefits:
 Summary: Biotin is vitamin B7 - the cofactor for carboxylase enzymes that handle fatty acid synthesis, gluconeogenesis (making glucose from non-carbohydrate sources), and the breakdown of certain amino acids. Biotin also plays a role in histone modification and gene expression. For the triad, biotin's most relevant function is foundational metabolism, but it's worth noting that biotin deficiency causes skin and connective tissue symptoms (rashes, brittle nails, hair changes) that can overlap with EDS-related skin issues. We dose 300 mcg D-biotin USP - well above the basic adequate intake and within the standard supplement range.
 
 Mechanism:
-Biotin powers five carboxylase enzymes that generate ATP (cellular fuel). Deficiency leads to rapid mitochondrial dysfunction. We use a physiological 300 mcg dose to support metabolism while avoiding the laboratory interference (TSH, Troponin) that occurs at pharmacological (5-10mg) doses.
+Biotin powers five carboxylase enzymes that generate ATP (cellular fuel). Deficiency leads to rapid mitochondrial dysfunction. We use a physiological 300 mcg dose to support metabolism, about 33 times lower than the 10 mg a day shown to cause laboratory interference (TSH, troponin). Blood levels at 300 mcg have not been measured, so that margin is an estimate.
 
 Condition-specific notes (structure/function context, not treatment claims):
 - MCAS: Generally MCAS-safe; does not trigger histamine. May enhance quercetin effectiveness. Clean excipient sourcing is required for sensitive patients.
@@ -1359,7 +1366,7 @@ Evidence notes:
 Evidence gaps: No direct trials in hEDS/POTS/MCAS. Findings extrapolated from basic carboxylase biochemistry and general mitochondrial research.
 
 Safety: Generally well-tolerated. May cause insomnia if taken late (PM dinner timing used).
-Interactions: CRITICAL: Interferes with Troponin and TSH lab tests-discontinue 72 hours before testing. Anticonvulsants increase biotin requirements.
+Interactions: Lab tests: high-dose biotin interferes with streptavidin-biotin immunoassays, including troponin (falsely low results, the dangerous direction) and TSH. Interference was shown at 10 mg a day; our 300 mcg is about 33 times lower, but blood levels at this dose have not been measured. Tell your lab and clinician you take biotin; some labs advise stopping 72 hours before testing. Anticonvulsants increase biotin requirements.
 Cautions: Always alert healthcare providers of biotin use before blood work.
 
 References:
@@ -1367,6 +1374,8 @@ References:
 - Ochoa-Ruiz E et al. (2015). Biotin deprivation impairs mitochondrial structure and function and has implications for inherited metabolic disorders. PMID: 26343941
 - Gifford JL et al. (2018). Biotin interference: Underrecognized patient safety risk in laboratory testing. PMID: 29760259
 - Johnson L, Li D. (2019). Strategies to Investigate Biotin Interference in Light of the FDA Safety Communication. PMID: 31639768
+- Li et al. (2017). Association of Biotin Ingestion With Performance of Hormone and Nonhormone Assays in Healthy Adults. PMID: 28973622
+- Frame et al. (2019). Susceptibility of Cardiac Troponin Assays to Biotin Interference. PMID: 30715102
 
 ---
 
@@ -1407,7 +1416,7 @@ Evidence notes:
 Evidence gaps: No conditions-specific trials for hEDS/POTS/MCAS. Extrapolated from general bone health and inflammation research.
 
 Safety: Excellent safety profile. Minimal adverse effects at nutritional doses.
-Interactions: No significant interactions with common POTS/MCAS medications. High-dose zinc may theoretically compete.
+Interactions: No studied or reported interactions with common POTS/MCAS medications. High-dose zinc may theoretically compete.
 Cautions: 2mg dose is well below the 10mg upper limit established by regulatory bodies.
 
 References:

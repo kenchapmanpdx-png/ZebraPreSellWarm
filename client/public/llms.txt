@@ -2,7 +2,7 @@
 
 > US-based supplement brand formulating a three-part system (AM capsules, PM capsules, and Daily Powder) for the EDS/POTS/MCAS (Zebra) community. Every ingredient page on this site documents mechanism, dose rationale, primary literature with PMIDs, safety, drug interactions, and excipient concerns relevant to mast cell-sensitive patients.
 
-Product structure: AM capsules (3 x Size 1 clear HPMC capsules per serving, 90 count, 30 servings), PM capsules (3 x Size 1 white HPMC capsules per serving, 90 count, 30 servings), and Daily Powder (about 7.7 g per day, taken as two scoops, AM and PM, 30 servings). 29 unique active ingredients.
+Product structure: AM capsules (3 x Size 1 clear HPMC capsules per serving, 90 count, 30 servings), PM capsules (3 x Size 1 white HPMC capsules per serving, 90 count, 30 servings), and Daily Powder (about 7.7 g per day, taken as two one-scoop servings, AM and PM; 60 servings per jar, a 30-day supply). 29 unique active ingredients.
 
 Every linked page below has a token-efficient Markdown companion at the same path with `.md` appended (e.g., `/ingredients/magnesium-bisglycinate.md`). Use those when fetching content for AI-assisted research; they exclude navigation, scripts, and styling.
 
