@@ -9,6 +9,74 @@
       "runtime": "@vercel/node@5.7.16"
     }
   },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "zebra-pre-sell-warm.vercel.app"
+        }
+      ],
+      "destination": "https://www.wellnessforzebras.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/pqq",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/chondroitin-sulfate",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/recombinant-human-lactoferrin",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/silicon",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/emiq",
+      "destination": "/ingredients/quercetin-phytosome",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/l-citrulline",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/l-carnitine-fumarate",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/magnesium-glycinate",
+      "destination": "/ingredients/magnesium-bisglycinate",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/l-proline",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/pycnogenol",
+      "destination": "/ingredients/pine-bark-extract",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/l-lysine",
+      "destination": "/ingredients",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

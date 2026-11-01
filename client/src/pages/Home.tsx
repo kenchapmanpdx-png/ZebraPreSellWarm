@@ -11,6 +11,7 @@ import ExclusionsBlock from '@/components/ExclusionsBlock';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import BrandByNumbers from '@/components/BrandByNumbers';
+import IngredientLinks from '@/components/IngredientLinks';
 
 // Direct imports - these were lazy-loaded but the prerender engine ships
 // the Suspense fallback (empty div) for them, so 8 FAQs, the Collagen
@@ -89,6 +90,9 @@ export default function Home() {
         <div id="products" className="fade-in py-8 md:py-16">
           <ProductGrid />
         </div>
+
+        {/* 5.5. INGREDIENT INDEX - crawlable links to every ingredient page */}
+        <IngredientLinks />
 
         {/* 6. SOCIAL PROOF & OBJECTIONS */}
         <FAQ />
