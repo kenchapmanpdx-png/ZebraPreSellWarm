@@ -11,6 +11,17 @@
   },
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "zebra-pre-sell-warm.vercel.app"
+        }
+      ],
+      "destination": "https://www.wellnessforzebras.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
