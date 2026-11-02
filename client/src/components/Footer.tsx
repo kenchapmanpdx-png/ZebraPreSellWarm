@@ -1,10 +1,16 @@
 /* client/src/components/Footer.tsx */
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ArrowUp } from "lucide-react";
-import { CONTENT_LAST_REVIEWED, COPYRIGHT_YEAR } from "@/lib/siteDates";
+import { COPYRIGHT_YEAR } from "@/lib/siteDates";
+import { datesFor } from "@/data/pageDates";
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  // Per-page date (client/src/data/pageDates.ts). Ingredient pages show
+  // theirs in the header and byline, so the footer skips them.
+  const [location] = useLocation();
+  const isIngredientPage = /^\/ingredients\/[a-z0-9-]+\/?$/.test(location);
+  const modified = isIngredientPage ? undefined : datesFor(location)?.modified;
 
   return (
     <footer className="bg-[#0F2A22] text-[#EBE8E1] pt-20 pb-12 px-6">
@@ -63,9 +69,11 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[11px] text-[#EBE8E1]/75 uppercase tracking-widest">
             © {COPYRIGHT_YEAR} ZebraThrive. All rights reserved.
-            <span className="ml-3">
-              Last reviewed <time dateTime={CONTENT_LAST_REVIEWED}>{CONTENT_LAST_REVIEWED}</time>
-            </span>
+            {modified && (
+              <span className="ml-3">
+                Last updated <time dateTime={modified}>{modified}</time>
+              </span>
+            )}
           </p>
           <button
             type="button"

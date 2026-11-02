@@ -1,6 +1,10 @@
 # robots.txt - wellnessforzebras.com
-# AI/LLM crawlers and citation bots are explicitly welcomed. Presence in
-# training and live retrieval data correlates with brand recall in LLM answers.
+# Search engines, AI search/citation crawlers, and AI training crawlers are
+# all allowed. Training-crawler access is a policy choice: flip any of them
+# to "Disallow: /" without affecting classic search rankings. Citation bots
+# should stay allowed; they are how AI answers link back here.
+# Note: robots.txt groups do not inherit from "*"; each named bot below
+# follows only its own group.
 
 # Search engines
 User-agent: Googlebot
@@ -15,26 +19,43 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# AI live-retrieval / citation crawlers
-User-agent: OAI-SearchBot
+User-agent: Amazonbot
 Allow: /
 
-User-agent: ChatGPT-User
+# AI search / citation crawlers (surface and link this site in AI answers)
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Perplexity-User
+User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Meta-WebIndexer
+Allow: /
+
+# User-triggered fetchers (a person asked an assistant to open a page).
+# ChatGPT-User and Perplexity-User state robots.txt may not apply to them.
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Claude-User
 Allow: /
 
-User-agent: Claude-SearchBot
+# AI training crawlers and training control tokens (policy: allowed)
+# Google-Extended and Applebot-Extended are control tokens, not crawlers.
+# Google-Extended does not control AI Overviews or AI Mode.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended
@@ -43,20 +64,10 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-User-agent: Amazonbot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
 User-agent: Meta-ExternalAgent
 Allow: /
 
-# AI training crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: anthropic-ai
+User-agent: Bytespider
 Allow: /
 
 User-agent: CCBot

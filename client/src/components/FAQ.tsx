@@ -1,10 +1,4 @@
 /* client/src/components/FAQ.tsx */
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
@@ -17,6 +11,7 @@ import {
   Pill,
   Sun,
   ShieldOff,
+  ChevronDown,
 } from "lucide-react";
 
 export default function FAQ() {
@@ -73,9 +68,6 @@ export default function FAQ() {
     }))
   };
 
-  // Open the first two by default to front-load info and break the "wall of identical rows" feel
-  const defaultOpen: string[] = [];
-
   return (
     <section id="faq" className="py-24 md:py-40 bg-[#F2F0EA] scroll-mt-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -94,47 +86,45 @@ export default function FAQ() {
           </p>
         </div>
 
-        {/* --- DUAL COLUMN ACCORDION (multi-open, icon per question, first two expanded) --- */}
-        <Accordion
-          type="multiple"
-          defaultValue={defaultOpen}
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 items-start"
-        >
+        {/* --- DUAL COLUMN FAQ (native <details>, icon per question) ---
+            Native details/summary instead of a JS accordion (2026-11-01 audit
+            G1): every answer ships in the prerendered HTML, so crawlers and
+            AI fetchers read the same text as the FAQPage JSON-LD above, and
+            open/close works without JavaScript. All closed by default. */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 items-start">
           {faqs.map((faq, index) => {
             const Icon = faq.icon;
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: 10 }}
+                whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: (index % 4) * 0.1 }}
               >
-                <AccordionItem
-                  value={`item-${index}`}
-                  className="group border-none bg-white/40 backdrop-blur-md rounded-[2rem] px-5 sm:px-8 transition-all duration-700 data-[state=open]:bg-white data-[state=open]:shadow-2xl data-[state=open]:shadow-[#B36B4D]/10 border border-transparent data-[state=open]:border-[#B36B4D]/10"
-                >
-                  <AccordionTrigger className="text-left text-base md:text-lg font-serif font-bold text-[#3D3733] py-6 hover:no-underline hover:text-[#B36B4D] transition-colors leading-snug">
-                    <div className="flex items-start gap-4 w-full">
+                <details className="group bg-white/40 backdrop-blur-md rounded-[2rem] px-5 sm:px-8 transition-all duration-700 open:bg-white open:shadow-2xl open:shadow-[#B36B4D]/10 border border-transparent open:border-[#B36B4D]/10">
+                  <summary className="flex items-center justify-between gap-3 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden text-left text-[#3D3733] hover:text-[#B36B4D] transition-colors">
+                    <h3 className="flex items-start gap-4 w-full m-0 text-base md:text-lg font-serif font-bold leading-snug text-inherit">
                       <span
-                        className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#B36B4D]/10 text-[#B36B4D] flex-shrink-0 group-data-[state=open]:bg-[#B36B4D] group-data-[state=open]:text-white transition-colors"
+                        className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#B36B4D]/10 text-[#B36B4D] flex-shrink-0 group-open:bg-[#B36B4D] group-open:text-white transition-colors"
                         aria-hidden="true"
                       >
                         <Icon className="w-5 h-5" />
                       </span>
                       <span className="flex-1 pt-2">{faq.question}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#5D5752] text-sm md:text-base leading-relaxed pb-8 pl-14 pr-4 font-medium">
+                    </h3>
+                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
+                  </summary>
+                  <div className="text-[#5D5752] text-sm md:text-base leading-relaxed pb-8 pl-14 pr-4 font-medium">
                     <div className="bg-white/40 p-5 rounded-2xl border border-white/60 shadow-inner">
                       {faq.answer}
                     </div>
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                </details>
               </motion.div>
             );
           })}
-        </Accordion>
+        </div>
 
         {/* Supportive Concierge Pod */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-24 flex justify-center">

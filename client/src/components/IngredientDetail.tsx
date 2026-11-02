@@ -5,7 +5,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { CheckCircle2, AlertCircle, XCircle, Beaker, ShieldCheck, Microscope } from "lucide-react";
-import { CONTENT_LAST_REVIEWED, CONTENT_LAST_REVIEWED_LABEL } from "@/lib/siteDates";
+import { datesFor, formatDateLabel } from "@/data/pageDates";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 interface IngredientDetailProps {
     data: IngredientData;
@@ -81,17 +82,31 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
     }
     const refNumberForPmid = (pmid?: string) => (pmid ? pmidIndex.get(pmid) : undefined);
 
+    // Per-page content date (client/src/data/pageDates.ts). Same value as the
+    // JSON-LD dateModified and the .md companion.
+    const modified = datesFor(`/ingredients/${data.id}`)?.modified;
+
     return (
         <div className="max-w-4xl mx-auto px-4 py-12 space-y-16">
             {/* Header */}
             <div className="space-y-6 text-center md:text-left">
+                <Breadcrumbs
+                    className="justify-center md:justify-start"
+                    items={[
+                        { name: "Home", href: "/" },
+                        { name: "Ingredients", href: "/ingredients" },
+                        { name: data.name },
+                    ]}
+                />
                 <h1 className="text-4xl md:text-6xl font-serif text-primary leading-tight break-words">{data.name}</h1>
                 {data.scientificName && (
                     <p className="text-2xl text-muted-foreground italic font-light">{data.scientificName}</p>
                 )}
-                <p className="text-sm text-[#5D5752] leading-relaxed">
-                    Last reviewed <time dateTime={CONTENT_LAST_REVIEWED}>{CONTENT_LAST_REVIEWED_LABEL}</time>
-                </p>
+                {modified && (
+                    <p className="text-sm text-[#5D5752] leading-relaxed">
+                        Last updated <time dateTime={modified}>{formatDateLabel(modified)}</time>
+                    </p>
+                )}
             </div>
 
             {/* BLUF answer capsule (40-60 words). Primary AI citation surface
@@ -453,7 +468,11 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             <section className="pt-8 border-t border-border/40 text-sm text-muted-foreground/80">
                 <p>
                     Written by <span className="font-medium text-foreground/85">Ken Chapman</span>, Founder of ZebraThrive.
-                    Reviewed and last updated <time dateTime={CONTENT_LAST_REVIEWED}>{CONTENT_LAST_REVIEWED_LABEL}</time>.
+                    {modified && (
+                        <>
+                            {" "}Reviewed and last updated <time dateTime={modified}>{formatDateLabel(modified)}</time>.
+                        </>
+                    )}
                 </p>
             </section>
         </div>

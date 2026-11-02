@@ -42,6 +42,8 @@ export default function OurStory() {
                 transition={{ duration: 0.8 }}
                 src="/images/ken-and-ava.webp"
                 alt="Ken and Ava"
+                width={1153}
+                height={768}
                 className="w-full h-auto object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
                 loading="lazy"
               />
@@ -95,6 +97,8 @@ export default function OurStory() {
                   <img
                     src="/images/ken-and-ava.webp"
                     alt="Ken and Ava"
+                    width={1153}
+                    height={768}
                     className="w-full h-auto object-cover grayscale-[0.2]"
                     loading="lazy"
                   />

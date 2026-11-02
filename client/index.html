@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <!-- Meta Pixel (334231342457223) + GA4 (G-DVEJ68587X) bootstrap. External
-         file so the CSP can forbid inline scripts. Disclosed at /privacy. -->
-    <script src="/js/analytics-init.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVEJ68587X"></script>
+         file so the CSP can forbid inline scripts. Disclosed at /privacy.
+         Deferred; the vendor libraries load after window load so they do not
+         compete with first render (queued events are kept). -->
+    <script src="/js/analytics-init.js" defer></script>
 
 
     <!--
@@ -22,15 +23,16 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="ZebraThrive" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.wellnessforzebras.com/images/zebrathrive-bottles-og.jpg" />
 
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/zebra-logo.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <!-- Fonts: Montserrat + Playfair Display, self-hosted via @fontsource-variable
+         (imported in client/src/main.tsx). No third-party font CSS on the
+         critical path. -->
 
     <!-- Ahrefs Web Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="Dcy0Q6o4Tuy1gsz2xm8hGw" async></script>
@@ -41,7 +43,7 @@
       "@type": "Organization",
       "@id": "https://www.wellnessforzebras.com/#organization",
       "name": "ZebraThrive",
-      "alternateName": "ZebraThrive",
+      "alternateName": "Wellness for Zebras",
       "url": "https://www.wellnessforzebras.com/",
       "logo": {
         "@type": "ImageObject",

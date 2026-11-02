@@ -4,6 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import heroProductImage from '@assets/hero-product.webp';
+import heroProductImage800 from '@assets/hero-product-800.webp';
 import { trackLead } from "@/lib/metaPixel";
 import { trackGa } from "@/lib/analytics";
 
@@ -128,8 +129,8 @@ export default function Hero() {
         {/* --- EDITORIAL HEADER --- */}
         <div className="text-center mb-16 lg:mb-24">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: -20 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.8 }}
             className="inline-flex items-center gap-3 mb-8 px-5 py-2 rounded-full bg-white/40 border border-white/60 shadow-sm backdrop-blur-md"
           >
@@ -140,8 +141,10 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            // Transform only: the prerendered H1 must be visible before JS runs
+            // (it is the LCP element). Opacity 0 here held LCP to ~8.8 s (lab).
+            initial={{ scale: 0.95 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 1, ease: "circOut" }}
             className="font-serif font-bold tracking-tight text-[#3D3733]"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
@@ -156,8 +159,8 @@ export default function Hero() {
 
           {/* LEFT: OPT-IN CARD (Glassmorphism) */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: -50 }}
+            animate={{ x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="w-full lg:w-[35%] flex"
           >
@@ -265,8 +268,8 @@ export default function Hero() {
 
           {/* RIGHT: PRODUCT IMAGE */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: 50 }}
+            animate={{ x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="w-full lg:w-[65%] flex"
           >
@@ -274,6 +277,8 @@ export default function Hero() {
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-[#F2F0EA]">
                 <img
                   src={heroProductImage}
+                  srcSet={`${heroProductImage800} 800w, ${heroProductImage} 1388w`}
+                  sizes="(min-width: 1024px) 60vw, 100vw"
                   alt="ZebraThrive Triad Support system: AM capsules, PM capsules, and Daily Powder for hEDS, POTS, and MCAS"
                   width={1388}
                   height={1133}

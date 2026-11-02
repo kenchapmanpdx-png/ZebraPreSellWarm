@@ -37,6 +37,41 @@ export default function IngredientPage() {
             <Navigation />
             <main id="main-content" className="pt-24">
                 <IngredientDetail data={ingredient} />
+
+                {/* Where this ingredient sits in the product, plus the one
+                    conversion path. Links back to the system and the waitlist
+                    (2026-11-01 audit G12: ingredient pages had no CTA). */}
+                <section
+                    aria-labelledby="in-the-system"
+                    className="max-w-4xl mx-auto px-4 pb-16"
+                >
+                    <div className="p-8 md:p-10 bg-[#0F2A22] text-[#EBE8E1] rounded-[2rem] shadow-xl">
+                        <h2 id="in-the-system" className="text-2xl md:text-3xl font-serif font-bold !text-[#EBE8E1] mb-3">
+                            Where {ingredient.name.split(" (")[0]} fits in ZebraThrive
+                        </h2>
+                        <p className="text-base md:text-lg leading-relaxed text-[#EBE8E1]/85 mb-2">
+                            {ingredient.atAGlance.dose}.
+                        </p>
+                        <p className="text-sm md:text-base leading-relaxed text-[#EBE8E1]/75 mb-8">
+                            One part of a three-part daily system: AM capsules, PM capsules, and Daily Powder.
+                            Pre-launch: join the waitlist for first access and founder pricing.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                            <a
+                                href="/#waitlist"
+                                className="inline-flex justify-center px-6 py-3 bg-[#8F5238] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#EBE8E1] hover:text-[#0F2A22] transition-colors"
+                            >
+                                Join the waitlist
+                            </a>
+                            <a
+                                href="/#products"
+                                className="inline-flex justify-center px-6 py-3 border border-[#EBE8E1]/40 text-[#EBE8E1] text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 transition-colors"
+                            >
+                                See the three-part system
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </main>
 
             {/* Related Ingredients - cross-linking for SEO + UX */}

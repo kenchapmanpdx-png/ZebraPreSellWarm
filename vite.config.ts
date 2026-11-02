@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { vitePrerenderPlugin } from "vite-prerender-plugin";
@@ -24,9 +24,36 @@ const PRERENDER_ROUTES = [
   ...ingredientList.map((i: { slug: string }) => `/ingredients/${i.slug}`),
 ];
 
+// Preload the latin subsets of the self-hosted fonts (@fontsource-variable,
+// imported in client/src/main.tsx) so headings render in the final face on
+// first paint instead of swapping from a fallback. The swap moved the hero
+// card and added layout shift once the hero stopped fading in from opacity 0.
+// Uses the hashed asset names from the bundle so the preload and the
+// @font-face src are the same URL (no double download).
+function preloadFonts(match: RegExp): Plugin {
+  return {
+    name: "zt-preload-fonts",
+    apply: "build",
+    transformIndexHtml: {
+      order: "post",
+      handler(_html, ctx) {
+        if (!ctx.bundle) return [];
+        return Object.keys(ctx.bundle)
+          .filter((f) => match.test(f))
+          .map((f) => ({
+            tag: "link",
+            attrs: { rel: "preload", as: "font", type: "font/woff2", href: `/${f}`, crossorigin: "" },
+            injectTo: "head-prepend" as const,
+          }));
+      },
+    },
+  };
+}
+
 export default defineConfig({
   plugins: [
     react(),
+    preloadFonts(/(montserrat|playfair-display)-latin-wght-normal-[^/]*\.woff2$/),
     vitePrerenderPlugin({
       renderTarget: "#root",
       prerenderScript: path.resolve(import.meta.dirname, "client/src/prerender.tsx"),

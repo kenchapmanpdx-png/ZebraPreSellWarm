@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { useState } from "react";
 
 export default function Ingredients() {
@@ -28,16 +29,17 @@ export default function Ingredients() {
                 <div className="max-w-7xl mx-auto">
                     {/* Header Section */}
                     <div className="mb-10">
+                        <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Ingredients" }]} />
                         <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
                             className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-[#3D3733] mb-6 break-words"
                         >
                             The <span className="text-[#B36B4D]">Ingredients</span>
                         </motion.h1>
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
                             transition={{ delay: 0.1 }}
                             className="text-lg text-[#5D5752] max-w-2xl leading-relaxed mb-10"
                         >
@@ -66,8 +68,8 @@ export default function Ingredients() {
                             return (
                                 <motion.div
                                     key={id}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
+                                    initial={{ y: 20 }}
+                                    animate={{ y: 0 }}
                                     transition={{ delay: index * 0.05 }}
                                 >
                                     <Link
@@ -79,9 +81,9 @@ export default function Ingredients() {
                                                 <span className="text-[10px] uppercase tracking-[0.2em] text-[#8F5238] font-bold">
                                                     Ingredient {index + 1}
                                                 </span>
-                                                <h3 className="font-serif font-bold text-xl text-[#3D3733] mt-1 group-hover:text-[#B36B4D] transition-colors leading-tight">
+                                                <h2 className="font-serif font-bold text-xl text-[#3D3733] mt-1 group-hover:text-[#B36B4D] transition-colors leading-tight">
                                                     {name}
-                                                </h3>
+                                                </h2>
                                             </div>
 
                                             {data?.atAGlance?.whatItIs && (

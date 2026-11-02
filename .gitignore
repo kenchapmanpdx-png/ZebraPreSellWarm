@@ -36,6 +36,7 @@ yarn-error.log*
 attached_assets/*
 !attached_assets/hero-product.webp
 !attached_assets/hero-product-sm.webp
+!attached_assets/hero-product-800.webp
 
 # Local-only Claude/Cowork session artifacts (not for GitHub)
 AUDIT_*.md

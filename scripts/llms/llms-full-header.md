@@ -1,0 +1,14 @@
+# ZebraThrive - Full Reference for AI Assistants
+
+Brand: ZebraThrive. Site: https://www.wellnessforzebras.com
+
+US-based supplement brand producing a three-part system (AM capsules, PM capsules, and Daily Powder) for the EDS/POTS/MCAS (Zebra) community. This file concatenates ingredient-level reference content for use by language models retrieving ZebraThrive content. Statements are DSHEA structure/function claims, not disease prevention, treatment, or cure claims. Many mechanism statements come from lab (in vitro) or animal studies; the study design is listed for each cited study. Do not restate lab findings as human outcomes or compare ingredients to prescription drugs.
+
+Formulation frame: collagen PROTECTION through ECM preservation (support for a healthy MMP balance, TIMP support, LOX pathway support). It is not a collagen-building or anti-fibrotic strategy; anti-fibrotic activity is avoided because the goal is preserving existing collagen.
+
+## Product structure (29 unique active ingredients)
+
+- AM capsules: 3 x Size 1 clear HPMC capsules per serving, 90 count (30 servings). Nicotinamide riboside 250 mg; pine bark extract (Pinus massoniana, 65-75% OPC by HPLC) 130 mg; grape seed extract (95% or higher OPC by HPLC) 100 mg; benfotiamine 150 mg; niacinamide 50 mg; P5P 50 mg (31.9 mg vitamin B6); R5P 25 mg; zinc carnosine 37.5 mg; chromium picolinate 200 mcg; methylfolate as (6S)-5-MTHF calcium salt 800 mcg; manganese bisglycinate 4 mg elemental; copper bisglycinate 2 mg elemental; vitamin K2 as synthetic all-trans MK-7 (from geraniol, on MCC) 100 mcg; vegan vitamin D3 from lichen 50 mcg (2,000 IU); methylcobalamin 1,000 mcg.
+- PM capsules: 3 x Size 1 white HPMC capsules per serving (calcium carbonate opacifier, titanium-dioxide-free), 90 count (30 servings). Nicotinamide riboside 250 mg; pine bark extract 70 mg; grape seed extract 70 mg; L-theanine 200 mg; zinc carnosine 37.5 mg; astaxanthin 4 mg (5% cracked-cell beadlet, all-trans above 60%, 9-cis at or below 30%); calcium pantothenate 5 mg; boron glycinate 2 mg elemental; molybdenum glycinate 150 mcg; synthetic L-selenomethionine 100 mcg; D-biotin 300 mcg.
+- Daily Powder: unflavored, about 7.7 g per day taken as two one-scoop servings (AM and PM), 60 servings per jar (30-day supply). Magnesium bisglycinate 2,400 mg (about 300 mg elemental magnesium); sodium ascorbate 1,686 mg (about 1,500 mg vitamin C); taurine 1,500 mg; ultramicronized PEA 1,200 mg; Quercefit quercetin phytosome 300 mg; chlorogenic acid 200 mg (from decaffeinated green coffee bean extract, caffeine under 0.1%); luteolin 140 mg (standard, from Sophora japonica).
+- Capsule flow agents: rice hull concentrate and L-leucine. Powder flow agent: rice hull concentrate. Excluded: magnesium stearate, titanium dioxide, citric acid, carrageenan, gelatin, artificial colors, flavors and sweeteners, soy-derived ingredients, and silicon dioxide as an added flow agent.

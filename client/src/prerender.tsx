@@ -15,16 +15,16 @@ import App from "./App";
 import ingredientList from "../../scripts/ingredient-routes.json";
 import { ingredients as ingredientData } from "./data/ingredients";
 import type { IngredientData } from "./data/ingredients";
-import { CONTENT_LAST_REVIEWED } from "./lib/siteDates";
+import { INGREDIENT_SEO } from "./data/ingredientSeo";
+import { datesFor } from "./data/pageDates";
 
 const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
 const LOGO = `${BASE}/zebra-logo.svg`;
 const HERO_IMAGE = `${BASE}/images/zebrathrive-bottles-og.jpg`;
-// Site-wide last-reviewed date for educational content. Bump in
-// client/src/lib/siteDates.ts when you do a content pass. Used for
-// MedicalWebPage.lastReviewed and dateModified.
-const LAST_REVIEWED = CONTENT_LAST_REVIEWED;
+// Per-page dates (datePublished, dateModified, lastReviewed) come from
+// client/src/data/pageDates.ts, the same source as the sitemap and the
+// visible "Last updated" line.
 // Named author on every educational page. YMYL E-E-A-T pattern:
 // AI assistants weight content with named credentialed humans much higher
 // than anonymous content. reviewedBy is intentionally absent until a
@@ -100,6 +100,11 @@ function metaForRoute(url: string): RouteMeta {
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
   if (ingMatch) {
     const slug = ingMatch[1];
+    // Hand-written title + description (client/src/data/ingredientSeo.ts).
+    const seo = INGREDIENT_SEO[slug];
+    if (seo) return { title: seo.title, description: seo.description };
+
+    // Fallback for an ingredient without an INGREDIENT_SEO entry.
     const item = (ingredientData as Record<string, {
       name: string;
       bluf?: string;
@@ -129,9 +134,10 @@ function metaForRoute(url: string): RouteMeta {
       desc = `${name}: dose rationale, mechanism, and evidence for its place in the ZebraThrive formula. ${desc}`.trim();
     }
     if (desc.length > 160) {
+      // Cut at a sentence end, else at a word boundary. Never mid-word.
       const cut = desc.slice(0, 160);
       const lastDot = cut.lastIndexOf(". ");
-      desc = lastDot > 100 ? cut.slice(0, lastDot + 1) : cut.slice(0, 157) + "...";
+      desc = lastDot > 100 ? cut.slice(0, lastDot + 1) : cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + ".";
     }
 
     return {
@@ -168,7 +174,10 @@ function jsonLdElement(obj: unknown): HeadElement {
   };
 }
 
-function breadcrumbList(url: string, title: string): Record<string, unknown> {
+// BreadcrumbList only for routes that render a visible trail
+// (components/Breadcrumbs.tsx): /ingredients and /ingredients/:slug.
+// Names match the visible trail. Returns null elsewhere.
+function breadcrumbList(url: string, currentName: string): Record<string, unknown> | null {
   const items: Array<Record<string, unknown>> = [
     { "@type": "ListItem", position: 1, name: "Home", item: `${BASE}/` },
   ];
@@ -183,9 +192,9 @@ function breadcrumbList(url: string, title: string): Record<string, unknown> {
       name: "Ingredients",
       item: `${BASE}/ingredients`,
     });
-    items.push({ "@type": "ListItem", position: 3, name: title });
-  } else if (url !== "/") {
-    items.push({ "@type": "ListItem", position: 2, name: title });
+    items.push({ "@type": "ListItem", position: 3, name: currentName });
+  } else {
+    return null;
   }
 
   return {
@@ -221,6 +230,8 @@ function medicalWebPageForIngredient(
     return cit;
   });
 
+  const dates = datesFor(`/ingredients/${slug}`);
+
   const about: Record<string, unknown> = {
     "@type": "DietarySupplement",
     name: cleanName,
@@ -245,23 +256,13 @@ function medicalWebPageForIngredient(
     description,
     inLanguage: "en-US",
     audience: { "@type": "MedicalAudience", audienceType: "Patient" },
-    mainContentOfPage: [
-      "What it is",
-      "Mechanism",
-      "Condition-specific notes (MCAS, hEDS, POTS)",
-      "Form selection rationale",
-      "Dose protocol",
-      "Evidence summary",
-      "Safety and interactions",
-      "Frequently asked questions",
-      "References",
-    ],
     about,
     isPartOf: { "@id": `${BASE}/#organization` },
     author: AUTHOR,
     publisher: { "@id": `${BASE}/#organization` },
-    lastReviewed: LAST_REVIEWED,
-    dateModified: LAST_REVIEWED,
+    ...(dates
+      ? { datePublished: dates.published, dateModified: dates.modified, lastReviewed: dates.modified }
+      : {}),
     image: HERO_IMAGE,
     ...(citations.length ? { citation: citations } : {}),
   };
@@ -280,46 +281,26 @@ function faqPageForIngredient(ing: IngredientData): Record<string, unknown> | nu
   };
 }
 
-function howToForIngredient(
-  slug: string,
-  name: string,
-  ing: IngredientData,
-): Record<string, unknown> | null {
-  const protocol = ing.howToStart?.protocol;
-  if (!protocol || protocol.length === 0) return null;
-  const cleanName = name.split(" (")[0];
-  return {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: `How to start ${cleanName}`,
-    description: `A gradual, step-by-step way to introduce ${cleanName}, from the ZebraThrive ingredient page.`,
-    url: `${BASE}/ingredients/${slug}#how-to-start`,
-    totalTime: ing.howToStart?.timeline || undefined,
-    step: protocol.map((p, idx) => ({
-      "@type": "HowToStep",
-      position: idx + 1,
-      name: p.step,
-      text: `${p.dosage}. ${p.notes}`.trim(),
-    })),
-  };
-}
-
-function schemaElementsForRoute(url: string, title: string): HeadElement[] {
+function schemaElementsForRoute(url: string): HeadElement[] {
   const out: HeadElement[] = [];
-  // Breadcrumbs on every page.
-  out.push(jsonLdElement(breadcrumbList(url, title.replace(" | ZebraThrive", ""))));
 
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
+  if (url === "/ingredients") {
+    const bc = breadcrumbList(url, "Ingredients");
+    if (bc) out.push(jsonLdElement(bc));
+  }
   if (ingMatch) {
     const slug = ingMatch[1];
     const ing = (ingredientData as Record<string, IngredientData>)[slug];
     if (ing) {
+      const bc = breadcrumbList(url, ing.name);
+      if (bc) out.push(jsonLdElement(bc));
       const description = metaForRoute(url).description;
       out.push(jsonLdElement(medicalWebPageForIngredient(slug, ing.name, ing, description)));
       const faq = faqPageForIngredient(ing);
       if (faq) out.push(jsonLdElement(faq));
-      const howTo = howToForIngredient(slug, ing.name, ing);
-      if (howTo) out.push(jsonLdElement(howTo));
+      // HowTo removed 2026-11-01: Google retired HowTo rich results
+      // (2023-09-14). The visible "How to Start" table stays on the page.
     }
   }
 
@@ -366,16 +347,23 @@ export async function prerender(data: { url: string }) {
   if (!isNotFound) {
     elements.add({ type: "meta", props: { property: "og:url", content: canonical } });
   }
-  elements.add({ type: "meta", props: { property: "og:type", content: "website" } });
+  const isIngredientPage = /^\/ingredients\/[a-z0-9-]+\/?$/.test(url);
+  elements.add({ type: "meta", props: { property: "og:type", content: isIngredientPage ? "article" : "website" } });
+  const pageDates = datesFor(url);
+  if (isIngredientPage && pageDates) {
+    elements.add({ type: "meta", props: { property: "article:published_time", content: pageDates.published } });
+    elements.add({ type: "meta", props: { property: "article:modified_time", content: pageDates.modified } });
+  }
   elements.add({ type: "meta", props: { name: "twitter:title", content: meta.title } });
   elements.add({ type: "meta", props: { name: "twitter:description", content: meta.description } });
   if (isShowcase || isHidden || isNotFound) {
     elements.add({ type: "meta", props: { name: "robots", content: "noindex, nofollow" } });
   } else {
-    // Per-route JSON-LD: BreadcrumbList (all pages) and MedicalWebPage +
-    // FAQPage (ingredient pages). Site-wide Organization + Product schema
-    // stays in client/index.html and ships on every page automatically.
-    for (const el of schemaElementsForRoute(url, meta.title)) {
+    // Per-route JSON-LD: BreadcrumbList (/ingredients and ingredient pages,
+    // which show a visible trail) and MedicalWebPage + FAQPage (ingredient
+    // pages). Site-wide Organization + DietarySupplement schema stays in
+    // client/index.html and ships on every page automatically.
+    for (const el of schemaElementsForRoute(url)) {
       elements.add(el);
     }
   }

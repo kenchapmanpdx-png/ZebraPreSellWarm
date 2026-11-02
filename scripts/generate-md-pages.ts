@@ -19,18 +19,23 @@
  * The vercel.json rewrite rule excludes paths with "." so these are served
  * as static files, not rewritten to the SPA shell.
  */
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
 import { ingredients } from "../client/src/data/ingredients.ts";
 import type { IngredientData } from "../client/src/data/ingredients.ts";
 import ingredientList from "./ingredient-routes.json" with { type: "json" };
+import { datesFor } from "../client/src/data/pageDates.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_ROOT = resolve(__dirname, "../dist/public");
 const BASE = "https://www.wellnessforzebras.com";
-const LAST_REVIEWED = "2026-10-07"; // keep in sync with client/src/lib/siteDates.ts
+// Per-page dates come from client/src/data/pageDates.ts (same source as the
+// HTML pages and the sitemap). Pages without an entry (noindex /the-how and
+// /preorder) keep the last site-wide review date.
+const LEGACY_REVIEWED = "2026-10-07";
+const updatedFor = (path: string) => datesFor(path)?.modified ?? LEGACY_REVIEWED;
 const FDA_DISCLAIMER =
   "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.";
 
@@ -59,7 +64,7 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   out.push(`**Page:** ${url}`);
   out.push(`**Brand:** ZebraThrive`);
   out.push(`**Author:** Ken Chapman, Founder of ZebraThrive`);
-  out.push(`**Last reviewed:** ${LAST_REVIEWED}`);
+  out.push(`**Last updated:** ${updatedFor(`/ingredients/${slug}`)}`);
   if (ing.scientificName) out.push(`**Scientific name:** ${ing.scientificName}`);
   if (ing.atAGlance?.dose) out.push(`**Daily dose:** ${ing.atAGlance.dose}`);
   if (ing.whyThisForm?.form) out.push(`**Form used:** ${ing.whyThisForm.form}`);
@@ -270,7 +275,7 @@ function ingredientsIndexMarkdown(): string {
   out.push("");
   out.push("> Every ingredient in ZebraThrive's three-part system (AM capsules, PM capsules, and Daily Powder) with doses, SKU placement, mechanisms, evidence, and the reasoning for inclusion. Each ingredient links to a full markdown summary with PMID citations.");
   out.push("");
-  out.push(`**Brand:** ZebraThrive. **Last reviewed:** ${LAST_REVIEWED}.`);
+  out.push(`**Brand:** ZebraThrive. **Last updated:** ${updatedFor("/ingredients")}.`);
   out.push("");
   out.push("## Ingredients");
   out.push("");
@@ -300,7 +305,7 @@ function corePagesMarkdown(): Array<{ path: string; content: string }> {
 **Page:** ${BASE}/the-how
 **Brand:** ZebraThrive
 **Author:** Ken Chapman, Founder of ZebraThrive
-**Last reviewed:** ${LAST_REVIEWED}
+**Last reviewed:** ${updatedFor("/the-how")}
 
 ## Core thesis
 
@@ -336,7 +341,7 @@ ${FDA_DISCLAIMER}
 **Page:** ${BASE}/our-promise
 **Brand:** ZebraThrive
 **Author:** Ken Chapman, Founder of ZebraThrive
-**Last reviewed:** ${LAST_REVIEWED}
+**Last updated:** ${updatedFor("/our-promise")}
 
 ## Commitments
 
@@ -361,7 +366,7 @@ ${FDA_DISCLAIMER}
 **Page:** ${BASE}/preorder
 **Brand:** ZebraThrive
 **Author:** Ken Chapman, Founder of ZebraThrive
-**Last reviewed:** ${LAST_REVIEWED}
+**Last reviewed:** ${updatedFor("/preorder")}
 
 ## Product
 
@@ -386,7 +391,7 @@ ${FDA_DISCLAIMER}
 **Email:** ken@wellnessforzebras.com
 **Brand:** ZebraThrive
 **Author:** Ken Chapman, Founder of ZebraThrive
-**Last reviewed:** ${LAST_REVIEWED}
+**Last updated:** ${updatedFor("/contact")}
 
 ## How to reach us
 
@@ -416,10 +421,46 @@ function llmsRoutesIndex(): string {
   return lines.join("\n");
 }
 
+// /llms.txt and /llms-full.txt are generated here from the same data as the
+// HTML pages, so they cannot drift (2026-11-01 audit G18; a hand-kept
+// llms-full.txt went stale once already). Curated header and footer text
+// lives in scripts/llms/*.md; edit those, not dist output.
+// Note: no AI vendor documents reading llms.txt and Google ignores it; the
+// files are kept for any assistant that does fetch them, served noindex.
+const LLMS_DIR = resolve(__dirname, "llms");
+const readTpl = (f: string) => readFileSync(resolve(LLMS_DIR, f), "utf8").trimEnd();
+
+function llmsTxt(): string {
+  const out: string[] = [readTpl("llms-header.md"), "", "## Ingredient deep dives", ""];
+  for (const r of ingredientList as Array<{ slug: string; display_name: string }>) {
+    const ing = (ingredients as Record<string, IngredientData>)[r.slug];
+    if (!ing) continue;
+    // BLUF capsule (carries the page's headline facts), then form and dose.
+    const lead = (ing.bluf || ing.atAGlance?.whatItIs || "").trim().replace(/\.$/, "");
+    const form = ing.whyThisForm?.form?.trim().replace(/\.$/, "") ?? "";
+    const dose = ing.atAGlance?.dose?.trim().replace(/\.$/, "") ?? "";
+    const parts = [lead, form && `Form: ${form}`, dose && `Dose: ${dose}`].filter(Boolean);
+    out.push(`- [${r.display_name}](${BASE}/ingredients/${r.slug}.md): ${parts.join(". ")}.`);
+  }
+  out.push("", readTpl("llms-footer.md"), "");
+  return scrubEmDashes(out.join("\n"));
+}
+
+function llmsFullTxt(ingredientMds: string[]): string {
+  const out: string[] = [readTpl("llms-full-header.md"), ""];
+  for (const md of ingredientMds) {
+    // Demote each page's H1 to H2 so the file has one H1.
+    out.push("---", "", md.replace(/^# /m, "## ").trimEnd(), "");
+  }
+  out.push("---", "", readTpl("llms-full-footer.md"), "");
+  return scrubEmDashes(out.join("\n"));
+}
+
 function main() {
   mkdirSync(resolve(OUT_ROOT, "ingredients"), { recursive: true });
 
   let count = 0;
+  const ingredientMds: string[] = [];
 
   // Per-ingredient .md
   for (const r of ingredientList as Array<{ slug: string; display_name: string }>) {
@@ -430,6 +471,7 @@ function main() {
     }
     const md = ingredientMarkdown(r.slug, ing);
     writeFileSync(resolve(OUT_ROOT, "ingredients", `${r.slug}.md`), md);
+    ingredientMds.push(md);
     count++;
   }
 
@@ -441,10 +483,12 @@ function main() {
     writeFileSync(resolve(OUT_ROOT, page.path), page.content);
   }
 
-  // Discovery index for AI assistants
+  // Discovery indexes for AI assistants
   writeFileSync(resolve(OUT_ROOT, "llms-routes.txt"), llmsRoutesIndex());
+  writeFileSync(resolve(OUT_ROOT, "llms.txt"), llmsTxt());
+  writeFileSync(resolve(OUT_ROOT, "llms-full.txt"), llmsFullTxt(ingredientMds));
 
-  console.log(`[md] wrote ${count} ingredient .md files + 5 core + 1 index + llms-routes.txt`);
+  console.log(`[md] wrote ${count} ingredient .md files + 5 core + 1 index + llms-routes.txt + llms.txt + llms-full.txt`);
 }
 
 main();

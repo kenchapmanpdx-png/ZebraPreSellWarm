@@ -1,6 +1,8 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
+import "@fontsource-variable/montserrat/wght.css";
+import "@fontsource-variable/playfair-display/wght.css";
 import "./index.css";
 
 const container = document.getElementById("root")!;

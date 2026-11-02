@@ -5,8 +5,8 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      sans: ['Montserrat', 'Inter', 'sans-serif'], // Main Body Font
-      serif: ['Playfair Display', 'Lora', 'serif'], // Heading Font
+      sans: ['"Montserrat Variable"', 'Montserrat', 'sans-serif'], // Main Body Font (self-hosted, @fontsource-variable)
+      serif: ['"Playfair Display Variable"', '"Playfair Display"', 'serif'], // Heading Font (self-hosted, @fontsource-variable)
     },
     extend: {
       borderRadius: {
