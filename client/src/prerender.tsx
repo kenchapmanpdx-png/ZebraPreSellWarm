@@ -232,19 +232,17 @@ function medicalWebPageForIngredient(
 
   const dates = datesFor(`/ingredients/${slug}`);
 
+  // `about` is typed Substance, not DietarySupplement: schema.org
+  // DietarySupplement is a Product subtype, and Google's Rich Results Test
+  // flagged it as an invalid Product snippet (no offers/review/rating) on
+  // every ingredient page (verified 2026-11-01). Dose and safety stay in the
+  // visible page and the .md companion.
   const about: Record<string, unknown> = {
-    "@type": "DietarySupplement",
+    "@type": "Substance",
     name: cleanName,
   };
   if (ing.scientificName) about.alternateName = ing.scientificName;
-  if (ing.atAGlance?.dose) about.recommendedIntake = ing.atAGlance.dose;
   if (ing.atAGlance?.whatItIs) about.description = ing.atAGlance.whatItIs;
-  const safetyParts = [
-    ing.safety?.cautions,
-    ing.safety?.sideEffects,
-    ing.safety?.interactions ? `Interactions: ${ing.safety.interactions}` : "",
-  ].filter(Boolean);
-  if (safetyParts.length) about.safetyConsideration = safetyParts.join(" ");
 
   return {
     "@context": "https://schema.org",
@@ -361,7 +359,7 @@ export async function prerender(data: { url: string }) {
   } else {
     // Per-route JSON-LD: BreadcrumbList (/ingredients and ingredient pages,
     // which show a visible trail) and MedicalWebPage + FAQPage (ingredient
-    // pages). Site-wide Organization + DietarySupplement schema stays in
+    // pages). Site-wide Organization schema stays in
     // client/index.html and ships on every page automatically.
     for (const el of schemaElementsForRoute(url)) {
       elements.add(el);
