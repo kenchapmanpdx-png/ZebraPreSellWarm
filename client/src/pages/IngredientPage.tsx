@@ -90,9 +90,9 @@ export default function IngredientPage() {
             </main>
 
             {/* Related Ingredients - cross-linking for SEO + UX */}
-            <section className="py-16 px-6 bg-[#F2F0EA] border-t border-[#3D3733]/10">
+            <nav aria-labelledby="related-ingredients" className="py-16 px-6 bg-[#F2F0EA] border-t border-[#3D3733]/10">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#262321] mb-2">
+                    <h2 id="related-ingredients" className="text-2xl md:text-3xl font-serif font-bold text-[#262321] mb-2">
                         Explore More Ingredients
                     </h2>
                     <p className="text-sm md:text-base text-[#5D5752] mb-8 max-w-2xl">
@@ -121,7 +121,7 @@ export default function IngredientPage() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </nav>
 
             <Footer />
         </div>
