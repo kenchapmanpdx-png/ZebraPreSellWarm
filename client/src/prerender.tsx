@@ -22,6 +22,11 @@ const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
 const LOGO = `${BASE}/zebra-logo.svg`;
 const HERO_IMAGE = `${BASE}/images/zebrathrive-bottles-og.jpg`;
+// Per-ingredient 1200x630 card (client/public/images/og/<slug>.jpg), generated
+// from the ingredient's name, form and dose. Declared as both og:image and
+// Article.image (Google reads either as the thumbnail source) and rendered
+// visibly on the page in the "Where X fits" block.
+const ingredientImage = (slug: string) => `${BASE}/images/og/${slug}.jpg`;
 // Per-page dates (datePublished, dateModified, lastReviewed) come from
 // client/src/data/pageDates.ts, the same source as the sitemap and the
 // visible "Last updated" line.
@@ -261,7 +266,7 @@ function medicalWebPageForIngredient(
     ...(dates
       ? { datePublished: dates.published, dateModified: dates.modified, lastReviewed: dates.modified }
       : {}),
-    image: HERO_IMAGE,
+    image: ingredientImage(slug),
     ...(citations.length ? { citation: citations } : {}),
   };
 }
@@ -347,6 +352,16 @@ export async function prerender(data: { url: string }) {
   }
   const isIngredientPage = /^\/ingredients\/[a-z0-9-]+\/?$/.test(url);
   elements.add({ type: "meta", props: { property: "og:type", content: isIngredientPage ? "article" : "website" } });
+  const ingSlug = isIngredientPage ? url.match(/^\/ingredients\/([a-z0-9-]+)/)![1] : null;
+  const shareImage = ingSlug ? ingredientImage(ingSlug) : HERO_IMAGE;
+  const shareAlt = ingSlug
+    ? `${(ingredientData as Record<string, IngredientData>)[ingSlug]?.name || ingSlug}: dose and form in ZebraThrive`
+    : "ZebraThrive AM capsules, PM capsules and Daily Powder";
+  elements.add({ type: "meta", props: { property: "og:image", content: shareImage } });
+  elements.add({ type: "meta", props: { property: "og:image:width", content: "1200" } });
+  elements.add({ type: "meta", props: { property: "og:image:height", content: "630" } });
+  elements.add({ type: "meta", props: { property: "og:image:alt", content: shareAlt } });
+  elements.add({ type: "meta", props: { name: "twitter:image", content: shareImage } });
   const pageDates = datesFor(url);
   if (isIngredientPage && pageDates) {
     elements.add({ type: "meta", props: { property: "article:published_time", content: pageDates.published } });

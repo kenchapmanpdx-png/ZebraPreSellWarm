@@ -46,6 +46,21 @@ export default function IngredientPage() {
                     className="max-w-4xl mx-auto px-4 pb-16"
                 >
                     <div className="p-8 md:p-10 bg-[#0F2A22] text-[#EBE8E1] rounded-[2rem] shadow-xl">
+                        {/* Same image as og:image and Article.image (prerender.tsx):
+                            marked-up images must be visible on the page. */}
+                        <figure className="mb-8 overflow-hidden rounded-2xl border border-[#EBE8E1]/15 bg-[#EBE8E1]">
+                            <img
+                                src={`/images/og/${id}-600.webp`}
+                                srcSet={`/images/og/${id}-600.webp 600w, /images/og/${id}.jpg 1200w`}
+                                sizes="(max-width: 896px) 92vw, 832px"
+                                alt={`${ingredient.name}: ${ingredient.atAGlance.dose}`}
+                                width={1200}
+                                height={630}
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-auto"
+                            />
+                        </figure>
                         <h2 id="in-the-system" className="text-2xl md:text-3xl font-serif font-bold !text-[#EBE8E1] mb-3">
                             Where {ingredient.name.split(" (")[0]} fits in ZebraThrive
                         </h2>
