@@ -61,12 +61,13 @@ export default function Navigation() {
             aria-label="ZebraThrive home"
             className="flex items-center gap-2 cursor-pointer group"
           >
+            {/* Decorative mark. The "Z" is CSS content, not DOM text, so the
+                link's visible text ("ZebraThrive") stays inside its accessible
+                name ("ZebraThrive home") per WCAG 2.5.3. */}
             <div
               aria-hidden="true"
-              className="w-8 h-8 bg-[#3D3733] rounded-lg flex items-center justify-center text-[#EBE8E1] font-serif font-bold text-lg group-hover:bg-[#B36B4D] transition-colors"
-            >
-              Z
-            </div>
+              className="w-8 h-8 bg-[#3D3733] rounded-lg flex items-center justify-center text-[#EBE8E1] font-serif font-bold text-lg group-hover:bg-[#B36B4D] transition-colors before:content-['Z']"
+            />
             <span className="font-serif font-bold text-2xl text-[#3D3733] tracking-tight">
               Zebra<span className="text-[#B36B4D]">Thrive</span>
             </span>
