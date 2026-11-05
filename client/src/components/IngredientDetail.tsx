@@ -85,6 +85,8 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
     // Per-page content date (client/src/data/pageDates.ts). Same value as the
     // JSON-LD dateModified and the .md companion.
     const modified = datesFor(`/ingredients/${data.id}`)?.modified;
+    // Headings use the short name ("Vitamin C", not "Vitamin C (Sodium Ascorbate)").
+    const cleanName = data.name.split(" (")[0];
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-12 space-y-16">
@@ -131,7 +133,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 <CardHeader className="bg-secondary/30 border-b border-border/50 py-4">
                     <h2 className="text-xl font-serif flex items-center gap-2 m-0">
                         <CheckCircle2 className="w-5 h-5 text-accent" aria-hidden="true" />
-                        At a Glance
+                        {cleanName} at a glance
                     </h2>
                 </CardHeader>
                 <CardContent className="p-8 grid gap-8 md:grid-cols-2">
@@ -142,7 +144,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         companion's Quick reference block. */}
                     <div className="space-y-3">
                         <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-[#8F5238]">Daily Dose</h3>
-                        <p className="text-xl font-serif font-medium text-primary">{data.atAGlance.dose}</p>
+                        <p className="text-xl font-serif font-medium text-primary"><strong className="font-medium">{data.atAGlance.dose}</strong></p>
                     </div>
                     <div className="space-y-3">
                         <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-[#8F5238]">Key Benefits</h3>
@@ -164,7 +166,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     <div className="p-2 bg-accent/10 rounded-lg">
                         <Beaker className="w-6 h-6 text-accent" aria-hidden="true" />
                     </div>
-                    <h2 className="text-3xl font-serif">How It Works</h2>
+                    <h2 className="text-3xl font-serif">How does {cleanName} work?</h2>
                 </div>
                 <div className="prose prose-slate max-w-none text-lg leading-relaxed text-muted-foreground space-y-4">
                     {data.howItWorks.split('\n\n').map((para, i) => (
@@ -179,7 +181,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     <div className="p-2 bg-primary/5 rounded-lg">
                         <Microscope className="w-6 h-6 text-primary" aria-hidden="true" />
                     </div>
-                    <h2 className="text-3xl font-serif">What the Research Shows</h2>
+                    <h2 className="text-3xl font-serif">What does the research show for {cleanName}?</h2>
                 </div>
 
                 <Accordion type="single" collapsible className="w-full space-y-4">
@@ -242,8 +244,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             {/* For the Triad Specifically */}
             <section className="space-y-10">
                 <div className="text-center space-y-2">
-                    <h2 className="text-4xl font-serif">Addressing the Triad</h2>
-                    <p className="text-muted-foreground">Tailored benefits for complex conditions</p>
+                    <h2 className="text-4xl font-serif">How {cleanName} fits hEDS, POTS and MCAS</h2>
                 </div>
                 <div className="grid gap-8 md:grid-cols-3">
                     {[
@@ -252,9 +253,9 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         { title: "POTS", content: data.triadPlain?.pots || data.triad.pots }
                     ].map((item, idx) => (
                         <div key={idx} className="group relative p-8 bg-white rounded-3xl shadow-lg border border-border/30 transition-all hover:-translate-y-1">
-                            <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#8F5238] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
-                                {item.title}
-                            </div>
+                            <h3 className="absolute top-0 right-8 -translate-y-1/2 bg-[#8F5238] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md m-0">
+                                {cleanName} and {item.title}
+                            </h3>
                             <p className="text-muted-foreground leading-relaxed mt-2">{item.content}</p>
                         </div>
                     ))}
@@ -266,9 +267,9 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                 <div className="relative z-10 space-y-8">
                     <div className="space-y-4">
-                        <h2 className="text-3xl font-serif !text-primary-foreground">Why We Chose This Form</h2>
+                        <h2 className="text-3xl font-serif !text-primary-foreground">Why we chose this form of {cleanName}</h2>
                         <div className="inline-block px-4 py-2 bg-accent/20 border border-accent/30 rounded-lg">
-                            <span className="text-accent-foreground font-bold">{data.whyThisForm.form}</span>
+                            <strong className="text-accent-foreground font-bold">{data.whyThisForm.form}</strong>
                         </div>
                     </div>
 
@@ -301,7 +302,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     <div className="p-2 bg-green-500/10 rounded-lg">
                         <ShieldCheck className="w-6 h-6 text-green-600" aria-hidden="true" />
                     </div>
-                    <h2 className="text-3xl font-serif">Safety & Interactions</h2>
+                    <h2 className="text-3xl font-serif">Is {cleanName} safe? Side effects and interactions</h2>
                 </div>
 
                 <div className="grid gap-12 md:grid-cols-2">
@@ -351,7 +352,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             {/* Titration Protocol */}
             {data.howToStart && (
                 <section id="how-to-start" className="space-y-10 scroll-mt-28">
-                    <h2 className="text-3xl font-serif">How to Start</h2>
+                    <h2 className="text-3xl font-serif">How to start {cleanName}</h2>
                     <div className="overflow-hidden border border-border/50 rounded-[2rem] shadow-xl bg-white p-2">
                         <Table regionLabel="How to start: dosing schedule">
                             <TableHeader className="bg-secondary/20">
@@ -446,7 +447,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             {/* Patient FAQ - common questions in plain language */}
             {data.faq && data.faq.length > 0 && (
                 <section className="space-y-6">
-                    <h2 className="text-3xl font-serif text-primary">Common Questions</h2>
+                    <h2 className="text-3xl font-serif text-primary">Common questions about {cleanName}</h2>
                     <Accordion type="single" collapsible className="space-y-3">
                         {data.faq.map((item, i) => (
                             <AccordionItem key={i} value={`faq-${i}`} className="bg-white/60 border border-border/50 rounded-xl px-6">
