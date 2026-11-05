@@ -13,6 +13,7 @@ const PRERENDER_ROUTES = [
   "/the-how",
   "/ingredients",
   "/our-promise",
+  "/excipients",
   "/preorder",
   "/privacy",
   "/terms",

@@ -32,6 +32,7 @@ const CORE_ROUTES: Route[] = [
   { loc: "/", changefreq: "weekly", priority: "1.0" },
   { loc: "/ingredients", changefreq: "monthly", priority: "0.8" },
   { loc: "/our-promise", changefreq: "monthly", priority: "0.7" },
+  { loc: "/excipients", changefreq: "monthly", priority: "0.8" },
   { loc: "/contact", changefreq: "yearly", priority: "0.3" },
   { loc: "/privacy", changefreq: "yearly", priority: "0.3" },
   { loc: "/terms", changefreq: "yearly", priority: "0.3" },

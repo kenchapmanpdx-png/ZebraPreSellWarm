@@ -14,6 +14,7 @@ import Ingredients from "./pages/Ingredients";
 import IngredientPage from "./pages/IngredientPage";
 import PreorderPage from "./pages/PreorderPage";
 import OurPromise from "./pages/OurPromise";
+import Excipients from "@/pages/Excipients";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Shipping from "./pages/Shipping";
@@ -50,6 +51,7 @@ function Router() {
       <Route path="/ingredients/:id" component={IngredientPage} />
       <Route path="/preorder" component={PreorderPage} />
       <Route path="/our-promise" component={OurPromise} />
+      <Route path="/excipients" component={Excipients} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/shipping" component={Shipping} />

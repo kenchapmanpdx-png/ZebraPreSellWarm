@@ -27,6 +27,16 @@ import { ingredients } from "../client/src/data/ingredients.ts";
 import type { IngredientData } from "../client/src/data/ingredients.ts";
 import ingredientList from "./ingredient-routes.json" with { type: "json" };
 import { datesFor } from "../client/src/data/pageDates.ts";
+import {
+  EXCIPIENTS_INTRO,
+  EXCIPIENT_DEFINITION,
+  EXCLUDED_EXCIPIENTS,
+  USED_EXCIPIENTS,
+  CARRIERS,
+  CARRIERS_NOTE,
+  LABEL_CHECKS,
+  EXCIPIENT_FAQ,
+} from "../client/src/data/excipients.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_ROOT = resolve(__dirname, "../dist/public");
@@ -293,9 +303,40 @@ function ingredientsIndexMarkdown(): string {
   return scrubEmDashes(out.join("\n"));
 }
 
+function excipientsMarkdown(): string {
+  const lines: string[] = [];
+  lines.push("# Excipients: what ZebraThrive leaves out, and what it uses instead", "");
+  lines.push(`> ${EXCIPIENTS_INTRO}`, "");
+  lines.push(`**Page:** ${BASE}/excipients`, "**Brand:** ZebraThrive", "**Author:** Ken Chapman, Founder of ZebraThrive", `**Last updated:** ${updatedFor("/excipients")}`, "");
+  lines.push("## What is an excipient?", "", EXCIPIENT_DEFINITION, "");
+  lines.push("## The eight excipients ZebraThrive excludes", "");
+  for (const e of EXCLUDED_EXCIPIENTS) {
+    lines.push(`### ${e.question}`, "");
+    lines.push(`- **What it is:** ${e.whatItIs}`);
+    lines.push(`- **Why it is out:** ${e.whyExcluded}`);
+    lines.push(`- **What ZebraThrive uses instead:** ${e.instead}`);
+    if (e.links?.length) lines.push(`- Related: ${e.links.map((l) => `[${l.label}](${BASE}${l.href}.md)`).join(", ")}`);
+    lines.push("");
+  }
+  lines.push("## The excipients ZebraThrive does use", "", "| Role | Excipient | Where |", "|---|---|---|");
+  for (const u of USED_EXCIPIENTS) lines.push(`| ${u.role} | ${u.excipient} | ${u.where} |`);
+  lines.push("");
+  lines.push("## Carriers that arrive with the raw materials", "", CARRIERS_NOTE, "", "| Carrier | Arrives with | Amount |", "|---|---|---|");
+  for (const c of CARRIERS) lines.push(`| ${c.carrier} | ${c.arrivesWith} | ${c.amount} |`);
+  lines.push("");
+  lines.push("## How to check any supplement label for these excipients", "");
+  LABEL_CHECKS.forEach((l, i) => lines.push(`${i + 1}. ${l}`));
+  lines.push("");
+  lines.push("## Common questions about excipients", "");
+  for (const f of EXCIPIENT_FAQ) lines.push(`**${f.q}**`, "", f.a, "");
+  lines.push("## Regulatory framing", "", FDA_DISCLAIMER, "");
+  return lines.join("\n");
+}
+
 function corePagesMarkdown(): Array<{ path: string; content: string }> {
   // Each entry: path inside dist/public, file content.
   const pages = [
+    { path: "excipients.md", content: excipientsMarkdown() },
     {
       path: "the-how.md",
       content: `# The How: ZebraThrive's Three-Part System
@@ -409,7 +450,7 @@ function llmsRoutesIndex(): string {
   lines.push("Every page on wellnessforzebras.com has a token-efficient Markdown companion at <path>.md. Use these when fetching content for AI-assisted research; they exclude navigation, scripts, and styling.");
   lines.push("");
   lines.push("## Core pages");
-  for (const p of ["the-how", "our-promise", "preorder", "contact", "ingredients"]) {
+  for (const p of ["the-how", "our-promise", "excipients", "preorder", "contact", "ingredients"]) {
     lines.push(`- ${BASE}/${p}.md`);
   }
   lines.push("");
@@ -488,7 +529,7 @@ function main() {
   writeFileSync(resolve(OUT_ROOT, "llms.txt"), llmsTxt());
   writeFileSync(resolve(OUT_ROOT, "llms-full.txt"), llmsFullTxt(ingredientMds));
 
-  console.log(`[md] wrote ${count} ingredient .md files + 5 core + 1 index + llms-routes.txt + llms.txt + llms-full.txt`);
+  console.log(`[md] wrote ${count} ingredient .md files + 6 core + 1 index + llms-routes.txt + llms.txt + llms-full.txt`);
 }
 
 main();

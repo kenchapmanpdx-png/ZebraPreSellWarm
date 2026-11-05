@@ -20,6 +20,7 @@ Every linked page below has a token-efficient Markdown companion at the same pat
 
 - [Home](https://www.wellnessforzebras.com/): Brand overview, AM caps, PM caps, and Daily Powder formulas, mast cell + autonomic + ECM thesis.
 - [Our Promise](https://www.wellnessforzebras.com/our-promise.md): Transparency commitment, documented ingredient decisions, COA-based testing.
+- [Excipients](https://www.wellnessforzebras.com/excipients.md): The eight excipients ZebraThrive excludes (citric acid, magnesium stearate, titanium dioxide, carrageenan, gelatin, FD&C dyes, artificial flavors, soy derivatives), why, what it uses instead, and the carriers that arrive with raw materials.
 - [Preorder](https://www.wellnessforzebras.com/preorder.md): Reservation list for the AM caps, PM caps, and Daily Powder.
 
 ## Ingredient hub

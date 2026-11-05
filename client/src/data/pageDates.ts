@@ -45,6 +45,8 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   // 2026-11-01: visible breadcrumbs, card headings H3 -> H2.
   "/ingredients": { published: SITE_LAUNCH, modified: "2026-10-07", structural: "2026-11-01" },
   "/our-promise": { published: SITE_LAUNCH, modified: "2026-10-07" },
+  // 2026-11-05: excipient hub added (SEO/GEO audit A13).
+  "/excipients": { published: "2026-11-05", modified: "2026-11-05" },
   "/contact": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/privacy": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/terms": { published: SITE_LAUNCH, modified: "2026-10-07" },

@@ -72,10 +72,10 @@ export default function ExclusionsBlock() {
 
         <div className="text-center">
           <Link
-            href="/our-promise"
+            href="/excipients"
             className="inline-flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-[#8F5238] hover:text-[#0F2A22] transition-colors"
           >
-            Why each is excluded
+            Why each excipient is excluded
             <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
           </Link>
         </div>

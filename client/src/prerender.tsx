@@ -17,6 +17,7 @@ import { ingredients as ingredientData } from "./data/ingredients";
 import type { IngredientData } from "./data/ingredients";
 import { INGREDIENT_SEO } from "./data/ingredientSeo";
 import { datesFor } from "./data/pageDates";
+import { EXCIPIENT_FAQ } from "./data/excipients";
 
 const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
@@ -66,6 +67,11 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
     title: "Our Promise: Constitution | ZebraThrive",
     description:
       "ZebraThrive's commitments: disclosed ingredients and excipients, lot-verified ingredient COAs, cited evidence, and honest limits on what we claim.",
+  },
+  "/excipients": {
+    title: "Excipients ZebraThrive Leaves Out, and What It Uses Instead",
+    description:
+      "Why ZebraThrive excludes citric acid, magnesium stearate, titanium dioxide, carrageenan, gelatin, dyes, flavors and soy, and what it uses instead.",
   },
   "/preorder": {
     title: "Reserve: Coming Soon | ZebraThrive",
@@ -190,6 +196,8 @@ function breadcrumbList(url: string, currentName: string): Record<string, unknow
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
   if (url === "/ingredients") {
     items.push({ "@type": "ListItem", position: 2, name: "Ingredients" });
+  } else if (url === "/excipients") {
+    items.push({ "@type": "ListItem", position: 2, name: "Excipients" });
   } else if (ingMatch) {
     items.push({
       "@type": "ListItem",
@@ -305,11 +313,47 @@ function articleForOurPromise(description: string): Record<string, unknown> {
   };
 }
 
+// /excipients: editorial hub with a visible byline, date and FAQ.
+function articleForExcipients(description: string): Record<string, unknown> {
+  const url = `${BASE}/excipients`;
+  const dates = datesFor("/excipients");
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": url,
+    url,
+    mainEntityOfPage: url,
+    headline: "Excipients: what ZebraThrive leaves out, and what it uses instead",
+    description,
+    inLanguage: "en-US",
+    author: AUTHOR,
+    publisher: { "@id": `${BASE}/#organization` },
+    ...(dates ? { datePublished: dates.published, dateModified: dates.modified } : {}),
+    image: HERO_IMAGE,
+  };
+}
+
 function schemaElementsForRoute(url: string): HeadElement[] {
   const out: HeadElement[] = [];
 
   if (url === "/our-promise") {
     out.push(jsonLdElement(articleForOurPromise(metaForRoute(url).description)));
+  }
+  if (url === "/excipients") {
+    const bc = breadcrumbList(url, "Excipients");
+    if (bc) out.push(jsonLdElement(bc));
+    out.push(jsonLdElement(articleForExcipients(metaForRoute(url).description)));
+    out.push(
+      jsonLdElement({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: EXCIPIENT_FAQ.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }),
+    );
   }
 
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
