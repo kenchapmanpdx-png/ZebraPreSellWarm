@@ -185,9 +185,12 @@ export default function Hero() {
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={words[currentWordIndex]}
-                      initial={{ y: 15, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -15, opacity: 0 }}
+                      // Transform only: an opacity fade blends #B36B4D into the
+                      // background mid-animation and fails WCAG 3:1 (Lighthouse
+                      // measured 2.56:1 on the blended #c58f79).
+                      initial={{ y: 15 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: -15 }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
                       className="absolute left-0 text-[#B36B4D]"
                     >
