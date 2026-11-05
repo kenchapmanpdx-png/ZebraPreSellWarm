@@ -55,7 +55,8 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
 
 export const INGREDIENT_DATES: Record<string, PageDate> = {
   "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-10-08" },
-  "luteolin": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-05: Di Stadio 2022 citation corrected (PMID 35450527, 90-day olfactory outcome).
+  "luteolin": { published: SITE_LAUNCH, modified: "2026-11-05" },
   "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-10-08" },
   "taurine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "vitamin-c": { published: SITE_LAUNCH, modified: "2026-10-08" },
@@ -82,7 +83,8 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "pantothenic-acid": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "biotin": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "boron": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "molybdenum": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-05: unverifiable "Kohn 2020" citation replaced (PMID 37987446); unsupported 2-4 week timeline removed.
+  "molybdenum": { published: SITE_LAUNCH, modified: "2026-11-05" },
 };
 
 /** Dates for a route path ("/", "/privacy", "/ingredients/niacinamide"). */

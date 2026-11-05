@@ -244,9 +244,9 @@ export const ingredients: Record<string, IngredientData> = {
                 studies: [
                     {
                         source: "Di Stadio A et al., \"Ultramicronized PEA and Luteolin Supplement Combined with Olfactory Training\"",
-                        pmid: "35086448",
-                        design: "Clinical trial in post-COVID patients",
-                        finding: "Significant improvements in inflammatory markers and symptoms over 4-6 months using PEA-luteolin combination"
+                        pmid: "35450527",
+                        design: "Multicenter double-blind randomized placebo-controlled trial, post-COVID olfactory dysfunction, n=185, 90 days",
+                        finding: "PEA-LUT 770 mg/day plus olfactory training improved olfactory threshold, discrimination and identification scores at 90 days versus training plus placebo (92% vs 42% of patients improved). Olfactory outcome only; no inflammatory markers were measured."
                     }
                 ]
             }
@@ -289,7 +289,7 @@ export const ingredients: Record<string, IngredientData> = {
         sources: [
             { title: "Luteolin Is More Potent than Cromolyn in Their Ability to Inhibit Mediator Release from Cultured Human Mast Cells", pmid: "38588651", authors: "Tsilioni I & Theoharides TC", year: "2024" },
             { title: "Long-COVID syndrome-associated brain fog and chemofog: Luteolin to the rescue", pmid: "33847020", authors: "Theoharides TC et al.", year: "2021" },
-            { title: "Ultramicronized PEA and Luteolin Supplement Combined with Olfactory Training", pmid: "35086448", authors: "Di Stadio A et al.", year: "2022" },
+            { title: "Ultramicronized Palmitoylethanolamide and Luteolin Supplement Combined with Olfactory Training to Treat Post-COVID-19 Olfactory Impairment", pmid: "35450527", authors: "Di Stadio A et al.", year: "2022" },
             { title: "Beneficial Effects of Co-Ultramicronized Palmitoylethanolamide/Luteolin in a Mouse Model of Autism", pmid: "27611916", authors: "Bertolino B et al.", year: "2017" }
         ]
     },
@@ -1923,13 +1923,13 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Chemical Intolerance and the MCAS Connection",
-                summary: "Chemical intolerance, in which patients report symptoms to low-dose environmental chemicals, is over-represented in MCAS. Molybdenum is the cofactor for the three xenobiotic-handling oxidases (sulfite oxidase, aldehyde oxidase, xanthine oxidase).",
+                summary: "Chemical intolerance, in which patients report symptoms to low-dose environmental chemicals, is over-represented in MCAS. Molybdenum is the cofactor for the three xenobiotic-handling oxidases (sulfite oxidase, aldehyde oxidase, xanthine oxidase). The step from cofactor status to chemical intolerance in MCAS is inference; no study has tested molybdenum for it.",
                 studies: [
                     {
-                        source: "Kohn JR et al., \"MCAS, chemical sensitivity, and nutrition\"",
-                        pmid: "31845133",
-                        design: "Clinical review, prevalence and mechanism analysis",
-                        finding: "MCAS patients show high rates of multiple chemical sensitivity; nutrient cofactors for xenobiotic metabolism (including molybdenum) are relevant supportive options"
+                        source: "Palmer RF, Dempsey TT, Afrin LB, \"Chemical Intolerance and Mast Cell Activation: A Suspicious Synchronicity\"",
+                        pmid: "37987446",
+                        design: "Clinical cohort, 544 MCAS patients assessed with the QEESI chemical-intolerance instrument",
+                        finding: "The majority of 544 MCAS patients met criteria for chemical intolerance, confirming an earlier report of 60%; the authors propose mast cell activation as the shared mechanism. The study did not test molybdenum or any nutrient."
                     }
                 ]
             }
@@ -1962,14 +1962,13 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Week 1", dosage: "75 mcg (EOD)", notes: "Every other day for sensitive start" },
                 { step: "Week 2", dosage: "75 mcg daily", notes: "Assess tolerance" },
                 { step: "Week 3+", dosage: "150 mcg daily", notes: "Full target dose (PM capsule)" }
-            ],
-            timeline: "Chemical sensitivity improvements typically seen within 2-4 weeks."
+            ]
         },
         sources: [
             { title: "Isolated sulfite oxidase deficiency", pmid: "28980090", authors: "Claerhout H et al.", year: "2017" },
             { title: "A defect in molybdenum cofactor binding causes an attenuated form of sulfite oxidase deficiency", pmid: "34741542", authors: "Kaczmarek AT et al.", year: "2021" },
             { title: "Molybdenum cofactor deficiency review", pmid: "38234320", authors: "Schwahn BC et al.", year: "2024" },
-            { title: "MCAS, chemical sensitivity, and nutrition", pmid: "31845133", authors: "Kohn JR et al.", year: "2020" }
+            { title: "Chemical Intolerance and Mast Cell Activation: A Suspicious Synchronicity", pmid: "37987446", authors: "Palmer RF, Dempsey TT, Afrin LB", year: "2023" }
         ]
     },
     "copper-bisglycinate": {
