@@ -59,7 +59,8 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "luteolin": { published: SITE_LAUNCH, modified: "2026-11-05" },
   "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-10-08" },
   "taurine": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-05: citation metadata corrected (PMID check).
+  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-05" },
   "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "pine-bark-extract": { published: "2026-05-11", modified: "2026-10-08" },
   "grape-seed-extract": { published: "2026-05-11", modified: "2026-10-08" },
@@ -71,12 +72,14 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "benfotiamine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "niacinamide": { published: "2026-05-11", modified: "2026-10-08" },
   "p5p": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "r5p": { published: "2026-05-11", modified: "2026-10-07" },
+  // 2026-11-05: Rooney 2020 citation corrected to the PubMed-indexed paper (PMID 32330571).
+  "r5p": { published: "2026-05-11", modified: "2026-11-05" },
   "methylfolate": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "vitamin-b12": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-05: citation metadata corrected (PMID check).
+  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-05" },
   "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "chromium": { published: "2026-05-11", modified: "2026-10-08" },
   "selenium": { published: SITE_LAUNCH, modified: "2026-10-08" },

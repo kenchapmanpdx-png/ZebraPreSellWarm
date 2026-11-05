@@ -290,7 +290,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Luteolin Is More Potent than Cromolyn in Their Ability to Inhibit Mediator Release from Cultured Human Mast Cells", pmid: "38588651", authors: "Tsilioni I & Theoharides TC", year: "2024" },
             { title: "Long-COVID syndrome-associated brain fog and chemofog: Luteolin to the rescue", pmid: "33847020", authors: "Theoharides TC et al.", year: "2021" },
             { title: "Ultramicronized Palmitoylethanolamide and Luteolin Supplement Combined with Olfactory Training to Treat Post-COVID-19 Olfactory Impairment", pmid: "35450527", authors: "Di Stadio A et al.", year: "2022" },
-            { title: "Beneficial Effects of Co-Ultramicronized Palmitoylethanolamide/Luteolin in a Mouse Model of Autism", pmid: "27611916", authors: "Bertolino B et al.", year: "2017" }
+            { title: "Beneficial Effects of Co-Ultramicronized Palmitoylethanolamide/Luteolin in a Mouse Model of Autism and in a Case Report of Autism", pmid: "27701827", authors: "Bertolino B et al.", year: "2016" }
         ]
     },
 "magnesium-bisglycinate": {
@@ -748,7 +748,7 @@ export const ingredients: Record<string, IngredientData> = {
                 summary: "Significant reduction in histamine levels and increase in degradation enzymes.",
                 studies: [
                     { source: "Hagel AF et al., \"Intravenous infusion of ascorbic acid decreases serum histamine concentrations\"", pmid: "23666445", design: "Human study, 89 patients, single 7.5 g IV infusion", finding: "Serum histamine fell from 0.83 to 0.57 ng/ml x m2 body surface area after IV ascorbic acid. IV route; oral doses do not reach these blood levels." },
-                    { source: "Johnston, \"2g oral increased DAO activity (p<0.001)\"", pmid: "25095772", design: "Human RCT", finding: "Oral doses significantly increased the activity of the enzyme responsible for clearing histamine from the gut." }
+                    { source: "Jarisch R et al., \"Impact of oral vitamin C on histamine levels and seasickness\"", pmid: "25095772", design: "Double-blind placebo-controlled crossover, 70 volunteers, single 2 g dose", finding: "A single 2 g oral dose raised diamine oxidase (DAO) levels (p<0.001), the enzyme that clears histamine in the gut, alongside lower symptom scores." }
                 ]
             }
         ],
@@ -788,7 +788,7 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "IV vitamin C increased cardiac output 40% in POTS", pmid: "21622825", authors: "Stewart et al.", year: "2011" },
             { title: "Intravenous infusion of ascorbic acid decreases serum histamine concentrations in patients with allergic and non-allergic diseases", pmid: "23666445", authors: "Hagel AF et al.", year: "2013" },
             { title: "Vitamin C + gelatin doubled collagen synthesis markers", pmid: "27852613", authors: "Shaw et al.", year: "2017" },
-            { title: "2g oral increased DAO activity", pmid: "25095772", authors: "Johnston", year: "2015" },
+            { title: "Impact of oral vitamin C on histamine levels and seasickness", pmid: "25095772", authors: "Jarisch R et al.", year: "2014" },
             { title: "Influence of vitamin C on the absorption and first pass metabolism of propranolol", pmid: "7589058", authors: "Gonzalez JP et al.", year: "1995" }
         ]
     },
@@ -1914,10 +1914,10 @@ export const ingredients: Record<string, IngredientData> = {
                         finding: "Moco insertion into SUOX is the rate-limiting step in enzyme maturation; defects in Moco binding produce attenuated SUOX deficiency phenotypes"
                     },
                     {
-                        source: "Schwahn BC et al., \"Molybdenum cofactor deficiency review\"",
-                        pmid: "38234320",
-                        design: "Clinical review of MoCD",
-                        finding: "Comprehensive review of molybdenum cofactor biosynthesis and its role in SUOX, xanthine oxidase, and aldehyde oxidase function"
+                        source: "Schwahn BC et al., \"Consensus guidelines for the diagnosis and management of isolated sulfite oxidase deficiency and molybdenum cofactor deficiencies\"",
+                        pmid: "38627985",
+                        design: "Expert consensus guideline with systematic literature search",
+                        finding: "Describes the four ultrarare sulfite-intoxication disorders caused by loss of sulfite oxidase activity through defects in molybdenum cofactor synthesis or the SUOX apoenzyme, and their diagnosis and management"
                     }
                 ]
             },
@@ -1967,7 +1967,7 @@ export const ingredients: Record<string, IngredientData> = {
         sources: [
             { title: "Isolated sulfite oxidase deficiency", pmid: "28980090", authors: "Claerhout H et al.", year: "2017" },
             { title: "A defect in molybdenum cofactor binding causes an attenuated form of sulfite oxidase deficiency", pmid: "34741542", authors: "Kaczmarek AT et al.", year: "2021" },
-            { title: "Molybdenum cofactor deficiency review", pmid: "38234320", authors: "Schwahn BC et al.", year: "2024" },
+            { title: "Consensus guidelines for the diagnosis and management of isolated sulfite oxidase deficiency and molybdenum cofactor deficiencies", pmid: "38627985", authors: "Schwahn BC et al.", year: "2024" },
             { title: "Chemical Intolerance and Mast Cell Activation: A Suspicious Synchronicity", pmid: "37987446", authors: "Palmer RF, Dempsey TT, Afrin LB", year: "2023" }
         ]
     },
@@ -2060,7 +2060,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         sources: [
             { title: "Copper supplementation effects on cardiovascular health", pmid: "20569928", authors: "DiSilvestro et al.", year: "2010" },
-            { title: "Copper in the assessment of nutrient status", pmid: "23651769", authors: "Olivares et al.", year: "2013" },
+            { title: "Copper deficiency in patients with cystinosis with cysteamine toxicity", pmid: "23651769", authors: "Besouw M et al.", year: "2013" },
             { title: "Histamine release from mast cells - effects of copper", pmid: "2476088", authors: "Sharma & Jande", year: "1989" },
             { title: "Copper deficiency increases mast cell numbers", pmid: "7528379", authors: "Schuschke et al.", year: "1994" }
         ]
@@ -3036,10 +3036,10 @@ export const ingredients: Record<string, IngredientData> = {
                 summary: "Riboflavin (as FAD) is the cofactor for MTHFR. In people with MTHFR C677T variants (around 85% of hEDS patients carry at least one copy), the enzyme is less stable and more dependent on riboflavin availability. Studies in adults with the TT genotype have measured blood pressure in relation to riboflavin status, illustrating the genotype-cofactor interaction.",
                 studies: [
                     {
-                        source: "Rooney M et al., \"Higher levels of dietary B vitamins are associated with better blood pressure in homozygous MTHFR 677TT adults\"",
+                        source: "Rooney M et al., \"Impact of the MTHFR C677T polymorphism on one-carbon metabolites: evidence from a randomised trial of riboflavin supplementation\"",
                         pmid: "32330571",
-                        design: "Cross-sectional dietary intake analysis stratified by MTHFR C677T genotype",
-                        finding: "Higher riboflavin intake associated with significantly lower SBP in TT-genotype adults; effect not observed in CC/CT genotypes (cofactor-dependent interaction)"
+                        design: "Plasma metabolite analysis (n=115) plus riboflavin 1.6 mg/day vs placebo for 16 weeks in MTHFR 677TT adults (n=47)",
+                        finding: "TT-genotype adults had lower SAM and SAM:SAH and higher homocysteine than CC; riboflavin raised SAM and cystathionine in the TT group. The same group's earlier RCTs reported blood pressure lowering with riboflavin in TT adults (see McAuley 2016, Rooney 2022)"
                     },
                     {
                         source: "Rooney M et al., \"Impact of the MTHFR C677T polymorphism on blood pressure phenotype: results from the JINGO project\"",
@@ -3098,7 +3098,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         sources: [
             { title: "Effects of vitamin B2 supplementation in adults with migraine: a systematic review and meta-analysis", pmid: "33779525", authors: "Chen YS et al.", year: "2021" },
-            { title: "Higher levels of dietary B vitamins are associated with better blood pressure in homozygous MTHFR 677TT adults", pmid: "32330571", authors: "Rooney M et al.", year: "2020" },
+            { title: "Impact of the MTHFR C677T polymorphism on one-carbon metabolites: evidence from a randomised trial of riboflavin supplementation", pmid: "32330571", authors: "Rooney M et al.", year: "2020" },
             { title: "Impact of the MTHFR C677T polymorphism on blood pressure phenotype: results from the JINGO project", pmid: "35821207", authors: "Rooney M et al.", year: "2022" },
             { title: "Riboflavin status, MTHFR genotype and blood pressure", pmid: "27170501", authors: "McAuley E et al.", year: "2016" },
             { title: "Canadian Headache Society guideline for migraine prophylaxis", pmid: "22683887", authors: "Pringsheim T et al.", year: "2012" }
