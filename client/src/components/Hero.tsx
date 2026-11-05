@@ -152,6 +152,14 @@ export default function Hero() {
             <span className="block mb-2">Advanced Autonomic, Mast Cell</span>
             <span className="block text-[#B36B4D] italic font-normal">& Connective Tissue Support</span>
           </motion.h1>
+          {/* BLUF: names the brand and what it is in the first 60 words of
+              the page (handbook §3, §25). Phrasing reused from the
+              Organization description and footer, no new claims. */}
+          <p className="mt-8 mx-auto max-w-3xl text-lg md:text-xl text-[#5D5752] leading-relaxed">
+            ZebraThrive is a three-part supplement system (AM capsules, PM capsules and Daily Powder)
+            formulated for the EDS, POTS and MCAS (zebra) community, with every ingredient form, dose
+            and excipient disclosed.
+          </p>
         </div>
 
         {/* --- THE HOLOGRAPHIC TRINITY GRID --- */}
