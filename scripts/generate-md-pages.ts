@@ -37,6 +37,7 @@ import {
   LABEL_CHECKS,
   EXCIPIENT_FAQ,
 } from "../client/src/data/excipients.ts";
+import { buildReferences, citationText } from "../client/src/data/references.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_ROOT = resolve(__dirname, "../dist/public");
@@ -177,26 +178,8 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
     }
   }
 
-  // Build a unified numbered ref list (matches the IngredientDetail render):
-  // start with sources[], then add any PMIDs from research[].studies[]
-  // not already in sources.
-  type RefEntry = { n: number; title: string; authors?: string; year?: string; pmid?: string; link?: string };
-  const refList: RefEntry[] = [];
-  const pmidIndex = new Map<string, number>();
-  for (const src of ing.sources || []) {
-    const n = refList.length + 1;
-    refList.push({ n, title: src.title, authors: src.authors, year: src.year, pmid: src.pmid, link: src.link });
-    if (src.pmid) pmidIndex.set(src.pmid, n);
-  }
-  for (const block of ing.research || []) {
-    for (const study of block.studies || []) {
-      if (!study.pmid || pmidIndex.has(study.pmid)) continue;
-      const n = refList.length + 1;
-      refList.push({ n, title: study.source, pmid: study.pmid });
-      pmidIndex.set(study.pmid, n);
-    }
-  }
-  const refFor = (pmid?: string) => (pmid ? pmidIndex.get(pmid) : undefined);
+  // Same numbered list as the page (client/src/data/references.ts).
+  const { refs: refList, numberFor: refFor } = buildReferences(ing);
 
   if (ing.research?.length) {
     out.push("## Evidence summary");
@@ -263,14 +246,14 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   if (refList.length) {
     out.push("## References");
     out.push("");
+    out.push("Authors, journals, dates and study types as indexed by PubMed.");
+    out.push("");
     for (const r of refList) {
-      const bits: string[] = [];
-      if (r.authors) bits.push(r.authors);
-      if (r.year) bits.push(`(${r.year})`);
-      if (r.title) bits.push(r.title);
-      let line = `[${r.n}] ${bits.join(". ")}`;
+      let line = `[${r.n}] ${citationText(r)}`;
+      if (r.studyType) line += `. Study type: ${r.studyType}`;
       if (r.pmid) line += `. PMID: ${r.pmid}. https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/`;
-      else if (r.link) line += `. ${r.link}`;
+      else if (r.link) line += ` ${r.link}`;
+      if (r.pmc) line += ` Free full text: https://pmc.ncbi.nlm.nih.gov/articles/${r.pmc}/`;
       out.push(line);
     }
     out.push("");

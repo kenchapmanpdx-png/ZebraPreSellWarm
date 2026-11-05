@@ -1,4 +1,5 @@
 import { IngredientData } from "@/data/ingredients";
+import { buildReferences } from "@/data/references";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -52,35 +53,10 @@ function evidenceTierStyle(tier: EvidenceTier): { bg: string; text: string; ring
 }
 
 export default function IngredientDetail({ data }: IngredientDetailProps) {
-    // Build a unified, numbered reference list. Start with sources[] (the
-    // canonical bibliography we ship), then add any PMIDs from
-    // research[].studies that aren't already in sources. Map PMID -> ref
-    // number so study cards can show [n] inline matching the same numbering.
-    type RefEntry = {
-        n: number;
-        title: string;
-        authors?: string;
-        year?: string;
-        pmid?: string;
-        link?: string;
-    };
-    const refList: RefEntry[] = [];
-    const pmidIndex = new Map<string, number>();
-    for (const src of data.sources || []) {
-        const n = refList.length + 1;
-        refList.push({ n, title: src.title, authors: src.authors, year: src.year, pmid: src.pmid, link: src.link });
-        if (src.pmid) pmidIndex.set(src.pmid, n);
-    }
-    for (const block of data.research || []) {
-        for (const study of block.studies || []) {
-            if (!study.pmid) continue;
-            if (pmidIndex.has(study.pmid)) continue;
-            const n = refList.length + 1;
-            refList.push({ n, title: study.source, pmid: study.pmid });
-            pmidIndex.set(study.pmid, n);
-        }
-    }
-    const refNumberForPmid = (pmid?: string) => (pmid ? pmidIndex.get(pmid) : undefined);
+    // Unified, numbered reference list (sources[] then study-only PMIDs),
+    // with bibliographic fields from PubMed via citations.ts. Same builder
+    // feeds the .md companion and the JSON-LD citation list.
+    const { refs: refList, numberFor: refNumberForPmid } = buildReferences(data);
 
     // Per-page content date (client/src/data/pageDates.ts). Same value as the
     // JSON-LD dateModified and the .md companion.
@@ -405,36 +381,74 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                             References ({refList.length})
                         </AccordionTrigger>
                         <AccordionContent forceMount>
-                            <ol className="space-y-6 pt-10 px-4 md:px-12 list-none">
+                            <p className="pt-8 px-4 md:px-12 text-xs text-muted-foreground">
+                                Authors, journals, dates and study types as indexed by PubMed.
+                            </p>
+                            <ol className="space-y-6 pt-6 px-4 md:px-12 list-none">
                                 {refList.map((ref) => (
                                     <li
                                         key={ref.n}
                                         id={`ref-${ref.n}`}
                                         className="text-sm border-l-2 border-border/50 pl-6 py-1 scroll-mt-24"
                                     >
-                                        <div className="flex flex-col gap-1">
-                                            <div className="flex justify-between items-start gap-4">
-                                                <span className="font-serif text-lg leading-snug">
-                                                    <span className="text-[#8F5238] font-bold mr-2">[{ref.n}]</span>
-                                                    {ref.title}
+                                        <p className="font-serif text-lg leading-snug text-foreground">
+                                            <span className="text-[#8F5238] font-bold mr-2">[{ref.n}]</span>
+                                            {ref.title}
+                                        </p>
+                                        {(ref.authors || ref.journal || ref.year) && (
+                                            <p className="mt-1 text-muted-foreground leading-relaxed">
+                                                {ref.authors && <>{ref.authors.replace(/\.$/, "")}. </>}
+                                                {ref.journal && <cite className="italic">{ref.journal}</cite>}
+                                                {ref.journal ? `. ${ref.year}${ref.locator ? `;${ref.locator}` : ""}.` : ref.year ? `${ref.year}.` : ""}
+                                            </p>
+                                        )}
+                                        <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                                            {ref.studyType && (
+                                                <span className="uppercase tracking-widest text-[10px] text-[#3D3733] bg-[#EBE8E1] border border-border/60 rounded px-2 py-0.5">
+                                                    {ref.studyType}
                                                 </span>
-                                                {ref.pmid && (
-                                                    <a
-                                                        href={`https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="text-[10px] bg-primary/5 px-2 py-0.5 rounded border hover:bg-primary/10 transition-colors uppercase tracking-widest shrink-0"
-                                                    >
-                                                        PMID: {ref.pmid}
-                                                    </a>
-                                                )}
-                                            </div>
-                                            {(ref.authors || ref.year) && (
-                                                <p className="text-muted-foreground/80 italic">
-                                                    {ref.authors} {ref.year && `(${ref.year})`}
-                                                </p>
                                             )}
-                                        </div>
+                                            {ref.pmid && (
+                                                <a
+                                                    href={`https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}/`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733]"
+                                                >
+                                                    PubMed {ref.pmid}
+                                                </a>
+                                            )}
+                                            {ref.doi && (
+                                                <a
+                                                    href={`https://doi.org/${ref.doi}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733] break-all"
+                                                >
+                                                    doi:{ref.doi}
+                                                </a>
+                                            )}
+                                            {ref.pmc && (
+                                                <a
+                                                    href={`https://pmc.ncbi.nlm.nih.gov/articles/${ref.pmc}/`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733]"
+                                                >
+                                                    Free full text ({ref.pmc})
+                                                </a>
+                                            )}
+                                            {!ref.pmid && ref.link && (
+                                                <a
+                                                    href={ref.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733] break-all"
+                                                >
+                                                    Source
+                                                </a>
+                                            )}
+                                        </p>
                                     </li>
                                 ))}
                             </ol>

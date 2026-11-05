@@ -6,6 +6,7 @@
   "scripts": {
     "build": "vite build && tsx scripts/finalize-404.ts && tsx scripts/generate-sitemap.ts && tsx scripts/generate-md-pages.ts && tsx scripts/indexnow-ping.ts",
     "check": "tsc",
+    "citations": "tsx scripts/fetch-citations.ts",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {

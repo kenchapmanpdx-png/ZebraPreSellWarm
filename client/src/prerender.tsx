@@ -17,6 +17,7 @@ import { ingredients as ingredientData } from "./data/ingredients";
 import type { IngredientData } from "./data/ingredients";
 import { INGREDIENT_SEO } from "./data/ingredientSeo";
 import { datesFor } from "./data/pageDates";
+import { buildReferences } from "./data/references";
 import { EXCIPIENT_FAQ } from "./data/excipients";
 
 const BASE = "https://www.wellnessforzebras.com";
@@ -226,20 +227,26 @@ function medicalWebPageForIngredient(
   const url = `${BASE}/ingredients/${slug}`;
   const cleanName = name.split(" (")[0];
 
-  // Citation list from sources (cap at 12 to keep schema lean).
-  const citations = (ing.sources || []).slice(0, 12).map((s) => {
+  // Citation list: same numbered references the page shows, with
+  // bibliographic fields from PubMed (client/src/data/references.ts).
+  const citations = buildReferences(ing).refs.map((r) => {
     const cit: Record<string, unknown> = {
       "@type": "ScholarlyArticle",
-      name: s.title,
+      name: r.title,
     };
-    if (s.pmid) {
-      cit.identifier = `PMID:${s.pmid}`;
-      cit.url = s.link || `https://pubmed.ncbi.nlm.nih.gov/${s.pmid}/`;
-    } else if (s.link) {
-      cit.url = s.link;
+    if (r.authors) cit.author = r.authors;
+    if (r.year) cit.datePublished = r.year;
+    if (r.journalFull) cit.isPartOf = { "@type": "Periodical", name: r.journalFull };
+    if (r.pmid) {
+      cit.identifier = [
+        { "@type": "PropertyValue", propertyID: "PMID", value: r.pmid },
+        ...(r.doi ? [{ "@type": "PropertyValue", propertyID: "DOI", value: r.doi }] : []),
+      ];
+      cit.url = `https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/`;
+      if (r.doi) cit.sameAs = `https://doi.org/${r.doi}`;
+    } else if (r.link) {
+      cit.url = r.link;
     }
-    if (s.authors) cit.author = s.authors;
-    if (s.year) cit.datePublished = s.year;
     return cit;
   });
 
