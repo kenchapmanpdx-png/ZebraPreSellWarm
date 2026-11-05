@@ -249,7 +249,7 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
     out.push("Authors, journals, dates and study types as indexed by PubMed.");
     out.push("");
     for (const r of refList) {
-      let line = `[${r.n}] ${citationText(r)}`;
+      let line = `[${r.n}] ${citationText(r).replace(/\.$/, "")}`;
       if (r.studyType) line += `. Study type: ${r.studyType}`;
       if (r.pmid) line += `. PMID: ${r.pmid}. https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/`;
       else if (r.link) line += ` ${r.link}`;
