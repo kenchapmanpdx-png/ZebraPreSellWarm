@@ -41,6 +41,8 @@ export default function OurStory() {
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.8 }}
                 src="/images/ken-and-ava.webp"
+                srcSet="/images/ken-and-ava-600.webp 600w, /images/ken-and-ava.webp 1153w"
+                sizes="(max-width: 767px) 92vw, 45vw"
                 alt="Ken and Ava"
                 width={1153}
                 height={768}
@@ -82,6 +84,9 @@ export default function OurStory() {
           </motion.h2>
 
           <div className="space-y-6 text-lg text-[#5D5752] leading-relaxed mb-12">
+            <motion.p custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="text-2xl md:text-3xl font-serif text-[#3D3733] leading-snug">
+              Behind every bottle is a deeper purpose and her name is Ava.
+            </motion.p>
             <motion.p custom={2} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
               Ava is my daughter. She lives with scoliosis, <a href="https://www.ehlers-danlos.com/heds-diagnostic-checklist/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">hEDS</a>, <a href="https://www.dysautonomiainternational.org/page.php?ID=30" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">POTS</a>, and <a href="https://tmsforacure.org/overview/mast-cell-activation-syndrome-mcas/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">MCAS</a>. Mostly invisible conditions that affect everything from how her body uses nutrients to how she lives with chronic pain, subluxating joints, and extreme fatigue.
             </motion.p>
@@ -96,6 +101,8 @@ export default function OurStory() {
                 <div className="relative z-10 overflow-hidden rounded-[2rem] shadow-2xl bg-[#EDEAE3] border border-white/50">
                   <img
                     src="/images/ken-and-ava.webp"
+                    srcSet="/images/ken-and-ava-600.webp 600w, /images/ken-and-ava.webp 1153w"
+                    sizes="92vw"
                     alt="Ken and Ava"
                     width={1153}
                     height={768}
