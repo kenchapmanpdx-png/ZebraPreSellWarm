@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { datesFor, formatDateLabel } from "@/data/pageDates";
 import {
   HeartHandshake,
   Ban,
@@ -53,6 +54,18 @@ export default function OurPromise() {
             <div className="px-8 py-10 rounded-[3rem] bg-white/40 border-2 border-white backdrop-blur-xl shadow-2xl">
               <p className="text-xl md:text-2xl text-[#3D3733] font-bold leading-relaxed">
                 ZebraThrive exists because the EDS, POTS, and MCAS triad needs a formulation built around its constraints from the start, not a generic multivitamin retrofitted with a few flagship ingredients. This page is our constitution: a formal, public commitment to how we do that work.
+              </p>
+              {/* Byline backs the Article JSON-LD author/dates (prerender.tsx). */}
+              <p className="mt-6 text-sm text-[#5D5752]">
+                Written by <span className="font-medium text-[#3D3733]">Ken Chapman</span>, Founder of ZebraThrive.
+                {datesFor("/our-promise") && (
+                  <>
+                    {" "}Last updated{" "}
+                    <time dateTime={datesFor("/our-promise")!.modified}>
+                      {formatDateLabel(datesFor("/our-promise")!.modified)}
+                    </time>.
+                  </>
+                )}
               </p>
             </div>
           </div>

@@ -284,8 +284,33 @@ function faqPageForIngredient(ing: IngredientData): Record<string, unknown> | nu
   };
 }
 
+// /our-promise is an 800-word editorial page with a visible byline and date,
+// so it carries Article markup like the ingredient pages (handbook §7).
+function articleForOurPromise(description: string): Record<string, unknown> {
+  const url = `${BASE}/our-promise`;
+  const dates = datesFor("/our-promise");
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": url,
+    url,
+    mainEntityOfPage: url,
+    headline: "Our Constitution: what ZebraThrive commits to",
+    description,
+    inLanguage: "en-US",
+    author: AUTHOR,
+    publisher: { "@id": `${BASE}/#organization` },
+    ...(dates ? { datePublished: dates.published, dateModified: dates.modified } : {}),
+    image: HERO_IMAGE,
+  };
+}
+
 function schemaElementsForRoute(url: string): HeadElement[] {
   const out: HeadElement[] = [];
+
+  if (url === "/our-promise") {
+    out.push(jsonLdElement(articleForOurPromise(metaForRoute(url).description)));
+  }
 
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
   if (url === "/ingredients") {
