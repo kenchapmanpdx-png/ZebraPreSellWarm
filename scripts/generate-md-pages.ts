@@ -194,7 +194,7 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
         const ref = refN !== undefined ? `[${refN}] ` : "";
         const pmid = s.pmid ? ` PMID: ${s.pmid}.` : "";
         const design = s.design ? ` Design: ${s.design}.` : "";
-        out.push(`- ${ref}**${s.source}.**${design} Finding: ${s.finding}.${pmid}`);
+        out.push(`- ${ref}**${s.source}.**${design} Finding: ${s.finding.replace(/\.$/, "")}.${pmid}`);
       }
       out.push("");
     }
