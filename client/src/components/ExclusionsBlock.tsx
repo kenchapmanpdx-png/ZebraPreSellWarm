@@ -34,7 +34,7 @@ export default function ExclusionsBlock() {
             Excipients we refuse to use
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#0F2A22] leading-tight">
-            Eight reported triggers we built around
+            Eight excipients ZebraThrive leaves out, and why
           </h2>
         </div>
 

@@ -187,7 +187,7 @@ export default function Hero() {
                 <Sparkles className="w-4 h-4" aria-hidden="true" /> We see you
               </p>
 
-              <h2 className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
+              <p className="font-serif font-bold text-[#3D3733] mb-6 leading-tight text-3xl lg:text-4xl">
                 Wellness for the <br />
                 <span className="relative inline-block min-w-[200px] h-[1.2em]">
                   <AnimatePresence mode="wait">
@@ -206,7 +206,7 @@ export default function Hero() {
                     </motion.span>
                   </AnimatePresence>
                 </span>
-              </h2>
+              </p>
 
               <form onSubmit={handleSubmit} noValidate className="space-y-4 relative z-10">
                 {/* Honeypot */}

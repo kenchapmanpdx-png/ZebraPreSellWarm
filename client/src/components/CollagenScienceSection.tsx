@@ -344,7 +344,7 @@ export default function CollagenScienceSection() {
             The ZebraThrive Solution
           </span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-            14 Pathways. <span className="text-[#D4A373] italic font-normal">One System.</span>
+            One system supporting 14 pathways in the <span className="text-[#D4A373] italic font-normal">collagen-mast cell loop</span>
           </h2>
           <p className="text-white/75 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
             Rather than targeting one thing, the formula supports many of the biological pathways involved in the collagen-mast cell loop, organized into four clusters.

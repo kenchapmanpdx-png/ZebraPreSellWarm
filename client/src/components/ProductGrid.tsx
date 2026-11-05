@@ -72,7 +72,7 @@ export default function ProductGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-4"
         >
-          Three Parts, <span className="text-[#B36B4D] italic">One Routine.</span>
+          How the AM capsules, PM capsules and Daily Powder <span className="text-[#B36B4D] italic">work together</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}

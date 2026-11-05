@@ -77,8 +77,8 @@ export default function OurStory() {
             custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}
             className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-[#3D3733] mb-8 leading-[1.1]"
           >
-            Behind every bottle is a deeper purpose and her name is{" "}
-            <span className="text-[#B36B4D] italic font-normal">Ava</span>.
+            Why ZebraThrive{" "}
+            <span className="text-[#B36B4D] italic font-normal">exists</span>.
           </motion.h2>
 
           <div className="space-y-6 text-lg text-[#5D5752] leading-relaxed mb-12">

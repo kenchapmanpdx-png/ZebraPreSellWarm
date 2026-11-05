@@ -79,7 +79,7 @@ export default function FAQ() {
             <span className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.4em]">Common Questions</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#3D3733] mb-6 leading-tight">
-            Straight <span className="text-[#B36B4D] italic font-normal">Answers.</span>
+            Common questions about <span className="text-[#B36B4D] italic font-normal">ZebraThrive</span>
           </h2>
           <p className="text-[#6B655F] text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
             No fluff. Just the facts on how we protect your stability and support your system.

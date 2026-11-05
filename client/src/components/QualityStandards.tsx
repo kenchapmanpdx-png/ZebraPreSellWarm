@@ -48,8 +48,8 @@ export default function QualityStandards() {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight"
             >
-              Quality, <br />
-              <span className="text-[#B36B4D] italic font-normal">Verified Lot by Lot.</span>
+              Every ingredient lot verified <br />
+              <span className="text-[#B36B4D] italic font-normal">against its Certificate of Analysis.</span>
             </motion.h2>
           </div>
 
