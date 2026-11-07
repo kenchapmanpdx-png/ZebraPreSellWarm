@@ -16,7 +16,7 @@ import ingredientList from "../../scripts/ingredient-routes.json";
 import { ingredients as ingredientData } from "./data/ingredients";
 import type { IngredientData } from "./data/ingredients";
 import { INGREDIENT_SEO } from "./data/ingredientSeo";
-import { datesFor } from "./data/pageDates";
+import { datesFor, isoDateTime } from "./data/pageDates";
 import { buildReferences } from "./data/references";
 import { EXCIPIENT_FAQ } from "./data/excipients";
 
@@ -36,6 +36,30 @@ const ingredientImage = (slug: string) => `${BASE}/images/og/${slug}.jpg`;
 // AI assistants weight content with named credentialed humans much higher
 // than anonymous content. reviewedBy is intentionally absent until a
 // licensed clinician signs on - do not fabricate a reviewer.
+// WebSite node (homepage only). Google's site-name system reads WebSite
+// name/alternateName on the home page; the domain (wellnessforzebras.com)
+// differs from the brand, so the brand is stated explicitly. Articles point
+// isPartOf here (an Article is part of a website, not of an Organization).
+const WEBSITE_ID = `${BASE}/#website`;
+const WEBSITE = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+  name: BRAND_NAME,
+  alternateName: ["Wellness for Zebras", "wellnessforzebras.com"],
+  url: `${BASE}/`,
+  inLanguage: "en-US",
+  publisher: { "@id": `${BASE}/#organization` },
+};
+
+function articleDates(d: { published: string; modified: string }, withReviewed = false) {
+  return {
+    datePublished: isoDateTime(d.published),
+    dateModified: isoDateTime(d.modified),
+    ...(withReviewed ? { lastReviewed: isoDateTime(d.modified) } : {}),
+  };
+}
+
 const AUTHOR = {
   "@type": "Person",
   name: "Ken Chapman",
@@ -60,7 +84,7 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
       "How ZebraThrive's AM capsules, PM capsules, and Daily Powder are organized, and the published research behind each layer of the formulation.",
   },
   "/ingredients": {
-    title: "All Ingredients | ZebraThrive",
+    title: `All ${Object.keys(ingredientData).length} Ingredients: Doses, Forms and Evidence | ZebraThrive`,
     description:
       "Every ingredient in ZebraThrive's AM capsules, PM capsules, and Daily Powder, with doses, forms, evidence, and the reason each one is included.",
   },
@@ -233,6 +257,9 @@ function medicalWebPageForIngredient(
     const cit: Record<string, unknown> = {
       "@type": "ScholarlyArticle",
       name: r.title,
+      // Google reads every ScholarlyArticle as an Article item; without a
+      // headline each citation showed as "Unnamed item" in Rich Results Test.
+      headline: r.title,
     };
     if (r.authors) cit.author = r.authors;
     if (r.year) cit.datePublished = r.year;
@@ -275,12 +302,10 @@ function medicalWebPageForIngredient(
     inLanguage: "en-US",
     audience: { "@type": "MedicalAudience", audienceType: "Patient" },
     about,
-    isPartOf: { "@id": `${BASE}/#organization` },
+    isPartOf: { "@id": WEBSITE_ID },
     author: AUTHOR,
     publisher: { "@id": `${BASE}/#organization` },
-    ...(dates
-      ? { datePublished: dates.published, dateModified: dates.modified, lastReviewed: dates.modified }
-      : {}),
+    ...(dates ? articleDates(dates, true) : {}),
     image: ingredientImage(slug),
     ...(citations.length ? { citation: citations } : {}),
   };
@@ -313,9 +338,10 @@ function articleForOurPromise(description: string): Record<string, unknown> {
     headline: "Our Constitution: what ZebraThrive commits to",
     description,
     inLanguage: "en-US",
+    isPartOf: { "@id": WEBSITE_ID },
     author: AUTHOR,
     publisher: { "@id": `${BASE}/#organization` },
-    ...(dates ? { datePublished: dates.published, dateModified: dates.modified } : {}),
+    ...(dates ? articleDates(dates) : {}),
     image: HERO_IMAGE,
   };
 }
@@ -333,9 +359,10 @@ function articleForExcipients(description: string): Record<string, unknown> {
     headline: "Excipients: what ZebraThrive leaves out, and what it uses instead",
     description,
     inLanguage: "en-US",
+    isPartOf: { "@id": WEBSITE_ID },
     author: AUTHOR,
     publisher: { "@id": `${BASE}/#organization` },
-    ...(dates ? { datePublished: dates.published, dateModified: dates.modified } : {}),
+    ...(dates ? articleDates(dates) : {}),
     image: HERO_IMAGE,
   };
 }
@@ -343,6 +370,9 @@ function articleForExcipients(description: string): Record<string, unknown> {
 function schemaElementsForRoute(url: string): HeadElement[] {
   const out: HeadElement[] = [];
 
+  if (url === "/") {
+    out.push(jsonLdElement(WEBSITE));
+  }
   if (url === "/our-promise") {
     out.push(jsonLdElement(articleForOurPromise(metaForRoute(url).description)));
   }
@@ -427,7 +457,9 @@ export async function prerender(data: { url: string }) {
     elements.add({ type: "meta", props: { property: "og:url", content: canonical } });
   }
   const isIngredientPage = /^\/ingredients\/[a-z0-9-]+\/?$/.test(url);
-  elements.add({ type: "meta", props: { property: "og:type", content: isIngredientPage ? "article" : "website" } });
+  // Pages carrying Article JSON-LD are articles for Open Graph too.
+  const isArticlePage = isIngredientPage || url === "/our-promise" || url === "/excipients";
+  elements.add({ type: "meta", props: { property: "og:type", content: isArticlePage ? "article" : "website" } });
   const ingSlug = isIngredientPage ? url.match(/^\/ingredients\/([a-z0-9-]+)/)![1] : null;
   const shareImage = ingSlug ? ingredientImage(ingSlug) : HERO_IMAGE;
   const shareAlt = ingSlug
@@ -439,15 +471,17 @@ export async function prerender(data: { url: string }) {
   elements.add({ type: "meta", props: { property: "og:image:alt", content: shareAlt } });
   elements.add({ type: "meta", props: { name: "twitter:image", content: shareImage } });
   const pageDates = datesFor(url);
-  if (isIngredientPage && pageDates) {
-    elements.add({ type: "meta", props: { property: "article:published_time", content: pageDates.published } });
-    elements.add({ type: "meta", props: { property: "article:modified_time", content: pageDates.modified } });
+  if (isArticlePage && pageDates) {
+    elements.add({ type: "meta", props: { property: "article:published_time", content: isoDateTime(pageDates.published) } });
+    elements.add({ type: "meta", props: { property: "article:modified_time", content: isoDateTime(pageDates.modified) } });
   }
   elements.add({ type: "meta", props: { name: "twitter:title", content: meta.title } });
   elements.add({ type: "meta", props: { name: "twitter:description", content: meta.description } });
   if (isShowcase || isHidden || isNotFound) {
     elements.add({ type: "meta", props: { name: "robots", content: "noindex, nofollow" } });
   } else {
+    // Large image previews in Search and Discover (Google robots meta doc).
+    elements.add({ type: "meta", props: { name: "robots", content: "max-image-preview:large" } });
     // Per-route JSON-LD: BreadcrumbList (/ingredients and ingredient pages,
     // which show a visible trail) and MedicalWebPage + FAQPage (ingredient
     // pages). Site-wide Organization schema stays in

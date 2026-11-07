@@ -37,27 +37,46 @@ export const SITE_LAUNCH = "2026-05-10";
 // Last significant change to the shared ingredient template.
 // 2026-11-01: titles, descriptions, visible breadcrumbs, end-of-page CTA,
 // HowTo markup removed, datePublished added.
-export const INGREDIENT_TEMPLATE_CHANGED = "2026-11-01";
+// 2026-11-05: question-format H2s, per-ingredient image, references rebuilt
+// from PubMed records (the sitemap still said 11-01 until 11-07).
+// 2026-11-07: JSON-LD dates carry time + offset; isPartOf -> WebSite;
+// citation headlines.
+export const INGREDIENT_TEMPLATE_CHANGED = "2026-11-07";
+
+// JSON-LD / article:* times. Google's Rich Results Test flags date-only values
+// ("Invalid datetime value", "missing a timezone"). Midnight in Arizona
+// (America/Phoenix, no DST, always UTC-07:00), where the site is run.
+export function isoDateTime(date: string): string {
+  return `${date}T00:00:00-07:00`;
+}
 
 export const CORE_PAGE_DATES: Record<string, PageDate> = {
   // 2026-11-01: homepage FAQ answers now rendered in the page HTML.
-  "/": { published: SITE_LAUNCH, modified: "2026-11-01" },
+  // 2026-11-05: brand-first BLUF sentence + nine H2s rewritten as claims.
+  // 2026-11-07: WebSite (site name) JSON-LD.
+  "/": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-07" },
   // 2026-11-01: visible breadcrumbs, card headings H3 -> H2.
-  "/ingredients": { published: SITE_LAUNCH, modified: "2026-10-07", structural: "2026-11-01" },
-  "/our-promise": { published: SITE_LAUNCH, modified: "2026-10-07" },
+  // 2026-11-07: title, H1 and opening paragraph name the brand and the 29 ingredients.
+  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-07" },
+  // 2026-11-05: byline, Article markup, link to /excipients.
+  // 2026-11-07: Never/Always lists promoted to H2; dropped mention of the unpublished "The How" page.
+  "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-07" },
   // 2026-11-05: excipient hub added (SEO/GEO audit A13).
-  "/excipients": { published: "2026-11-05", modified: "2026-11-05" },
+  // 2026-11-07: og:type article, JSON-LD datetimes.
+  "/excipients": { published: "2026-11-05", modified: "2026-11-05", structural: "2026-11-07" },
   "/contact": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/privacy": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/terms": { published: SITE_LAUNCH, modified: "2026-10-07" },
-  "/shipping": { published: SITE_LAUNCH, modified: "2026-10-07" },
+  // 2026-11-07: "Pre-launch placeholder" label replaced.
+  "/shipping": { published: SITE_LAUNCH, modified: "2026-11-07" },
 };
 
 export const INGREDIENT_DATES: Record<string, PageDate> = {
   "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-10-08" },
   // 2026-11-05: Di Stadio 2022 citation corrected (PMID 35450527, 90-day olfactory outcome).
   "luteolin": { published: SITE_LAUNCH, modified: "2026-11-05" },
-  "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-10-08" },
+  // 2026-11-07: unsourced "75% of POTS patients are deficient" removed (decision 2026-11-05).
+  "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-11-07" },
   "taurine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   // 2026-11-05: citation metadata corrected (PMID check).
   "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-05" },
@@ -68,7 +87,8 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "chlorogenic-acid": { published: "2026-05-11", modified: "2026-10-08" },
   "l-theanine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "astaxanthin": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-07: fludrocortisone regraded LOW -> NO DATA (decision 2026-11-05).
+  "astaxanthin": { published: SITE_LAUNCH, modified: "2026-11-07" },
   "benfotiamine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "niacinamide": { published: "2026-05-11", modified: "2026-10-08" },
   "p5p": { published: SITE_LAUNCH, modified: "2026-10-08" },
