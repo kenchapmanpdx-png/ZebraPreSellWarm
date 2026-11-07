@@ -4,7 +4,7 @@
  *
  * Env:
  *   RESEND_API_KEY  required to send at all
- *   NOTIFY_TO       recipient (default ken@wellnessforzebras.com)
+ *   NOTIFY_TO       recipient(s), comma-separated (default ken@wellnessforzebras.com)
  *   NOTIFY_FROM     sender (default "ZebraThrive Site <notifications@wellnessforzebras.com>")
  *
  * If the first send fails (e.g. the wellnessforzebras.com sending domain is
@@ -60,7 +60,10 @@ export async function sendNotification(input: NotificationInput): Promise<boolea
       return false;
     }
     const resend = new Resend(key);
-    const to = process.env.NOTIFY_TO || DEFAULT_TO;
+    const to = (process.env.NOTIFY_TO || DEFAULT_TO)
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
     const primaryFrom = process.env.NOTIFY_FROM || DEFAULT_FROM;
     const senders = primaryFrom === FALLBACK_FROM ? [primaryFrom] : [primaryFrom, FALLBACK_FROM];
 
