@@ -413,7 +413,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                     href={`https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}/`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733]"
+                                                    className="inline-block py-1 text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733]"
                                                 >
                                                     PubMed {ref.pmid}
                                                 </a>
@@ -423,7 +423,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                     href={`https://doi.org/${ref.doi}`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733] break-all"
+                                                    className="inline-block py-1 text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733] break-all"
                                                 >
                                                     doi:{ref.doi}
                                                 </a>
@@ -433,7 +433,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                     href={`https://pmc.ncbi.nlm.nih.gov/articles/${ref.pmc}/`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733]"
+                                                    className="inline-block py-1 text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733]"
                                                 >
                                                     Free full text ({ref.pmc})
                                                 </a>
@@ -443,7 +443,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                                     href={ref.link}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733] break-all"
+                                                    className="inline-block py-1 text-[#8F5238] underline underline-offset-2 hover:text-[#3D3733] break-all"
                                                 >
                                                     Source
                                                 </a>

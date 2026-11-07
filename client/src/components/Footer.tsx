@@ -35,24 +35,24 @@ export default function Footer() {
 
           {/* Explore Links */}
           <div className="grid grid-cols-2 gap-8 sm:gap-16">
-            <div>
-              <h3 className="text-[#D9967A] font-bold uppercase tracking-[0.2em] text-[11px] mb-6">Explore</h3>
+            <nav aria-labelledby="footer-explore">
+              <p id="footer-explore" className="text-[#D9967A] font-bold uppercase tracking-[0.2em] text-[11px] mb-6">Explore</p>
               <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
                 <li><a href="/#story" className="hover:text-white transition-colors">Our Story</a></li>
                 <li><Link href="/ingredients" className="hover:text-white transition-colors">Ingredients</Link></li>
                 <li><Link href="/excipients" className="hover:text-white transition-colors">Excipients</Link></li>
                 <li><Link href="/our-promise" className="hover:text-white transition-colors">The Constitution</Link></li>
               </ul>
-            </div>
-            <div>
-              <h3 className="text-[#D9967A] font-bold uppercase tracking-[0.2em] text-[11px] mb-6">Legal</h3>
+            </nav>
+            <nav aria-labelledby="footer-legal">
+              <p id="footer-legal" className="text-[#D9967A] font-bold uppercase tracking-[0.2em] text-[11px] mb-6">Legal</p>
               <ul className="space-y-4 text-sm font-medium text-[#EBE8E1]/80">
                 <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
                 <li><Link href="/shipping" className="hover:text-white transition-colors">Shipping &amp; Returns</Link></li>
                 <li><Link href="/contact" className="hover:text-white transition-colors">Contact Support</Link></li>
               </ul>
-            </div>
+            </nav>
           </div>
         </div>
 

@@ -43,7 +43,7 @@ export default function OurStory() {
                 src="/images/ken-and-ava.webp"
                 srcSet="/images/ken-and-ava-600.webp 600w, /images/ken-and-ava.webp 1153w"
                 sizes="(max-width: 767px) 92vw, 45vw"
-                alt="Ken and Ava"
+                alt="Ken Chapman, founder of ZebraThrive, with his daughter Ava"
                 width={1153}
                 height={768}
                 className="w-full h-auto object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
@@ -103,7 +103,7 @@ export default function OurStory() {
                     src="/images/ken-and-ava.webp"
                     srcSet="/images/ken-and-ava-600.webp 600w, /images/ken-and-ava.webp 1153w"
                     sizes="92vw"
-                    alt="Ken and Ava"
+                    alt="Ken Chapman, founder of ZebraThrive, with his daughter Ava"
                     width={1153}
                     height={768}
                     className="w-full h-auto object-cover grayscale-[0.2]"

@@ -35,7 +35,7 @@ export default function Ingredients() {
                             animate={{ y: 0 }}
                             className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-[#3D3733] mb-6 break-words"
                         >
-                            The <span className="text-[#B36B4D]">Ingredients</span>
+                            ZebraThrive <span className="text-[#B36B4D]">Ingredients</span>
                         </motion.h1>
                         <motion.p
                             initial={{ y: 20 }}
@@ -43,7 +43,9 @@ export default function Ingredients() {
                             transition={{ delay: 0.1 }}
                             className="text-lg text-[#5D5752] max-w-2xl leading-relaxed mb-10"
                         >
-                            Explore the clinical science and specific rationale behind every ingredient in our formulation.
+                            ZebraThrive uses {ingredientList.length} active ingredients across its AM capsules, PM capsules and
+                            Daily Powder. Each page below gives the form, the daily dose, how it works, the human and lab
+                            evidence with PubMed citations, and safety and drug-interaction notes.
                             Designed for the specific needs of hEDS, POTS, and MCAS.
                         </motion.p>
 

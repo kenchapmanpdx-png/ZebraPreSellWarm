@@ -77,10 +77,10 @@ export default function OurPromise() {
         <div className="container mx-auto max-w-3xl">
           <div className="space-y-6 text-lg md:text-xl text-[#3D3733] leading-relaxed">
             <p>
-              Our constitution is short and specific. <strong>The ingredient claims on this site are anchored to peer-reviewed published research.</strong> Summary pages like the homepage and The How link to the ingredient pages, where the citations live. Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
+              Our constitution is short and specific. <strong>The ingredient claims on this site are anchored to peer-reviewed published research.</strong> Summary pages like the homepage link to the ingredient pages, where the citations live. Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
             </p>
             <p>
-              <a href="/excipients" className="text-[#A4613A] font-bold hover:underline">Every excipient is disclosed</a> and chosen with MCAS in mind: HPMC capsules (no gelatin, no carrageenan), a calcium carbonate opacifier on the PM caps (no titanium dioxide), and rice hull concentrate and L-leucine as flow agents (no magnesium stearate). Some vitamins and actives arrive on carriers, and we list those too: maltodextrin on the vitamin D3 (about 17 mg a day), microcrystalline cellulose on the vitamin K2 (about 10 mg), sunflower lecithin in the quercetin phytosome, and silica in the taurine (up to 7.5 mg). We are confirming the last two carriers, in the astaxanthin beadlet and the selenium premix, with our manufacturer and will list them before launch. No FD&amp;C dyes, no citric acid, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. Every ingredient lot is checked against its Certificate of Analysis before production, and each finished batch goes through our manufacturer's finished-product testing before release.
+              <a href="/excipients" className="text-[#8F5238] font-bold underline underline-offset-2 hover:text-[#3D3733]">Every excipient is disclosed</a> and chosen with MCAS in mind: HPMC capsules (no gelatin, no carrageenan), a calcium carbonate opacifier on the PM caps (no titanium dioxide), and rice hull concentrate and L-leucine as flow agents (no magnesium stearate). Some vitamins and actives arrive on carriers, and we list those too: maltodextrin on the vitamin D3 (about 17 mg a day), microcrystalline cellulose on the vitamin K2 (about 10 mg), sunflower lecithin in the quercetin phytosome, and silica in the taurine (up to 7.5 mg). We are confirming the last two carriers, in the astaxanthin beadlet and the selenium premix, with our manufacturer and will list them before launch. No FD&amp;C dyes, no citric acid, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. Every ingredient lot is checked against its Certificate of Analysis before production, and each finished batch goes through our manufacturer's finished-product testing before release.
             </p>
             <p>
               <strong>We don't claim to treat, cure, or prevent anything.</strong> We do claim to give you ingredients with documented mechanisms in research, at doses chosen from human research wherever it exists, in a formulation engineered for the sensitivities of the EDS/POTS/MCAS triad.
@@ -106,9 +106,9 @@ export default function OurPromise() {
                 <div className="w-16 h-16 rounded-[1.5rem] bg-[#5A3E2B] flex items-center justify-center text-white shadow-lg">
                   <Ban size={28} aria-hidden="true" />
                 </div>
-                <h3 className="text-4xl font-serif font-bold text-[#262321]">
+                <h2 className="text-4xl font-serif font-bold text-[#262321]">
                   What We <span className="text-[#A4613A] italic underline decoration-[#A4613A]/30">Never</span> Do
-                </h3>
+                </h2>
               </div>
 
               {NEVER_DO.map((item, idx) => (
@@ -128,9 +128,9 @@ export default function OurPromise() {
                 <div className="w-16 h-16 rounded-[1.5rem] bg-[#0F2A22] flex items-center justify-center text-white shadow-lg">
                   <CheckCircle2 size={28} aria-hidden="true" />
                 </div>
-                <h3 className="text-4xl font-serif font-bold text-[#262321]">
+                <h2 className="text-4xl font-serif font-bold text-[#262321]">
                   What We <span className="text-[#0F2A22] italic underline decoration-[#0F2A22]/30">Always</span> Do
-                </h3>
+                </h2>
               </div>
 
               {ALWAYS_DO.map((item, idx) => (

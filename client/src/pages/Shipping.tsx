@@ -8,7 +8,7 @@ export default function Shipping() {
       <main id="main-content" className="pt-32 pb-20 px-6">
         <article className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#0F2A22] mb-3">Shipping &amp; Returns</h1>
-          <p className="text-sm text-[#5D5752] mb-12">Pre-launch placeholder. Full policy publishes with the first product shipment.</p>
+          <p className="text-sm text-[#5D5752] mb-12">Pre-launch policy. The full policy publishes with the first product shipment.</p>
 
           <div className="space-y-8 text-[#3D3733] leading-relaxed">
             <section>
