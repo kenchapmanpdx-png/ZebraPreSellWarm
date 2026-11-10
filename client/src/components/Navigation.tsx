@@ -23,7 +23,8 @@ export default function Navigation() {
 
   const navLinks = [
     { name: "Our Purpose", href: "/#story" },
-    // { name: "Ingredients", href: "/ingredients" }, // hidden until launch
+    { name: "Ingredients", href: "/ingredients" },
+    { name: "Excipients", href: "/excipients" },
     // { name: "The How", href: "/the-how" }, // hidden 2026-05-12 until ready
     // { name: "Quality", href: "/#quality" }, // hidden
     // { name: "Formulas", href: "/#products" }, // hidden
@@ -47,6 +48,7 @@ export default function Navigation() {
   return (
     <>
       <nav
+        aria-label="Main"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-[#EBE8E1]/80 backdrop-blur-xl border-b border-white/20 py-4"
@@ -80,7 +82,7 @@ export default function Navigation() {
                 key={link.name}
                 href={link.href}
                 className={`text-xs font-bold uppercase tracking-[0.15em] transition-colors relative group ${
-                  location === link.href ? "text-[#8F5238]" : "text-[#5D5752] hover:text-[#8F5238]"
+                  location === link.href ? "text-[#7A452F]" : "text-[#5D5752] hover:text-[#7A452F]"
                 }`}
               >
                 {link.name}

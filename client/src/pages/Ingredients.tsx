@@ -55,6 +55,7 @@ export default function Ingredients() {
                             <input
                                 type="text"
                                 placeholder="Search ingredients..."
+                                aria-label="Search ingredients"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className="w-full pl-12 pr-6 py-4 bg-white/50 backdrop-blur-md border border-[#3D3733]/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#B36B4D]/20 focus:border-[#B36B4D] transition-all text-[#3D3733] font-medium"

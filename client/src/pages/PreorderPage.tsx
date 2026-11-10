@@ -143,7 +143,7 @@ export default function PreorderPage() {
             <p className="text-lg leading-relaxed text-[#3D3733]">
               New customers in later rounds don't get that guarantee. First-batch buyers do.
             </p>
-            <p className="text-sm uppercase tracking-[0.25em] text-[#B36B4D] font-bold mt-6">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#7A452F] font-bold mt-6">
               Built by zebras, for zebras.
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function PreorderPage() {
             <p className="text-lg text-[#3D3733] leading-relaxed">
               First-batch buyers get the first opportunity to share what worked, what didn't, and what they'd want changed. Those reviews will replace this section.
             </p>
-            <p className="text-sm uppercase tracking-[0.25em] text-[#B36B4D] font-bold mt-8">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#7A452F] font-bold mt-8">
               Honest before convenient.
             </p>
           </div>

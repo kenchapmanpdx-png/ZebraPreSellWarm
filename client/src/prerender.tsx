@@ -450,6 +450,14 @@ export async function prerender(data: { url: string }) {
   if (!isNotFound) {
     elements.add({ type: "link", props: { rel: "canonical", href: canonical } });
   }
+  // Markdown companion (scripts/generate-md-pages.ts) for AI agents. Only routes
+  // that actually emit a .md; keep in sync with that script.
+  const hasMarkdownMirror =
+    /^\/ingredients\/[a-z0-9-]+\/?$/.test(url) ||
+    ["/ingredients", "/our-promise", "/excipients", "/contact"].includes(url);
+  if (hasMarkdownMirror && !isHidden) {
+    elements.add({ type: "link", props: { rel: "alternate", type: "text/markdown", href: `${BASE}${url.replace(/\/$/, "")}.md` } });
+  }
   elements.add({ type: "meta", props: { name: "description", content: meta.description } });
   elements.add({ type: "meta", props: { property: "og:title", content: meta.title } });
   elements.add({ type: "meta", props: { property: "og:description", content: meta.description } });

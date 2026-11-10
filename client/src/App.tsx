@@ -2,6 +2,7 @@
 import { lazy, Suspense, useEffect } from "react";
 import { Switch, Route, useLocation } from "wouter";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { MotionConfig } from "framer-motion";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
@@ -71,9 +72,12 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ScrollToTop />
-      <Router />
-      <Toaster />
+      {/* Honor OS "reduce motion": skips transform/blur entrances (WCAG 2.3.3). */}
+      <MotionConfig reducedMotion="user">
+        <ScrollToTop />
+        <Router />
+        <Toaster />
+      </MotionConfig>
       <Analytics />
       <SpeedInsights />
     </QueryClientProvider>

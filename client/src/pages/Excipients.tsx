@@ -134,7 +134,7 @@ export default function Excipients() {
             <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mb-6">
               Five, all listed on the label. Nothing is added for color, flavor, sweetness or shelf appearance.
             </p>
-            <div className="overflow-x-auto rounded-2xl border border-[#3D3733]/10 bg-white/70">
+            <div tabIndex={0} role="region" aria-label="Excipients ZebraThrive uses" className="overflow-x-auto rounded-2xl border border-[#3D3733]/10 bg-white/70">
               <table className="w-full text-left text-sm md:text-base">
                 <thead className="bg-[#0F2A22]/5">
                   <tr>
@@ -167,7 +167,7 @@ export default function Excipients() {
               Carriers that arrive with the raw materials
             </h2>
             <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mb-6">{CARRIERS_NOTE}</p>
-            <div className="overflow-x-auto rounded-2xl border border-[#3D3733]/10 bg-white/70">
+            <div tabIndex={0} role="region" aria-label="Carriers that arrive with the raw materials" className="overflow-x-auto rounded-2xl border border-[#3D3733]/10 bg-white/70">
               <table className="w-full text-left text-sm md:text-base">
                 <thead className="bg-[#0F2A22]/5">
                   <tr>

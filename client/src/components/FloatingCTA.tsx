@@ -40,7 +40,6 @@ export default function FloatingCTA() {
         <button
           onClick={() => setOpen(true)}
           style={buttonStyle}
-          aria-label="Open waitlist signup"
           className="text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-700 transform hover:-translate-y-1 flex items-center focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
           onMouseEnter={(e) => (e.currentTarget.style.backgroundPosition = "right center")}
           onMouseLeave={(e) => (e.currentTarget.style.backgroundPosition = "left center")}
@@ -61,7 +60,6 @@ export default function FloatingCTA() {
         <button
           onClick={() => setOpen(true)}
           style={buttonStyle}
-          aria-label="Open waitlist signup"
           className="w-full py-3.5 rounded-xl text-white font-bold uppercase tracking-[0.15em] text-sm shadow-[0_10px_30px_-6px_rgba(0,0,0,0.4)] focus-visible:ring-2 focus-visible:ring-[rgba(164,97,58,0.28)]"
         >
           Join Waitlist
