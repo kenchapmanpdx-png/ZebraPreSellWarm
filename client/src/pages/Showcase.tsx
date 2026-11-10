@@ -35,7 +35,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/ClinicalRationale.tsx",
     lines: 181,
     blurb:
-      "Three-pillar science narrative - 'Halt the Collagen Shredder' / 'Cellular Backdoor Hydration' / 'Restore Stability.' Aligns with the MMP-degradation framing in your research protocol.",
+      "",
     context:
       "Per the June 23 changelog, this lived between OurStory and ProductGrid on the homepage. It also lazy-loads InteractiveIngredientMap below it.",
     Component: ClinicalRationale,
@@ -46,7 +46,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/InteractiveIngredientMap.tsx",
     lines: 381,
     blurb:
-      "Visual ingredient-to-benefit map: 36 ingredients connecting to 14 health goals with hover/tap highlighting.",
+      "",
     context:
       "Lazy-loaded by ClinicalRationale. Rendered standalone here so you can see it in isolation. Your June 23 changelog: 'Added interactive ingredient-to-benefit map after Ava story section.'",
     Component: InteractiveIngredientMap,
@@ -79,7 +79,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/DifferenceSection.tsx",
     lines: 131,
     blurb:
-      "Eight-tile feature grid: '2 Bottles Replace 15', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Gentle by Design', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
+      " Ever.', 'Condition Mindful', 'Gentle by Design', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
     context:
       "Per the June 15 changelog, the 'Why Choose ZebraThrive' section was removed and its benefits moved into 'What Makes ZebraThrive Different.' This component may be the orphaned predecessor - verify against the live homepage before reintroducing.",
     Component: DifferenceSection,

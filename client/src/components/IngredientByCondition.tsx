@@ -180,7 +180,7 @@ export default function IngredientByCondition() {
             By Your Conditions
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight mb-4">
-            How each ingredient helps <span className="text-[#B36B4D] italic">your</span> triad
+            What each ingredient <span className="text-[#B36B4D] italic">does</span> in the body
           </h2>
           <p className="text-base md:text-lg text-[#5D5752] leading-relaxed">
             Tap the conditions you live with. The grid below shows how every ingredient in the formula relates to the biology behind each one, in plain language.
@@ -229,7 +229,7 @@ export default function IngredientByCondition() {
               className="text-center py-20 max-w-md mx-auto"
             >
               <p className="text-[#5D5752] text-base font-medium leading-relaxed">
-                Tap at least one condition above to see how each ingredient supports it.
+                Tap at least one area above to see the biology behind each ingredient.
               </p>
             </motion.div>
           ) : (

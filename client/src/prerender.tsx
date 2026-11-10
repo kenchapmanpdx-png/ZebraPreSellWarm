@@ -76,7 +76,7 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/": {
     title: "ZebraThrive | Supplements for the EDS, POTS & MCAS Community",
     description:
-      "Research-driven AM capsules, PM capsules, and Daily Powder built around the sensitivities of the zebra community. Forms, doses, and excipients disclosed.",
+      "Research-driven AM capsules, PM capsules, and Daily Powder built around the sensitivities of the zebra community. Forms and doses disclosed; every confirmed excipient listed.",
   },
   "/the-how": {
     title: "The How: Formulation Rationale | ZebraThrive",
@@ -91,12 +91,12 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/our-promise": {
     title: "Our Promise: Constitution | ZebraThrive",
     description:
-      "ZebraThrive's commitments: disclosed ingredients and excipients, lot-verified ingredient COAs, cited evidence, and honest limits on what we claim.",
+      "ZebraThrive's commitments: disclosed ingredients and confirmed excipients, ingredient lots checked against their COAs before production, cited evidence, and honest limits on what we claim.",
   },
   "/excipients": {
     title: "Excipients ZebraThrive Leaves Out, and What It Uses Instead",
     description:
-      "Why ZebraThrive excludes citric acid, magnesium stearate, titanium dioxide, carrageenan, gelatin, dyes, flavors and soy, and what it uses instead.",
+      "Why ZebraThrive leaves out added citric acid, magnesium stearate, titanium dioxide, carrageenan, gelatin, dyes, flavors and soy, what it uses instead, and what is still being confirmed with suppliers.",
   },
   "/preorder": {
     title: "Reserve: Coming Soon | ZebraThrive",

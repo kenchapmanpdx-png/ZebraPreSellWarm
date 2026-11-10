@@ -49,8 +49,8 @@ const NODES: Node[] = [
   {
     id: 1,
     n: '1',
-    title: 'Collagen Breaks Down',
-    desc: 'Weak connective tissue degrades due to genetic and stress factors.',
+    title: 'Collagen Turnover',
+    desc: 'In hEDS, lab studies of skin cells show changes in how collagen is broken down; the causes are still being studied.',
     theme: 'brown',
     card: { left: '50%', top: '14%' },
     dot: { cx: CENTER, cy: CENTER - RING_R },
@@ -58,8 +58,8 @@ const NODES: Node[] = [
   {
     id: 2,
     n: '2',
-    title: 'Fragments Trigger Inflammation',
-    desc: 'Biological debris activates aggressive immune responses.',
+    title: 'Fragments and Inflammation',
+    desc: 'In lab studies, collagen fragments can activate immune cells.',
     theme: 'green',
     card: { left: '86%', top: '50%' },
     dot: { cx: CENTER + RING_R, cy: CENTER },
@@ -67,8 +67,8 @@ const NODES: Node[] = [
   {
     id: 3,
     n: '3',
-    title: 'Mast Cells Activate',
-    desc: 'Hyper-sensitive cells release histamine and toxic mediators.',
+    title: 'Mast Cells',
+    desc: 'Activated mast cells release histamine and enzymes.',
     theme: 'brown',
     card: { left: '50%', top: '86%' },
     dot: { cx: CENTER, cy: CENTER + RING_R },
@@ -76,8 +76,8 @@ const NODES: Node[] = [
   {
     id: 4,
     n: '4',
-    title: 'Enzymes Attack Collagen',
-    desc: 'Destructive enzymes shred remaining tissue, repeating the cycle.',
+    title: 'Enzymes and Collagen',
+    desc: 'Mast cell enzymes can activate the enzymes that break down collagen, which researchers think may feed the cycle.',
     theme: 'green',
     card: { left: '14%', top: '50%' },
     dot: { cx: CENTER - RING_R, cy: CENTER },
@@ -201,7 +201,7 @@ export default function ViciousCycle() {
                 <RefreshCw className="w-7 h-7 text-[#B36B4D]" aria-hidden="true" />
               </div>
               <h3 className="text-2xl md:text-4xl font-serif font-bold text-[#3D3733] mb-2">
-                The "Vicious Cycle" of hEDS &amp; MCAS
+                A Proposed Cycle in Collagen and Mast Cell Research
               </h3>
             </div>
 
@@ -326,7 +326,7 @@ export default function ViciousCycle() {
                 >
                   <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#C0392B]/10 text-[#C0392B] border border-[#C0392B]/20 text-sm font-black uppercase tracking-[0.18em]">
                     <RefreshCw className="w-4 h-4" aria-hidden="true" />
-                    This loop is self-reinforcing
+                    Researchers have proposed that this loop may reinforce itself
                   </span>
                 </div>
                 <div
@@ -334,10 +334,10 @@ export default function ViciousCycle() {
                   className="absolute inset-x-0 top-0 flex flex-col items-center"
                 >
                   <span className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#A4613A] text-white text-base font-bold shadow-lg">
-                    Support at several points
+                    Ingredients studied at several points
                   </span>
                   <span className="mt-3 text-[#6B655F] text-sm font-medium">
-                    We support mast cell stability, collagen protection and energy at several points.
+                    Our formula includes nutrients for normal collagen formation and energy metabolism, plus ingredients studied in lab research on mast cells.
                   </span>
                 </div>
               </div>
@@ -369,7 +369,7 @@ export default function ViciousCycle() {
               <div className="flex flex-col items-center pt-8">
                 <div className="h-12 w-0.5 bg-gradient-to-b from-transparent to-[#D4A373]" aria-hidden="true" />
                 <div className="bg-white border border-[#D4A373]/30 px-6 py-2 rounded-full shadow-sm text-[#8B5E4B] font-serif italic text-base -mt-3">
-                  Support at several points
+                  Ingredients studied at several points
                 </div>
               </div>
             </div>

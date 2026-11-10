@@ -63,6 +63,11 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
     const modified = datesFor(`/ingredients/${data.id}`)?.modified;
     // Headings use the short name ("Vitamin C", not "Vitamin C (Sodium Ascorbate)").
     const cleanName = data.name.split(" (")[0];
+    const triadCards = [
+        { title: "MCAS", content: data.triadPlain?.mcas || data.triad.mcas },
+        { title: "hEDS", content: data.triadPlain?.heds || data.triad.heds },
+        { title: "POTS", content: data.triadPlain?.pots || data.triad.pots }
+    ].filter((item) => item.content);
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-12 space-y-16">
@@ -218,16 +223,13 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             </section>
 
             {/* For the Triad Specifically */}
+            {triadCards.length > 0 && (
             <section className="space-y-10">
                 <div className="text-center space-y-2">
-                    <h2 className="text-4xl font-serif">How {cleanName} fits hEDS, POTS and MCAS</h2>
+                    <h2 className="text-4xl font-serif">What to know about {cleanName} if you live with hEDS, POTS or MCAS</h2>
                 </div>
-                <div className="grid gap-8 md:grid-cols-3">
-                    {[
-                        { title: "MCAS", content: data.triadPlain?.mcas || data.triad.mcas },
-                        { title: "hEDS", content: data.triadPlain?.heds || data.triad.heds },
-                        { title: "POTS", content: data.triadPlain?.pots || data.triad.pots }
-                    ].map((item, idx) => (
+                <div className={`grid gap-8 ${triadCards.length === 3 ? "md:grid-cols-3" : triadCards.length === 2 ? "md:grid-cols-2" : ""}`}>
+                    {triadCards.map((item, idx) => (
                         <div key={idx} className="group relative p-8 bg-white rounded-3xl shadow-lg border border-border/30 transition-all hover:-translate-y-1">
                             <h3 className="absolute top-0 right-8 -translate-y-1/2 bg-[#8F5238] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md m-0">
                                 {cleanName} and {item.title}
@@ -237,6 +239,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                     ))}
                 </div>
             </section>
+            )}
 
             {/* Why We Chose This Form */}
             <section className="space-y-8 p-10 md:p-14 bg-primary text-primary-foreground rounded-[3rem] shadow-2xl relative overflow-hidden">
@@ -262,7 +265,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                         {comp.selected ? <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" aria-hidden="true" /> : <XCircle className="w-5 h-5 opacity-40 shrink-0 mt-0.5" aria-hidden="true" />}
                                         <div>
                                             <p className="font-bold text-sm">{comp.form}</p>
-                                            <p className="text-xs opacity-90">{comp.difference}</p>
+                                            {comp.difference && <p className="text-xs opacity-90">{comp.difference}</p>}
                                         </div>
                                     </div>
                                 ))}
@@ -282,14 +285,18 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                 </div>
 
                 <div className="grid gap-12 md:grid-cols-2">
+                    {data.safety.sideEffects && (
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold border-b pb-2">Potential Side Effects</h3>
                         <p className="text-muted-foreground leading-relaxed">{data.safety.sideEffects}</p>
                     </div>
+                    )}
+                    {data.safety.interactions && (
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold border-b pb-2">Drug Interactions</h3>
                         <p className="text-muted-foreground leading-relaxed">{data.safety.interactions}</p>
                     </div>
+                    )}
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-2">
@@ -305,7 +312,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         </ul>
                     </div>
                     <div className="p-8 bg-green-50/50 rounded-3xl border border-green-100 space-y-4">
-                        <h3 className="font-bold text-xs uppercase tracking-widest text-green-800">Safe Excipients</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-green-800">Excipients</h3>
                         <ul className="grid gap-2">
                             {data.safety.excipientConcerns.safe.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm text-green-900/80">

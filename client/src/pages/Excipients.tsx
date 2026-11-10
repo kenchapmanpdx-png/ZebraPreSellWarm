@@ -67,7 +67,7 @@ export default function Excipients() {
               The eight excipients ZebraThrive excludes
             </h2>
             <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mb-8">
-              These are the excipients our community reports reacting to most. Each entry says what the excipient does,
+              These are excipients that people in our community often say they avoid. Each entry says what the excipient does,
               why it is out, and what the formula uses instead.
             </p>
             <ul className="flex flex-wrap gap-2.5 mb-10" aria-label="Excluded excipients">
@@ -132,7 +132,7 @@ export default function Excipients() {
               The excipients ZebraThrive does use
             </h2>
             <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mb-6">
-              Five, all listed on the label. Nothing is added for color, flavor, sweetness or shelf appearance.
+              Six, each listed in the table below and planned for the label's Other ingredients line. Nothing is added for flavor or sweetness, and the only whitening is calcium carbonate on the PM shells, used in place of titanium dioxide.
             </p>
             <div className="overflow-x-auto rounded-2xl border border-[#3D3733]/10 bg-white/70">
               <table className="w-full text-left text-sm md:text-base">

@@ -21,7 +21,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "palmitoylethanolamide": {
     title: "Palmitoylethanolamide (PEA): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Ultramicronized PEA at 1,200 mg a day in the ZebraThrive Daily Powder: how it works, why particle size matters, the human trial evidence, and safety.",
+      "Micronized PEA at 1,200 mg a day in the ZebraThrive Daily Powder: how it works, what is known about particle size, the human trial evidence, and safety.",
   },
   "luteolin": {
     title: "Luteolin Supplement: Dose, Evidence and Safety | ZebraThrive",
@@ -31,7 +31,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "magnesium-bisglycinate": {
     title: "Magnesium Bisglycinate: Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Magnesium bisglycinate, a true chelate, at about 300 mg elemental magnesium a day: why this form, absorption and gut tolerance, evidence, and safety.",
+      "Magnesium bisglycinate at about 300 mg elemental magnesium a day: why this form, absorption and gut tolerance, how chelate identity is checked, the evidence, and safety.",
   },
   "taurine": {
     title: "Taurine Supplement: Dose, Evidence and Safety | ZebraThrive",
@@ -51,7 +51,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "pine-bark-extract": {
     title: "Pine Bark Extract (OPCs): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Pine bark extract standardized to 65-75% OPCs at 200 mg a day: what procyanidins do, how the extract is verified, the evidence, and safety notes.",
+      "Pine bark extract standardized to 65 to 75% OPCs at 200 mg a day: what procyanidins are, how the extract is checked, what the evidence does and does not show, and safety notes.",
   },
   "grape-seed-extract": {
     title: "Grape Seed Extract (OPCs): Dose, Evidence, Safety | ZebraThrive",
@@ -66,22 +66,22 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "chlorogenic-acid": {
     title: "Chlorogenic Acid (Green Coffee): Dose, Evidence | ZebraThrive",
     description:
-      "Chlorogenic acid at 200 mg a day from decaffeinated green coffee bean extract, caffeine under 0.1%: what it does, the evidence, and safety notes.",
+      "Chlorogenic acids at 200 mg a day from green coffee bean extract (444 mg): what they do, the evidence, caffeine content, and safety notes.",
   },
   "l-theanine": {
     title: "L-Theanine: Dose, Evidence and Safety | ZebraThrive",
     description:
-      "L-theanine at 200 mg in the ZebraThrive PM capsule: calm without sedation, how it works, the human evidence, the purity spec, and safety notes.",
+      "L-theanine at 200 mg in the ZebraThrive PM capsule: what small human studies show for relaxation and sleep, how it works, the purity spec, and safety notes.",
   },
   "zinc-carnosine": {
     title: "Zinc Carnosine: Dose, Evidence and Safety | ZebraThrive",
     description:
-      "Zinc carnosine at 75 mg a day, split AM and PM: the human evidence on gut lining support, the 1:1 chelate form, safety, and medication timing.",
+      "Zinc carnosine at 75 mg a day, split AM and PM: the small human studies on the gut lining, the zinc L-carnosine complex, copper balance and safety, and medication timing.",
   },
   "astaxanthin": {
     title: "Astaxanthin: Dose, Form, Evidence and Safety | ZebraThrive",
     description:
-      "Natural astaxanthin at 4 mg in the PM capsule from a cracked-cell algae beadlet: its antioxidant role, the isomer spec, evidence, and how to take it.",
+      "Natural astaxanthin at 4 mg in the PM capsule from an algae beadlet: what it is, what human studies of other forms show and their limits, the isomer spec, and how to take it.",
   },
   "benfotiamine": {
     title: "Benfotiamine (Vitamin B1): Dose, Evidence, Safety | ZebraThrive",
@@ -91,17 +91,17 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "niacinamide": {
     title: "Niacinamide (Vitamin B3): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Niacinamide (vitamin B3) at 50 mg in the ZebraThrive AM capsule: why the non-flushing form, why the dose is capped low, the evidence, and safety.",
+      "Niacinamide (vitamin B3) in the ZebraThrive AM capsule: why the non-flushing form, why the dose is kept low, the evidence, and safety. The daily amount will be shown here once it is final.",
   },
   "p5p": {
     title: "P5P (Active Vitamin B6): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "P5P, the active coenzyme form of vitamin B6, at 50 mg (31.9 mg B6) a day: why this form, the B6 upper limit, what the evidence shows, and safety.",
+      "P5P, the coenzyme form of vitamin B6, in the ZebraThrive AM capsule: why this form, how the dose relates to the B6 upper limit, what the evidence shows, and safety. The daily amount will be shown here once it is final.",
   },
   "r5p": {
     title: "R5P (Active Vitamin B2): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "R5P, the activated form of vitamin B2, at 25 mg in the ZebraThrive AM capsule: why it skips the conversion step, its cofactor roles, evidence, safety.",
+      "Riboflavin at 18.3 mg a day as riboflavin 5'-phosphate (R5P) in the ZebraThrive AM capsule: what this form is, its cofactor roles, the evidence, and safety.",
   },
   "methylfolate": {
     title: "Methylfolate (5-MTHF): Dose, Form, Evidence | ZebraThrive",
@@ -136,7 +136,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "chromium": {
     title: "Chromium Picolinate: Dose, Evidence and Safety | ZebraThrive",
     description:
-      "Chromium picolinate at 200 mcg in the ZebraThrive AM capsule: its role in insulin response and steady blood sugar, the evidence, and safety notes.",
+      "Chromium picolinate at 200 mcg in the ZebraThrive AM capsule: what it is, what the evidence does and does not show, and safety notes.",
   },
   "selenium": {
     title: "Selenium (Selenomethionine): Dose, Evidence | ZebraThrive",
@@ -156,11 +156,11 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "boron": {
     title: "Boron Glycinate: Dose, Evidence and Safety | ZebraThrive",
     description:
-      "Boron glycinate at 2 mg elemental boron a day: its roles in bone metabolism and in vitamin D and magnesium use, what the evidence shows, and safety.",
+      "Boron glycinate at 2 mg elemental boron a day: what boron is, what the limited human research shows, and safety.",
   },
   "molybdenum": {
     title: "Molybdenum Glycinate: Dose, Evidence and Safety | ZebraThrive",
     description:
-      "Molybdenum glycinate at 150 mcg a day: its role in the enzymes that clear sulfites, why most multivitamins skip it, the evidence, and safety notes.",
+      "Molybdenum glycinate at 150 mcg a day: its role in the enzyme that processes sulfites, the evidence, and safety notes.",
   },
 };

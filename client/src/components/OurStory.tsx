@@ -88,10 +88,10 @@ export default function OurStory() {
               Behind every bottle is a deeper purpose and her name is Ava.
             </motion.p>
             <motion.p custom={2} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
-              Ava is my daughter. She lives with scoliosis, <a href="https://www.ehlers-danlos.com/heds-diagnostic-checklist/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">hEDS</a>, <a href="https://www.dysautonomiainternational.org/page.php?ID=30" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">POTS</a>, and <a href="https://tmsforacure.org/overview/mast-cell-activation-syndrome-mcas/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">MCAS</a>. Mostly invisible conditions that affect everything from how her body uses nutrients to how she lives with chronic pain, subluxating joints, and extreme fatigue.
+              Ava is my daughter. She lives with scoliosis, <a href="https://www.ehlers-danlos.com/heds-diagnostic-checklist/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">hEDS</a>, <a href="https://www.dysautonomiainternational.org/page.php?ID=30" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">POTS</a>, and <a href="https://tmsforacure.org/overview/mast-cell-activation-syndrome-mcas/" target="_blank" rel="noopener noreferrer" className="text-[#B36B4D] hover:underline font-bold">MCAS</a>. Mostly invisible conditions that shape her daily life, from chronic pain and subluxating joints to extreme fatigue.
             </motion.p>
             <motion.p custom={3} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
-              ZebraThrive wasn't born in a boardroom. It was born from my relentless search for something she could actually tolerate. Built to be sustainable and safe, not a quick fix.
+              ZebraThrive wasn't born in a boardroom. It was born from my relentless search for something she could actually tolerate. Built to be tolerable and carefully checked, not a quick fix.
             </motion.p>
 
             {/* MOBILE ONLY: photo of Ken & Ava + quote card, placed mid-story (desktop shows it in the left column instead) */}
@@ -120,7 +120,7 @@ export default function OurStory() {
             </div>
 
             <motion.p custom={4} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="font-bold text-[#3D3733]">
-              We couldn't find what she needed. So we created it. A system designed to be effective, tolerable, and honest about what's inside.
+              We couldn't find what she needed. So we created it. A system designed to be tolerable and honest about what's inside.
             </motion.p>
           </div>
 

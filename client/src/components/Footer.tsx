@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
             <p className="text-[#EBE8E1]/80 text-sm leading-relaxed mb-8">
               Supplements formulated for the hypermobile and histamine-sensitive.
-              Research-driven. Excipients disclosed.
+              Research-driven. Confirmed excipients disclosed.
             </p>
           </div>
 

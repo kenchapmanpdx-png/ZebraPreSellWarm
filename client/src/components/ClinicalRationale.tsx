@@ -1,6 +1,6 @@
 /* client/src/components/ClinicalRationale.tsx */
 import React, { useState, Suspense, lazy } from 'react';
-import { ShieldCheck, Zap, Activity, ChevronDown, Scissors, Sparkles } from 'lucide-react';
+import { ShieldCheck, Activity, ChevronDown, Scissors, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Lazy load the map to keep the page fast
@@ -13,35 +13,26 @@ export default function ClinicalRationale() {
     {
       id: "shredder",
       number: "01",
-      title: "Halt the 'Collagen Shredder'",
-      desc: "In hEDS, your body overproduces enzymes (MMPs) that act like a shredder, breaking down collagen faster than you can build it. We don't just add fuel; we unplug the shredder.",
+      title: "Support for normal collagen turnover",
+      desc: "Lab studies of skin cells from people with hEDS have found higher activity of MMPs, the enzymes that break collagen down. Alongside building blocks for collagen, we include ingredients studied in lab research for effects on collagen breakdown.",
       icon: <Scissors className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-rose-500", // Visually signaling 'stopping' the damage
       gradient: "from-rose-500/20 to-transparent"
     },
     {
-      id: "hydration",
-      number: "02",
-      title: "Cellular 'Backdoor' Hydration",
-      desc: "Salt pills often sit in the stomach, causing nausea. We use a glucose-transport mechanism to open a biological 'backdoor,' flooding cells with hydration instantly without the gastric distress.",
-      icon: <Zap className="w-8 h-8 text-white" aria-hidden="true" />,
-      color: "bg-blue-500",
-      gradient: "from-blue-500/20 to-transparent"
-    },
-    {
       id: "trigger",
-      number: "03",
+      number: "02",
       title: "The Trigger Screen",
-      desc: "Mast cells are finicky. Every active and carrier is reviewed against known MCAS triggers: excipients, allergens and how each ingredient is made. Where an ingredient can only be made with a fermentation step, we say so. No bovine gelatin.",
+      desc: "Mast cells are finicky. Every active and carrier goes through our review for known mast cell triggers: excipients, allergens and how each ingredient is made. A few carriers are still being confirmed with suppliers, and we list those openly. Where an ingredient can only be made with a fermentation step, we say so. No bovine gelatin.",
       icon: <ShieldCheck className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-emerald-500",
       gradient: "from-emerald-500/20 to-transparent"
     },
     {
       id: "sync",
-      number: "04",
-      title: "Autonomic Synchronization",
-      desc: "You shouldn't have to choose between 'brain fog' and 'jitters.' Our AM/PM system is timed to your circadian rhythm-calming adrenaline in the morning, repairing tissue at night.",
+      number: "03",
+      title: "AM and PM Timing",
+      desc: "Our AM and PM capsules split the formula so each dose is easier to take, with L-theanine placed in the evening capsule.",
       icon: <Activity className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-violet-500",
       gradient: "from-violet-500/20 to-transparent"
@@ -80,7 +71,7 @@ export default function ClinicalRationale() {
             className="text-5xl md:text-8xl font-serif font-bold text-[#3D3733] leading-[0.9] tracking-tight"
           >
             One System. <br />
-            <span className="text-[#B36B4D] italic">Every Pathway.</span>
+            <span className="text-[#B36B4D] italic">Many Pathways.</span>
           </motion.h2>
 
           <motion.p 
@@ -90,7 +81,7 @@ export default function ClinicalRationale() {
             transition={{ delay: 0.3 }}
             className="mt-8 text-lg md:text-2xl text-[#5D5752] font-medium leading-relaxed max-w-2xl mx-auto"
           >
-            We didn't just build a supplement. We engineered a biological intervention to interrupt the cycle of instability.
+            We didn't just build a supplement. We designed a supplement around the nutrients and compounds most often discussed for connective tissue, mast cell and energy support.
           </motion.p>
         </div>
 
@@ -150,7 +141,7 @@ export default function ClinicalRationale() {
                     Explore the Clinical Logic
                   </h3>
                   <p className="text-[#EDEAE3]/80 text-sm md:text-lg max-w-xl mx-auto">
-                    Click to reveal the ingredient-to-benefit map. See exactly how we target mitochondrial health, mast cell stability, and collagen protection.
+                    Click to reveal the ingredient-to-benefit map. See which ingredients relate to energy metabolism, mast cell research and collagen formation.
                   </p>
                   <div className="mt-4 px-8 py-3 bg-white/10 rounded-full text-white text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-md group-hover:bg-white group-hover:text-[#0F2A22] transition-all">
                     Open Intelligence Map

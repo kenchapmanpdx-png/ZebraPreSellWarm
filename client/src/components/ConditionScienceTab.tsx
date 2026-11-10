@@ -60,8 +60,8 @@ export default function ConditionScienceTabs() {
     heds: {
       name: "hEDS",
       fullName: "Hypermobile Ehlers-Danlos Syndrome",
-      tagline: "Collagen Protection & Repair",
-      description: "Supporting collagen structure and a healthy balance of the enzymes (MMPs) that break collagen down.",
+      tagline: "Collagen Formation and Turnover",
+      description: "Vitamin C and copper support normal collagen formation, and other ingredients were chosen from lab research on collagen turnover.",
       color: "text-emerald-800",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
@@ -71,8 +71,8 @@ export default function ConditionScienceTabs() {
     pots: {
       name: "POTS", 
       fullName: "Postural Orthostatic Tachycardia",
-      tagline: "Autonomic & Cardiovascular Balance",
-      description: "Supporting a balanced autonomic nervous system and normal cardiovascular function.",
+      tagline: "Nervous System and Circulation",
+      description: "Nutrients for normal nervous system function and energy metabolism.",
       color: "text-blue-800",
       bg: "bg-blue-50", 
       border: "border-blue-200",
@@ -82,8 +82,8 @@ export default function ConditionScienceTabs() {
     mcas: {
       name: "MCAS",
       fullName: "Mast Cell Activation Syndrome", 
-      tagline: "Cellular Stabilization & Histamine Clearance",
-      description: "Supporting normal mast cell stability and the body's own histamine breakdown.",
+      tagline: "Mast Cell Research and Histamine Metabolism",
+      description: "Copper and B-vitamins support normal histamine metabolism, and other ingredients were chosen from lab research on mast cells.",
       color: "text-rose-800",
       bg: "bg-rose-50",
       border: "border-rose-200", 
@@ -96,47 +96,46 @@ export default function ConditionScienceTabs() {
     {
       id: 'mmp-inhibition',
       icon: Shield,
-      title: "Stop the Breakdown",
+      title: "Collagen Turnover",
       subtitle: "MMP Inhibition",
       color: "text-emerald-700",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
-      summary: "In hEDS, the MMP enzymes are elevated and shred collagen faster than the body can build it.",
-      problem: "MMP-1, 3, 8, and 9 are actively cutting collagen fibers. It's like trying to fill a bathtub with the drain wide open.",
-      solution: "We layer multiple MMP-inhibitory compounds across pine bark extract, grape seed extract, and quercetin phytosome plus mast-cell-stabilizing co-actives.",
+      summary: "Lab studies of skin cells from people with hEDS found higher MMP activity, which may shift the balance of collagen turnover.",
+      problem: "In lab studies, skin cells from people with hEDS released more MMP-1, MMP-3 and MMP-9. It's like trying to fill a bathtub with the drain wide open.",
+      solution: "We include pine bark, grape seed and quercetin, which have been studied in lab research for effects on MMPs.",
       mechanisms: [
-        { name: "MMP-1 (Collagenase)", role: "Cuts main fibers; elevated in hEDS", ingredients: ["Pine Bark Extract", "Grape Seed Extract", "Astaxanthin"] },
+        { name: "MMP-1 (Collagenase)", role: "Cuts main fibers; elevated in hEDS", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] },
         { name: "MMP-3 (Stromelysin)", role: "The 'master switch' activating other MMPs", ingredients: ["PEA", "Luteolin"] }
       ],
-      keyInsight: "The gut-derived M1/DHPV metabolite shared between pine bark and grape seed inhibits MMP-9 at orally achievable concentrations."
+      keyInsight: "Pine bark and grape seed procyanidins are converted by gut bacteria into valerolactone metabolites, which reduced MMP-9 release from immune cells in lab studies."
     },
     {
       id: 'timps',
       icon: Shield,
-      title: "Boost Defenses",
-      subtitle: "TIMP Enhancement",
+      title: "TIMP Research",
+      subtitle: "TIMP Research",
       color: "text-teal-700",
       bg: "bg-teal-50",
       border: "border-teal-200",
-      summary: "Upregulating natural collagen 'bodyguards' to restore balance to your tissue matrix.",
-      problem: "Connective tissue fails when TIMPs are too low relative to destructive enzymes.",
-      solution: "Compounds that signal your cells to produce more Tissue Inhibitors of Metalloproteinases (TIMPs).",
+      summary: "Ingredients that raised TIMP levels in lab and animal studies.",
+      problem: "When TIMPs are low relative to MMPs, collagen turnover can tip toward breakdown.",
+      solution: "Ingredients that increased TIMP production in lab and animal studies.",
       mechanisms: [
-        { name: "TIMP-1", role: "Blocks MMP-1, 3, and 9", ingredients: ["Luteolin", "Astaxanthin", "PEA"] },
-        { name: "TIMP-2", role: "Specifically inhibits MMP-2", ingredients: ["Quercetin Phytosome", "Astaxanthin"] }
+        { name: "TIMP-1", role: "Blocks MMP-1, 3, and 9", ingredients: ["Luteolin", "PEA"] }
       ],
       keyInsight: "Collagen balance depends on both the 'shredders' (MMPs) and the 'bodyguards' (TIMPs)."
     },
     {
       id: 'synthesis',
       icon: Factory,
-      title: "Build New Matrix",
+      title: "Collagen Formation",
       subtitle: "Collagen Synthesis",
       color: "text-green-700",
       bg: "bg-green-50",
       border: "border-green-200",
-      summary: "Supporting the cofactors required to assemble new collagen properly.",
-      problem: "Collagen synthesis depends on Vitamin C for triple-helix stability and copper for cross-linking; both can run marginal in chronic illness.",
+      summary: "Vitamin C and copper support normal collagen formation.",
+      problem: "Collagen formation depends on vitamin C for triple-helix stability and on copper for cross-linking.",
       solution: "Buffered Sodium Ascorbate for triple-helix hydroxylation plus copper bisglycinate for LOX cross-linking.",
       mechanisms: [
         { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix structure", ingredients: ["Vitamin C (Sodium Ascorbate)"] },
@@ -147,19 +146,19 @@ export default function ConditionScienceTabs() {
     {
       id: 'crosslinking',
       icon: LinkIcon,
-      title: "Add Tensile Strength",
+      title: "Collagen Cross-Linking",
       subtitle: "LOX System Support",
       color: "text-amber-700",
       bg: "bg-amber-50",
       border: "border-amber-200",
-      summary: "Raw collagen is weak. We provide the Copper 'glue' required for the LOX enzyme to function.",
-      problem: "LOX cannot work without Copper. Homocysteine (MTHFR) directly destroys the LOX enzyme.",
-      solution: "Precise Copper Bisglycinate plus methylated B-vitamins to clear homocysteine.",
+      summary: "Collagen needs cross-linking for strength, and copper is the cofactor the LOX enzyme needs.",
+      problem: "LOX cannot work without Copper. High homocysteine has been shown in lab studies to reduce LOX activity.",
+      solution: "Copper bisglycinate plus folate, B6 and B12, which support normal homocysteine metabolism.",
       mechanisms: [
         { name: "Copper", role: "The essential LOX cofactor for bonding", ingredients: ["Copper Bisglycinate"] },
-        { name: "Methylation", role: "Protects LOX from homocysteine damage", ingredients: ["Methylfolate", "P5P"] }
+        { name: "Methylation", role: "Supports normal homocysteine metabolism", ingredients: ["Methylfolate", "P5P"] }
       ],
-      keyInsight: "B-vitamin deficiency creates a 'double hit'-direct enzyme inhibition and genetic silencing."
+      keyInsight: "In lab studies, high homocysteine reduced LOX both by inhibiting the enzyme and by lowering its gene expression."
     }
   ];
 
@@ -167,37 +166,37 @@ export default function ConditionScienceTabs() {
     {
       id: 'autonomic-modulation',
       icon: Brain,
-      title: "Dampen Overdrive",
-      subtitle: "Autonomic Balance",
+      title: "Nervous System Support",
+      subtitle: "Nervous System",
       color: "text-blue-700",
       bg: "bg-blue-50",
       border: "border-blue-200",
-      summary: "Supporting a calm, balanced nervous system response.",
+      summary: "Magnesium supports normal nervous system function, and L-theanine has been studied in small trials for short-term stress.",
       problem: "The nervous system balances 'fight-or-flight' (sympathetic) and 'rest-and-digest' (parasympathetic) signals.",
-      solution: "Calming (inhibitory) neurotransmitter support using L-Theanine, Taurine, and Magnesium Bisglycinate.",
+      solution: "L-theanine, taurine and magnesium bisglycinate, nutrients studied for their roles in normal nerve signaling.",
       mechanisms: [
         { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium Bisglycinate"] },
-        { name: "Cardiac Rhythm", role: "Heart rate regulation and flexibility", ingredients: ["Taurine"] }
+        { name: "Resting Heart Rate", role: "Studied for resting heart rate in mixed adult populations", ingredients: ["Taurine"] }
       ],
-      keyInsight: "A 2024 meta-analysis of 20 randomized trials (Tzang et al., PMID 39148075), mostly in heart failure, hypertension, and healthy volunteers, found taurine lowered resting heart rate by about 3.6 bpm on average."
+      keyInsight: "A 2024 meta-analysis of 20 randomized trials, mostly in people with heart failure, high blood pressure or no illness, found taurine lowered resting heart rate by about 3.6 beats per minute on average. If you take a beta-blocker or ivabradine, ask your doctor, because the effects may add up."
     },
     {
       id: 'mitochondrial-etc',
       icon: Battery,
-      title: "Support Cellular Energy",
-      subtitle: "Mitochondrial Support",
+      title: "Energy Metabolism",
+      subtitle: "Energy Metabolism",
       color: "text-orange-700",
       bg: "bg-orange-50",
       border: "border-orange-200",
-      summary: "B-vitamin cofactors for the mitochondria that power every cell, including those in the heart and blood vessels.",
+      summary: "B-vitamins that support normal energy metabolism in every cell.",
       problem: "Every cell runs on ATP made in mitochondria, and energy production depends on B-vitamin cofactors.",
-      solution: "Cofactors at several points of energy production: R5P (as FMN and FAD) for Complexes I and II, Benfotiamine for the thiamine-dependent entry into the Krebs cycle, NR for NAD+ regeneration, plus Taurine.",
+      solution: "Cofactors at several points of energy production: R5P (as FMN and FAD) for Complexes I and II, benfotiamine for the thiamine-dependent entry into the Krebs cycle, and NR for NAD+.",
       mechanisms: [
         { name: "Complex I/II", role: "FMN and FAD cofactors for electron transport", ingredients: ["R5P"] },
         { name: "Pyruvate dehydrogenase", role: "Thiamine-dependent entry into the Krebs cycle", ingredients: ["Benfotiamine"] },
-        { name: "NAD+ Cycling", role: "Sirtuin pathway + mitochondrial fuel", ingredients: ["Nicotinamide Riboside", "Niacinamide"] }
+        { name: "NAD+ Cycling", role: "Supports NAD+ levels", ingredients: ["Nicotinamide Riboside", "Niacinamide"] }
       ],
-      keyInsight: "Benfotiamine is the fat-soluble form of B1 with roughly 5x the bioavailability of plain thiamine."
+      keyInsight: "Benfotiamine is a form of vitamin B1 that raises blood thiamine levels more than standard thiamine; the gain in the active form inside red blood cells is about twofold."
     }
   ];
 
@@ -205,33 +204,33 @@ export default function ConditionScienceTabs() {
     {
       id: 'mast-cell-stabilization',
       icon: FlaskConical,
-      title: "Steady the Mast Cell",
-      subtitle: "Membrane Stabilization",
+      title: "Mast Cell Research",
+      subtitle: "Mast Cell Research",
       color: "text-rose-700",
       bg: "bg-rose-50",
       border: "border-rose-200",
-      summary: "Supporting mast cell stability so less histamine and tryptase are released.",
+      summary: "Ingredients studied in lab research on mast cells; these effects have not been tested in people taking this formula.",
       problem: "Overreactive mast cells can release mediators in response to everyday triggers.",
-      solution: "Six ingredients that act on different mast cell stability pathways in lab research.",
+      solution: "In lab research, PEA and luteolin act on different mast cell pathways.",
       mechanisms: [
-        { name: "PPARα", role: "Nuclear switch to suppress mediator release", ingredients: ["PEA (Ultramicronized)"] },
-        { name: "ORAI Channel", role: "Block the calcium influx that triggers flares", ingredients: ["Quercetin Phytosome"] }
+        { name: "PPARα", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] },
+        { name: "ORAI Channel", role: "Calcium signaling in mast cells, studied in lab research", ingredients: ["Quercetin Phytosome"] }
       ],
-      keyInsight: "Quercetin Phytosome (Quercefit®) solves quercetin's bioavailability problem; only the phospholipid-carrier form reaches relevant plasma concentrations."
+      keyInsight: "Quercetin on its own is poorly absorbed. The phytosome form we use raised blood quercetin about 20 times in a human study."
     },
     {
       id: 'histamine-clearance',
       icon: Pill,
-      title: "Clear the 'Bucket'",
+      title: "Histamine Metabolism",
       subtitle: "DAO & HNMT Metabolism",
       color: "text-purple-700",
       bg: "bg-purple-50",
       border: "border-purple-200",
-      summary: "Providing cofactors that support the enzymes your body uses to break down histamine.",
+      summary: "Copper is part of DAO, one of the enzymes the body uses to break down histamine.",
       problem: "When histamine breakdown is slow, even normal amounts can build up.",
-      solution: "Cofactors for both gut (DAO) and intracellular (HNMT) pathways.",
+      solution: "Copper for DAO, and methylation B-vitamins that support the body's normal supply of SAM.",
       mechanisms: [
-        { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper", "Vitamin C"] },
+        { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper"] },
         { name: "Methylation", role: "SAMe production for HNMT function", ingredients: ["Methylfolate", "B12"] }
       ],
       keyInsight: "Copper is a DAO cofactor-the same mineral required for collagen cross-linking. One mineral, two massive jobs."
@@ -370,7 +369,7 @@ export default function ConditionScienceTabs() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">29 ACTIVE INGREDIENTS • 8 PATHWAYS • 1 INTEGRATED FORMULA</span></div></div>
+        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">29 ACTIVE INGREDIENTS, 8 FOCUS AREAS, 1 FORMULA</span></div></div>
       </div>
     </section>
   );

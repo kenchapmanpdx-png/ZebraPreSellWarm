@@ -136,7 +136,7 @@ export default function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] animate-pulse" />
             <span className="text-[10px] font-black text-[#3D3733] uppercase tracking-[0.3em]">
-              Formulated for Complex Conditions
+              Formulated for Sensitive Systems
             </span>
           </motion.div>
 
@@ -149,16 +149,16 @@ export default function Hero() {
             className="font-serif font-bold tracking-tight text-[#3D3733]"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
           >
-            <span className="block mb-2">Advanced Autonomic, Mast Cell</span>
-            <span className="block text-[#B36B4D] italic font-normal">& Connective Tissue Support</span>
+            <span className="block mb-2">Daily Nutrients, Built</span>
+            <span className="block text-[#B36B4D] italic font-normal">for Sensitive Systems</span>
           </motion.h1>
           {/* BLUF: names the brand and what it is in the first 60 words of
               the page (handbook §3, §25). Phrasing reused from the
               Organization description and footer, no new claims. */}
           <p className="mt-8 mx-auto max-w-3xl text-lg md:text-xl text-[#5D5752] leading-relaxed">
             ZebraThrive is a three-part supplement system (AM capsules, PM capsules and Daily Powder)
-            formulated for the EDS, POTS and MCAS (zebra) community, with every ingredient form, dose
-            and excipient disclosed.
+            made for the EDS, POTS and MCAS (zebra) community, with every ingredient form and dose
+            disclosed and every confirmed excipient listed.
           </p>
         </div>
 
@@ -290,7 +290,7 @@ export default function Hero() {
                   src={heroProductImage}
                   srcSet={`${heroProductImage800} 800w, ${heroProductImage} 1388w`}
                   sizes="(min-width: 1024px) 60vw, 100vw"
-                  alt="ZebraThrive Triad Support system: AM capsules, PM capsules, and Daily Powder for hEDS, POTS, and MCAS"
+                  alt="ZebraThrive system: AM capsules, PM capsules, and Daily Powder"
                   width={1388}
                   height={1133}
                   loading="eager"

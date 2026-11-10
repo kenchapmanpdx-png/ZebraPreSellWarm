@@ -21,25 +21,25 @@ const stats = [
     target: 29,
     suffix: '',
     label: 'Active ingredients',
-    blurb: 'Each one mapped to a published mechanism. None included for marketing.',
+    blurb: 'Each one chosen for a published mechanism, with the evidence level stated on its ingredient page. None included for marketing.',
   },
   {
     target: 100,
     suffix: '%',
-    label: 'Lot-verified',
-    blurb: 'Every ingredient lot checked against its Certificate of Analysis before production.',
+    label: 'Lots checked before production',
+    blurb: 'Every ingredient lot will be checked against its Certificate of Analysis before production.',
   },
   {
     target: 14,
     suffix: ' paths',
-    label: 'Mechanism map',
-    blurb: 'From MMP inhibition to mast cell stabilization to TIMP support.',
+    label: 'Lab-studied mechanisms',
+    blurb: 'Mechanisms studied in lab research, from collagen-degrading enzymes to mast cells; the human evidence for each is on its ingredient page.',
   },
   {
     target: 0,
-    suffix: ' hidden',
-    label: 'Excipients',
-    blurb: 'Every excipient and carrier we have confirmed is listed, down to the carriers some vitamins arrive on.',
+    suffix: '',
+    label: 'Proprietary blends',
+    blurb: 'Every ingredient and dose is disclosed. Every excipient and carrier we have confirmed is listed, and we name the ones still being confirmed.',
   },
 ];
 

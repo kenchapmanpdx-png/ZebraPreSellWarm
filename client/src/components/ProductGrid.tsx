@@ -16,12 +16,12 @@ export default function ProductGrid() {
       tag: "AM CAPSULES",
       title: "AM Capsules",
       subtitle: "Morning Foundation",
-      description: "Three morning capsules carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, and the copper and manganese your body uses to cross-link collagen.",
+      description: "Three morning capsules carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, copper, which your body uses to cross-link collagen, and manganese, a cofactor for collagen-building enzymes.",
       icon: <Sun className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       benefits: [
         "B vitamins for normal energy metabolism",
         "Methylfolate and B12 for normal methylation",
-        "Copper and manganese for collagen cross-linking",
+        "Copper for collagen cross-linking, and manganese for collagen-building enzymes",
       ],
       gradient: "from-orange-100/50 to-white/50"
     },
@@ -33,9 +33,9 @@ export default function ProductGrid() {
       description: "Three evening capsules carry L-theanine, astaxanthin, pantothenic acid, biotin, selenium, boron, and molybdenum. NR, pine bark, grape seed, and zinc carnosine are split between the AM and PM capsules.",
       icon: <Moon className="w-6 h-6 text-indigo-600" aria-hidden="true" />,
       benefits: [
-        "L-theanine to support relaxation in the evening",
-        "Zinc carnosine to support the stomach lining",
-        "Astaxanthin for antioxidant support",
+        "L-theanine, studied in small trials for evening relaxation and sleep quality",
+        "Zinc carnosine to support the lining of the gut, studied in small human trials",
+        "Astaxanthin, a carotenoid from algae; human evidence for this form is still limited",
       ],
       gradient: "from-indigo-100/50 to-white/50"
     },
@@ -48,7 +48,7 @@ export default function ProductGrid() {
       icon: <Droplets className="w-6 h-6 text-emerald-700" aria-hidden="true" />,
       benefits: [
         "Vitamin C for normal collagen formation",
-        "PEA, quercetin, and luteolin, researched for mast cell balance",
+        "PEA, quercetin and luteolin, studied in lab research on immune cells; human evidence is limited",
         "Titratable from a sprinkle for sensitive starts",
       ],
       gradient: "from-emerald-100/50 to-white/50"

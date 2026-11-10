@@ -20,7 +20,7 @@ export type ExcludedExcipient = {
 };
 
 export const EXCIPIENTS_INTRO =
-  "Excipients are the inactive ingredients packed around the active: fillers, binders, coatings, flow agents, colorants and flavors. They are chosen for manufacturing convenience, not for your gut. ZebraThrive leaves out the eight excipients our community reports reacting to most, lists the handful it does use, and discloses the carriers that arrive with raw materials.";
+  "Excipients are the inactive ingredients packed around the active: fillers, binders, coatings, flow agents, colorants and flavors. Excipients are chosen mainly to make manufacturing work, not to suit a sensitive gut. ZebraThrive leaves out eight excipients that people in our community often say they avoid, lists the ones it does use, and lists the carriers that arrive with raw materials as each one is confirmed.";
 
 export const EXCIPIENT_DEFINITION =
   "An excipient is any ingredient in a supplement that is not there for its own effect: it carries, binds, lubricates, colors, flavors, preserves or encapsulates the actives. In a capsule the fill may be only a few percent excipient; a flavored powder or gummy can be mostly excipient. The label lists them under \"Other ingredients\".";
@@ -33,7 +33,7 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
     whatItIs:
       "An acidulant used for tartness, flavor balance and preservation in powders, drink mixes, gummies and some capsule fills. It is not vitamin C.",
     whyExcluded:
-      "Commercial citric acid is produced almost entirely by Aspergillus niger fermentation, usually on a corn-derived sugar substrate, not extracted from citrus. It is the single excipient our community reports reacting to most often, and the fermentation source is the usual explanation given. Non-fermented pharmaceutical citric acid is not available at supplement scale, so citrate mineral forms (magnesium citrate, trisodium citrate) are out as well.",
+      "Most commercial citric acid is made by fermentation with the mold Aspergillus niger on sugar feedstocks, which can include corn, rather than extracted from citrus. It is one of the excipients our community most often says it avoids, and its fermentation source is the usual reason given. Citric acid made without fermentation is not commercially available at supplement scale, so we also avoid citrate mineral forms such as magnesium citrate and trisodium citrate.",
     instead:
       "No acidulant in the Daily Powder. Vitamin C is supplied as sodium ascorbate, and magnesium as bisglycinate rather than citrate.",
     links: [
@@ -46,9 +46,9 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
     name: "Magnesium stearate",
     question: "Why does ZebraThrive leave out magnesium stearate?",
     whatItIs:
-      "A lubricant and flow agent that keeps powder moving through capsule-filling and tableting machines. Present in most capsules and tablets, usually under 1 percent of the fill.",
+      "A lubricant and flow agent that keeps powder moving through capsule-filling and tableting machines. It is common in capsules and tablets, where it makes up a small share of the fill.",
     whyExcluded:
-      "It is a manufacturing convenience with no nutritional role, and it is one of the excipients our community most often names when a magnesium or multivitamin product \"never agreed with\" them. If a magnesium supplement has never sat well, it is worth asking whether it was the magnesium or the magnesium stearate.",
+      "It is a manufacturing aid with no nutritional role, and it is one of the excipients our community names most often. If a magnesium supplement has not agreed with you, the form, the dose and the other ingredients can all play a part, so it helps to check the full ingredient list.",
     instead:
       "Rice hull concentrate and L-leucine do the same job in the capsule lines.",
     links: [{ label: "Magnesium bisglycinate", href: "/ingredients/magnesium-bisglycinate" }],
@@ -71,8 +71,8 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
     whatItIs:
       "A seaweed-derived thickener and gelling agent used in liquids, softgels and some vegetarian capsule shells.",
     whyExcluded:
-      "Animal and cell studies have linked degraded carrageenan to intestinal inflammation; whether food-grade carrageenan does the same in people is debated. Our community reports GI reactions to it, and a capsule-and-powder formula has no use for a thickener, so it is out.",
-    instead: "Not used anywhere in the system. Capsule shells are HPMC without carrageenan.",
+      "Lab and animal studies have linked carrageenan to gut inflammation, and one small trial in people with a bowel condition reported earlier flares; the human evidence is limited and still debated. Some in our community report gut reactions to it, and a capsule-and-powder formula does not need a thickener, so we do not add it.",
+    instead: "We do not add carrageenan anywhere in the system, and we are confirming with our capsule supplier that the shells are made without it. Capsule shells are HPMC, and we are confirming that the shell supplier uses no carrageenan as a gelling aid.",
   },
   {
     slug: "gelatin",
@@ -91,8 +91,8 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
     whatItIs:
       "Synthetic colorants such as FD&C Yellow No. 5 (tartrazine) and Red No. 40, used for appearance only.",
     whyExcluded:
-      "Color has no function in a supplement. Yellow No. 5 is the one additive the FDA requires to be declared by name on labels because it causes allergic-type reactions in some people, and our community reports reactions to synthetic dyes more broadly, including dyes in antihistamine tablets.",
-    instead: "No colorants. Clear AM capsules, calcium-carbonate-white PM capsules, unflavored and uncolored powder.",
+      "Color adds nothing to how a supplement works. FDA requires certified color additives, including Yellow No. 5, to be declared by name on food labels, and our community reports reactions to synthetic dyes more broadly.",
+    instead: "No dyes or added colors; the PM shells are whitened with calcium carbonate. Clear AM capsules, calcium-carbonate-white PM capsules, unflavored and uncolored powder.",
   },
   {
     slug: "artificial-flavors",
@@ -111,7 +111,7 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
     whatItIs:
       "Soy lecithin (emulsifier), soybean oil (softgel fill) and soy-derived mixed tocopherols (vitamin E used as an antioxidant stabilizer).",
     whyExcluded:
-      "Soy is one of the major food allergens the FDA requires to be declared, and it is a common reported trigger in our community. It also hides in places people do not expect, such as the lecithin inside a phytosome or the tocopherols protecting an oil.",
+      "Soy is one of the major food allergens that must be declared on US labels, and many people in our community avoid it. It also hides in places people do not expect, such as the lecithin inside a phytosome or the tocopherols protecting an oil.",
     instead:
       "The quercetin phytosome is made with sunflower lecithin. There are no softgels, so no soybean oil.",
     links: [{ label: "Quercetin phytosome", href: "/ingredients/quercetin-phytosome" }],
@@ -122,24 +122,24 @@ export const USED_EXCIPIENTS: Array<{ role: string; excipient: string; where: st
   { role: "Capsule shell", excipient: "HPMC (hypromellose), plant-derived", where: "AM and PM capsules" },
   { role: "Opacifier and filler", excipient: "Calcium carbonate", where: "PM capsules (white shell and about 20 mg of fill a day)" },
   { role: "Filler", excipient: "Microcrystalline cellulose", where: "AM capsules (about 29 mg a day, added by our manufacturer)" },
-  { role: "Flow agent", excipient: "Rice hull concentrate", where: "AM and PM capsules" },
+  { role: "Flow agent", excipient: "Rice hull concentrate", where: "AM and PM capsules, and the Daily Powder" },
   { role: "Lubricant", excipient: "L-leucine", where: "AM and PM capsules" },
   { role: "Emulsifier", excipient: "Sunflower lecithin", where: "Quercetin phytosome, Daily Powder" },
 ];
 
 export const CARRIERS: Array<{ carrier: string; arrivesWith: string; amount: string; href?: string }> = [
-  { carrier: "Maltodextrin", arrivesWith: "Vitamin D3 (lichen)", amount: "about 17 mg a day; source unconfirmed", href: "/ingredients/vitamin-d3" },
+  { carrier: "Maltodextrin", arrivesWith: "Vitamin D3 (lichen)", amount: "about 18 mg a day; source unconfirmed", href: "/ingredients/vitamin-d3" },
   { carrier: "Microcrystalline cellulose", arrivesWith: "Vitamin K2 (MK-7)", amount: "about 10 mg a day", href: "/ingredients/vitamin-k2" },
   { carrier: "Sunflower lecithin", arrivesWith: "Quercetin phytosome", amount: "part of the phytosome complex", href: "/ingredients/quercetin-phytosome" },
   { carrier: "Maltodextrin", arrivesWith: "Quercetin phytosome", amount: "part of the phytosome complex; amount and source being confirmed", href: "/ingredients/quercetin-phytosome" },
   { carrier: "Dicalcium phosphate", arrivesWith: "Biotin", amount: "about 31 mg a day; identity being confirmed", href: "/ingredients/biotin" },
   { carrier: "Maltodextrin and silica", arrivesWith: "Molybdenum glycinate", amount: "under 6 mg a day; source being confirmed", href: "/ingredients/molybdenum" },
   { carrier: "Silica", arrivesWith: "Taurine", amount: "up to 7.5 mg a day", href: "/ingredients/taurine" },
-  { carrier: "Being confirmed", arrivesWith: "Astaxanthin beadlet, selenium premix, boron glycinate", amount: "listed before launch", href: "/ingredients/astaxanthin" },
+  { carrier: "Being confirmed", arrivesWith: "Astaxanthin beadlet, selenium premix, boron glycinate, capsule shell gelling aid, and the antioxidants in the vitamin D3", amount: "listed before launch", href: "/ingredients/astaxanthin" },
 ];
 
 export const CARRIERS_NOTE =
-  "Some vitamins and actives arrive from the raw-material supplier already on a carrier. These are not ingredients we add, but they are in the bottle, so they are listed. Corn and wheat derivatives are not on the excluded list until the maltodextrin sources are confirmed.";
+  "Some vitamins and actives arrive from the raw-material supplier already on a carrier. These are not ingredients we add, but they are in the bottle, so we list each one as its identity is confirmed, including the trace antioxidants that protect the vitamin D3. Corn and wheat derivatives are not on the excluded list until the maltodextrin sources are confirmed.";
 
 export const LABEL_CHECKS: string[] = [
   "Read the \"Other ingredients\" line, not just the Supplement Facts panel.",
@@ -157,14 +157,14 @@ export const EXCIPIENT_FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Does ZebraThrive contain gluten, dairy, soy or corn?",
-    a: "The formula is made without dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan and artificial dyes. Corn and wheat are not yet on the excluded list: small amounts of maltodextrin arrive with the vitamin D3, the quercetin phytosome and the molybdenum, and their sources are unconfirmed. We will say so plainly until they are.",
+    a: "The formula is made without added gelatin, magnesium stearate, titanium dioxide, artificial dyes, citric acid or soy, and we are confirming with suppliers that no raw-material carrier contains citric acid, soy, dairy or carrageenan. We will update this answer as each confirmation comes in. Corn and wheat are not yet on the excluded list: small amounts of maltodextrin arrive with the vitamin D3, the quercetin phytosome and the molybdenum, and their sources are unconfirmed. We will say so plainly until they are.",
   },
   {
     q: "Why list carriers of 10 or 20 milligrams?",
-    a: "Because reactions in this community do not scale neatly with milligrams. A carrier you react to matters at 10 mg. Listing every carrier lets you make the call with the full picture instead of trusting a \"clean label\" claim.",
+    a: "Because some people in this community report reactions to very small amounts. A carrier you react to matters at 10 mg. Listing each carrier as it is confirmed lets you make the call with the full picture instead of trusting a 'clean label' claim.",
   },
   {
     q: "Are the capsules vegetarian?",
-    a: "Yes. Every capsule shell is HPMC (hypromellose), a plant-derived cellulose, with calcium carbonate as the only opacifier on the PM capsules.",
+    a: "Yes. Every capsule shell is HPMC (hypromellose), a plant-derived cellulose, and the PM shells use calcium carbonate instead of titanium dioxide to make them white.",
   },
 ];

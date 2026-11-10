@@ -13,14 +13,14 @@ export default function QualityStandards() {
     },
     {
       title: "Lot-Verified Ingredients",
-      desc: "Each ingredient lot is checked against its Certificate of Analysis and the specifications written into our purchase order before it goes into production.",
+      desc: "Before production, each ingredient lot is checked against its Certificate of Analysis and the specifications written into our purchase order.",
       icon: <ShieldCheck className="w-6 h-6 text-blue-800" aria-hidden="true" />,
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100"
     },
     {
       title: "Finished-Batch Testing",
-      desc: "Before release, each finished batch goes through our manufacturer's finished-product testing.",
+      desc: "Before release, each finished batch will go through our manufacturer's finished-product testing.",
       icon: <Microscope className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       bgColor: "bg-orange-50",
       borderColor: "border-orange-100"
@@ -48,7 +48,7 @@ export default function QualityStandards() {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight"
             >
-              Every ingredient lot verified <br />
+              Every ingredient lot will be verified <br />
               <span className="text-[#B36B4D] italic font-normal">against its Certificate of Analysis.</span>
             </motion.h2>
           </div>
