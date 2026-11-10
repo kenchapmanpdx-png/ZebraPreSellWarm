@@ -39,7 +39,7 @@ const stats = [
     target: 0,
     suffix: ' hidden',
     label: 'Excipients',
-    blurb: 'Every excipient listed, down to the carriers some vitamins arrive on.',
+    blurb: 'Every excipient and carrier we have confirmed is listed, down to the carriers some vitamins arrive on.',
   },
 ];
 

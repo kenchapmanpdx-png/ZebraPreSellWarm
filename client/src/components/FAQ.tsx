@@ -54,7 +54,7 @@ export default function FAQ() {
     {
       icon: ShieldOff,
       question: "Does this contain common triggers like gluten or dairy?",
-      answer: "We formulate without gluten, dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan, and artificial dyes. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few vitamins arrive on small carriers, and we list every one on our Promise page, including the maltodextrin on the vitamin D3, whose source we are confirming with our manufacturer."
+      answer: "We formulate without dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan, and artificial dyes. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few vitamins arrive on small carriers, and we list every one on our Promise page, including small amounts of maltodextrin with the vitamin D3, the quercetin phytosome and the molybdenum, whose sources we are confirming. Until they are confirmed we do not claim corn-free, wheat-free or gluten-free."
     }
   ];
 

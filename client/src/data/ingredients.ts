@@ -574,7 +574,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Generic NR chloride (≥99% purity, COA-verified)",
-            rationale: "Analysis of marketplace NR/NMN products found that ~87% fail their label claims or contain counterfeits. Our spec is generic NR chloride at ≥99% purity with full Certificate of Analysis verification per batch. Most published clinical trials used the branded Niagen form, but the verifiable analytical spec (identity, purity, stability) is what makes the molecule clinically equivalent, not the brand name. NR is chemically synthesized (not fermentation-derived), critical for MCAS patients who must avoid the histamine residues common in bio-derived B-vitamins. BID dosing is essential due to NR's short 2.7-hour half-life.",
+            rationale: "Analysis of marketplace NR/NMN products found that ~87% fail their label claims or contain counterfeits. Our spec is generic NR chloride at ≥99% purity with full Certificate of Analysis verification per batch. Most published clinical trials used the branded Niagen form, but the molecule is the same and we verify identity, purity and stability per batch; the published trials themselves used Niagen. NR chloride is generally made by chemical synthesis, and we are confirming our manufacturer's route in writing. BID dosing is essential due to NR's short 2.7-hour half-life.",
             comparison: [
                 { form: "Unverified marketplace NR (no COA)", difference: "Up to 87% failure rate on label claims; counterfeit risk in untested suppliers", selected: false },
                 { form: "Generic NR chloride (≥99% purity, COA-verified)", difference: "Same molecule used in trials, verified by analytical paperwork; our spec", selected: true }
@@ -584,8 +584,8 @@ export const ingredients: Record<string, IngredientData> = {
             sideEffects: "NR shows excellent safety even at extremely high doses (up to 3,000 mg). Occasional mild effects (<10%) include nausea, bloating, fatigue, or mild headaches. Long-term safety has been established in multi-month trials.",
             interactions: "No human study has tested NR with any POTS or MCAS medication (beta-blockers, ivabradine, fludrocortisone, midodrine, hydroxyzine, famotidine); that means unknown, not proven safe. The strongest human blood pressure trial found no blood pressure lowering, so no added effect on blood pressure medications is expected. Warfarin: Monitor INR periodically. Diabetes medications: May affect glucose sensitivity.",
             excipientConcerns: {
-                avoid: ["Fermentation-derived B-vitamins", "Unverified marketplace fillers"],
-                safe: ["Generic NR chloride (≥99% purity, COA-verified, fermentation-free)", "Methylation support if needed"]
+                avoid: ["NR products without a batch COA", "Unverified marketplace fillers"],
+                safe: ["Generic NR chloride (≥99% purity, COA-verified)", "Methylation support if needed"]
             },
             cautions: "Earlier claims of a 10 mmHg blood pressure drop are not supported: the strongest human trial found no blood pressure lowering. Patients with methylation issues may benefit from concurrent methyl-donors (B12/Folate)."
         },
@@ -754,23 +754,23 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         evidenceGaps: "While the 21% deficit in hEDS establishes a clear need, no randomized clinical trial has yet proven that high-dose Vitamin C reverses hypermobility symptoms. Much of the dramatic POTS cardiovascular data used IV doses that are much higher than what can be absorbed through purely oral supplementation.",
         triad: {
-            mcas: "A foundational 'triad stabilizer.' It acts at both ends of the mast cell problem: it helps stabilize the membrane itself and provides the engine for DAO, the enzyme that cleans up the 'histamine mess' after degranulation. We use a buffered, corn-free form to avoid the triggers found in cheap ascorbic acid.",
+            mcas: "A foundational 'triad stabilizer.' It acts at both ends of the mast cell problem: it helps stabilize the membrane itself and is linked with lower blood histamine in human studies. We use buffered sodium ascorbate. Like all commercial vitamin C, it is made with a fermentation step; we are confirming the sugar source before calling it corn-free.",
             heds: "The mandatory building block for collagen. Without it, your 'broken bucket' of hEDS cannot even attempt to repair itself. Given the 2024 Danish data showing lower vitamin C levels in hypermobile patients, our 1,500 mg daily amount is set well above the collagen-cofactor saturation point.",
             pots: "By using the Sodium Ascorbate form, we provide about 195 mg of sodium per day alongside the Vitamin C. Since POTS patients require high sodium intake (3-10g), this form provides a small salt boost while improving blood vessel reactivity and reducing oxidative stress on the vascular system.",
         },
         whyThisForm: {
-            form: "Sodium Ascorbate (buffered, non-corn source)",
-            rationale: "Standard ascorbic acid is highly acidic and often derived from fermented corn, two major triggers for MCAS GI sensitivity. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides the additional sodium benefit helpful for POTS. We specify corn-free sources because many MCAS patients report reacting to corn-derived ingredients. We deliver about 1,500 mg of vitamin C from 1,686 mg of sodium ascorbate, past the cofactor saturation point for collagen synthesis and well clear of the oxalate trouble zone.",
+            form: "Sodium Ascorbate (buffered; sugar source being confirmed)",
+            rationale: "Standard ascorbic acid is acidic, which many MCAS guts do not tolerate. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides the additional sodium benefit helpful for POTS. All commercial vitamin C, including ours, is made by fermenting a sugar to 2-keto-L-gulonic acid and then converting it chemically; the final material is purified to over 99%. Many MCAS patients report reacting to corn-derived ingredients, so we have asked our supplier to document the sugar source, and we will not call it corn-free until we have that document. We deliver about 1,500 mg of vitamin C from 1,686 mg of sodium ascorbate, past the cofactor saturation point for collagen synthesis and well clear of the oxalate trouble zone.",
             comparison: [
                 { form: "Ascorbic Acid (Corn-derived)", difference: "Highly acidic; often corn-derived, which many MCAS patients report reacting to; stomach set", selected: false },
-                { form: "Sodium Ascorbate (non-corn source)", difference: "Buffered to near-neutral pH; adds a small amount of sodium; non-corn source", selected: true }
+                { form: "Sodium Ascorbate", difference: "Buffered to near-neutral pH; adds a small amount of sodium; sugar source being confirmed", selected: true }
             ]
         },
         safety: {
             sideEffects: "Excellent safety. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. Our 1,500 mg daily dose sits below the 2,000 mg general upper limit and is split across the AM and PM Daily Powder scoops for tolerance.",
             interactions: "Propranolol: in a small 1995 study of healthy volunteers, a single 2 g dose of vitamin C lowered propranolol blood levels (peak about 28% lower, total exposure about 37% lower), with a small effect on heart rate. That study used a single 2 g dose of ascorbic acid; we use 1,500 mg a day of vitamin C as sodium ascorbate, split into two 750 mg scoops. If you take propranolol, talk with your prescriber before starting. Taking the two at least 2 hours apart is the logical precaution, though spacing itself has not been tested. No study has checked metoprolol; the same spacing costs nothing. Anticoagulants: May slightly affect vitamin K metabolism at extreme doses (rare at 1.5g). Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). Copper: Extremely high dose vitamin C can compete with copper; since DAO requires copper, we keep the dose at 1.5 g, well below the level where copper competition becomes a concern.",
             excipientConcerns: {
-                avoid: ["Corn-derived fillers", "Synthetic dyes", "Fermentation byproducts"],
+                avoid: ["Corn-derived fillers", "Synthetic dyes", "Citric acid"],
                 safe: ["Tapioca-derived ascorbate", "Sodium-buffered powder"]
             },
             cautions: "Monitor for iron overload if you have Hemochromatosis. For men, ensure adequate hydration to mitigate any theoretical kidney stone risk associated with high-dose B-vitamins/C (though risk is not proven in women)."
@@ -1009,7 +1009,7 @@ export const ingredients: Record<string, IngredientData> = {
         id: "benfotiamine",
         name: "Benfotiamine",
         patientSummary: "Benfotiamine is a fat-soluble form of vitamin B1 (thiamine), originally developed in Japan to reach tissues that water-soluble thiamine has trouble penetrating. For the triad, it's most relevant for two reasons: thiamine deficiency directly triggers mast cell degranulation in lab studies (correcting marginal deficiency may quiet mast cell reactivity), and B1 supports mitochondrial energy through transketolase and PDH activation - both relevant to the chronic fatigue that frequently shadows POTS and hEDS. We dose 150 mg in the AM with a fat-containing meal. Benfotiamine is synthetic, not fermentation-derived, so no MCAS contamination concerns.",
-        whyThisFormPatient: "We use standard benfotiamine (S-benzoylthiamine O-monophosphate) at 150 mg per day, taken with a fat-containing meal. The 150 mg dose sits at the saturation point of transketolase activation (Frank 2000 demonstrated this in renal patients) - going higher doesn't translate to better outcomes, as confirmed by the 2026 BOND trial that tested 600 mg for 12 months and found no additional clinical benefit. Benfotiamine is chemically synthesized, not fermentation-derived, so it's a clean choice for MCAS-sensitive patients who react to fermented ingredient sources. USP/EP-grade material, checked by our manufacturer's incoming quality control.",
+        whyThisFormPatient: "We use standard benfotiamine (S-benzoylthiamine O-monophosphate) at 150 mg per day, taken with a fat-containing meal. In a study of 20 dialysis patients (Frank 1999), a single 100 mg dose brought a blood marker of thiamine-dependent enzyme activity back toward normal; 150 mg a day gives margin above that. Going higher doesn't translate to better outcomes, as confirmed by the 2026 BOND trial that tested 600 mg for 12 months and found no additional clinical benefit. Benfotiamine is chemically synthesized, not fermentation-derived, so it's a clean choice for MCAS-sensitive patients who react to fermented ingredient sources. USP/EP-grade material, checked by our manufacturer's incoming quality control.",
         faq: [
             { q: "Benfotiamine vs regular thiamine - what's the difference?", a: "Regular thiamine (vitamin B1) is water-soluble and has trouble reaching some tissues - especially nervous and muscle tissue, where lipid membranes act as a barrier. Benfotiamine is a fat-soluble prodrug: it crosses lipid membranes much more easily, converts back to thiamine inside the cell, and produces blood thiamine levels several times higher than equivalent doses of regular thiamine. For most healthy people, the difference is academic. For people with chronic illness or marginal absorption, the lipid-soluble form is more reliable." },
             { q: "I've heard about thiamine deficiency in POTS - does this address that?", a: "Partially. A 2017 chart review at SUNY Buffalo (Blitshteyn) found 6% of POTS patients had whole-blood B1 deficiency, and a quarter of that subset improved on oral thiamine. A small subset, but real. Benfotiamine at 150 mg/day covers daily B1 needs and gives some headroom for marginal deficiency. It's not a high-dose autonomic intervention - the 2026 BOND trial at 600 mg for a year showed no autonomic benefit. For known severe deficiency, your prescriber may want injectable B1." },
@@ -1114,7 +1114,7 @@ export const ingredients: Record<string, IngredientData> = {
     "p5p": {
         id: "p5p",
         name: "P5P (Pyridoxal-5-Phosphate)",
-        patientSummary: "P5P is the active, phosphorylated form of vitamin B6 - the form your enzymes can use directly. For the triad, P5P is one of the most directly MCAS-relevant B vitamins on the list: it's the essential cofactor for DAO (diamine oxidase), the primary enzyme that breaks down histamine in your gut. German clinical research has shown that adequate B6 (over 20 µg/L) increases histamine elimination by 20% when DAO is supplemented. P5P also supports neurotransmitter synthesis (GABA, serotonin, dopamine), relevant for autonomic regulation. We dose 50 mg of P5P in the AM capsule, which our draft Supplement Facts panel declares as 31.9 mg of vitamin B6.",
+        patientSummary: "P5P is the active, phosphorylated form of vitamin B6 - the form your enzymes can use directly. For the triad, P5P's MCAS relevance is indirect: it is a cofactor for several enzymes in the amine pathways that handle histamine. DAO (diamine oxidase), the main enzyme that breaks down histamine in your gut, depends on copper, not B6. A 2024 conference abstract reported about 20% better histamine clearance with a DAO supplement in people whose B6 levels were above 20 µg/L; it has not been published as a full study. P5P also supports neurotransmitter synthesis (GABA, serotonin, dopamine), relevant for autonomic regulation. We dose 50 mg of P5P in the AM capsule, which our draft Supplement Facts panel declares as 31.9 mg of vitamin B6.",
         faq: [
             { q: "Why P5P instead of regular B6?", a: "P5P is the active, phosphorylated form your enzymes use directly - no liver conversion required. Regular pyridoxine has to be converted to P5P, and that conversion can be impaired in chronic illness or genetic variants. One safety point applies to every form: high long-term vitamin B6 intake has been linked to peripheral neuropathy, and EFSA's 2023 upper intake level (12 mg/day of total vitamin B6 for adults) applies to all forms, including P5P. Our AM capsule provides 50 mg P5P, declared as 31.9 mg vitamin B6, which is above the EFSA level (the US upper limit is 100 mg/day). If you take other B6-containing supplements, count them too, and stop and tell your clinician if you notice tingling or numbness." },
             { q: "How does P5P help with histamine?", a: "Through amine metabolism support. P5P is a coenzyme for histidine decarboxylase and several other enzymes in the amine pathways that handle histamine and related compounds. DAO itself, the enzyme that breaks histamine down in your gut, is primarily copper-dependent (with TPQ as its organic cofactor) rather than B6-dependent. That said, B6 status does correlate with histamine clearance in observational data: a 2024 Clinical Chemistry study showed B6 levels over 20 µg/L produced about 20% better histamine clearance than deficient levels. The mechanism is upstream support of the broader amine pathway DAO operates within, not direct DAO cofactoring." },
@@ -1145,13 +1145,13 @@ export const ingredients: Record<string, IngredientData> = {
                 summary: "B6 status correlates with histamine handling in observational data. DAO itself is copper-dependent; B6 supports the broader amine pathway.",
                 studies: [
                     {
-                        source: "Clinical Chemistry (2024)",
-                        finding: "B6 levels >20 μg/L showed 20% increased histamine elimination with DAO."
+                        source: "Clinical Chemistry (2024), conference abstract",
+                        finding: "B6 levels >20 μg/L showed 20% increased histamine elimination with a DAO supplement; not yet published as a full study."
                     },
                     {
                         source: "Maintz & Novak",
                         pmid: "17490952",
-                        finding: "Deficiency reduces DAO activity by up to 50%; P5P is critical for degradation."
+                        finding: "Review of histamine intolerance: DAO is the main enzyme for breaking down ingested histamine. It does not establish B6 as a DAO cofactor."
                     }
                 ]
             },
@@ -1185,7 +1185,7 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "No direct RCTs in hEDS or POTS populations. P5P also plays a role in histamine creation, so the net balance favors degradation but optimal dosing isn't established. Misconception exists: P5P is NOT a direct LOX cofactor (copper is).",
+        evidenceGaps: "No direct RCTs in hEDS or POTS populations. P5P also plays a role in histamine creation, so its net effect on histamine is unknown and optimal dosing isn't established. Misconception exists: P5P is NOT a direct LOX cofactor (copper is).",
         triad: {
             mcas: "Supports the broader amine pathway that clears histamine after degranulation (DAO itself is copper-dependent). The active form avoids the conversion step, but high total B6 intake carries a neuropathy risk in any form, including P5P.",
             heds: "Indirect support via homocysteine metabolism. Deficiency leads to elevated homocysteine, which inhibits collagen crosslinking via LOX inhibition. P5P helps counteract this inhibition and supports crosslink quality.",
@@ -1206,12 +1206,12 @@ export const ingredients: Record<string, IngredientData> = {
                 avoid: ["Artificial colors", "Citric acid", "Corn dextrose", "Magnesium stearate"],
                 safe: ["Cellulose", "Rice flour", "Minimal-excipient formulations"]
             },
-            cautions: "Requires cool, dry storage as it is less stable than pyridoxine HCl. Target >20 μg/L serum levels for optimal DAO support."
+            cautions: "Requires cool, dry storage as it is less stable than pyridoxine HCl. Aim for adequate B6 status, not high levels: high total B6 intake can cause nerve symptoms in any form, including P5P."
         },
         howToStart: {
             protocol: [
                 { step: "Weeks 1-2", dosage: "25 mg daily", notes: "Conservative start" },
-                { step: "Week 3+", dosage: "50 mg daily", notes: "Standard target dose for DAO support" }
+                { step: "Week 3+", dosage: "50 mg daily", notes: "Label dose" }
             ],
             timeline: "Histamine tolerance improvements often noticeable within 2-4 weeks. Take in the AM with breakfast."
         },
@@ -1226,63 +1226,63 @@ export const ingredients: Record<string, IngredientData> = {
 "astaxanthin": {
         id: "astaxanthin",
         name: "Astaxanthin",
-        patientSummary: "Astaxanthin is the red carotenoid produced by Haematococcus pluvialis algae - the same molecule that gives salmon and flamingos their color. It's one of the most potent antioxidants tested in humans (about 6,000 times more potent than vitamin C against singlet oxygen). For the triad specifically, astaxanthin brings three mechanisms: mast cell stabilization with around 60-70% reduction in degranulation in lab studies, MMP-1 inhibition with collagen restoration in human dermal fibroblasts, and broad anti-inflammatory activity. We use natural algal astaxanthin (not synthetic) as a 5% cracked-cell beadlet, at 4 mg of active astaxanthin daily in the PM capsule, within the dose range of the clinical literature.",
-        whyThisFormPatient: "We use natural astaxanthin extracted from Haematococcus pluvialis algae (not synthetic), supplied as a 5% cracked-cell beadlet. Whole-cell algae powder was rejected: the algae's tough cyst wall resists digestion, so the astaxanthin inside is poorly released, and taking more does not fix the wrong material. Our spec requires all-trans astaxanthin above 60% and 9-cis at or below 30% (the limit in EU Regulation 2024/1026), verified by HPLC on each lot's COA. The supplier's carrier-free declaration states the beadlet contains no gelatin, soy, or corn-derived carriers or excipients. Take with a fat-containing meal: astaxanthin absorption increases 2-3 times with dietary fat.",
+        patientSummary: "Astaxanthin is the red carotenoid produced by Haematococcus pluvialis algae - the same molecule that gives salmon and flamingos their color. In lab tests it quenches singlet oxygen about 6,000 times more strongly than vitamin C. Lab studies also link it to mast cell and collagen-enzyme effects, but they used concentrations far higher than an oral dose reaches in the blood, so we do not claim those effects for this formula. Human skin trials at 3 to 6 mg are small and mixed. We use natural algal astaxanthin (not synthetic) as a 5% cracked-cell beadlet, at 4 mg of active astaxanthin daily in the PM capsule, within the dose range of the clinical literature.",
+        whyThisFormPatient: "We use natural astaxanthin extracted from Haematococcus pluvialis algae (not synthetic), supplied as a 5% cracked-cell beadlet. Whole-cell algae powder was rejected: the algae's tough cyst wall resists digestion, so the astaxanthin inside is poorly released, and taking more does not fix the wrong material. Our spec requires all-trans astaxanthin above 60% and 9-cis at or below 30% (the limit in EU Regulation 2024/1026), verified by HPLC on each lot's COA. The supplier's carrier-free declaration states the beadlet contains no gelatin, soy, or corn-derived carriers or excipients. Take with a meal: in one human study, total absorption was about 2.4 times higher when it was taken after a meal than before one (Okada 2009).",
         faq: [
-            { q: "Why does astaxanthin need to be taken with fat?", a: "Astaxanthin is fat-soluble - it can't be efficiently absorbed without dietary fat to form the lipid micelles that ferry it across the intestinal wall. Studies show absorption increases 2-3 times when astaxanthin is taken with a meal containing fat compared to water-only intake. This matters for getting useful plasma levels at our 4 mg dose. Take it with breakfast, lunch, or dinner - whichever meal has at least a few grams of fat (avocado, olive oil, eggs, nuts)." },
-            { q: "When will I notice astaxanthin working?", a: "Astaxanthin requires chronic dosing - it's prophylactic, not acute. The mast cell stabilization mechanism needs about 4 hours of pre-treatment in lab studies to engage, and the clinical effects show up over weeks. Most human RCTs run 4-12 weeks before measurable changes. Skin elasticity and connective tissue effects can take 8-12 weeks. This isn't a same-day-results ingredient; it's a slow-building, broad-spectrum protector. Consistency over months is what generates the response." },
-            { q: "How is your astaxanthin sourced?", a: "Natural astaxanthin extracted from Haematococcus pluvialis and supplied as a 5% cracked-cell beadlet, with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026 limit) verified by HPLC on each lot's COA. Whole-cell algae powder was rejected because its cyst wall blocks release. The supplier has declared the beadlet free of gelatin, soy, and corn-derived carriers. Our spec has no country-of-origin requirement; the gates are the cracked-cell form, the isomer profile, and the allergen declaration." },
+            { q: "Why does astaxanthin need to be taken with fat?", a: "Astaxanthin is fat-soluble - it can't be efficiently absorbed without dietary fat to form the lipid micelles that ferry it across the intestinal wall. In one human study, total absorption was about 2.4 times higher when it was taken after a meal than before one (Okada 2009). Take it with breakfast, lunch, or dinner - whichever meal has at least a few grams of fat (avocado, olive oil, eggs, nuts)." },
+            { q: "When will I notice astaxanthin working?", a: "Astaxanthin requires chronic dosing - it's prophylactic, not acute. Blood levels build up over about one to two weeks of daily use. Human skin trials ran 6 to 16 weeks and their results were mixed, so we make no promise of a noticeable effect. It is included as a low-dose antioxidant, not a fast-acting ingredient." },
+            { q: "How is your astaxanthin sourced?", a: "Natural astaxanthin extracted from Haematococcus pluvialis and supplied as a 5% cracked-cell beadlet, with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026 limit) verified by HPLC on each lot's COA. Whole-cell algae powder was rejected because its cyst wall blocks release. The supplier has declared the beadlet free of gelatin, soy, and corn-derived carriers; the full beadlet matrix is being confirmed and will be listed before launch. Our spec has no country-of-origin requirement; the gates are the cracked-cell form, the isomer profile, and the allergen declaration." },
             { q: "Are there any drug interactions to know about?", a: "One documented case worth noting: a 2019 case report described an INR elevation in a warfarin patient who started astaxanthin. The mechanism is unclear, but caution is warranted. If you're on warfarin or another anticoagulant, mention astaxanthin to your prescriber and consider a baseline INR check at 2-4 weeks. No study has tested astaxanthin with POTS or MCAS medications. One lab finding matters: in human liver cells, astaxanthin switched on CYP3A4, the enzyme that clears ivabradine. If that happened at our 4 mg dose, ivabradine could work a little less well. This has never been measured in people at any dose. Fludrocortisone has no data either: no study has tested the pair, trials of astaxanthin alone found no blood pressure change, and the enzymes that clear fludrocortisone are not documented. A lab screen of nine liver enzymes found astaxanthin does not meaningfully block them, and a meta-analysis of 14 trials found no blood pressure change. If you take ivabradine or fludrocortisone, mention astaxanthin to your prescriber." }
         ],
         triadPlain: {
-            mcas: "Astaxanthin stabilizes mast cells through FcεRI-mediated mechanisms: it disrupts the receptor clustering on lipid rafts that triggers degranulation, blocks Lyn and Fyn kinase phosphorylation, and reduces intracellular calcium influx. Lab studies show 60-70% reduction in β-hexosaminidase release (a marker of mast cell degranulation) at achievable concentrations. In mouse models of atopic dermatitis, oral astaxanthin reduced both total mast cell counts and the percentage of degranulated mast cells. The mechanism requires about 4 hours of pre-treatment - it's prophylactic, not acute-rescue. For chronic MCAS management, that's the relevant pattern.",
-            heds: "Astaxanthin has strong human dermal fibroblast data - exactly the cell type relevant to hEDS skin findings. In studies on human buttock skin biopsies (Yoon 2014), oral astaxanthin reduced MMP-1 mRNA by 68% and MMP-12 by 77% while increasing procollagen I by 240%. A 2016 study showed similar MMP-1 and MMP-3 reduction in cultured human dermal fibroblasts (Chou 2016). The mechanism - combined matrix protection and pro-collagen support - is exactly the profile an hEDS ingredient should hit. The all-E isomer dominant sourcing matters: 9-cis-rich batches suppress rather than support collagen synthesis.",
-            pots: "For POTS, astaxanthin's role is mostly the systemic anti-inflammatory and mast cell layers - many POTS cases overlap with MCAS, and reducing the inflammatory background can quiet the autonomic instability that runs alongside it. Astaxanthin is BP-neutral (a meta-analysis of 14 RCTs found no significant change in systolic or diastolic BP), so there's no orthostatic hypotension concern. Heart rate effects haven't been studied directly. The strongest POTS-relevant case is the dermal microvascular work - astaxanthin supports endothelial function in skin biopsies, a useful background effect for the vascular dysregulation in POTS."
+            mcas: "In cell studies, astaxanthin reduced mast cell degranulation, and in a mouse study high oral doses reduced mast cell numbers. The cell work is reported at around 10 µM, roughly 100 times our estimate of the blood level at 4 mg a day, and no human study has measured mast cell or histamine outcomes. We include astaxanthin as an antioxidant and make no mast cell claim for it.",
+            heds: "The skin evidence is early. The trial most often cited (Yoon 2014) gave astaxanthin together with 3 g of collagen, so its results cannot be credited to astaxanthin alone. A 2016 cell study used an astaxanthin-rich extract and measured collagen below the untreated control, and a 16-week trial at 6 and 12 mg (Tominaga 2017) found no difference from placebo for wrinkles, moisture or elasticity. We make no collagen claim for astaxanthin. The concern about collagen suppression comes from a near-pure Z-isomer preparation, not from all-trans material like ours.",
+            pots: "For POTS, no study has tested astaxanthin. It did not change blood pressure in a meta-analysis of 14 trials, so it is not expected to worsen orthostatic symptoms. Heart rate results in exercise studies are inconsistent, and orthostatic heart rate has never been measured."
         },
-        bluf: "Astaxanthin is a carotenoid antioxidant from microalgae (Haematococcus pluvialis) with the highest lipid-phase antioxidant capacity in the category. In lab studies it reduced mast cell degranulation by 60-70% and reduced collagen-degrading enzymes in human dermal fibroblasts. ZebraThrive uses 4 mg daily from a 5% cracked-cell beadlet in the PM capsule, with dinner fat for absorption.",
+        bluf: "Astaxanthin is a carotenoid antioxidant from microalgae (Haematococcus pluvialis) with the highest lipid-phase antioxidant capacity in the category. Its mast cell and skin-cell results come from lab concentrations far above what an oral dose reaches, and human skin trials are small and mixed, so we include it as a low-dose antioxidant without efficacy claims. ZebraThrive uses 4 mg daily from a 5% cracked-cell beadlet in the PM capsule, with dinner fat for absorption.",
         atAGlance: {
             whatItIs: "A lipid-phase carotenoid antioxidant from microalgae (Haematococcus pluvialis)",
-            whyWeIncludeIt: "Dual action: stabilizes mast cells (60-70% inhibition) AND inhibits collagen-degrading enzymes at oral doses",
+            whyWeIncludeIt: "Low-dose lipid-phase antioxidant with a long human safety record; no efficacy claim is made",
             dose: "4 mg daily in the PM capsule (5% cracked-cell beadlet), taken with dinner fat for absorption",
             keyBenefits: [
-                "60-70% reduction in mast cell degranulation (lab data)",
-                "MMP inhibition with net collagen increase in fibroblasts",
+                "Human safety data across 87 studies at up to 24 mg a day (Brendler 2019 review)",
+                "Taken up into red blood cell membranes in human studies at 3 to 12 mg a day",
                 "No significant blood pressure change in a meta-analysis of 14 RCTs",
-                "6,000x more effective than vitamin C at quenching singlet oxygen specifically (a lipid-phase oxidant)"
+                "6,000x more effective than vitamin C at quenching singlet oxygen in lab tests (a lipid-phase oxidant)"
             ]
         },
-        howItWorks: "Astaxanthin works as chronic prophylaxis for MCAS by blocking receptor aggregation on mast cell surfaces, interrupting the signaling cascade that leads to histamine release.\n\nFor hEDS, it inhibits MMP-1, MMP-3, and MMP-13 while upregulating TIMP-1 (tissue inhibitor of metalloproteinases). In human dermal fibroblasts, this results in a net increase in collagen. It's also an extraordinary antioxidant (6,000x stronger than Vitamin C at quenching singlet oxygen), protecting cardiovascular and cell membrane health.",
+        howItWorks: "Astaxanthin is a carotenoid that sits across cell membranes and neutralizes reactive oxygen species there; in lab tests it quenches singlet oxygen about 6,000 times more strongly than vitamin C.\n\nCell studies report effects on mast cell degranulation and on collagen-degrading enzymes (MMP-1, MMP-3, MMP-13), but they used concentrations roughly 10 to 500 times higher than our estimate of the blood level at 4 mg a day. No human study has measured these effects, so we treat them as unproven for this formula.",
         research: [
             {
                 outcome: "Mast Cell Stabilization",
-                summary: "Multiple studies confirm degranulation inhibition at supplement-achievable concentrations.",
+                summary: "Lab and animal studies report reduced degranulation; the concentrations used are well above what oral doses reach.",
                 studies: [
                     {
                         source: "Sakai et al., 2009",
                         pmid: "19700409",
-                        finding: "60-70% reduction in degranulation (~10 µM concentration)."
+                        finding: "Reduced antigen-triggered degranulation in mast cell cultures; concentration reported around 10 µM, about 100 times our estimated blood level at 4 mg."
                     },
                     {
                         source: "Yoshihisa et al., 2016",
                         pmid: "27023003",
-                        finding: "Decreased total and degranulated mast cells in animal models."
+                        finding: "Decreased total and degranulated mast cells in a mouse model at 100 mg/kg oral, far above human doses."
                     }
                 ]
             },
             {
                 outcome: "Collagen Protection in Fibroblasts",
-                summary: "Highly relevant evidence in the exact tissue types affected by hEDS.",
+                summary: "Skin-cell and skin-biopsy studies; none tested astaxanthin alone in people at our dose.",
                 studies: [
                     {
                         source: "Chou et al., 2016",
                         pmid: "27322248",
-                        finding: "Strong inhibition of MMP-1/3 and upregulation of TIMP-1 leading to net collagen increase."
+                        finding: "An astaxanthin-rich extract lowered MMP-1 and MMP-3 in skin cells, but collagen measured below the untreated control; the extract's astaxanthin content was not reported."
                     },
                     {
                         source: "Yoon et al., 2014",
                         pmid: "24955642",
-                        design: "Human skin biopsy study, 2 mg/day",
-                        finding: "Reduced MMP-1 and MMP-12 mRNA in human skin tissue."
+                        design: "Human trial, 2 mg/day astaxanthin plus 3 g collagen hydrolysate",
+                        finding: "Lower MMP-1 and MMP-12 expression and better skin elasticity with the combination; the effect of astaxanthin alone cannot be separated."
                     }
                 ]
             },
@@ -1299,15 +1299,15 @@ export const ingredients: Record<string, IngredientData> = {
                 ]
             }
         ],
-        evidenceGaps: "Zero direct studies in hEDS/POTS/MCAS patients. Concerns exist regarding 'Z-isomers' which may suppress collagen synthesis (always select all-E products). TGF-β pathway concerns in liver models are not currently reflected in skin fibroblast data.",
+        evidenceGaps: "Zero direct studies in hEDS/POTS/MCAS patients. No study has measured astaxanthin's effect on mast cells, histamine or collagen in people. The Z-isomer collagen concern comes from a near-pure Z preparation (86.6% Z), not from all-trans material. At 10 to 20 mg a day, two human studies reported anti-fibrotic effects or lower TGF-β1, one more reason we do not raise the dose.",
         triad: {
-            mcas: "Low histamine risk as it is algae-derived, not fermented. It acts as a stabilizer rather than a trigger. We avoid carrageenan (common in softgels) by using HPMC capsules.",
-            heds: "Provides dual protection: inhibits MMP degradation and increases collagen via TIMP-1 upregulation. Our internal concentration estimate (achievable versus required level, ratio about 1.44) supports MMP relevance at 4 mg; it is a calculation, not a clinical outcome. The dose is sized as a minimum standalone with overlapping NF-kB inhibition from quercetin, luteolin, and procyanidins covering the higher-dose target.",
-            pots: "Protects cardiovascular tissue via extreme antioxidant capacity without lowering blood pressure-making it one of the safest anti-inflammatories for the hyperadrenergic population."
+            mcas: "Algae-derived, not fermented. No reports link it to mast cell reactions, and no human mast cell data exist either way. We avoid carrageenan (common in softgels) by using HPMC capsules.",
+            heds: "No collagen or MMP claim. An earlier internal estimate (ratio about 1.44) relied on a pharmacokinetic study we now treat as an outlier; the corrected estimate puts blood levels at 4 mg roughly 100 times below the lab concentrations. The 4 mg dose is chosen as a low-cost antioxidant within the studied range, not as a collagen dose.",
+            pots: "Did not change blood pressure in trials, so it should not worsen orthostatic symptoms. No study has tested it in POTS."
         },
         whyThisForm: {
             form: "Natural astaxanthin, 5% cracked-cell beadlet (extracted Haematococcus pluvialis), all-trans >60%, 9-cis ≤30%",
-            rationale: "Whole-cell H. pluvialis is not a usable form: the algal cyst wall (tough, digestion-resistant) blocks release of the astaxanthin inside, and dosing up does not compensate for the wrong material. We use an extracted, cracked-cell beadlet at 5% astaxanthin, with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026), verified by HPLC per lot. The supplier's carrier-free declaration states no gelatin, soy, or corn-derived carriers or excipients. Take with a meal containing fat; absorption rises 2-3x with dietary fat.",
+            rationale: "Whole-cell H. pluvialis is not a usable form: the algal cyst wall (tough, digestion-resistant) blocks release of the astaxanthin inside, and dosing up does not compensate for the wrong material. We use an extracted, cracked-cell beadlet at 5% astaxanthin, with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026), verified by HPLC per lot. The supplier's carrier-free declaration states no gelatin, soy, or corn-derived carriers or excipients. Take with a meal; absorption was about 2.4 times higher after a meal in one human study.",
             comparison: [
                 { form: "5% cracked-cell beadlet (extracted H. pluvialis), HPLC-verified isomer profile", difference: "Our form; astaxanthin released from the cell wall; carrier-free declaration", selected: true },
                 { form: "Whole-cell H. pluvialis powder", difference: "Intact cyst wall resists digestion; rejected", selected: false },
@@ -1322,17 +1322,17 @@ export const ingredients: Record<string, IngredientData> = {
                 avoid: ["Carrageenan softgels", "Soy/Krill oil carriers", "Gelatin beadlet matrices", "Whole-cell algae powder"],
                 safe: ["HPMC capsules", "Cracked-cell beadlet with carrier-free declaration (no gelatin, soy, or corn-derived carriers)"]
             },
-            cautions: "Pre-treatment is required for mast cell effects (prophylaxis, not rescue)."
+            cautions: "Take with a meal. Stop 2 weeks before planned surgery, because animal studies show antiplatelet effects."
         },
         howToStart: {
             protocol: [
                 { step: "Ongoing", dosage: "4 mg daily in the PM capsule, taken with dinner fat for absorption", notes: "Standard PM dose with dinner" }
             ],
-            timeline: "Inflammatory marker changes within weeks; skin/collagen benefits typically require 8-12 weeks."
+            timeline: "Blood levels plateau within about one to two weeks. No specific benefit timeline is claimed."
         },
         sources: [
-            { title: "Mast cell stabilization IC50 study", pmid: "19700409", authors: "Sakai et al.", year: "2009" },
-            { title: "Human dermal fibroblast MMP inhibition", pmid: "27322248", authors: "Chou et al.", year: "2016" },
+            { title: "Carotenoids and mast cell degranulation (cell study)", pmid: "19700409", authors: "Sakai et al.", year: "2009" },
+            { title: "Astaxanthin-rich extract in skin cells (cell study)", pmid: "27322248", authors: "Chou et al.", year: "2016" },
             { title: "No effect of astaxanthin on blood pressure (Meta-analysis)", pmid: "32755613", authors: "Xia et al.", year: "2020" },
             { title: "Safety review of astaxanthin (87 studies)", pmid: "31788888", authors: "Brendler et al.", year: "2019" },
             { title: "Z-isomer collagen suppression concern", pmid: "37305308", authors: "Honda et al.", year: "2023" },
@@ -1413,7 +1413,7 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         evidenceGaps: "Zero human studies on mast cell effects (preclinical only). Zero POTS-specific trials (extrapolated from stress research). Generic L-theanine is often contaminated with 50% inactive D-isomer.",
         triad: {
-            mcas: "L-theanine decreases rather than increases histamine release in models. It is non-fermented (enzymatic synthesis), eliminating biogenic amine risk. Preclinical evidence is promising but not yet established in humans.",
+            mcas: "L-theanine decreases rather than increases histamine release in models. Industrial L-theanine is usually made enzymatically or chemically from glutamine; we are confirming our supplier's process in writing. Preclinical evidence is promising but not yet established in humans.",
             heds: "International research suggests L-theanine preserves collagen architecture and epidermal thickness while reducing MMP-3/13 inflammatory degradation in chondrocytes.",
             pots: "Relevant to a calmer stress response: it supports GABA signaling and is associated with lower sympathetic stress markers and better sleep quality in healthy adults. Not studied in POTS; a subset of people react paradoxically."
         },
@@ -2483,7 +2483,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Methylcobalamin",
-            rationale: "Bioactive form with significantly better tissue retention than cyanocobalamin. Directly supports methylation without requiring enzymatic conversion.",
+            rationale: "Bioactive form with significantly better tissue retention than cyanocobalamin. Directly supports methylation without requiring enzymatic conversion. How it is made: all vitamin B12, including methylcobalamin, starts as a fermentation product, because no chemical route exists at commercial scale; it is then purified and converted to the methyl form. We disclose this under our sourcing rule.",
             comparison: [
                 { form: "Methylcobalamin", difference: "Bioactive; 3x better tissue retention; supports HNMT/SAMe", selected: true },
                 { form: "Cyanocobalamin", difference: "Inactive synthetic form; contains cyanide; requires conversion", selected: false }
@@ -2516,7 +2516,7 @@ export const ingredients: Record<string, IngredientData> = {
         id: "grape-seed-extract",
         name: "Grape Seed Extract",
         patientSummary: "Grape seed extract is one of the most concentrated natural sources of procyanidins - the same compound family in pine bark, with a different minor-compound profile that complements it. For the triad, the standout mechanism is MMP inhibition: procyanidins reduce the matrix-degrading enzymes that drive collagen breakdown in hEDS. Lab studies also show mast cell stabilization through three independent pathways (FcεRI downregulation, calcium influx inhibition, and cAMP elevation). We pair grape seed with pine bark in the formulation because their gut-derived metabolite M1 - the form that actually circulates in your blood - comes from both sources.",
-        whyThisFormPatient: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that specifically quantifies the procyanidins doing the work. It is confirmed peanut-free by ELISA testing. The source matters for MCAS safety: we specify non-fermented grape seed extract to eliminate the biogenic amine contamination (histamine, tyramine) that can ride along with grape products. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites.",
+        whyThisFormPatient: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that specifically quantifies the procyanidins doing the work. Peanut protein was not detected by ELISA testing. Some grape seed comes from winery pomace, the seeds left after wine fermentation, so we are confirming with our supplier whether ours is from fresh-pressed or pomace seed. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites.",
         faq: [
             { q: "Why grape seed AND pine bark - aren't they the same thing?", a: "They share the procyanidin chemistry, but they're not identical. Grape seed delivers higher procyanidin density per milligram; pine bark brings a different minor-compound profile that contributes additional MMP and mast cell activity. The gut metabolite M1 - the form that actually circulates in your blood and does most of the work - comes from both sources, and together they hit a wider mechanism profile than either alone. It's complementary, not redundant." },
             { q: "Is grape seed safe with blood thinners?", a: "Grape seed extract has mild antiplatelet activity - not enough to be clinically meaningful for most people, but worth flagging if you're on warfarin, aspirin, or a DOAC. The human RCTs in cardiovascular populations have generally been positive without serious bleeding events, but the standard caution applies: tell your prescriber if you're on blood thinners, and stop 1-2 weeks before scheduled surgery. Otherwise, the safety profile is one of the cleanest in polyphenol research." },
@@ -2524,7 +2524,7 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "What does '≥95% OPCs by HPLC' actually mean?", a: "HPLC (high-performance liquid chromatography) separates and quantifies the procyanidins specifically, rather than measuring total absorbance like the older UV-Vis or vanillin methods, which can produce inflated percentages by detecting compounds that aren't procyanidins. DMAC is another procyanidin-specific method; our supplier tests by HPLC, which meets the same goal. When the COA specifies HPLC, the percentage corresponds to the compounds actually doing the work." }
         ],
         triadPlain: {
-            mcas: "Grape seed procyanidins support mast cell stability through several mechanisms in lab studies. The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination (histamine, tyramine) that can ride along with grape products from less careful sourcing.",
+            mcas: "Grape seed procyanidins support mast cell stability through several mechanisms in lab studies. The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we are confirming whether our seed is fresh-pressed or winery pomace, because pomace has been through wine fermentation.",
             heds: "Grape seed is one of the strongest ECM-protective ingredients on this list. The gut-derived metabolite M1 - the form that actually circulates in your blood - directly inhibits MMP-9 (one of the matrix-degrading enzymes upregulated in hEDS) at concentrations achievable from oral dosing. Grape seed procyanidins also directly cross-link with collagen fibers, stabilizing them against enzymatic breakdown - a unique mechanism among polyphenols. We pair grape seed with pine bark to deliver more M1 to your bloodstream and broader MMP coverage across the matrix-degrading enzymes elevated in hEDS.",
             pots: "For POTS, grape seed extract has solid clinical data for venous tone and lower-leg edema - the same blood pooling pattern that drives the orthostatic tachycardia of POTS. A meta-analysis of 16 RCTs (n=810) found grape seed reduced systolic blood pressure by about 6 mmHg in hypertensive populations, with the effect essentially neutral in normotensives (floor effect), so a large blood pressure drop is not expected at our dose, though no study has measured standing blood pressure. The procyanidin support for endothelial function and venous wall integrity is the relevant mechanism for POTS - strengthening the vasculature that gravity works against when you stand."
         },
@@ -2581,19 +2581,19 @@ export const ingredients: Record<string, IngredientData> = {
             }
         ],
         triad: {
-            mcas: "Grape seed procyanidins stabilize mast cells through three complementary mechanisms in lab studies: they downregulate FcεRI (the IgE receptor that triggers mast cell activation), they block calcium influx (the trigger for releasing histamine and inflammatory mediators), and they raise cAMP (which actively suppresses degranulation). The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we specify non-fermented grape seed extract to avoid the biogenic amine contamination that can ride along with grape products from less careful sourcing.",
+            mcas: "Grape seed procyanidins stabilize mast cells through three complementary mechanisms in lab studies: they downregulate FcεRI (the IgE receptor that triggers mast cell activation), they block calcium influx (the trigger for releasing histamine and inflammatory mediators), and they raise cAMP (which actively suppresses degranulation). The procyanidin chemistry has decades of clinical use in Europe with an excellent safety record. For MCAS specifically, we are confirming whether our seed is fresh-pressed or winery pomace, because pomace has been through wine fermentation.",
             heds: "Grape seed is one of the strongest ECM-protective ingredients on this list. The gut-derived metabolite M1 - the form that actually circulates in your blood - directly inhibits MMP-9 (one of the matrix-degrading enzymes upregulated in hEDS) at concentrations achievable from oral dosing. Grape seed procyanidins also directly cross-link with collagen fibers, stabilizing them against enzymatic breakdown - a unique mechanism among polyphenols. We pair grape seed with pine bark to deliver more M1 to your bloodstream and broader MMP coverage across the matrix-degrading enzymes elevated in hEDS.",
             pots: "For POTS, grape seed extract has solid clinical data for venous tone and lower-leg edema - the same blood pooling pattern that drives the orthostatic tachycardia of POTS. A meta-analysis of 16 RCTs (n=810) found grape seed reduced systolic blood pressure by about 6 mmHg in hypertensive populations, with the effect essentially neutral in normotensives (floor effect), so a large blood pressure drop is not expected at our dose, though no study has measured standing blood pressure. The procyanidin support for endothelial function and venous wall integrity is the relevant mechanism for POTS - strengthening the vasculature that gravity works against when you stand."
         },
         whyThisForm: {
-            form: "Generic non-fermented grape seed extract (Vitis vinifera), ≥95% OPCs by HPLC, peanut-free, COA-verified",
-            rationale: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that specifically quantifies the procyanidins doing the work (DMAC is not required). Peanut protein was not detected by ELISA testing. The source matters for MCAS safety: we specify non-fermented grape seed extract to eliminate the biogenic amine contamination (histamine, tyramine) that can ride along with grape products. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites."
+            form: "Generic grape seed extract (Vitis vinifera), ≥95% OPCs by HPLC, peanut protein not detected by ELISA, seed source being confirmed",
+            rationale: "We use grape seed extract standardized to ≥95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that specifically quantifies the procyanidins doing the work (DMAC is not required). Peanut protein was not detected by ELISA testing. Some grape seed comes from winery pomace, the seeds left after wine fermentation, so we are confirming with our supplier whether ours is from fresh-pressed or pomace seed. The Vitis vinifera (red grape) source is the form used in the human MMP and venous tone trials. We deliver 170 mg total daily, split 100 mg AM and 70 mg PM to maintain steady levels of the active metabolites."
         },
         safety: {
-            sideEffects: "Excellent safety profile in cardiovascular RCTs running 8-12 weeks. Mild GI discomfort possible at high single doses; rare transient headache. The non-fermented sourcing eliminates the biogenic amine contamination concern that affects many grape products.",
+            sideEffects: "Excellent safety profile in cardiovascular RCTs running 8-12 weeks. Mild GI discomfort possible at high single doses; rare transient headache.",
             interactions: "Mild antiplatelet activity. Mention to your prescriber if you are on warfarin, aspirin, or a DOAC. Discontinue 1-2 weeks before scheduled surgery. No study has tested grape seed with POTS medications, but its own effects matter. Beta-blockers (metoprolol, propranolol): grape seed alone lowered systolic blood pressure about 2 to 6 mmHg and heart rate about 1 to 1.4 beats per minute in meta-analyses, so it may add slightly to these drugs; a human study found no effect on CYP2D6, the enzyme that clears metoprolol. Fludrocortisone/Midodrine: the same blood pressure lowering could slightly oppose these medications; our 170 mg a day is below the doses that lowered blood pressure significantly. Ivabradine: may add slightly to heart-rate lowering; a three-month human study of a related grape seed product found no change in CYP3A4, the enzyme that clears ivabradine. Hydroxyzine: rated low; the human enzyme studies found no CYP2D6 or CYP3A4 effect. One trial in treated hypertensives found vitamin C plus grape-seed polyphenols together raised blood pressure by about 5 mmHg; our formula has both, at a higher vitamin C and much lower polyphenol dose, so the relevance is unknown.",
             excipientConcerns: {
-                avoid: ["Fermentation-derived sourcing", "Artificial colors", "Magnesium stearate"],
+                avoid: ["Peanut-skin adulteration", "Artificial colors", "Magnesium stearate"],
                 safe: ["HPMC capsules", "Rice flour", "Cellulose"]
             }
         },
@@ -2622,7 +2622,7 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         triadPlain: {
             mcas: "Quercefit® delivers quercetin to your bloodstream at much higher levels than plain quercetin. In lab studies of human mast cells, quercetin reduced release of histamine, PGD2, leukotrienes, TNF, and IL-8. A newer lab mechanism: quercetin binds CLM-1 to suppress MRGPRX2-mediated degranulation, a non-IgE mast cell pathway. These are lab findings, not clinical outcomes.",
-            heds: "Quercefit has the most direct hEDS-relevant collagen data of any ingredient in the formulation. A 2023 study in human uterosacral ligament fibroblasts showed quercetin reduced MMP-1, increased LOX (the cross-linking enzyme), and raised fibrillin-2 expression. A 2025 rat tendon study showed oral quercetin improved every measured biomechanical parameter of healing tendons - failure load, stiffness, ultimate stress, strain. At achievable Quercefit concentrations, quercetin sits in the pro-collagen, MMP-inhibiting range (the dose-response goes anti-fibrotic only at much higher concentrations not reached orally). An unusually well-aligned ingredient for hEDS.",
+            heds: "In a 2024 cell study (rat bone-marrow stem cells turned into ligament fibroblasts), quercetin at 5 to 20 µM raised collagen I and III gene expression, and low and medium concentrations increased cell growth. A 2025 rat tendon study showed oral quercetin improved every measured biomechanical parameter of healing tendons - failure load, stiffness, ultimate stress, strain. Whether oral Quercefit reaches these concentrations in ligament or tendon has not been measured, so these are lab and animal results, not results for this formula.",
             pots: "For POTS, Quercefit's relevance is mostly the mast cell layer that overlaps with many POTS cases. A small human trial reported improved endothelial function (the responsiveness of the lining of your blood vessels) with quercetin. Quercetin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
         },
         bluf: "Quercetin Phytosome is quercetin, a flavonoid studied for mast cell support, wrapped in a sunflower-lecithin phospholipid carrier that solves quercetin's biggest limitation: poor absorption. Plain quercetin runs 1-2% bioavailable; Indena's branded Quercefit form delivers about 20 times more quercetin into the bloodstream per milligram. ZebraThrive uses 300 mg of Quercefit daily in the Daily Powder, split AM and PM.",
@@ -2679,7 +2679,7 @@ export const ingredients: Record<string, IngredientData> = {
         ],
         triad: {
             mcas: "Quercefit® delivers quercetin to your bloodstream at much higher levels than plain quercetin. In lab studies of human mast cells, quercetin reduced release of histamine, PGD2, leukotrienes, TNF, and IL-8. A newer lab mechanism: quercetin binds CLM-1 to suppress MRGPRX2-mediated degranulation, a non-IgE mast cell pathway. These are lab findings, not clinical outcomes.",
-            heds: "Quercefit has the most direct hEDS-relevant collagen data of any ingredient in the formulation. A 2023 study in human uterosacral ligament fibroblasts showed quercetin reduced MMP-1, increased LOX (the cross-linking enzyme), and raised fibrillin-2 expression. A 2025 rat tendon study showed oral quercetin improved every measured biomechanical parameter of healing tendons - failure load, stiffness, ultimate stress, strain. At achievable Quercefit concentrations, quercetin sits in the pro-collagen, MMP-inhibiting range (the dose-response goes anti-fibrotic only at much higher concentrations not reached orally). An unusually well-aligned ingredient for hEDS.",
+            heds: "In a 2024 cell study (rat bone-marrow stem cells turned into ligament fibroblasts), quercetin at 5 to 20 µM raised collagen I and III gene expression, and low and medium concentrations increased cell growth. A 2025 rat tendon study showed oral quercetin improved every measured biomechanical parameter of healing tendons - failure load, stiffness, ultimate stress, strain. Whether oral Quercefit reaches these concentrations in ligament or tendon has not been measured, so these are lab and animal results, not results for this formula.",
             pots: "For POTS, Quercefit's relevance is mostly the mast cell layer that overlaps with many POTS cases. A small human trial reported improved endothelial function (the responsiveness of the lining of your blood vessels) with quercetin. Quercetin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
         },
         whyThisForm: {
@@ -2795,7 +2795,7 @@ export const ingredients: Record<string, IngredientData> = {
             sideEffects: "Excellent tolerability at the 200 mcg supplement dose; decades of human use without serious adverse events in trials up to 12 months. Very rare reports of mild GI discomfort. The US has not set a Tolerable Upper Intake Level for chromium; 200 mcg is a standard supplement amount.",
             interactions: "Theoretical interaction with diabetes medications (insulin, metformin); if you are on either, mention chromium to your prescriber since improved glucose handling might affect dosing requirements. Chromium picolinate does not engage CYP enzymes meaningfully and has no documented interactions with the standard POTS, MCAS, or hEDS medication stack.",
             excipientConcerns: {
-                avoid: ["Fermentation-derived sources", "Artificial colors", "Magnesium stearate"],
+                avoid: ["Unverified grades without a COA", "Artificial colors", "Magnesium stearate"],
                 safe: ["HPMC capsules", "Rice flour", "Cellulose"]
             }
         },
@@ -2987,14 +2987,14 @@ export const ingredients: Record<string, IngredientData> = {
             pots: "Niacinamide's POTS relevance is mitochondrial: NAD+ pathway support for the chronic fatigue that frequently shadows POTS (many POTS patients also meet ME/CFS criteria). Niacinamide alongside NR provides broader B3 coverage for mitochondrial energy production. The 50 mg dose is deliberately conservative enough not to push methylation balance, which matters because methylation competition can affect catecholamine metabolism - and catecholamine handling is already disordered in POTS. The conservative dose is itself part of the POTS-friendliness, alongside the methylation-supporting B-vitamins that anchor that pathway."
         },
         whyThisForm: {
-            form: "Niacinamide (amide form, USP grade, fermentation-free)",
+            form: "Niacinamide (amide form, USP grade)",
             rationale: "We use niacinamide (the amide form), not niacin, and at a deliberately conservative 50 mg per day. Niacin causes flushing through prostaglandin release from Langerhans cells - that 'niacin flush' is uncomfortable and can be a problem for sensitive populations. Niacinamide is the non-flushing form. We chose 50 mg specifically because a 2013 human study showed 100 mg raised plasma histamine at 5 hours through methylation depletion - a real consideration for MCAS patients. Half that dose delivers the niacinamide benefit profile without crossing the methylation/histamine threshold."
         },
         safety: {
             sideEffects: "Excellent safety at the 50 mg dose. Niacinamide is non-flushing (unlike niacin). Very high doses (>3 g/day) have hepatotoxicity concerns; our dose is 50x below that level. No reported acute side effects in healthy populations at supplement doses.",
             interactions: "No study has tested niacinamide with standard POTS, MCAS, or hEDS medications. Famotidine slows kidney clearance of a niacinamide breakdown product, raising its blood level; no clinical effect of that is known. Theoretical methylation competition with high doses (>500 mg) of other methylation-dependent compounds; the formulation includes methylfolate and methylated B12 to support methyl group availability. Mention to your prescriber if you take additional high-dose B3 separately.",
             excipientConcerns: {
-                avoid: ["Fermentation-derived sources", "Artificial colors", "Magnesium stearate"],
+                avoid: ["Unverified grades without a COA", "Artificial colors", "Magnesium stearate"],
                 safe: ["HPMC capsules", "Rice flour", "Cellulose"]
             }
         },
@@ -3010,7 +3010,7 @@ export const ingredients: Record<string, IngredientData> = {
         id: "r5p",
         name: "R5P (Riboflavin-5-Phosphate)",
         patientSummary: "R5P is the activated form of vitamin B2 (riboflavin) - your body normally has to convert plain riboflavin into R5P before it can do its work as a cofactor. For people with MTHFR polymorphisms (around 85% of hEDS patients carry at least one variant), R5P is especially important because it's the cofactor MTHFR needs to do methylation properly. Riboflavin also supports mitochondrial energy production through the electron transport chain. We use the activated form because the conversion step can be impaired.",
-        whyThisFormPatient: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg, well above the basic vitamin requirement and far below the 400 mg used in some high-dose riboflavin studies. It is a daily B2 and methylation-cofactor dose.",
+        whyThisFormPatient: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg, well above the basic vitamin requirement and far below the 400 mg used in some high-dose riboflavin studies. It is a daily B2 and methylation-cofactor dose. Like all riboflavin, it starts as a fermentation product; we disclose that because no non-fermented vitamin B2 exists.",
         faq: [
             { q: "Why R5P instead of regular riboflavin?", a: "Riboflavin needs to be converted by an enzyme called riboflavin kinase before your body can use it as a cofactor. That conversion can be impaired in chronic illness, inflammation, hypothyroidism, or methylation pathway issues - all common in this community. R5P is the already-activated form, so it skips the conversion step and goes directly to work. The bioavailability advantage isn't dramatic for healthy people, but for people whose enzyme systems are running compromised, it's a more reliable path." },
             { q: "Is R5P in the formula for headaches?", a: "No. Our 25 mg dose is for daily B2 coverage, MTHFR cofactor support, and mitochondrial energy support. Riboflavin studies in people with headache conditions used 400 mg/day, 16 times our dose. This formula is not intended for any headache condition; talk with your clinician about headache care." },
@@ -3086,13 +3086,13 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Riboflavin-5-Phosphate (R5P), USP grade, 25 mg (AM capsule)",
-            rationale: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg, well above the basic vitamin requirement and far below the 400 mg used in some high-dose riboflavin studies. It is a daily B2 and methylation-cofactor dose."
+            rationale: "We use riboflavin-5-phosphate (R5P) - the activated form your enzymes can use directly. Plain riboflavin needs to be converted by riboflavin kinase in your liver before it becomes biologically active, and that conversion step can be impaired in people with chronic illness, inflammation, or methylation pathway dysfunction. Using R5P directly bypasses the conversion bottleneck. The dose is 25 mg, well above the basic vitamin requirement and far below the 400 mg used in some high-dose riboflavin studies. It is a daily B2 and methylation-cofactor dose. How it is made: all commercial riboflavin is produced by fermentation, and R5P is made from it by a chemical step and purified to USP grade. Our sourcing rule is to avoid fermentation where a non-fermented option exists and to disclose it where none does; for vitamin B2 there is none."
         },
         safety: {
             sideEffects: "Excellent safety profile. May cause harmless bright yellow urine color (excreted excess riboflavin). No clinically meaningful adverse events at the 25 mg dose; study doses up to 400 mg/day have been used safely for 3+ months.",
             interactions: "Methotrexate users should mention any methylated B-vitamin stack to their prescriber, as methylated cofactors can affect methotrexate's antifolate mechanism. Some antiepileptics (phenobarbital, carbamazepine) and tetracycline antibiotics can interact with riboflavin metabolism; mention to your prescriber if you are on any of those. Otherwise, R5P has one of the cleaner interaction profiles among B vitamins.",
             excipientConcerns: {
-                avoid: ["Fermentation-derived sources", "Artificial colors", "Magnesium stearate"],
+                avoid: ["Unverified grades without a COA", "Artificial colors", "Magnesium stearate"],
                 safe: ["HPMC capsules", "Rice flour", "Cellulose"]
             }
         },

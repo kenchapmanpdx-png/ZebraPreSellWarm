@@ -56,7 +56,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "grape-seed-extract": {
     title: "Grape Seed Extract (OPCs): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Non-fermented grape seed extract at 95%+ OPCs, 170 mg a day: how it complements pine bark, what the evidence shows, sourcing, and safety notes.",
+      "Grape seed extract at 95%+ OPCs, 170 mg a day: how it complements pine bark, what the evidence shows, sourcing, and safety notes.",
   },
   "quercetin-phytosome": {
     title: "Quercetin Phytosome (Quercefit): Dose, Evidence | ZebraThrive",

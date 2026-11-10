@@ -225,7 +225,7 @@ export default function Excipients() {
           {/* Related + CTA */}
           <section className="p-8 md:p-10 bg-[#0F2A22] text-[#EBE8E1] rounded-[2rem] shadow-xl">
             <h2 className="text-2xl md:text-3xl font-serif font-bold !text-[#EBE8E1] mb-3">
-              Every active and every excipient, documented
+              Every active and every confirmed excipient, documented
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-[#EBE8E1]/85 mb-8">
               The ingredient pages list form, dose, evidence and the excipients to avoid for each active. The

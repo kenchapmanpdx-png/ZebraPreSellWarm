@@ -120,7 +120,8 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
 
 export const USED_EXCIPIENTS: Array<{ role: string; excipient: string; where: string }> = [
   { role: "Capsule shell", excipient: "HPMC (hypromellose), plant-derived", where: "AM and PM capsules" },
-  { role: "Opacifier", excipient: "Calcium carbonate", where: "PM capsules (white)" },
+  { role: "Opacifier and filler", excipient: "Calcium carbonate", where: "PM capsules (white shell and about 20 mg of fill a day)" },
+  { role: "Filler", excipient: "Microcrystalline cellulose", where: "AM capsules (about 29 mg a day, added by our manufacturer)" },
   { role: "Flow agent", excipient: "Rice hull concentrate", where: "AM and PM capsules" },
   { role: "Lubricant", excipient: "L-leucine", where: "AM and PM capsules" },
   { role: "Emulsifier", excipient: "Sunflower lecithin", where: "Quercetin phytosome, Daily Powder" },
@@ -130,12 +131,15 @@ export const CARRIERS: Array<{ carrier: string; arrivesWith: string; amount: str
   { carrier: "Maltodextrin", arrivesWith: "Vitamin D3 (lichen)", amount: "about 17 mg a day; source unconfirmed", href: "/ingredients/vitamin-d3" },
   { carrier: "Microcrystalline cellulose", arrivesWith: "Vitamin K2 (MK-7)", amount: "about 10 mg a day", href: "/ingredients/vitamin-k2" },
   { carrier: "Sunflower lecithin", arrivesWith: "Quercetin phytosome", amount: "part of the phytosome complex", href: "/ingredients/quercetin-phytosome" },
+  { carrier: "Maltodextrin", arrivesWith: "Quercetin phytosome", amount: "part of the phytosome complex; amount and source being confirmed", href: "/ingredients/quercetin-phytosome" },
+  { carrier: "Dicalcium phosphate", arrivesWith: "Biotin", amount: "about 31 mg a day; identity being confirmed", href: "/ingredients/biotin" },
+  { carrier: "Maltodextrin and silica", arrivesWith: "Molybdenum glycinate", amount: "under 6 mg a day; source being confirmed", href: "/ingredients/molybdenum" },
   { carrier: "Silica", arrivesWith: "Taurine", amount: "up to 7.5 mg a day", href: "/ingredients/taurine" },
-  { carrier: "Being confirmed", arrivesWith: "Astaxanthin beadlet, selenium premix", amount: "listed before launch", href: "/ingredients/astaxanthin" },
+  { carrier: "Being confirmed", arrivesWith: "Astaxanthin beadlet, selenium premix, boron glycinate", amount: "listed before launch", href: "/ingredients/astaxanthin" },
 ];
 
 export const CARRIERS_NOTE =
-  "Some vitamins and actives arrive from the raw-material supplier already on a carrier. These are not ingredients we add, but they are in the bottle, so they are listed. Corn derivatives are not on the excluded list until the maltodextrin source is confirmed.";
+  "Some vitamins and actives arrive from the raw-material supplier already on a carrier. These are not ingredients we add, but they are in the bottle, so they are listed. Corn and wheat derivatives are not on the excluded list until the maltodextrin sources are confirmed.";
 
 export const LABEL_CHECKS: string[] = [
   "Read the \"Other ingredients\" line, not just the Supplement Facts panel.",
@@ -153,7 +157,7 @@ export const EXCIPIENT_FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Does ZebraThrive contain gluten, dairy, soy or corn?",
-    a: "The formula is made without gluten, dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan and artificial dyes. Corn is not yet on the excluded list: the vitamin D3 arrives on about 17 mg of maltodextrin whose source is unconfirmed, and we will say so plainly until it is.",
+    a: "The formula is made without dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan and artificial dyes. Corn and wheat are not yet on the excluded list: small amounts of maltodextrin arrive with the vitamin D3, the quercetin phytosome and the molybdenum, and their sources are unconfirmed. We will say so plainly until they are.",
   },
   {
     q: "Why list carriers of 10 or 20 milligrams?",

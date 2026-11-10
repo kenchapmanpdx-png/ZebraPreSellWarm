@@ -27,7 +27,7 @@ export default function WhyZebraThrive() {
           />
           <FeatureCard 
             title="Histamine Friendly" 
-            desc="Every ingredient screened for biogenic amines and MCAS triggers." 
+            desc="Every ingredient and carrier reviewed against known MCAS triggers, including how it is made." 
           />
           <FeatureCard 
             title="Bioavailable" 

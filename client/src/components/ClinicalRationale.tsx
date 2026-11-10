@@ -31,8 +31,8 @@ export default function ClinicalRationale() {
     {
       id: "trigger",
       number: "03",
-      title: "The Zero-Trigger Guarantee",
-      desc: "Mast cells are finicky. We manually screen every milligram for biogenic amines and hidden histamine. No fermented fillers. No bovine gelatin. Just pure stability.",
+      title: "The Trigger Screen",
+      desc: "Mast cells are finicky. Every active and carrier is reviewed against known MCAS triggers: excipients, allergens and how each ingredient is made. Where an ingredient can only be made with a fermentation step, we say so. No bovine gelatin.",
       icon: <ShieldCheck className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-emerald-500",
       gradient: "from-emerald-500/20 to-transparent"
