@@ -15,11 +15,13 @@ interface Connection {
 // =============================================================================
 
 const CONNECTIONS: readonly Connection[] = [
-  { from: '#ing-astaxanthin', to: ['#issue-antioxidant', '#issue-mcas', '#issue-collagen'] },
+  { from: '#ing-astaxanthin', to: ['#issue-antioxidant'] },
   { from: '#ing-benfotiamine', to: ['#issue-energy', '#issue-nerve', '#issue-mitochondria', '#issue-muscle'] },
   { from: '#ing-biotin', to: ['#issue-energy', '#issue-methylation'] },
-  { from: '#ing-boron', to: ['#issue-collagen', '#issue-immune'] },
+  { from: '#ing-boron', to: ['#issue-immune'] },
   { from: '#ing-cga', to: ['#issue-collagen', '#issue-cardiovascular'] },
+  { from: '#ing-chromium', to: ['#issue-energy'] },
+  { from: '#ing-grapeseed', to: ['#issue-collagen', '#issue-mcas'] },
   { from: '#ing-copper', to: ['#issue-collagen', '#issue-immune', '#issue-mcas'] },
   { from: '#ing-d3', to: ['#issue-immune', '#issue-mcas', '#issue-collagen'] },
   { from: '#ing-emiq', to: ['#issue-mcas', '#issue-antioxidant'] },
@@ -28,17 +30,16 @@ const CONNECTIONS: readonly Connection[] = [
   { from: '#ing-magnesium', to: ['#issue-calming', '#issue-muscle', '#issue-autonomic', '#issue-cardiovascular'] },
   { from: '#ing-manganese', to: ['#issue-collagen', '#issue-antioxidant'] },
   { from: '#ing-folate', to: ['#issue-methylation', '#issue-nerve'] },
-  { from: '#ing-molybdenum', to: ['#issue-mcas'] },
   { from: '#ing-niacinamide', to: ['#issue-energy', '#issue-mitochondria'] },
   { from: '#ing-nr', to: ['#issue-energy', '#issue-mitochondria', '#issue-mcas', '#issue-cardiovascular'] },
-  { from: '#ing-p5p', to: ['#issue-energy', '#issue-nerve', '#issue-mcas', '#issue-methylation'] },
+  { from: '#ing-p5p', to: ['#issue-energy', '#issue-nerve', '#issue-methylation'] },
   { from: '#ing-pantothenic', to: ['#issue-energy', '#issue-mitochondria'] },
   { from: '#ing-pea', to: ['#issue-mcas', '#issue-calming', '#issue-cognitive', '#issue-nerve'] },
   { from: '#ing-pycnogenol', to: ['#issue-collagen', '#issue-cardiovascular', '#issue-antioxidant', '#issue-mcas', '#issue-cognitive'] },
   { from: '#ing-r5p', to: ['#issue-energy', '#issue-mitochondria'] },
   { from: '#ing-selenium', to: ['#issue-antioxidant', '#issue-immune'] },
   { from: '#ing-taurine', to: ['#issue-autonomic', '#issue-calming', '#issue-cardiovascular', '#issue-collagen', '#issue-muscle'] },
-  { from: '#ing-theanine', to: ['#issue-calming', '#issue-cognitive', '#issue-mcas', '#issue-autonomic'] },
+  { from: '#ing-theanine', to: ['#issue-calming', '#issue-cognitive'] },
   { from: '#ing-b12', to: ['#issue-energy', '#issue-nerve', '#issue-methylation'] },
   { from: '#ing-vitc', to: ['#issue-collagen', '#issue-immune', '#issue-antioxidant', '#issue-mcas'] },
   { from: '#ing-zinc', to: ['#issue-gut', '#issue-immune', '#issue-collagen'] },
@@ -336,6 +337,8 @@ export default function InteractiveIngredientMap() {
               <div id="ing-biotin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Biotin (B7)</span></div>
               <div id="ing-boron" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Boron</span></div>
               <div id="ing-cga" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Chlorogenic Acid</span></div>
+              <div id="ing-chromium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Chromium</span></div>
+              <div id="ing-grapeseed" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Grape Seed Extract</span></div>
               <div id="ing-copper" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Copper</span></div>
               <div id="ing-emiq" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Quercetin Phytosome (Quercefit)</span></div>
               <div id="ing-folate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Folate (L-5-MTHF)</span></div>

@@ -35,7 +35,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/ClinicalRationale.tsx",
     lines: 181,
     blurb:
-      "",
+      "Three-card science block ('Support for normal collagen turnover', 'The Trigger Screen', 'AM and PM Timing') with a button that opens the ingredient-to-benefit map.",
     context:
       "Per the June 23 changelog, this lived between OurStory and ProductGrid on the homepage. It also lazy-loads InteractiveIngredientMap below it.",
     Component: ClinicalRationale,
@@ -46,7 +46,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/InteractiveIngredientMap.tsx",
     lines: 381,
     blurb:
-      "",
+      "Visual ingredient-to-benefit map: 29 ingredients connecting to 14 health goals with hover/tap highlighting.",
     context:
       "Lazy-loaded by ClinicalRationale. Rendered standalone here so you can see it in isolation. Your June 23 changelog: 'Added interactive ingredient-to-benefit map after Ava story section.'",
     Component: InteractiveIngredientMap,
@@ -57,9 +57,9 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/PreorderReservation.tsx",
     lines: 109,
     blurb:
-      "Full reservation form - captures email + firstName + lastName + conditions + currentSupplements + hearAboutUs. Matches the preorderReservations schema in shared/schema.ts exactly.",
+      "Email-only reservation form that posts to /api/waitlist.",
     context:
-      "The current /preorder page only collects an email. This component is the high-fidelity form your DB schema was designed around. POSTs to /api/preorder (now wired).",
+      "Standalone version of the email reservation form.",
     Component: PreorderReservation,
   },
   {
@@ -79,7 +79,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/DifferenceSection.tsx",
     lines: 131,
     blurb:
-      " Ever.', 'Condition Mindful', 'Gentle by Design', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
+      "Eight-tile feature grid: 'One Daily Routine', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Made With Sensitive Systems in Mind', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
     context:
       "Per the June 15 changelog, the 'Why Choose ZebraThrive' section was removed and its benefits moved into 'What Makes ZebraThrive Different.' This component may be the orphaned predecessor - verify against the live homepage before reintroducing.",
     Component: DifferenceSection,

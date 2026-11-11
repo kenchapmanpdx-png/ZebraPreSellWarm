@@ -95,7 +95,7 @@ export default function Ingredients() {
                                             )}
 
                                             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8F5238] group-hover:translate-x-2 transition-transform">
-                                                Clinical Science
+                                                Read details
                                                 <span className="text-lg">→</span>
                                             </div>
                                         </div>

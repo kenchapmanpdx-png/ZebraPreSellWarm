@@ -14,7 +14,7 @@ export default function ClinicalRationale() {
       id: "shredder",
       number: "01",
       title: "Support for normal collagen turnover",
-      desc: "Lab studies of skin cells from people with hEDS have found higher activity of MMPs, the enzymes that break collagen down. Alongside building blocks for collagen, we include ingredients studied in lab research for effects on collagen breakdown.",
+      desc: "MMPs are the enzymes that break collagen down as part of normal turnover. Alongside building blocks for collagen, we include ingredients studied in lab research for effects on these enzymes.",
       icon: <Scissors className="w-8 h-8 text-white" aria-hidden="true" />,
       color: "bg-rose-500", // Visually signaling 'stopping' the damage
       gradient: "from-rose-500/20 to-transparent"

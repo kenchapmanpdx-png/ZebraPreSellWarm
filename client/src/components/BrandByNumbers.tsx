@@ -129,7 +129,7 @@ export default function BrandByNumbers() {
             By the numbers
           </p>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight max-w-3xl mx-auto">
-            Built on published mechanisms, verified lots and{' '}
+            Built on published mechanisms, lot checks and{' '}
             <span className="text-[#B36B4D] italic font-normal">disclosed excipients</span>.
           </h2>
           <p className="mt-5 text-[#5D5752] text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed">

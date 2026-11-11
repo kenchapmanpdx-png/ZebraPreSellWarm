@@ -58,8 +58,8 @@ export default function ConditionScienceTabs() {
 
   const conditions = {
     heds: {
-      name: "hEDS",
-      fullName: "Hypermobile Ehlers-Danlos Syndrome",
+      name: "Tissue",
+      fullName: "Connective Tissue",
       tagline: "Collagen Formation and Turnover",
       description: "Vitamin C and copper support normal collagen formation, and other ingredients were chosen from lab research on collagen turnover.",
       color: "text-emerald-800",
@@ -69,9 +69,9 @@ export default function ConditionScienceTabs() {
       stats: { pathways: 4, ingredients: 16 }
     },
     pots: {
-      name: "POTS", 
-      fullName: "Postural Orthostatic Tachycardia",
-      tagline: "Nervous System and Circulation",
+      name: "Energy", 
+      fullName: "Energy and Nervous System",
+      tagline: "Nerve Signaling and Energy Metabolism",
       description: "Nutrients for normal nervous system function and energy metabolism.",
       color: "text-blue-800",
       bg: "bg-blue-50", 
@@ -80,8 +80,8 @@ export default function ConditionScienceTabs() {
       stats: { pathways: 2, ingredients: 14 }
     },
     mcas: {
-      name: "MCAS",
-      fullName: "Mast Cell Activation Syndrome", 
+      name: "Mast Cells",
+      fullName: "Mast Cells and Histamine", 
       tagline: "Mast Cell Research and Histamine Metabolism",
       description: "Copper and B-vitamins support normal histamine metabolism, and other ingredients were chosen from lab research on mast cells.",
       color: "text-rose-800",
@@ -101,11 +101,11 @@ export default function ConditionScienceTabs() {
       color: "text-emerald-700",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
-      summary: "Lab studies of skin cells from people with hEDS found higher MMP activity, which may shift the balance of collagen turnover.",
-      problem: "In lab studies, skin cells from people with hEDS released more MMP-1, MMP-3 and MMP-9. It's like trying to fill a bathtub with the drain wide open.",
+      summary: "MMPs are the enzymes that break collagen down during normal collagen turnover.",
+      problem: "Collagen turnover is a balance between breakdown and building.",
       solution: "We include pine bark, grape seed and quercetin, which have been studied in lab research for effects on MMPs.",
       mechanisms: [
-        { name: "MMP-1 (Collagenase)", role: "Cuts main fibers; elevated in hEDS", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] },
+        { name: "MMP-1 (Collagenase)", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] },
         { name: "MMP-3 (Stromelysin)", role: "The 'master switch' activating other MMPs", ingredients: ["PEA", "Luteolin"] }
       ],
       keyInsight: "Pine bark and grape seed procyanidins are converted by gut bacteria into valerolactone metabolites, which reduced MMP-9 release from immune cells in lab studies."
@@ -114,7 +114,7 @@ export default function ConditionScienceTabs() {
       id: 'timps',
       icon: Shield,
       title: "TIMP Research",
-      subtitle: "TIMP Research",
+      subtitle: "MMP and TIMP Balance",
       color: "text-teal-700",
       bg: "bg-teal-50",
       border: "border-teal-200",
@@ -176,15 +176,15 @@ export default function ConditionScienceTabs() {
       solution: "L-theanine, taurine and magnesium bisglycinate, nutrients studied for their roles in normal nerve signaling.",
       mechanisms: [
         { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium Bisglycinate"] },
-        { name: "Resting Heart Rate", role: "Studied for resting heart rate in mixed adult populations", ingredients: ["Taurine"] }
+        { name: "Nerve Signaling", role: "Studied for its role in normal nerve signaling", ingredients: ["Taurine"] }
       ],
-      keyInsight: "A 2024 meta-analysis of 20 randomized trials, mostly in people with heart failure, high blood pressure or no illness, found taurine lowered resting heart rate by about 3.6 beats per minute on average. If you take a beta-blocker or ivabradine, ask your doctor, because the effects may add up."
+      keyInsight: "If you take a beta-blocker or ivabradine, ask your doctor before starting, because taurine may lower resting heart rate slightly and the effects may add up."
     },
     {
       id: 'mitochondrial-etc',
       icon: Battery,
       title: "Energy Metabolism",
-      subtitle: "Energy Metabolism",
+      subtitle: "Mitochondrial Cofactors",
       color: "text-orange-700",
       bg: "bg-orange-50",
       border: "border-orange-200",
@@ -205,12 +205,12 @@ export default function ConditionScienceTabs() {
       id: 'mast-cell-stabilization',
       icon: FlaskConical,
       title: "Mast Cell Research",
-      subtitle: "Mast Cell Research",
+      subtitle: "Mast Cell Pathways",
       color: "text-rose-700",
       bg: "bg-rose-50",
       border: "border-rose-200",
       summary: "Ingredients studied in lab research on mast cells; these effects have not been tested in people taking this formula.",
-      problem: "Overreactive mast cells can release mediators in response to everyday triggers.",
+      problem: "When mast cells are activated, they release histamine and other mediators.",
       solution: "In lab research, PEA and luteolin act on different mast cell pathways.",
       mechanisms: [
         { name: "PPARα", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] },
@@ -227,13 +227,13 @@ export default function ConditionScienceTabs() {
       bg: "bg-purple-50",
       border: "border-purple-200",
       summary: "Copper is part of DAO, one of the enzymes the body uses to break down histamine.",
-      problem: "When histamine breakdown is slow, even normal amounts can build up.",
+      problem: "Histamine is broken down by DAO in the gut and by HNMT inside cells.",
       solution: "Copper for DAO, and methylation B-vitamins that support the body's normal supply of SAM.",
       mechanisms: [
         { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper"] },
         { name: "Methylation", role: "SAMe production for HNMT function", ingredients: ["Methylfolate", "B12"] }
       ],
-      keyInsight: "Copper is a DAO cofactor-the same mineral required for collagen cross-linking. One mineral, two massive jobs."
+      keyInsight: "Copper is a DAO cofactor, the same mineral required for collagen cross-linking. One mineral, two massive jobs."
     }
   ];
 
@@ -256,7 +256,7 @@ export default function ConditionScienceTabs() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <p className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.4em] mb-4">Going Deeper</p>
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#3D3733] mb-6 leading-tight">Pathways We Target</h2>
-          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 29 active ingredients across AM capsules, PM capsules, and the Daily Powder, chosen for pathways relevant to the EDS/POTS/MCAS triad.</p>
+          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 29 active ingredients across AM capsules, PM capsules, and the Daily Powder, grouped into the three body systems described at the top of this page.</p>
         </motion.div>
 
         {/* TABS - Holographic Style */}
@@ -298,10 +298,6 @@ export default function ConditionScienceTabs() {
                   <p className={`text-5xl font-serif font-bold ${currentCondition.color}`}>{currentCondition.stats.pathways}</p>
                   <p className="text-[10px] text-[#6B655F] font-black uppercase tracking-[0.2em]">Pathways</p>
                 </div>
-                <div className="text-center md:text-right">
-                  <p className={`text-5xl font-serif font-bold ${currentCondition.color}`}>{currentCondition.stats.ingredients}</p>
-                  <p className="text-[10px] text-[#6B655F] font-black uppercase tracking-[0.2em]">Targeted Actives</p>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -332,14 +328,14 @@ export default function ConditionScienceTabs() {
                             <div className="bg-rose-50/50 p-6 rounded-2xl border border-rose-100 flex gap-4">
                                 <AlertTriangle className="text-rose-600 flex-shrink-0" aria-hidden="true" />
                                 <div>
-                                  <p className="text-[10px] font-black text-rose-600 uppercase mb-1">Biological Problem</p>
+                                  <p className="text-[10px] font-black text-rose-600 uppercase mb-1">The Biology</p>
                                   <p className="text-sm text-[#5D5752] font-medium leading-relaxed">{pathway.problem}</p>
                                 </div>
                             </div>
                             <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 flex gap-4">
                                 <CheckCircle2 className="text-emerald-600 flex-shrink-0" aria-hidden="true" />
                                 <div>
-                                  <p className="text-[10px] font-black text-emerald-600 uppercase mb-1">Our Strategy</p>
+                                  <p className="text-[10px] font-black text-emerald-600 uppercase mb-1">What We Include</p>
                                   <p className="text-sm text-[#5D5752] font-medium leading-relaxed">{pathway.solution}</p>
                                 </div>
                             </div>

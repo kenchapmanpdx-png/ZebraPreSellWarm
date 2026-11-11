@@ -65,7 +65,7 @@ export default function IngredientPage() {
                             Where {ingredient.name.split(" (")[0]} fits in ZebraThrive
                         </h2>
                         <p className="text-base md:text-lg leading-relaxed text-[#EBE8E1]/85 mb-2">
-                            {ingredient.atAGlance.dose}.
+                            {ingredient.atAGlance.dose.replace(/\.$/, "")}.
                         </p>
                         <p className="text-sm md:text-base leading-relaxed text-[#EBE8E1]/75 mb-8">
                             One part of a three-part daily system: AM capsules, PM capsules, and Daily Powder.
@@ -96,7 +96,7 @@ export default function IngredientPage() {
                         Explore More Ingredients
                     </h2>
                     <p className="text-sm md:text-base text-[#5D5752] mb-8 max-w-2xl">
-                        Continue learning about the components of ZebraThrive's AM and PM formulas.
+                        Continue learning about the components of ZebraThrive's AM capsules, PM capsules and Daily Powder.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {related.map((r) => (

@@ -50,7 +50,7 @@ const NODES: Node[] = [
     id: 1,
     n: '1',
     title: 'Collagen Turnover',
-    desc: 'In hEDS, lab studies of skin cells show changes in how collagen is broken down; the causes are still being studied.',
+    desc: 'Collagen is broken down and rebuilt as part of normal turnover.',
     theme: 'brown',
     card: { left: '50%', top: '14%' },
     dot: { cx: CENTER, cy: CENTER - RING_R },

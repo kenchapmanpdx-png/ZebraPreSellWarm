@@ -128,7 +128,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         <p className="text-xl font-serif font-medium text-primary"><strong className="font-medium">{data.atAGlance.dose}</strong></p>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-[#8F5238]">Key Benefits</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-[0.2em] text-[#8F5238]">Key Points</h3>
                         <div className="flex flex-wrap gap-2">
                             {data.atAGlance.keyBenefits.map((benefit, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm bg-white/60 px-3 py-1.5 rounded-full border border-border/50 shadow-sm">
@@ -172,7 +172,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                                 {item.outcome}
                             </AccordionTrigger>
                             <AccordionContent forceMount className="space-y-6 pb-8">
-                                <p className="text-lg font-medium text-primary/80 border-l-2 border-accent pl-4">{item.summary}</p>
+                                {item.summary && <p className="text-lg font-medium text-primary/80 border-l-2 border-accent pl-4">{item.summary}</p>}
                                 <div className="grid gap-6">
                                     {item.studies.map((study, sIdx) => (
                                         <div key={sIdx} className="bg-white p-6 rounded-xl border border-border/40 shadow-sm space-y-3">
@@ -226,7 +226,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
             {triadCards.length > 0 && (
             <section className="space-y-10">
                 <div className="text-center space-y-2">
-                    <h2 className="text-4xl font-serif">What to know about {cleanName} if you live with hEDS, POTS or MCAS</h2>
+                    <h2 className="text-4xl font-serif">What to know about {cleanName} if you live with {triadCards.length === 3 ? "hEDS, POTS or MCAS" : triadCards.map((c) => c.title).join(" or ")}</h2>
                 </div>
                 <div className={`grid gap-8 ${triadCards.length === 3 ? "md:grid-cols-3" : triadCards.length === 2 ? "md:grid-cols-2" : ""}`}>
                     {triadCards.map((item, idx) => (
@@ -256,7 +256,7 @@ export default function IngredientDetail({ data }: IngredientDetailProps) {
                         {data.whyThisFormPatient || data.whyThisForm.rationale}
                     </p>
 
-                    {data.whyThisForm.comparison && (
+                    {data.whyThisForm.comparison && data.whyThisForm.comparison.length > 1 && (
                         <div className="pt-8 grid gap-4">
                             <h3 className="font-bold text-xs uppercase tracking-[0.2em] opacity-60">Form Comparison</h3>
                             <div className="grid gap-3">

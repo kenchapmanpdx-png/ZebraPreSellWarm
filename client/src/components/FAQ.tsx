@@ -44,7 +44,7 @@ export default function FAQ() {
     {
       icon: Pill,
       question: "Can I take this with my POTS or MCAS medications?",
-      answer: "We checked every ingredient against seven medications common in POTS and MCAS: metoprolol, propranolol, ivabradine, fludrocortisone, midodrine, hydroxyzine, and famotidine. For most pairs there is no human data at all, which means unknown, not safe. Where there is a signal, it is listed on that ingredient's page. The strongest signal: vitamin C lowered propranolol blood levels in a small study. Taurine, grape seed and quercetin may add to the heart rate or blood pressure effects of beta-blockers and ivabradine, or work against midodrine and fludrocortisone. Famotidine also reduces zinc absorption from zinc carnosine. Magnesium should also be spaced away from thyroid medication. We generally recommend a 2-hour window between your medications and supplements. For thyroid medication, keep at least 4 hours between it and the magnesium and chromium in this formula. For famotidine and zinc, spacing may not be enough. We provide a full ingredient breakdown that you can take directly to your doctor to make sure it fits your specific plan."
+      answer: "We checked every ingredient against seven medications common in POTS and MCAS: metoprolol, propranolol, ivabradine, fludrocortisone, midodrine, hydroxyzine, and famotidine. For most pairs there is no human data at all, which means unknown, not safe. Where there is a signal, it is listed on that ingredient's page. The strongest signal: vitamin C lowered propranolol blood levels in a small study. Taurine, grape seed and quercetin may add to the heart rate or blood pressure effects of beta-blockers and ivabradine, or work against midodrine and fludrocortisone. Famotidine also reduces zinc absorption from zinc carnosine. We generally recommend a 2-hour window between your medications and supplements. For thyroid medication, keep at least 4 hours between it and the magnesium and chromium in this formula. For famotidine and zinc, spacing may not be enough. We provide a full ingredient breakdown that you can take directly to your doctor to make sure it fits your specific plan."
     },
     {
       icon: Sun,
@@ -54,7 +54,7 @@ export default function FAQ() {
     {
       icon: ShieldOff,
       question: "Does this contain common triggers like gluten or dairy?",
-      answer: "We formulate without gelatin, magnesium stearate, titanium dioxide, carrageenan and artificial dyes. We are still confirming with suppliers that no carrier contains dairy, soy-derived tocopherols or citric acid. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few ingredients arrive on carriers, and we list them on our Promise page, including maltodextrin with the vitamin D3, the quercetin phytosome and the molybdenum, whose sources we are confirming. A few carrier details, such as the astaxanthin beadlet and selenium premix, are still being confirmed with suppliers. Until they are confirmed we do not claim corn-free, wheat-free or gluten-free."
+      answer: "We formulate without gelatin, magnesium stearate, titanium dioxide, added carrageenan and artificial dyes. We are still confirming with suppliers that no carrier contains dairy, soy-derived tocopherols or citric acid, and that the capsule shells contain no carrageenan. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few ingredients arrive on carriers, and we list them on our Promise page, including maltodextrin with the vitamin D3, the quercetin phytosome and the molybdenum, whose sources we are confirming. A few carrier details, such as the astaxanthin beadlet and selenium premix, are still being confirmed with suppliers. Until they are confirmed we do not claim corn-free, wheat-free or gluten-free."
     }
   ];
 
@@ -82,7 +82,7 @@ export default function FAQ() {
             Common questions about <span className="text-[#B36B4D] italic font-normal">ZebraThrive</span>
           </h2>
           <p className="text-[#6B655F] text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
-            No fluff. Just the facts on how we protect your stability and support your system.
+            No fluff. Just the facts on what is inside, how to start, and how it fits with your medications.
           </p>
         </div>
 

@@ -120,7 +120,7 @@ export default function ProductGrid() {
                 </p>
 
                 <div className="mt-auto space-y-3 pt-4 border-t border-[#3D3733]/10">
-                  <p className="text-[9px] font-black text-[#8F5238] uppercase tracking-[0.2em]">What it does</p>
+                  <p className="text-[9px] font-black text-[#8F5238] uppercase tracking-[0.2em]">Key ingredients</p>
                   {product.benefits.map((b) => (
                     <div key={b} className="flex items-start gap-3 text-xs text-[#3D3733] font-medium leading-snug">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#B36B4D] flex-shrink-0 mt-1.5" />

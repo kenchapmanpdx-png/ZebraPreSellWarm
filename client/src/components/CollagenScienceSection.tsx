@@ -39,7 +39,7 @@ export default function CollagenScienceSection() {
       border: "border-blue-200",
       gradient: "from-blue-500/10 to-transparent",
       summary: "Your body has enzymes (MMPs) that act like a shredder. Some of our ingredients have been studied in lab research for effects on these enzymes.",
-      problem: "Lab studies of skin cells from people with hEDS have found higher MMP-1 activity than in cells from people without hEDS. It's like trying to fill a bathtub with the drain open.",
+      problem: "Collagen turnover is a balance between breakdown and building.",
       solution: "We include compounds that have been studied in lab research for effects on several of these enzymes.",
       mechanisms: [
         { name: "MMP-1", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] },
@@ -69,7 +69,7 @@ export default function CollagenScienceSection() {
       id: 'transcription',
       icon: Dna,
       title: "Inflammation Signaling",
-      subtitle: "Inflammation Signaling",
+      subtitle: "NF-kB and AP-1",
       color: "text-purple-600",
       bg: "bg-purple-50",
       border: "border-purple-200",
@@ -97,9 +97,9 @@ export default function CollagenScienceSection() {
       solution: "We include ingredients studied in lab research on signaling pathways and mast cells.",
       mechanisms: [
         { name: "TLR4 Blockade", role: "Lab studies suggest collagen fragments can activate mast cells through this receptor", ingredients: ["Quercetin Phytosome", "Luteolin"] },
-        { name: "Mast Cell Stabilization", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA"] }
+        { name: "Mast Cell Signaling", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA"] }
       ],
-      keyInsight: "Some researchers have proposed that collagen breakdown products and inflammation may feed each other. hEDS and mast cell issues are commonly co-reported, although a recent study did not find more MCAS in people with hEDS or POTS."
+      keyInsight: "Some researchers have proposed that collagen breakdown products and inflammation may feed each other."
     },
     {
       id: 'adamts',
@@ -110,7 +110,7 @@ export default function CollagenScienceSection() {
       bg: "bg-teal-50",
       border: "border-teal-200",
       gradient: "from-teal-500/10 to-transparent",
-      summary: "ADAMTS enzymes destroy your 'cushioning' proteins. In lab studies, luteolin blocked ADAMTS enzymes that break down cartilage proteins.",
+      summary: "ADAMTS enzymes help break down proteoglycans as part of normal tissue turnover. Luteolin has been tested on these enzymes only in lab studies, at levels oral luteolin is not known to reach.",
       problem: "ADAMTS-4 and ADAMTS-5 break down aggrecan, a protein that helps cartilage resist compression.",
       solution: "In lab studies, luteolin blocked ADAMTS enzymes more than it blocked MMPs.",
       mechanisms: [
@@ -195,13 +195,13 @@ export default function CollagenScienceSection() {
       id: 'mast-cells',
       icon: FlaskConical,
       title: "Mast Cell Research",
-      subtitle: "Mast Cell Stabilization",
+      subtitle: "Mast Cell Pathways",
       color: "text-rose-600",
       bg: "bg-rose-50",
       border: "border-rose-200",
       gradient: "from-rose-500/10 to-transparent",
       summary: "Several ingredients have been studied in lab research for effects on mast cells.",
-      problem: "Overactive mast cells release mediators, including enzymes that can affect connective tissue.",
+      problem: "Mast cells release mediators, including enzymes that can affect connective tissue.",
       solution: "In lab research, PEA and luteolin act on different mast cell pathways.",
       mechanisms: [
         { name: "PPAR-alpha Activation", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] },
@@ -219,7 +219,7 @@ export default function CollagenScienceSection() {
       border: "border-pink-200",
       gradient: "from-pink-500/10 to-transparent",
       summary: "We include copper, a part of the DAO enzyme, and B-vitamins involved in methylation, which the body uses in normal histamine metabolism.",
-      problem: "When histamine breakdown is slow, even normal amounts can build up.",
+      problem: "Histamine is broken down by DAO in the gut and by HNMT inside cells.",
       solution: "Provide copper, a structural part of DAO, and methylation B-vitamins that support the body's supply of SAM, which HNMT uses.",
       mechanisms: [
         { name: "DAO Enzyme", role: "Gut histamine breakdown", ingredients: ["Copper"] },
@@ -231,7 +231,7 @@ export default function CollagenScienceSection() {
       id: 'autonomic',
       icon: Brain,
       title: "Nervous System Support",
-      subtitle: "Nervous System Support",
+      subtitle: "Nerve Signaling",
       color: "text-cyan-600",
       bg: "bg-cyan-50",
       border: "border-cyan-200",
@@ -241,7 +241,7 @@ export default function CollagenScienceSection() {
       solution: "We include L-theanine, taurine and magnesium, which have been studied for their roles in normal nerve signaling.",
       mechanisms: [
         { name: "GABA-A", role: "Inhibitory system", ingredients: ["L-Theanine", "Magnesium"] },
-        { name: "Sympathetic Dampening", role: "Supports normal nervous system function", ingredients: ["Magnesium"] }
+        { name: "Nervous System Function", role: "Supports normal nervous system function", ingredients: ["Magnesium"] }
       ],
       keyInsight: ""
     },
@@ -249,7 +249,7 @@ export default function CollagenScienceSection() {
       id: 'cardiovascular',
       icon: Heart,
       title: "Blood Pressure Awareness",
-      subtitle: "Blood Pressure Awareness",
+      subtitle: "Safety Note",
       color: "text-red-500",
       bg: "bg-red-50",
       border: "border-red-200",
@@ -259,7 +259,7 @@ export default function CollagenScienceSection() {
       solution: "Most ingredients have small or no effects on blood pressure on their own, but a few can lower it slightly and the effects may add up.",
       mechanisms: [
         { name: "Sodium", role: "Small sodium contribution", ingredients: ["Sodium Ascorbate"] },
-        { name: "Vascular Tone", role: "Vitamin C supports normal collagen formation in blood vessels", ingredients: ["Vitamin C", "Magnesium"] }
+        { name: "Vascular Tone", role: "Vitamin C supports normal collagen formation in blood vessels", ingredients: ["Vitamin C"] }
       ],
       keyInsight: "Sodium ascorbate adds about 210 mg of sodium per day (105 mg per scoop) alongside the vitamin C."
     },
@@ -320,7 +320,7 @@ export default function CollagenScienceSection() {
       id: 'power',
       label: 'Cluster 04',
       title: 'Power the System',
-      subtitle: 'Mitochondria, autonomic balance, cardiovascular support, and gut integrity.',
+      subtitle: 'Mitochondrial energy, nervous system support, blood pressure awareness and gut lining support.',
       accent: '#A0825A',
       pathwayIds: ['mitochondria', 'autonomic', 'cardiovascular', 'gi-protection']
     }
@@ -340,7 +340,7 @@ export default function CollagenScienceSection() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <span className="text-[#D4A373] font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">
-            The ZebraThrive Solution
+            The ZebraThrive Formula
           </span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
             One system built around 14 biological pathways in <span className="text-[#D4A373] italic font-normal">collagen and mast cell research</span>
@@ -447,14 +447,14 @@ export default function CollagenScienceSection() {
                                 {pathway.problem && (
                                 <div>
                                   <span className="text-[10px] font-black text-rose-500 uppercase tracking-widest flex items-center gap-2">
-                                    <AlertCircle size={12} aria-hidden="true" /> The Problem
+                                    <AlertCircle size={12} aria-hidden="true" /> The Biology
                                   </span>
                                   <p className="text-[#5D5752] mt-1 text-xs leading-relaxed">{pathway.problem}</p>
                                 </div>
                                 )}
                                 <div>
                                   <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest flex items-center gap-2">
-                                    <CheckCircle2 size={12} aria-hidden="true" /> Our Solution
+                                    <CheckCircle2 size={12} aria-hidden="true" /> What We Include
                                   </span>
                                   <p className="text-[#5D5752] mt-1 text-xs leading-relaxed">{pathway.solution}</p>
                                 </div>

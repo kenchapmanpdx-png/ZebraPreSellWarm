@@ -72,7 +72,7 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
       "A seaweed-derived thickener and gelling agent used in liquids, softgels and some vegetarian capsule shells.",
     whyExcluded:
       "Lab and animal studies have linked carrageenan to gut inflammation, and one small trial in people with a bowel condition reported earlier flares; the human evidence is limited and still debated. Some in our community report gut reactions to it, and a capsule-and-powder formula does not need a thickener, so we do not add it.",
-    instead: "We do not add carrageenan anywhere in the system, and we are confirming with our capsule supplier that the shells are made without it. Capsule shells are HPMC, and we are confirming that the shell supplier uses no carrageenan as a gelling aid.",
+    instead: "We do not add carrageenan anywhere in the system. Capsule shells are HPMC, and we are confirming with our capsule supplier that the shells use no carrageenan as a gelling aid.",
   },
   {
     slug: "gelatin",
@@ -92,7 +92,7 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
       "Synthetic colorants such as FD&C Yellow No. 5 (tartrazine) and Red No. 40, used for appearance only.",
     whyExcluded:
       "Color adds nothing to how a supplement works. FDA requires certified color additives, including Yellow No. 5, to be declared by name on food labels, and our community reports reactions to synthetic dyes more broadly.",
-    instead: "No dyes or added colors; the PM shells are whitened with calcium carbonate. Clear AM capsules, calcium-carbonate-white PM capsules, unflavored and uncolored powder.",
+    instead: "No dyes or added colors: clear AM capsules, PM capsules whitened with calcium carbonate, and an unflavored, uncolored powder.",
   },
   {
     slug: "artificial-flavors",
@@ -113,7 +113,7 @@ export const EXCLUDED_EXCIPIENTS: ExcludedExcipient[] = [
     whyExcluded:
       "Soy is one of the major food allergens that must be declared on US labels, and many people in our community avoid it. It also hides in places people do not expect, such as the lecithin inside a phytosome or the tocopherols protecting an oil.",
     instead:
-      "The quercetin phytosome is made with sunflower lecithin. There are no softgels, so no soybean oil.",
+      "The quercetin phytosome is made with sunflower lecithin. There are no softgels, so no soybean oil. We are still confirming the source of the antioxidants that protect the vitamin D3.",
     links: [{ label: "Quercetin phytosome", href: "/ingredients/quercetin-phytosome" }],
   },
 ];
@@ -157,7 +157,7 @@ export const EXCIPIENT_FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "Does ZebraThrive contain gluten, dairy, soy or corn?",
-    a: "The formula is made without added gelatin, magnesium stearate, titanium dioxide, artificial dyes, citric acid or soy, and we are confirming with suppliers that no raw-material carrier contains citric acid, soy, dairy or carrageenan. We will update this answer as each confirmation comes in. Corn and wheat are not yet on the excluded list: small amounts of maltodextrin arrive with the vitamin D3, the quercetin phytosome and the molybdenum, and their sources are unconfirmed. We will say so plainly until they are.",
+    a: "The formula is made without added gelatin, magnesium stearate, titanium dioxide, artificial dyes, citric acid or soy, and we are confirming with suppliers that no raw-material carrier contains citric acid, soy, dairy or carrageenan. We are also resolving a conflicting lab result on citrate content for the current manganese lot. We will update this answer as each confirmation comes in. Corn and wheat are not yet on the excluded list: small amounts of maltodextrin arrive with the vitamin D3, the quercetin phytosome and the molybdenum, and their sources are unconfirmed. We will say so plainly until they are.",
   },
   {
     q: "Why list carriers of 10 or 20 milligrams?",

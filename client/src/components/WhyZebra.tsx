@@ -22,7 +22,7 @@ export default function WhyZebraThrive() {
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard 
-            title="Physician Grade" 
+            title="cGMP Made" 
             desc="Made in a cGMP facility, with every lot released against written specifications." 
           />
           <FeatureCard 
@@ -30,7 +30,7 @@ export default function WhyZebraThrive() {
             desc="Every ingredient and carrier goes through our review for known mast cell triggers, including how it is made; a few carriers are still being confirmed with suppliers." 
           />
           <FeatureCard 
-            title="Bioavailable" 
+            title="Easy to Start" 
             desc="Capsules plus a powder you can start in small amounts." 
           />
         </div>

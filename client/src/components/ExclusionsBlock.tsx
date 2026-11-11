@@ -43,7 +43,7 @@ export default function ExclusionsBlock() {
             If you have reacted to a supplement, you may have been <em>right</em> about the reaction and still unsure of the cause: it can be worth checking the inactive ingredients as well as the active one. Excipients are the inactive ingredients packed around the active - fillers, binders, coatings, flow agents. Excipients are chosen mainly to make manufacturing work, not to suit a sensitive gut.
           </p>
           <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mt-4">
-            If a magnesium supplement has not agreed with you, the form, the dose and the other ingredients can all play a part, so it helps to check the full ingredient list. The same goes for vitamin C products that also contain citric acid: check the full ingredient list. These eight are excipients that people in our community often say they avoid, so we left them out.
+            If a magnesium supplement has not agreed with you, the form, the dose and the other ingredients can all play a part, so it helps to check the full ingredient list. The same goes for vitamin C products that also contain citric acid: check the full ingredient list. These eight are excipients that people in our community often say they avoid, so we do not add them. For citric acid, soy and carrageenan, we are still confirming with suppliers that none arrives with a raw material or in the capsule shells.
           </p>
         </div>
 

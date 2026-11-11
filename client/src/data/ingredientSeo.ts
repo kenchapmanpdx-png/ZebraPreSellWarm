@@ -46,7 +46,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "nicotinamide-riboside": {
     title: "Nicotinamide Riboside (NR): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Nicotinamide riboside (NR) at 500 mg a day, split AM and PM: how it raises NAD+, why NR chloride was chosen over NMN, the evidence, and safety notes.",
+      "Nicotinamide riboside (NR) at 500 mg a day, split AM and PM: how it raises NAD+, how each batch is checked, the evidence, and safety notes.",
   },
   "pine-bark-extract": {
     title: "Pine Bark Extract (OPCs): Dose, Evidence, Safety | ZebraThrive",
@@ -96,7 +96,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "p5p": {
     title: "P5P (Active Vitamin B6): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "P5P, the coenzyme form of vitamin B6, in the ZebraThrive AM capsule: why this form, how the dose relates to the B6 upper limit, what the evidence shows, and safety. The daily amount will be shown here once it is final.",
+      "P5P, the coenzyme form of vitamin B6, in the ZebraThrive AM capsule: why this form, how the dose relates to the B6 upper limit, what the evidence shows, and safety. The AM capsule provides 3 to 4 mg of vitamin B6 (final amount being set).",
   },
   "r5p": {
     title: "R5P (Active Vitamin B2): Dose, Evidence, Safety | ZebraThrive",

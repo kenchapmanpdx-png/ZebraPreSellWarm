@@ -88,7 +88,7 @@ export default function OurPromise() {
             <div className="border-l-4 border-[#A4613A] pl-6 py-3 bg-white/50 rounded-r-2xl mt-8">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#5A3E2B] mb-3">Why we built this</h2>
               <p className="text-base md:text-lg text-[#4A4540]">
-                We're zebras ourselves, and the existing supplement market wasn't serving us. Generic multivitamins often use forms and excipients our community finds hard to tolerate, and many specialty brands focus on a single concern. So we built one system around the sensitivities this community reports. So we built what we'd want to take ourselves.
+                We're zebras ourselves, and the existing supplement market wasn't serving us. Generic multivitamins often use forms and excipients our community finds hard to tolerate, and many specialty brands focus on a single concern. So we built one system around the sensitivities this community reports, the one we'd want to take ourselves.
               </p>
             </div>
           </div>
@@ -245,7 +245,7 @@ const ALWAYS_DO = [
   },
   {
     title: "Always verify what goes in.",
-    desc: "Before production, each ingredient lot is checked against its Certificate of Analysis and the specifications written into our purchase order, including heavy metals and microbial limits."
+    desc: "Before production, each ingredient lot will be checked against its Certificate of Analysis and the specifications written into our purchase order, including heavy metals and microbial limits."
   },
   {
     title: "Always choose excipients for sensitive systems.",
@@ -274,7 +274,7 @@ const ACCOUNTABILITY = [
   {
     icon: ClipboardList,
     title: "Certificates of Analysis",
-    desc: "Every ingredient lot is checked against its Certificate of Analysis before production, by us or by our manufacturer's quality team. Ask us about any of them."
+    desc: "Every ingredient lot will be checked against its Certificate of Analysis before production, by us or by our manufacturer's quality team. Ask us about any of them."
   },
   {
     icon: Beaker,

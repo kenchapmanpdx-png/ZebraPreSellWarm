@@ -125,7 +125,7 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
   "/contact": {
     title: "Contact Support | ZebraThrive",
     description:
-      "Reach the ZebraThrive team. Product questions, formulation feedback, partnerships, press. We respond within two business days.",
+      "Reach the ZebraThrive team. Product questions, formulation feedback, partnerships, press. We aim to respond within two business days.",
   },
 };
 

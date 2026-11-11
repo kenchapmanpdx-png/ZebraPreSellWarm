@@ -15,7 +15,7 @@ export default function DifferenceSection() {
   const features = [
     {
       icon: <Layers className="w-5 h-5" aria-hidden="true" />,
-      title: "2 Bottles Replace 15",
+      title: "One Daily Routine",
       description: "Our AM capsules, PM capsules and Daily Powder work together as one routine."
     },
     {
