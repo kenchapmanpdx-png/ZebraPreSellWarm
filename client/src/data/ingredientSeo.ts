@@ -29,7 +29,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
       "Luteolin at 140 mg a day from Sophora japonica in the ZebraThrive Daily Powder: what it is, what lab and human studies show, form choice, and safety.",
   },
   "magnesium-bisglycinate": {
-    title: "Magnesium Bisglycinate: Dose, Evidence, Safety | ZebraThrive",
+    title: "Magnesium Bisglycinate (Glycinate): Dose, Evidence | ZebraThrive",
     description:
       "Magnesium bisglycinate, a true chelate, at about 300 mg elemental magnesium a day: why this form, absorption and gut tolerance, evidence, and safety.",
   },
@@ -39,7 +39,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
       "Taurine at 1,500 mg a day in the ZebraThrive Daily Powder: what this amino acid does, why synthetic non-fermented sourcing, the evidence, and safety.",
   },
   "vitamin-c": {
-    title: "Vitamin C (Sodium Ascorbate): Dose and Evidence | ZebraThrive",
+    title: "Buffered Vitamin C (Sodium Ascorbate): Evidence | ZebraThrive",
     description:
       "Buffered sodium ascorbate providing about 1,500 mg vitamin C a day: its role in collagen formation, why this form, the evidence, and interactions.",
   },
@@ -114,7 +114,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
       "Methylcobalamin (vitamin B12) at 1,000 mcg in the ZebraThrive AM capsule: why the methyl form, what deficiency studies show, evidence, and safety.",
   },
   "vitamin-d3": {
-    title: "Vitamin D3 (Vegan, Lichen): Dose, Evidence | ZebraThrive",
+    title: "Vegan Vitamin D3 from Lichen: Dose, Evidence | ZebraThrive",
     description:
       "Vegan vitamin D3 from lichen at 2,000 IU a day, paired with K2: what it does, what the studies show and their limits, sourcing, and safety notes.",
   },
@@ -124,7 +124,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
       "Vitamin K2 as all-trans MK-7 at 100 mcg a day, not natto or soy derived: how it pairs with D3 to route calcium, the evidence, and safety notes.",
   },
   "copper-bisglycinate": {
-    title: "Copper Bisglycinate: Dose, Evidence and Safety | ZebraThrive",
+    title: "Copper Bisglycinate (Glycinate): Dose, Evidence | ZebraThrive",
     description:
       "Copper bisglycinate at 2 mg elemental copper a day: its role as the lysyl oxidase cofactor for collagen cross-linking, the evidence, and safety.",
   },

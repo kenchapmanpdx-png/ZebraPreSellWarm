@@ -63,7 +63,8 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-07" },
   // 2026-11-05: excipient hub added (SEO/GEO audit A13).
   // 2026-11-07: og:type article, JSON-LD datetimes.
-  "/excipients": { published: "2026-11-05", modified: "2026-11-05", structural: "2026-11-07" },
+  // 2026-11-13: FAQ "What are HPMC capsules?" added (keyword retune).
+  "/excipients": { published: "2026-11-05", modified: "2026-11-13", structural: "2026-11-07" },
   // 2026-11-13: cluster hubs drafted (noindex until HUBS_PUBLISHED in clusterHubs.ts).
   // Set both dates to the publish date in the commit that publishes them.
   "/natural-mast-cell-stabilizers": { published: "2026-11-13", modified: "2026-11-13" },
@@ -80,10 +81,12 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-05: Di Stadio 2022 citation corrected (PMID 35450527, 90-day olfactory outcome).
   "luteolin": { published: SITE_LAUNCH, modified: "2026-11-05" },
   // 2026-11-07: unsourced "75% of POTS patients are deficient" removed (decision 2026-11-05).
-  "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-11-07" },
+  // 2026-11-13: FAQ on bisglycinate vs glycinate added; title names the common form (keyword retune).
+  "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-11-13" },
   "taurine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   // 2026-11-05: citation metadata corrected (PMID check).
-  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-05" },
+  // 2026-11-13: title leads with "Buffered Vitamin C" (keyword retune).
+  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-13" },
   "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "pine-bark-extract": { published: "2026-05-11", modified: "2026-10-08" },
   "grape-seed-extract": { published: "2026-05-11", modified: "2026-10-08" },
@@ -95,15 +98,20 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "astaxanthin": { published: SITE_LAUNCH, modified: "2026-11-07" },
   "benfotiamine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "niacinamide": { published: "2026-05-11", modified: "2026-10-08" },
-  "p5p": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-13: first FAQ question reworded to "P5P vs B6" (keyword retune).
+  "p5p": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
   // 2026-11-05: Rooney 2020 citation corrected to the PubMed-indexed paper (PMID 32330571).
   "r5p": { published: "2026-05-11", modified: "2026-11-05" },
-  "methylfolate": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-13: first FAQ question reworded to "Methylfolate vs folic acid" (keyword retune).
+  "methylfolate": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
   "vitamin-b12": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-13: title reads "Vegan Vitamin D3 from Lichen" (keyword retune).
+  "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
+  // 2026-11-13: first FAQ question reworded to "MK-7 vs MK-4 and vitamin K1" (keyword retune).
+  "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
   // 2026-11-05: citation metadata corrected (PMID check).
-  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-05" },
+  // 2026-11-13: title names the common form, copper glycinate (keyword retune).
+  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-13" },
   "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "chromium": { published: "2026-05-11", modified: "2026-10-08" },
   "selenium": { published: SITE_LAUNCH, modified: "2026-10-08" },

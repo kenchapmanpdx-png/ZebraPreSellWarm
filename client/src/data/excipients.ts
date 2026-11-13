@@ -160,6 +160,10 @@ export const EXCIPIENT_FAQ: Array<{ q: string; a: string }> = [
     a: "Because reactions in this community do not scale neatly with milligrams. A carrier you react to matters at 10 mg. Listing every carrier lets you make the call with the full picture instead of trusting a \"clean label\" claim.",
   },
   {
+    q: "What are HPMC capsules?",
+    a: "HPMC stands for hydroxypropyl methylcellulose, also called hypromellose. It is a capsule shell material made from plant cellulose and used in place of gelatin. ZebraThrive uses HPMC shells for the AM and PM capsules, with no carrageenan and no titanium dioxide.",
+  },
+  {
     q: "Are the capsules vegetarian?",
     a: "Yes. Every capsule shell is HPMC (hypromellose), a plant-derived cellulose, with calcium carbonate as the only opacifier on the PM capsules.",
   },
