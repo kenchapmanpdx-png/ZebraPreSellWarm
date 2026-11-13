@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import { vitePrerenderPlugin } from "vite-prerender-plugin";
 import ingredientList from "./scripts/ingredient-routes.json";
+import { CLUSTER_HUBS } from "./client/src/data/clusterHubs";
 
 // All routes prerendered at build time.
 // Root + section pages + 404 + 29 ingredient detail pages = 39 routes.
@@ -14,6 +15,8 @@ const PRERENDER_ROUTES = [
   "/ingredients",
   "/our-promise",
   "/excipients",
+  // Cluster hubs: prerendered always, noindex until HUBS_PUBLISHED (clusterHubs.ts).
+  ...CLUSTER_HUBS.map((h) => h.path),
   "/preorder",
   "/privacy",
   "/terms",

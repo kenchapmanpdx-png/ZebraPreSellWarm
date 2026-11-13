@@ -19,6 +19,7 @@ import { INGREDIENT_SEO } from "./data/ingredientSeo";
 import { datesFor, isoDateTime } from "./data/pageDates";
 import { buildReferences } from "./data/references";
 import { EXCIPIENT_FAQ } from "./data/excipients";
+import { HUBS_PUBLISHED, hubForPath } from "./data/clusterHubs";
 
 const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
@@ -132,6 +133,10 @@ const STATIC_ROUTES: Record<string, RouteMeta> = {
 function metaForRoute(url: string): RouteMeta {
   if (STATIC_ROUTES[url]) return STATIC_ROUTES[url];
 
+  // Cluster hubs (client/src/data/clusterHubs.ts)
+  const hub = hubForPath(url);
+  if (hub) return { title: hub.title, description: hub.description };
+
   // /ingredients/:slug
   const ingMatch = url.match(/^\/ingredients\/([a-z0-9-]+)\/?$/);
   if (ingMatch) {
@@ -223,6 +228,8 @@ function breadcrumbList(url: string, currentName: string): Record<string, unknow
     items.push({ "@type": "ListItem", position: 2, name: "Ingredients" });
   } else if (url === "/excipients") {
     items.push({ "@type": "ListItem", position: 2, name: "Excipients" });
+  } else if (hubForPath(url)) {
+    items.push({ "@type": "ListItem", position: 2, name: currentName });
   } else if (ingMatch) {
     items.push({
       "@type": "ListItem",
@@ -367,6 +374,27 @@ function articleForExcipients(description: string): Record<string, unknown> {
   };
 }
 
+// Cluster hubs: same editorial shape as /excipients (byline, date, FAQ).
+function articleForHub(path: string, headline: string, description: string): Record<string, unknown> {
+  const url = `${BASE}${path}`;
+  const dates = datesFor(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": url,
+    url,
+    mainEntityOfPage: url,
+    headline,
+    description,
+    inLanguage: "en-US",
+    isPartOf: { "@id": WEBSITE_ID },
+    author: AUTHOR,
+    publisher: { "@id": `${BASE}/#organization` },
+    ...(dates ? articleDates(dates) : {}),
+    image: HERO_IMAGE,
+  };
+}
+
 function schemaElementsForRoute(url: string): HeadElement[] {
   const out: HeadElement[] = [];
 
@@ -385,6 +413,24 @@ function schemaElementsForRoute(url: string): HeadElement[] {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         mainEntity: EXCIPIENT_FAQ.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }),
+    );
+  }
+
+  const hub = hubForPath(url);
+  if (hub) {
+    const bc = breadcrumbList(url, hub.crumb);
+    if (bc) out.push(jsonLdElement(bc));
+    out.push(jsonLdElement(articleForHub(hub.path, hub.h1, hub.description)));
+    out.push(
+      jsonLdElement({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: hub.faq.map((f) => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -444,7 +490,8 @@ export async function prerender(data: { url: string }) {
   const isNotFound = url === "/404"; // copied to dist/public/404.html at build; served with HTTP 404
   const isHidden =
     url === "/the-how" || // 2026-05-12: hidden until ready, unindexed if URL is visited directly
-    url === "/preorder"; // 2026-10-07: reservation page kept live but out of search until rebuilt
+    url === "/preorder" || // 2026-10-07: reservation page kept live but out of search until rebuilt
+    (Boolean(hubForPath(url)) && !HUBS_PUBLISHED); // cluster hubs: noindex until the attorney pass (clusterHubs.ts)
 
   const elements = new Set<HeadElement>();
   if (!isNotFound) {
@@ -466,7 +513,7 @@ export async function prerender(data: { url: string }) {
   }
   const isIngredientPage = /^\/ingredients\/[a-z0-9-]+\/?$/.test(url);
   // Pages carrying Article JSON-LD are articles for Open Graph too.
-  const isArticlePage = isIngredientPage || url === "/our-promise" || url === "/excipients";
+  const isArticlePage = isIngredientPage || url === "/our-promise" || url === "/excipients" || Boolean(hubForPath(url));
   elements.add({ type: "meta", props: { property: "og:type", content: isArticlePage ? "article" : "website" } });
   const ingSlug = isIngredientPage ? url.match(/^\/ingredients\/([a-z0-9-]+)/)![1] : null;
   const shareImage = ingSlug ? ingredientImage(ingSlug) : HERO_IMAGE;

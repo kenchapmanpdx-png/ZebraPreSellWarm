@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { ArrowUp } from "lucide-react";
 import { COPYRIGHT_YEAR } from "@/lib/siteDates";
 import { datesFor } from "@/data/pageDates";
+import { CLUSTER_HUBS, HUBS_PUBLISHED } from "@/data/clusterHubs";
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -41,6 +42,9 @@ export default function Footer() {
                 <li><a href="/#story" className="hover:text-white transition-colors">Our Story</a></li>
                 <li><Link href="/ingredients" className="hover:text-white transition-colors">Ingredients</Link></li>
                 <li><Link href="/excipients" className="hover:text-white transition-colors">Excipients</Link></li>
+                {HUBS_PUBLISHED && CLUSTER_HUBS.map((h) => (
+                  <li key={h.path}><Link href={h.path} className="hover:text-white transition-colors">{h.crumb}</Link></li>
+                ))}
                 <li><Link href="/our-promise" className="hover:text-white transition-colors">The Constitution</Link></li>
               </ul>
             </nav>

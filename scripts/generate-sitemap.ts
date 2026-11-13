@@ -17,6 +17,7 @@ import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import ingredientList from "./ingredient-routes.json" with { type: "json" };
 import { sitemapLastmod } from "../client/src/data/pageDates";
+import { CLUSTER_HUBS, HUBS_PUBLISHED } from "../client/src/data/clusterHubs";
 
 const HOST = "https://www.wellnessforzebras.com";
 
@@ -41,6 +42,8 @@ const CORE_ROUTES: Route[] = [
 
 const routes: Route[] = [
   ...CORE_ROUTES,
+  // Cluster hubs enter the sitemap only once published (clusterHubs.ts).
+  ...(HUBS_PUBLISHED ? CLUSTER_HUBS.map((h) => ({ loc: h.path, changefreq: "monthly", priority: "0.8" })) : []),
   ...(ingredientList as Array<{ slug: string }>).map((i) => ({
     loc: `/ingredients/${i.slug}`,
     changefreq: "monthly",

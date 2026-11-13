@@ -64,6 +64,10 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   // 2026-11-05: excipient hub added (SEO/GEO audit A13).
   // 2026-11-07: og:type article, JSON-LD datetimes.
   "/excipients": { published: "2026-11-05", modified: "2026-11-05", structural: "2026-11-07" },
+  // 2026-11-13: cluster hubs drafted (noindex until HUBS_PUBLISHED in clusterHubs.ts).
+  // Set both dates to the publish date in the commit that publishes them.
+  "/natural-mast-cell-stabilizers": { published: "2026-11-13", modified: "2026-11-13" },
+  "/supplements-for-hypermobility": { published: "2026-11-13", modified: "2026-11-13" },
   "/contact": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/privacy": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/terms": { published: SITE_LAUNCH, modified: "2026-10-07" },

@@ -16,6 +16,8 @@ import IngredientPage from "./pages/IngredientPage";
 import PreorderPage from "./pages/PreorderPage";
 import OurPromise from "./pages/OurPromise";
 import Excipients from "@/pages/Excipients";
+import ClusterHubPage from "@/pages/ClusterHubPage";
+import { CLUSTER_HUBS } from "@/data/clusterHubs";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Shipping from "./pages/Shipping";
@@ -53,6 +55,11 @@ function Router() {
       <Route path="/preorder" component={PreorderPage} />
       <Route path="/our-promise" component={OurPromise} />
       <Route path="/excipients" component={Excipients} />
+      {CLUSTER_HUBS.map((h) => (
+        <Route key={h.path} path={h.path}>
+          <ClusterHubPage hub={h} />
+        </Route>
+      ))}
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/shipping" component={Shipping} />
