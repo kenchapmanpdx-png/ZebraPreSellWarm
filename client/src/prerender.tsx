@@ -19,7 +19,7 @@ import { INGREDIENT_SEO } from "./data/ingredientSeo";
 import { datesFor, isoDateTime } from "./data/pageDates";
 import { buildReferences } from "./data/references";
 import { EXCIPIENT_FAQ } from "./data/excipients";
-import { HUBS_PUBLISHED, hubForPath } from "./data/clusterHubs";
+import { hubForPath } from "./data/clusterHubs";
 
 const BASE = "https://www.wellnessforzebras.com";
 const BRAND_NAME = "ZebraThrive";
@@ -491,7 +491,7 @@ export async function prerender(data: { url: string }) {
   const isHidden =
     url === "/the-how" || // 2026-05-12: hidden until ready, unindexed if URL is visited directly
     url === "/preorder" || // 2026-10-07: reservation page kept live but out of search until rebuilt
-    (Boolean(hubForPath(url)) && !HUBS_PUBLISHED); // cluster hubs: noindex until the attorney pass (clusterHubs.ts)
+    hubForPath(url)?.published === false; // cluster hubs: noindex until the attorney pass (clusterHubs.ts)
 
   const elements = new Set<HeadElement>();
   if (!isNotFound) {

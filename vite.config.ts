@@ -15,7 +15,7 @@ const PRERENDER_ROUTES = [
   "/ingredients",
   "/our-promise",
   "/excipients",
-  // Cluster hubs: prerendered always, noindex until HUBS_PUBLISHED (clusterHubs.ts).
+  // Cluster hubs: prerendered always, noindex until each hub is published (clusterHubs.ts).
   ...CLUSTER_HUBS.map((h) => h.path),
   "/preorder",
   "/privacy",

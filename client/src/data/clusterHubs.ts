@@ -6,11 +6,11 @@
  * that topic (triadPlain in ingredients.ts). The hubs add no efficacy claims
  * of their own: only the framing copy in this file is new.
  *
- * DRAFT GATE: HUBS_PUBLISHED stays false until the attorney pass on condition
- * wording (owner item L3) is done. While false the hubs are built but served
- * noindex, left out of the sitemap, and not linked from the footer. To
- * publish: set it to true and bump the two hub dates in pageDates.ts in the
- * same commit.
+ * DRAFT GATE: each hub has its own `published` flag, false until the attorney
+ * pass on condition wording (owner item L3) clears that hub. While false the
+ * hub is built but served noindex, left out of the sitemap, and not linked
+ * from the footer. To publish one: set its flag to true and bump its dates in
+ * pageDates.ts in the same commit.
  *
  * Grouping is editorial: it follows what each ingredient page says about its
  * own evidence (direct data, cofactor role, or indirect). It is not a ranking
@@ -21,11 +21,10 @@
  * No em or en dashes (brand voice).
  */
 
-export const HUBS_PUBLISHED = false;
-
 export type HubGroup = { heading: string; note: string; ids: string[] };
 
 export type ClusterHub = {
+  published: boolean;
   path: string;
   crumb: string;
   eyebrow: string;
@@ -35,7 +34,7 @@ export type ClusterHub = {
   bluf: string;
   intro: string;
   limits: string;
-  triadKey: "mcas" | "heds";
+  triadKey: "mcas" | "heds" | "pots";
   groups: HubGroup[];
   faq: { q: string; a: string }[];
 };
@@ -47,6 +46,7 @@ const EXCIPIENT_FAQ_ITEM = {
 
 export const CLUSTER_HUBS: ClusterHub[] = [
   {
+    published: false,
     path: "/natural-mast-cell-stabilizers",
     crumb: "Natural mast cell stabilizers",
     eyebrow: "Evidence index",
@@ -118,6 +118,7 @@ export const CLUSTER_HUBS: ClusterHub[] = [
     ],
   },
   {
+    published: false,
     path: "/supplements-for-hypermobility",
     crumb: "Supplements for hypermobility",
     eyebrow: "Evidence index",
@@ -191,6 +192,80 @@ export const CLUSTER_HUBS: ClusterHub[] = [
       {
         q: "Was this research done in people with hypermobility?",
         a: "Mostly not. Most studies were done in cells, animals, or people without a hypermobility diagnosis. Each ingredient page states what kind of study each finding comes from.",
+      },
+      EXCIPIENT_FAQ_ITEM,
+    ],
+  },
+  {
+    published: false,
+    path: "/supplements-for-pots",
+    crumb: "Supplements for POTS",
+    eyebrow: "Evidence index",
+    h1: "Supplements for POTS: what the evidence shows",
+    title: "Supplements for POTS: The Evidence | ZebraThrive",
+    description:
+      "What research says about nutrients and POTS: circulation, energy production and nervous system cofactors, where each study was done, and the limits.",
+    bluf:
+      "No supplement treats postural orthostatic tachycardia syndrome (POTS). Research does describe nutrients studied for circulation, energy production, and the nervous system, but mostly in people without POTS, in animals, or in cells. This page sorts every ZebraThrive ingredient by the role its evidence page describes and links to the full evidence for each.",
+    intro:
+      "Lists of supplements for POTS rarely say what each one is supposed to do or where the evidence comes from. Each entry below gives the dose in the ZebraThrive system and what that ingredient's own evidence page says about POTS, in plain language. The entries are grouped by role, not by how well anything works.",
+    limits:
+      "None of these ingredients is approved to diagnose, treat, cure, or prevent any disease. Very little of this research was done in people with POTS: most comes from other groups of people, animals, or cells, and doses used in studies often differ from the doses listed here. If you take medication for POTS, such as a beta-blocker or ivabradine, check the interactions section on each ingredient page and talk with your clinician before adding anything.",
+    triadKey: "pots",
+    groups: [
+      {
+        heading: "Ingredients with circulation or POTS-specific research",
+        note:
+          "Studies on these ingredients measured circulation outcomes such as leg swelling, venous return, heart rate variability, or blood vessel function, or looked at POTS directly. Most were done in people without POTS.",
+        ids: ["magnesium-bisglycinate", "pine-bark-extract", "grape-seed-extract", "taurine", "vitamin-c", "vitamin-d3"],
+      },
+      {
+        heading: "Energy production and blood sugar",
+        note:
+          "Nutrients involved in mitochondrial energy production and steady blood sugar. Their evidence pages relate these to the fatigue and post-meal symptoms that often accompany POTS.",
+        ids: [
+          "benfotiamine",
+          "nicotinamide-riboside",
+          "niacinamide",
+          "r5p",
+          "manganese-bisglycinate",
+          "chromium",
+          "biotin",
+        ],
+      },
+      {
+        heading: "Autonomic nervous system and neurotransmitters",
+        note:
+          "Cofactors for making and clearing the neurotransmitters involved in autonomic signaling, plus L-theanine, which acts on the nervous system directly.",
+        ids: ["l-theanine", "p5p", "methylfolate", "vitamin-b12", "pantothenic-acid"],
+      },
+      {
+        heading: "Indirect and foundational roles",
+        note:
+          "These ingredients are in the formula for other reasons. Their evidence pages describe an indirect link to POTS, or say plainly that there is little.",
+        ids: [
+          "palmitoylethanolamide",
+          "luteolin",
+          "quercetin-phytosome",
+          "astaxanthin",
+          "zinc-carnosine",
+          "chlorogenic-acid",
+          "vitamin-k2",
+          "copper-bisglycinate",
+          "molybdenum",
+          "selenium",
+          "boron",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Can supplements treat POTS?",
+        a: "No. No supplement is approved to treat POTS, and nothing on this page is intended to diagnose, treat, cure, or prevent any disease. The research here concerns nutrients studied for circulation, energy production, and nervous system function, mostly in people without POTS.",
+      },
+      {
+        q: "Is this an electrolyte or salt supplement?",
+        a: "No. ZebraThrive is a capsule and powder system of vitamins, minerals, and plant compounds, not an electrolyte drink mix. Fluid and salt intake for POTS is something to set with your clinician.",
       },
       EXCIPIENT_FAQ_ITEM,
     ],

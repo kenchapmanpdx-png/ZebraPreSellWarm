@@ -65,10 +65,11 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   // 2026-11-07: og:type article, JSON-LD datetimes.
   // 2026-11-13: FAQ "What are HPMC capsules?" added (keyword retune).
   "/excipients": { published: "2026-11-05", modified: "2026-11-13", structural: "2026-11-07" },
-  // 2026-11-13: cluster hubs drafted (noindex until HUBS_PUBLISHED in clusterHubs.ts).
-  // Set both dates to the publish date in the commit that publishes them.
+  // 2026-11-13: cluster hubs drafted (noindex until published in clusterHubs.ts).
+  // Set a hub's dates to its publish date in the commit that publishes it.
   "/natural-mast-cell-stabilizers": { published: "2026-11-13", modified: "2026-11-13" },
   "/supplements-for-hypermobility": { published: "2026-11-13", modified: "2026-11-13" },
+  "/supplements-for-pots": { published: "2026-11-13", modified: "2026-11-13" },
   "/contact": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/privacy": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/terms": { published: SITE_LAUNCH, modified: "2026-10-07" },
