@@ -95,7 +95,7 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-13" },
   "chlorogenic-acid": { published: "2026-05-11", modified: "2026-10-08" },
   "l-theanine": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-07: fludrocortisone regraded LOW -> NO DATA (decision 2026-11-05).
   "astaxanthin": { published: SITE_LAUNCH, modified: "2026-11-07" },
   "benfotiamine": { published: SITE_LAUNCH, modified: "2026-10-08" },
@@ -105,7 +105,7 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-05: Rooney 2020 citation corrected to the PubMed-indexed paper (PMID 32330571).
   "r5p": { published: "2026-05-11", modified: "2026-11-05" },
   // 2026-11-13: first FAQ question reworded to "Methylfolate vs folic acid" (keyword retune).
-  "methylfolate": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
+  "methylfolate": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-14" },
   "vitamin-b12": { published: SITE_LAUNCH, modified: "2026-10-08" },
   // 2026-11-13: title reads "Vegan Vitamin D3 from Lichen" (keyword retune).
   "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
@@ -119,9 +119,9 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "selenium": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "pantothenic-acid": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "biotin": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "boron": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  "boron": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-05: unverifiable "Kohn 2020" citation replaced (PMID 37987446); unsupported 2-4 week timeline removed.
-  "molybdenum": { published: SITE_LAUNCH, modified: "2026-11-05" },
+  "molybdenum": { published: SITE_LAUNCH, modified: "2026-11-14" },
 };
 
 /** Dates for a route path ("/", "/privacy", "/ingredients/niacinamide"). */

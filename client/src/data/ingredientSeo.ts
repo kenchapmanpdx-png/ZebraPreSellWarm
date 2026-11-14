@@ -106,7 +106,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "methylfolate": {
     title: "Methylfolate (5-MTHF): Dose, Form, Evidence | ZebraThrive",
     description:
-      "Methylfolate as (6S)-5-MTHF calcium salt at 800 mcg a day: why not folic acid or the glucosamine salt, the MTHFR context, evidence, and safety.",
+      "L-methylfolate as (6S)-5-MTHF calcium salt at 800 mcg a day: why not folic acid or the glucosamine salt, the MTHFR context, evidence, and safety.",
   },
   "vitamin-b12": {
     title: "Methylcobalamin (Vitamin B12): Dose, Evidence | ZebraThrive",
