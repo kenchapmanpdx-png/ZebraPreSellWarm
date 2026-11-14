@@ -114,6 +114,10 @@ export const CLUSTER_HUBS: ClusterHub[] = [
         q: "Does a result in a lab study mean it works in people?",
         a: "Not on its own. Cell and animal studies show that a mechanism exists. They do not show the size of any effect in a person, and the concentrations used in a dish are sometimes higher than a supplement can reach in the blood. Each ingredient page states what kind of study each finding comes from.",
       },
+      {
+        q: "Does ZebraThrive contain DAO?",
+        a: "No. DAO supplements address histamine intolerance from low DAO enzyme activity, which is a different problem from mast cell activation. Most DAO products are also made from pork kidney. The formula does include copper and vitamin C, listed under histamine clearance cofactors above.",
+      },
       EXCIPIENT_FAQ_ITEM,
     ],
   },
@@ -125,7 +129,7 @@ export const CLUSTER_HUBS: ClusterHub[] = [
     h1: "Supplements for hypermobility: what the evidence shows",
     title: "Supplements for Hypermobility: The Evidence | ZebraThrive",
     description:
-      "What research says about nutrients and connective tissue in hypermobility: collagen cofactors, matrix enzymes, bone and joint support, and the limits.",
+      "What research says about nutrients and connective tissue in hypermobility and Ehlers-Danlos syndromes: collagen cofactors, matrix enzymes, and the limits.",
     bluf:
       "No supplement corrects joint hypermobility or changes how connective tissue is built. Research does describe nutrients that collagen formation depends on, and compounds that affect the enzymes that break collagen down, mostly in cell and animal studies. This page sorts every ZebraThrive ingredient by its connective tissue role and links to the full evidence for each.",
     intro:

@@ -91,7 +91,8 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "pine-bark-extract": { published: "2026-05-11", modified: "2026-10-08" },
   "grape-seed-extract": { published: "2026-05-11", modified: "2026-10-08" },
-  "quercetin-phytosome": { published: "2026-05-11", modified: "2026-10-08" },
+  // 2026-11-13: two FAQs added on mast cell and histamine evidence (keyword retune; restate existing page copy).
+  "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-13" },
   "chlorogenic-acid": { published: "2026-05-11", modified: "2026-10-08" },
   "l-theanine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-10-08" },
