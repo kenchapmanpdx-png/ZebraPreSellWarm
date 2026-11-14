@@ -84,7 +84,7 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   out.push("");
 
   if (ing.atAGlance?.keyBenefits?.length) {
-    out.push("## Key benefits");
+    out.push("## Key points");
     out.push("");
     for (const b of ing.atAGlance.keyBenefits) out.push(`- ${b}`);
     out.push("");
@@ -122,24 +122,27 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
   }
 
   if (ing.triad) {
-    out.push("## Condition-specific notes");
+    out.push("## Notes for people with hEDS, POTS or MCAS");
     out.push("");
-    if (ing.triad.mcas) {
+    const mcasNote = ing.triadPlain?.mcas || ing.triad.mcas;
+    if (mcasNote) {
       out.push("### MCAS (Mast Cell Activation Syndrome)");
       out.push("");
-      out.push(ing.triad.mcas);
+      out.push(mcasNote);
       out.push("");
     }
-    if (ing.triad.heds) {
+    const hedsNote = ing.triadPlain?.heds || ing.triad.heds;
+    if (hedsNote) {
       out.push("### hEDS (hypermobile Ehlers-Danlos Syndrome)");
       out.push("");
-      out.push(ing.triad.heds);
+      out.push(hedsNote);
       out.push("");
     }
-    if (ing.triad.pots) {
+    const potsNote = ing.triadPlain?.pots || ing.triad.pots;
+    if (potsNote) {
       out.push("### POTS (Postural Orthostatic Tachycardia Syndrome)");
       out.push("");
-      out.push(ing.triad.pots);
+      out.push(potsNote);
       out.push("");
     }
   }
@@ -187,8 +190,10 @@ function ingredientMarkdown(slug: string, ing: IngredientData): string {
     for (const block of ing.research) {
       out.push(`### ${block.outcome}`);
       out.push("");
-      out.push(block.summary);
-      out.push("");
+      if (block.summary) {
+        out.push(block.summary);
+        out.push("");
+      }
       for (const s of block.studies) {
         const refN = refFor(s.pmid);
         const ref = refN !== undefined ? `[${refN}] ` : "";

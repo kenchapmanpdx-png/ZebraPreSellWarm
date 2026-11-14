@@ -67,7 +67,7 @@ export default function Contact() {
       trackGa("contact_form_submit");
       toast({
         title: "Message sent",
-        description: "Thanks for reaching out. We respond within two business days.",
+        description: "Thanks for reaching out. We aim to respond within two business days.",
       });
       setName("");
       setEmail("");
@@ -181,7 +181,7 @@ export default function Contact() {
                 <CheckCircle className="w-14 h-14 text-[#1D4526] mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-2xl font-serif font-bold text-[#0F2A22] mb-2">Message sent</h2>
                 <p className="text-[#3D3733]">
-                  Thanks for reaching out. We respond within two business days.
+                  Thanks for reaching out. We aim to respond within two business days.
                 </p>
               </div>
             )}

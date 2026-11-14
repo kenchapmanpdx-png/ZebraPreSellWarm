@@ -21,25 +21,25 @@ const stats = [
     target: 29,
     suffix: '',
     label: 'Active ingredients',
-    blurb: 'Each one mapped to a published mechanism. None included for marketing.',
+    blurb: 'Each one chosen for a published mechanism, with the evidence level stated on its ingredient page. None included for marketing.',
   },
   {
     target: 100,
     suffix: '%',
-    label: 'Lot-verified',
-    blurb: 'Every ingredient lot checked against its Certificate of Analysis before production.',
+    label: 'Lots checked before production',
+    blurb: 'Every ingredient lot will be checked against its Certificate of Analysis before production.',
   },
   {
     target: 14,
     suffix: ' paths',
-    label: 'Mechanism map',
-    blurb: 'From MMP inhibition to mast cell stabilization to TIMP support.',
+    label: 'Lab-studied mechanisms',
+    blurb: 'Mechanisms studied in lab research, from collagen-degrading enzymes to mast cells; the human evidence for each is on its ingredient page.',
   },
   {
     target: 0,
-    suffix: ' hidden',
-    label: 'Excipients',
-    blurb: 'Every excipient listed, down to the carriers some vitamins arrive on.',
+    suffix: '',
+    label: 'Proprietary blends',
+    blurb: 'Every ingredient and dose is disclosed. Every excipient and carrier we have confirmed is listed, and we name the ones still being confirmed.',
   },
 ];
 
@@ -129,7 +129,7 @@ export default function BrandByNumbers() {
             By the numbers
           </p>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight max-w-3xl mx-auto">
-            Built on published mechanisms, verified lots and{' '}
+            Built on published mechanisms, lot checks and{' '}
             <span className="text-[#B36B4D] italic font-normal">disclosed excipients</span>.
           </h2>
           <p className="mt-5 text-[#5D5752] text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed">

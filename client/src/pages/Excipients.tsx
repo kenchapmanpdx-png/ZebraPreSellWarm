@@ -67,7 +67,7 @@ export default function Excipients() {
               The eight excipients ZebraThrive excludes
             </h2>
             <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mb-8">
-              These are the excipients our community reports reacting to most. Each entry says what the excipient does,
+              These are excipients that people in our community often say they avoid. Each entry says what the excipient does,
               why it is out, and what the formula uses instead.
             </p>
             <ul className="flex flex-wrap gap-2.5 mb-10" aria-label="Excluded excipients">
@@ -132,7 +132,7 @@ export default function Excipients() {
               The excipients ZebraThrive does use
             </h2>
             <p className="text-base md:text-lg text-[#3D3733] leading-relaxed mb-6">
-              Five, all listed on the label. Nothing is added for color, flavor, sweetness or shelf appearance.
+              Six, each listed in the table below and planned for the label's Other ingredients line. Nothing is added for flavor or sweetness, and the only whitening is calcium carbonate on the PM shells, used in place of titanium dioxide.
             </p>
             <div tabIndex={0} role="region" aria-label="Excipients ZebraThrive uses" className="overflow-x-auto rounded-2xl border border-[#3D3733]/10 bg-white/70">
               <table className="w-full text-left text-sm md:text-base">
@@ -225,7 +225,7 @@ export default function Excipients() {
           {/* Related + CTA */}
           <section className="p-8 md:p-10 bg-[#0F2A22] text-[#EBE8E1] rounded-[2rem] shadow-xl">
             <h2 className="text-2xl md:text-3xl font-serif font-bold !text-[#EBE8E1] mb-3">
-              Every active and every excipient, documented
+              Every active and every confirmed excipient, documented
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-[#EBE8E1]/85 mb-8">
               The ingredient pages list form, dose, evidence and the excipients to avoid for each active. The

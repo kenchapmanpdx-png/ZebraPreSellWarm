@@ -199,7 +199,7 @@ export default function PreorderPage() {
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />
-                    <span>No magnesium stearate, titanium dioxide, or citric acid</span>
+                    <span>No added magnesium stearate, titanium dioxide or citric acid</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-3" aria-hidden="true" />

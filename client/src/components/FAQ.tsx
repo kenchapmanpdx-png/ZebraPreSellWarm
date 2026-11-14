@@ -19,42 +19,42 @@ export default function FAQ() {
     {
       icon: Sparkles,
       question: "What makes ZebraThrive actually different?",
-      answer: "Most supplements just try to give you 'more collagen.' But healthy connective tissue depends on a balance between building collagen and breaking it down, and enzymes called MMPs handle the breaking down. We include ingredients that support a healthy balance of that turnover and help protect the collagen you already have, alongside the cofactors your body uses to build new collagen."
+      answer: "Many supplements focus on adding collagen. Healthy connective tissue depends on a balance between building collagen and breaking it down, and enzymes called MMPs handle the breaking down. We include the cofactors your body uses to build new collagen, plus ingredients studied in lab research for effects on collagen turnover."
     },
     {
       icon: Droplets,
       question: "How should I start taking these if my system is reactive?",
-      answer: "We know our community is highly sensitive, so we designed these for a gradual start. You don't have to start with all three capsules on day one; you can start with a single capsule to give your body a real chance to adjust. With our powder, you can even start with a tiny sprinkle. This 'low and slow' approach prevents overwhelming your system."
+      answer: "We know our community is highly sensitive, so we designed these for a gradual start. You don't have to start with all three capsules on day one; you can start with a single capsule to give your body a real chance to adjust. With our powder, you can even start with a tiny sprinkle. Starting low and going slow lets you see how your body responds to each step."
     },
     {
       icon: Award,
       question: "Do you use branded ingredients or generic forms?",
-      answer: "Mostly generic. Most of the formula uses generic forms with strict COA verification, because for most ingredients the right form and dose matter more than the brand name. We do use one branded ingredient: Quercefit (quercetin phytosome), because plain quercetin has terrible absorption (around 1-2%) and the phytosome form is one of the few patented delivery systems with the human data to back it up. Everywhere else, we specify the chemical form (e.g., magnesium bisglycinate, methylcobalamin B12, sodium ascorbate) and source from manufacturers that publish full Certificates of Analysis."
+      answer: "Mostly generic. Most of the formula uses generic forms, checked against written specifications by our cGMP manufacturer, because for most ingredients the right form and dose matter more than the brand name. We do use one branded ingredient: Quercefit (quercetin phytosome), because plain quercetin is poorly absorbed and the phytosome form raised blood quercetin about 20 times in human studies. Everywhere else, we specify the chemical form (for example magnesium bisglycinate, methylcobalamin B12, sodium ascorbate), and each lot is released against a Certificate of Analysis."
     },
     {
       icon: Microscope,
       question: "How do I know these ingredients actually do anything?",
-      answer: "We don't pick ingredients based on lab dishes; we look at the 'therapeutic dose' used in real human clinical studies. We ensure that the amount you swallow is high enough to actually reach your bloodstream and stay there long enough to work. If an ingredient doesn't pass this 'real world' absorption test, it doesn't make it into our formula."
+      answer: "Where human studies exist, we use them to set the dose. Where the evidence is mainly from lab research, we say so on the ingredient page. For each ingredient, we compare the blood levels reached in human studies with the levels used in lab research, and we say on the ingredient page when they do not match. "
     },
     {
       icon: Clock,
       question: "Is this a permanent fix for my connective tissue?",
-      answer: "No. Nothing changes your genes, and this is not a treatment for any condition. Our goal is to support your body's normal collagen maintenance: helping protect existing collagen and supporting healthy new collagen formation. It's about a steadier daily foundation, not a miracle cure."
+      answer: "No. Nothing changes your genes, and this is not a treatment for any condition. Our goal is to support your body's normal collagen formation, with vitamin C and copper as cofactors. It's about a steadier daily foundation, not a miracle cure."
     },
     {
       icon: Pill,
       question: "Can I take this with my POTS or MCAS medications?",
-      answer: "We checked every ingredient against seven medications common in POTS and MCAS: metoprolol, propranolol, ivabradine, fludrocortisone, midodrine, hydroxyzine, and famotidine. For most pairs there is no human data at all, which means unknown, not safe. Where there is a signal, it is listed on that ingredient's page. The two strongest: vitamin C lowered propranolol blood levels in a small study, and famotidine reduces zinc absorption from zinc carnosine. Magnesium should also be spaced away from thyroid medication. We generally recommend a 2-hour window between your medications and supplements, though for famotidine and zinc that may not be enough. We provide a full ingredient breakdown that you can take directly to your doctor to make sure it fits your specific plan."
+      answer: "We checked every ingredient against seven medications common in POTS and MCAS: metoprolol, propranolol, ivabradine, fludrocortisone, midodrine, hydroxyzine, and famotidine. For most pairs there is no human data at all, which means unknown, not safe. Where there is a signal, it is listed on that ingredient's page. The strongest signal: vitamin C lowered propranolol blood levels in a small study. Taurine, grape seed and quercetin may add to the heart rate or blood pressure effects of beta-blockers and ivabradine, or work against midodrine and fludrocortisone. Famotidine also reduces zinc absorption from zinc carnosine. We generally recommend a 2-hour window between your medications and supplements. For thyroid medication, keep at least 4 hours between it and the magnesium and chromium in this formula. For famotidine and zinc, spacing may not be enough. We provide a full ingredient breakdown that you can take directly to your doctor to make sure it fits your specific plan."
     },
     {
       icon: Sun,
       question: "Why is it split into a Morning, Evening, and Daily Powder system?",
-      answer: "Your body needs different support at 8 AM than it does at 8 PM. The AM capsules (3 per day) carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, and the copper and manganese used for collagen cross-linking. The PM capsules (3 per day) carry L-theanine, astaxanthin, pantothenic acid, biotin, selenium, boron, and molybdenum. NR, pine bark, grape seed, and zinc carnosine are split across both. The Daily Powder (about 7.7 g a day, in an AM and a PM scoop) carries the gram-scale ingredients: magnesium, vitamin C, taurine, PEA, Quercefit, chlorogenic acid, and luteolin. It is titratable from a sprinkle, which matters if your system is reactive or if you have slow digestion or gastroparesis."
+      answer: "We split the formula across the day so each dose is easier to take. The AM capsules (3 per day) carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, copper for collagen cross-linking, and manganese. The PM capsules (3 per day) carry L-theanine, astaxanthin, pantothenic acid, biotin, selenium, boron, and molybdenum. NR, pine bark, grape seed, and zinc carnosine are split across both. The Daily Powder (about 7.7 g a day, in an AM and a PM scoop) carries the gram-scale ingredients: magnesium, vitamin C, taurine, PEA, Quercefit, chlorogenic acid, and luteolin. You can start the powder with a small sprinkle and increase gradually."
     },
     {
       icon: ShieldOff,
       question: "Does this contain common triggers like gluten or dairy?",
-      answer: "We formulate without gluten, dairy, soy, gelatin, magnesium stearate, titanium dioxide, citric acid, carrageenan, and artificial dyes. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few vitamins arrive on small carriers, and we list every one on our Promise page, including the maltodextrin on the vitamin D3, whose source we are confirming with our manufacturer."
+      answer: "We formulate without gelatin, magnesium stearate, titanium dioxide, added carrageenan and artificial dyes. We are still confirming with suppliers that no carrier contains dairy, soy-derived tocopherols or citric acid, and that the capsule shells contain no carrageenan. The capsules are plant-based HPMC rather than bovine gelatin, which can carry alpha-gal. The flow agents are rice hull concentrate and L-leucine. A few ingredients arrive on carriers, and we list them on our Promise page, including maltodextrin with the vitamin D3, the quercetin phytosome and the molybdenum, whose sources we are confirming. A few carrier details, such as the astaxanthin beadlet and selenium premix, are still being confirmed with suppliers. Until they are confirmed we do not claim corn-free, wheat-free or gluten-free."
     }
   ];
 
@@ -82,7 +82,7 @@ export default function FAQ() {
             Common questions about <span className="text-[#B36B4D] italic font-normal">ZebraThrive</span>
           </h2>
           <p className="text-[#6B655F] text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
-            No fluff. Just the facts on how we protect your stability and support your system.
+            No fluff. Just the facts on what is inside, how to start, and how it fits with your medications.
           </p>
         </div>
 

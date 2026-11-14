@@ -112,7 +112,10 @@ function shortBlurb(text: string | undefined, maxChars = 220): string {
   if (cleaned.length <= maxChars) return cleaned;
   const truncated = cleaned.slice(0, maxChars);
   const lastPeriod = truncated.lastIndexOf(". ");
-  if (lastPeriod > maxChars * 0.55) return truncated.slice(0, lastPeriod + 1);
+  if (lastPeriod > 0) return truncated.slice(0, lastPeriod + 1);
+  const firstEnd = cleaned.indexOf(". ");
+  if (firstEnd > 0 && firstEnd < maxChars * 1.5) return cleaned.slice(0, firstEnd + 1);
+  if (cleaned.length <= maxChars * 1.5) return cleaned;
   const lastSpace = truncated.lastIndexOf(" ");
   return truncated.slice(0, lastSpace) + "...";
 }
@@ -180,10 +183,10 @@ export default function IngredientByCondition() {
             By Your Conditions
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3D3733] leading-tight mb-4">
-            How each ingredient helps <span className="text-[#B36B4D] italic">your</span> triad
+            What each ingredient <span className="text-[#B36B4D] italic">does</span> in the body
           </h2>
           <p className="text-base md:text-lg text-[#5D5752] leading-relaxed">
-            Tap the conditions you live with. The grid below shows how every ingredient in the formula relates to the biology behind each one, in plain language.
+            Tap the conditions you live with. The grid below shows, in plain language, what is and is not known about each ingredient for people who live with each condition.
           </p>
         </div>
 
@@ -229,7 +232,7 @@ export default function IngredientByCondition() {
               className="text-center py-20 max-w-md mx-auto"
             >
               <p className="text-[#5D5752] text-base font-medium leading-relaxed">
-                Tap at least one condition above to see how each ingredient supports it.
+                Tap at least one area above to see the biology behind each ingredient.
               </p>
             </motion.div>
           ) : (

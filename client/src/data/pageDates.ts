@@ -55,74 +55,104 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   // 2026-11-01: homepage FAQ answers now rendered in the page HTML.
   // 2026-11-05: brand-first BLUF sentence + nine H2s rewritten as claims.
   // 2026-11-07: WebSite (site name) JSON-LD.
-  "/": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-07" },
+  // 2026-11-14: claims audit copy merged (home sections).
+  "/": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-07" },
   // 2026-11-01: visible breadcrumbs, card headings H3 -> H2.
   // 2026-11-07: title, H1 and opening paragraph name the brand and the 29 ingredients.
   // 2026-11-14: ItemList JSON-LD of the ingredient pages.
-  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-07", structural: "2026-11-14" },
+  // 2026-11-14: claims audit copy merged ("Confirmed excipients disclosed").
+  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-14" },
   // 2026-11-05: byline, Article markup, link to /excipients.
   // 2026-11-07: Never/Always lists promoted to H2; dropped mention of the unpublished "The How" page.
-  "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-07" },
+  // 2026-11-14: claims audit copy merged (commitments wording).
+  "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-05: excipient hub added (SEO/GEO audit A13).
   // 2026-11-07: og:type article, JSON-LD datetimes.
   // 2026-11-13: FAQ "What are HPMC capsules?" added (keyword retune).
-  "/excipients": { published: "2026-11-05", modified: "2026-11-13", structural: "2026-11-07" },
+  // 2026-11-14: claims audit copy merged (carrier and excipient disclosures).
+  "/excipients": { published: "2026-11-05", modified: "2026-11-14", structural: "2026-11-07" },
   // 2026-11-13: cluster hubs drafted (noindex until published in clusterHubs.ts).
   // Set a hub's dates to its publish date in the commit that publishes it.
   "/natural-mast-cell-stabilizers": { published: "2026-11-13", modified: "2026-11-13" },
   "/supplements-for-hypermobility": { published: "2026-11-13", modified: "2026-11-13" },
   "/supplements-for-pots": { published: "2026-11-13", modified: "2026-11-13" },
-  "/contact": { published: SITE_LAUNCH, modified: "2026-10-07" },
+  // 2026-11-14: claims audit copy merged ("We aim to respond").
+  "/contact": { published: SITE_LAUNCH, modified: "2026-11-14" },
   "/privacy": { published: SITE_LAUNCH, modified: "2026-10-07" },
   "/terms": { published: SITE_LAUNCH, modified: "2026-10-07" },
   // 2026-11-07: "Pre-launch placeholder" label replaced.
-  "/shipping": { published: SITE_LAUNCH, modified: "2026-11-07" },
+  // 2026-11-14: claims audit copy merged (tolerance wording).
+  "/shipping": { published: SITE_LAUNCH, modified: "2026-11-14" },
 };
 
 export const INGREDIENT_DATES: Record<string, PageDate> = {
-  "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-11-14" },
   // 2026-11-05: Di Stadio 2022 citation corrected (PMID 35450527, 90-day olfactory outcome).
-  "luteolin": { published: SITE_LAUNCH, modified: "2026-11-05" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "luteolin": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-07: unsourced "75% of POTS patients are deficient" removed (decision 2026-11-05).
   // 2026-11-13: FAQ on bisglycinate vs glycinate added; title names the common form (keyword retune).
   "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-11-13" },
-  "taurine": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "taurine": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-05: citation metadata corrected (PMID check).
   // 2026-11-13: title leads with "Buffered Vitamin C" (keyword retune).
-  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-13" },
-  "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "pine-bark-extract": { published: "2026-05-11", modified: "2026-10-08" },
-  "grape-seed-extract": { published: "2026-05-11", modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "pine-bark-extract": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "grape-seed-extract": { published: "2026-05-11", modified: "2026-11-14" },
   // 2026-11-13: two FAQs added on mast cell and histamine evidence (keyword retune; restate existing page copy).
-  "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-13" },
-  "chlorogenic-acid": { published: "2026-05-11", modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "chlorogenic-acid": { published: "2026-05-11", modified: "2026-11-14" },
   "l-theanine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-07: fludrocortisone regraded LOW -> NO DATA (decision 2026-11-05).
   "astaxanthin": { published: SITE_LAUNCH, modified: "2026-11-07" },
-  "benfotiamine": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "niacinamide": { published: "2026-05-11", modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "benfotiamine": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "niacinamide": { published: "2026-05-11", modified: "2026-11-14" },
   // 2026-11-13: first FAQ question reworded to "P5P vs B6" (keyword retune).
-  "p5p": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "p5p": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
   // 2026-11-05: Rooney 2020 citation corrected to the PubMed-indexed paper (PMID 32330571).
-  "r5p": { published: "2026-05-11", modified: "2026-11-05" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "r5p": { published: "2026-05-11", modified: "2026-11-14" },
   // 2026-11-13: first FAQ question reworded to "Methylfolate vs folic acid" (keyword retune).
-  "methylfolate": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-14" },
-  "vitamin-b12": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "methylfolate": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "vitamin-b12": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-13: title reads "Vegan Vitamin D3 from Lichen" (keyword retune).
-  "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
   // 2026-11-13: first FAQ question reworded to "MK-7 vs MK-4 and vitamin K1" (keyword retune).
-  "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-10-08", structural: "2026-11-13" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
   // 2026-11-05: citation metadata corrected (PMID check).
   // 2026-11-13: title names the common form, copper glycinate (keyword retune).
-  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-13" },
-  "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "chromium": { published: "2026-05-11", modified: "2026-10-08" },
-  "selenium": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "chromium": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "selenium": { published: SITE_LAUNCH, modified: "2026-11-14" },
   "pantothenic-acid": { published: SITE_LAUNCH, modified: "2026-10-08" },
-  "biotin": { published: SITE_LAUNCH, modified: "2026-10-08" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
+  "biotin": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "boron": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-05: unverifiable "Kohn 2020" citation replaced (PMID 37987446); unsupported 2-4 week timeline removed.
+  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "molybdenum": { published: SITE_LAUNCH, modified: "2026-11-14" },
 };
 

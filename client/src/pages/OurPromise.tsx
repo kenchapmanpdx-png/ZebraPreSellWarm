@@ -53,7 +53,7 @@ export default function OurPromise() {
           <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="px-8 py-10 rounded-[3rem] bg-white/40 border-2 border-white backdrop-blur-xl shadow-2xl">
               <p className="text-xl md:text-2xl text-[#3D3733] font-bold leading-relaxed">
-                ZebraThrive exists because the EDS, POTS, and MCAS triad needs a formulation built around its constraints from the start, not a generic multivitamin retrofitted with a few flagship ingredients. This page is our constitution: a formal, public commitment to how we do that work.
+                ZebraThrive exists because people with EDS, POTS and MCAS, conditions that are commonly co-reported, often find generic multivitamins hard to tolerate. We built a formulation around the sensitivities this community reports from the start, instead of adding a few headline ingredients to a standard multivitamin. This page is our constitution: a formal, public commitment to how we do that work.
               </p>
               {/* Byline backs the Article JSON-LD author/dates (prerender.tsx). */}
               <p className="mt-6 text-sm text-[#5D5752]">
@@ -77,18 +77,18 @@ export default function OurPromise() {
         <div className="container mx-auto max-w-3xl">
           <div className="space-y-6 text-lg md:text-xl text-[#3D3733] leading-relaxed">
             <p>
-              Our constitution is short and specific. <strong>The ingredient claims on this site are anchored to peer-reviewed published research.</strong> Summary pages like the homepage link to the ingredient pages, where the citations live. Mechanism citations include in vitro and animal studies where those are the best available evidence; clinical-outcome and dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design, and finding so you can evaluate the strength of the evidence yourself, not just trust our framing. If we can't cite it, we don't claim it.
+              Our constitution is short and specific. <strong>The claims on our ingredient pages are linked to published research, and we flag where the evidence is lab or animal only.</strong> Summary pages like the homepage link to the ingredient pages, where the citations live. Mechanism citations include lab and animal studies where those are the best available evidence, labeled that way; dose claims come from human trials wherever those exist. Each ingredient page lists the PMID, authors, study design and finding so you can judge the evidence yourself, and we correct any citation found to be wrong or under notice. If we cannot back a claim with evidence, we do not make it.
             </p>
             <p>
-              <a href="/excipients" className="text-[#8F5238] font-bold underline underline-offset-2 hover:text-[#3D3733]">Every excipient is disclosed</a> and chosen with MCAS in mind: HPMC capsules (no gelatin, no carrageenan), a calcium carbonate opacifier on the PM caps (no titanium dioxide), and rice hull concentrate and L-leucine as flow agents (no magnesium stearate). Some vitamins and actives arrive on carriers, and we list those too: maltodextrin on the vitamin D3 (about 17 mg a day), microcrystalline cellulose on the vitamin K2 (about 10 mg), sunflower lecithin in the quercetin phytosome, and silica in the taurine (up to 7.5 mg). We are confirming the last two carriers, in the astaxanthin beadlet and the selenium premix, with our manufacturer and will list them before launch. No FD&amp;C dyes, no citric acid, no soy derivatives, and no fermentation-derived ingredients where a non-fermented form exists. Every ingredient lot is checked against its Certificate of Analysis before production, and each finished batch goes through our manufacturer's finished-product testing before release.
+              <a href="/excipients" className="text-[#8F5238] font-bold underline underline-offset-2 hover:text-[#3D3733]">Every confirmed excipient is listed on our Excipients page</a> and chosen for sensitive systems: HPMC capsules (no gelatin), a calcium carbonate opacifier on the PM caps (no titanium dioxide), and rice hull concentrate and L-leucine as flow agents (no magnesium stearate). We are confirming that the capsule shells contain no carrageenan. Some vitamins and actives arrive on carriers, and we list those too: maltodextrin on the vitamin D3 (about 18 mg a day), microcrystalline cellulose on the vitamin K2 (about 10 mg), sunflower lecithin and maltodextrin in the quercetin phytosome, dicalcium phosphate with the biotin (about 31 mg), maltodextrin and silica with the molybdenum (under 6 mg), and silica in the taurine (up to 7.5 mg). We are confirming the remaining carriers, including those in the astaxanthin beadlet, the selenium premix and the boron glycinate, with our manufacturer and will list them before launch. No FD&C dyes and no added citric acid, and we are confirming with suppliers that no raw-material carrier contains citric acid or soy. Some ingredients, including vitamin C, vitamin B2 and vitamin B12, are made with a fermentation step because no non-fermented commercial form exists, and we disclose which ones. Every ingredient lot will be checked against its Certificate of Analysis before production, and each finished batch will go through our manufacturer's finished-product testing before release.
             </p>
             <p>
-              <strong>We don't claim to treat, cure, or prevent anything.</strong> We do claim to give you ingredients with documented mechanisms in research, at doses chosen from human research wherever it exists, in a formulation engineered for the sensitivities of the EDS/POTS/MCAS triad.
+              <strong>We don't claim to treat, cure, or prevent anything.</strong> We do aim to give you ingredients studied in published research, at doses chosen from human research wherever it exists, in a formulation built around the sensitivities people with EDS, POTS and MCAS commonly report.
             </p>
             <div className="border-l-4 border-[#A4613A] pl-6 py-3 bg-white/50 rounded-r-2xl mt-8">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#5A3E2B] mb-3">Why we built this</h2>
               <p className="text-base md:text-lg text-[#4A4540]">
-                We're zebras ourselves, and the existing supplement market wasn't serving us. Generic "multivitamins" load up on the wrong forms and the wrong excipients, while specialty MCAS brands lack the ECM-protective and methylation coverage that hEDS and POTS need. So we built what we'd want to take ourselves.
+                We're zebras ourselves, and the existing supplement market wasn't serving us. Generic multivitamins often use forms and excipients our community finds hard to tolerate, and many specialty brands focus on a single concern. So we built one system around the sensitivities this community reports, the one we'd want to take ourselves.
               </p>
             </div>
           </div>
@@ -214,15 +214,15 @@ export default function OurPromise() {
 const NEVER_DO = [
   {
     title: "Never hide ingredients.",
-    desc: "Every ingredient and dose is on the label, and every excipient we have confirmed is listed on this page. No 'proprietary blends.' No secrets."
+    desc: "Every ingredient and dose will be on the label, and every excipient we have confirmed is listed on our Excipients page. No proprietary blends. Where a supplier has not yet disclosed a carrier, we say so."
   },
   {
-    title: "Never use known triggers.",
-    desc: "No titanium dioxide. No citric acid. No artificial dyes. No carrageenan. No magnesium stearate. We prioritize biological function over shelf aesthetics."
+    title: "Leave out the excipients our community most often avoids.",
+    desc: "No titanium dioxide. No added citric acid, and we are confirming that none arrives with any raw material. No artificial dyes. No added carrageenan, and we are confirming that the capsule shells are made without it. No magnesium stearate. We prioritize biological function over shelf aesthetics."
   },
   {
     title: "Never underdose.",
-    desc: "We choose doses from published human studies wherever they exist, and each ingredient page says when they don't. No 'pixie dusting' just to pad the label."
+    desc: "We choose doses from published human studies wherever they exist, and each ingredient page explains the basis for its dose. No 'pixie dusting' just to pad the label."
   },
   {
     title: "Never ignore your medications.",
@@ -241,23 +241,23 @@ const NEVER_DO = [
 const ALWAYS_DO = [
   {
     title: "Always lead with evidence.",
-    desc: "We start from human research where it exists and label lab and animal evidence as exactly that. When the science isn't clear, we say so plainly."
+    desc: "We start from human research where it exists, and we aim to label lab and animal evidence as exactly that. When the science isn't clear, we say so plainly."
   },
   {
     title: "Always verify what goes in.",
-    desc: "Each ingredient lot is checked against its Certificate of Analysis and the specifications written into our purchase order, including heavy metals and microbial limits, before it goes into production."
+    desc: "Before production, each ingredient lot will be checked against its Certificate of Analysis and the specifications written into our purchase order, including heavy metals and microbial limits."
   },
   {
     title: "Always choose excipients for sensitive systems.",
-    desc: "Minimal fillers. Every carrier we have confirmed is listed. We treat 'inactive' ingredients with the same scrutiny as active ones."
+    desc: "Few fillers, each one listed. Every carrier we have confirmed is listed on our Excipients page. We treat 'inactive' ingredients with the same scrutiny as active ones."
   },
   {
     title: "Always support titration.",
-    desc: "Openable capsules. Powder options. We provide micro-dosing guidance because 'low and slow' is how your body works."
+    desc: "Openable capsules. Powder options. We provide gradual-start guidance because many people in our community prefer to start low and go slow."
   },
   {
     title: "Always simplify.",
-    desc: "Our system is designed to reduce your pill burden. One trusted solution to replace twenty random bottles."
+    desc: "Our system is designed to reduce your pill burden. One system in place of a shelf of separate bottles."
   },
   {
     title: "Always listen.",
@@ -269,12 +269,12 @@ const ACCOUNTABILITY = [
   {
     icon: Microscope,
     title: "Sourcing Disclosure",
-    desc: "Each ingredient page lists the form we use and, for botanicals, the plant source."
+    desc: "Each ingredient page lists the form we use and, for botanicals, the plant source, and says when a source decision is still open."
   },
   {
     icon: ClipboardList,
     title: "Certificates of Analysis",
-    desc: "We review the Certificate of Analysis for every ingredient lot. Ask us about any of them."
+    desc: "Every ingredient lot will be checked against its Certificate of Analysis before production, by us or by our manufacturer's quality team. Ask us about any of them."
   },
   {
     icon: Beaker,

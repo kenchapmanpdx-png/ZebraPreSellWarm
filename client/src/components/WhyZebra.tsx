@@ -13,8 +13,8 @@ export default function WhyZebraThrive() {
               Why <span className="text-[#B36B4D] italic font-normal">ZebraThrive</span>?
             </h2>
             <p className="text-lg text-[#4A4540] leading-relaxed">
-              We don't just make supplements. We engineer stability for the complex 
-              interplay of <span className="font-bold">Autonomic, Mast Cell, and Connective Tissue</span> health.
+              We don't just make supplements. We design for the way{' '}
+              <span className="font-bold">autonomic, mast cell and connective tissue</span> health are often discussed together.
             </p>
           </div>
         </div>
@@ -22,16 +22,16 @@ export default function WhyZebraThrive() {
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard 
-            title="Physician Grade" 
-            desc="Sourced and manufactured to the highest clinical standards." 
+            title="cGMP Made" 
+            desc="Made in a cGMP facility, with every lot released against written specifications." 
           />
           <FeatureCard 
             title="Histamine Friendly" 
-            desc="Every ingredient screened for biogenic amines and MCAS triggers." 
+            desc="Every ingredient and carrier goes through our review for known mast cell triggers, including how it is made; a few carriers are still being confirmed with suppliers." 
           />
           <FeatureCard 
-            title="Bioavailable" 
-            desc="Optimized delivery systems for patients with GI motility challenges." 
+            title="Easy to Start" 
+            desc="Capsules plus a powder you can start in small amounts." 
           />
         </div>
       </div>

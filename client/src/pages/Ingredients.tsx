@@ -46,7 +46,7 @@ export default function Ingredients() {
                             ZebraThrive uses {ingredientList.length} active ingredients across its AM capsules, PM capsules and
                             Daily Powder. Each page below gives the form, the daily dose, how it works, the human and lab
                             evidence with PubMed citations, and safety and drug-interaction notes.
-                            Designed for the specific needs of hEDS, POTS, and MCAS.
+                            Chosen with the sensitivities our hEDS, POTS and MCAS community reports in mind.
                         </motion.p>
 
                         {/* Search Bar */}
@@ -96,7 +96,7 @@ export default function Ingredients() {
                                             )}
 
                                             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8F5238] group-hover:translate-x-2 transition-transform">
-                                                Clinical Science
+                                                Read details
                                                 <span className="text-lg">→</span>
                                             </div>
                                         </div>
