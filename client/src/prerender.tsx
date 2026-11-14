@@ -268,7 +268,20 @@ function medicalWebPageForIngredient(
       // headline each citation showed as "Unnamed item" in Rich Results Test.
       headline: r.title,
     };
-    if (r.authors) cit.author = r.authors;
+    // schema.org `author` must be Person or Organization, not a string
+    // (Ahrefs Site Audit 2026-11-14: "Value of unexpected type for author"
+    // on all 29 ingredient pages).
+    if (r.authorNames?.length) {
+      cit.author = r.authorNames.map((n) => ({ "@type": "Person", name: n }));
+    } else if (r.authorGroup) {
+      cit.author = { "@type": "Organization", name: r.authorGroup };
+    } else if (r.authors) {
+      const names = r.authors
+        .split(/,\s*/)
+        .map((n) => n.trim().replace(/\.$/, ""))
+        .filter((n) => n && !/^et al$/i.test(n));
+      if (names.length) cit.author = names.map((n) => ({ "@type": "Person", name: n }));
+    }
     if (r.year) cit.datePublished = r.year;
     if (r.journalFull) cit.isPartOf = { "@type": "Periodical", name: r.journalFull };
     if (r.pmid) {
@@ -443,6 +456,23 @@ function schemaElementsForRoute(url: string): HeadElement[] {
   if (url === "/ingredients") {
     const bc = breadcrumbList(url, "Ingredients");
     if (bc) out.push(jsonLdElement(bc));
+    // ItemList of the ingredient pages (Ahrefs Site Audit 2026-11-14:
+    // "Category page missing ItemList schema"). Order matches the routes list.
+    const routes = ingredientList as Array<{ slug: string; display_name: string }>;
+    out.push(
+      jsonLdElement({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "ZebraThrive ingredients",
+        numberOfItems: routes.length,
+        itemListElement: routes.map((r, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: `${BASE}/ingredients/${r.slug}`,
+          name: (ingredientData as Record<string, IngredientData>)[r.slug]?.name || r.display_name,
+        })),
+      }),
+    );
   }
   if (ingMatch) {
     const slug = ingMatch[1];

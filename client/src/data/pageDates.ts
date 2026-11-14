@@ -41,7 +41,8 @@ export const SITE_LAUNCH = "2026-05-10";
 // from PubMed records (the sitemap still said 11-01 until 11-07).
 // 2026-11-07: JSON-LD dates carry time + offset; isPartOf -> WebSite;
 // citation headlines.
-export const INGREDIENT_TEMPLATE_CHANGED = "2026-11-07";
+// 2026-11-14: citation authors as Person/Organization (schema.org validation).
+export const INGREDIENT_TEMPLATE_CHANGED = "2026-11-14";
 
 // JSON-LD / article:* times. Google's Rich Results Test flags date-only values
 // ("Invalid datetime value", "missing a timezone"). Midnight in Arizona
@@ -57,7 +58,8 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   "/": { published: SITE_LAUNCH, modified: "2026-11-05", structural: "2026-11-07" },
   // 2026-11-01: visible breadcrumbs, card headings H3 -> H2.
   // 2026-11-07: title, H1 and opening paragraph name the brand and the 29 ingredients.
-  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-07" },
+  // 2026-11-14: ItemList JSON-LD of the ingredient pages.
+  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-07", structural: "2026-11-14" },
   // 2026-11-05: byline, Article markup, link to /excipients.
   // 2026-11-07: Never/Always lists promoted to H2; dropped mention of the unpublished "The How" page.
   "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-07" },

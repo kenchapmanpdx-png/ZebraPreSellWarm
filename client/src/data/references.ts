@@ -17,6 +17,10 @@ export interface Reference {
   title: string;
   /** AMA-style author string, e.g. "Jarisch R, Weyer D, Ehlert E, et al." */
   authors: string;
+  /** Individual author names from PubMed (up to six), for structured data. */
+  authorNames?: string[];
+  /** Group/collective author from PubMed when no individual authors exist. */
+  authorGroup?: string;
   journal: string;
   journalFull: string;
   year: string;
@@ -48,6 +52,8 @@ function fromCitation(n: number, pmid: string, c: Citation): Reference {
     n,
     title: c.title,
     authors: formatAuthors(c),
+    authorNames: c.authors.length ? c.authors : undefined,
+    authorGroup: !c.authors.length && c.group ? c.group : undefined,
     journal: c.journal,
     // NLM full titles carry subtitles after " : " ("Journal of vestibular research : equilibrium & orientation").
     journalFull: c.journalFull.split(" : ")[0].trim(),
