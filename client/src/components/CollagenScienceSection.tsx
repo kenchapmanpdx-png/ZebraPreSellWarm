@@ -78,7 +78,6 @@ export default function CollagenScienceSection() {
       problem: "Lab research suggests a possible loop: collagen fragments can activate mast cells, and mast cell enzymes can activate collagen-degrading enzymes.",
       solution: "We include ingredients studied in lab research on signaling pathways and mast cells.",
       mechanisms: [
-        { name: "TLR4 Blockade", role: "Lab studies suggest collagen fragments can activate mast cells through this receptor", ingredients: ["Quercetin Phytosome"] },
         { name: "Mast Cell Signaling", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA"] }
       ],
       keyInsight: "Some researchers have proposed that collagen breakdown products and inflammation may feed each other."
@@ -148,11 +147,11 @@ export default function CollagenScienceSection() {
       gradient: "from-rose-500/10 to-transparent",
       summary: "Several ingredients have been studied in lab research for effects on mast cells.",
       problem: "Mast cells release mediators, including enzymes that can affect connective tissue.",
-      solution: "In lab research, PEA and quercetin have been studied for effects on mast cell signaling. These effects have not been confirmed in people.",
+      solution: "In lab research, PEA has been studied for effects on mast cell signaling. These effects have not been confirmed in people.",
       mechanisms: [
         { name: "PPAR-alpha Activation", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] }
       ],
-      keyInsight: "Plain quercetin is poorly absorbed, so we use a phytosome form (Quercefit®) that has its own human absorption study."
+      keyInsight: "These are lab findings. None has been confirmed in people at the amounts in this formula."
     },
     {
       id: 'histamine',
@@ -163,14 +162,13 @@ export default function CollagenScienceSection() {
       bg: "bg-pink-50",
       border: "border-pink-200",
       gradient: "from-pink-500/10 to-transparent",
-      summary: "We include copper, a part of the DAO enzyme, and B-vitamins involved in methylation, which the body uses in normal histamine metabolism.",
+      summary: "We include B-vitamins involved in methylation, which the body uses in normal histamine metabolism.",
       problem: "Histamine is broken down by DAO in the gut and by HNMT inside cells.",
-      solution: "Provide copper, a structural part of DAO, and methylation B-vitamins that support the body's supply of SAM, which HNMT uses.",
+      solution: "Methylation B-vitamins support the body's supply of SAM, which HNMT uses.",
       mechanisms: [
-        { name: "DAO Enzyme", role: "Gut histamine breakdown", ingredients: ["Copper"] },
         { name: "Methylation", role: "Intracellular breakdown", ingredients: ["Methylfolate", "B12"] }
       ],
-      keyInsight: "DAO is a copper-containing enzyme."
+      keyInsight: ""
     },
     {
       id: 'autonomic',
@@ -183,7 +181,7 @@ export default function CollagenScienceSection() {
       gradient: "from-cyan-500/10 to-transparent",
       summary: "L-theanine has been studied in small trials for short-term stress, and magnesium supports normal nervous system function.",
       problem: "The nervous system balances 'fight-or-flight' (sympathetic) and 'rest-and-digest' (parasympathetic) signals.",
-      solution: "We include L-theanine, taurine and magnesium, which have been studied for their roles in normal nerve signaling.",
+      solution: "We include L-theanine and magnesium, which have been studied for their roles in normal nerve signaling.",
       mechanisms: [
         { name: "GABA-A", role: "Inhibitory system", ingredients: ["L-Theanine", "Magnesium"] },
         { name: "Nervous System Function", role: "Supports normal nervous system function", ingredients: ["Magnesium"] }
@@ -257,7 +255,7 @@ export default function CollagenScienceSection() {
       id: 'calm',
       label: 'Cluster 03',
       title: 'Mast Cells and Histamine',
-      subtitle: 'Ingredients studied in lab research on mast cells, plus copper and B-vitamins involved in normal histamine metabolism.',
+      subtitle: 'Ingredients studied in lab research on mast cells, plus B-vitamins involved in normal histamine metabolism.',
       accent: '#B36B4D',
       pathwayIds: ['mast-cells', 'histamine']
     },

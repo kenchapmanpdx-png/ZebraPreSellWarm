@@ -48,7 +48,7 @@ export default function ProductGrid() {
       icon: <Droplets className="w-6 h-6 text-emerald-700" aria-hidden="true" />,
       benefits: [
         "Vitamin C for normal collagen formation",
-        "PEA and quercetin, studied in lab research on immune cells; human evidence is limited",
+        "PEA and Quercefit quercetin phytosome, with the evidence level stated on each ingredient page",
         "Titratable from a sprinkle for sensitive starts",
       ],
       gradient: "from-emerald-100/50 to-white/50"

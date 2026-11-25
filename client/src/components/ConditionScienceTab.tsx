@@ -83,7 +83,7 @@ export default function ConditionScienceTabs() {
       name: "Mast Cells",
       fullName: "Mast Cells and Histamine", 
       tagline: "Mast Cell Research and Histamine Metabolism",
-      description: "Copper and B-vitamins support normal histamine metabolism, and other ingredients were chosen from lab research on mast cells.",
+      description: "B-vitamins involved in methylation support normal histamine metabolism, and other ingredients were chosen from lab research on mast cells.",
       color: "text-rose-800",
       bg: "bg-rose-50",
       border: "border-rose-200", 
@@ -103,7 +103,7 @@ export default function ConditionScienceTabs() {
       border: "border-emerald-200",
       summary: "MMPs are the enzymes that break collagen down during normal collagen turnover.",
       problem: "Collagen turnover is a balance between breakdown and building.",
-      solution: "We include pine bark, grape seed and quercetin, which have been studied in lab research for effects on MMPs.",
+      solution: "We include pine bark and grape seed, which have been studied in lab research for effects on MMPs. These effects have not been shown in people.",
       mechanisms: [
         { name: "MMP-1 (Collagenase)", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] }
       ],
@@ -138,10 +138,9 @@ export default function ConditionScienceTabs() {
       border: "border-blue-200",
       summary: "Magnesium supports normal nervous system function, and L-theanine has been studied in small trials for short-term stress.",
       problem: "The nervous system balances 'fight-or-flight' (sympathetic) and 'rest-and-digest' (parasympathetic) signals.",
-      solution: "L-theanine, taurine and magnesium bisglycinate, nutrients studied for their roles in normal nerve signaling.",
+      solution: "L-theanine and magnesium bisglycinate, nutrients studied for their roles in normal nerve signaling.",
       mechanisms: [
-        { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium Bisglycinate"] },
-        { name: "Nerve Signaling", role: "Studied for its role in normal nerve signaling", ingredients: ["Taurine"] }
+        { name: "GABA-A Receptor", role: "Primary inhibitory calming system", ingredients: ["L-Theanine", "Magnesium Bisglycinate"] }
       ],
       keyInsight: "If you take a beta-blocker or ivabradine, ask your doctor before starting, because taurine may lower resting heart rate slightly and the effects may add up."
     },
@@ -176,12 +175,11 @@ export default function ConditionScienceTabs() {
       border: "border-rose-200",
       summary: "Ingredients studied in lab research on mast cells; these effects have not been tested in people taking this formula.",
       problem: "When mast cells are activated, they release histamine and other mediators.",
-      solution: "In lab research, PEA and quercetin have been studied for effects on different mast cell pathways.",
+      solution: "In lab research, PEA has been studied for effects on mast cell signaling. These effects have not been confirmed in people.",
       mechanisms: [
-        { name: "PPARα", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] },
-        { name: "ORAI Channel", role: "Calcium signaling in mast cells, studied in lab research", ingredients: ["Quercetin Phytosome"] }
+        { name: "PPARα", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] }
       ],
-      keyInsight: "Quercetin on its own is poorly absorbed, so we use a phytosome form (Quercefit®) that has its own human absorption study."
+      keyInsight: "These are lab findings. None has been confirmed in people at the amounts in this formula."
     },
     {
       id: 'histamine-clearance',
@@ -191,14 +189,13 @@ export default function ConditionScienceTabs() {
       color: "text-purple-700",
       bg: "bg-purple-50",
       border: "border-purple-200",
-      summary: "Copper is part of DAO, one of the enzymes the body uses to break down histamine.",
+      summary: "B-vitamins involved in methylation support the body's normal supply of SAM, which the body uses in histamine metabolism.",
       problem: "Histamine is broken down by DAO in the gut and by HNMT inside cells.",
-      solution: "Copper for DAO, and methylation B-vitamins that support the body's normal supply of SAM.",
+      solution: "Methylation B-vitamins that support the body's normal supply of SAM.",
       mechanisms: [
-        { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper"] },
         { name: "Methylation", role: "SAMe production for HNMT function", ingredients: ["Methylfolate", "B12"] }
       ],
-      keyInsight: "DAO is a copper-containing enzyme."
+      keyInsight: "Histamine is broken down by DAO in the gut and by HNMT inside cells."
     }
   ];
 

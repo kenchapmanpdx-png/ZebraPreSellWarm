@@ -94,16 +94,18 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
 
 export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-25: claims pass: copy aligned to the 2026-11-13 ingredient decisions.
+  "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-11-25" },
   // 2026-11-07: unsourced "75% of POTS patients are deficient" removed (decision 2026-11-05).
   // 2026-11-13: FAQ on bisglycinate vs glycinate added; title names the common form (keyword retune).
   "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-11-13" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "taurine": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-25: claims pass: copy aligned to the 2026-11-13 ingredient decisions.
+  "taurine": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-05: citation metadata corrected (PMID check).
   // 2026-11-13: title leads with "Buffered Vitamin C" (keyword retune).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: dose 1,500 to 1,000 mg (formula v9.0).
+  // 2026-11-25: dose 1,500 to 1,000 mg (formula v9.0). Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-13" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   // 2026-11-25: dose 500 mg (AM + PM) to 300 mg, PM only (formula v9.0).
@@ -111,14 +113,14 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "pine-bark-extract": { published: "2026-05-11", modified: "2026-11-14" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: split 100 + 70 to 85 + 85 mg (formula v9.0).
+  // 2026-11-25: split 100 + 70 to 85 + 85 mg (formula v9.0). Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "grape-seed-extract": { published: "2026-05-11", modified: "2026-11-25" },
   // 2026-11-13: two FAQs added on mast cell and histamine evidence (keyword retune; restate existing page copy).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: "20 times" absorption figure removed pending supplier confirmation.
+  // 2026-11-25: "20 times" absorption figure removed pending supplier confirmation. Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-25" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: caffeine specification updated to 0.4% max.
+  // 2026-11-25: caffeine specification updated to 0.4% max. Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "chlorogenic-acid": { published: "2026-05-11", modified: "2026-11-25" },
   "l-theanine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-11-14" },
@@ -144,22 +146,24 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   "vitamin-d3": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
   // 2026-11-13: first FAQ question reworded to "MK-7 vs MK-4 and vitamin K1" (keyword retune).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
+  // 2026-11-25: claims pass: copy aligned to the 2026-11-13 ingredient decisions.
+  "vitamin-k2": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-13" },
   // 2026-11-05: citation metadata corrected (PMID check).
   // 2026-11-13: title names the common form, copper glycinate (keyword retune).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
+  // 2026-11-25: claims pass: copy aligned to the 2026-11-13 ingredient decisions.
+  "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-13" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: dose 4 to 2 mg (formula v9.0).
+  // 2026-11-25: dose 4 to 2 mg (formula v9.0). Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: dose 100 to 50 mcg (formula v9.0).
+  // 2026-11-25: dose 100 to 50 mcg (formula v9.0). Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "selenium": { published: SITE_LAUNCH, modified: "2026-11-25" },
   "pantothenic-acid": { published: SITE_LAUNCH, modified: "2026-10-08" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "biotin": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  // 2026-11-25: dose 2 to 0.7 mg; inclusion reason restated (formula v9.0).
+  // 2026-11-25: dose 2 to 0.7 mg; inclusion reason restated (formula v9.0). Claims pass: copy aligned to the 2026-11-13 ingredient decisions.
   "boron": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-05: unverifiable "Kohn 2020" citation replaced (PMID 37987446); unsupported 2-4 week timeline removed.
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).

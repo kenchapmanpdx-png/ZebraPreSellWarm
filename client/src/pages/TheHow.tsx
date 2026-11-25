@@ -22,10 +22,10 @@ export default function TheHow() {
                 The formula is organized in three layers that reflect body systems often discussed together in this community: connective tissue, mast cells, and energy and nervous system balance.
               </p>
               <p>
-                <strong>Connective tissue.</strong> Our approach looks at both sides of normal collagen turnover: breakdown and building. Enzymes called MMPs break collagen down as part of normal turnover. Pine bark, grape seed and quercetin have been studied for effects on MMPs in lab studies, copper is needed by the enzyme that cross-links collagen, manganese is used by enzymes involved in collagen formation, and we include compounds studied for a balanced inflammatory response.
+                <strong>Connective tissue.</strong> Our approach looks at both sides of normal collagen turnover: breakdown and building. Enzymes called MMPs break collagen down as part of normal turnover. Pine bark and grape seed have been studied for effects on MMPs in lab studies; those effects have not been shown in people. Vitamin C supports normal collagen formation.
               </p>
               <p>
-                <strong>Mast cells.</strong> Mast cells respond to many different signals. In lab studies, PEA and quercetin have been studied for effects on mast cell signaling; these effects have not been confirmed in people at the amounts in this formula. Copper is part of DAO, an enzyme the body uses to break down histamine, and vitamin C, vitamin B6 and the methylation B-vitamins are involved in normal histamine metabolism. The overlap is intentional.
+                <strong>Mast cells.</strong> Mast cells respond to many different signals. In lab studies, PEA has been studied for effects on mast cell signaling; these effects have not been confirmed in people at the amounts in this formula. The methylation B-vitamins are involved in normal histamine metabolism.
               </p>
               <p>
                 <strong>Energy and nervous system.</strong> Benfotiamine, riboflavin and other B-vitamins contribute to normal energy metabolism, and NR supports NAD+ levels. L-theanine has been studied in small trials for short-term stress. Vitamin D3 supports normal immune and muscle function. We include 2,000 IU because many people do not get enough vitamin D; ask your doctor whether your levels should be checked.
