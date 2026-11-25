@@ -342,15 +342,15 @@ ZebraThrive is a collagen-protection brand, not a collagen-building brand. Addin
 
 ## AM capsules
 
-Three Size 1 clear HPMC capsules per serving, 90 per bottle (30 servings). Contents: nicotinamide riboside (250 mg), pine bark extract (130 mg), grape seed extract (100 mg), benfotiamine (150 mg), niacinamide (50 mg), P5P (50 mg), R5P (25 mg), zinc carnosine (37.5 mg), chromium picolinate (200 mcg), methylfolate as (6S)-5-MTHF calcium salt (800 mcg), manganese bisglycinate (4 mg elemental), copper bisglycinate (2 mg elemental), vitamin K2 as synthetic all-trans MK-7 (100 mcg), vegan vitamin D3 from lichen (50 mcg, 2,000 IU), and methylcobalamin (1,000 mcg). Focus: B-vitamin and methylation cofactors, energy metabolism, and collagen cross-linking cofactors.
+Three Size 1 clear HPMC capsules per serving, 90 per bottle (30 servings). Contents: pine bark extract (130 mg), grape seed extract (85 mg), benfotiamine (150 mg), niacinamide (16 mg), vitamin B6 as P5P (4 mg), R5P (25 mg), zinc carnosine (37.5 mg), methylfolate as (6S)-5-MTHF calcium salt (800 mcg), manganese bisglycinate (2 mg elemental), copper bisglycinate (2 mg elemental), vitamin K2 as synthetic all-trans MK-7 (100 mcg), vegan vitamin D3 from lichen (50 mcg, 2,000 IU), and methylcobalamin (1,000 mcg). Focus: B-vitamin and methylation cofactors, energy metabolism, and essential trace minerals.
 
 ## PM capsules
 
-Three Size 1 white HPMC capsules per serving (titanium-dioxide-free), 90 per bottle (30 servings). Contents: nicotinamide riboside (250 mg), pine bark extract (70 mg), grape seed extract (70 mg), L-theanine (200 mg), zinc carnosine (37.5 mg), astaxanthin as a 5% cracked-cell beadlet (4 mg), calcium pantothenate (5 mg), boron glycinate (2 mg elemental), molybdenum glycinate (150 mcg), synthetic L-selenomethionine (100 mcg), and D-biotin (300 mcg). Focus: a calm evening stress response, antioxidant and ECM support, and trace minerals.
+Three Size 1 white HPMC capsules per serving (titanium-dioxide-free), 90 per bottle (30 servings). Contents: nicotinamide riboside chloride (300 mg, PM only), pine bark extract (70 mg), grape seed extract (85 mg), L-theanine (200 mg), zinc carnosine (37.5 mg), calcium pantothenate (5 mg), boron glycinate (0.7 mg elemental), molybdenum glycinate (150 mcg), synthetic L-selenomethionine (50 mcg), and D-biotin (300 mcg). Focus: NAD+ support, a calm evening stress response, and trace minerals.
 
 ## Daily Powder
 
-Unflavored, about 7.7 g per day taken as two one-scoop servings (AM and PM), 60 servings per jar (30-day supply). Contents: magnesium bisglycinate (2,400 mg, about 300 mg elemental), sodium ascorbate (1,686 mg, about 1,500 mg vitamin C), taurine (1,500 mg), ultramicronized PEA (1,200 mg), Quercefit quercetin phytosome (300 mg), chlorogenic acid from decaffeinated green coffee bean (200 mg), and luteolin from Sophora japonica (140 mg). These are the gram-scale ingredients that would need too many capsules.
+Unflavored, about 6.8 g per day taken as two one-scoop servings (AM and PM), 60 servings per jar (30-day supply). Contents: magnesium bisglycinate (about 300 mg elemental magnesium), sodium ascorbate (about 1,125 mg, 1,000 mg vitamin C), taurine (1,500 mg), micronized PEA (1,200 mg), Quercefit quercetin phytosome (300 mg), and chlorogenic acid from decaffeinated green coffee bean (200 mg). These are the gram-scale ingredients that would need too many capsules.
 
 ## Why three parts
 
@@ -399,7 +399,7 @@ ${FDA_DISCLAIMER}
 
 ## Product
 
-ZebraThrive is a three-part supplement system: AM capsules (3 Size 1 HPMC capsules per serving, 90 count), PM capsules (3 Size 1 white HPMC capsules per serving, 90 count), and a Daily Powder (about 7.7 g per day in two scoops). It is formulated for adults living with hypermobile Ehlers-Danlos Syndrome, POTS, or MCAS, with structure/function support for autonomic balance, mast cell stability, and connective tissue, and strict excipient exclusions. It is not intended to diagnose, treat, cure, or prevent any disease.
+ZebraThrive is a three-part supplement system: AM capsules (3 Size 1 HPMC capsules per serving, 90 count), PM capsules (3 Size 1 white HPMC capsules per serving, 90 count), and a Daily Powder (about 6.8 g per day in two scoops). It is formulated for adults living with hypermobile Ehlers-Danlos Syndrome, POTS, or MCAS, with structure/function support for autonomic balance, mast cell stability, and connective tissue, and strict excipient exclusions. It is not intended to diagnose, treat, cure, or prevent any disease.
 
 ## How preorder works
 

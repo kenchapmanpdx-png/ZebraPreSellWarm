@@ -61,12 +61,12 @@ export default function ConditionScienceTabs() {
       name: "Tissue",
       fullName: "Connective Tissue",
       tagline: "Collagen Formation and Turnover",
-      description: "Vitamin C and copper support normal collagen formation, and other ingredients were chosen from lab research on collagen turnover.",
+      description: "Vitamin C supports normal collagen formation, and other ingredients were chosen from lab research on collagen turnover.",
       color: "text-emerald-800",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
       icon: LinkIcon,
-      stats: { pathways: 4, ingredients: 16 }
+      stats: { pathways: 2, ingredients: 16 }
     },
     pots: {
       name: "Energy", 
@@ -105,26 +105,9 @@ export default function ConditionScienceTabs() {
       problem: "Collagen turnover is a balance between breakdown and building.",
       solution: "We include pine bark, grape seed and quercetin, which have been studied in lab research for effects on MMPs.",
       mechanisms: [
-        { name: "MMP-1 (Collagenase)", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] },
-        { name: "MMP-3 (Stromelysin)", role: "The 'master switch' activating other MMPs", ingredients: ["PEA", "Luteolin"] }
+        { name: "MMP-1 (Collagenase)", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] }
       ],
       keyInsight: "Pine bark and grape seed procyanidins are converted by gut bacteria into valerolactone metabolites, which reduced MMP-9 release from immune cells in lab studies."
-    },
-    {
-      id: 'timps',
-      icon: Shield,
-      title: "TIMP Research",
-      subtitle: "MMP and TIMP Balance",
-      color: "text-teal-700",
-      bg: "bg-teal-50",
-      border: "border-teal-200",
-      summary: "Ingredients that raised TIMP levels in lab and animal studies.",
-      problem: "When TIMPs are low relative to MMPs, collagen turnover can tip toward breakdown.",
-      solution: "Ingredients that increased TIMP production in lab and animal studies.",
-      mechanisms: [
-        { name: "TIMP-1", role: "Blocks MMP-1, 3, and 9", ingredients: ["Luteolin", "PEA"] }
-      ],
-      keyInsight: "Collagen balance depends on both the 'shredders' (MMPs) and the 'bodyguards' (TIMPs)."
     },
     {
       id: 'synthesis',
@@ -134,32 +117,14 @@ export default function ConditionScienceTabs() {
       color: "text-green-700",
       bg: "bg-green-50",
       border: "border-green-200",
-      summary: "Vitamin C and copper support normal collagen formation.",
+      summary: "Vitamin C supports normal collagen formation.",
       problem: "Collagen formation depends on vitamin C for triple-helix stability and on copper for cross-linking.",
-      solution: "Buffered Sodium Ascorbate for triple-helix hydroxylation plus copper bisglycinate for LOX cross-linking.",
+      solution: "Buffered sodium ascorbate, 1,000 mg of vitamin C a day, for triple-helix hydroxylation.",
       mechanisms: [
-        { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix structure", ingredients: ["Vitamin C (Sodium Ascorbate)"] },
-        { name: "Cross-linking", role: "Copper-dependent LOX bonds fibers together", ingredients: ["Copper Bisglycinate"] }
+        { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix structure", ingredients: ["Vitamin C (Sodium Ascorbate)"] }
       ],
       keyInsight: "Without Vitamin C the helix cannot stabilize; this is why scurvy causes tissue collapse."
     },
-    {
-      id: 'crosslinking',
-      icon: LinkIcon,
-      title: "Collagen Cross-Linking",
-      subtitle: "LOX System Support",
-      color: "text-amber-700",
-      bg: "bg-amber-50",
-      border: "border-amber-200",
-      summary: "Collagen needs cross-linking for strength, and copper is the cofactor the LOX enzyme needs.",
-      problem: "LOX cannot work without Copper. High homocysteine has been shown in lab studies to reduce LOX activity.",
-      solution: "Copper bisglycinate plus folate, B6 and B12, which support normal homocysteine metabolism.",
-      mechanisms: [
-        { name: "Copper", role: "The essential LOX cofactor for bonding", ingredients: ["Copper Bisglycinate"] },
-        { name: "Methylation", role: "Supports normal homocysteine metabolism", ingredients: ["Methylfolate", "P5P"] }
-      ],
-      keyInsight: "In lab studies, high homocysteine reduced LOX both by inhibiting the enzyme and by lowering its gene expression."
-    }
   ];
 
   const potsPathways: Pathway[] = [
@@ -211,12 +176,12 @@ export default function ConditionScienceTabs() {
       border: "border-rose-200",
       summary: "Ingredients studied in lab research on mast cells; these effects have not been tested in people taking this formula.",
       problem: "When mast cells are activated, they release histamine and other mediators.",
-      solution: "In lab research, PEA and luteolin act on different mast cell pathways.",
+      solution: "In lab research, PEA and quercetin have been studied for effects on different mast cell pathways.",
       mechanisms: [
         { name: "PPARα", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] },
         { name: "ORAI Channel", role: "Calcium signaling in mast cells, studied in lab research", ingredients: ["Quercetin Phytosome"] }
       ],
-      keyInsight: "Quercetin on its own is poorly absorbed. The phytosome form we use raised blood quercetin about 20 times in a human study."
+      keyInsight: "Quercetin on its own is poorly absorbed, so we use a phytosome form (Quercefit®) that has its own human absorption study."
     },
     {
       id: 'histamine-clearance',
@@ -233,7 +198,7 @@ export default function ConditionScienceTabs() {
         { name: "DAO Pathway", role: "Gut-level histamine breakdown", ingredients: ["Copper"] },
         { name: "Methylation", role: "SAMe production for HNMT function", ingredients: ["Methylfolate", "B12"] }
       ],
-      keyInsight: "Copper is a DAO cofactor, the same mineral required for collagen cross-linking. One mineral, two massive jobs."
+      keyInsight: "DAO is a copper-containing enzyme."
     }
   ];
 
@@ -256,7 +221,7 @@ export default function ConditionScienceTabs() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <p className="text-[10px] font-black text-[#8F5238] uppercase tracking-[0.4em] mb-4">Going Deeper</p>
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#3D3733] mb-6 leading-tight">Pathways We Target</h2>
-          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 29 active ingredients across AM capsules, PM capsules, and the Daily Powder, grouped into the three body systems described at the top of this page.</p>
+          <p className="text-lg md:text-xl text-[#5D5752] max-w-2xl mx-auto font-medium">The mechanisms behind the ingredients above. 26 active ingredients across AM capsules, PM capsules, and the Daily Powder, grouped into the three body systems described at the top of this page.</p>
         </motion.div>
 
         {/* TABS - Holographic Style */}
@@ -365,7 +330,7 @@ export default function ConditionScienceTabs() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">29 ACTIVE INGREDIENTS, 8 FOCUS AREAS, 1 FORMULA</span></div></div>
+        <div className="mt-20 text-center"><div className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 max-w-[92vw] px-6 sm:px-8 py-4 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-2xl"><Zap size={20} className="text-[#B36B4D] flex-shrink-0" aria-hidden="true" /><span className="text-[11px] sm:text-xs font-black tracking-wide sm:tracking-widest uppercase">26 ACTIVE INGREDIENTS, 6 FOCUS AREAS, 1 FORMULA</span></div></div>
       </div>
     </section>
   );

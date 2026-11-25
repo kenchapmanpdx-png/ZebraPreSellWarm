@@ -50,7 +50,7 @@ export default function DifferenceSection() {
     },
     {
       icon: <RefreshCcw className="w-5 h-5" aria-hidden="true" />,
-      title: "Circadian Synergy",
+      title: "Split Across the Day",
       description: "Our AM capsules, PM capsules and Daily Powder split the formula across the day."
     },
   ];

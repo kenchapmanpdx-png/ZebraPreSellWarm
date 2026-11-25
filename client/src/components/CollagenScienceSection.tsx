@@ -43,27 +43,9 @@ export default function CollagenScienceSection() {
       solution: "We include compounds that have been studied in lab research for effects on several of these enzymes.",
       mechanisms: [
         { name: "MMP-1", role: "Cuts the main collagen fibers", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] },
-        { name: "MMP-3", role: "The 'master switch' that activates other MMPs", ingredients: ["PEA", "Luteolin"] },
         { name: "MMP-9", role: "Released and activated by mast cells", ingredients: ["Pine Bark Extract", "Grape Seed Extract"] }
       ],
       keyInsight: "Pine bark and grape seed procyanidins are converted by gut bacteria into valerolactone metabolites, which reduced MMP-9 release from immune cells in lab studies."
-    },
-    {
-      id: 'timps',
-      icon: Shield,
-      title: "Natural Enzyme Balance",
-      subtitle: "TIMP Research",
-      color: "text-indigo-700",
-      bg: "bg-indigo-50",
-      border: "border-indigo-200",
-      gradient: "from-indigo-500/10 to-transparent",
-      summary: "Your body has natural collagen bodyguards called TIMPs. Some of our ingredients raised TIMP levels in lab and animal studies; this has not been tested in people.",
-      problem: "When TIMPs are low relative to MMPs, the balance tips toward breakdown. You need both less attack AND more defense.",
-      solution: "We include compounds that increased TIMP production in lab and animal studies.",
-      mechanisms: [
-        { name: "TIMP-1", role: "Blocks MMP-1, MMP-3, and MMP-9", ingredients: ["Luteolin", "PEA"] }
-      ],
-      keyInsight: "Collagen turnover depends on the balance between MMPs and TIMPs, and our ingredient choices were guided by lab research on both."
     },
     {
       id: 'transcription',
@@ -74,11 +56,11 @@ export default function CollagenScienceSection() {
       bg: "bg-purple-50",
       border: "border-purple-200",
       gradient: "from-purple-500/10 to-transparent",
-      summary: "Pine bark, PEA and luteolin have been studied in lab research for effects on NF-kB, a signal that helps switch on MMP production.",
+      summary: "Pine bark and PEA have been studied in lab research for effects on NF-kB, a signal that helps switch on MMP production.",
       problem: "Ongoing inflammation can increase the signals that switch on MMP production.",
       solution: "We include ingredients studied in lab research for effects on the signals that control MMP production.",
       mechanisms: [
-        { name: "NF-kB Pathway", role: "Master inflammatory switch", ingredients: ["PEA", "Pine Bark Extract", "Luteolin"] },
+        { name: "NF-kB Pathway", role: "Master inflammatory switch", ingredients: ["PEA", "Pine Bark Extract"] },
         { name: "AP-1 Pathway", role: "Stress-response transcription factor", ingredients: ["Pine Bark Extract"] }
       ],
       keyInsight: "In a small lab study, blood from volunteers who took a pine bark extract reduced inflammatory signaling in immune cells."
@@ -96,63 +78,27 @@ export default function CollagenScienceSection() {
       problem: "Lab research suggests a possible loop: collagen fragments can activate mast cells, and mast cell enzymes can activate collagen-degrading enzymes.",
       solution: "We include ingredients studied in lab research on signaling pathways and mast cells.",
       mechanisms: [
-        { name: "TLR4 Blockade", role: "Lab studies suggest collagen fragments can activate mast cells through this receptor", ingredients: ["Quercetin Phytosome", "Luteolin"] },
+        { name: "TLR4 Blockade", role: "Lab studies suggest collagen fragments can activate mast cells through this receptor", ingredients: ["Quercetin Phytosome"] },
         { name: "Mast Cell Signaling", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA"] }
       ],
       keyInsight: "Some researchers have proposed that collagen breakdown products and inflammation may feed each other."
     },
     {
-      id: 'adamts',
-      icon: AlertTriangle,
-      title: "Proteoglycan Research",
-      subtitle: "ADAMTS Research",
-      color: "text-teal-700",
-      bg: "bg-teal-50",
-      border: "border-teal-200",
-      gradient: "from-teal-500/10 to-transparent",
-      summary: "ADAMTS enzymes help break down proteoglycans as part of normal tissue turnover. Luteolin has been tested on these enzymes only in lab studies, at levels oral luteolin is not known to reach.",
-      problem: "ADAMTS-4 and ADAMTS-5 break down aggrecan, a protein that helps cartilage resist compression.",
-      solution: "In lab studies, luteolin blocked ADAMTS enzymes more than it blocked MMPs.",
-      mechanisms: [
-        { name: "ADAMTS-4/5", role: "Primary aggrecanases in inflammation", ingredients: ["Luteolin"] }
-      ],
-      keyInsight: "Luteolin is one of the few natural compounds tested in lab studies for blocking ADAMTS-4 and ADAMTS-5."
-    },
-    {
       id: 'synthesis',
       icon: Factory,
-      title: "Build New Collagen",
+      title: "Support Normal Collagen Formation",
       subtitle: "Collagen Synthesis",
       color: "text-emerald-700",
       bg: "bg-emerald-50",
       border: "border-emerald-200",
       gradient: "from-emerald-500/10 to-transparent",
-      summary: "We provide the cofactors collagen needs to assemble correctly, even when amino acids are intact.",
+      summary: "Vitamin C supports normal collagen formation. It is the cofactor the body uses to stabilize new collagen.",
       problem: "Collagen formation depends on vitamin C and copper as cofactors.",
-      solution: "Buffered Sodium Ascorbate for hydroxylation plus Copper Bisglycinate for cross-linking.",
+      solution: "Buffered sodium ascorbate, 1,000 mg of vitamin C a day.",
       mechanisms: [
-        { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix", ingredients: ["Vitamin C (Sodium Ascorbate)"] },
-        { name: "Cross-linking", role: "Copper-dependent LOX bonds fibers together", ingredients: ["Copper Bisglycinate"] }
+        { name: "Hydroxylation", role: "Vitamin C stabilizes the collagen helix", ingredients: ["Vitamin C (Sodium Ascorbate)"] }
       ],
       keyInsight: "Without vitamin C, collagen cannot form a stable triple helix."
-    },
-    {
-      id: 'crosslinking',
-      icon: LinkIcon,
-      title: "Support Normal Cross-Linking",
-      subtitle: "LOX Cross-Linking",
-      color: "text-amber-700",
-      bg: "bg-amber-50",
-      border: "border-amber-200",
-      gradient: "from-amber-500/10 to-transparent",
-      summary: "Cross-linking turns weak collagen into strong tissue. We provide the essential Copper.",
-      problem: "LOX absolutely requires copper. Without enough copper, collagen cross-linking cannot work normally.",
-      solution: "We include 2 mg of copper, the cofactor the LOX enzyme needs, and balance it against the zinc in the formula.",
-      mechanisms: [
-        { name: "Copper", role: "Essential LOX cofactor", ingredients: ["Copper Bisglycinate"] },
-        { name: "Homocysteine", role: "Supports normal homocysteine metabolism", ingredients: ["P5P", "Methyl B12/Folate"] }
-      ],
-      keyInsight: "Elevated homocysteine can inhibit LOX; B vitamins support normal homocysteine metabolism."
     },
     {
       id: 'fibroblasts',
@@ -170,7 +116,7 @@ export default function CollagenScienceSection() {
         { name: "NAD+ / Mitochondrial Fuel", role: "Fuels ATP synthesis", ingredients: ["Nicotinamide Riboside", "Benfotiamine", "R5P"] },
         { name: "Antioxidant Defense", role: "Part of the body's antioxidant systems", ingredients: ["Vitamin C", "Manganese Bisglycinate"] }
       ],
-      keyInsight: "NR is split between the AM and PM capsules."
+      keyInsight: "NR is in the PM capsule, taken once a day."
     },
     {
       id: 'mitochondria',
@@ -202,12 +148,11 @@ export default function CollagenScienceSection() {
       gradient: "from-rose-500/10 to-transparent",
       summary: "Several ingredients have been studied in lab research for effects on mast cells.",
       problem: "Mast cells release mediators, including enzymes that can affect connective tissue.",
-      solution: "In lab research, PEA and luteolin act on different mast cell pathways.",
+      solution: "In lab research, PEA and quercetin have been studied for effects on mast cell signaling. These effects have not been confirmed in people.",
       mechanisms: [
-        { name: "PPAR-alpha Activation", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] },
-        { name: "Membrane Stability", role: "Studied in lab research on mast cell degranulation", ingredients: ["Luteolin"] }
+        { name: "PPAR-alpha Activation", role: "Studied in lab research for effects on mast cell mediator release", ingredients: ["PEA (Micronized)"] }
       ],
-      keyInsight: "Quercetin Phytosome (Quercefit®) reaches plasma concentrations roughly 20x higher than plain quercetin."
+      keyInsight: "Plain quercetin is poorly absorbed, so we use a phytosome form (Quercefit®) that has its own human absorption study."
     },
     {
       id: 'histamine',
@@ -225,7 +170,7 @@ export default function CollagenScienceSection() {
         { name: "DAO Enzyme", role: "Gut histamine breakdown", ingredients: ["Copper"] },
         { name: "Methylation", role: "Intracellular breakdown", ingredients: ["Methylfolate", "B12"] }
       ],
-      keyInsight: "DAO requires the same copper needed for collagen cross-linking."
+      keyInsight: "DAO is a copper-containing enzyme."
     },
     {
       id: 'autonomic',
@@ -261,7 +206,7 @@ export default function CollagenScienceSection() {
         { name: "Sodium", role: "Small sodium contribution", ingredients: ["Sodium Ascorbate"] },
         { name: "Vascular Tone", role: "Vitamin C supports normal collagen formation in blood vessels", ingredients: ["Vitamin C"] }
       ],
-      keyInsight: "Sodium ascorbate adds about 210 mg of sodium per day (105 mg per scoop) alongside the vitamin C."
+      keyInsight: "Sodium ascorbate adds about 130 mg of sodium per day (65 mg per scoop) alongside the vitamin C."
     },
     {
       id: 'gi-protection',
@@ -283,7 +228,7 @@ export default function CollagenScienceSection() {
     }
   ];
 
-  // Cluster the 14 pathways into 4 thematic groups for visual rhythm.
+  // Cluster the 11 pathways into 4 thematic groups for visual rhythm.
   const clusters: Array<{
     id: string;
     label: string;
@@ -298,15 +243,15 @@ export default function CollagenScienceSection() {
       title: 'Collagen Turnover',
       subtitle: 'Ingredients studied in lab research for effects on the enzymes that break down connective tissue.',
       accent: '#0F2A22',
-      pathwayIds: ['mmp-inhibition', 'timps', 'transcription', 'adamts']
+      pathwayIds: ['mmp-inhibition', 'transcription', 'vicious-cycle']
     },
     {
       id: 'build',
       label: 'Cluster 02',
       title: 'Support New Collagen Formation',
-      subtitle: 'Provide the cofactors and energy nutrients the body uses for collagen formation and cross-linking.',
+      subtitle: 'Vitamin C for normal collagen formation, plus the energy nutrients cells use to do the work.',
       accent: '#2D6B52',
-      pathwayIds: ['synthesis', 'crosslinking', 'fibroblasts', 'vicious-cycle']
+      pathwayIds: ['synthesis', 'fibroblasts']
     },
     {
       id: 'calm',
@@ -333,7 +278,7 @@ export default function CollagenScienceSection() {
       {/* SECTION 1: VICIOUS CYCLE - pinned scroll-scrubbed sequence */}
       <ViciousCycle />
 
-      {/* SECTION 2: DARK BAND - "14 Pathways" intro */}
+      {/* SECTION 2: DARK BAND - "11 Pathways" intro */}
       <section className="bg-[#0F2A22] py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B36B4D]/10 rounded-full blur-[120px]" aria-hidden="true" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#2D6B52]/15 rounded-full blur-[120px]" aria-hidden="true" />
@@ -343,7 +288,7 @@ export default function CollagenScienceSection() {
             The ZebraThrive Formula
           </span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-            One system built around 14 biological pathways in <span className="text-[#D4A373] italic font-normal">collagen and mast cell research</span>
+            One system built around 11 biological pathways in <span className="text-[#D4A373] italic font-normal">collagen and mast cell research</span>
           </h2>
           <p className="text-white/75 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
             Rather than focusing on one thing, the formula includes ingredients chosen from research on many pathways in collagen and mast cell biology, organized into four clusters.
@@ -498,7 +443,7 @@ export default function CollagenScienceSection() {
           <div className="text-center pt-8">
             <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 max-w-[92vw] px-5 sm:px-6 py-3 bg-[#3D3733] text-white rounded-2xl sm:rounded-full shadow-xl hover:scale-105 transition-transform cursor-default">
               <Zap className="w-4 h-4 text-[#B36B4D] flex-shrink-0" aria-hidden="true" />
-              <span className="text-[11px] sm:text-xs font-bold tracking-wider sm:tracking-widest uppercase">29 Ingredients, 14 Research Pathways, 1 System</span>
+              <span className="text-[11px] sm:text-xs font-bold tracking-wider sm:tracking-widest uppercase">26 Ingredients, 11 Research Pathways, 1 System</span>
             </div>
           </div>
 

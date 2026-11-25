@@ -86,6 +86,36 @@
       "source": "/ingredients/l-lysine",
       "destination": "/ingredients",
       "permanent": true
+    },
+    {
+      "source": "/ingredients/luteolin",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/luteolin.md",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/astaxanthin",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/astaxanthin.md",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/chromium",
+      "destination": "/ingredients",
+      "permanent": true
+    },
+    {
+      "source": "/ingredients/chromium.md",
+      "destination": "/ingredients",
+      "permanent": true
     }
   ],
   "headers": [

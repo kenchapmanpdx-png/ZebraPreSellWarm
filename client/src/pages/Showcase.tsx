@@ -46,7 +46,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/InteractiveIngredientMap.tsx",
     lines: 381,
     blurb:
-      "Visual ingredient-to-benefit map: 29 ingredients connecting to 14 health goals with hover/tap highlighting.",
+      "Visual ingredient-to-benefit map: 26 ingredients connecting to 14 health goals with hover/tap highlighting.",
     context:
       "Lazy-loaded by ClinicalRationale. Rendered standalone here so you can see it in isolation. Your June 23 changelog: 'Added interactive ingredient-to-benefit map after Ava story section.'",
     Component: InteractiveIngredientMap,
@@ -79,7 +79,7 @@ const ENTRIES: ShowcaseEntry[] = [
     file: "client/src/components/DifferenceSection.tsx",
     lines: 131,
     blurb:
-      "Eight-tile feature grid: 'One Daily Routine', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Made With Sensitive Systems in Mind', 'Total Transparency', 'Minimalist Purity', 'Circadian Synergy'. Marketing differentiation block.",
+      "Eight-tile feature grid: 'One Daily Routine', 'Smart Science', 'No Junk. Ever.', 'Condition Mindful', 'Made With Sensitive Systems in Mind', 'Total Transparency', 'Minimalist Purity', 'Split Across the Day'. Marketing differentiation block.",
     context:
       "Per the June 15 changelog, the 'Why Choose ZebraThrive' section was removed and its benefits moved into 'What Makes ZebraThrive Different.' This component may be the orphaned predecessor - verify against the live homepage before reintroducing.",
     Component: DifferenceSection,

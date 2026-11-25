@@ -18,7 +18,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const stats = [
   {
-    target: 29,
+    target: 26,
     suffix: '',
     label: 'Active ingredients',
     blurb: 'Each one chosen for a published mechanism, with the evidence level stated on its ingredient page. None included for marketing.',
@@ -30,7 +30,7 @@ const stats = [
     blurb: 'Every ingredient lot will be checked against its Certificate of Analysis before production.',
   },
   {
-    target: 14,
+    target: 11,
     suffix: ' paths',
     label: 'Lab-studied mechanisms',
     blurb: 'Mechanisms studied in lab research, from collagen-degrading enzymes to mast cells; the human evidence for each is on its ingredient page.',

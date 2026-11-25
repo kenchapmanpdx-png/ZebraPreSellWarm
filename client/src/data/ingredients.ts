@@ -238,229 +238,6 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Effects of PEA on Nociceptive Pain: A Systematic Review", pmid: "36015298", authors: "Scuteri D et al.", year: "2022" }
         ]
     },
-    "luteolin": {
-        id: "luteolin",
-        name: "Luteolin",
-        patientSummary: "Luteolin is a plant compound found in celery, parsley, artichokes and chamomile, and it has been widely studied in the lab. In lab studies of cultured human mast cells, luteolin reduced the release of histamine, tryptase and signals like IL-6, IL-8 and TNF. Those studies used concentrations well above what a supplement dose is expected to reach in blood. That is cell data, not a human outcome. We use standard (non-micronized) luteolin from Sophora japonica, a non-peanut source.",
-        whyThisFormPatient: "We use standard (non-micronized) luteolin from Sophora japonica (Japanese pagoda tree). The source is the real gate: some commercial luteolin is extracted from peanut hulls, and a peanut-derived ingredient is a non-starter for an allergy-sensitive community. We do not pay for micronization: luteolin is absorbed poorly both because it dissolves slowly and because it is quickly processed in the gut wall and liver, and micronized luteolin has no human data showing better absorption. The source and purity on the Certificate of Analysis are what matter.",
-        faq: [
-            { q: "What does luteolin do that quercetin doesn't?", a: "Both are plant flavonoids studied in lab mast cell models, and they differ in a few practical ways. Luteolin is described as crossing the blood-brain barrier in lab research, though this has not been measured in people. On drug interactions it is not the safer pick: in people, repeated quercetin speeds up CYP3A, the enzyme route that clears ivabradine, while luteolin has no human interaction data and its lab data on that enzyme point in both directions. In cultured human mast cells (lab data, at high concentrations), luteolin also reduced cytokines such as IL-1b, IL-6 and TNF, not just histamine." },
-            { q: "Why standard luteolin instead of micronized?", a: "Luteolin is absorbed poorly: it dissolves slowly, and what is absorbed is quickly processed by enzymes in the gut wall and liver (UGT1A9). Making the particles smaller may have some effect on exposure in animal studies, but micronized luteolin has no human pharmacokinetic studies showing an advantage for us to pay for. So we put our spec where it matters: standard luteolin from Sophora japonica, a non-peanut source, verified on the Certificate of Analysis." },
-            { q: "How should I start luteolin if I'm reactive?", a: "Start low and go slow. Some sensitive people prefer to start any new supplement slowly. A common approach is to start at a fraction of the target dose and increase gradually over a few weeks, adjusting to how you feel. This gives your body time to adjust as you reach your full daily amount. In trials lasting up to 26 weeks, luteolin was generally well tolerated." },
-            { q: "How long until I notice anything?", a: "Luteolin is a daily-support ingredient, not something that acts in the moment. Human safety studies of luteolin supplements have run from several weeks up to about 6 months, so give it consistent daily use over the first couple of months." }
-        ],
-        triadPlain: {
-            mcas: "No randomized controlled trial has tested luteolin in people with MCAS, and it is not a substitute for any prescribed treatment. Luteolin has a long history of use in foods and has been studied in human trials for up to about 6 months without major safety concerns. ",
-            heds: "No randomized controlled trial has tested luteolin in people with hEDS. Luteolin does not reach levels that block collagen-degrading enzymes at oral doses, so we do not claim a connective tissue benefit for it.",
-            pots: " Mast cell symptoms are commonly co-reported by people in the POTS community. Luteolin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
-        },
-        bluf: "Luteolin is a plant flavonoid (found in celery, parsley, artichokes) that reduced mast cell activity in lab studies of cultured human mast cells, at concentrations above blood levels from supplements. ZebraThrive uses 140 mg daily of standard (non-micronized) luteolin from Sophora japonica, a non-peanut source, in the Daily Powder, split AM and PM.",
-        atAGlance: {
-            whatItIs: "A plant flavonoid (found in celery, parsley, artichokes) studied in lab mast cell models",
-            whyWeIncludeIt: "In lab studies of cultured human mast cells, luteolin reduced the release of histamine, tryptase and cytokines, at concentrations higher than a supplement dose reaches in blood. It has a good safety record in trials up to 26 weeks.",
-            dose: "140 mg daily in the Daily Powder, split AM and PM scoops",
-            keyBenefits: [
-                "Lab studies: reduced histamine, tryptase and cytokine release in cultured human mast cells, at concentrations above blood levels from supplements",
-                "",
-                "Standard luteolin from Sophora japonica (non-peanut source)"
-            ]
-        },
-        howItWorks: "In lab studies at high concentrations, luteolin acts on several mast cell pathways at once.\n\nFirst, in lab studies luteolin reduced calcium entry into mast cells, a step that triggers the release of their contents. Second, in lab studies it reduced NF-kB, a switch for inflammatory gene activity. Third, in lab studies it reduced protein kinase C (PKC), another pathway that leads to mast cell activation.\n\n ",
-        research: [
-            {
-                outcome: "Mast Cell Lab Studies",
-                summary: "In a cultured human mast cell line, luteolin reduced the release of several mast cell signals at a high lab concentration. This is in vitro data, not a clinical outcome.",
-                studies: [
-                    {
-                        source: "Tsilioni I & Theoharides TC, 2024 (Int Arch Allergy Immunol)",
-                        pmid: "38588651",
-                        design: "In vitro, cultured human LADR mast cell line",
-                        finding: "In cultured human mast cells, luteolin pretreatment at a high lab concentration (equal to cromolyn's) reduced release of histamine, tryptase, MMP-9, VEGF, IL-1b, IL-6, IL-8 and TNF."
-                    }
-                ]
-            },
-            {
-                outcome: "Neuroinflammation Research (Lab and Review Data)",
-                summary: "",
-                studies: [
-                    {
-                        source: "Theoharides TC et al., 2021, review of luteolin and neuroinflammation research (full reference in our evidence list)",
-                        pmid: "33847020",
-                        design: "Review of luteolin mechanisms in neuroinflammation",
-                        finding: "A review paper discusses lab and animal research on luteolin and brain immune cells (microglia); this has not been tested in people."
-                    }
-                ]
-            },
-            {
-                outcome: "Clinical Trial of a Different PEA and Luteolin Product",
-                summary: "One clinical trial has tested a combined, co-ground PEA and luteolin product given with smell training after COVID-19. ZebraThrive delivers the same two ingredients separately in the Daily Powder, not as that product.",
-                studies: [
-                    {
-                        source: "Di Stadio A et al., \"Ultramicronized PEA and Luteolin Supplement Combined with Olfactory Training\"",
-                        pmid: "35450527",
-                        design: "Multicenter double-blind randomized placebo-controlled trial, post-COVID olfactory dysfunction, n=185, 90 days",
-                        finding: "The trial gave a combined PEA and luteolin product (co-ground, 770 mg a day) with smell training for 90 days and measured smell test scores. ZebraThrive contains the same two ingredients, not that co-ground product. Olfactory outcome only; no inflammatory markers were measured."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No randomized controlled trials exist specifically in MCAS, hEDS, or POTS populations. The mast cell evidence comes from in vitro studies in cultured cells. Luteolin does not reach levels that block collagen-degrading enzymes at oral doses, so we do not claim a collagen benefit for it.",
-        triad: {
-            mcas: "No randomized controlled trial has tested luteolin in people with MCAS, and it is not a substitute for any prescribed treatment.",
-            heds: " Luteolin does not reach levels that block collagen-degrading enzymes, so we do not claim a connective tissue benefit for it.",
-            pots: "Luteolin has not been studied in POTS, and it is not a substitute for any prescribed treatment."
-        },
-        whyThisForm: {
-            form: "Standard (non-micronized) luteolin from Sophora japonica, non-peanut source, COA-verified",
-            rationale: "Luteolin's oral bioavailability is low because it is rapidly glucuronidated in the gut wall and liver (UGT1A9 first-pass metabolism). Luteolin's oral absorption is limited partly by how fast it dissolves and mainly by rapid first-pass metabolism in the gut and liver. Making the particles smaller has shown benefits in animal studies but has no human pharmacokinetic data confirming an advantage, so we keep the standard grade. The decisive spec is the source: we require luteolin from Sophora japonica, confirmed in writing as non-peanut, because some commercial luteolin is extracted from peanut hulls. Liposomal and co-ground PEA plus luteolin products exist; they are not what we ship. We deliver PEA and luteolin separately in the Daily Powder.",
-            comparison: [
-                { form: "Standard luteolin from Sophora japonica (non-peanut, COA-verified)", difference: "Our form; source confirmed non-peanut by supplier statement", selected: true },
-                { form: "Micronized luteolin (≤25 μm)", difference: "Smaller particles may dissolve faster, but no human study shows better absorption", selected: false },
-                { form: "Peanut-hull-derived luteolin", difference: "Peanut allergen risk; excluded", selected: false },
-                { form: "Liposomal luteolin", difference: "Liposomal luteolin, an alternative carrier technology with claimed but unvalidated improved absorption (commercial claims only, no human data); not used here.", selected: false },
-                { form: "Co-ultramicronized PEA-luteolin (10:1 ratio)", difference: "We deliver PEA and luteolin separately in the Daily Powder, not as the co-ultramicronized combination used in the published combination studies.", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Luteolin has been well tolerated in trials lasting up to 26 weeks. There are no specific tolerability data for luteolin in highly sensitive people. ",
-            interactions: "No human study has tested luteolin with any POTS or MCAS medication, and there are no human blood-level data to show whether lab findings apply at our dose. In lab studies luteolin inhibits CYP2D6, the enzyme that clears metoprolol and inactivates midodrine's active form; it both inhibits and induces CYP3A4, which clears ivabradine; and it blocks OCT2, the kidney transporter that clears famotidine. Whether any of this happens at 140 mg a day is unknown. Hydroxyzine is often taken alongside luteolin in MCAS, and the pair has never been studied. If you take metoprolol, midodrine, ivabradine, hydroxyzine, or famotidine, tell your prescriber. Lab studies that used propranolol found no sign of a beta-receptor interaction. Nothing has been reported with fludrocortisone, cromolyn, or ketotifen, but none has been studied. Theoretical caution with anticoagulants (may enhance effects).",
-            excipientConcerns: {
-                avoid: ["Magnesium stearate", "FD&C dyes", "Sodium lauryl sulfate"],
-                safe: ["Sunflower lecithin", "", "Rice hull concentrate"]
-            },
-            cautions: "Not recommended during pregnancy or breastfeeding pending more human safety data. Discontinue 2 weeks before surgery. Iron supplements may reduce absorption; space by 2+ hours."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "Start with a small sprinkle, building to half a scoop once a day (35 mg luteolin).", notes: "" },
-                { step: "Week 2", dosage: "Half a scoop twice a day (35 mg luteolin each time).", notes: "Morning and evening with meals" },
-                { step: "Week 3", dosage: "70 mg once daily", notes: "Increase single dose" },
-                { step: "Week 4+", dosage: "70 mg twice daily", notes: "Target maintenance dose" }
-            ],
-            timeline: "Give it several weeks of steady daily use. Consistent daily dosing is important due to the short half-life."
-        },
-        sources: [
-            { title: "Luteolin Is More Potent than Cromolyn in Their Ability to Inhibit Mediator Release from Cultured Human Mast Cells", pmid: "38588651", authors: "Tsilioni I & Theoharides TC", year: "2024" },
-            { title: "Long-COVID syndrome-associated brain fog and chemofog: Luteolin to the rescue", pmid: "33847020", authors: "Theoharides TC et al.", year: "2021" },
-            { title: "Ultramicronized Palmitoylethanolamide and Luteolin Supplement Combined with Olfactory Training to Treat Post-COVID-19 Olfactory Impairment", pmid: "35450527", authors: "Di Stadio A et al.", year: "2022" }
-        ]
-    },
-"magnesium-bisglycinate": {
-        id: "magnesium-bisglycinate",
-        name: "Magnesium Bisglycinate",
-        patientSummary: "Magnesium bisglycinate is magnesium bonded to two glycine amino acids, a form that is gentle on the gut compared to magnesium oxide, which is poorly absorbed and has a stronger laxative effect. Magnesium is a foundational mineral we include as part of this formula. How often people in this community run low on magnesium has not been measured. In an animal study, magnesium-deficient rats had higher blood histamine for a period. The bisglycinate form has a gentle gut profile and is the form studied in a small human trial for sleep quality. We chose bisglycinate over magnesium oxide, which is poorly absorbed, and over threonate, which costs more.",
-        whyThisFormPatient: "We use magnesium bisglycinate - magnesium chelated to two glycine amino acids. The chelate may be absorbed partly through PepT1, the peptide transporter, a pathway distinct from the ones linked to the laxative effect of citrate or oxide. We ask for spectroscopic (FT-IR) testing to confirm a true chelate before a lot is approved, because some cheaper bisglycinate products are magnesium oxide buffered with glycine rather than a true chelate. We use magnesium bisglycinate to deliver about 300 mg of elemental magnesium a day, close to the 250 to 300 mg used in small human sleep and heart rate variability studies.",
-        faq: [
-            { q: "Why not magnesium oxide - it's cheaper?", a: "Because most of it never gets into your bloodstream. Magnesium oxide is about 4 to 15% bioavailable, and most of it pulls water into your colon rather than being absorbed. In one human study in people with ileal resection, bisglycinate was about 23.5% absorbed, roughly double magnesium oxide, and it is thought to use a different absorption route than the one linked to the laxative effect. The glycine portion is an amino acid with its own calming and sleep-related research, though at a lower dose than used in those studies. If you have a sensitive gut, bisglycinate is a gentler option than magnesium oxide, though it has not been studied specifically in people with gastroparesis." },
-            { q: "Magnesium bisglycinate vs glycinate: is there a difference?", a: "They are the same compound. Magnesium glycinate is the common name and bisglycinate is the precise one: one magnesium bound to two glycine molecules. The difference that matters is on the label. Some products sold under either name are buffered, meaning magnesium oxide is blended in. ZebraThrive specifies a non-buffered true chelate and verifies it by FT-IR." },
-            { q: "Will magnesium drop my blood pressure?", a: "For most people with normal or low blood pressure, large studies suggest magnesium does not cause a meaningful drop. A 2025 meta-analysis of 38 trials (2,709 people) found no significant blood pressure effect in people with normal blood pressure. The 'magnesium lowers BP' framing came from older studies in hypertensive populations. If you're already on midodrine and running low, give your prescriber a heads-up - but the data doesn't support magnesium as a meaningful BP dropper at the doses we use." },
-            { q: "What does research show about magnesium and mast cells?", a: "Only lab and animal studies; none in people. A lab study using rat mast cells found that very high concentrations of magnesium, far above what supplementation achieves in the body, reduced mast cell activity in a dose-dependent way. In an animal study, magnesium-deficient rats had 4 to 5 times higher blood histamine within two weeks. Whether this applies to people has not been studied." },
-            { q: "How long until I notice anything?", a: "Magnesium is not a sleep treatment, and a recent review rated the overall evidence for magnesium and sleep as low to very low certainty. Over months, cellular magnesium stores gradually refill as part of normal mineral repletion. Blood tests for magnesium are notoriously unreliable, since only a small fraction, about 0.3%, of total body magnesium is in your blood, so don't go by serum levels alone." }
-        ],
-        triadPlain: {
-            mcas: "No randomized controlled trial has tested magnesium glycinate in people with MCAS. The form choice matters for tolerability: we use bisglycinate because it avoids the citric acid and sulfate found in some other magnesium forms, which some sensitive individuals report as triggers. Bisglycinate is made from magnesium and glycine without a fermentation step, unlike magnesium citrate.",
-            heds: "No randomized controlled trial has tested magnesium glycinate in people with hEDS. We include magnesium as a foundational mineral to cover a common intake gap: about 300 mg elemental magnesium is 71% of the Daily Value.",
-            pots: "No trial has tested magnesium in people with POTS, and no study has measured how often people with POTS are low in magnesium, so the dose is set to cover a common intake gap, not to correct a known deficiency. If you tend to run low on blood pressure or take midodrine, monitor your blood pressure when you start and give your prescriber a heads-up. We split the dose AM and PM to maintain steady levels instead of dumping it all at once."
-        },
-        bluf: "Magnesium bisglycinate is magnesium bonded to two glycine molecules, a form studied for good absorption and a gentle gut profile. Magnesium is a foundational electrolyte; lab studies at concentrations far above what is achievable from oral supplementation have looked at effects on mast cells, and a small trial in heart failure patients found a heart rate variability change. ZebraThrive uses magnesium bisglycinate providing about 300 mg of elemental magnesium daily in the Daily Powder, split between AM and PM scoops.",
-        atAGlance: {
-            whatItIs: "A highly absorbable, gentle form of magnesium bound to the amino acid glycine",
-            whyWeIncludeIt: "Magnesium is a foundational mineral involved in autonomic function, and about 300 mg of elemental magnesium covers 71% of the Daily Value, a common intake gap.",
-            dose: "About 300 mg elemental magnesium daily, in the Daily Powder, split AM and PM scoops",
-            keyBenefits: [
-                "Lab studies in rat mast cells found that magnesium chloride reduced degranulation in a dose-dependent manner, at concentrations well above what oral supplementation achieves in the body.",
-                "Lab studies suggest magnesium may influence calcium signaling pathways involved in mast cell activity, at concentrations well above typical blood levels from oral supplementation.",
-                "Covers a common intake gap: about 300 mg elemental is 71% of the Daily Value",
-                "The bisglycinate form also provides glycine, an amino acid that contributes to sleep support and is a basic building block of collagen, though at a lower amount than doses studied specifically for sleep."
-            ]
-        },
-        howItWorks: "Magnesium is involved in over 300 enzymatic reactions. Three of its roles are described below.\n\nFirst, lab studies suggest magnesium may influence calcium-related pathways in mast cells, though at concentrations well above what oral supplementation can achieve in the body. Mast cell degranulation involves calcium signaling, and some research has looked at whether adequate magnesium levels influence this process. A 2025 lab study in rat mast cells showed magnesium chloride reduced degranulation in a dose-dependent manner, using concentrations far higher than what oral supplementation produces in the bloodstream. Magnesium deficiency does the opposite: in animal data, deficient rats run 4-5 fold higher blood histamine within two weeks.\n\nSecond, magnesium modulates the autonomic nervous system. Magnesium is thought to support the parasympathetic nervous system, and a small trial in heart failure patients found a heart rate variability measure improved with magnesium citrate. \n\nThird, the bisglycinate form delivers ~2g of glycine daily as a useful byproduct. Glycine supports sleep architecture and is one of the primary amino acids used in collagen, though the amount delivered here is below doses studied specifically for sleep benefits. DAO, the enzyme that breaks down histamine in the gut, depends on copper rather than magnesium, so magnesium is not a direct DAO cofactor.",
-        research: [
-            {
-                outcome: "Mast Cell Lab and Animal Studies",
-                summary: "Lab research has looked at how magnesium affects mast cells, but the effective concentration in these studies was far above what the body reaches from oral supplementation, so this is not direct evidence that the supplement stabilizes mast cells.",
-                studies: [
-                    {
-                        source: "Kazama I et al., 2025, \"Magnesium and zinc dose-dependently stabilize rat peritoneal mast cells\" (lab study)",
-                        pmid: "40692390",
-                        design: "In vitro study using rat peritoneal mast cells (2025)",
-                        finding: "In this lab study, magnesium chloride reduced the number of degranulating mast cells in a dose-dependent manner, but only at concentrations far above what oral supplementation can achieve in the body."
-                    },
-                    {
-                        source: "Srebro D et al., \"Magnesium in orofacial pain model\"",
-                        pmid: "37047214",
-                        design: "In vivo rat model (2023)",
-                        finding: "In a rat study, injected magnesium sulfate reduced mast cell degranulation by about 23% in the acute phase and about 40% in a later phase."
-                    }
-                ]
-            },
-            {
-                outcome: "Autonomic Function and HRV",
-                summary: "Magnesium supplementation has shown improvements in heart rate variability in some small studies, including one in heart failure patients.",
-                studies: [
-                    {
-                        source: "Almoznino-Sarafian D et al., \"Magnesium and heart rate variability\"",
-                        pmid: "19201586",
-                        design: "A controlled trial gave 300 mg/day of magnesium citrate to 16 heart failure patients for 5 weeks, compared to 16 untreated heart failure patients.",
-                        finding: "HRV correlation dimension significantly improved from 3.47 to 3.94 (p<0.001)"
-                    }
-                ]
-            },
-            {
-                outcome: "Deficiency and Consequences",
-                summary: "In animal studies, magnesium-deficient rats had higher blood histamine and mast cell changes. How common low magnesium status is in this population has not been measured.",
-                studies: [
-                    {
-                        source: "Kraeuter SL & Schwartz R, \"Magnesium deficiency and histamine\"",
-                        pmid: "6445415",
-                        design: "Animal model of magnesium depletion",
-                        finding: "In magnesium-depleted rats, blood histamine rose 4 to 5 fold by day 14 of depletion, with mast cell changes seen in the tissue studied."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "No randomized controlled trials exist specifically testing magnesium glycinate in hEDS, POTS, or MCAS. One study of 94 people with mitral valve prolapse found 59 had low red blood cell magnesium, but low levels were not linked to joint hypermobility. Many people with hEDS report taking magnesium, even though trials in hEDS are lacking.",
-        triad: {
-            mcas: "No randomized controlled trial has tested magnesium glycinate in people with MCAS. We chose the bisglycinate form in part because it is not fermentation-derived, unlike magnesium citrate.",
-            heds: " The glycine delivered with this form is a building block of collagen, though the amount provided is small relative to amounts studied for collagen synthesis. ",
-            pots: "No study has measured how often people with POTS are low in magnesium, so the dose is set to cover a common intake gap, not to correct a known deficiency. Monitor blood pressure in hypotensive POTS patients as it can lower BP slightly."
-        },
-        whyThisForm: {
-            form: "Magnesium bisglycinate, generic chelate (lot FT-IR identity testing requested), non-buffered, no citric acid",
-            rationale: "Form selection matters for absorption and tolerability. We chose bisglycinate because animal and mechanistic research suggests it may use the PepT1 transport pathway, it tends to cause minimal GI upset, it is not fermentation-derived, and it provides glycine. We are requiring a generic chelate to be verified as a true chelate by FT-IR spectrum testing on each production lot, with no oxide buffering, and free of the citric acid found in some branded chelates.",
-            comparison: [
-                { form: "Magnesium oxide", difference: "Only 4-15% absorption; strong laxative effect", selected: false },
-                { form: "Magnesium citrate", difference: "Magnesium citrate: about 30% absorbed. It is made using fermentation, which may carry a theoretical histamine risk for sensitive individuals, though residue data are not available.", selected: false },
-                { form: "Magnesium glycinate", difference: "Magnesium bisglycinate: well absorbed in the studied population, with minimal GI upset and the added benefit of glycine.", selected: true },
-                { form: "Magnesium L-threonate", difference: "Magnesium L-threonate: a brain-penetrant alternative some people use; this is not the form we ship.", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "Magnesium glycinate is generally well tolerated by people with sensitive digestion. Diarrhea can occur if dose is increased too rapidly. Theoretical concern of hypotension exists but is usually not significant in normotensive populations.",
-            interactions: "Antibiotics: Space by 2-6 hours. Thyroid medications: separate from magnesium by at least 4 hours, as magnesium may reduce absorption of thyroid medication. Fludrocortisone: potassium is the electrolyte most often watched on fludrocortisone. A study in children found no drop in magnesium, though the same paper notes that adult studies have reported low magnesium at a low frequency; hypokalemia remains the better documented risk. Beta-blockers: the only human study of oral magnesium with beta-blockers (a different salt, in 39 people with high blood pressure) found no significant blood pressure change between groups; older studies of antacid magnesium salts gave conflicting results on metoprolol and propranolol absorption, and none used this form. Famotidine: gram doses of antacid magnesium lowered famotidine absorption by up to about 20-25% in some studies; this chelate is not an antacid, but taking famotidine 2 hours apart costs nothing.",
-            excipientConcerns: {
-                avoid: ["We avoid fermentation-derived magnesium citrate as a precaution for histamine-sensitive individuals, though no contamination data exist either way.", "Magnesium stearate", "Artificial colors"],
-                safe: ["Magnesium bisglycinate, non-buffered, no citric acid", "Rice hull concentrate (flow agent in the Daily Powder)"]
-            },
-            cautions: "Monitor blood pressure when initiating. Kidney function should be normal. "
-        },
-        howToStart: {
-            protocol: [
-                { step: "Week 1", dosage: "Start with a small sprinkle, building to half a scoop once a day (75 mg magnesium).", notes: "MCAS ultra-sensitive start" },
-                { step: "Week 2", dosage: "Half a scoop twice a day (150 mg magnesium a day).", notes: "Standard start" },
-                { step: "Week 3", dosage: "Build up to one scoop twice a day (300 mg magnesium a day).", notes: "Target maintenance" },
-                { step: "Week 4+", dosage: "About 300 mg elemental magnesium daily, delivered as magnesium bisglycinate, split AM and PM scoops.", notes: "Full daily amount, split AM/PM scoops" }
-            ],
-            timeline: "RBC magnesium repletion requires 8-12 weeks. Don't expect immediate effects-repletion takes time. Some people notice changes in sleep within a few weeks, though the overall evidence for magnesium and sleep is inconsistent and rated low certainty."
-        },
-        sources: [
-            { title: "Magnesium and zinc stabilize mast cells in a dose-dependent manner", pmid: "40692390", authors: "Kazama I et al.", year: "2025" },
-            { title: "Magnesium reduces mast cell degranulation in orofacial pain model", pmid: "37047214", authors: "Srebro D et al.", year: "2023" },
-            { title: "Magnesium administration and heart rate variability", pmid: "19201586", authors: "Almoznino-Sarafian D et al.", year: "2009" },
-            { title: "Bioavailability of magnesium diglycinate vs magnesium oxide", pmid: "7815675", authors: "Schuette SA et al.", year: "1994" },
-            { title: "Nutritional dose of magnesium in hypertensive patients on beta blockers lowers systolic blood pressure: a double-blind, cross-over study", pmid: "7913949", authors: "Wirell et al.", year: "1994" }
-        ]
-    },
     "pine-bark-extract": {
         id: "pine-bark-extract",
         name: "Pine Bark Extract",
@@ -563,7 +340,7 @@ export const ingredients: Record<string, IngredientData> = {
         whyThisFormPatient: "We use generic Nicotinamide Riboside Chloride, with purity checked on each batch. Current Certificates of Analysis report 99.34 to 99.87% purity by HPLC. NR is chemically unstable - it can degrade over time to nicotinamide, which actually inhibits the enzymes NR is supposed to support. So the most important factor isn't the brand name, it's the analytical paperwork: identity and purity testing on each batch. We require a Certificate of Analysis confirming identity and purity for each batch.",
         faq: [
             { q: "Does NR actually raise NAD+?", a: "In blood, yes - consistently. In a human trial, whole-blood NAD+ rose 22% at 100 mg/day, 51% at 300 mg/day, and 142% at 1,000 mg/day. In skeletal muscle, the picture is murkier; one well-run trial found no muscle NAD+ increase at high doses. " },
-            { q: "Will NR keep me awake at night?", a: "No. The 'NAD+ equals energy' framing is mostly marketing. In NR trials, the most commonly reported side effects were mild, such as nausea, diarrhea and headache. NAD+ isn't a stimulant - it's a cofactor in metabolic reactions that happen 24/7. We split the dose AM and PM out of convention. A 2026 study found blood NAD+ rises and falls slowly, and once-daily dosing is enough. NR only needs to be taken once a day, but it comes inside your AM and PM capsules alongside other ingredients, so take those as directed." },
+            { q: "Will NR keep me awake at night?", a: "No. The 'NAD+ equals energy' framing is mostly marketing. In NR trials, the most commonly reported side effects were mild, such as nausea, diarrhea and headache. NAD+ isn't a stimulant - it's a cofactor in metabolic reactions that happen 24/7. A 2026 study found blood NAD+ rises and falls slowly, and once-daily dosing is enough. Our NR is in the PM capsule only, taken once a day." },
             { q: "What about methylation? Doesn't NR use up methyl groups?", a: "Nicotinamide (a downstream metabolite of NR) gets methylated for excretion using the same methyl donors as homocysteine and neurotransmitter metabolism. We include methylfolate and methylated B12 in the formulation partly to keep that methyl pool topped up. If you've got known MTHFR variants and significant methylation concerns, mention NR to your prescriber when titrating it in." },
             { q: "What should I look for in an NR product?", a: " NR is chemically unstable and easy to mishandle, so what you want to see is identity confirmation (it is what it says), purity (≥99% NR Chloride), and stability testing (the batch hasn't degraded to nicotinamide). " }
         ],
@@ -572,11 +349,11 @@ export const ingredients: Record<string, IngredientData> = {
             heds: "No study has tested NR in people with hEDS, and its effects on collagen have only been looked at in a lab study.",
             pots: " On blood pressure, the strongest human trial so far found NR did not lower it, so no blood pressure effect is expected at our dose. NR has not been tested together with any POTS medication, and no study has measured standing blood pressure. "
         },
-        bluf: "Nicotinamide Riboside (NR) is a specialized form of vitamin B3 that raises cellular NAD+ for energy and DNA repair. Lab and mouse studies suggest NR may affect mast cell activity and certain enzymes involved in tissue structure. ZebraThrive uses 500 mg daily of NR chloride, with a Certificate of Analysis for each batch.",
+        bluf: "Nicotinamide Riboside (NR) is a specialized form of vitamin B3 that raises cellular NAD+ for energy and DNA repair. Lab and mouse studies suggest NR may affect mast cell activity and certain enzymes involved in tissue structure. ZebraThrive uses 300 mg daily of NR chloride, in the PM capsule, with a Certificate of Analysis for each batch.",
         atAGlance: {
             whatItIs: "A specialized form of vitamin B3 that efficiently raises NAD+ levels, essential for cellular energy and repair.",
             whyWeIncludeIt: "Lab studies suggest NR may affect mast cell activity through a cellular pathway, and separate lab studies have looked at NR's effects on certain structural proteins.",
-            dose: "500 mg daily (250 mg AM capsule + 250 mg PM capsule)",
+            dose: "300 mg daily (PM capsule)",
             keyBenefits: [
                 "In a clinical trial, 300 mg a day raised whole-blood NAD+ by 51% and 1,000 mg a day by 142%.",
                 "In a lab and mouse study, NR and a related compound reduced mast cell activation markers in mouse and human cord-blood cells; this has not been tested in people at this dose.",
@@ -610,7 +387,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Generic NR chloride, 99.34 to 99.87% purity by HPLC per lot COA.",
-            rationale: " Our spec is generic NR chloride at 99.34 to 99.87% purity by HPLC, verified per batch. Most published clinical trials used the branded Niagen form. The molecule is the same, and we verify identity and purity per batch. NR chloride is generally made by chemical synthesis, and we are confirming our manufacturer's route in writing. We split the dose into AM and PM capsules for convenience, though once-daily dosing raises blood NAD+ just as well.",
+            rationale: " Our spec is generic NR chloride at 99.34 to 99.87% purity by HPLC, verified per batch. Most published clinical trials used the branded Niagen form. The molecule is the same, and we verify identity and purity per batch. NR chloride is generally made by chemical synthesis, and we are confirming our manufacturer's route in writing. We give the full 300 mg once a day in the PM capsule, since once-daily dosing raises blood NAD+ as well as split dosing.",
             comparison: [
                 { form: "Unverified marketplace NR (no COA)", difference: "An industry white paper (not peer-reviewed, from a company with a commercial interest) reported up to 87% of NR products failing label claims, with counterfeit risk among untested suppliers.", selected: false },
                 { form: "Generic NR chloride, 99.34 to 99.87% purity by HPLC per lot COA.", difference: "Same molecule used in trials. Our spec is verified per batch for identity and purity.", selected: true }
@@ -630,7 +407,7 @@ export const ingredients: Record<string, IngredientData> = {
                 { step: "Week 1", dosage: "", notes: "Assess tolerance (AM only)" },
                 { step: "Week 2", dosage: "", notes: "Building to target dose" },
                 { step: "Week 3", dosage: "", notes: "Assessing energy and BP" },
-                { step: "Daily", dosage: "250 mg twice daily", notes: "Full target dose (500 mg/day)" }
+                { step: "Daily", dosage: "300 mg once daily", notes: "Full target dose (PM capsule)" }
             ],
             timeline: "In trials, blood NAD+ levels rose within about 2 weeks and then leveled off. "
         },
@@ -736,10 +513,10 @@ export const ingredients: Record<string, IngredientData> = {
     "vitamin-c": {
         id: "vitamin-c",
         name: "Vitamin C (Sodium Ascorbate)",
-        patientSummary: "A 2024 Danish study of patients with an unexplained bleeding tendency found they were about 6 times more likely than healthy controls to have suboptimal or low vitamin C. And vitamin C isn't optional for collagen - it's the cofactor that lets your body's collagen-stabilizing enzymes actually work. In one small trial, a single 2 g dose of vitamin C raised DAO, an enzyme that breaks down histamine. We use sodium ascorbate, which is buffered to a gentler, near neutral pH than acidic ascorbic acid. Each scoop also provides about 105 mg of sodium.",
-        whyThisFormPatient: "We use sodium ascorbate - vitamin C buffered to roughly neutral pH - rather than acidic ascorbic acid. We provide 1,500 mg of vitamin C a day as sodium ascorbate, an amount that fully covers the collagen cofactor need and also adds a little sodium. Vitamin C supplements do raise urinary oxalate somewhat, so see the kidney stone note below.",
+        patientSummary: "A 2024 Danish study of patients with an unexplained bleeding tendency found they were about 6 times more likely than healthy controls to have suboptimal or low vitamin C. And vitamin C isn't optional for collagen - it's the cofactor that lets your body's collagen-stabilizing enzymes actually work. In one small trial, a single 2 g dose of vitamin C raised DAO, an enzyme that breaks down histamine. We use sodium ascorbate, which is buffered to a gentler, near neutral pH than acidic ascorbic acid. Each scoop also provides about 65 mg of sodium.",
+        whyThisFormPatient: "We use sodium ascorbate - vitamin C buffered to roughly neutral pH - rather than acidic ascorbic acid. We provide 1,000 mg of vitamin C a day as sodium ascorbate, about the amount where blood vitamin C levels stop rising in healthy adults. It also adds a little sodium (about 130 mg a day). Vitamin C supplements do raise urinary oxalate somewhat, so see the kidney stone note below.",
         faq: [
-            { q: "Why sodium ascorbate instead of regular vitamin C?", a: "Plain ascorbic acid is acidic, which some people find harder on a sensitive stomach. Sodium ascorbate is buffered to roughly neutral pH, so it sits gently. Each scoop also provides about 105 mg of sodium. Same vitamin C molecule, paired with sodium, which makes it much less acidic." },
+            { q: "Why sodium ascorbate instead of regular vitamin C?", a: "Plain ascorbic acid is acidic, which some people find harder on a sensitive stomach. Sodium ascorbate is buffered to roughly neutral pH, so it sits gently. Each scoop also provides about 65 mg of sodium. Same vitamin C molecule, paired with sodium, which makes it much less acidic." },
             { q: "Will high-dose vitamin C give me kidney stones?", a: "The kidney stone risk comes from vitamin C metabolism producing oxalate. Vitamin C supplements raise urinary oxalate, which may slightly increase kidney stone risk, mainly in men; the risk has not been shown to increase for women. Anyone with a personal or family history of calcium oxalate stones should mention their vitamin C dose to their doctor. The dose we use is set to cover enzyme cofactor needs; as with any vitamin C supplement, it does modestly raise urinary oxalate, which is why we note the stone-history caution above." },
             { q: "What does research show about vitamin C and histamine?", a: "Two kinds of studies have looked at this. Vitamin C may support DAO, the enzyme that breaks down histamine in your gut; in one small trial in 70 volunteers, a single 2 g dose raised blood DAO levels within an hour. Older observational research suggests that histamine levels tend to rise as plasma vitamin C drops very low." },
             { q: "How much vitamin C is too much?", a: "Past about 200-400 mg/day, your collagen-producing enzymes are fully saturated - more vitamin C doesn't make more collagen. DAO and antioxidant-related effects have not been clearly shown to scale further beyond collagen-saturating doses. Beyond what your body can use, extra vitamin C is mostly excreted, and higher doses do measurably raise urinary oxalate. We chose a dose intended to cover collagen and DAO cofactor needs while staying below the general upper intake limit." }
@@ -747,18 +524,18 @@ export const ingredients: Record<string, IngredientData> = {
         triadPlain: {
             mcas: "We chose sodium ascorbate because it is buffered to a gentler pH than plain ascorbic acid, and our powder contains no citric acid, an ingredient some sensitive individuals say they react to. Like all commercial vitamin C, ours is made with a fermentation step; we are confirming the sugar source before calling it corn-free.",
             heds: "Vitamin C is required for the hydroxylase enzymes that prepare new collagen chains; without it this step cannot proceed. Below the cofactor threshold, the enzymes idle; above it, they work at full speed. No randomized trial has tested vitamin C supplements for hypermobility-related outcomes.",
-            pots: "Each scoop of sodium ascorbate provides about 105 mg of sodium (about 210 mg a day), which is worth counting if you track your salt intake. We include vitamin C for its role as a collagen cofactor; it is not intended to treat POTS."
+            pots: "Each scoop of sodium ascorbate provides about 65 mg of sodium (about 130 mg a day), which is worth counting if you track your salt intake. We include vitamin C for its role as a collagen cofactor; it is not intended to treat POTS."
         },
-        bluf: "Vitamin C is the enzymatic cofactor for prolyl and lysyl hydroxylases, the enzymes that prepare collagen for folding. In a 2024 study, patients with an unexplained bleeding disorder had plasma vitamin C levels about 21% lower on average than healthy controls. In one small trial, a single 2 g dose of vitamin C raised DAO, an enzyme involved in histamine breakdown. ZebraThrive delivers 1,500 mg vitamin C daily as sodium ascorbate in the Daily Powder, a gentler form for sensitive stomachs.",
+        bluf: "Vitamin C is the enzymatic cofactor for prolyl and lysyl hydroxylases, the enzymes that prepare collagen for folding. In a 2024 study, patients with an unexplained bleeding disorder had plasma vitamin C levels about 21% lower on average than healthy controls. In one small trial, a single 2 g dose of vitamin C raised DAO, an enzyme involved in histamine breakdown. ZebraThrive delivers 1,000 mg vitamin C daily as sodium ascorbate in the Daily Powder, a gentler form for sensitive stomachs.",
         atAGlance: {
             whatItIs: "An essential cofactor for collagen synthesis and a supporting factor in histamine breakdown.",
             whyWeIncludeIt: "Vitamin C is a cofactor for the enzymes that prepare collagen chains for crosslinking, and it may support DAO, an enzyme involved in histamine breakdown.",
-            dose: "About 1,500 mg vitamin C daily as sodium ascorbate, in the Daily Powder, split AM and PM scoops",
+            dose: "1,000 mg vitamin C daily as sodium ascorbate, in the Daily Powder (500 mg in each of the AM and PM scoops)",
             keyBenefits: [
                 "",
                 "Mandatory for prolyl and lysyl hydroxylation, which enables collagen triple-helix folding",
                 "May support DAO activity involved in histamine degradation, based on a small trial of a single oral dose.",
-                "Buffered form (sodium ascorbate) adds about 105 mg of sodium per scoop"
+                "Buffered form (sodium ascorbate) adds about 65 mg of sodium per scoop"
             ]
         },
         howItWorks: "Vitamin C is an essential cofactor for connective tissue because your body cannot make stable collagen without it.\n\nVitamin C is the cofactor for prolyl and lysyl hydroxylase, the enzymes that hydroxylate proline and lysine residues on newly made collagen chains. That hydroxylation is what allows the chains to fold into a stable triple helix. Without enough vitamin C, the folding step idles and the resulting tissue is weak and fragile. The downstream crosslinking step between mature collagen molecules is performed by lysyl oxidase, a copper-dependent enzyme, and is a separate process from vitamin C's role. A 2024 Danish study found patients with an unexplained bleeding disorder, many with joint hypermobility, had lower average plasma vitamin C than controls; the reason for this difference is not established.\n\nVitamin C is a water-soluble antioxidant. \n\nVitamin C is thought to help break down histamine and serves as a cofactor for DAO, an enzyme involved in histamine breakdown. A small oral study showed a single 2 g dose raised DAO activity, and a separate IV study found serum histamine fell by about 31% after infusion; the two findings come from different doses and routes.",
@@ -790,20 +567,20 @@ export const ingredients: Record<string, IngredientData> = {
         evidenceGaps: "While lower vitamin C status has been observed in a cohort of patients with unexplained bleeding and joint hypermobility, no randomized clinical trial has tested whether vitamin C supplementation changes hypermobility-related outcomes. Studies of vitamin C in POTS mostly used IV doses, which are much higher than what can be absorbed through oral supplementation, so they do not apply to this product.",
         triad: {
             mcas: "We use buffered sodium ascorbate. Like all commercial vitamin C, it is made with a fermentation step; we are confirming the sugar source before calling it corn-free.",
-            heds: "A required cofactor for making collagen. Our 1,500 mg daily amount is set above the level needed to saturate the collagen-building enzyme cofactor requirement.",
-            pots: "By using the Sodium Ascorbate form, we provide about 210 mg of sodium per day (about 105 mg per scoop) alongside the Vitamin C.",
+            heds: "A required cofactor for making collagen. Our 1,000 mg daily amount is about the level where blood vitamin C stops rising in healthy adults.",
+            pots: "By using the Sodium Ascorbate form, we provide about 130 mg of sodium per day (about 65 mg per scoop) alongside the Vitamin C.",
         },
         whyThisForm: {
             form: "Sodium Ascorbate (buffered; sugar source being confirmed)",
-            rationale: "Standard ascorbic acid is acidic, which can be uncomfortable for sensitive digestive systems. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides a small amount of sodium alongside the vitamin C, which some people find useful when increasing fluid and salt intake. All commercial vitamin C, including ours, is made by fermenting a sugar to 2-keto-L-gulonic acid and then converting it chemically; the final material is purified to over 99%. Some MCAS patients report reacting to corn-derived ingredients. We have asked our supplier to document the sugar source used in manufacturing, and we will not call this product corn-free until we have that confirmation. We deliver about 1,500 mg of vitamin C per day from sodium ascorbate, an amount at or above the level where collagen-cofactor enzymes are saturated. Vitamin C supplements do raise urinary oxalate somewhat at these doses, so if you have a personal or family history of calcium oxalate stones, discuss this with your doctor.",
+            rationale: "Standard ascorbic acid is acidic, which can be uncomfortable for sensitive digestive systems. Sodium ascorbate is pH-neutral (buffered), sparing the stomach. It also provides a small amount of sodium alongside the vitamin C, which some people find useful when increasing fluid and salt intake. All commercial vitamin C, including ours, is made by fermenting a sugar to 2-keto-L-gulonic acid and then converting it chemically; the final material is purified to over 99%. Some MCAS patients report reacting to corn-derived ingredients. We have asked our supplier to document the sugar source used in manufacturing, and we will not call this product corn-free until we have that confirmation. We deliver 1,000 mg of vitamin C per day from sodium ascorbate, about the level where blood vitamin C stops rising in healthy adults. Vitamin C supplements do raise urinary oxalate somewhat at these doses, so if you have a personal or family history of calcium oxalate stones, discuss this with your doctor.",
             comparison: [
                 { form: "Ascorbic Acid (plant sugar fermented; source not yet confirmed)", difference: "Highly acidic; feedstock source not always disclosed, which some MCAS patients prefer to avoid; can be harder on sensitive stomachs", selected: false },
                 { form: "Sodium Ascorbate", difference: "Buffered to near-neutral pH; adds a small amount of sodium; sugar source being confirmed", selected: true }
             ]
         },
         safety: {
-            sideEffects: "Vitamin C is well tolerated at this amount in long-term trials; see the kidney stone note for men and anyone with a stone history. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. Our 1,500 mg daily dose sits below the 2,000 mg general upper limit and is split across the AM and PM Daily Powder scoops for tolerance.",
-            interactions: "Propranolol: in a small 1995 study, 2 g of vitamin C given before propranolol lowered propranolol blood levels (peak about 28% lower, total exposure about 37% lower), and heart rate fell less than without vitamin C. That study used a single 2 g dose of ascorbic acid; we use 1,500 mg a day of vitamin C as sodium ascorbate, split into two 750 mg scoops. If you take propranolol, talk with your prescriber before starting. Taking the two at least 2 hours apart is the logical precaution, though spacing itself has not been tested. No study has checked metoprolol; the same spacing costs nothing. Anticoagulants: Vitamin C may slightly reduce warfarin's effect through an unclear mechanism; this has been seen even at lower doses, so ask your doctor about monitoring your INR if you take warfarin. Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). ",
+            sideEffects: "Vitamin C is well tolerated at this amount in long-term trials; see the kidney stone note for men and anyone with a stone history. The main effect is reaching 'bowel tolerance' (loose stools) if the dose is too high, which signifies you've exceeded your absorption limit. Our 1,000 mg daily dose sits below the 2,000 mg general upper limit and is split across the AM and PM Daily Powder scoops for tolerance.",
+            interactions: "Propranolol: in a small 1995 study, 2 g of vitamin C given before propranolol lowered propranolol blood levels (peak about 28% lower, total exposure about 37% lower), and heart rate fell less than without vitamin C. That study used a single 2 g dose of ascorbic acid; we use 1,000 mg a day of vitamin C as sodium ascorbate, split into two 500 mg scoops. If you take propranolol, talk with your prescriber before starting. Taking the two at least 2 hours apart is the logical precaution, though spacing itself has not been tested. No study has checked metoprolol; the same spacing costs nothing. Anticoagulants: Vitamin C may slightly reduce warfarin's effect through an unclear mechanism; this has been seen even at lower doses, so ask your doctor about monitoring your INR if you take warfarin. Iron supplements: Enhances iron absorption (monitor if you have iron overload like Hemochromatosis). ",
             excipientConcerns: {
                 avoid: ["Corn-derived fillers (source being confirmed)", "Synthetic dyes", "Citric acid (none added)"],
                 safe: ["", "Sodium-buffered powder"]
@@ -812,9 +589,9 @@ export const ingredients: Record<string, IngredientData> = {
         },
         howToStart: {
             protocol: [
-                { step: "Week 1", dosage: "Start with a small sprinkle, building to half a scoop once a day (375 mg vitamin C).", notes: "Assess GI tolerance" },
-                { step: "Week 2", dosage: "Half a scoop twice a day (750 mg vitamin C a day).", notes: "Standard titration" },
-                { step: "Week 3+", dosage: "750 mg twice daily", notes: "Full target dose (1,500 mg/day, delivered in the Daily Powder split AM and PM)" }
+                { step: "Week 1", dosage: "Start with a small sprinkle, building to half a scoop once a day (250 mg vitamin C).", notes: "Assess GI tolerance" },
+                { step: "Week 2", dosage: "Half a scoop twice a day (500 mg vitamin C a day).", notes: "Standard titration" },
+                { step: "Week 3+", dosage: "500 mg twice daily", notes: "Full target dose (1,000 mg/day, delivered in the Daily Powder split AM and PM)" }
             ],
             timeline: " Vitamin C's role as a collagen-building cofactor is an ongoing nutritional need, so continuing supplementation long-term makes sense as part of overall support."
         },
@@ -1145,23 +922,23 @@ export const ingredients: Record<string, IngredientData> = {
     "p5p": {
         id: "p5p",
         name: "P5P (Pyridoxal-5-Phosphate)",
-        patientSummary: "P5P is a phosphorylated form of vitamin B6. When you swallow it, your body breaks it down in the gut and then builds it back up again for your cells to use. P5P is a cofactor for several enzymes in the amine pathways, including one that makes histamine. Its overall effect on histamine levels in the body is not established. DAO (diamine oxidase), the main enzyme that breaks down histamine in your gut, depends on copper, not B6. A 2024 conference abstract (Seidl et al., Clinical Chemistry) reported a link between blood B6 above 20 ug/L and better histamine clearance with a DAO supplement; it has not been published as a full study and does not set a dose. P5P also supports neurotransmitter synthesis (GABA, serotonin, dopamine). Our AM capsule provides 3 to 4 mg of vitamin B6 (final amount being set) as P5P; the draft Supplement Facts panel will declare the final amount.",
+        patientSummary: "P5P is a phosphorylated form of vitamin B6. When you swallow it, your body breaks it down in the gut and then builds it back up again for your cells to use. P5P is a cofactor for several enzymes in the amine pathways, including one that makes histamine. Its overall effect on histamine levels in the body is not established. DAO (diamine oxidase), the main enzyme that breaks down histamine in your gut, depends on copper, not B6. A 2024 conference abstract (Seidl et al., Clinical Chemistry) reported a link between blood B6 above 20 ug/L and better histamine clearance with a DAO supplement; it has not been published as a full study and does not set a dose. P5P also supports neurotransmitter synthesis (GABA, serotonin, dopamine). Our AM capsule provides 4 mg of vitamin B6 as P5P.",
         faq: [
-            { q: "P5P vs B6: what is the difference?", a: "P5P is a phosphorylated form of vitamin B6. Once swallowed, it is broken down in the gut and then re-activated in the body for your cells to use. One safety point applies to every form: high long-term vitamin B6 intake has been linked to peripheral neuropathy, and EFSA's 2023 upper intake level (12 mg/day of total vitamin B6 for adults) applies to all forms, including P5P. Our AM capsule provides 3 to 4 mg of vitamin B6 (final amount being set), well under the EFSA upper level of 12 mg per day for adults, all forms. If you take other B6-containing supplements, count them too, and stop and tell your clinician if you notice tingling or numbness." },
+            { q: "P5P vs B6: what is the difference?", a: "P5P is a phosphorylated form of vitamin B6. Once swallowed, it is broken down in the gut and then re-activated in the body for your cells to use. One safety point applies to every form: high long-term vitamin B6 intake has been linked to peripheral neuropathy, and EFSA's 2023 upper intake level (12 mg/day of total vitamin B6 for adults) applies to all forms, including P5P. Our AM capsule provides 4 mg of vitamin B6, well under the EFSA upper level of 12 mg per day for adults, all forms. If you take other B6-containing supplements, count them too, and stop and tell your clinician if you notice tingling or numbness." },
             { q: "How does P5P relate to histamine?", a: "P5P is a coenzyme for histidine decarboxylase and several other enzymes in the amine pathways. DAO itself, the enzyme that breaks histamine down in your gut, is primarily copper-dependent (with TPQ as its organic cofactor) rather than B6-dependent. " },
             { q: "Is there mast cell research on P5P?", a: " A 2022 lab study found that pyridoxine, combined with vitamin C, affected rat mast cells in a lab setting, at concentrations far higher than what is reached in the human body from typical intake. An older 1979 lab study also looked at pyridoxine's effects on rat mast cells. We don't lead with mast cell effects for P5P. The lab data on this comes from pyridoxine in rat cells at concentrations far above what is reached in the human body, not from P5P itself." },
-            { q: "Will P5P interact with my medications?", a: "At 3 to 4 mg of vitamin B6 (final amount being set), there is no data on interactions with POTS or MCAS medications, and a low interaction rating with escitalopram, amitriptyline, and combined oral contraceptives. The main one to know: levodopa (for Parkinson's). High-dose B6 increases the conversion of levodopa to dopamine before it can cross the blood-brain barrier, reducing its effectiveness. Carbidopa blocks this interaction, so if you're on Sinemet (carbidopa/levodopa), the interaction is manageable. High-dose B6 may lower blood levels of some anti-seizure medicines, such as phenobarbital and phenytoin. If you take one, ask your prescriber about monitoring. No study has tested P5P with standard POTS, MCAS, or hEDS medications and none has reported a problem; that means unknown rather than proven safe." }
+            { q: "Will P5P interact with my medications?", a: "At 4 mg of vitamin B6, there is no data on interactions with POTS or MCAS medications, and a low interaction rating with escitalopram, amitriptyline, and combined oral contraceptives. The main one to know: levodopa (for Parkinson's). High-dose B6 increases the conversion of levodopa to dopamine before it can cross the blood-brain barrier, reducing its effectiveness. Carbidopa blocks this interaction, so if you're on Sinemet (carbidopa/levodopa), the interaction is manageable. High-dose B6 may lower blood levels of some anti-seizure medicines, such as phenobarbital and phenytoin. If you take one, ask your prescriber about monitoring. No study has tested P5P with standard POTS, MCAS, or hEDS medications and none has reported a problem; that means unknown rather than proven safe." }
         ],
         triadPlain: {
             mcas: "There are no randomized trials of P5P in people with MCAS. P5P is a cofactor for the enzyme that makes histamine, so its overall effect on histamine levels in the body is not established.",
             heds: "There are no direct randomized trials of P5P in people with hEDS. P5P is not a direct cofactor for lysyl oxidase, the collagen cross-linking enzyme; copper is.",
             pots: "There are no direct randomized trials of P5P in people with POTS, and there is no data on interactions between P5P and POTS medications at this dose."
         },
-        bluf: "P5P is the coenzyme form of vitamin B6. When taken by mouth, it's broken down to pyridoxal in the gut and reactivated by the body. B6 is a cofactor for enzymes involved in amine metabolism, including ones that make GABA, serotonin and dopamine, as well as histidine decarboxylase, which makes histamine. ZebraThrive uses 3 to 4 mg of vitamin B6 (final amount being set) daily in the AM capsule.",
+        bluf: "P5P is the coenzyme form of vitamin B6. When taken by mouth, it's broken down to pyridoxal in the gut and reactivated by the body. B6 is a cofactor for enzymes involved in amine metabolism, including ones that make GABA, serotonin and dopamine, as well as histidine decarboxylase, which makes histamine. ZebraThrive uses 4 mg of vitamin B6 daily in the AM capsule.",
         atAGlance: {
             whatItIs: "The coenzyme form of vitamin B6",
             whyWeIncludeIt: "Cofactor for amine-metabolism enzymes, including those involved in the histamine pathway; supports neurotransmitter synthesis.",
-            dose: "3 to 4 mg of vitamin B6 (final amount being set) daily in the AM capsule",
+            dose: "4 mg of vitamin B6 daily in the AM capsule",
             keyBenefits: [
                 "Supporting cofactor for amine metabolism enzymes, including histidine decarboxylase, which is involved in histamine production.",
                 "Supports GABA, serotonin, and dopamine synthesis",
@@ -1224,7 +1001,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "P5P (Pyridoxal-5-Phosphate)",
-            rationale: "Swallowed P5P is broken down to pyridoxal in the gut and re-activated in the body, a different path than pyridoxine HCl takes. It is not risk-free: EFSA's 2023 opinion sets an upper intake level of 12 mg/day of total vitamin B6 for adults, based on peripheral neuropathy, and that level applies to all forms including P5P. Our AM capsule provides 3 to 4 mg of vitamin B6 (final amount being set).",
+            rationale: "Swallowed P5P is broken down to pyridoxal in the gut and re-activated in the body, a different path than pyridoxine HCl takes. It is not risk-free: EFSA's 2023 opinion sets an upper intake level of 12 mg/day of total vitamin B6 for adults, based on peripheral neuropathy, and that level applies to all forms including P5P. Our AM capsule provides 4 mg of vitamin B6.",
             comparison: [
                 { form: "P5P (Pyridoxal-5-Phosphate)", difference: "Active form; counts toward your total B6 intake.", selected: true },
                 { form: "Pyridoxine HCl", difference: "Requires conversion; most B6 neuropathy reports involve high long-term pyridoxine intake", selected: false }
@@ -1252,122 +1029,6 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "The B6 paradox: pyridoxine disrupts GABA and cause neuropathy", pmid: "33912895", authors: "Hadtstein F, Vrolijk M", year: "2021" },
             { title: "Scientific opinion on the tolerable upper intake level for vitamin B6", pmid: "37207271", authors: "EFSA NDA Panel (Turck D et al.)", year: "2023" },
             { title: "Pyridoxal and collagen crosslinks in hip fracture", pmid: "16969591", authors: "Saito M et al.", year: "2006" }
-        ]
-    },
-"astaxanthin": {
-        id: "astaxanthin",
-        name: "Astaxanthin",
-        patientSummary: "Astaxanthin is the red carotenoid produced by Haematococcus pluvialis algae - the same molecule that gives salmon and flamingos their color. Lab studies also link it to mast cell and collagen-enzyme effects, but they used concentrations far higher than an oral dose reaches in the blood, so we do not claim those effects for this formula. Human skin trials at 3 to 6 mg are small and mixed. We use natural algal astaxanthin (not synthetic) as a beadlet, at 4 mg of active astaxanthin daily in the PM capsule, within the dose range of the clinical literature.",
-        whyThisFormPatient: "We use natural astaxanthin extracted from Haematococcus pluvialis algae (not synthetic), supplied as a beadlet. Whole-cell algae powder was rejected: the algae's tough cyst wall resists digestion, so the astaxanthin inside is poorly released, and taking more does not fix the wrong material. Our specification calls for all-trans astaxanthin above 60% and 9-cis at or below 30% (the limit in EU Regulation 2024/1026). Each lot's certificate currently reports total astaxanthin by HPLC; we are asking our supplier to add the isomer results. The supplier's carrier-free declaration states the beadlet contains no gelatin, soy, or corn-derived carriers or excipients. Take with a meal: in one human study, total absorption was about 2.4 times higher when it was taken after a meal than before one (Okada 2009).",
-        faq: [
-            { q: "Why does astaxanthin need to be taken with fat?", a: "Astaxanthin is fat-soluble - it can't be efficiently absorbed without dietary fat to form the lipid micelles that ferry it across the intestinal wall. In one human study, total absorption was about 2.4 times higher when it was taken after a meal than before one (Okada 2009). Take it with breakfast, lunch, or dinner, a meal that includes some dietary fat (avocado, olive oil, eggs, nuts)." },
-            { q: "When will I notice astaxanthin working?", a: "Astaxanthin is meant for daily, ongoing use rather than as a one-time or occasional ingredient. Blood levels build up over about one to two weeks of daily use. Human skin trials ran 6 to 16 weeks and their results were mixed, so we make no promise of a noticeable effect. It is included as a low-dose antioxidant, not a fast-acting ingredient." },
-            { q: "How is your astaxanthin sourced?", a: "Natural astaxanthin from Haematococcus pluvialis algae, supplied as a 5% beadlet. Our specification calls for all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026 limit); the isomer results are being added to the lot certificate. Whole-cell algae powder was rejected because its cyst wall blocks release. The supplier has declared the beadlet free of gelatin, soy, and corn-derived carriers; the full beadlet matrix is being confirmed and will be listed before launch. Our spec has no country-of-origin requirement; the gates are the beadlet form, the isomer profile, and the allergen declaration." },
-            { q: "Are there any drug interactions to know about?", a: "One documented case worth noting: a 2019 case report described an INR elevation in a warfarin patient who started astaxanthin. The mechanism is unclear, but caution is warranted. If you take warfarin or another anticoagulant, talk with your prescriber before starting astaxanthin and ask about an INR check within about a week of starting or stopping it. No study has tested astaxanthin with POTS or MCAS medications. One lab finding matters: in human liver cells, astaxanthin switched on CYP3A4, the enzyme that clears ivabradine. If that happened at our 4 mg dose, ivabradine could work a little less well. This has never been measured in people at any dose. Fludrocortisone has no data either: no study has tested the pair, trials of astaxanthin alone found no blood pressure change, and the enzymes that clear fludrocortisone are not documented. A lab screen of nine liver enzymes found astaxanthin does not meaningfully block them, and a meta-analysis of 14 trials found no blood pressure change. If you take ivabradine or fludrocortisone, mention astaxanthin to your prescriber." }
-        ],
-        triadPlain: {
-            mcas: "No study has tested astaxanthin in people with MCAS, and no human study has measured mast cell or histamine outcomes. We include astaxanthin as an antioxidant and make no mast cell claim for it. It is algae-derived and not fermented, and we use HPMC capsules rather than carrageenan softgels.",
-            heds: "No study has tested astaxanthin in people with hEDS. The trial most often cited (Yoon 2014) gave astaxanthin together with 3 g of collagen, so its results cannot be credited to astaxanthin alone. A 2016 cell study used an astaxanthin-rich extract and measured collagen below the untreated control, and a 16-week trial at 6 and 12 mg (Tominaga 2017) found no difference from placebo for wrinkles, moisture or elasticity. We make no collagen claim for astaxanthin. The concern about collagen suppression comes from a near-pure Z-isomer preparation, not from all-trans material like ours.",
-            pots: "For POTS, no study has tested astaxanthin. It did not change blood pressure in a meta-analysis of 14 trials, so it is not expected to worsen orthostatic symptoms. Heart rate results in exercise studies are inconsistent, and orthostatic heart rate has never been measured."
-        },
-        bluf: "Astaxanthin is a carotenoid antioxidant from microalgae (Haematococcus pluvialis) that works in the lipid phase of cell membranes. Its mast cell and skin-cell results come from lab concentrations far above what an oral dose reaches, and human skin trials are small and mixed, so we include it as a low-dose antioxidant without efficacy claims. ZebraThrive uses 4 mg daily from a 5% beadlet in the PM capsule, with dinner fat for absorption.",
-        atAGlance: {
-            whatItIs: "A lipid-phase carotenoid antioxidant from microalgae (Haematococcus pluvialis)",
-            whyWeIncludeIt: "Low-dose lipid-phase antioxidant with a long human safety record; no efficacy claim is made",
-            dose: "4 mg daily in the PM capsule (5% beadlet), taken with dinner fat for absorption",
-            keyBenefits: [
-                "Human safety data across 87 studies at up to 24 mg a day (Brendler 2019 review)",
-                "Taken up into red blood cell membranes in human studies at 3 to 12 mg a day",
-                "No significant blood pressure change in a meta-analysis of 14 RCTs",
-                ""
-            ]
-        },
-        howItWorks: "Astaxanthin is a carotenoid that sits in cell membranes, where it can neutralize reactive oxygen species in lab studies.\n\nCell studies report effects on mast cell degranulation and on collagen-degrading enzymes (MMP-1, MMP-3, MMP-13), but they used concentrations roughly 10 to 500 times higher than our estimate of the blood level at 4 mg a day. No human study has measured these effects, so we treat them as unproven for this formula.",
-        research: [
-            {
-                outcome: "Mast Cell Research (Lab and Animal)",
-                summary: "Lab and animal studies report reduced degranulation; the concentrations used are well above what oral doses reach.",
-                studies: [
-                    {
-                        source: "Sakai et al., 2009",
-                        pmid: "19700409",
-                        finding: "Reduced antigen-triggered degranulation in mast cell cultures; concentration reported around 10 µM, about 100 times our estimated blood level at 4 mg."
-                    },
-                    {
-                        source: "Yoshihisa et al., 2016",
-                        pmid: "27023003",
-                        finding: "Decreased total and degranulated mast cells in a mouse model at 100 mg/kg oral, far above human doses."
-                    }
-                ]
-            },
-            {
-                outcome: "Collagen Research in Skin Cells",
-                summary: "Skin-cell and skin-biopsy studies; none tested astaxanthin alone in people at our dose.",
-                studies: [
-                    {
-                        source: "Chou et al., 2016",
-                        pmid: "27322248",
-                        finding: "An astaxanthin-rich extract lowered MMP-1 and MMP-3 in skin cells, but collagen measured below the untreated control; the extract's astaxanthin content was not reported."
-                    },
-                    {
-                        source: "Yoon et al., 2014",
-                        pmid: "24955642",
-                        design: "Human trial, 2 mg/day astaxanthin plus 3 g collagen hydrolysate",
-                        finding: "Lower MMP-1 and MMP-12 expression and better skin elasticity with the combination; the effect of astaxanthin alone cannot be separated."
-                    }
-                ]
-            },
-            {
-                outcome: "Blood Pressure Safety",
-                summary: "A meta-analysis of 14 RCTs found no significant change in blood pressure.",
-                studies: [
-                    {
-                        source: "Xia et al., 2020",
-                        pmid: "32755613",
-                        design: "Meta-analysis of 14 RCTs",
-                        finding: "No significant effect on systolic or diastolic blood pressure."
-                    }
-                ]
-            }
-        ],
-        evidenceGaps: "Zero direct studies in hEDS/POTS/MCAS patients. No study has measured astaxanthin's effect on mast cells, histamine or collagen in people. The Z-isomer collagen concern comes from a near-pure Z preparation (86.6% Z), not from all-trans material. At 10 to 20 mg a day, two human studies reported lower TGF-β1 or related changes in collagen-building signals, one more reason we do not raise the dose.",
-        triad: {
-            mcas: "Algae-derived, not fermented. No reports link it to mast cell reactions, and no human mast cell data exist either way. We avoid carrageenan (common in softgels) by using HPMC capsules.",
-            heds: "No collagen or MMP claim. Our estimate puts blood levels at 4 mg roughly 100 times below the lab concentrations. The 4 mg dose is chosen as a low-cost antioxidant within the studied range, not as a collagen dose.",
-            pots: "Did not change blood pressure in trials, so it should not worsen orthostatic symptoms. No study has tested it in POTS."
-        },
-        whyThisForm: {
-            form: "Natural astaxanthin, 5% beadlet (Haematococcus pluvialis); specification all-trans above 60% and 9-cis at or below 30% (isomer results being added to the lot certificate)",
-            rationale: "Whole-cell H. pluvialis is not a usable form: the algal cyst wall (tough, digestion-resistant) blocks release of the astaxanthin inside, and dosing up does not compensate for the wrong material. Our specification calls for a 5% astaxanthin beadlet with all-trans above 60% and 9-cis at or below 30% (EU Regulation 2024/1026). Each lot's certificate currently reports total astaxanthin by HPLC; we are asking our supplier to add the isomer results. The supplier's carrier-free declaration states no gelatin, soy, or corn-derived carriers or excipients. Take with a meal; absorption was about 2.4 times higher after a meal in one human study.",
-            comparison: [
-                { form: "5% beadlet (extracted H. pluvialis), total astaxanthin verified by HPLC", difference: "Our form: astaxanthin beadlets from Haematococcus pluvialis; carrier-free declaration (no added gelatin, soy, or corn-derived carriers or excipients)", selected: true },
-                { form: "Whole-cell H. pluvialis powder", difference: "Intact cyst wall resists digestion; rejected", selected: false },
-                { form: "Synthetic astaxanthin", difference: "Different isomer profile; not what the human studies used", selected: false },
-                { form: "Softgels with carrageenan, gelatin, or fish oil carriers", difference: "These carriers are not used in our product.", selected: false }
-            ]
-        },
-        safety: {
-            sideEffects: "A 2019 review of 87 human studies found no safety concerns with natural astaxanthin. The European food safety authority sets an acceptable daily intake of 0.2 mg per kg of body weight, and our 4 mg a day is below that for adults. ",
-            interactions: "Warfarin: one case report described a large INR rise after astaxanthin was added. If you take warfarin, talk with your prescriber before starting and ask about an INR check within about a week of starting or stopping. Astaxanthin does not meaningfully inhibit CYP enzymes in lab tests, but induced CYP3A4 in human liver cells (never tested in people). If induction occurred at 4 mg, ivabradine levels could fall slightly. Fludrocortisone: no data (no study has tested the pair); astaxanthin alone did not change blood pressure in trials, and fludrocortisone's clearing enzymes are not documented.",
-            excipientConcerns: {
-                avoid: ["Carrageenan softgels", "Soy-derived carriers (not used in our beadlet; we are still confirming the full carrier makeup and will disclose it once finalized)", "Gelatin beadlet matrices", "Whole-cell algae powder"],
-                safe: ["HPMC capsules", "This astaxanthin comes in a beadlet form with a carrier-free declaration: no added carriers or excipients from gelatin, soy, or corn. We are still confirming the cracked-cell processing detail with our supplier."]
-            },
-            cautions: "Take with a meal. Stop 2 weeks before planned surgery, because animal studies show antiplatelet effects."
-        },
-        howToStart: {
-            protocol: [
-                { step: "Ongoing", dosage: "4 mg daily in the PM capsule, taken with dinner fat for absorption", notes: "Standard PM dose with dinner" }
-            ],
-            timeline: "Blood levels plateau within about one to two weeks. No specific benefit timeline is claimed."
-        },
-        sources: [
-            { title: "Carotenoids and mast cell degranulation (cell study)", pmid: "19700409", authors: "Sakai et al.", year: "2009" },
-            { title: "Astaxanthin-rich extract in skin cells (cell study)", pmid: "27322248", authors: "Chou et al.", year: "2016" },
-            { title: "No effect of astaxanthin on blood pressure (Meta-analysis)", pmid: "32755613", authors: "Xia et al.", year: "2020" },
-            { title: "Safety review of astaxanthin (87 studies)", pmid: "31788888", authors: "Brendler et al.", year: "2019" },
-            { title: "Z-isomer collagen suppression concern", pmid: "37305308", authors: "Honda et al.", year: "2023" },
-            { title: "Metabolism and CYP-inducer properties of astaxanthin in man and primary human hepatocytes", pmid: "11876499", authors: "Kistler et al.", year: "2002" }
         ]
     },
 "l-theanine": {
@@ -1793,23 +1454,23 @@ export const ingredients: Record<string, IngredientData> = {
     "boron": {
         id: "boron",
         name: "Boron Glycinate",
-        patientSummary: "Boron is a trace mineral with growing research interest for bone health and steroid hormone metabolism, based on animal studies and a small human trial. It's not classified as essential in the way iron or zinc are, but multiple lines of evidence show meaningful biological roles. Boron has been studied for its role in bone metabolism, inflammatory markers, and steroid hormone levels. We include it as part of general bone and mineral support, not as a treatment for fracture risk in any specific population. We dose 2 mg of elemental boron as boron glycinate - within the well-studied range and well below any safety concern.",
+        patientSummary: "Boron is a trace mineral with growing research interest for bone health and steroid hormone metabolism, based on animal studies and a small human trial. It's not classified as essential in the way iron or zinc are, but multiple lines of evidence show meaningful biological roles. Boron has been studied for its role in bone metabolism, inflammatory markers, and steroid hormone levels. We include a small amount because restricted diets often cut out the foods richest in boron, like nuts, dried fruit, legumes and avocado. It is not a treatment for any condition, and we make no health claim for it. We dose 0.7 mg of elemental boron as boron glycinate. No trial has tested boron below 1.5 mg a day, so this is diet top-up, not a studied dose.",
         faq: [
             { q: "Why is boron in the formulation?", a: "Several reasons. Boron has research behind its role in bone mineralization and vitamin D and estrogen metabolism, and shows anti-inflammatory effects in a small human trial at supplement-range doses. A small 2011 study of 8 healthy men found that 10 mg of boron per day increased free testosterone and reduced inflammatory markers including hsCRP and TNF-alpha over one week. Boron is a supporting part of the trace mineral mix, studied mainly for bone and hormone metabolism." },
-            { q: "Is 2 mg of boron safe?", a: "Yes. The Tolerable Upper Intake Level for boron in adults is 20 mg/day, and most dietary intake from food is around 1-3 mg. Our 2 mg dose is the standard supplement amount with substantial safety margin. No studies have shown adverse effects at supplement doses, though most of the evidence comes from short-term trials and reviews rather than long-term studies. Boron has a low toxicity profile at typical supplement and dietary doses, with a generous margin below the Tolerable Upper Intake Level. Pregnancy is one situation to be more cautious about high-dose boron; 2 mg is within standard dietary intake." },
+            { q: "Is 0.7 mg of boron safe?", a: "Yes. The Tolerable Upper Intake Level for boron in adults is 20 mg/day, and most dietary intake from food is around 1-3 mg. Our 0.7 mg dose is below typical food intake and matches the maximum Health Canada allows in a multivitamin and mineral product. No studies have shown adverse effects at supplement doses, though most of the evidence comes from short-term trials and reviews rather than long-term studies. Boron has a low toxicity profile at typical supplement and dietary doses, with a generous margin below the Tolerable Upper Intake Level. Pregnancy is one situation to be more cautious about high-dose boron; 0.7 mg is below typical dietary intake." },
             { q: "Does boron actually do anything?", a: "More than its reputation suggests. A small human trial found that boron supplementation at 10 mg per day modestly raised free testosterone, lowered sex hormone binding globulin, and reduced hsCRP and TNF-alpha over one week. We have not found trials of boron on bone density or joint comfort in osteoarthritis. The evidence for boron is preliminary and comes mostly from a small human trial and animal and review literature. " },
             { q: "Does boron interact with hormones?", a: "Yes, modestly. In a small human trial, boron supplementation modestly raised free testosterone and lowered sex hormone binding globulin, and vitamin D levels were elevated after one week. The same study found estradiol decreased, not increased. For most adults, these effects are considered modest based on the available evidence. If you're on hormone replacement therapy, transitioning, or have a hormone-sensitive condition, mention boron to your prescriber. For everyone else, the hormone related effects seen in small studies are generally considered mild." }
         ],
         triadPlain: {
             mcas: "Boron has not been studied in people with MCAS, and there are no studied or reported interactions with common MCAS medications. We are not aware of any study specifically testing whether boron triggers histamine release.",
-            heds: "Boron has not been studied in people with hEDS. At 2 mg a day, we include it as part of broad bone and mineral support, not as a treatment for any specific condition.",
+            heds: "Boron has not been studied in people with hEDS. At 0.7 mg a day, we include it as a small diet top-up, not as a treatment for any specific condition.",
             pots: "Boron is not an autonomic or cardiovascular ingredient, and it has not been studied in people with POTS. There are no studied or reported interactions between boron and common POTS medications."
         },
-        bluf: "Boron is a trace mineral studied for roles in bone metabolism and hormone function, with some lab research into cellular pathways relevant to bone and connective tissue. Boron has been studied for effects on vitamin D and magnesium handling, and for general anti-inflammatory activity in a small human trial. ZebraThrive uses 2 mg daily in the PM stack.",
+        bluf: "Boron is a trace mineral studied for roles in bone metabolism and hormone function, with some lab research into cellular pathways relevant to bone and connective tissue. Boron has been studied for effects on vitamin D and magnesium handling, and for general anti-inflammatory activity in a small human trial. ZebraThrive uses 0.7 mg daily in the PM capsule, below the doses used in those studies.",
         atAGlance: {
             whatItIs: "A trace mineral studied for roles in bone metabolism and hormone function.",
             whyWeIncludeIt: "Studied for effects on vitamin D and magnesium handling, and for anti-inflammatory activity in a small human trial.",
-            dose: "2 mg elemental boron daily (PM capsule)",
+            dose: "0.7 mg elemental boron daily (PM capsule)",
             keyBenefits: [
                 "In a small 1 week study of 8 healthy men taking 10 mg of boron a day, five times our dose, blood levels of hsCRP and TNF-alpha fell.",
                 "May support normal bone metabolism, based on animal research and review evidence, though no trial has tested our specific dose.",
@@ -1883,11 +1544,11 @@ export const ingredients: Record<string, IngredientData> = {
                 avoid: ["Citrate forms", "Artificial dyes", "Titanium dioxide"],
                 safe: ["HPMC capsules", "Rice hull concentrate"]
             },
-            cautions: "Our 2 mg dose is well below the Tolerable Upper Intake Level of 20 mg per day for boron in adults. Carrier composition for the boron glycinate used is still being confirmed."
+            cautions: "Our 0.7 mg dose is well below the Tolerable Upper Intake Level of 20 mg per day for boron in adults. Carrier composition for the boron glycinate used is still being confirmed."
         },
         howToStart: {
             protocol: [
-                { step: "Week 1+", dosage: "2 mg daily", notes: "Full dose (PM capsule)" }
+                { step: "Week 1+", dosage: "0.7 mg daily", notes: "Full dose (PM capsule)" }
             ],
             timeline: ""
         },
@@ -2083,23 +1744,23 @@ export const ingredients: Record<string, IngredientData> = {
     "manganese-bisglycinate": {
         id: "manganese-bisglycinate",
         name: "Manganese Bisglycinate",
-        patientSummary: "Manganese is an essential trace mineral that serves as a cofactor for several enzymes involved in connective tissue, including prolidase, which helps recycle proline for collagen synthesis, glycosyltransferases involved in collagen modification, and enzymes involved in making chondroitin sulfate. It's also the cofactor for MnSOD (mitochondrial superoxide dismutase), the primary antioxidant defense inside your mitochondria. In an animal study, manganese deficiency in broiler chicks upregulated MMP-1, MMP-9, and MMP-13 in the growth plate. We include manganese as part of supporting normal connective tissue metabolism, not as a treatment for hEDS. We dose 4 mg elemental manganese as manganese bisglycinate in the AM capsule.",
+        patientSummary: "Manganese is an essential trace mineral that serves as a cofactor for several enzymes involved in connective tissue, including prolidase, which helps recycle proline for collagen synthesis, glycosyltransferases involved in collagen modification, and enzymes involved in making chondroitin sulfate. It's also the cofactor for MnSOD (mitochondrial superoxide dismutase), the primary antioxidant defense inside your mitochondria. In an animal study, manganese deficiency in broiler chicks upregulated MMP-1, MMP-9, and MMP-13 in the growth plate. We include manganese as part of supporting normal connective tissue metabolism, not as a treatment for hEDS. We dose 2 mg elemental manganese as manganese bisglycinate in the AM capsule. That amount alone meets the daily adequate intake, which matters because restricted diets often cut whole grains, legumes and nuts, the main food sources.",
         faq: [
             { q: "Why is manganese in the formulation?", a: "Manganese is essential for several connective tissue enzymes (prolidase for proline recycling, glycosyltransferases for collagen modification) and for MnSOD, the mitochondrial antioxidant. We include manganese to support normal connective tissue metabolism generally, not as a treatment for hEDS." },
-            { q: "Is 4 mg of manganese safe?", a: "Yes. The Tolerable Upper Intake Level for manganese in adults is 11 mg per day, and typical dietary intake from food ranges from about 1.8 to 4 mg depending on diet. Our 4 mg dose sits comfortably between dietary baseline and the UL. Manganese toxicity concerns mostly involve chronic high-dose inhaled exposure, such as in welders or miners, but can also occur with chronic liver disease or high-dose IV nutrition, which bypass the liver's normal regulation. Oral manganese supplements have a long history of use, and our 4 mg daily dose is well below the tolerable upper limit, but people with liver disease, iron deficiency, or who are elderly should talk to their doctor first." },
+            { q: "Is 2 mg of manganese safe?", a: "Yes. The Tolerable Upper Intake Level for manganese in adults is 11 mg per day, and typical dietary intake from food ranges from about 1.8 to 4 mg depending on diet. Our 2 mg dose is about what a typical diet provides and sits well below the UL. Manganese toxicity concerns mostly involve chronic high-dose inhaled exposure, such as in welders or miners, but can also occur with chronic liver disease or high-dose IV nutrition, which bypass the liver's normal regulation. Oral manganese supplements have a long history of use, and our 2 mg daily dose is well below the tolerable upper limit, but people with liver disease, iron deficiency, or who are elderly should talk to their doctor first." },
             { q: "Does manganese trigger mast cells?", a: "No, there is no evidence manganese triggers mast cells at supplement doses." },
-            { q: "Are there interactions with other minerals?", a: "Manganese competes with iron and calcium at intestinal transporters, so very high doses of those minerals can reduce manganese absorption. At our 4 mg dose, this generally isn't a concern for most people, though we still recommend spacing from high-dose iron or calcium supplements. For best absorption, take the AM capsules at least 2 hours apart from iron or calcium supplements. Manganese has no known clinically significant direct interactions with most standard POTS, MCAS, or hEDS medications, though methylphenidate and combined oral contraceptives can mildly affect manganese status; most pairs simply have not been studied." }
+            { q: "Are there interactions with other minerals?", a: "Manganese competes with iron and calcium at intestinal transporters, so very high doses of those minerals can reduce manganese absorption. At our 2 mg dose, this generally isn't a concern for most people, though we still recommend spacing from high-dose iron or calcium supplements. For best absorption, take the AM capsules at least 2 hours apart from iron or calcium supplements. Manganese has no known clinically significant direct interactions with most standard POTS, MCAS, or hEDS medications, though methylphenidate and combined oral contraceptives can mildly affect manganese status; most pairs simply have not been studied." }
         ],
         triadPlain: {
             mcas: "There is no direct evidence that manganese affects MCAS at nutritional doses, and there is also no evidence it acts as a mast cell trigger at supplement doses. Manganese is in the formula as the cofactor for MnSOD (mitochondrial superoxide dismutase), the mitochondrial antioxidant enzyme, and for enzymes involved in connective tissue. No interactions with MCAS medications have been reported, though none has been studied.",
             heds: "Manganese is a required cofactor for multiple enzymes involved in collagen synthesis and modification, which is relevant to connective tissue health in general. Prolidase recycles proline from collagen breakdown - without adequate manganese, proline isn't efficiently returned to the pool for new collagen synthesis. Glycosyltransferases, which need manganese, help attach sugar groups during collagen modification, based on biochemical studies. Manganese has not been studied in people with hEDS. Getting enough manganese supports normal activity of these collagen related enzymes, based on animal research.",
             pots: "Manganese supports MnSOD, part of mitochondrial antioxidant defense, which plays a role in general cellular energy metabolism. There is no direct POTS clinical evidence for manganese. No interactions with POTS medications have been reported, though none has been studied."
         },
-        bluf: "Manganese is an essential trace mineral and a cofactor for SOD2 (mitochondrial antioxidant), glycosyltransferases (involved in building connective tissue components), and prolidase (which recycles proline for collagen synthesis). These are general nutrient roles relevant to connective tissue health. ZebraThrive uses 4 mg elemental daily, paired with copper in the AM stack to support balanced trace mineral status.",
+        bluf: "Manganese is an essential trace mineral and a cofactor for SOD2 (mitochondrial antioxidant), glycosyltransferases (involved in building connective tissue components), and prolidase (which recycles proline for collagen synthesis). These are general nutrient roles relevant to connective tissue health. ZebraThrive uses 2 mg elemental daily, paired with copper in the AM stack to support balanced trace mineral status.",
         atAGlance: {
             whatItIs: "An essential trace mineral that serves as the cofactor for enzymes in connective tissue synthesis and mitochondrial protection",
             whyWeIncludeIt: "Required for SOD2 (mitochondrial antioxidant), glycosyltransferases (involved in connective tissue modification based on biochemical studies), and prolidase (collagen recycling)",
-            dose: "4 mg elemental manganese daily (AM capsule)",
+            dose: "2 mg elemental manganese daily (AM capsule)",
             keyBenefits: [
                 "Essential cofactor for MnSOD (SOD2) mitochondrial protection",
                 "In an animal study, adequate manganese was associated with lower upregulation of collagen degrading enzymes (MMPs).",
@@ -2127,7 +1788,7 @@ export const ingredients: Record<string, IngredientData> = {
                     {
                         source: "Davis & Greger, 1992",
                         pmid: "1550052",
-                        finding: "In a small trial, 15 mg per day of manganese for 124 days increased lymphocyte MnSOD activity and serum manganese in women. This is a higher dose than our 4 mg formula."
+                        finding: "In a small trial, 15 mg per day of manganese for 124 days increased lymphocyte MnSOD activity and serum manganese in women. This is a much higher dose than our 2 mg formula."
                     },
                     {
                         source: "Hide M, Beaven MA, \"Suppression of IgE-mediated mast cell activation by Mn2+\"",
@@ -2139,7 +1800,7 @@ export const ingredients: Record<string, IngredientData> = {
             },
             {
                 outcome: "Essential Cofactor Role and Dosing Context",
-                summary: "Manganese is the cofactor for arginase, glutamine synthetase, pyruvate carboxylase, and Mn-SOD. These metalloproteins underpin antioxidant defense (Mn-SOD), urea-cycle handling (arginase), glutamine metabolism (GS), and TCA-cycle anaplerosis (pyruvate carboxylase). Daily dietary intake is the primary determinant of status; our 4 mg supplement dose sits well below the UL (11 mg/day).",
+                summary: "Manganese is the cofactor for arginase, glutamine synthetase, pyruvate carboxylase, and Mn-SOD. These metalloproteins underpin antioxidant defense (Mn-SOD), urea-cycle handling (arginase), glutamine metabolism (GS), and TCA-cycle anaplerosis (pyruvate carboxylase). Daily dietary intake is the primary determinant of status; our 2 mg supplement dose sits well below the UL (11 mg/day).",
                 studies: [
                     {
                         source: "Chen P, Bornhorst J, Aschner M, \"Manganese metabolism in humans\"",
@@ -2171,7 +1832,7 @@ export const ingredients: Record<string, IngredientData> = {
             ]
         },
         safety: {
-            sideEffects: "Well-tolerated at 4mg (dose is below IOM upper limit of 11mg). Neurotoxicity risk is mainly linked to chronic high-dose inhalation exposure, though liver disease, parenteral nutrition, and contaminated water sources are also recognized risk factors.",
+            sideEffects: "Well-tolerated at 2 mg (dose is below IOM upper limit of 11 mg). Neurotoxicity risk is mainly linked to chronic high-dose inhalation exposure, though liver disease, parenteral nutrition, and contaminated water sources are also recognized risk factors.",
             interactions: "No reported interactions with POTS or MCAS medications (none has been studied). Separate from tetracyclines by 2+ hours.",
             excipientConcerns: {
                 avoid: ["Citric acid (supplier confirmation pending for this lot)", "Soy-based fillers"],
@@ -2181,10 +1842,10 @@ export const ingredients: Record<string, IngredientData> = {
         },
         howToStart: {
             protocol: [
-                { step: "Weeks 1-2", dosage: "The full AM serving (3 capsules) provides 4 mg of manganese. If you are sensitive to new supplements, talk with your clinician about how to start.", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "4 mg daily", notes: "Target maintenance (AM capsule)" }
+                { step: "Weeks 1-2", dosage: "The full AM serving (3 capsules) provides 2 mg of manganese. If you are sensitive to new supplements, talk with your clinician about how to start.", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "2 mg daily", notes: "Target maintenance (AM capsule)" }
             ],
-            timeline: "In a small 124 day human trial, 15 mg per day of manganese increased a marker of SOD2 activity. Our 4 mg dose has not been tested the same way."
+            timeline: "In a small 124 day human trial, 15 mg per day of manganese increased a marker of SOD2 activity. Our 2 mg dose has not been tested the same way."
         },
         sources: [
             { title: "Changes of manganese-dependent superoxide dismutase activities and expression with sustained manganese supplementation", pmid: "1550052", authors: "Davis CD, Greger JL", year: "1992" },
@@ -2197,10 +1858,10 @@ export const ingredients: Record<string, IngredientData> = {
     "selenium": {
         id: "selenium",
         name: "Selenium (Selenomethionine)",
-        patientSummary: "Selenium is an essential trace mineral and the core element of selenoproteins - most importantly the glutathione peroxidase family (GPx), your body's primary defense against lipid peroxidation. Selenium also supports thyroid hormone conversion, immune regulation, and DNA repair. Selenium supports your body's general antioxidant defenses as part of the formula's broader anti-inflammatory support. We use synthetic L-selenomethionine (not selenium yeast), an organic form of selenium. 100 mcg in the PM capsule, well within the standard supplement range.",
+        patientSummary: "Selenium is an essential trace mineral and the core element of selenoproteins - most importantly the glutathione peroxidase family (GPx), your body's primary defense against lipid peroxidation. Selenium also supports thyroid hormone conversion, immune regulation, and DNA repair. Selenium supports your body's general antioxidant defenses as part of the formula's broader anti-inflammatory support. We use synthetic L-selenomethionine (not selenium yeast), an organic form of selenium. 50 mcg in the PM capsule. Most US adults already get enough selenium from food, and studies in people with adequate selenium found no added effect from higher supplement doses, so we keep ours low.",
         faq: [
             { q: "Why selenomethionine vs other selenium forms?", a: "Selenomethionine is the organic form found naturally in plants and animal proteins. It is absorbed through the methionine amino acid transport pathway, which generally gives it strong bioavailability compared to inorganic forms. Selenite, an inorganic form, is generally absorbed less efficiently than selenomethionine. Selenium yeast is mostly selenomethionine, but it is a fermented, yeast-derived ingredient, which we avoid per our formulation fermentation policy. Synthetic L-selenomethionine gives you the bioavailable form, confirmed in writing as synthetic rather than yeast-derived, and that is what we use." },
-            { q: "Is selenium safe long-term?", a: "At 100 mcg, this is within the range considered generally well tolerated. The Recommended Dietary Allowance is 55 mcg/day; the Tolerable Upper Intake Level is 400 mcg/day. Our 100 mcg is below the Tolerable Upper Intake Level, but if your selenium status is already adequate, additional supplementation may not be advisable, so check with your clinician. Selenium has a relatively narrow therapeutic window - adequate is essential, but very high doses can cause selenosis (hair, nail, neurological changes) over months. If you eat a lot of Brazil nuts (which are extremely selenium-dense), watch your total intake." },
+            { q: "Is selenium safe long-term?", a: "At 50 mcg, this is within the range considered generally well tolerated. The Recommended Dietary Allowance is 55 mcg/day; the Tolerable Upper Intake Level is 400 mcg/day. Our 50 mcg is well below the Tolerable Upper Intake Level, but if your selenium status is already adequate, additional supplementation may not be advisable, so check with your clinician. Selenium has a relatively narrow therapeutic window - adequate is essential, but very high doses can cause selenosis (hair, nail, neurological changes) over months. If you eat a lot of Brazil nuts (which are extremely selenium-dense), watch your total intake." },
             { q: "What does selenium do for the thyroid?", a: "Selenium is the cofactor for the deiodinase enzymes that convert T4 to active T3, and the thyroid uses selenium-dependent antioxidant enzymes to protect itself during normal hormone production. That is normal thyroid function support. If you have a diagnosed thyroid condition, talk with your clinician before adding selenium, and do not use this formula in place of thyroid treatment." },
             { q: "Will selenium interact with my medications?", a: "Selenium has no reported harmful interactions with standard POTS, MCAS, and hEDS medications. Levothyroxine and sertraline have been studied in controlled trials with no clinically relevant concerns found. No documented interactions with beta-blockers, midodrine, fludrocortisone, ivabradine, antihistamines, or mast cell stabilizers." }
         ],
@@ -2209,11 +1870,11 @@ export const ingredients: Record<string, IngredientData> = {
             heds: "Selenium does not have a direct connective tissue mechanism. Selenium's GPx-supporting role helps keep your body's general antioxidant defense system topped up. Selenium is needed to make selenoprotein P, which carries at least 40 percent of the selenium in blood plasma. There are no direct trials of selenium in people with hEDS.",
             pots: "Selenium is a cofactor for the deiodinase enzymes that convert T4 to T3, part of normal thyroid hormone metabolism. Selenium's GPx activity supports your body's general antioxidant defenses. There are no direct POTS trials of selenium, and no documented interactions with beta-blockers, midodrine, fludrocortisone or ivabradine."
         },
-        bluf: "Selenium is an essential trace mineral, supplied here in an organic form, selenomethionine. It is the critical cofactor for glutathione peroxidase (the body's primary cellular antioxidant) and for thyroid hormone conversion. These pathways can be supported by adequate selenium intake. ZebraThrive uses 100 mcg daily in the PM stack.",
+        bluf: "Selenium is an essential trace mineral, supplied here in an organic form, selenomethionine. It is the critical cofactor for glutathione peroxidase (the body's primary cellular antioxidant) and for thyroid hormone conversion. These pathways can be supported by adequate selenium intake. ZebraThrive uses 50 mcg daily in the PM capsule.",
         atAGlance: {
             whatItIs: "An essential trace mineral in an organic form.",
             whyWeIncludeIt: "Critical cofactor for Glutathione Peroxidase (cellular antioxidant) and thyroid hormone conversion",
-            dose: "100 mcg daily (PM capsule)",
+            dose: "50 mcg daily (PM capsule)",
             keyBenefits: [
                 "Essential for Glutathione Peroxidase cellular defense",
                 "Cofactor for the deiodinases that support normal thyroid hormone conversion",
@@ -2286,8 +1947,8 @@ export const ingredients: Record<string, IngredientData> = {
         },
         howToStart: {
             protocol: [
-                { step: "Weeks 1-2", dosage: "The full serving of 3 PM capsules provides 100 mcg of selenium; each capsule provides about 33 mcg.", notes: "Assess tolerance" },
-                { step: "Week 3+", dosage: "100 mcg daily", notes: "Target maintenance (PM capsule)" }
+                { step: "Weeks 1-2", dosage: "The full serving of 3 PM capsules provides 50 mcg of selenium; each capsule provides about 17 mcg.", notes: "Assess tolerance" },
+                { step: "Week 3+", dosage: "50 mcg daily", notes: "Target maintenance (PM capsule)" }
             ],
             timeline: "Selenium levels in the body typically take a few months of consistent use to stabilize, based on general selenium research."
         },
@@ -2531,7 +2192,7 @@ export const ingredients: Record<string, IngredientData> = {
         id: "grape-seed-extract",
         name: "Grape Seed Extract",
         patientSummary: "Grape seed extract is one of the most concentrated natural sources of procyanidins, the same compound family found in pine bark, though each has a different minor compound profile. In lab studies, procyanidins can reduce MMP enzymes that break down matrix proteins. These effects were seen at concentrations well above what oral intake reaches in the blood and have not been studied in people. In lab studies, grape seed procyanidins have been shown to act on mast cells through several pathways, including FceRI downregulation, calcium influx inhibition, and cAMP elevation. These findings come from cell and animal studies and have not been confirmed in people. We pair grape seed with pine bark because both are broken down by gut bacteria into related metabolites, including one called M1, that can be absorbed into the bloodstream. Human data on exactly how much reaches circulation from grape seed alone is still limited.",
-        whyThisFormPatient: "We use grape seed extract standardized to 95% or higher OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that measures procyanidins more specifically than older total-absorbance methods. Peanut protein was not detected by ELISA testing. Some grape seed comes from winery pomace, the seeds left after wine fermentation, so we are confirming with our supplier whether ours is from fresh-pressed or pomace seed. We deliver 170 mg total daily, split 100 mg in the morning and 70 mg in the evening.",
+        whyThisFormPatient: "We use grape seed extract standardized to 95% or higher OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method that measures procyanidins more specifically than older total-absorbance methods. Peanut protein was not detected by ELISA testing. Some grape seed comes from winery pomace, the seeds left after wine fermentation, so we are confirming with our supplier whether ours is from fresh-pressed or pomace seed. We deliver 170 mg total daily, split evenly: 85 mg in the morning and 85 mg in the evening.",
         faq: [
             { q: "Why grape seed AND pine bark - aren't they the same thing?", a: "They share the procyanidin chemistry, but they're not identical. Grape seed delivers a higher procyanidin density per milligram. Pine bark brings a different minor compound profile, though its specific contribution to MMP or mast cell activity has not been measured in our lots. The gut metabolite M1 can come from both grape seed and pine bark, and together they may cover a broader mechanism profile, though no study has tested the combination directly." },
             { q: "Is grape seed safe with blood thinners?", a: "Grape seed extract has mild antiplatelet activity in lab studies. There is not enough data to know how meaningful this is in people, so tell your prescriber if you are on warfarin, aspirin, or a DOAC. Human studies in cardiovascular populations have generally gone well, but the standard caution applies: tell your prescriber if you are on blood thinners, and stop 2 weeks before scheduled surgery. " },
@@ -2547,7 +2208,7 @@ export const ingredients: Record<string, IngredientData> = {
         atAGlance: {
             whatItIs: "Grape seed extract is one of the most concentrated natural sources of procyanidins, the same compound family found in pine bark, with a different minor-compound profile.",
             whyWeIncludeIt: "In lab studies, grape seed procyanidins reduced MMP enzymes that break down matrix proteins. This has not been shown in people at the blood levels reached from oral intake. Lab studies suggest procyanidins may affect mast cell signaling through several pathways, including FceRI expression, calcium influx, and cAMP levels. This has not been confirmed in people.",
-            dose: "170 mg daily (100 mg AM capsule + 70 mg PM capsule)",
+            dose: "170 mg daily (85 mg AM capsule + 85 mg PM capsule)",
             keyBenefits: ["MMP-9 inhibition by the gut-derived M1 metabolite, shown in lab studies; human blood level data confirming this at our dose are not yet available.", "Mast cell pathway effects (FcεRI, calcium influx, cAMP) seen in lab and animal studies", "Direct procyanidin interaction with collagen fibers, shown in lab studies.", ""]
         },
         howItWorks: "Grape seed extract is one of the most concentrated natural sources of procyanidins, the same compound family found in pine bark, with a different minor-compound profile. In lab studies, grape seed procyanidins reduced MMP enzymes that break down matrix proteins. This has not been shown in people at the blood levels reached from oral intake. Lab studies suggest procyanidins may affect mast cell signaling through several pathways, including FceRI expression, calcium influx, and cAMP levels. This has not been confirmed in people. We pair grape seed with pine bark in the formulation because gut bacteria convert procyanidins from both sources into a related metabolite called M1, or DHPV.",
@@ -2602,7 +2263,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Generic grape seed extract (Vitis vinifera), ≥95% OPCs by HPLC, peanut protein not detected by ELISA, seed source being confirmed",
-            rationale: "We use grape seed extract standardized to at least 95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method commonly used to measure procyanidin content. Peanut protein was not detected by ELISA testing. Some grape seed comes from winery pomace, the seeds left after wine fermentation, so we are confirming with our supplier whether ours is from fresh-pressed or pomace seed. We deliver 170 mg total daily, split 100 mg in the morning and 70 mg in the evening."
+            rationale: "We use grape seed extract standardized to at least 95% OPCs (oligomeric proanthocyanidins) by HPLC, an analytical method commonly used to measure procyanidin content. Peanut protein was not detected by ELISA testing. Some grape seed comes from winery pomace, the seeds left after wine fermentation, so we are confirming with our supplier whether ours is from fresh-pressed or pomace seed. We deliver 170 mg total daily, split evenly: 85 mg in the morning and 85 mg in the evening."
         },
         safety: {
             sideEffects: "Excellent safety profile in cardiovascular RCTs running 8-12 weeks. In a small human study using 300 mg per day of grape seed extract, most people (73%) reported no side effects at all.",
@@ -2627,11 +2288,11 @@ export const ingredients: Record<string, IngredientData> = {
     "quercetin-phytosome": {
         id: "quercetin-phytosome",
         name: "Quercetin Phytosome (Quercefit®)",
-        patientSummary: "Quercetin Phytosome is quercetin, a plant flavonoid, bound to a sunflower lecithin carrier that helps with quercetin's main limitation: poor absorption. Plain quercetin is generally considered poorly absorbed by the body. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram. The phytosome form gives much higher blood levels of quercetin than plain quercetin.",
-        whyThisFormPatient: "We use Quercefit, Indena's quercetin phytosome, because a human study showed about 20 times higher quercetin absorption than plain quercetin. The carrier is sunflower lecithin (not soy), which helps your gut absorb the quercetin. The complex also contains maltodextrin. Generic quercetin phytosome blends have not been shown to match Quercefit's 20x absorption data. Quercefit® is the one mandatory branded sourcing in our formulation. We request a Certificate of Analysis for every batch.",
+        patientSummary: "Quercetin Phytosome is quercetin, a plant flavonoid, bound to a sunflower lecithin carrier that helps with quercetin's main limitation: poor absorption. Plain quercetin is generally considered poorly absorbed by the body. Quercefit® (Indena's branded phytosome form) gave higher blood quercetin levels than plain quercetin in a human pharmacokinetic study. The phytosome form gives much higher blood levels of quercetin than plain quercetin.",
+        whyThisFormPatient: "We use Quercefit, Indena's quercetin phytosome, because a human pharmacokinetic study showed higher blood quercetin levels than plain quercetin. The carrier is sunflower lecithin (not soy), which helps your gut absorb the quercetin. The complex also contains maltodextrin. Generic quercetin phytosome blends do not have their own human absorption study. Quercefit® is the one mandatory branded sourcing in our formulation. We request a Certificate of Analysis for every batch.",
         faq: [
-            { q: "Why mandatory Quercefit® instead of generic quercetin phytosome?", a: "The bioavailability difference shown in the Riva 2019 study is substantial. Quercefit has the human PK study showing 20x absorption versus plain quercetin; data on generic quercetin phytosome blends is not established. The phytosome technology uses a specific manufacturing process to produce a phospholipid-quercetin complex. For this ingredient, bioavailability is a major reason for choosing the branded form, based on the Riva 2019 human PK study. This is the one mandatory brand in our formulation." },
-            { q: "How is Quercefit different from EMIQ or plain quercetin?", a: "All three deliver quercetin to your body, but the mechanisms differ. Plain quercetin is generally considered poorly absorbed by the body. Quercefit uses a phospholipid carrier to lift absorption about 20-fold. Quercefit has a growing body of human research, including studies in allergic rhinitis, exercise recovery, and COVID-19, though the total number of independent trials is smaller than headline counts suggest." },
+            { q: "Why mandatory Quercefit® instead of generic quercetin phytosome?", a: "The bioavailability difference shown in the Riva 2019 study is substantial. Quercefit has a human PK study showing higher absorption than plain quercetin; data on generic quercetin phytosome blends is not established. The phytosome technology uses a specific manufacturing process to produce a phospholipid-quercetin complex. For this ingredient, bioavailability is a major reason for choosing the branded form, based on the Riva 2019 human PK study. This is the one mandatory brand in our formulation." },
+            { q: "How is Quercefit different from EMIQ or plain quercetin?", a: "All three deliver quercetin to your body, but the mechanisms differ. Plain quercetin is generally considered poorly absorbed by the body. Quercefit uses a phospholipid carrier to improve absorption. Quercefit has a growing body of human research, including studies in allergic rhinitis, exercise recovery, and COVID-19, though the total number of independent trials is smaller than headline counts suggest." },
             { q: "Is Quercefit safe with ivabradine and beta-blockers?", a: "No study has tested quercetin with any of these medications. Quercetin blocks the liver enzyme CYP3A4 in lab tests, but in people repeated dosing does the opposite: it speeds CYP3A activity in the gut (induction). For ivabradine, that points toward lower drug levels and weaker heart-rate control, not toxicity. We rate it low-to-moderate because the human effect was small and our dose puts less quercetin in the gut than the study dose. For metoprolol and propranolol, the lab effect on their clearing enzymes needs higher quercetin levels than our dose reaches, so drug levels are unlikely to change. The better-supported effect is a small added drop in blood pressure. The same drop could slightly oppose fludrocortisone and midodrine. Fludrocortisone levels could also fall if it is cleared by CYP3A4, which is not documented. Monitor as you normally would and mention quercetin to your prescriber." },
             { q: "How long until I notice anything from Quercefit?", a: "Quercefit is a daily-use ingredient; give it consistent daily use. Quercefit reaches meaningfully higher quercetin blood levels than plain quercetin at the same dose, based on a human pharmacokinetic study, though absolute levels are still modest." },
             { q: "Is quercetin a mast cell stabilizer for MCAS?", a: "Quercetin is not an approved mast cell stabilizer. The evidence is lab research: in studies of human mast cells, quercetin reduced release of histamine, PGD2, leukotrienes, TNF, and IL-8. Those are lab findings, not clinical outcomes in people with MCAS. The form matters too, because plain quercetin is poorly absorbed." },
@@ -2642,24 +2303,24 @@ export const ingredients: Record<string, IngredientData> = {
             heds: "No randomized controlled trial has tested quercetin phytosome in people with hEDS, and it is not a substitute for any prescribed treatment.",
             pots: "Quercetin has not been studied in POTS, and it is not a substitute for any prescribed treatment. Quercetin may add a small drop in blood pressure, which could slightly oppose fludrocortisone and midodrine, so mention it to your prescriber."
         },
-        bluf: "Quercetin Phytosome is quercetin, a plant flavonoid, bound to a sunflower lecithin carrier that helps with quercetin's main limitation: poor absorption. Plain quercetin is poorly absorbed. Indena's branded Quercefit form delivers about 20 times more quercetin into the bloodstream per milligram, based on a human pharmacokinetic study. ZebraThrive uses 300 mg of Quercefit daily in the Daily Powder, split AM and PM.",
+        bluf: "Quercetin Phytosome is quercetin, a plant flavonoid, bound to a sunflower lecithin carrier that helps with quercetin's main limitation: poor absorption. Plain quercetin is poorly absorbed. Indena's branded Quercefit form gave higher blood quercetin levels than plain quercetin in a human pharmacokinetic study. ZebraThrive uses 300 mg of Quercefit daily in the Daily Powder, split AM and PM.",
         atAGlance: {
             whatItIs: "Quercetin Phytosome is quercetin, a plant flavonoid, bound to a sunflower lecithin carrier that helps with quercetin's main limitation: poor absorption.",
-            whyWeIncludeIt: "Plain quercetin is poorly absorbed. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram.",
+            whyWeIncludeIt: "Plain quercetin is poorly absorbed. Quercefit® (Indena's branded phytosome form) gave higher blood quercetin levels than plain quercetin in a human pharmacokinetic study.",
             dose: "300 mg Quercefit® quercetin phytosome daily in the Daily Powder, split AM and PM scoops (300 mg of the phytosome complex, not 300 mg of free quercetin)",
-            keyBenefits: ["About 20 times higher quercetin absorption than plain quercetin in a human pharmacokinetic study", "", "", "Mandatory branded sourcing: Indena Quercefit® is the form with the 20x human PK data"]
+            keyBenefits: ["Higher quercetin absorption than plain quercetin in a human pharmacokinetic study", "", "", "Mandatory branded sourcing: Indena Quercefit® is the form with its own human PK data"]
         },
-        howItWorks: "The phytosome carrier is sunflower lecithin, which helps your gut absorb the quercetin. Quercefit® (Indena's branded phytosome form) delivers about 20 times more quercetin into your bloodstream per milligram. The phytosome form gives much higher blood levels of quercetin than plain quercetin.",
+        howItWorks: "The phytosome carrier is sunflower lecithin, which helps your gut absorb the quercetin. Quercefit® (Indena's branded phytosome form) gave higher blood quercetin levels than plain quercetin in a human pharmacokinetic study. The phytosome form gives much higher blood levels of quercetin than plain quercetin.",
         research: [
             {
                 outcome: "Quercefit® Phytosome Bioavailability",
-                summary: "The Indena Quercefit® phytosome delivery system delivers about 20x higher quercetin plasma concentrations than plain quercetin per milligram. Free quercetin's half-life is short, about 3.4 to 3.8 hours, so steady dosing matters. The form that actually circulates longer in the body (conjugated quercetin) persists longer, based on the Riva pharmacokinetic study.",
+                summary: "The Indena Quercefit® phytosome delivery system gave higher quercetin plasma concentrations than plain quercetin in a human pharmacokinetic study. Free quercetin's half-life is short, about 3.4 to 3.8 hours, so steady dosing matters. The form that actually circulates longer in the body (conjugated quercetin) persists longer, based on the Riva pharmacokinetic study.",
                 studies: [
                     {
                         source: "Riva A et al., \"Improved Oral Absorption of Quercetin from Quercetin Phytosome®, a New Delivery System Based on Food Grade Lecithin\"",
                         pmid: "30328058",
                         design: "Human pharmacokinetic study, healthy volunteers",
-                        finding: "Quercefit gave about 20 times higher quercetin absorption than plain quercetin at the same weight; half-life in this study was about 3.4 to 3.8 hours."
+                        finding: "Quercefit gave higher quercetin absorption than plain quercetin at the same weight; half-life in this study was about 3.4 to 3.8 hours."
                     }
                 ]
             },
@@ -2701,7 +2362,7 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Quercefit (Indena quercetin phytosome: quercetin, sunflower lecithin, maltodextrin), mandatory branded sourcing",
-            rationale: "We use Quercefit, Indena's quercetin phytosome, because a human study showed about 20 times higher quercetin absorption than plain quercetin. The carrier is sunflower lecithin (not soy), which helps your gut absorb the quercetin. The complex also contains maltodextrin. This is one of the few cases where the branded form is genuinely non-negotiable. Generic quercetin phytosome blends have not shown the same 20 times absorption seen with Quercefit in human testing. Quercefit® is the one mandatory branded sourcing in our formulation. We request a Certificate of Analysis for every batch."
+            rationale: "We use Quercefit, Indena's quercetin phytosome, because a human pharmacokinetic study showed higher blood quercetin levels than plain quercetin. The carrier is sunflower lecithin (not soy), which helps your gut absorb the quercetin. The complex also contains maltodextrin. This is one of the few cases where the branded form is genuinely non-negotiable. Generic quercetin phytosome blends do not have their own human absorption testing. Quercefit® is the one mandatory branded sourcing in our formulation. We request a Certificate of Analysis for every batch."
         },
         safety: {
             sideEffects: "Quercefit has been used in a number of human clinical studies and has generally been well tolerated. ",
@@ -2719,110 +2380,11 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Effect of quercetin on CYP3A activity in Chinese healthy participants", pmid: "21680781", authors: "Duan et al.", year: "2012" }
         ]
     },
-    "chromium": {
-        id: "chromium",
-        name: "Chromium",
-        patientSummary: "Chromium is a trace mineral studied for a possible role in how the body responds to insulin. We include chromium at 200 micrograms, a standard supplement dose, as part of general trace mineral coverage. We use chromium picolinate, a well studied form of chromium used in many human trials.",
-        whyThisFormPatient: "We use chromium picolinate at 200 micrograms, a standard supplement dose. In diabetes trials, side effects were no more common than with placebo, though long term safety still needs more study. Chromium is generally poorly absorbed; picolinate is a commonly used chelated form in human trials. The 200 mcg dose sits within the range studied in human trials, which spans roughly 50 to 1,000 mcg per day. This is a multivitamin completion ingredient: a modest dose, generally well tolerated, adding trace mineral coverage at negligible bulk weight.",
-        faq: [
-            { q: "Why include chromium in a formulation for hEDS/POTS/MCAS?", a: " Chromium supports normal glucose handling as part of the formula's broader trace mineral coverage." },
-            { q: "Will chromium interact with my POTS medications?", a: "No documented interactions with the standard POTS medication stack: beta-blockers, midodrine, fludrocortisone, ivabradine. Chromium picolinate doesn't engage the CYP enzymes that drive most drug interactions. Some interaction is theoretically possible with diabetes medications (insulin sensitizers) - if you're on metformin or insulin, mention chromium to your prescriber, since better glucose handling might mean your doses need adjustment. Interactions with common POTS medications have not been formally studied. One exception: chromium picolinate can lower levothyroxine absorption, so take them at least 4 hours apart if you use thyroid medication." },
-            { q: "Is chromium picolinate safe long-term?", a: "Yes. Chromium picolinate at the 200 mcg supplement dose has not shown more adverse events than placebo in clinical trials, though researchers note long-term safety still needs further study. We source chromium picolinate and are working to finalize batch testing documentation for this ingredient." },
-            { q: "What about chromium picolinate vs other chromium forms?", a: "Picolinate is a well studied form of chromium used in many human trials. Chromium chloride has also been studied in human trials and shown similar effects, though picolinate has the most research behind it." }
-        ],
-        triadPlain: {
-            mcas: "Chromium doesn't directly engage mast cell biology. It is a trace mineral, not a mast cell stabilizer. Chromium supports normal glucose handling as part of overall nutrient coverage. It is not intended to affect mast cell activity. Chromium is included as a general trace mineral for nutrient completeness.",
-            heds: "Chromium doesn't have a direct connective tissue mechanism. It is not a collagen ingredient. Chromium is part of the trace mineral foundation of the formula.",
-            pots: "Chromium is included as part of general trace mineral coverage in the formula. Chromium has not been studied in POTS. "
-        },
-        bluf: "Chromium is a trace mineral studied for a possible role in how the body responds to insulin and processes carbohydrates. ZebraThrive uses 200 mcg of chromium picolinate in the AM capsules, a standard supplement dose.",
-        atAGlance: {
-            whatItIs: "Chromium is a trace mineral that has been studied for a possible role in insulin response and carbohydrate metabolism.",
-            whyWeIncludeIt: "We include 200 micrograms of chromium, the standard supplement dose, as part of general trace mineral coverage. ",
-            dose: "200 mcg daily as chromium picolinate (AM capsule)",
-            keyBenefits: ["Chromium supports normal glucose handling and carbohydrate metabolism, at a standard 200 mcg supplement dose.", "", "Chromium picolinate is a well-studied form of chromium used in supplements, though absorption data vary across studies.", "Chromium at the 200 microgram supplement dose has a long history of use in clinical trials with an adverse event rate similar to placebo, though long term safety is still being studied."]
-        },
-        howItWorks: "Chromium is a trace mineral that has been studied for a possible role in insulin response and carbohydrate metabolism. We include 200 micrograms of chromium, the standard supplement dose, as part of general trace mineral coverage. Chromium supports normal glucose handling as part of general nutrient coverage. We use chromium picolinate, a well studied form of chromium.",
-        research: [
-            {
-                outcome: "Glucose Handling and Insulin Response",
-                summary: "Chromium's role in insulin signaling is studied but not fully established; researchers have not pinned down a specific molecular site of action. Most human trials were run in adults with impaired glucose tolerance or type 2 diabetes, measuring fasting glucose and HbA1c. We cite them for chromium's general role in glucose metabolism, not as a claim that this product treats diabetes. ZebraThrive is not intended for diabetes.",
-                studies: [
-                    {
-                        source: "Suksomboon N et al., \"Systematic review and meta-analysis of the efficacy and safety of chromium supplementation in diabetes\"",
-                        pmid: "24635480",
-                        design: "Systematic review + meta-analysis of 25 RCTs in adults with type 2 diabetes",
-                        finding: "Pooled trials measured fasting glucose and HbA1c. Adverse event rates were similar to placebo in these trials, though the authors note long term safety still needs more study."
-                    },
-                    {
-                        source: "Huang H et al., pooled analysis of chromium trials (2017)",
-                        pmid: "28677892",
-                        design: "Pooled analysis of 28 RCTs in adults with type 2 diabetes.",
-                        finding: "Glucose handling measures were compared across the pooled studies, which used a range of chromium doses and durations."
-                    },
-                    {
-                        source: "Ghosh D et al., \"Role of chromium supplementation in Indians with type 2 diabetes mellitus\"",
-                        pmid: "12550067",
-                        design: "Double blind, placebo controlled crossover trial, 50 adults with type 2 diabetes, 400 mcg/day chromium picolinate (200 mcg twice daily) for 12 week arms.",
-                        finding: "Fasting and post-meal glucose and HbA1c were measured; cited for chromium's role in glucose metabolism"
-                    },
-                    {
-                        source: "Havel PJ, \"A scientific review: the role of chromium in insulin resistance\"",
-                        pmid: "15208835",
-                        design: "Mechanistic review",
-                        finding: "Some researchers have proposed that chromium supports insulin receptor signaling through a complex called chromodulin, though this mechanism is not firmly established, and low chromium status has been linked to impaired glucose handling in some studies."
-                    }
-                ]
-            },
-            {
-                outcome: "Cardiac Electrical Measures (Higher-Dose Study)",
-                summary: "A small RCT in adults with type 2 diabetes, at 1,000 mcg/day (five times our dose), measured the QTc interval. It is not POTS data and did not test our dose.",
-                studies: [
-                    {
-                        source: "Vrtovec M et al., \"Chromium supplementation shortens QTc interval duration in patients with type 2 diabetes mellitus\"",
-                        pmid: "15990745",
-                        design: "RCT, 60 adults with type 2 diabetes, 1000 mcg/day chromium picolinate for 3 months (crossover design).",
-                        finding: "QTc interval was compared between chromium and placebo after 3 months."
-                    }
-                ]
-            },
-            {
-                outcome: "Long-Term Safety at Supplement Doses",
-                summary: "Chromium picolinate at the 200 mcg supplement dose has not shown increased adverse events compared to placebo in clinical trials, though researchers note that long term safety still needs more study.",
-                studies: [
-                ]
-            }
-        ],
-        triad: {
-            mcas: "Chromium doesn't directly engage mast cell biology - it's a trace mineral, not a mast cell stabilizer. Chromium supports normal glucose metabolism as part of general trace mineral nutrition. Chromium is included as part of the trace mineral foundation of the formula, alongside other ingredients chosen for different purposes.",
-            heds: "Chromium doesn't have a direct connective tissue mechanism - it's not a collagen ingredient. Chromium supports normal glucose metabolism, which is part of general nutritional support. Chromium is part of the trace mineral foundation of the formula. Chromium's role here is limited to general trace mineral nutrition.",
-            pots: "Chromium is included as part of the formula's general trace mineral coverage. Chromium has not been studied in POTS. We do not have evidence that chromium changes autonomic symptom pressure."
-        },
-        whyThisForm: {
-            form: "Chromium picolinate, 200 mcg (AM capsule)",
-            rationale: "We use chromium picolinate at 200 micrograms, a standard supplement dose. In diabetes trials, side effects were no more common than with placebo, though long term safety still needs more study. Chromium absorption is generally low across forms. Picolinate is commonly used because it is well studied, though specific absorption percentage figures are not something we can cite a source for. The 200 mcg dose is within the range used across chromium trials, which spans roughly 50 to 1,000 mcg per day, and is lower than the higher doses used in some diabetes studies. This is a multivitamin completion ingredient: modest dose, generally well tolerated in studies, and included for trace mineral coverage at negligible bulk weight."
-        },
-        safety: {
-            sideEffects: "Chromium picolinate at the 200 mcg supplement dose has generally shown adverse event rates similar to placebo in diabetes trials, though researchers note long-term safety still needs more study. ",
-            interactions: "Theoretical interaction with diabetes medications (insulin, metformin); if you are on either, mention chromium to your prescriber since improved glucose handling might affect dosing requirements. Chromium picolinate does not meaningfully engage the CYP enzymes behind most drug interactions. One documented interaction exists: taking chromium picolinate at the same time as levothyroxine can reduce thyroid hormone absorption, so take them at least 4 hours apart. No other documented interactions were found with common POTS, MCAS, or hEDS medications such as beta-blockers, midodrine, fludrocortisone, or ivabradine.",
-            excipientConcerns: {
-                avoid: ["Chromium without a verified assay on file", "Artificial colors", "Magnesium stearate"],
-                safe: ["HPMC capsules", "Rice hull concentrate", "Cellulose"]
-            }
-        },
-        sources: [
-            { title: "Systematic review and meta-analysis of the efficacy and safety of chromium supplementation in diabetes", pmid: "24635480", authors: "Suksomboon N et al.", year: "2014" },
-            { title: "Chromium supplementation for adjuvant treatment of type 2 diabetes mellitus: results from a pooled analysis", pmid: "28677892", authors: "Huang H et al.", year: "2017" },
-            { title: "Role of chromium supplementation in Indians with type 2 diabetes mellitus", pmid: "12550067", authors: "Ghosh D et al.", year: "2002" },
-            { title: "A scientific review: the role of chromium in insulin resistance", pmid: "15208835", authors: "Havel PJ", year: "2004" },
-            { title: "Chromium supplementation shortens QTc interval duration in patients with type 2 diabetes mellitus", pmid: "15990745", authors: "Vrtovec M et al.", year: "2005" }
-        ]
-    },
     "chlorogenic-acid": {
         id: "chlorogenic-acid",
         name: "Chlorogenic Acid",
-        patientSummary: "Chlorogenic acid (CGA) is one of the main polyphenols in green coffee beans, separate from caffeine. CGA has been studied in lab research for pro-collagen activity in skin cells, in animal and cell studies for mast cell related pathways, and in small trials for modest cardiovascular effects. We include it for these studied properties. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-beta/Smad pathway, and reduces MMP-1 and MMP-3 specifically in cells exposed to UV damage. Our specification calls for decaffeinated green coffee bean extract with caffeine under 0.1%; we will confirm this on the production lot's certificate before launch.",
-        whyThisFormPatient: "We source chlorogenic acid from green coffee bean extract, standardized to 45% or more CGAs by HPLC. The decaf spec matters to us because some people in this community are sensitive to caffeine. Our specification calls for decaffeinated extract with caffeine under 0.1%; we will confirm this on the production lot's certificate before launch. We specify a non-fermented water and ethanol extraction to help avoid the histamine and tyramine that can come with poorly sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder.",
+        patientSummary: "Chlorogenic acid (CGA) is one of the main polyphenols in green coffee beans, separate from caffeine. CGA has been studied in lab research for pro-collagen activity in skin cells, in animal and cell studies for mast cell related pathways, and in small trials for modest cardiovascular effects. We include it for these studied properties. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-beta/Smad pathway, and reduces MMP-1 and MMP-3 specifically in cells exposed to UV damage. Our specification calls for decaffeinated green coffee bean extract with caffeine at or below 0.4% (less than 1 mg per scoop); we will confirm this on the production lot's certificate before launch.",
+        whyThisFormPatient: "We source chlorogenic acid from green coffee bean extract, standardized to 45% or more CGAs by HPLC. The decaf spec matters to us because some people in this community are sensitive to caffeine. Our specification calls for decaffeinated extract with caffeine at or below 0.4% (less than 1 mg per scoop); we will confirm this on the production lot's certificate before launch. We specify a non-fermented water and ethanol extraction to help avoid the histamine and tyramine that can come with poorly sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder.",
         faq: [
             { q: "Is chlorogenic acid the same as coffee?", a: "It's the polyphenol found in coffee. A single cup of coffee can provide a similar amount; our supplement provides a measured dose from green coffee bean extract. " },
             { q: "Will chlorogenic acid affect my blood pressure?", a: "Probably not at our dose. The cleanest meta-analyses show CGA produces a modest 2 to 3 mmHg systolic drop on average, with a larger effect in people with higher starting blood pressure and little to no effect in normotensives. For most POTS patients with normal or low BP, CGA shouldn't be a hypotensive concern. If you take midodrine and your blood pressure tends to run low, mention CGA to your prescriber." },
@@ -2830,7 +2392,7 @@ export const ingredients: Record<string, IngredientData> = {
             { q: "How does chlorogenic acid handle methylation?", a: "CGA is partly cleared through methylation, so it does draw on the methyl donor pool - but the demand is small at 200 mg/day relative to total methylation throughput. The formula also contains methylfolate and methylcobalamin (vitamin B12). If you have known MTHFR variants and significant methylation concerns, mention CGA to your prescriber. In general trials, people tolerated it well at doses up to 1,000 mg per day for 12 weeks. Coffee delivers a comparable amount of CGA per serving." }
         ],
         triadPlain: {
-            mcas: "No study has tested chlorogenic acid in people with MCAS. Our specification calls for a decaffeinated green coffee bean extract because some people in this community are sensitive to caffeine; we will confirm caffeine under 0.1% on the production lot's certificate before launch.",
+            mcas: "No study has tested chlorogenic acid in people with MCAS. Our specification calls for a decaffeinated green coffee bean extract because some people in this community are sensitive to caffeine; we will confirm caffeine at or below 0.4% (less than 1 mg per scoop) on the production lot's certificate before launch.",
             heds: "No study has tested chlorogenic acid in people with hEDS, and its lab findings on collagen have not been shown in people. We include it as a green coffee polyphenol, at 200 mg a day in the Daily Powder.",
             pots: "No study has tested chlorogenic acid in people with POTS. Pooled trials of green coffee bean extract found only small blood pressure changes, with little or no change in people with normal or low blood pressure, so a large blood pressure drop is not expected at our dose. If you take midodrine or other blood pressure medications, mention CGA to your prescriber."
         },
@@ -2841,7 +2403,7 @@ export const ingredients: Record<string, IngredientData> = {
             dose: "200 mg chlorogenic acid daily (from about 444 mg green coffee bean extract, specified as decaffeinated) in the Daily Powder, split AM and PM scoops",
             keyBenefits: ["In a lab study, CGA increased Type I collagen synthesis via the TGF-beta/Smad pathway.", "In a lab study, CGA reduced MMP-1 and MMP-3, enzymes that break down collagen, under UVA exposure conditions.", "In animal and lab studies, CGA has shown effects on the PPAR-gamma and Akt1/NF-kB pathways involved in mast cell activity.", "Decaffeinated green coffee bean sourcing is intended to reduce caffeine exposure, which some people prefer to limit."]
         },
-        howItWorks: "Chlorogenic acid is a key polyphenol found in green coffee beans, separate from caffeine. CGA has been studied in lab research for pro-collagen activity in skin cells, in animal and cell studies for mast cell related pathways, and in small trials for modest cardiovascular support. We include it for these studied properties. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-beta/Smad pathway while reducing MMP-1 and MMP-3 in UVA-stressed cells. We source from green coffee bean extract specified as decaffeinated. The lot and caffeine level are still being finalized, and we will confirm caffeine under 0.1% on the production lot's certificate before launch.",
+        howItWorks: "Chlorogenic acid is a key polyphenol found in green coffee beans, separate from caffeine. CGA has been studied in lab research for pro-collagen activity in skin cells, in animal and cell studies for mast cell related pathways, and in small trials for modest cardiovascular support. We include it for these studied properties. Lab studies in skin fibroblasts show CGA increases Type I collagen synthesis through the TGF-beta/Smad pathway while reducing MMP-1 and MMP-3 in UVA-stressed cells. We source from green coffee bean extract specified as decaffeinated. The lot and caffeine level are still being finalized, and we will confirm caffeine at or below 0.4% (less than 1 mg per scoop) on the production lot's certificate before launch.",
         research: [
             {
                 outcome: "Pro-Collagen Activity in Lab Studies",
@@ -2893,13 +2455,13 @@ export const ingredients: Record<string, IngredientData> = {
             }
         ],
         triad: {
-            mcas: "Chlorogenic acid has not been studied in people with MCAS. Our specification calls for a decaffeinated green coffee bean extract so you get the polyphenol without the caffeine, since some people prefer to limit caffeine; caffeine under 0.1% will be confirmed on the production lot's certificate.",
+            mcas: "Chlorogenic acid has not been studied in people with MCAS. Our specification calls for a decaffeinated green coffee bean extract so you get the polyphenol without the caffeine, since some people prefer to limit caffeine; caffeine at or below 0.4% (less than 1 mg per scoop) will be confirmed on the production lot's certificate.",
             heds: "Chlorogenic acid has not been studied in people with hEDS, and its lab findings on collagen production and breakdown have not been shown in people.",
-            pots: "Chlorogenic acid has not been studied in people with POTS. Our specification calls for decaffeinated sourcing, with caffeine under 0.1% to be confirmed on the production lot's certificate, because some people with POTS prefer to avoid caffeine."
+            pots: "Chlorogenic acid has not been studied in people with POTS. Our specification calls for decaffeinated sourcing, with caffeine at or below 0.4% (less than 1 mg per scoop) to be confirmed on the production lot's certificate, because some people with POTS prefer to avoid caffeine."
         },
         whyThisForm: {
-            form: "Green coffee bean extract, 45% or more CGAs by HPLC; caffeine specification under 0.1% (production lot certificate pending)",
-            rationale: "We source chlorogenic acid from green coffee bean extract, standardized to 45% or more CGAs by HPLC. Some people prefer to limit caffeine, and many in the POTS community choose to avoid it. Our specification calls for decaffeinated extract with caffeine under 0.1%; we will confirm this on the production lot's certificate before launch. We specify a non-fermented water and ethanol extraction process to help avoid histamine and tyramine that can come from poorly sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder."
+            form: "Green coffee bean extract, 45% or more CGAs by HPLC; caffeine specification at or below 0.4% (production lot certificate pending)",
+            rationale: "We source chlorogenic acid from green coffee bean extract, standardized to 45% or more CGAs by HPLC. Some people prefer to limit caffeine, and many in the POTS community choose to avoid it. Our specification calls for decaffeinated extract with caffeine at or below 0.4% (less than 1 mg per scoop); we will confirm this on the production lot's certificate before launch. We specify a non-fermented water and ethanol extraction process to help avoid histamine and tyramine that can come from poorly sourced botanical extracts. The dose is 200 mg per day, split AM and PM in the Daily Powder."
         },
         safety: {
             sideEffects: "Excellent tolerability in human cardiovascular and metabolic trials at 200-400 mg/day. The decaffeinated, non-fermented sourcing is intended to reduce caffeine and biogenic amine exposure for this population.",
@@ -2920,24 +2482,24 @@ export const ingredients: Record<string, IngredientData> = {
     "niacinamide": {
         id: "niacinamide",
         name: "Niacinamide",
-        patientSummary: "Niacinamide is vitamin B3 in its amide form - different from niacin, which causes flushing through prostaglandin release. Niacinamide is non-flushing. In an animal and isolated cell lab study, nicotinamide affected mast cell activity, but this has not been studied in people. We use 16 to 50 mg (final amount being set). A small human study gave 9 healthy men a single 100 mg dose and measured higher blood histamine at the 5 hour mark, the only time point checked, so a lasting or temporary pattern was not shown. Lower doses have not been tested. ",
-        whyThisFormPatient: "We use niacinamide, the amide form, not niacin, at 16 to 50 mg (final amount being set) per day. Niacin causes flushing through prostaglandin release from Langerhans cells - that 'niacin flush' is uncomfortable and can be a problem for sensitive populations. Niacinamide is the non-flushing form. We chose 16 to 50 mg (final amount being set) partly because a 2013 study found that a single 100 mg dose in 9 healthy men raised blood histamine at the 5 hour mark, a change researchers linked to methylation use. ",
+        patientSummary: "Niacinamide is vitamin B3 in its amide form - different from niacin, which causes flushing through prostaglandin release. Niacinamide is non-flushing. In an animal and isolated cell lab study, nicotinamide affected mast cell activity, but this has not been studied in people. We use 16 mg. A small human study gave 9 healthy men a single 100 mg dose and measured higher blood histamine at the 5 hour mark, the only time point checked, so a lasting or temporary pattern was not shown. Lower doses have not been tested. ",
+        whyThisFormPatient: "We use niacinamide, the amide form, not niacin, at 16 mg per day. Niacin causes flushing through prostaglandin release from Langerhans cells - that 'niacin flush' is uncomfortable and can be a problem for sensitive populations. Niacinamide is the non-flushing form. We chose 16 mg partly because a 2013 study found that a single 100 mg dose in 9 healthy men raised blood histamine at the 5 hour mark, a change researchers linked to methylation use. ",
         faq: [
             { q: "Niacinamide vs niacin - what's the difference?", a: "Both are vitamin B3, but they're chemically distinct and act differently. Niacin (nicotinic acid) activates GPR109A receptors on skin Langerhans cells, triggering a prostaglandin release that causes the classic 'niacin flush' - uncomfortable warmth, redness, sometimes itching. Niacinamide (nicotinamide) doesn't activate GPR109A, so no flushing. Niacin's flush comes from prostaglandins released through GPR109A on skin cells, not from mast cells. We use niacinamide, which does not cause this flush." },
-            { q: "Why is the dose 16 to 50 mg (final amount being set)?", a: "Because of a 2013 human study (Tian et al.) showing 100 mg of niacinamide raised plasma histamine at 5 hours after a single dose. The researchers suggested a mechanism, methylation competition: niacinamide gets cleared through methylation, drawing on the same methyl donor pool that HNMT needs to break down histamine. " },
-            { q: "Does niacinamide actually help with collagen?", a: "In cultured dermal fibroblast lab studies, niacinamide supported pro-collagen activity, but at concentrations much higher than oral dosing is estimated to reach. At our 16 to 50 mg (final amount being set) dose, the connective tissue contribution is modest. A 2026 study found that niacinamide did not keep blood NAD+ raised over time, unlike NR, which is also in this formula. It's a supporting cast ingredient at this dose, not a hero player." },
-            { q: "What's niacinamide's role alongside NR?", a: "NR (nicotinamide riboside) is the more efficient NAD+ precursor - it raises blood NAD+ levels more reliably than niacinamide does. Niacinamide at 16 to 50 mg (final amount being set) has a different downstream metabolite profile than niacin. Think of niacinamide as broad B3 coverage and NR as targeted NAD+ raise. We include both because they cover different aspects of the vitamin B3 family at low cumulative cost." }
+            { q: "Why is the dose 16 mg?", a: "Because of a 2013 human study (Tian et al.) showing 100 mg of niacinamide raised plasma histamine at 5 hours after a single dose. The researchers suggested a mechanism, methylation competition: niacinamide gets cleared through methylation, drawing on the same methyl donor pool that HNMT needs to break down histamine. " },
+            { q: "Does niacinamide actually help with collagen?", a: "In cultured dermal fibroblast lab studies, niacinamide supported pro-collagen activity, but at concentrations much higher than oral dosing is estimated to reach. At our 16 mg dose, the connective tissue contribution is modest. A 2026 study found that niacinamide did not keep blood NAD+ raised over time, unlike NR, which is also in this formula. It's a supporting cast ingredient at this dose, not a hero player." },
+            { q: "What's niacinamide's role alongside NR?", a: "NR (nicotinamide riboside) is the more efficient NAD+ precursor - it raises blood NAD+ levels more reliably than niacinamide does. Niacinamide at 16 mg has a different downstream metabolite profile than niacin. Think of niacinamide as broad B3 coverage and NR as targeted NAD+ raise. We include both because they cover different aspects of the vitamin B3 family at low cumulative cost." }
         ],
         triadPlain: {
             mcas: "A 2013 study found that a single 100 mg dose of niacinamide raised blood histamine in 9 healthy men, a change researchers linked to methylation use. We also include methylfolate and methylated B12, which support the body's methyl supply.",
             heds: "We include niacinamide as broad vitamin B3 coverage alongside NR, not as a connective tissue ingredient. Niacinamide has not been tested with most hEDS medications.",
             pots: " Niacinamide is a form of vitamin B3 that supports normal energy production in cells. "
         },
-        bluf: "Niacinamide is vitamin B3 in its amide form, different from niacin, which causes flushing through prostaglandin release. Niacinamide does not cause the flushing associated with niacin, since that flush comes from prostaglandins released through a different pathway in skin cells. Lab studies on skin cells have looked at niacinamide at concentrations far above what supplemental doses reach in the blood, and niacinamide also supports normal NAD+ production in the body. ZebraThrive uses 16 to 50 mg (final amount being set) in the AM stack.",
+        bluf: "Niacinamide is vitamin B3 in its amide form, different from niacin, which causes flushing through prostaglandin release. Niacinamide does not cause the flushing associated with niacin, since that flush comes from prostaglandins released through a different pathway in skin cells. Lab studies on skin cells have looked at niacinamide at concentrations far above what supplemental doses reach in the blood, and niacinamide also supports normal NAD+ production in the body. ZebraThrive uses 16 mg in the AM stack.",
         atAGlance: {
             whatItIs: "Niacinamide is vitamin B3 in its amide form - different from niacin, which causes flushing through prostaglandin release.",
             whyWeIncludeIt: "Niacinamide is non-flushing. In an animal and isolated cell lab study, nicotinamide affected mast cell activity, but this has not been studied in people. ",
-            dose: "16 to 50 mg (final amount being set) daily (AM capsule)",
+            dose: "16 mg daily (AM capsule)",
             keyBenefits: ["Non-flushing B3 form: niacin's flush comes from prostaglandins released through GPR109A on skin cells, a different pathway than niacinamide.", "Supports normal NAD+ production in the body", "", ""]
         },
         howItWorks: "Niacinamide is a form of vitamin B3 that the body uses for normal NAD+ production, which supports normal energy production in cells. In an animal and isolated cell lab study, nicotinamide affected mast cell activity, but this has not been studied in people. A small human study gave 9 healthy men a single 100 mg dose and measured higher blood histamine at the 5 hour mark, the only time point checked, so a lasting or temporary pattern was not shown. Lower doses have not been tested. ",
@@ -2998,10 +2560,10 @@ export const ingredients: Record<string, IngredientData> = {
         },
         whyThisForm: {
             form: "Niacinamide (amide form)",
-            rationale: "We use niacinamide, the amide form, not niacin, at 16 to 50 mg (final amount being set) per day. Niacin causes flushing through prostaglandin release from Langerhans cells - that 'niacin flush' is uncomfortable and can be a problem for sensitive populations. Niacinamide is the non-flushing form. We chose 16 to 50 mg (final amount being set) partly because a 2013 study found that a single 100 mg dose in 9 healthy men raised blood histamine at the 5 hour mark, a change researchers linked to methylation use. "
+            rationale: "We use niacinamide, the amide form, not niacin, at 16 mg per day. Niacin causes flushing through prostaglandin release from Langerhans cells - that 'niacin flush' is uncomfortable and can be a problem for sensitive populations. Niacinamide is the non-flushing form. We chose 16 mg partly because a 2013 study found that a single 100 mg dose in 9 healthy men raised blood histamine at the 5 hour mark, a change researchers linked to methylation use. "
         },
         safety: {
-            sideEffects: "Our dose is 16 to 50 mg (final amount being set), within niacinamide's wide safety margin noted in the research. Niacinamide is non-flushing (unlike niacin). Very high doses (over 3 g per day) have hepatotoxicity concerns, far above our dose. No reported acute side effects in healthy populations at supplement doses.",
+            sideEffects: "Our dose is 16 mg, within niacinamide's wide safety margin noted in the research. Niacinamide is non-flushing (unlike niacin). Very high doses (over 3 g per day) have hepatotoxicity concerns, far above our dose. No reported acute side effects in healthy populations at supplement doses.",
             interactions: "Niacinamide has not been tested with most POTS, MCAS or hEDS medications. One human study found omeprazole did not change niacinamide absorption. Case reports describe INR rises in people on warfarin who started niacin or niacinamide, so tell your prescriber if you take warfarin. Famotidine may slow the kidney's clearance of a niacinamide breakdown product, based on lab and transporter data rather than a study of the two taken together. What this means for the body is not known. Mention to your prescriber if you take additional high-dose B3 separately.",
             excipientConcerns: {
                 avoid: ["", "Artificial colors", "Magnesium stearate"],
@@ -3120,13 +2682,13 @@ export const ingredients: Record<string, IngredientData> = {
 sanitizeIngredients(ingredients);
 
 export const ingredientList = [
-    // v7.8 canonical ingredient list (29 unique across AM, PM, Powder)
-    "Palmitoylethanolamide (PEA)", "Luteolin", "Magnesium Bisglycinate", "Taurine",
+    // v9.0 canonical ingredient list (26 unique across AM, PM, Powder)
+    "Palmitoylethanolamide (PEA)", "Magnesium Bisglycinate", "Taurine",
     "Vitamin C (Sodium Ascorbate)", "Nicotinamide Riboside (NR)", "Pine Bark Extract", "Grape Seed Extract",
-    "Quercetin Phytosome (Quercefit®)", "Chlorogenic Acid", "L-Theanine", "Zinc Carnosine", "Astaxanthin",
+    "Quercetin Phytosome (Quercefit®)", "Chlorogenic Acid", "L-Theanine", "Zinc Carnosine",
     "Benfotiamine", "Niacinamide", "P5P (Pyridoxal-5-Phosphate)", "R5P (Riboflavin-5-Phosphate)",
     "Methylfolate", "Vitamin B12 (Methylcobalamin)", "Vitamin D3", "Vitamin K2 (MK-7)",
-    "Copper Bisglycinate", "Manganese Bisglycinate", "Chromium", "Selenium", "Pantothenic Acid",
+    "Copper Bisglycinate", "Manganese Bisglycinate", "Selenium", "Pantothenic Acid",
     "Biotin", "Boron", "Molybdenum"
 ];
 

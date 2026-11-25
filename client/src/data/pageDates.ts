@@ -56,26 +56,33 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
   // 2026-11-05: brand-first BLUF sentence + nine H2s rewritten as claims.
   // 2026-11-07: WebSite (site name) JSON-LD.
   // 2026-11-14: claims audit copy merged (home sections).
-  "/": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-07" },
+  // 2026-11-25: formula v9.0: 26 ingredients, 11 pathways, chromium, astaxanthin and luteolin retired, powder 6.8 g.
+  "/": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-07" },
   // 2026-11-01: visible breadcrumbs, card headings H3 -> H2.
   // 2026-11-07: title, H1 and opening paragraph name the brand and the 29 ingredients.
   // 2026-11-14: ItemList JSON-LD of the ingredient pages.
   // 2026-11-14: claims audit copy merged ("Confirmed excipients disclosed").
-  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-14" },
+  // 2026-11-25: chromium, astaxanthin and luteolin pages retired (formula v9.0); 26 ingredients.
+  "/ingredients": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-14" },
   // 2026-11-05: byline, Article markup, link to /excipients.
   // 2026-11-07: Never/Always lists promoted to H2; dropped mention of the unpublished "The How" page.
   // 2026-11-14: claims audit copy merged (commitments wording).
-  "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-25: astaxanthin carrier mention removed (formula v9.0).
+  "/our-promise": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-05: excipient hub added (SEO/GEO audit A13).
   // 2026-11-07: og:type article, JSON-LD datetimes.
   // 2026-11-13: FAQ "What are HPMC capsules?" added (keyword retune).
   // 2026-11-14: claims audit copy merged (carrier and excipient disclosures).
-  "/excipients": { published: "2026-11-05", modified: "2026-11-14", structural: "2026-11-07" },
+  // 2026-11-25: astaxanthin carrier row removed (formula v9.0).
+  "/excipients": { published: "2026-11-05", modified: "2026-11-25", structural: "2026-11-07" },
   // 2026-11-13: cluster hubs drafted (noindex until published in clusterHubs.ts).
   // Set a hub's dates to its publish date in the commit that publishes it.
-  "/natural-mast-cell-stabilizers": { published: "2026-11-13", modified: "2026-11-13" },
-  "/supplements-for-hypermobility": { published: "2026-11-13", modified: "2026-11-13" },
-  "/supplements-for-pots": { published: "2026-11-13", modified: "2026-11-13" },
+  // 2026-11-25: retired ingredients removed (formula v9.0).
+  "/natural-mast-cell-stabilizers": { published: "2026-11-13", modified: "2026-11-25" },
+  // 2026-11-25: retired ingredients removed (formula v9.0).
+  "/supplements-for-hypermobility": { published: "2026-11-13", modified: "2026-11-25" },
+  // 2026-11-25: retired ingredients removed (formula v9.0).
+  "/supplements-for-pots": { published: "2026-11-13", modified: "2026-11-25" },
   // 2026-11-14: claims audit copy merged ("We aim to respond").
   "/contact": { published: SITE_LAUNCH, modified: "2026-11-14" },
   "/privacy": { published: SITE_LAUNCH, modified: "2026-10-07" },
@@ -88,9 +95,6 @@ export const CORE_PAGE_DATES: Record<string, PageDate> = {
 export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "palmitoylethanolamide": { published: "2026-05-11", modified: "2026-11-14" },
-  // 2026-11-05: Di Stadio 2022 citation corrected (PMID 35450527, 90-day olfactory outcome).
-  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "luteolin": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-07: unsourced "75% of POTS patients are deficient" removed (decision 2026-11-05).
   // 2026-11-13: FAQ on bisglycinate vs glycinate added; title names the common form (keyword retune).
   "magnesium-bisglycinate": { published: "2026-05-11", modified: "2026-11-13" },
@@ -99,29 +103,34 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-05: citation metadata corrected (PMID check).
   // 2026-11-13: title leads with "Buffered Vitamin C" (keyword retune).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
+  // 2026-11-25: dose 1,500 to 1,000 mg (formula v9.0).
+  "vitamin-c": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-13" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-25: dose 500 mg (AM + PM) to 300 mg, PM only (formula v9.0).
+  "nicotinamide-riboside": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "pine-bark-extract": { published: "2026-05-11", modified: "2026-11-14" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "grape-seed-extract": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-25: split 100 + 70 to 85 + 85 mg (formula v9.0).
+  "grape-seed-extract": { published: "2026-05-11", modified: "2026-11-25" },
   // 2026-11-13: two FAQs added on mast cell and histamine evidence (keyword retune; restate existing page copy).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-25: "20 times" absorption figure removed pending supplier confirmation.
+  "quercetin-phytosome": { published: "2026-05-11", modified: "2026-11-25" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "chlorogenic-acid": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-25: caffeine specification updated to 0.4% max.
+  "chlorogenic-acid": { published: "2026-05-11", modified: "2026-11-25" },
   "l-theanine": { published: SITE_LAUNCH, modified: "2026-10-08" },
   "zinc-carnosine": { published: SITE_LAUNCH, modified: "2026-11-14" },
-  // 2026-11-07: fludrocortisone regraded LOW -> NO DATA (decision 2026-11-05).
-  "astaxanthin": { published: SITE_LAUNCH, modified: "2026-11-07" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "benfotiamine": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "niacinamide": { published: "2026-05-11", modified: "2026-11-14" },
+  // 2026-11-25: dose set at 16 mg (formula v9.0).
+  "niacinamide": { published: "2026-05-11", modified: "2026-11-25" },
   // 2026-11-13: first FAQ question reworded to "P5P vs B6" (keyword retune).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "p5p": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
+  // 2026-11-25: dose set at 4 mg vitamin B6 (formula v9.0).
+  "p5p": { published: SITE_LAUNCH, modified: "2026-11-25", structural: "2026-11-13" },
   // 2026-11-05: Rooney 2020 citation corrected to the PubMed-indexed paper (PMID 32330571).
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "r5p": { published: "2026-05-11", modified: "2026-11-14" },
@@ -141,16 +150,17 @@ export const INGREDIENT_DATES: Record<string, PageDate> = {
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "copper-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-14", structural: "2026-11-13" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-25: dose 4 to 2 mg (formula v9.0).
+  "manganese-bisglycinate": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "chromium": { published: "2026-05-11", modified: "2026-11-14" },
-  // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "selenium": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-25: dose 100 to 50 mcg (formula v9.0).
+  "selenium": { published: SITE_LAUNCH, modified: "2026-11-25" },
   "pantothenic-acid": { published: SITE_LAUNCH, modified: "2026-10-08" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "biotin": { published: SITE_LAUNCH, modified: "2026-11-14" },
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
-  "boron": { published: SITE_LAUNCH, modified: "2026-11-14" },
+  // 2026-11-25: dose 2 to 0.7 mg; inclusion reason restated (formula v9.0).
+  "boron": { published: SITE_LAUNCH, modified: "2026-11-25" },
   // 2026-11-05: unverifiable "Kohn 2020" citation replaced (PMID 37987446); unsupported 2-4 week timeline removed.
   // 2026-11-14: evidence-graded claims copy merged (claims audit Prompts 7 and 8, branch fix/public-claims-2026-11-10).
   "molybdenum": { published: SITE_LAUNCH, modified: "2026-11-14" },

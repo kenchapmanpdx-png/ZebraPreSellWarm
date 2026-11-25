@@ -4,10 +4,6 @@
     "display_name": "Palmitoylethanolamide (PEA)"
   },
   {
-    "slug": "luteolin",
-    "display_name": "Luteolin"
-  },
-  {
     "slug": "magnesium-bisglycinate",
     "display_name": "Magnesium Bisglycinate"
   },
@@ -48,10 +44,6 @@
     "display_name": "Zinc Carnosine"
   },
   {
-    "slug": "astaxanthin",
-    "display_name": "Astaxanthin"
-  },
-  {
     "slug": "benfotiamine",
     "display_name": "Benfotiamine"
   },
@@ -90,10 +82,6 @@
   {
     "slug": "manganese-bisglycinate",
     "display_name": "Manganese Bisglycinate"
-  },
-  {
-    "slug": "chromium",
-    "display_name": "Chromium"
   },
   {
     "slug": "selenium",

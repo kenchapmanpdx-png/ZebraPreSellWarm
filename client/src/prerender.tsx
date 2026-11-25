@@ -270,7 +270,7 @@ function medicalWebPageForIngredient(
     };
     // schema.org `author` must be Person or Organization, not a string
     // (Ahrefs Site Audit 2026-11-14: "Value of unexpected type for author"
-    // on all 29 ingredient pages).
+    // on all 26 ingredient pages).
     if (r.authorNames?.length) {
       cit.author = r.authorNames.map((n) => ({ "@type": "Person", name: n }));
     } else if (r.authorGroup) {

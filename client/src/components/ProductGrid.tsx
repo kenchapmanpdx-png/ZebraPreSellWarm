@@ -16,12 +16,12 @@ export default function ProductGrid() {
       tag: "AM CAPSULES",
       title: "AM Capsules",
       subtitle: "Morning Foundation",
-      description: "Three morning capsules carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, chromium, copper, which your body uses to cross-link collagen, and manganese, a cofactor for collagen-building enzymes.",
+      description: "Three morning capsules carry most of the B vitamins (benfotiamine, niacinamide, P5P, R5P, methylfolate, B12), vitamin D3 and K2, and the essential minerals copper and manganese. Pine bark, grape seed, and zinc carnosine are split between the AM and PM capsules.",
       icon: <Sun className="w-6 h-6 text-[#B36B4D]" aria-hidden="true" />,
       benefits: [
         "B vitamins for normal energy metabolism",
         "Methylfolate and B12 for normal methylation",
-        "Copper for collagen cross-linking, and manganese for collagen-building enzymes",
+        "Copper and manganese, essential minerals that restricted diets can run low on",
       ],
       gradient: "from-orange-100/50 to-white/50"
     },
@@ -30,12 +30,12 @@ export default function ProductGrid() {
       tag: "PM CAPSULES",
       title: "PM Capsules",
       subtitle: "Evening Routine",
-      description: "Three evening capsules carry L-theanine, astaxanthin, pantothenic acid, biotin, selenium, boron, and molybdenum. NR, pine bark, grape seed, and zinc carnosine are split between the AM and PM capsules.",
+      description: "Three evening capsules carry nicotinamide riboside (NR), L-theanine, pantothenic acid, biotin, selenium, boron, and molybdenum. Pine bark, grape seed, and zinc carnosine are split between the AM and PM capsules.",
       icon: <Moon className="w-6 h-6 text-indigo-600" aria-hidden="true" />,
       benefits: [
         "L-theanine, studied in small trials for evening relaxation and sleep quality",
         "Zinc carnosine to support the lining of the gut, studied in small human trials",
-        "Astaxanthin, a carotenoid from algae; human evidence for this form is still limited",
+        "NR, a form of vitamin B3 that raises NAD+ levels in human studies",
       ],
       gradient: "from-indigo-100/50 to-white/50"
     },
@@ -44,11 +44,11 @@ export default function ProductGrid() {
       tag: "DAILY POWDER",
       title: "Daily Powder",
       subtitle: "The Gram-Scale Ingredients",
-      description: "Some ingredients are studied at doses too large for a few capsules. The powder carries magnesium, vitamin C, taurine, PEA, quercetin phytosome, chlorogenic acid, and luteolin: about 7.7 g a day in an AM and a PM scoop, mixed into water.",
+      description: "Some ingredients are studied at doses too large for a few capsules. The powder carries magnesium, vitamin C, taurine, PEA, quercetin phytosome, and chlorogenic acid: about 6.8 g a day in an AM and a PM scoop, mixed into water.",
       icon: <Droplets className="w-6 h-6 text-emerald-700" aria-hidden="true" />,
       benefits: [
         "Vitamin C for normal collagen formation",
-        "PEA, quercetin and luteolin, studied in lab research on immune cells; human evidence is limited",
+        "PEA and quercetin, studied in lab research on immune cells; human evidence is limited",
         "Titratable from a sprinkle for sensitive starts",
       ],
       gradient: "from-emerald-100/50 to-white/50"

@@ -62,7 +62,7 @@ const SKU_META: Record<SKU, { color: string; bg: string; icon: typeof Sun }> = {
   Powder: { color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200", icon: Droplets },
 };
 
-// Authoritative SKU placement per ZebraThrive Master Formulation Record v8.0
+// Authoritative SKU placement per ZebraThrive Master Formulation Record v9.0
 // (AM capsules, PM capsules, Daily Powder). Takes precedence over parsing the
 // dose string so a wording change can never mislabel a badge.
 const SKU_MAP: Record<string, SKU[]> = {
@@ -71,7 +71,6 @@ const SKU_MAP: Record<string, SKU[]> = {
   "niacinamide": ["AM"],
   "p5p": ["AM"],
   "r5p": ["AM"],
-  "chromium": ["AM"],
   "methylfolate": ["AM"],
   "manganese-bisglycinate": ["AM"],
   "copper-bisglycinate": ["AM"],
@@ -79,13 +78,12 @@ const SKU_MAP: Record<string, SKU[]> = {
   "vitamin-d3": ["AM"],
   "vitamin-b12": ["AM"],
   // AM and PM capsules
-  "nicotinamide-riboside": ["AM", "PM"],
   "pine-bark-extract": ["AM", "PM"],
   "grape-seed-extract": ["AM", "PM"],
   "zinc-carnosine": ["AM", "PM"],
   // PM capsules
+  "nicotinamide-riboside": ["PM"],
   "l-theanine": ["PM"],
-  "astaxanthin": ["PM"],
   "pantothenic-acid": ["PM"],
   "boron": ["PM"],
   "molybdenum": ["PM"],
@@ -98,7 +96,6 @@ const SKU_MAP: Record<string, SKU[]> = {
   "palmitoylethanolamide": ["Powder"],
   "quercetin-phytosome": ["Powder"],
   "chlorogenic-acid": ["Powder"],
-  "luteolin": ["Powder"],
 };
 
 const slugify = (text: string) => {

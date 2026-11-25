@@ -135,7 +135,7 @@ export const CARRIERS: Array<{ carrier: string; arrivesWith: string; amount: str
   { carrier: "Dicalcium phosphate", arrivesWith: "Biotin", amount: "about 31 mg a day; identity being confirmed", href: "/ingredients/biotin" },
   { carrier: "Maltodextrin and silica", arrivesWith: "Molybdenum glycinate", amount: "under 6 mg a day; source being confirmed", href: "/ingredients/molybdenum" },
   { carrier: "Silica", arrivesWith: "Taurine", amount: "up to 7.5 mg a day", href: "/ingredients/taurine" },
-  { carrier: "Being confirmed", arrivesWith: "Astaxanthin beadlet, selenium premix, boron glycinate, capsule shell gelling aid, and the antioxidants in the vitamin D3", amount: "listed before launch", href: "/ingredients/astaxanthin" },
+  { carrier: "Being confirmed", arrivesWith: "Selenium premix, boron glycinate, capsule shell gelling aid, and the antioxidants in the vitamin D3", amount: "listed before launch", href: "/ingredients/selenium" },
 ];
 
 export const CARRIERS_NOTE =

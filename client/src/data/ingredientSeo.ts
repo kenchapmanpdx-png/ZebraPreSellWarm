@@ -2,7 +2,7 @@
  *
  * Hand-written <title> and meta description per ingredient page.
  * Replaces the auto-built description that truncated mid-word with "..."
- * on 17 of 29 pages (2026-11-01 SEO/GEO gap audit, G9/G10).
+ * on 17 of 29 pages (26 pages since v9.0) (2026-11-01 SEO/GEO gap audit, G9/G10).
  *
  * Rules:
  *   - title: under ~65 characters including " | ZebraThrive".
@@ -23,11 +23,6 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
     description:
       "Micronized PEA at 1,200 mg a day in the ZebraThrive Daily Powder: how it works, what is known about particle size, the human trial evidence, and safety.",
   },
-  "luteolin": {
-    title: "Luteolin Supplement: Dose, Evidence and Safety | ZebraThrive",
-    description:
-      "Luteolin at 140 mg a day from Sophora japonica in the ZebraThrive Daily Powder: what it is, what lab and human studies show, form choice, and safety.",
-  },
   "magnesium-bisglycinate": {
     title: "Magnesium Bisglycinate (Glycinate): Dose, Evidence | ZebraThrive",
     description:
@@ -41,12 +36,12 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "vitamin-c": {
     title: "Buffered Vitamin C (Sodium Ascorbate): Evidence | ZebraThrive",
     description:
-      "Buffered sodium ascorbate providing about 1,500 mg vitamin C a day: its role in collagen formation, why this form, the evidence, and interactions.",
+      "Buffered sodium ascorbate providing 1,000 mg vitamin C a day: its role in collagen formation, why this form, the evidence, and interactions.",
   },
   "nicotinamide-riboside": {
     title: "Nicotinamide Riboside (NR): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Nicotinamide riboside (NR) at 500 mg a day, split AM and PM: how it raises NAD+, how each batch is checked, the evidence, and safety notes.",
+      "Nicotinamide riboside (NR) at 300 mg a day in the PM capsule: how it raises NAD+, how each batch is checked, the evidence, and safety notes.",
   },
   "pine-bark-extract": {
     title: "Pine Bark Extract (OPCs): Dose, Evidence, Safety | ZebraThrive",
@@ -78,11 +73,6 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
     description:
       "Zinc carnosine at 75 mg a day, split AM and PM: the small human studies on the gut lining, the zinc L-carnosine complex, copper balance and safety, and medication timing.",
   },
-  "astaxanthin": {
-    title: "Astaxanthin: Dose, Form, Evidence and Safety | ZebraThrive",
-    description:
-      "Natural astaxanthin at 4 mg in the PM capsule from an algae beadlet: what it is, what human studies of other forms show and their limits, the isomer spec, and how to take it.",
-  },
   "benfotiamine": {
     title: "Benfotiamine (Vitamin B1): Dose, Evidence, Safety | ZebraThrive",
     description:
@@ -91,12 +81,12 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "niacinamide": {
     title: "Niacinamide (Vitamin B3): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Niacinamide (vitamin B3) in the ZebraThrive AM capsule: why the non-flushing form, why the dose is kept low, the evidence, and safety. The daily amount will be shown here once it is final.",
+      "Niacinamide (vitamin B3) in the ZebraThrive AM capsule: at 16 mg a day: why the non-flushing form, why the dose is kept low, the evidence, and safety.",
   },
   "p5p": {
     title: "P5P (Active Vitamin B6): Dose, Evidence, Safety | ZebraThrive",
     description:
-      "P5P, the coenzyme form of vitamin B6, in the ZebraThrive AM capsule: why this form, how the dose relates to the B6 upper limit, what the evidence shows, and safety. The AM capsule provides 3 to 4 mg of vitamin B6 (final amount being set).",
+      "P5P, the coenzyme form of vitamin B6, providing 4 mg of vitamin B6 in the ZebraThrive AM capsule: why this form, how the dose relates to the B6 upper limit, what the evidence shows, and safety.",
   },
   "r5p": {
     title: "R5P (Active Vitamin B2): Dose, Evidence, Safety | ZebraThrive",
@@ -126,22 +116,17 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "copper-bisglycinate": {
     title: "Copper Bisglycinate (Glycinate): Dose, Evidence | ZebraThrive",
     description:
-      "Copper bisglycinate at 2 mg elemental copper a day: its role as the lysyl oxidase cofactor for collagen cross-linking, the evidence, and safety.",
+      "Copper bisglycinate at 2 mg elemental copper a day: why this essential mineral is included, the form, the human evidence, and safety.",
   },
   "manganese-bisglycinate": {
     title: "Manganese Bisglycinate: Dose, Evidence, Safety | ZebraThrive",
     description:
-      "Manganese bisglycinate at 4 mg elemental a day: its cofactor roles in connective tissue and antioxidant enzymes, copper balance, evidence, and safety.",
-  },
-  "chromium": {
-    title: "Chromium Picolinate: Dose, Evidence and Safety | ZebraThrive",
-    description:
-      "Chromium picolinate at 200 mcg in the ZebraThrive AM capsule: what it is, what the evidence does and does not show, and safety notes.",
+      "Manganese bisglycinate at 2 mg elemental a day: why this essential mineral is included, why 2 mg, the evidence, and safety.",
   },
   "selenium": {
     title: "Selenium (Selenomethionine): Dose, Evidence | ZebraThrive",
     description:
-      "Selenium as synthetic L-selenomethionine at 100 mcg a day, not selenium yeast: its antioxidant and thyroid cofactor roles, evidence, and safety.",
+      "Selenium as synthetic L-selenomethionine at 50 mcg a day, not selenium yeast: its antioxidant and thyroid cofactor roles, evidence, and safety.",
   },
   "pantothenic-acid": {
     title: "Pantothenic Acid (Vitamin B5): Dose, Evidence | ZebraThrive",
@@ -156,7 +141,7 @@ export const INGREDIENT_SEO: Record<string, IngredientSeo> = {
   "boron": {
     title: "Boron Glycinate: Dose, Evidence and Safety | ZebraThrive",
     description:
-      "Boron glycinate at 2 mg elemental boron a day: what boron is, what the limited human research shows, and safety.",
+      "Boron glycinate at 0.7 mg elemental boron a day: what boron is, what the limited human research shows, and safety.",
   },
   "molybdenum": {
     title: "Molybdenum Glycinate: Dose, Evidence and Safety | ZebraThrive",

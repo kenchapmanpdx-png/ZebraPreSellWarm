@@ -166,7 +166,7 @@ export default function PreorderPage() {
                   </h2>
                   <p className="text-lg text-gray-700 mb-6">
                     Each capsule bottle holds 90 capsules: a 30-day supply at 3 capsules each morning (AM) and 3 each evening (PM).
-                    The Daily Powder adds about 7.7 g a day in two scoops, one with each dose. That's it: no more 12-bottle stacks.
+                    The Daily Powder adds about 6.8 g a day in two scoops, one with each dose. That's it: no more 12-bottle stacks.
                   </p>
                 </div>
 
@@ -191,7 +191,7 @@ export default function PreorderPage() {
                     <CardContent className="p-4 text-center">
                       <div className="text-2xl font-bold text-green-800 mb-1">Powder</div>
                       <div className="text-sm text-gray-700">Daily Powder</div>
-                      <div className="text-xs text-gray-600 mt-1">2 scoops (about 7.7 g)</div>
+                      <div className="text-xs text-gray-600 mt-1">2 scoops (about 6.8 g)</div>
                     </CardContent>
                   </Card>
                 </div>

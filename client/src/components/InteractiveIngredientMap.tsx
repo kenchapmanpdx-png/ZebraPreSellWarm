@@ -15,18 +15,15 @@ interface Connection {
 // =============================================================================
 
 const CONNECTIONS: readonly Connection[] = [
-  { from: '#ing-astaxanthin', to: ['#issue-antioxidant'] },
   { from: '#ing-benfotiamine', to: ['#issue-energy', '#issue-nerve', '#issue-mitochondria', '#issue-muscle'] },
   { from: '#ing-biotin', to: ['#issue-energy', '#issue-methylation'] },
   { from: '#ing-boron', to: ['#issue-immune'] },
   { from: '#ing-cga', to: ['#issue-collagen', '#issue-cardiovascular'] },
-  { from: '#ing-chromium', to: ['#issue-energy'] },
   { from: '#ing-grapeseed', to: ['#issue-collagen', '#issue-mcas'] },
   { from: '#ing-copper', to: ['#issue-collagen', '#issue-immune', '#issue-mcas'] },
   { from: '#ing-d3', to: ['#issue-immune', '#issue-mcas', '#issue-collagen'] },
   { from: '#ing-emiq', to: ['#issue-mcas', '#issue-antioxidant'] },
   { from: '#ing-k2', to: ['#issue-cardiovascular', '#issue-collagen'] },
-  { from: '#ing-luteolin', to: ['#issue-mcas', '#issue-calming', '#issue-cognitive', '#issue-nerve'] },
   { from: '#ing-magnesium', to: ['#issue-calming', '#issue-muscle', '#issue-autonomic', '#issue-cardiovascular'] },
   { from: '#ing-manganese', to: ['#issue-collagen', '#issue-antioxidant'] },
   { from: '#ing-folate', to: ['#issue-methylation', '#issue-nerve'] },
@@ -332,18 +329,15 @@ export default function InteractiveIngredientMap() {
             {/* Column 2: Ingredients */}
             <div id="ingredients-col" className="w-[47%] md:w-[31%] space-y-1.5 md:space-y-2" role="list">
               <h3 className="text-[10px] font-black text-[#B36B4D] uppercase tracking-[0.4em] mb-3 text-center md:text-left">Formulation Ingredients</h3>
-              <div id="ing-astaxanthin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Astaxanthin</span></div>
               <div id="ing-benfotiamine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Benfotiamine (B1)</span></div>
               <div id="ing-biotin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Biotin (B7)</span></div>
               <div id="ing-boron" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Boron</span></div>
               <div id="ing-cga" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Chlorogenic Acid</span></div>
-              <div id="ing-chromium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Chromium</span></div>
               <div id="ing-grapeseed" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Grape Seed Extract</span></div>
               <div id="ing-copper" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Copper</span></div>
               <div id="ing-emiq" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Quercetin Phytosome (Quercefit)</span></div>
               <div id="ing-folate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Folate (L-5-MTHF)</span></div>
               <div id="ing-theanine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">L-Theanine</span></div>
-              <div id="ing-luteolin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Luteolin</span></div>
               <div id="ing-magnesium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Magnesium Bisglycinate</span></div>
               <div id="ing-manganese" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Manganese</span></div>
               <div id="ing-molybdenum" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0}><span className="font-serif font-bold text-[#262321]">Molybdenum</span></div>

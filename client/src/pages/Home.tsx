@@ -80,7 +80,7 @@ export default function Home() {
         {/* 3.5. EXCLUSIONS - what's NOT in the formula. */}
         <ExclusionsBlock />
 
-        {/* 3.75. BY THE NUMBERS - animated stat band (29 / 100% / 14 / 0) */}
+        {/* 3.75. BY THE NUMBERS - animated stat band (26 / 100% / 11 / 0) */}
         <BrandByNumbers />
 
         {/* 4. THE SCIENCE SUMMARY + LINK TO DEEP DIVE */}
