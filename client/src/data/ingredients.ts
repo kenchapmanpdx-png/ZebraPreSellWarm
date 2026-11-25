@@ -238,6 +238,122 @@ export const ingredients: Record<string, IngredientData> = {
             { title: "Effects of PEA on Nociceptive Pain: A Systematic Review", pmid: "36015298", authors: "Scuteri D et al.", year: "2022" }
         ]
     },
+"magnesium-bisglycinate": {
+        id: "magnesium-bisglycinate",
+        name: "Magnesium Bisglycinate",
+        patientSummary: "Magnesium bisglycinate is magnesium bonded to two glycine amino acids, a form that is gentle on the gut compared to magnesium oxide, which is poorly absorbed and has a stronger laxative effect. Magnesium is a foundational mineral we include as part of this formula. How often people in this community run low on magnesium has not been measured. In an animal study, magnesium-deficient rats had higher blood histamine for a period. The bisglycinate form has a gentle gut profile and is the form studied in a small human trial for sleep quality. We chose bisglycinate over magnesium oxide, which is poorly absorbed, and over threonate, which costs more.",
+        whyThisFormPatient: "We use magnesium bisglycinate - magnesium chelated to two glycine amino acids. The chelate may be absorbed partly through PepT1, the peptide transporter, a pathway distinct from the ones linked to the laxative effect of citrate or oxide. We ask for spectroscopic (FT-IR) testing to confirm a true chelate before a lot is approved, because some cheaper bisglycinate products are magnesium oxide buffered with glycine rather than a true chelate. We use magnesium bisglycinate to deliver about 300 mg of elemental magnesium a day, close to the 250 to 300 mg used in small human sleep and heart rate variability studies.",
+        faq: [
+            { q: "Why not magnesium oxide - it's cheaper?", a: "Because most of it never gets into your bloodstream. Magnesium oxide is about 4 to 15% bioavailable, and most of it pulls water into your colon rather than being absorbed. In one human study in people with ileal resection, bisglycinate was about 23.5% absorbed, roughly double magnesium oxide, and it is thought to use a different absorption route than the one linked to the laxative effect. The glycine portion is an amino acid with its own calming and sleep-related research, though at a lower dose than used in those studies. If you have a sensitive gut, bisglycinate is a gentler option than magnesium oxide, though it has not been studied specifically in people with gastroparesis." },
+            { q: "Magnesium bisglycinate vs glycinate: is there a difference?", a: "They are the same compound. Magnesium glycinate is the common name and bisglycinate is the precise one: one magnesium bound to two glycine molecules. The difference that matters is on the label. Some products sold under either name are buffered, meaning magnesium oxide is blended in. ZebraThrive specifies a non-buffered true chelate and verifies it by FT-IR." },
+            { q: "Will magnesium drop my blood pressure?", a: "For most people with normal or low blood pressure, large studies suggest magnesium does not cause a meaningful drop. A 2025 meta-analysis of 38 trials (2,709 people) found no significant blood pressure effect in people with normal blood pressure. The 'magnesium lowers BP' framing came from older studies in hypertensive populations. If you're already on midodrine and running low, give your prescriber a heads-up - but the data doesn't support magnesium as a meaningful BP dropper at the doses we use." },
+            { q: "What does research show about magnesium and mast cells?", a: "Only lab and animal studies; none in people. A lab study using rat mast cells found that very high concentrations of magnesium, far above what supplementation achieves in the body, reduced mast cell activity in a dose-dependent way. In an animal study, magnesium-deficient rats had 4 to 5 times higher blood histamine within two weeks. Whether this applies to people has not been studied." },
+            { q: "How long until I notice anything?", a: "Magnesium is not a sleep treatment, and a recent review rated the overall evidence for magnesium and sleep as low to very low certainty. Over months, cellular magnesium stores gradually refill as part of normal mineral repletion. Blood tests for magnesium are notoriously unreliable, since only a small fraction, about 0.3%, of total body magnesium is in your blood, so don't go by serum levels alone." }
+        ],
+        triadPlain: {
+            mcas: "No randomized controlled trial has tested magnesium glycinate in people with MCAS. The form choice matters for tolerability: we use bisglycinate because it avoids the citric acid and sulfate found in some other magnesium forms, which some sensitive individuals report as triggers. Bisglycinate is made from magnesium and glycine without a fermentation step, unlike magnesium citrate.",
+            heds: "No randomized controlled trial has tested magnesium glycinate in people with hEDS. We include magnesium as a foundational mineral to cover a common intake gap: about 300 mg elemental magnesium is 71% of the Daily Value.",
+            pots: "No trial has tested magnesium in people with POTS, and no study has measured how often people with POTS are low in magnesium, so the dose is set to cover a common intake gap, not to correct a known deficiency. If you tend to run low on blood pressure or take midodrine, monitor your blood pressure when you start and give your prescriber a heads-up. We split the dose AM and PM to maintain steady levels instead of dumping it all at once."
+        },
+        bluf: "Magnesium bisglycinate is magnesium bonded to two glycine molecules, a form studied for good absorption and a gentle gut profile. Magnesium is a foundational electrolyte; lab studies at concentrations far above what is achievable from oral supplementation have looked at effects on mast cells, and a small trial in heart failure patients found a heart rate variability change. ZebraThrive uses magnesium bisglycinate providing about 300 mg of elemental magnesium daily in the Daily Powder, split between AM and PM scoops.",
+        atAGlance: {
+            whatItIs: "A highly absorbable, gentle form of magnesium bound to the amino acid glycine",
+            whyWeIncludeIt: "Magnesium is a foundational mineral involved in autonomic function, and about 300 mg of elemental magnesium covers 71% of the Daily Value, a common intake gap.",
+            dose: "About 300 mg elemental magnesium daily, in the Daily Powder, split AM and PM scoops",
+            keyBenefits: [
+                "Lab studies in rat mast cells found that magnesium chloride reduced degranulation in a dose-dependent manner, at concentrations well above what oral supplementation achieves in the body.",
+                "Lab studies suggest magnesium may influence calcium signaling pathways involved in mast cell activity, at concentrations well above typical blood levels from oral supplementation.",
+                "Covers a common intake gap: about 300 mg elemental is 71% of the Daily Value",
+                "The bisglycinate form also provides glycine, an amino acid that contributes to sleep support and is a basic building block of collagen, though at a lower amount than doses studied specifically for sleep."
+            ]
+        },
+        howItWorks: "Magnesium is involved in over 300 enzymatic reactions. Three of its roles are described below.\n\nFirst, lab studies suggest magnesium may influence calcium-related pathways in mast cells, though at concentrations well above what oral supplementation can achieve in the body. Mast cell degranulation involves calcium signaling, and some research has looked at whether adequate magnesium levels influence this process. A 2025 lab study in rat mast cells showed magnesium chloride reduced degranulation in a dose-dependent manner, using concentrations far higher than what oral supplementation produces in the bloodstream. Magnesium deficiency does the opposite: in animal data, deficient rats run 4-5 fold higher blood histamine within two weeks.\n\nSecond, magnesium modulates the autonomic nervous system. Magnesium is thought to support the parasympathetic nervous system, and a small trial in heart failure patients found a heart rate variability measure improved with magnesium citrate. \n\nThird, the bisglycinate form delivers ~2g of glycine daily as a useful byproduct. Glycine supports sleep architecture and is one of the primary amino acids used in collagen, though the amount delivered here is below doses studied specifically for sleep benefits. DAO, the enzyme that breaks down histamine in the gut, depends on copper rather than magnesium, so magnesium is not a direct DAO cofactor.",
+        research: [
+            {
+                outcome: "Mast Cell Lab and Animal Studies",
+                summary: "Lab research has looked at how magnesium affects mast cells, but the effective concentration in these studies was far above what the body reaches from oral supplementation, so this is not direct evidence that the supplement stabilizes mast cells.",
+                studies: [
+                    {
+                        source: "Kazama I et al., 2025, \"Magnesium and zinc dose-dependently stabilize rat peritoneal mast cells\" (lab study)",
+                        pmid: "40692390",
+                        design: "In vitro study using rat peritoneal mast cells (2025)",
+                        finding: "In this lab study, magnesium chloride reduced the number of degranulating mast cells in a dose-dependent manner, but only at concentrations far above what oral supplementation can achieve in the body."
+                    },
+                    {
+                        source: "Srebro D et al., \"Magnesium in orofacial pain model\"",
+                        pmid: "37047214",
+                        design: "In vivo rat model (2023)",
+                        finding: "In a rat study, injected magnesium sulfate reduced mast cell degranulation by about 23% in the acute phase and about 40% in a later phase."
+                    }
+                ]
+            },
+            {
+                outcome: "Autonomic Function and HRV",
+                summary: "Magnesium supplementation has shown improvements in heart rate variability in some small studies, including one in heart failure patients.",
+                studies: [
+                    {
+                        source: "Almoznino-Sarafian D et al., \"Magnesium and heart rate variability\"",
+                        pmid: "19201586",
+                        design: "A controlled trial gave 300 mg/day of magnesium citrate to 16 heart failure patients for 5 weeks, compared to 16 untreated heart failure patients.",
+                        finding: "HRV correlation dimension significantly improved from 3.47 to 3.94 (p<0.001)"
+                    }
+                ]
+            },
+            {
+                outcome: "Deficiency and Consequences",
+                summary: "In animal studies, magnesium-deficient rats had higher blood histamine and mast cell changes. How common low magnesium status is in this population has not been measured.",
+                studies: [
+                    {
+                        source: "Kraeuter SL & Schwartz R, \"Magnesium deficiency and histamine\"",
+                        pmid: "6445415",
+                        design: "Animal model of magnesium depletion",
+                        finding: "In magnesium-depleted rats, blood histamine rose 4 to 5 fold by day 14 of depletion, with mast cell changes seen in the tissue studied."
+                    }
+                ]
+            }
+        ],
+        evidenceGaps: "No randomized controlled trials exist specifically testing magnesium glycinate in hEDS, POTS, or MCAS. One study of 94 people with mitral valve prolapse found 59 had low red blood cell magnesium, but low levels were not linked to joint hypermobility. Many people with hEDS report taking magnesium, even though trials in hEDS are lacking.",
+        triad: {
+            mcas: "No randomized controlled trial has tested magnesium glycinate in people with MCAS. We chose the bisglycinate form in part because it is not fermentation-derived, unlike magnesium citrate.",
+            heds: " The glycine delivered with this form is a building block of collagen, though the amount provided is small relative to amounts studied for collagen synthesis. ",
+            pots: "No study has measured how often people with POTS are low in magnesium, so the dose is set to cover a common intake gap, not to correct a known deficiency. Monitor blood pressure in hypotensive POTS patients as it can lower BP slightly."
+        },
+        whyThisForm: {
+            form: "Magnesium bisglycinate, generic chelate (lot FT-IR identity testing requested), non-buffered, no citric acid",
+            rationale: "Form selection matters for absorption and tolerability. We chose bisglycinate because animal and mechanistic research suggests it may use the PepT1 transport pathway, it tends to cause minimal GI upset, it is not fermentation-derived, and it provides glycine. We are requiring a generic chelate to be verified as a true chelate by FT-IR spectrum testing on each production lot, with no oxide buffering, and free of the citric acid found in some branded chelates.",
+            comparison: [
+                { form: "Magnesium oxide", difference: "Only 4-15% absorption; strong laxative effect", selected: false },
+                { form: "Magnesium citrate", difference: "Magnesium citrate: about 30% absorbed. It is made using fermentation, which may carry a theoretical histamine risk for sensitive individuals, though residue data are not available.", selected: false },
+                { form: "Magnesium glycinate", difference: "Magnesium bisglycinate: well absorbed in the studied population, with minimal GI upset and the added benefit of glycine.", selected: true },
+                { form: "Magnesium L-threonate", difference: "Magnesium L-threonate: a brain-penetrant alternative some people use; this is not the form we ship.", selected: false }
+            ]
+        },
+        safety: {
+            sideEffects: "Magnesium glycinate is generally well tolerated by people with sensitive digestion. Diarrhea can occur if dose is increased too rapidly. Theoretical concern of hypotension exists but is usually not significant in normotensive populations.",
+            interactions: "Antibiotics: Space by 2-6 hours. Thyroid medications: separate from magnesium by at least 4 hours, as magnesium may reduce absorption of thyroid medication. Fludrocortisone: potassium is the electrolyte most often watched on fludrocortisone. A study in children found no drop in magnesium, though the same paper notes that adult studies have reported low magnesium at a low frequency; hypokalemia remains the better documented risk. Beta-blockers: the only human study of oral magnesium with beta-blockers (a different salt, in 39 people with high blood pressure) found no significant blood pressure change between groups; older studies of antacid magnesium salts gave conflicting results on metoprolol and propranolol absorption, and none used this form. Famotidine: gram doses of antacid magnesium lowered famotidine absorption by up to about 20-25% in some studies; this chelate is not an antacid, but taking famotidine 2 hours apart costs nothing.",
+            excipientConcerns: {
+                avoid: ["We avoid fermentation-derived magnesium citrate as a precaution for histamine-sensitive individuals, though no contamination data exist either way.", "Magnesium stearate", "Artificial colors"],
+                safe: ["Magnesium bisglycinate, non-buffered, no citric acid", "Rice hull concentrate (flow agent in the Daily Powder)"]
+            },
+            cautions: "Monitor blood pressure when initiating. Kidney function should be normal. "
+        },
+        howToStart: {
+            protocol: [
+                { step: "Week 1", dosage: "Start with a small sprinkle, building to half a scoop once a day (75 mg magnesium).", notes: "MCAS ultra-sensitive start" },
+                { step: "Week 2", dosage: "Half a scoop twice a day (150 mg magnesium a day).", notes: "Standard start" },
+                { step: "Week 3", dosage: "Build up to one scoop twice a day (300 mg magnesium a day).", notes: "Target maintenance" },
+                { step: "Week 4+", dosage: "About 300 mg elemental magnesium daily, delivered as magnesium bisglycinate, split AM and PM scoops.", notes: "Full daily amount, split AM/PM scoops" }
+            ],
+            timeline: "RBC magnesium repletion requires 8-12 weeks. Don't expect immediate effects-repletion takes time. Some people notice changes in sleep within a few weeks, though the overall evidence for magnesium and sleep is inconsistent and rated low certainty."
+        },
+        sources: [
+            { title: "Magnesium and zinc stabilize mast cells in a dose-dependent manner", pmid: "40692390", authors: "Kazama I et al.", year: "2025" },
+            { title: "Magnesium reduces mast cell degranulation in orofacial pain model", pmid: "37047214", authors: "Srebro D et al.", year: "2023" },
+            { title: "Magnesium administration and heart rate variability", pmid: "19201586", authors: "Almoznino-Sarafian D et al.", year: "2009" },
+            { title: "Bioavailability of magnesium diglycinate vs magnesium oxide", pmid: "7815675", authors: "Schuette SA et al.", year: "1994" },
+            { title: "Nutritional dose of magnesium in hypertensive patients on beta blockers lowers systolic blood pressure: a double-blind, cross-over study", pmid: "7913949", authors: "Wirell et al.", year: "1994" }
+        ]
+    },
     "pine-bark-extract": {
         id: "pine-bark-extract",
         name: "Pine Bark Extract",
